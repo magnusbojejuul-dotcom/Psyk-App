@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
+import GdprBanner from './GdprBanner';
 
 // --- IKONER ---
 const Icon = ({ children, className }) => (
@@ -1138,6 +1139,7 @@ function App() {
                         <h1 className="text-lg font-bold text-slate-800 leading-tight">Psykiatrisk Journalværktøj</h1>
                         <div className="flex items-center gap-1.5 text-xs text-slate-500"><span>Klinisk dokumentationsstøtte</span><span className="text-slate-300">•</span><span>v10.2 (Modal Fix)</span></div>
                     </div>
+                    <GdprBanner />
                 </div>
                 <div className="flex items-center gap-4">
                     <button type="button" onClick={openClearConfirm} className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors bg-white text-red-600 border border-red-200 hover:bg-red-50 hover:border-red-300 cursor-pointer shadow-sm">
