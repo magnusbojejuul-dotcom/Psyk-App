@@ -2,7 +2,8 @@ export const DEP_CORE_IDS = ['dep_core_mood', 'dep_core_interest', 'dep_core_ene
 export const DEP_ACC_IDS = ['dep_acc_conf', 'dep_acc_guilt', 'dep_acc_sui', 'dep_acc_conc', 'dep_acc_agit', 'dep_acc_sleep', 'dep_acc_app'];
 
 export const ACTUAL_PSYCH_OPTIONS = [
-    { id: 'ap_reason', label: 'Årsag (Fritekst)', category: 'Henvendelse & Problem', text: 'Patienten henvender sig grundet', hasInput: true, inputPlaceholder: 'Primære problematik...' },
+    { id: 'ap_reason', label: 'Søger hjælp fordi (Fritekst)', category: 'Henvendelse & Problem', text: 'Patienten henvender sig grundet', hasInput: true, inputPlaceholder: 'Primære problematik...' },
+
     { id: 'ap_prob_depress', label: 'Depressive symptomer', category: 'Henvendelse & Problem', text: 'Depressive symptomer.', smartMerge: { prefix: 'Henvendelsen drejer sig primært om ', item: 'depressive symptomer', suffix: '.' } },
     { id: 'ap_prob_anxiety', label: 'Angst/Uro', category: 'Henvendelse & Problem', text: 'Angst og uro.', smartMerge: { prefix: 'Henvendelsen drejer sig primært om ', item: 'angst og uro', suffix: '.' } },
     { id: 'ap_prob_suicid', label: 'Selvmordstanker', category: 'Henvendelse & Problem', text: 'Selvmordstanker.', smartMerge: { prefix: 'Henvendelsen drejer sig primært om ', item: 'selvmordstanker', suffix: '.' } },
@@ -15,16 +16,27 @@ export const ACTUAL_PSYCH_OPTIONS = [
     { id: 'ap_diag_no', label: 'Ingen tidl. diagnose', category: 'Forløb & Historik', text: 'Ingen tidligere psykiatriske diagnoser.', isDefault: true, exclude: ['ap_diag_yes'] },
     { id: 'ap_treat_yes', label: 'Tidl. behandling', category: 'Forløb & Historik', text: 'Pt. har tidligere modtaget behandling for dette.', exclude: ['ap_treat_no'], smartMerge: { prefix: 'Anamnestisk er der oplysninger om ', item: 'tidligere behandling for dette', suffix: '.' } },
     { id: 'ap_treat_no', label: 'Ingen tidl. beh.', category: 'Forløb & Historik', text: 'Ingen tidligere behandling for dette.', isDefault: true, exclude: ['ap_treat_yes'] },
+    { id: 'ap_tried', label: 'Tidl. afprøvet (Fritekst)', category: 'Forløb & Historik', text: 'Af tidligere tiltag/behandling er afprøvet', hasInput: true, inputPlaceholder: 'Medicin, terapi, etc.' },
 
     { id: 'ap_worse', label: 'Tilstand forværret', category: 'Udvikling & Faktorer', text: 'Tilstanden er blevet værre.', exclude: ['ap_unchanged', 'ap_better'], smartMerge: { prefix: 'Aktuelt er tilstanden ', item: 'forværret', suffix: '.' } },
     { id: 'ap_unchanged', label: 'Tilstand uændret', category: 'Udvikling & Faktorer', text: 'Tilstanden er uændret.', isDefault: true, exclude: ['ap_worse', 'ap_better'], smartMerge: { prefix: 'Aktuelt er tilstanden ', item: 'uændret', suffix: '.' } },
     { id: 'ap_better', label: 'Tilstand bedret', category: 'Udvikling & Faktorer', text: 'Tilstanden er blevet bedre.', exclude: ['ap_worse', 'ap_unchanged'], smartMerge: { prefix: 'Aktuelt er tilstanden ', item: 'bedret', suffix: '.' } },
+    { id: 'ap_modifying', label: 'Modificeres af (Fritekst)', category: 'Udvikling & Faktorer', text: 'Symptomerne angives at forværres/bedres af', hasInput: true, inputPlaceholder: 'Hvad påvirker tilstanden?' },
 
-    { id: 'ap_soc_alone', label: 'Bor alene', category: 'Sociale forhold', text: 'Bor alene.', smartMerge: { prefix: 'Socialt: ', item: 'bor alene', suffix: '.' } },
-    { id: 'ap_soc_cohab', label: 'Samlevende', category: 'Sociale forhold', text: 'Er samlevende.', smartMerge: { prefix: 'Socialt: ', item: 'er samlevende', suffix: '.' } },
-    { id: 'ap_soc_kids', label: 'Har børn', category: 'Sociale forhold', text: 'Har børn.', smartMerge: { prefix: 'Socialt: ', item: 'har børn', suffix: '.' } },
-    { id: 'ap_soc_work', label: 'I arbejde', category: 'Sociale forhold', text: 'Er i arbejde.', smartMerge: { prefix: 'Socialt: ', item: 'er i arbejde', suffix: '.' } },
-    { id: 'ap_soc_sick', label: 'Sygemeldt', category: 'Sociale forhold', text: 'Er sygemeldt.', smartMerge: { prefix: 'Socialt: ', item: 'er sygemeldt', suffix: '.' } },
+    { id: 'ap_soc_unspec', label: 'Socialt uafklaret', category: 'Sociale forhold', text: 'Sociale forhold ikke nærmere belyst.', isDefault: true, exclude: ['ap_soc_alone', 'ap_soc_cohab', 'ap_soc_kids', 'ap_soc_work', 'ap_soc_sick', 'ap_soc_pension', 'ap_soc_student'] },
+    { id: 'ap_soc_alone', label: 'Bor alene', category: 'Sociale forhold', text: 'Bor alene.', exclude: ['ap_soc_unspec', 'ap_soc_cohab'], smartMerge: { prefix: 'Socialt: ', item: 'bor alene', suffix: '.' } },
+    { id: 'ap_soc_cohab', label: 'Samlevende', category: 'Sociale forhold', text: 'Er samlevende.', exclude: ['ap_soc_unspec', 'ap_soc_alone'], smartMerge: { prefix: 'Socialt: ', item: 'er samlevende', suffix: '.' } },
+    { id: 'ap_soc_kids', label: 'Har børn', category: 'Sociale forhold', text: 'Har børn.', exclude: ['ap_soc_unspec'], smartMerge: { prefix: 'Socialt: ', item: 'har børn', suffix: '.' } },
+    { id: 'ap_soc_work', label: 'I arbejde', category: 'Sociale forhold', text: 'Er i arbejde.', exclude: ['ap_soc_unspec', 'ap_soc_sick', 'ap_soc_pension', 'ap_soc_student'], smartMerge: { prefix: 'Socialt: ', item: 'er i arbejde', suffix: '.' } },
+    { id: 'ap_soc_student', label: 'Studerende', category: 'Sociale forhold', text: 'Er studerende.', exclude: ['ap_soc_unspec', 'ap_soc_work', 'ap_soc_sick', 'ap_soc_pension'], smartMerge: { prefix: 'Socialt: ', item: 'er studerende', suffix: '.' } },
+    { id: 'ap_soc_sick', label: 'Sygemeldt', category: 'Sociale forhold', text: 'Er sygemeldt.', exclude: ['ap_soc_unspec', 'ap_soc_work', 'ap_soc_pension', 'ap_soc_student'], smartMerge: { prefix: 'Socialt: ', item: 'er sygemeldt', suffix: '.' } },
+    { id: 'ap_soc_pension', label: 'Førtidspension', category: 'Sociale forhold', text: 'Modtager førtidspension.', exclude: ['ap_soc_unspec', 'ap_soc_work', 'ap_soc_sick', 'ap_soc_student'], smartMerge: { prefix: 'Socialt: ', item: 'modtager førtidspension', suffix: '.' } },
+
+    { id: 'ap_func_unchanged', label: 'Hverdag uændret', category: 'Funktionsniveau', text: 'Funktionsniveauet er uændret.', isDefault: true, exclude: ['ap_func_school', 'ap_func_work', 'ap_func_social', 'ap_func_adl'] },
+    { id: 'ap_func_school', label: 'Skole/Uddannelse', category: 'Funktionsniveau', text: 'Skole/uddannelse er påvirket.', exclude: ['ap_func_unchanged'], smartMerge: { prefix: 'Det daglige funktionsniveau er påvirket i forhold til ', item: 'skole/uddannelse', suffix: '.' } },
+    { id: 'ap_func_work', label: 'Arbejde', category: 'Funktionsniveau', text: 'Arbejdet er påvirket.', exclude: ['ap_func_unchanged'], smartMerge: { prefix: 'Det daglige funktionsniveau er påvirket i forhold til ', item: 'arbejde', suffix: '.' } },
+    { id: 'ap_func_social', label: 'Socialt/Fritid', category: 'Funktionsniveau', text: 'Sociale relationer/fritid er påvirket.', exclude: ['ap_func_unchanged'], smartMerge: { prefix: 'Det daglige funktionsniveau er påvirket i forhold til ', item: 'sociale relationer', suffix: '.' } },
+    { id: 'ap_func_adl', label: 'ADL (Daglige gøremål)', category: 'Funktionsniveau', text: 'ADL er påvirket.', exclude: ['ap_func_unchanged'], smartMerge: { prefix: 'Det daglige funktionsniveau er påvirket i forhold til ', item: 'daglige gøremål (ADL)', suffix: '.' } },
 
     { id: 'dep_none', label: 'Ingen depr. symptomer', category: 'Depression (ICD-10 Screening)', text: 'Ingen tegn på depressive symptomer.', isDefault: true, exclude: [...DEP_CORE_IDS, ...DEP_ACC_IDS] },
     { id: 'dep_core_mood', label: 'Nedtrykthed', category: 'Depression (ICD-10 Screening)', text: 'Nedtrykthed.', exclude: ['dep_none'], smartMerge: { prefix: 'Kernesymptomer: ', item: 'nedtrykthed', suffix: '.' } },
@@ -38,12 +50,33 @@ export const ACTUAL_PSYCH_OPTIONS = [
     { id: 'dep_acc_sleep', label: 'Søvnforstyrrelser', category: 'Depression (ICD-10 Screening)', text: 'Søvnforstyrrelser.', exclude: ['dep_none'], smartMerge: { prefix: 'Ledsagesymptomer: ', item: 'søvnforstyrrelser', suffix: '.' } },
     { id: 'dep_acc_app', label: 'Appetit-/Vægtændring', category: 'Depression (ICD-10 Screening)', text: 'Appetit-/vægtændring.', exclude: ['dep_none'], smartMerge: { prefix: 'Ledsagesymptomer: ', item: 'appetit- eller vægtændring', suffix: '.' } },
 
-    { id: 'ap_subst_none', label: 'Ingen rusmidler', category: 'Rusmidler', text: 'Der benægtes brug af rusmidler.', isDefault: true, exclude: ['ap_subst_alc', 'ap_subst_cann', 'ap_subst_stim'] },
+    { id: 'ap_subst_none', label: 'Ingen rusmidler', category: 'Rusmidler', text: 'Der benægtes brug af rusmidler.', isDefault: true, exclude: ['ap_subst_alc', 'ap_subst_cann', 'ap_subst_stim', 'ap_subst_benzo', 'ap_subst_opioid'] },
     { id: 'ap_subst_alc', label: 'Alkohol', category: 'Rusmidler', text: 'Angiver forbrug af alkohol.', exclude: ['ap_subst_none'], smartMerge: { prefix: 'Der angives forbrug af ', item: 'alkohol', suffix: '.' } },
     { id: 'ap_subst_cann', label: 'Cannabis', category: 'Rusmidler', text: 'Angiver forbrug af cannabis.', exclude: ['ap_subst_none'], smartMerge: { prefix: 'Der angives forbrug af ', item: 'cannabis', suffix: '.' } },
+    { id: 'ap_subst_stim', label: 'Centralstimulerende', category: 'Rusmidler', text: 'Angiver forbrug af centralstimulerende stoffer.', exclude: ['ap_subst_none'], smartMerge: { prefix: 'Der angives forbrug af ', item: 'centralstimulerende stoffer', suffix: '.' } },
+    { id: 'ap_subst_benzo', label: 'Benzodiazepiner', category: 'Rusmidler', text: 'Angiver forbrug af benzodiazepiner.', exclude: ['ap_subst_none'], smartMerge: { prefix: 'Der angives forbrug af ', item: 'benzodiazepiner', suffix: '.' } },
+    { id: 'ap_subst_opioid', label: 'Opioider', category: 'Rusmidler', text: 'Angiver forbrug af opioider.', exclude: ['ap_subst_none'], smartMerge: { prefix: 'Der angives forbrug af ', item: 'opioider', suffix: '.' } },
 
     { id: 'ap_risk_none', label: 'Ingen selvskade/tanker', category: 'Selvskade & Risiko', text: 'Benægter aktuelle selvmordstanker, planer eller intentioner. Benægter ligeledes aktuel selvskade.', isDefault: true, exclude: ['ap_risk_thoughts', 'ap_risk_plans', 'ap_risk_sh_curr'] },
     { id: 'ap_risk_thoughts', label: 'Selvmordstanker', category: 'Selvskade & Risiko', text: 'Tilkendegiver selvmordstanker', hasInput: true, inputPlaceholder: 'Karakter/Hyppighed', exclude: ['ap_risk_none'] },
     { id: 'ap_risk_plans', label: 'Konkrete planer', category: 'Selvskade & Risiko', text: 'Har konkrete planer om selvmord', hasInput: true, inputPlaceholder: 'Beskriv planer', exclude: ['ap_risk_none'] },
-    { id: 'ap_risk_sh_curr', label: 'Aktuel selvskade', category: 'Selvskade & Risiko', text: 'Aktuel selvskadende adfærd', hasInput: true, inputPlaceholder: 'Metode/Hyppighed', exclude: ['ap_risk_none'] }
+    { id: 'ap_risk_sh_curr', label: 'Aktuel selvskade', category: 'Selvskade & Risiko', text: 'Aktuel selvskadende adfærd', hasInput: true, inputPlaceholder: 'Metode/Hyppighed', exclude: ['ap_risk_none'] },
+    { id: 'ap_risk_hist_sui', label: 'Tidl. selvmordsforsøg', category: 'Selvskade & Risiko', text: 'Tidligere selvmordsforsøg i anamnesen', hasInput: true, inputPlaceholder: 'Hvornår? Metode?' },
+    { id: 'ap_risk_hist_sh', label: 'Tidl. selvskade', category: 'Selvskade & Risiko', text: 'Tidligere selvskadende adfærd i anamnesen', hasInput: true, inputPlaceholder: 'Type? Periode?' },
+
+    { id: 'ap_hallu_none', label: 'Ingen hallucinationer', category: 'Perception (Hallucinationer)', text: 'Beskriver ingen hallucinationer.', isDefault: true, exclude: ['ap_hallu_audit', 'ap_hallu_visual', 'ap_hallu_olfact'] },
+    { id: 'ap_hallu_audit', label: 'Hørehallucinationer', category: 'Perception (Hallucinationer)', text: 'Beskriver hørehallucinationer', hasInput: true, exclude: ['ap_hallu_none'], smartMerge: { prefix: 'Patienten beskriver ', item: 'hørehallucinationer', suffix: ':' } },
+    { id: 'ap_hallu_visual', label: 'Synshallucinationer', category: 'Perception (Hallucinationer)', text: 'Beskriver synshallucinationer', hasInput: true, exclude: ['ap_hallu_none'], smartMerge: { prefix: 'Patienten beskriver ', item: 'synshallucinationer', suffix: ':' } },
+    { id: 'ap_hallu_olfact', label: 'Lugt/Smag', category: 'Perception (Hallucinationer)', text: 'Beskriver lugt- eller smagshallucinationer', hasInput: true, exclude: ['ap_hallu_none'], smartMerge: { prefix: 'Patienten beskriver ', item: 'lugt-/smagshallucinationer', suffix: ':' } },
+
+    { id: 'ap_delusion_none', label: 'Ingen vrangforestillinger', category: 'Tankeindhold (Vrangforestillinger)', text: 'Beskriver ingen vrangforestillinger.', isDefault: true, exclude: ['ap_delusion_para', 'ap_delusion_megalo', 'ap_delusion_depress', 'ap_delusion_hypo', 'ap_delusion_control'] },
+    { id: 'ap_delusion_para', label: 'Paranoia (Persekutorisk)', category: 'Tankeindhold (Vrangforestillinger)', text: 'Oplever paranoide/persekutoriske vrangforestillinger', hasInput: true, exclude: ['ap_delusion_none'], smartMerge: { prefix: 'Tankeindholdet er præget af ', item: 'paranoide (persekutoriske) vrangforestillinger', suffix: ':' } },
+    { id: 'ap_delusion_megalo', label: 'Storhed (Megaloman)', category: 'Tankeindhold (Vrangforestillinger)', text: 'Giver udtryk for megalomane vrangforestillinger', hasInput: true, exclude: ['ap_delusion_none'], smartMerge: { prefix: 'Tankeindholdet er præget af ', item: 'megalomane vrangforestillinger', suffix: ':' } },
+    { id: 'ap_delusion_depress', label: 'Depressive/Skyld', category: 'Tankeindhold (Vrangforestillinger)', text: 'Udviser depressive vrangforestillinger', hasInput: true, exclude: ['ap_delusion_none'], smartMerge: { prefix: 'Tankeindholdet er præget af ', item: 'depressive vrangforestillinger', suffix: ':' } },
+    { id: 'ap_delusion_hypo', label: 'Hypokondre', category: 'Tankeindhold (Vrangforestillinger)', text: 'Udviser hypokondre vrangforestillinger', hasInput: true, exclude: ['ap_delusion_none'], smartMerge: { prefix: 'Tankeindholdet er præget af ', item: 'hypokondre vrangforestillinger', suffix: ':' } },
+    { id: 'ap_delusion_control', label: 'Styring/Påvirkning', category: 'Tankeindhold (Vrangforestillinger)', text: 'Oplever tankepåvirknings- eller styringsoplevelser', hasInput: true, exclude: ['ap_delusion_none'], smartMerge: { prefix: 'Tankeindholdet er præget af ', item: 'tankepåvirknings-/styringsoplevelser', suffix: ':' } },
+
+    { id: 'ap_mot_yes', label: 'Motiveret', category: 'Motivation & Ønsker', text: 'Er motiveret for behandling.', isDefault: true, exclude: ['ap_mot_no'] },
+    { id: 'ap_mot_no', label: 'Ikke motiveret', category: 'Motivation & Ønsker', text: 'Er ikke motiveret for behandling.', exclude: ['ap_mot_yes'] },
+    { id: 'ap_plan', label: 'Ønsker til plan (Fritekst)', category: 'Motivation & Ønsker', text: 'Patienten ønsker at følgende indgår i behandlingsplanen:', hasInput: true, inputPlaceholder: 'Hjælp til/Ønsker for forløbet...' },
 ];
