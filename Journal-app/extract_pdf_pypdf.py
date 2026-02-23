@@ -18,6 +18,6 @@ def extract_pdf(pdf_path, output_path):
 
 if __name__ == "__main__":
     pdf_file = sys.argv[1]
-    out_file = "pdf_extracted.txt"
+    out_file = sys.argv[2] if len(sys.argv) > 2 else "pdf_extracted.txt"
     extract_pdf(pdf_file, out_file)
-    print("Extraction complete using pypdf.")
+    print(f"Extraction complete for {pdf_file} -> {out_file}")

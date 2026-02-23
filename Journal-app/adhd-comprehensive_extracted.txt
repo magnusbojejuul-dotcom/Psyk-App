@@ -1,0 +1,711 @@
+ 
+RADS Behandlingsvejledning for medicinsk behandling af ADHD 
+Side 1 af 14 
+Behandlingsvejledning for medicinsk behandling af ADHD 
+ 
+Fagudvalg under Rådet for Anvendelse af Dyr Sygehusmedicin, RADS, er interne, rådgivende 
+arbejdsgrupper, der refererer til Rådet. Fagudvalgene udarbejder forslag til baggrundsnotater 
+og behandlingsvejledninger for anvendelse af medicin inden for specifikke behandlings-
+områder. Dokumenterne forelægges RADS, som træffer beslutning om indholdet af de endelige 
+baggrundsnotater og forpligtende behandlingsvejledninger. 
+ 
+Målgruppe Relevante afdelinger 
+Lægemiddelkomitéer 
+Sygehusapoteker 
+Andre relevante interessenter 
+Udarbejdet af 
+ 
+Fagudvalget for medicinsk behandling af ADHD under  
+Rådet for Anvendelse af Dyr Sygehusmedicin 
+Gældende fra 
+ 
+1. juli 2016 Version: 1.0 
+Dok.nr: 255323 
+Offentliggjort: Juni 2016 
+Formål 
+Formålet med denne RADS-vejledning er at sikre en ensartet kvalitet af den medicinske 
+behandling af ADHD hos både børn og voksne i hele landet. Vejledningen giver anbefalinger for 
+valg af lægemiddel hos patienter med og uden comorbiditet, samt fastlægger kriterier for 
+igangsætning af den medicinske behandling, opfølgning og eventuel seponering.  
+Konklusion vedr. lægemidlerne 
+ 
+Valg af lægemiddel til børn og voksne, som ikke tidligere er behandlet med medicin 
+ 
+Børn og voksne uden psykiatrisk comorbiditet 
+ Anvend methylphenidat som 1. valg 
+ Overvej atomoxetin: 
+o Hvis methylphenidat er kontraindiceret (fx. ved svær depression – se nedenfor) 
+o Ved behov for døgndækkende effekt. 
+o Ved risiko for misbrug af methylphenidat hos patienten selv eller pårørende 
+ 
+Kun methylphenidat og atomoxetin er godkendt som 1. linje behandling til både børn og 
+voksne. Effekten er fundet ligeværdig hos børn (høj evidens). Det gælder formentlig også 
+voksne (meget lav evidens). I praksis er det en fordel at begynde med methylphenidat frem 
+for atomoxetin, da effekten af methylphenidat indsætter umiddelbart, hvorimod effekten af 
+atomoxetin først indtræder fuldstændig efter 1-2 måneder. Der er desuden rigtig mange års 
+erfaring med methylphenidat. Såfremt methylphenidat pga. mangelfuld effekt eller 
+bivirkninger, viser sig ikke at være det rigtige valg til en konkret patient , vil man hurtigere 
+kunne regulere dosis eller afprøve et andet lægemiddel (jf. afsnit 10 patienternes værdier og 
+præferencer). 
+ 
+De forskellige formuleringer af methylphenidat anses generelt som ligestillede. Optitrering til 
+optimal dosis kan ske med korttidsvirkende methylphenidat, hvorefter man generelt bør skifte 
+til et præparat med længere virkningsvarighed af hensyn til adherence. Anvend dog ikke 
+Concerta (eller præparater som er substituerbare hermed), hvis barnet har besvær med at 
+sluge depottabletten. Ved behov for at forlænge virkningsvarigheden yderligere kan man 
+supplere med korttidsvirkende methylphenidat sidst på eftermiddagen. Alternativt om 
+morgenen, hvis effekten af depotpræparatet er lang tid om at indtræde. Nogle børn kan nøjes 
+med at være dækket ind i skoletiden. 
+ 
+ 
+RADS Behandlingsvejledning for medicinsk behandling af ADHD 
+Side 2 af 14 
+ 
+ 
+ 
+Børn og voksne med psykiatrisk comorbiditet 
+ Anvend methylphenidat som 1. valg i de fleste situationer med comorbiditet 
+ Overvej atomoxetin: 
+o Ved comorbid angst eller depression 
+o Ved behov for døgndækkende effekt. 
+o Ved risiko for misbrug af methylphenidat hos patienten selv eller pårørende 
+ 
+Det er en klinisk erfaring, at man med atomoxetin ofte på samme tid vil kunne behandle en 
+comorbid depression eller angsttilstand. Lægen skal være opmærksom på, at angst kan 
+provokeres af CNS-stimulantia og der er risiko for forværring af depression over tid med en 
+sådan behandling som monoterapi.   
+ 
+Vær generelt meget forsigtig med at anvende centralstimulerende ADHD-medicin til patienter 
+med depression, bipolar lidelse, skizofreni eller andre psykotiske tilstande, idet der kan ses 
+alvorlig forværring heraf. 
+ 
+Se i øvrigt senere afsnit vedr. igangsætning af behandling hos patienter med psykiatrisk 
+comorbiditet. 
+ 
+Børn med psykiatrisk comorbiditet som fx mental retardering eller autisme med svære 
+adfærdssymptomer, kan have behov for døgndækkende effekt. Det skyldes, at barnet kan 
+være præget af svær motorisk uro, affektlabilitet og søvnvanskeligheder i de fleste af døgnets 
+timer.  
+ 
+For børn med comorbiditet af autismespektrumforstyrrelse, mental retardering, hvor der ikke 
+er behov for døgndækkende effekt, er 1. valget det samme som for børn uden comorbiditet. 
+Det samme gælder børn med tics.  
+ 
+Vær opmærksom på, at effekten af ADHD-medicin hos personer med amfetamin og kokain 
+misbrug eller svære personlighedsforstyrrelser er tvivlsom. 
+ 
+ Børn og unge <18 år og voksne uanset comorbiditet, 
+Ikke tidligere behandlet med medicin 
+Anvend som 1. valg til min. 
+90 % af populationen 
+(Stærk anbefaling for) 
+Methylphenidat 
+Overvej 
+(Svag anbefaling for) 
+Atomoxetin 
+ 
+Anvend ikke rutinemæssigt 
+(Svag anbefaling imod) 
+Dexamfetamin 
+Guanfacin 
+Lisdexamfetamin 
+Anvend ikke  
+(Stærk anbefaling imod) 
+ 
+ 
+Gravide og ammende 
+Ved tvingende behov for medicinsk behandling anvendes methylphenidat. Øvrige lægemidler 
+frarådes. 
+ 
+ 
+ 
+ 
+ 
+ 
+RADS Behandlingsvejledning for medicinsk behandling af ADHD 
+Side 3 af 14 
+ 
+Behandling ved manglende effekt eller bivirkninger  
+ 
+Dosisøgning  
+Overvej ved mangelfuldt respons at øge dosis af: 
+o Methylphenidat op til 2,1 mg/kg (eller max. 90 mg) daglig for børn og max. 100 
+mg for voksne 
+o Atomoxetin op til 1,8 mg/kg (eller max. 120 mg) for både børn og voksne. 
+ 
+Der er stor individuel variation i dosis respons. Ved manglende effekt af den iværksatte 
+behandling, hvor denne tåles uden markante bivirkninger, kan det, i overensstemmelse med 
+ovenstående dosisanbefalinger fra NICE, være relevant at afprøve om der er yderligere effekt 
+at hente ved at øge dosis inden evt. skift til anden behandling. Dette er altid en specialist -
+opgave. De angivne max. doser fra NICE er højere end den max. dosis som er angivet i 
+produktresuméerne.  
+ 
+For voksne er der stor diskrepans mellem den maxdosis for methylphenidat, som er angivet i 
+hhv. produktresumé (80 mg) og øvrige danske kilder (150 mg ifølge IRF og promedicin.dk). 
+Den kliniske erfaring er, at de fleste voksne responderer tilfredsstillende på 60-70 mg. I 
+sjældne tilfælde kan der være behov for at øge dosis til 100 mg. Dette er i overensstemmelse 
+med resultatet af et dosiseskaleringsstudie, samt retningslinjen fra NICE, som anbefaler en 
+maksimal dosis på 100 mg.   
+ 
+Et tilsyneladende behov for doser herover kan skyldes, at bivirkninger til medicinen (fx 
+hyperaktivitet) fejlagtigt bliver fortolket som mangelfuldt respons med risiko for yderligere 
+dosisøgning. 
+ 
+Behov for doser, som overstiger maxdosis angivet i produktresuméerne skal altid udredes 
+grundigt mhp. afdækning af eventuelt misbrug.  
+ 
+For dexamfetamin, lisdexamfetamin og guanfacin er der ikke basis for at anbefale doser ud 
+over de i produktresuméet angivne maxdoser for hverken børn eller voksne. 
+ 
+ 
+Skift af lægemiddel 
+ 
+ Forsøg skift til atomoxetin, dexamfetamin eller lisdexamfetamin ved manglende effekt 
+eller bivirkninger af methylphenidat. 
+ 
+Skift af lægemiddel skal altid foregå i psykiatrisk speciallægeregi. Præparatvalget må her 
+basere sig på tid til indsættende effekt, varighed af effekt og bivirkningsprofil i forhold til 
+patientens behov og specifikke bivirkninger ved 1. behandlingsforsøg.  
+ 
+Hvis det er nødvendigt at skifte præparat som følge af udtalte søvnvanskeligheder eller nedsat 
+appetit opstået under behandling med methylphenidat eller behov for døgndækkende 
+behandling, anbefales at forsøge skift til atomoxetin.  
+ 
+Guanfacin er pt. ikke anbefalet på linje med de øvrige lægemidler pga. mangel på direkte 
+sammenlignende studier hermed. Guanfacin kan dog overvejes til patienter, som oplever 
+forværring i tics eller markant øgning af puls og blodtryk ved behandling med et af de øvrige 
+lægemidler.  
+ 
+Ved skift af præparat hos børn: Vær opmærksom på om barnet kan sluge depottabletten (se 
+afsnit 9 i baggrundsnotatet). 
+ 
+ 
+RADS Behandlingsvejledning for medicinsk behandling af ADHD 
+Side 4 af 14 
+ Børn og unge <18 år og voksne med 
+manglende effekt eller bivirkninger af 
+methylphenidat 
+Anvend som 1. valg til min. 90 % af 
+populationen 
+(Stærk anbefaling for) 
+Atomoxetin 
+Dexamfetamin 
+Lisdexamfetamin 
+ 
+Overvej 
+(Svag anbefaling for) 
+Guanfacin 
+Anvend ikke rutinemæssigt 
+(Svag anbefaling imod) 
+ 
+Anvend ikke  
+(Stærk anbefaling imod) 
+ 
+ 
+Kombinationsbehandling 
+Ved utilstrækkelig effekt af min. 2 afprøvede lægemidler kan kombinationsbehandling med 
+centralstimulantia og atomoxetin, eller guanfacin evt. forsøges. Der foreligger dog ikke god 
+evidens for effekt og tolerabilitet af kombinationsbehandling, hvorfor dette medfører behov  
+for særlig opmærksomhed på bivirkninger (se afsnit 7.1.2 i baggrundsnotatet). 
+Kombinationsbehandling skal kun foregå i psykiatrisk speciallægeregi.  
+ 
+Comedicinering med andre psykofarmaka 
+Ved behov for behandling med antipsykotika hos børn med lav IQ eller adfærdsforstyrrelse er 
+der nogen evidens for, at kortvarig behandling med risperidon dæmper aggression uden at 
+medføre bivirkninger som følge af interaktion med methylphenidat. Dette kan dog ikke 
+anbefales rutinemæssigt, da risperidon i sig selv har risiko for bivirkninger. 
+ 
+Kombination af SSRI og ADHD-medicin synes ikke at bedre angst og depressive symptomer, 
+og denne kombination kan derfor ikke anbefales rutinemæssigt. Kombination af SSRI og 
+atomoxetin frarådes pga. manglende øget effekt og klinisk relevant stigning i blodtryk og 
+hjertefrekvens. 
+ 
+Vær opmærksom på en potentiel risiko for QTc-forlængelse ved kombination af atomoxetin og 
+andre lægemidler med QTc-forlængende virkning (antipsykotika, visse antidepressiva)  
+Kriterier for igangsætning af behandling 
+Det er kun speciallæger i hhv. børne- og ungdomspsykiatri og psykiatri der, i henhold til 
+Sundhedsstyrelsens vejledning, må igangsætte behandling med ADHD-medicin. 
+ 
+Initiering af behandling hos børn 
+I Sundhedsstyrelsens nationale kliniske retningslinje anbefaler man, at en standardudredning 
+af ADHD er tværfaglig og tværsektoriel og inkluderer følgende: 
+ Klinisk interview med anamnese 
+ Standardiserede rating-scales (fra flere miljøer) 
+ Indhentning af oplysninger fra skole/daginstitution eller observation af barnet i et af 
+disse miljøer 
+ Somatisk undersøgelse ved læge  
+ Psykologisk undersøgelse. 
+ 
+Medicinsk behandling af børn og unge med ADHD bør først initieres efter relevant udredning  
+(20). Denne anbefaling understøttes af Børne- og Ungdomspsykiatrisk Selskabs faglige 
+retningslinje vedr. udredning og behandling af ADHD hos børn og unge. 
+ 
+ 
+RADS Behandlingsvejledning for medicinsk behandling af ADHD 
+Side 5 af 14 
+Sværhedsgrad af ADHD  
+Der findes ikke evidensbaserede redskaber til vurdering af sværhedsgraden af ADHD hos børn 
+og unge. I den nyligt opdaterede nordamerikanske diagnosemanual (DSM-5, Diagnostic and 
+statistical manual of mental disorders, version 5) kræves, udover at patienten opfylder de 
+diagnostiske kriterier for diagnosen, at klinikeren vurderer lidelsens sværhedsgrad. Her  
+benyttes en klinisk vurdering baseret på antal af symptomer og funktionsnedsættelsens 
+sværhedsgrad: 
+Få symptomer og mindre funktionsnedsættelse = mild ADHD 
+Mange symptomer og svær funktionsnedsættelse = svær ADHD 
+Symptomer og funktionsnedsættelse herimellem = moderat ADHD.  
+ 
+Der synes at være belæg for, at ADHD lidelsen kan opdeles i mild eller svær ADHD (DSM-5).  
+Det er ikke muligt at fastsætte et specifikt antal af symptomer som udtryk for graden af 
+funktionsnedsættelse, hvilket er en af konklusionerne i NICE guidelines. Udfordringen for 
+klinikeren er at skelne mellem symptomer og funktionsnedsættelse. Symptomer kan være 
+forbigående og relateret til psykosocial stress og vil forsvinde/minimeres af sig selv eller ved 
+psykosocial intervention.  I denne situation er medicinsk behandling ikke indiceret. En 
+betydelig funktionsnedsættelse skal være gennemgribende og være tilstede i flere domæner 
+og være varig.  Den kræver specialistindsats og hvis den ikke behandles kan det udgøre en 
+trussel mod patientens generelle udvikling og psykosociale tilpasning. 
+ 
+Skolebørn og unge (6-17 år) 
+Retningslinjer fra både Sundhedsstyrelsen, NICE og SIGN anbefaler medicinsk behandling til 
+børn og unge med (moderat til) svær ADHD.  
+ 
+Førskolebørn (0-5 år) 
+Sundhedsstyrelsens nationale kliniske retningslinje forholder sig kun indirekte til indikationen 
+for medicinsk behandling af ADHD hos børn under 6 år og henviser til de enkelte præparaters 
+godkendelse på det danske marked (alle aktuelt tilgængelige medikamenter til behandling af 
+ADHD har indikationen medicinsk behandling af ADHD hos børn fra 6 år). NICE og SIGN  
+anbefaler ikke-medicinsk behandling som førstevalg til behandling af ADHD i denne 
+aldersgruppe. I stedet anbefales forældretræningsprogrammer som førstevalgsbehandling.  
+ 
+Anbefalinger vedr. igangsætning af medicinsk behandling hos børn og unge  
+ Anvend medicinsk behandling af ADHD kernesymptomer hos og børn og unge (6 -17 
+år) med svær ADHD, såfremt ikke-medicinske tiltag har utilstrækkelig effekt 
+ Det er god praksis at overveje medicinsk behandling til børn og unge med moderate 
+symptomer og betydelig varig funktionsnedsættelse for flere domæner, såfremt ikke-
+medicinske tiltag har utilstrækkelig effekt 
+ Anvend ikke medicinsk behandling til børn og unge med mild ADHD. 
+ Anvend kun efter nøje overvejelse medicin hos børn under 6 år med svær ADHD, 
+såfremt adfærdsregulerende- og forældretræningsprogrammer ikke har den ønskede 
+effekt. Denne forestås i givet fald af børne- og ungdomspsykiatrisk specialafdeling og 
+effekten af den medicinske behandling skal afvejes i forhold til bivirkningsniveau. 
+ 
+ 
+Initiering af behandling hos voksne 
+ADHD diagnosen hos voksne er en klinisk diagnose, som stilles på baggrund af en grundig 
+anamnese og systematisk klinisk undersøgelse. Sundhedsstyrelsens Nationale Kliniske 
+Retningslinje angiver det som god klinisk praksis, at man ved udredningen anvender en 
+semistruktureret spørgeguide (fx DIVA 2,0), samt en rating scale udført af den voksne selv (fx 
+ASRS v.1,1). 
+ 
+NICE anbefaler farmakologisk behandling som førstevalg til behandling af voksne med ADHD 
+med mindre patienten ikke ønsker dette. Der vil være indikation for at indlede medicinsk 
+behandling for ADHD hos voksne, hvis de kliniske symptomer har en sværhedsgrad som ved 
+en psykiatrisk vurdering peger på en funktionsevne nedsættelse af betydelig grad. 
+ 
+RADS Behandlingsvejledning for medicinsk behandling af ADHD 
+Side 6 af 14 
+ 
+Det anbefales at gennemføre en somatisk undersøgelse og måle blodtryk og puls før opstart og 
+ved øgning af ADHD medicin, evt. suppleret med blodprøver og ekg. 
+ 
+Det er en klinisk erfaring, at det hos voksne kan tage tre til seks måneder at finde det 
+præparat der giver bedst virkning og færrest bivirkninger. Det er en klinisk erfaring, at 
+startdosis af atomoxetin bør være lavere end 40 mg for at undgå bivirkninger. 
+ 
+Anbefalinger vedr. igangsætning af medicinsk behandling hos voksne 
+ Medicinsk behandling af ADHD kernesymptomer anbefales til voksne med betydelig 
+funktionsnedsættelse.  
+ Øvrige støttende tiltag kan ikke udelades ved valg af medicinsk behandling.  
+ 
+ 
+Initiering af medicinsk behandling hos børn og voksne med comorbiditet 
+Det er vigtigt at være opmærksom på ubehandlet eller suboptimalt behandlet psykiatrisk 
+comorbiditet før opstart af medicinsk behandling af voksne med ADHD. Det gælder specielt 
+angsttilstande, depression, bipolar lidelse og psykoser, idet der kan ses forværring af disse 
+tilstande ved behandling med CNS-stimulantia. 
+ 
+Generelt skal man tilråde, at den mest belastende og fremtrædende lidelse skal prioriteres 
+behandlet først.  
+ 
+Således skal bipolare (både bipolar type I og II) og skizofrene tilstande være velbehandlede 
+medicinsk. Det vil sige, at patienten skal være i stemningsstabiliserende hhv. antipsykotisk 
+behandling, før man starter evt. ADHD medicin. Man skal også være opmærksom på, at både 
+bipolar sygdom og skizofreni i sig selv vil give opmærksomhedsforstyrrelse og andre kognitive 
+symptomer, som imidlertid typisk først viser sig omkring debuttidspunktet. Resultaterne med 
+behandling af sådanne kognitive symptomer med centralstimulantia er tvivlsomme og kan 
+medføre alvorlige bivirkninger (forværring af psykosen, maniske episoder osv.). 
+ 
+Mange ADHD patienter lider også af depressioner (evt. vinterdepressioner) og her vil relevant 
+behandling rettet mod disse tilstande være indiceret før evt. ADHD medicin. Det er desuden 
+almindeligt, at der i efterforløbet af depressioner ses kognitive deficits, uden at det drejer sig 
+om ADHD. Omhyggelig anamneseoptagelse vil oftest afsløre dette. Hvis patienten med 
+depression og comorbid ADHD ikke kan behandles med antidepressiva (fx. pga. bivirkninger 
+eller pt. ønske) kan man overveje atomoxetin som alternativ til antidepressiva under 
+omhyggelig monitoringen af stemningslejet. 
+ 
+Ved angsttilstande er det oftest hensigtsmæssigt at behandle angstlidelsen først, fx med et 
+SSRI før man starter med fx centralstimulantia, der kan forøge angsten hos nogle patienter.  
+Alternativt kan man forsøge atomoxetin til behandling af begge tilstande.  
+ 
+Ved misbrug er det vigtigt, at patienten starter misbrugsbehandling og reducerer sit misbrug 
+mest muligt før evt. behandling med ADHD medicin. Her bør man som oftest vælge 
+atomoxetin. 
+ 
+Ved lav grad af personlighedsforstyrrelse (især cluster B fx emotionel ustabil personligheds -
+struktur impulsiv og borderline type) kan det være hensigtsmæssigt at behandle ADHD lidelsen 
+først, hvis tilstanden tillader det (er stabil nok). Herefter vil psykoterapi ofte have en større 
+chance for at virke. 
+  
+Det er en klinisk erfaring at mange voksne med ADHD har søvnproblemer og at søvnen ofte 
+bedres når patienten er i sufficient medicinsk behandling. 
+ 
+Ved påbegyndelse af farmakologisk behandling af især voksne bør der udvises sædvanlig 
+forsigtighed, såfremt patienten lider af alvorlige kardiovaskulære lidelser.  
+ 
+RADS Behandlingsvejledning for medicinsk behandling af ADHD 
+Side 7 af 14 
+Monitorering af effekten 
+ 
+Børn 
+Ved gennemgang af litteraturen foreligger der ikke RCT, som belyser spørgsmålene om 
+hvordan opfølgning af den initierede behandling af ADHD bør foretages og herunder, hvordan 
+måles effekten og hvordan vurderes og vægtes bivirkninger i forhold til at skulle foretage 
+ændringer i den initiererede medicinske behandling. Anbefalingerne beror derfor generelt på 
+anbefalinger for god klinisk praksis fra NICE og Sundhedsstyrelsen.  
+ 
+RADS finder, at det er god klinisk praksis at følge op på den initierede behandling af ADHD på 
+lige fod med andre kroniske sygdomme. Opfølgningen sikrer kontinuerlig afvejning af 
+behandlingseffekt og bivirkninger. Desuden sikrer opfølgning, at ændringer i barnets 
+livsomstændigheder, personlige udvikling og mestring af vanskelige situationer inddrages i 
+overvejelserne vedrørende fortsættelse af den medicinske behandling. 
+ 
+Ved initiering af medicinsk behandling anbefales gradvis øgning af dosis indtil der ikke er 
+yderligere klinisk bedring i ADHD (målt på kernesymptomer) og bivirkninger er tolerable (22).  
+ 
+RADS betragter følgende optitrering hos børn med kontrol af symptomer med ADHD-RS rating 
+scale samt bivirkninger ved anvendelse af en bivirkningsskala (se bilag 3) som god klinisk 
+praksis. 
+ 
+ Startdosis Optitreres 
+Methylphenidat Børn < 30 kg: 2,5 mg x 2  
+Børn > 30 kg: 5 mg x 2  
+1-2 gange ugentlig 
+ 
+Atomoxetin 0,5 mg/kg x 1 Til vedligeholdelses dosis* 
+over 2 uger. 
+Lisdexamfetamin 15-30 mg x 1 1-2 gange ugentlig 
+ 
+Dexamfetamin 1,25 mg x 2-3 1-2 gange ugentlig 
+Guanfacin 1 mg x 1 1 gang ugentlig 
+*Fordeles evt. på 2 daglige doser 
+ 
+Sundhedsstyrelsen anbefaler, at børn og unge i medicinsk behandling for ADHD kommer til 
+kontrol hvert halve år og at følgende bliver vurderet: 
+ Om patienten trives i skole- eller arbejdsmæssig sammenhæng, i familien og i sine 
+nære relationer 
+ Om effekten af behandlingen er tilfredsstillende 
+ Om der er bivirkninger 
+ Om der er mistanke om misbrug hos patienten eller i hans/hendes miljø  
+ Om højde, vækst, puls og blodtryk afviger fra normalværdierne 
+ Om der er behov for fortsat medikamentel behandling 
+ Om der er behov for at holde pause med den medikamentelle behandling. 
+ 
+Den omtalte regelmæssige vurdering af behandlingsindsatser bør også dække ikke-
+farmakologiske indsatser over for børn og unge i alderen 6-18 år med ADHD. 
+ 
+Rutineblodprøver og EKG anbefales ikke men indikation herfor skal løbende vurderes ift. alder, 
+helbredstilstand og øvrig medicinering. 
+ 
+Ratingscales udfyldes (i to miljøer) ved behandlingsstart, og der foretages registrering , når det 
+vurderes relevant i forløbet fx ved dosisændringer og tvivl om fortsat effekt af den iværksatte 
+behandling. Ved anvendelse af ADHD-RS, som er standardiseret på danske skolebørn, kan 
+man ved monitorering af behandling tilstræbe, at barnets symptomscore falder til reference-
+niveauet for et barn af samme køn og alder. ADHD-RS reference-værdier for børn og unge 
+fremgår af bilag 4.  
+ 
+ 
+RADS Behandlingsvejledning for medicinsk behandling af ADHD 
+Side 8 af 14 
+ 
+Opfølgning på kvaliteten af udredning og behandling (ADHD databasen) 
+ADHD databasen har siden januar 2013 hentet data fra Landspatientregistret og CPR-registret. 
+Disse data danner basis for kvantificerbare indikatorer til belysning af dele af eller den samlede 
+kvalitet af sundhedsvæsenets indsats (og senere resultater) for patienter under 18 år, der 
+starter i et udredningsforløb for ADHD på en Børne- og Ungdomspsykiatrisk afdeling enten 
+ambulant eller under indlæggelse. ADHD databasen er godkendt af Statens Serums Institut 
+(nu Sundhedsdatastyrelsen), hvilket betyder at registrering kan ske uden samtykke fra den 
+enkelte patient. Databasen registrerer udredningsforløb i form af 7 indikatorer (somatisk 
+undersøgelse, klinisk diagnostisk interview, observation af barn hjemme og i skole/institution, 
+anvendelse af ADHD-RS hjem og skole, afholdelse af diagnostisk konference og afholdelse af 
+tværfagligt netværksmøde). Planen er at der i 2017 indføres den første resultat-indikator ved 
+rutinemæssig online inddatering til databasen af ADHD-RS fra forældre. 
+ 
+Voksne 
+Ved gennemgang af litteraturen blev der ikke fundet RCT, som belyser spørgsmål vedr. 
+opfølgning på iværksat medicinsk behandling. 
+ 
+Derfor bygger anbefalinger her på god klinisk praksis, som anbefalet af NICE, 
+Sundhedsstyrelsen og Dansk Psykiatrisk Selskab. 
+ Når der er vist fornuftigt respons på behandlingen, bør den fortsætte så længe den er 
+klinisk effektiv 
+ Rutineblodprøver og EKG anbefales ikke, men relevans her skal løbende vurderes ift. 
+alder, helbredstilstand og øvrig medicinering 
+ Comorbide tilstande bør revurderes og patienten behandles eller viderehenvises, hvis 
+det er nødvendigt 
+ Behovet for psykologisk, social og erhvervsmæssig støtte til patient og evt. pårørende 
+skal vurderes. 
+ 
+Overstiger bivirkninger den oplevede effekt, eller opleves der ikke sufficient effekt overvejes 
+skift til andet præparat. Alternativt seponeres medicinen. 
+ 
+ASRS-rating scale er endnu ikke standardiseret på voksne i baggrundspopulationen og kan 
+derfor ikke anvendes helt parallelt med ADHD-RS som beskrevet ovenfor. Man har dog 
+mulighed for at kontrollere om sværhedsgraden af de enkelte symptomer falder som følge af 
+behandlingen. Se bilag 5. 
+ 
+Opfølgning på kvaliteten af udredning og behandling 
+En stor del af de voksne udredes og behandles aktuelt i speciallægepraksis, og disse diagnoser 
+indgår derfor ikke i diagnoseregisteret. Der er ikke aktuelt etableret en klinisk database for 
+udredning og behandling af voksne med ADHD. Region Midtjylland og Region Syddanmark har 
+foretaget audits ift. hvordan man har implementeret Sundhedsstyrelsens NKR.    
+  
+ 
+RADS Behandlingsvejledning for medicinsk behandling af ADHD 
+Side 9 af 14 
+ 
+Anbefalinger: 
+ 
+Børn 
+ Det er god praksis hvert halve år at vurdere effekt og bivirkninger af behandlingen og 
+derefter tage stilling til den fortsatte terapi 
+ Det anbefales, at der anvendes standardiserede ratingscales til vurdering af 
+symptomer og bivirkninger ved behandlingsstart og når det vurderes klinisk relevant 
+ Behandlingen fortsætter så længe der er klinisk effekt vurderet på oplysninger fra 
+barn/ung, familie og skole 
+ Behandlingen vil kunne foregå som ”shared care” mellem primær og sekundær sektor 
+efter bestemte retningslinjer, som fastlægges af den behandlingsansvarlige 
+speciallæge i børne- og ungdomspsykiatri.  I skrivende stund foreligger der ikke 
+nationale retningslinjer for dette samarbejde. 
+ 
+Voksne 
+ Det er god klinisk praksis at læge/sundhedsperson regelmæssigt og mindst én gang 
+årligt revurderer behovet for fortsat medicinsk behandling 
+ Patientens oplevelse af effekt vs bivirkning, samt klinikerens vurdering sammen-
+holdes. Er der familie, støttepersoner eller personale fra institution høres disse også 
+om den oplevede effekt  
+ Objektive bivirkninger i form af BT, puls og vægt måles. 
+ 
+Kriterier for skift af behandling 
+Skift af præparat eller kombinationsbehandling med flere præparater pga. manglende effekt 
+ved monoterapi, er en specialistopgave der ikke bør foregå i almen praksis jf. gældende 
+vejledning fra Sundhedsstyrelsen. 
+ 
+Ved manglende effekt eller bivirkninger af førstevalgspræparatet anvendt i sufficient dosis kan 
+speciallæger i psykiatri eller børne- og ungdomspsykiatri forsøge skift til et af de øvrige 
+lægemidler.  
+ 
+Ifald der er god effekt af methylphenidat men uacceptable bivirkninger, er det en klinisk 
+erfaring, at man hos nogle patienter med succes kan skifte til lisdexamfetamin eller 
+dexamfetamin ved, at foretage krydstitrering (dvs. sænke dosis at methylphenidat og 
+iværksætte optitrering af lisdexamfetamin eller dexamfetamin. 
+ 
+Ved skift som følge af misbrug af methylphenidat, lisdexamfetamin eller dexamfetamin 
+seponerer man dette og skifter direkte over til atomoxetin. 
+Kriterier for seponering af behandling  
+ 
+Hvornår bør seponering overvejes? 
+Behandlingen hos både børn og voksne fortsættes så længe der er klinisk effekt og 
+bivirkningerne er tolerable. Ved alvorlige bivirkninger seponeres behandlingen straks. 
+ 
+I et review af Goodman et al. blev der ved gennemgang af litteraturen ikke fundet RCT, der 
+belyser seponering efter langtidsbehandling af ADHD, hverken for børn eller voksne. 
+Forfatteren konkluderer således på baggrund af primært observationelle studier med 
+behandling af op til 24 måneders varighed, at der er dokumenteret signifikant effekt af 
+langtidsbehandling, samt negative konsekvenser forbundet med seponering af medicin. Der er 
+imidlertid behov for yderligere undersøgelser. 
+ 
+ 
+RADS Behandlingsvejledning for medicinsk behandling af ADHD 
+Side 10 af 14 
+Spørgsmålet om planlagte medicinpauser er omdiskuteret. I en tidligere metaanalyse tydede 
+en posthoc analyse på, at langtidsbehandling er associeret med opregulering i antallet af 
+dopamintransportere (130), men den kliniske betydning af at afholde medicinpauser som følge 
+heraf er ikke afklaret.  
+ 
+Pga. usikkerhed om langtidseffekt har det europæiske lægemiddelagentur (EMA) tidligere 
+anbefalet, at børn holder pause med methylphenidat mindst én gang årligt (fx i skoleferien) 
+med henblik på revurdering af det fortsatte behov for medicin. Rationalet for dette er sidenhen 
+gennemgået i Sundhedsstyrelsens nationale kliniske retningslinje, hvor man gi ver en svag 
+anbefaling imod EMA’s anbefaling pga. øget risiko for recidiv. NICE anbefaler ikke planlagte 
+medicinpauser hos voksne Såfremt patienten i perioder ikke har taget sin medicin, bør 
+resultatet af medicin-pausen indgå i overvejelser omkring seponering.  
+ 
+Hvordan seponeres behandlingen?  
+I et nyligt review har man vurderet forskelle i vedligeholdelse af respons ved seponering af 
+behandling. Der indgik 4 studier hos børn og unge af forskellig design, population og varighed. 
+Ingen af disse var studier med direkte sammenligning mellem lægemidlerne. Forfatterne 
+konkluderede, at der ses hurtigere tilbagefald af ADHD symptomer ved seponering af 
+methylphenidat og guanfacin end ved seponering af atomoxetin.  Yderligere studier er 
+nødvendige.  
+ 
+I et ældre review, hvor der indgik i alt 4 seponeringsstudier (2 med børn og 2 med voksne), 
+medførte seponering af atomoxetin efter 9-10 ugers behandling recidiv af ADHD symptomer, 
+men ikke til et før-behandlingsniveau. Forekomsten af behandlingskrævende ophørs-
+symptomer var lav og der var ikke signifikant forskel mellem den gruppe, som ophørte brat 
+med behandlingen af atomoxetin og de som fortsatte med placebo. I børnestudierne blev  
+patientgruppen dog kun fulgt i 1 uge efter seponering, men de voksne patienter blev fulgt i 4 
+uger. Dette er også i overensstemmelse med konklusionen af et nyere randomiseret 
+seponeringsstudie med atomoxetin. Recidiv af ADHD symptomer lader til at komme inden for 
+de første 2 uger. 
+ 
+I et randomiseret seponeringsstudie, blev 157 ud af i alt 276 børn og unge, som forinden 
+havde været behandlet i 26 uger med lisdexamfetamin, randomiseret til fortsat behandling 
+med lisdexamfetamin eller placebo. Seponering af lisdexamfetamin medførte en tilbagevending 
+af ADHD symptomer til før behandlingsniveau. Andelen af patienter med behandlingssvigt 
+(defineret som min. 50 % øgning i ADHD-RS-IV) var hhv. 79,2 % i placebogruppen og 28,9 % 
+ved fortsat behandling med lisdexamfetamin (154). 
+ 
+Såfremt der planlægges ophør med medicinsk behandling, er det god klinisk praksis at 
+varigheden er 1 måned for med sikkerhed at skelne mellem rebound symptomer versus 
+tilbagefald. En del patienter vil ikke være i stand til at undvære medicin 1 måned pga. r ecidiv 
+af symptomer og i disse situationer anbefales det at genoptage behandlingen.  
+ 
+Der er ingen evidens for anbefaling om evt. tidspunkt for planlagt medicinophør. RADS 
+anbefaler, at dette beror på en vurdering ud fra symptomer og funktionsniveau, medic inpauser 
+som patienten selv har foretaget og dialog mellem behandler og patient/familie.  
+ 
+Der er evidens for at hjernen er færdigudviklet omkring 25 års alderen og på dette tidspunkt 
+vil mange patienter have gennemført uddannelse og være flyttet hjemmefra. Hvis man er 
+startet med medicin som barn eller ung kan dette således være et tidspunkt, hvor seponering 
+vil kunne forsøges. 
+  
+ 
+RADS Behandlingsvejledning for medicinsk behandling af ADHD 
+Side 11 af 14 
+ 
+ 
+Anbefalinger: 
+ 
+Børn 
+ Det er god praksis at vurdere effekt og bivirkninger af behandlingen hvert halve år og 
+derefter tage stilling til den fortsatte terapi på basis af patientens daglige funktions-
+niveau  
+ Ved tvivl om effekt eller svære bivirkninger holdes pause mht. stillingtagen til 
+seponering eller evt. skift til anden medicin 
+ Planlagte pauser jf. tidligere anbefaling fra EMA anbefales ikke rutinemæssigt 
+ Behandling med ADHD medicin kan seponeres uden nedtrapnings regime. 
+Voksne 
+ Det er god klinisk praksis, at man regelmæssigt og mindst én gang årligt revurderer 
+behovet for fortsat medicinsk behandling 
+ Seponering af medicin kan foregå brat uden risiko for seponeringssymptomer. 
+ 
+Grundlag for udarbejdelse af lægemiddelrekommandation 
+Sammenligningsdosis er baseret på de anvendte gennemsnitsdoser i RCT, hvor lægemidlerne 
+er direkte sammenlignet. Der er lagt vægt på RCT med høj eller moderat evidenskvalitet (se 
+baggrundsnotatet tabel over RCT afsnit 7.2.1). Forholdet mellem de gennemsnitlige doser er 
+beregnet og efterfølgende afrundet til nærmeste tilgængelige styrke af lægemidlerne. 
+Sammenligningsdosis for hhv. nedre og øvre ende af det almindelige dosisinterval tilnærmet 
+de tilgængelige styrker er endvidere angivet i parentes. Dosis af dexamfetamin er angivet ud 
+fra det dosisforhold mellem lisdexamfetamin og dexamfetamin, som er angivet i produkt -
+resuméet for lisdexamfetamin.  
+ 
+Der er ikke evidensbaseret basis for at vurdere, om det ækvieffektive dosisforhold mellem 
+lægemidlerne forholder sig anderledes for voksne eller patienter med psykiatrisk comorbiditet.  
+ 
+Nedenstående sammenligningsdoser gælder, som udgangspunkt for alle patienter med ADHD.  
+ 
+Lægemiddel Sammenligningsdosis per døgn Tilsvarende evt. 
+vægtbaseret dosis 
+Methylphenidat 30 mg (10-60 mg)* 0,8 mg/kg 
+Atomoxetin 40 mg (18-80 mg)  1,1 mg/kg 
+Lisdexamfetamin 30 mg (20–70 mg)** - 
+Dexamfetamin 10 mg (5-20 mg) - 
+Guanfacin 4 mg (2-7 mg) 0,1 mg/kg 
+*eller 18-54 mg afhængig af de tilgængelige styrker af valgte præparat 
+** Mindste tilgængelige styrke af lisdexamfetamin er 20 mg – kapslerne kan ikke deles 
+ 
+Overgangen fra faglige anbefalinger til lægemiddelrekommandation 
+Da stort set hele forbruget af medicin mod ADHD anvendes uden for sygehus sker 
+udarbejdelsen af lægemiddelrekommandationen efter følgende principper: Konkrete 
+lægemidler og produkter placeres i lægemiddelrekommandationen på baggrun d af de vilkår, 
+som er gældende for primærsektoren (gældende AUP-priser og mulighed for at opnå 
+medicintilskud). Bemærk, at afsnittet ikke kan læses som en behandlingsanbefaling. 
+ 
+  
+ 
+RADS Behandlingsvejledning for medicinsk behandling af ADHD 
+Side 12 af 14 
+Algoritme 
+Anbefalingerne for initialt valg af lægemiddel, samt behandlingsvalg ved manglende effekt eller 
+bivirkninger er opsummeret i algoritmen nedenfor.  
+ 
+Manglende effekt af flere forskellige forsøgte interventioner bør også give anledning til at 
+genoverveje diagnosen. 
+ 
+Mht. vurdering af effekt og bivirkninger på hvert trin henvises endvidere til afsnittet 
+Monitorering af effekt og bivirkninger. 
+ 
+ 
+ 
+ 
+ 
+
+ 
+RADS Behandlingsvejledning for medicinsk behandling af ADHD 
+Side 13 af 14 
+Fagudvalgets sammensætning 
+ 
+Fagudvalgets 
+sammensætning 
+Formand Tine Houmann, overlæge, studielektor, Børne- og 
+ungdomspsykiatrisk Selskab og Region Hovedstaden (repr. B&U) 
+Michael Schmidt, overlæge, Region Sjælland (repr. Voksen) til 
+1.3.2016 
+Anne Mønsted, 1. reservelæge, Region Sjælland (repr. Voksen) fra 
+12. maj 2016 
+Søren Krue, overlæge, Region Sjælland (repr. B&U) til 15.2.2016 
+Jonatan Hannibal, afdelingslæge, Region Sjælland (repr. B&U) fra 
+29.4.2016 
+Ib Rasmussen, overlæge, Region Nordjylland (repr. Voksen) 
+Tina Heltborg Jacobsen, overlæge, Region Nordjylland (repr. B&U) 
+Erik Pedersen, overlæge, Region Midtjylland (repr. Voksen) fra 
+11.1.2016 
+Helle Rasmussen, overlæge, Region Midtjylland (repr. B&U) 
+Jørgen Christoffersen, overlæge, Region Syddanmark (repr. Voksen) 
+Niels Bilenberg, professor, overlæge, ph.d. Region Syddanmark (repr. 
+B&U) 
+Poul Videbech, professor, Region Hovedstaden (repr. Voksen) fra 
+1.1. 2016  
+Martin Balslev Jørgensen, overlæge, dr.med. 
+Dansk Psykiatrisk Selskab 
+Pernille Winkler, praktiserende læge,   
+Dansk Selskab for Almen medicin (DSAM) 
+Helene Elsborg, praktiserende læge,   
+Dansk Selskab for Almen medicin (DSAM) 
+Lene Høimark, afdelingslæge,   
+Dansk Selskab for Klinisk Farmakologi 
+Charlotte Olesen, Børneafdelingen 
+Dansk Pædiatrisk Selskab 
+Espen Jimenez Solem, 1. reservelæge, ph.d. 
+Dansk Selskab for Farmakoepidemiologi 
+Heidi Bryde Biernat, overlæge 
+Dansk Neurologisk Selskab 
+Emil Loldrup Fosbøl, 1 reservelæge, ph.d. 
+Dansk Cardiologisk Selskab 
+Thomas Loof Hedegård, farmaceut 
+Dansk Selskab for Sygehusapoteksledelse 
+Anne Torgny Andersen, praktiserende speciallæge i børne- og 
+ungdoms-psykiatri, Inviteret af formanden – udtrådt pr 21.12.2015 
+ 
+Det har ikke være muligt at få udpeget en praktiserende speciallæge i 
+psykiatri. 
+Ændringslog 
+ 
+Version Dato Ændring 
+1.0 Juni 2016  
+ 
+RADS Behandlingsvejledning for medicinsk behandling af ADHD 
+Side 14 af 14 
+ 
+ 
+ 
+ 

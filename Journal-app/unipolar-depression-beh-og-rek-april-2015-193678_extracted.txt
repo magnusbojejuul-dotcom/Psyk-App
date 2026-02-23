@@ -1,0 +1,511 @@
+ 
+ 
+RADS Behandlingsvejledning inkl. Lægemiddelrekommandation  
+for medicinsk behandling af unipolar depression 
+Side 1 af 10 
+ 
+ 
+Behandlingsvejledning inklusiv lægemiddelrekommandation for 
+medicinsk behandling af unipolar depression 
+ 
+Fagudvalg under Rådet for Anvendelse af Dyr Sygehusmedicin, RADS, er interne, rådgivende 
+arbejdsgrupper, der refererer til Rådet. Fagudvalgene udarbejder forslag til baggrundsnotater 
+og behandlingsvejledninger for anvendelse af medicin inden for specifikke behandlings -
+områder. Dokumenterne forelægges RADS, som træffer beslutning om indholdet af de endelige 
+baggrundsnotater og forpligtende behandlingsvejledninger. 
+ 
+Målgruppe Relevante afdelinger 
+Lægemiddelkomitéer 
+Sygehusapoteker 
+Andre relevante interessenter 
+Udarbejdet af 
+ 
+Fagudvalget for medicinsk behandling af unipolar depression 
+under  
+Rådet for Anvendelse af Dyr Sygehusmedicin 
+Gældende fra 
+ 
+1. maj 2015 Version: 1.0 
+Dok.nr: 193678 
+Offentliggjort: april 2015 
+ 
+Formål 
+Det primære formål med denne RADS behandlingsvejledning er at sikre national konsensus om 
+kriterier for opstart, opfølgning, varighed og seponering af behandling med antidepressiva hos 
+voksne med unipolar depression eller dystymi. Herunder hvilke patienter der skal behandles 
+med antidepressiva, hvilke antidepressiva der skal anvendes ved første behandlingsforsøg hos 
+nye patienter, samt hvilke antidepressiva der særligt finder anvendelse ved manglende effekt 
+af det initialt anvendte antidepressivum. Endelig skal RADS identificere kriterier for polyfarmaci 
+med fx lithium, antipsykotika og benzodiazepiner, som ofte anvendes i tillæg til antidepressiva.  
+Kriterier for igangsætning af behandling 
+ 
+Diagnostik og udredning 
+ Diagnosen skal stilles ud fra ICD-10 på baggrund af et grundigt interview, som 
+hovedregel over to konsultationer, hvor der spørges aktivt ind til depressive 
+symptomer  
+ 
+ Diagnosen skal baseres på en samlet klinisk vurdering, herunder somatisk udredning 
+mhp. afklaring af differentialdiagnose eller somatisk komorbiditet 
+ 
+ Man skal være opmærksom på komorbide somatiske og psykiatriske sygdomme 
+ 
+ Generel screening anbefales ikke, men udføres ved mistanke om depression og 
+overfor særlige risikogrupper. Dette kan dog ikke erstatte en grundig klinisk 
+vurdering. 
+ 
+  
+ 
+ 
+ 
+ 
+RADS Behandlingsvejledning inkl. Lægemiddelrekommandation  
+for medicinsk behandling af unipolar depression 
+Side 2 af 10 
+ 
+Definition af depressionens sværhedsgrader  
+ 
+ HAM-D6 HAM-D17 MADRS 
+Let depression 7-8 13-17 18-21 
+Moderat depression 9-11 18-24 22-29 
+Svær depression 12-22 25-52 30-60 
+ 
+ 
+Igangsætning af behandling 
+ For patienter med let depression anbefales ”Watchful monitoring” 
+ 
+ Patienter med let depression skal ikke rutinemæssigt tilbydes behandling med 
+antidepressiva 
+ 
+ 
+ 
+ 
+Patienter med moderat depression eller dystymi tilbydes behandling med 
+antidepressiva eller psykoterapi – evt. i kombination 
+ - dog bør iværksættelse af medicinsk behandling her oftest afvente revurdering ved 
+2. konsultation  
+ 
+ Patienter med svær depression tilbydes altid behandling med antidepressiva 
+ 
+ Indikationen for at behandle ældre er, trods ringere evidens, den samme som for 
+yngre, idet der må ekstrapoleres fra evidensen for yngre aldersgrupper 1 
+ 
+ Patienter med samtidig depression og demens skal ikke rutinemæssigt tilbydes 
+behandling med antidepressiva, da effekten er meget usikker 
+ 
+ Overvej at tilbyde behandling med antidepressiva til patienter med post-stroke 
+depression. 
+Konklusion vedr. lægemidlerne 
+ 
+Følgende gælder nye2 patienter, som debuterer med moderat eller svær depression eller 
+dystymi, hvor der er taget stilling til at farmakologisk behandling skal iværksættes.  
+ 
+Selektive serotoningenoptagningshæmmere (SSRI): 
+ 
+ Sertralin anbefales som førstevalg pga. klinisk relevant lavere bivirknings- og 
+interaktionsrisiko, og effekten er ligeværdig med øvrige SSRI. Ved utilstrækkelig 
+effekt er det muligt at øge dosis til 200 mg 
+ 
+ Citalopram og escitalopram kan anvendes, men er ikke førstevalg pga. 
+dosisrestriktion og krav om EKG monitorering 
+ 
+ Fluoxetin, fluvoxamin og paroxetin anbefales ikke rutinemæssigt pga. flere 
+bivirkninger og interaktioner end andre SSRI. 
+ 
+ 
+                                                 
+1 Idet der må skelnes mellem raske vs. skrøbelige ældre og dosis justeres ift. aldersrelateret nyrefunktion. 
+ 
+2 Dvs., at en patient, som allerede er velbehandlet med et 2. eller 3. valgspræparat ikke nødvendigvis skal skifte.   
+ 
+ 
+RADS Behandlingsvejledning inkl. Lægemiddelrekommandation  
+for medicinsk behandling af unipolar depression 
+Side 3 af 10 
+ 
+ 
+ 
+ 
+ 
+Tricykliske Antidepressiva (TCA): 
+ 
+ Nortriptylin foretrækkes frem for øvrige TCA pga. lavere tendens til ortostatisk 
+hypotension 
+ 
+ Amitriptylin, clomipramin, dosulepin, doxepin, imipramin og maprotilin, anbefales ikke 
+rutinemæssigt pga. bivirkningsprofilen, men kan have en plads ved svigt af SSRI ved 
+især svær depression. Ved ønske om sedativ effekt anvendes amitriptylin. Ved angst 
+overvejes clomipramin. 
+ 
+ 
+Andre antidepressiva: 
+ 
+ Duloxetin og venlafaxin kan anvendes, men er ikke førstevalg pga. flere bivirkninger 
+og interaktioner end SSRI. Kan have en plads ved svigt af SSRI  
+ 
+ Mirtazepin kan anvendes, men er ikke førstevalg pga. mere sedation og vægtøgning 
+end SSRI, men kan have en plads ved søvnbesvær, vedvarende kvalme eller 
+seksuelle bivirkninger ved brug af SSRI, samt ved behandlingssvigt (alene eller som 
+tillæg) 
+ 
+ Mianserin anbefales ikke rutinemæssigt i monoterapi pga. usikker effekt, sedation og 
+vægtøgning, men kan have en plads som tillæg til SSRI ved søvnbesvær   
+ 
+ Bupropion anbefales ikke rutinemæssigt pga. risiko for kliniske relevante 
+interaktioner, men kan have en plads hos patienter, som ønsker behandlingsskift pga. 
+seksuelle bivirkninger eller vægtøgning 
+ 
+ Agomelatin anbefales ikke rutinemæssigt. Effekten er muligvis svarende til andre 
+præparaters, men undersøgelser heraf er små og af dårlig kvalitet. Kan evt. forsøges 
+ved alvorlige bivirkninger ved andre behandlinger eller som tillægsbehandling ved 
+utilstrækkelig effekt og samtidig søvnbesvær pga. den melatonerge effekt, såfremt 
+patienten ikke kan anvende mirtazepin eller mianserin. Husk monitorering af levertal! 
+ 
+ Vortioxetin anbefales ikke rutinemæssigt, da effekten endnu ikke er tilstrækkeligt 
+dokumenteret ift. relevant komparator 
+ 
+ Reboxetin anbefales ikke pga. manglende dokumenteret effekt 
+ 
+ Perikon anbefales ikke pga. mange interaktioner med andre lægemidler. 
+ 
+ 
+MAO-hæmmere: 
+ 
+ Isocarboxazid anbefales ikke rutinemæssigt pga. risiko for alvorlige interaktioner, 
+men kan have en plads ved behandlingsresistent depression (specialistopgave) 
+ 
+ Moclobemid anbefales ikke pga. risiko for alvorlige interaktioner, som ikke opvejes af 
+evt. bedre effekt ift. andre antidepressiva. 
+ 
+ 
+RADS Behandlingsvejledning inkl. Lægemiddelrekommandation  
+for medicinsk behandling af unipolar depression 
+Side 4 af 10 
+ 
+ 
+ 
+ 
+ Patienter med unipolar depression eller 
+dystymi som ikke tidligere har været 
+behandlet med antidepressiva 
+1. valg Sertralin  
+2. valg 
+ 
+TCA: 
+Nortriptylin* 
+ 
+SSRI: 
+Citalopram 
+Escitalopram 
+ 
+Andre: 
+Duloxetin 
+Venlafaxin 
+Mirtazepin 
+ 
+3. valg TCA: 
+Amitriptylin* 
+Clomipramin* 
+Dosulepin* 
+Doxepin* 
+Imipramin 
+Maprotilin 
+ 
+SSRI: 
+Fluoxetin 
+Fluvoxamin 
+Paroxetin 
+ 
+Andre 
+Agomelatin 
+Bupropion 
+Mianserin 
+Vortioxetin 
+ 
+MAO-hæmmere: 
+Isocarboxazid* 
+*Specialistopgave 
+ 
+ 
+Patienter med samtidig angst eller søvnløshed 
+ Det anbefales, at man først prøver at skifte til mirtazepin – et antidepressivum med 
+sederende effekt 
+ 
+ Det kan overvejes at tillægge et sederende antidepressivum (mianserin eller 
+mirtazepin) til allerede påbegyndt SSRI behandling 
+ 
+ Det kan overvejes kortvarigt at tillægge benzodiazepiner (fx oxazepam) i få uger 
+ 
+ Tillæg af sederende antipsykotika (fx quetiapin) anbefales ikke rutinemæssigt pga. 
+bivirkningsprofilen 
+ 
+ Tillæg af benzodiazepiner og særligt antipsykotika frarådes hos ældre med demens. 
+ 
+ 
+RADS Behandlingsvejledning inkl. Lægemiddelrekommandation  
+for medicinsk behandling af unipolar depression 
+Side 5 af 10 
+ 
+ 
+ 
+ 
+ 
+Patienter med samtidig angst eller 
+søvnløshed 
+1. valg  Mirtazepin 
+2. valg 
+ 
+SSRI (sertralin) + mirtazepin 
+SSRI (sertralin) + mianserin 
+SSRI (sertralin) + benzodiazepin (oxazepam) 
+i få uger 
+3. valg SSRI (sertralin) + sederende antipsykotikum 
+(fx quetiapin)* 
+*Specialistopgave 
+ 
+ 
+Patienter med psykotisk depression 
+ Behandling foregår altid under indlæggelse (specialistopgave) 
+ 
+ ECT anbefales pga. bedst effekt 
+ 
+ Kombination af TCA og antipsykotika kan overvejes hos patienter, som ikke kan 
+behandles med eller ikke ønsker ECT 
+ 
+ Patienter med psykotisk depression 
+1. valg ECT* 
+2. valg 
+ 
+TCA (nortriptylin) + antipsykotikum* 
+3. valg - 
+*Specialistopgave 
+Monitorering af effekten 
+ 
+ Patienter bør ses hurtigt (inden for ca. 1 uge) efter behandlingsstart mhp. vurdering 
+af effekt, bivirkninger, compliance og selvmordsrisiko (særlig opmærksomhed på 
+selvmordsrisiko hos personer < 25 år) 
+ 
+ Kontrol under behandlingen er vigtig og specielt ved ønske om udtrapning 
+ 
+ Efter udtrapning er kontrol vigtig for at opfange evt. recidiv 
+ 
+ 
+  
+ 
+ 
+RADS Behandlingsvejledning inkl. Lægemiddelrekommandation  
+for medicinsk behandling af unipolar depression 
+Side 6 af 10 
+ 
+Spørgsmål som skal afdækkes ved selvmordsrisikovurdering: 
+ 
+1. Undersøge for selvmordsadfærd  
+ Har patienten tidligere foretaget selvmordsforsøg? Er det for nyligt?  
+ Har patienten aktuelle selvmordstanker?  
+ Har patienten aktuelle selvmordsplaner?  
+ Kan patienten på troværdig vis tage afstand fra selvmordsimpulser?  
+ 
+2. Aktuel klinisk tilstand  
+ Fremtræder patienten forpint, præget af sortsyn, håbløshed eller desperation?  
+ Er patienten ude af stand til at angive grunde til at leve?  
+ Er patienten impulsiv?  
+ Har de pårørende givet udtryk for bekymring for, at patienten er selvmordstruet?  
+ 
+3. Risikofaktorer  
+ Har patienten lidt et nyligt tab (f.eks. en skilsmisse, et dødsfald, mistet sit arbejde, fået 
+konstateret alvorlig sygdom, funktionstab)?  
+ Har patienten været udsat for andre væsentlige belastninger, herunder traumatisering?  
+ 
+4. Beskyttende faktorer  
+ Er patienten i stand til at angive positive grunde til at leve?  
+ 
+ 
+Kriterier for skift af behandling 
+  
+ Det anbefales først at forsøge skift til et antidepressivum med en anden 
+farmakodynamisk virkningsprofil (fx fra SSRI til SNRI eller TCA eller fra SNRI til TCA)  
+ 
+ Alternativt kan overvejes at tillægge mianserin eller mirtazepin givet til natten oveni 
+SSRI, specielt ved fortsat søvnbesvær 
+ 
+ Ved fortsat utilstrækkelig effekt anbefales augmentation med lithium eller 
+antipsykotikum (quetiapin eller aripiprazol) 
+ 
+ Thyroidea hormon eller irreversibel MAO-hæmmer anbefales ikke rutinemæssigt 
+(specialistopgave) 
+ 
+ Benzodiazepiner kan evt. anvendes kortvarigt (< 4uger) 
+ 
+ Længerevarende anvendelse af benzodiazepiner (>4 uger) frarådes. 
+ 
+Valget mellem lithium, antipsykotika og evt. andre lægemidler afhænger af 1) tidligere 
+behandlingserfaringer, 2) tilstedeværelse af søvnproblemer, 3) patientens risikofaktorer for 
+udvikling af metabolisk syndrom, 4) mange tidligere depressioner, 5) familiær disposition til 
+bipolar lidelse og 6) patientpræferencer.  
+ 
+Lithium: Behandlingsresistens over for to eller flere antidepressiva taler i sig selv for lithium 
+som førstevalg i forsøg på at forebygge udvikling af bipolar lidelse. Ved familiær disposition for 
+bipolar lidelse og mange tidligere depressioner øges indikationen for lithium yderligere.  
+ 
+Quetiapin: Tilstedeværelse af søvnproblemer taler for quetiapin. I de første to uger kan 
+alternativt kombineres med et benzodiazepin (oxazepam). 
+ 
+ 
+RADS Behandlingsvejledning inkl. Lægemiddelrekommandation  
+for medicinsk behandling af unipolar depression 
+Side 7 af 10 
+ 
+ 
+Aripiprazol: Risikofaktorer for udvikling af metabolisk syndrom (så som personlig eller familiær 
+disposition til overvægt, sukkersyge, mv.) taler for aripiprazol som alternativ til quetiapin.  
+ 
+Thyroidea hormon, eller isocarboxazid: Kan forsøges ved fortsat udebleven effekt. Pga. 
+interaktionsrisiko, herunder risiko for serotonerg syndrom ved skift fra andre antidepressiva 
+må behandling med isocarboxazid kun foretages af speciallæger i psykiatri med stort kendskab 
+til stoffet. 
+Kriterier for seponering af behandling 
+ 
+Fortsættelse af behandlingen ud over den akutte fase 
+ Patienter i varig behandling med antidepressiva (> 2 år) bør vurderes min. 1 gang om 
+året mhp., om der fortsat er behandlingsindikation. 
+ 
+Seponering af antidepressiva 
+ Seponering skal foregå langsomt – over uger til måneder 
+ 
+ Ved seponeringssymptomer vendes tilbage til forrige dosis. Især den sidste dosis kan 
+være vanskelig at ophøre med. 
+ 
+Mulige seponeringssymptomer sammenlignet med depressive symptomer* 
+ 
+Mulige SSRI 
+seponeringssymptomer 
+Opstår få dage efter 
+dosisreduktion 
+Fælles symptomer Depressive symptomer 
+Opstår typisk et par uger efter 
+dosisreduktion 
+Neurosensoriske 
+ Vertigo 
+ Paræstesier 
+ Neuralgier 
+ Myalgier 
+Neuromotoriske 
+ Tremor 
+ Myoklonier 
+ Ataksi 
+Gastrointestinalt 
+ Kvalme 
+ Opkastninger 
+ Diarre 
+Vasomotorisk 
+ Diaforese 
+ Flushing 
+Andre neurologiske symptomer 
+ Søvnløshed 
+ Livagtige drømme 
+ Asteni/træthed 
+ Kulderystelser 
+Depressive kernesymptomer 
+ Nedtrykthed 
+Depressive ledsage symptomer 
+ Agitation eller hæmning 
+ Søvnforstyrrelser 
+ Koncentrationsbesvær 
+Depressive kernesymptomer 
+ Nedsat lyst og interesse 
+ Nedsat energi 
+ Øget trætbarhed 
+Depressive ledsage symptomer 
+ Nedsat selvtillid 
+ Selvbebrejdelser 
+ Skyldfølelse 
+ Tanker om døden/selvmord 
+ Appetit- og vægtændring 
+*Bemærk den tidsmæssige udvikling 
+ 
+ 
+ 
+RADS Behandlingsvejledning inkl. Lægemiddelrekommandation  
+for medicinsk behandling af unipolar depression 
+Side 8 af 10 
+ 
+Praktisk guide: Aftrapning af antidepressiva  
+Der anbefales nedtrapning over mindst 1 til flere måneder, for at undgå disse symptomer. En 
+typisk aftrapningsplan kunne se således ud, men det er meget vigtigt at planen tilpasses den 
+enkelte patient og løbende modificeres afhængigt af patientens reaktion under de enkelte trin: 
+ Halvér dosis (fx fra 40 mg citalopram) og vent en til to uger 
+ Hvis dette ikke medfører problemer halver dosis igen til 10 mg og vent yderligere en 
+uge eller to (- alternativt blives på samme dosis yderligere én uge) 
+ Derefter går man ned på 5 mg (ved hjælp af tabletdeler fra apoteket) 
+ Venter yderligere nogle uger og forsøger derefter seponering. 
+ Er der fortsat ubehag ved forsøg på ophør med mindst mulige dosis, kan man nogle 
+gange mindske symptomerne ved at tage denne dosis hver anden dag. 
+ 
+Seponeringsymptomerne forsvinder normalt efter få dage til 1-2 uger.  
+ 
+ 
+ 
+  
+ 
+ 
+RADS Behandlingsvejledning inkl. Lægemiddelrekommandation  
+for medicinsk behandling af unipolar depression 
+Side 9 af 10 
+ 
+Algoritme 
+RADS’ anbefalinger for udredning, igangsætning af behandling med antidepressiva, 
+lægemiddelvalg og strategi ved manglende effekt er opsummeret i flowdiagrammet. For 
+uddybning henvises til de enkelte afsnit i baggrundsnotatet.  
+ 
+ 
+ 
+ 
+ 
+  
+
+ 
+ 
+RADS Behandlingsvejledning inkl. Lægemiddelrekommandation  
+for medicinsk behandling af unipolar depression 
+Side 10 af 10 
+ 
+ 
+Fagudvalgets sammensætning 
+ 
+Fagudvalgets 
+sammensætning 
+Formand Poul Videbech, Professor, Formand Dansk 
+Psykiatrisk Selskab  
+Ib Rasmussen, Overlæge,   
+Region Nordjylland 
+Erik Roj Larsen, Overlæge, Klinisk lektor, Speciallæge i 
+Psykiatri ph.d,  
+Region Midtjylland 
+Claus Havregaard Sørensen, Overlæge,  
+Region Syddanmark 
+Lisbeth Lund Pedersen, Ledende overlæge,  
+Region Sjælland 
+Lars Vedel Kessing, Professor, dr. Med., 
+Region Hovedstaden 
+Klaus Martiny, Overlæge, ph.d., ekstern lektor, Dansk 
+Psykiatrisk Selskab 
+Annette Sofie Davidsen, Speciallæge i almen medicin, lektor, 
+ph.d.dr. med. Specialist i psykoterapi, 
+Dansk Selskab for Almen Medicin 
+Birgit Toft, Regional Lægemiddelkonsulent, ph.d., 
+De Regionale lægemiddel Konsulenter 
+Kim Brøsen, Professor, dr. Med.,  
+Dansk Selskab for Klinisk Farmakologi 
+Per Sveistrup Hansen, Klinisk farmaceut,  
+Dansk Selskab for Sygehusapoteksledelse 
+Henrik Nordentoft, Pratiserende læge 
+Inviteret af formanden 
+Janne Unkerskov, Praktiserende læge,  
+Inviteret af formanden 
+Jens-Ulrik Rosholm, Overlæge ph.d., 
+Inviteret af formanden 
+Ændringslog 
+ 
+Version Dato Ændring 
+1.0 April 2015  
+ 
+ 

@@ -1,0 +1,783 @@
+ 
+RADS Behandlingsvejledning for medicinsk behandling af bipolar lidelse 
+Side 1 af 13 
+Behandlingsvejledning for medicinsk behandling af bipolar lidelse 
+ 
+Fagudvalg under Rådet for Anvendelse af Dyr Sygehusmedicin, RADS, er interne, rådgivende  
+arbejdsgrupper, der refererer til Rådet. Fagudvalgene udarbejder forslag til baggrundsnotater og 
+behandlingsvejledninger for anvendelse af medicin inden for specifikke behandlingsområder.  
+Dokumenterne forelægges RADS, som træffer beslutning om indholdet af de endelige baggrunds-
+notater og forpligtende behandlingsvejledninger. 
+ 
+Målgruppe Relevante afdelinger 
+Lægemiddelkomitéer 
+Sygehusapoteker 
+Andre relevante interessenter 
+Udarbejdet af 
+ 
+Fagudvalget for medicinsk behandling af bipolar lidelse under  
+Rådet for Anvendelse af Dyr Sygehusmedicin 
+Gældende fra 
+ 
+1. november 2015 Version: 1.0 
+Dok.nr: 220542 
+Offentliggjort: Oktober 2015 
+ 
+Formål 
+Formålet med RADS behandlingsvejledninger er at sikre national konsensus om behandling med 
+lægemidler; herunder at definere hvilke lægemidler, der anses for ligestillede. Denne behandlings-
+vejledning giver anbefalinger for valg af lægemidler til behandling af bipolar lidelse til voksne, 
+samt børn og unge. Endvidere gives anbefalinger for anvendelse af Therapeutic Drug Monitoring 
+(TDM). Generelle forhold omkring igangsætning, skift og seponering af behandling, samt indika-
+tion for anvendelse af ECT berøres kort. For oplysninger om den praktiske anvendelse af de en-
+kelte lægemidler henvises til de respektive produktresuméer eller promedicin.dk. For gennemgang 
+af evidensen og argumentationen bag anbefalingerne henvises til baggrundsnotatet. De relevante 
+afsnit vedr. børn og unge kan endvidere findes i et særskilt appendix. 
+ 
+Da mere end 95 % af lægemiddelforbruget ved bipolar lidelse anvendes uden for syge-
+hus bliver der ikke efterfølgende publiceret en lægemiddelrekommandation.  
+ 
+Anbefalinger 
+Anbefalingerne bygger overvejende på randomiserede studier af monoterapi. Det tilstræbes der-
+for, at monoterapi forsøges først. I en række tilfælde er det, afhængig af det tidligere sygdoms- 
+og/eller behandlingsforløb, berettiget at anvende kombinationsbehandling. 
+ 
+Bipolar lidelse type I 
+ 
+Valg af lægemiddel 
+1. Anvend, om muligt, et lægemiddel fra første række i tabel 1 (stærk anbefaling for).  
+2. Vurder patientens: 
+ Tidligere behandlingsrespons (hvilke lægemidler har patienten evt. prøvet tidligere, 
+med hvilken effekt og hvilke bivirkninger?) 
+ Behov for at fortsætte behandlingen mhp at forebygge hhv. nye maniske eller depres-
+sive episoder 
+ Sygdomspolaritet (har patienten fx overvejende depressive episoder i anamnesen?)  
+ Andre individuelle forhold (se noter under tabellen). 
+ 
+ 
+RADS Behandlingsvejledning for medicinsk behandling af bipolar lidelse 
+Side 2 af 13 
+Tabel 1: Anbefalede lægemidler i monoterapi for bipolar lidelse type I 
+ Manisk  
+episode 
+Depressiv epi-
+sode 
+Vedligeholdelsesbehandling 
+Med formålet 
+især at fore-
+bygge mani 
+Med formålet 
+især at forebygge 
+depression 
+Anvend som 1. valg 
+til min. 70 % af po-
+pulationen 
+(Stærk anbefaling for) 
+ 
+ 
+Lithium 
+ 
+Antipsykotika 
+Aripiprazol 
+Quetiapin 
+Olanzapin 
+Risperidon 
+ 
+Antiepilektika 
+Valproat* 
+Lithium^  
+ 
+Antipsykotika 
+Quetiapin 
+ 
+ 
+ 
+ 
+Antiepileptika 
+Lamotrigin 
+Lithium  
+ 
+Antipsykotika 
+Aripiprazol# 
+Quetiapin# 
+ 
+ 
+ 
+ 
+Lithium  
+ 
+Antipsykotika 
+Quetiapin# 
+ 
+ 
+ 
+ 
+Antiepileptika 
+Lamotrigin# 
+Overvej 
+(Svag anbefaling for) 
+ 
+Antipsykotika 
+Asenapin 
+Haloperidol 
+Ziprasidon 
+Antipsykotika 
+Lurasidon~  
+Olanzapin  
+Antipsykotika 
+Olanzapin 
+Risperidon# 
+ 
+Antiepilektika 
+Valproat* # 
+Antipsykotika 
+Olanzapin 
+ 
+ 
+Antiepileptika 
+Valproat* 
+Anvend ikke rutine-
+mæssigt 
+(Svag anbefaling 
+imod) 
+  
+Antipsykotika 
+Clozapin  
+Paliperidon 
+ 
+ 
+ 
+Antiepileptika 
+Carbamazepin 
+Antipsykotika 
+Asenapin 
+ 
+ 
+ 
+ 
+Antiepileptika 
+Valproat* 
+ 
+Antipsykotika 
+Asenapin# 
+Clozapin 
+Paliperidon# 
+Ziprasidon# 
+ 
+Antiepileptika 
+Carbamazepin 
+Oxcarbazepin 
+Antipsykotika 
+Asenapin 
+Lurasidon 
+ 
+ 
+ 
+Antiepileptika 
+Carbamazepin 
+Oxcarbazepin 
+Anvend ikke  
+(Stærk anbefaling 
+imod) 
+ 
+ 
+Antipsykotika 
+Amisulprid 
+Lurasidon 
+ 
+Antiepileptika 
+Gabapentin 
+Lamotrigin 
+Oxcarbazepin 
+Pregabalin 
+Topiramat 
+Antipsykotika 
+Amisulprid 
+Aripiprazol 
+Clozapin 
+Paliperidon 
+Risperidon 
+Ziprasidon 
+ 
+ 
+Antidepressiva 
+SSRI ¤ 
+SNRI ¤ 
+TCA ¤ 
+Antipsykotika 
+Amisulprid 
+Haloperidol 
+Lamotrigin 
+Lurasidon 
+ 
+Antipsykotika 
+Amisulprid 
+Aripiprazol 
+Clozapin 
+Haloperidol 
+Paliperidon 
+Risperidon 
+Ziprasidon 
+ 
+Antidepressiva 
+SSRI¤ 
+SNRI¤ 
+TCA¤ 
+^Individuel vurdering ved svær depression med øget selvmordsrisiko pga toxicitet ved intenderet overdosis.  
+# Anbefalingen forudsætter, at der har været effekt og tolerabilitet af lægemidlet i en forudgående akut episode. 
+* Valproat frarådes til kvinder i den fertile alder pga. teratogenicitet. 
+~ Der er endnu ikke erfaring med brug af lurasidon ved bipolar depression i Danmark og kun begrænset internationalt, og 
+forebyggende effekt er ikke dokumenteret. Pga. dosisafhængig EPS bør dosis ikke overstige 74 mg.  
+¤ Anvend ikke i monoterapi, men overvej som kombination med stemningsstabiliserende medicin. Se anbefalinger for 
+kombinationsbehandling. 
+ 
+ 
+RADS Behandlingsvejledning for medicinsk behandling af bipolar lidelse 
+Side 3 af 13 
+ 
+Blandingstilstand 
+Ved akut mani (eller tydelige og sikre maniske symptomer) og samtidige eller hyppigt alterne-
+rende depressive symptomer (manisk blandingstilstand) anbefales (alfabetisk) aripiprazol, asena-
+pin, olanzapin eller ziprasidon. Hvis patienten i forvejen er i forebyggende behandling med et af 
+disse lægemidler, øges dosis til antimanisk niveau.  
+ 
+Ved akut depression (eller tydelige og sikre depressive symptomer) og samtidige eller alterne-
+rende hypomane symptomer (depressiv blandingstilstand) anbefales (alfabetisk) lamotrigin, 
+lithium, olanzapin, quetipin eller ziprasidon. 
+ 
+Kombinationsbehandling ved akutte episoder 
+Ved manglende respons på monoterapi eller i andre særlige situationer kan kombinationsbehand-
+ling forsøges. Kombinationsbehandling er generelt sparsomt undersøgt ved bipolar lidelse. Derfor 
+bygger anbefalingerne herunder i vid grad på ekstrapolering fra randomiserede studier af mono-
+terapi.  
+ 
+Anvend generelt ikke to antipsykotika samtidig eller to antiepileptika samtidig, idet der ikke er 
+evidens for bedre effekt, men større risiko for bivirkninger. 
+ 
+Akut manisk episode 
+Kombiner to af følgende: Antipsykotikum, lithium eller valproat (som anbefalet i tabel 1). Ved 
+manglende effekt af to-stofbehandling, kan tre-stofbehandling med antipsykotikum, lithium og 
+valproat overvejes. I sjældne tilfælde kan tillæg af clozapin evt. overvejes. 
+ 
+Blandingstilstand 
+Manisk blandingstilstand: Forsøg med kombination af lithium, valproat eller quetiapin. 
+Depressiv blandingstilstand: Forsøg kombination af lamotrigin, lithium, olanzapin, quetipin eller 
+ziprasidon. 
+ 
+Akut depressiv episode 
+Kombiner to af følgende: lithium, quetiapin og lamotrigin (som anbefalet i tabel 1) . Herefter kan 
+kombinationer, hvori der indgår et antidepressivum (primært SSRI) eller valproat forsøges. Anvend 
+kun antidepressiva i kombination med et maniforebyggende præparat.  I forbindelse med skift af 
+medicin bør ikke virksom behandling seponeres.  
+ 
+Kombinationsbehandling ved vedligeholdelsesbehandling 
+ 
+Gennembrud af depressiv episode trods vedligeholdelsesbehandling:  
+ 
+Efter behandling af gennembrudsdepressionen: 
+ Fortsæt, juster eller tillæg enten lithium, lamotrigin eller quetiapin (som anbefalet i tabel 
+1) vejledt af, om et af disse lægemidler blev givet akut med god effekt. Dog bør der ikke 
+suppleres med quetiapin, hvis den primære vedligeholdelsesbehandling bestod af et anti-
+psykotikum.  
+ Ved en vellykket akut behandling af den depressive episode med olanzapin eller valproat 
+kan man overveje at fortsætte hermed som vedligeholdelsesbehandling. 
+ 
+ 
+ 
+ 
+RADS Behandlingsvejledning for medicinsk behandling af bipolar lidelse 
+Side 4 af 13 
+ 
+ På samme måde kan en vellykket akut behandling med SSRI i særlige tilfælde videreføres, 
+medmindre der tidligere har været tegn på eller mistanke om destabiliserende effekt af  
+antidepressiva (fx udvikling af blandingstilstande eller rapid cycling). Yderligere forsigtig-
+hed tilrådes, hvis der tidligere har været depressive episoder med maniske symptomer. 
+ 
+Gennembrud af manisk episode trods vedligeholdelsesbehandling:  
+ 
+Efter behandling af gennembrudsmanien: 
+ Fortsæt eller tillæg lithium, quetiapin eller aripiprazol (som anbefalet i tabel 1), igen vej-
+ledt af, om et af disse lægemidler havde god effekt i den akutte fase. 
+ I visse tilfælde kan en vellykket akut behandling med olanzapin, risperidon eller valproat 
+videreføres. 
+Bipolar lidelse type II  
+Valg af lægemiddel sker ud fra samme argumentation som ved bipolar lidelse type I, idet lithium, 
+quetiapin og lamotrigin anbefales som 1. valg. Til forskel herfra kan SSRI overvejes i monoterapi 
+til bipolar lidelse type II, idet der her vurderes at være beskeden risiko for at inducere mani eller 
+destabilisering af sygdommen. Ved manglende effekt af monoterapi kan man ligeledes her forsøge 
+kombinationsbehandling.      
+ 
+Tabel 2: Anbefalede lægemidler i monoterapi for bipolar lidelse type II 
+ 
+ Depressiv episode Vedligeholdelse med det formål 
+at forebygge depression og  
+hypomani 
+Anvend som 1. valg til 
+min. 60 % af populationen 
+(Stærk anbefaling for) 
+Lithium^ 
+Quetiapin 
+Lamotrigin 
+ 
+Lithium 
+Quetiapin# 
+Lamotrigin# 
+ 
+Overvej 
+(Svag anbefaling for) 
+SSRI 
+ 
+SSRI# 
+ 
+Anvend ikke rutinemæs-
+sigt 
+(Svag anbefaling imod) 
+Lurasidon~ 
+Olanzapin 
+ 
+Valproat* 
+ 
+SNRI 
+TCA 
+Lurasidon~ 
+Olanzapin 
+ 
+Valproat* 
+ 
+SNRI# 
+TCA# 
+Anvend ikke  
+(Stærk anbefaling imod) 
+Øvrige antipsykotika Øvrige antipsykotika 
+^ Individuel vurdering ved svær depression med øget selvmordsrisiko pga toxicitet ved intenderet overdosis. 
+~ Der er endnu ikke erfaring med brug af lurasidon ved bipolar depression i Danmark og begrænset internationalt,  
+   og forebyggende effekt er ikke dokumenteret. Pga. dosisafhængig EPS bør dosis ikke overstige 74 mg.  
+# Anbefalingen forudsætter, at der har været effekt og tolerabilitet af lægemidlet i en forudgående akut episode. 
+* Valproat frarådes til kvinder i den fertile alder pga. teratogenicitet. 
+ 
+  
+ 
+RADS Behandlingsvejledning for medicinsk behandling af bipolar lidelse 
+Side 5 af 13 
+Børn og unge 
+Som for voksne anbefales lithium, aripiprazol, quetiapin og risperidon som 1. valgspræparater ved 
+manisk episode. Anbefalingen for lithium er dog her ekstrapoleret ud fra studier hos voksne, da 
+der hverken er evidens for eller imod en eventuel effekt hos børn og unge. Derimod er olanzapin, 
+trods evidens for effekt, ikke 1. valg hos børn og unge, idet denne gruppe synes at have større 
+risiko for vægtøgning end voksne med deraf øget risiko for tidlig udvikling af diabetes og hjerte-
+karsygdom.  
+ 
+Valproat bør ikke anvendes rutinemæssigt, da evidensen hos børn og unge er modstridende, og 
+der hos unge piger er risiko for udvikling af Polycystisk Ovariesyndrom og vægtøgning. Da ikke 
+planlagt graviditet er relativt hyppigere i denne aldersgruppe, må valproat endvidere ikke anven-
+des pga. risikoen for fosterskader. 
+ 
+Anbefalingen af lægemidler ved depressiv episode og vedligeholdelsesbehandling følger samme 
+algoritme, som for voksne, idet effekten, pga. manglende evidens hos børn og unge, ekstrapole-
+res fra studier på voksne, hvor de gavnlige og skadelige virkninger af medicin er bedre belyst. 
+Dette gælder både bipolar lidelse type I og II.  
+ 
+Tabel 3: Anbefalede lægemidler for børn og unge (bipolar lidelse I og II) 
+ 
+ Manisk episode Depressiv episode Vedligeholdelse 
+Anvend som 1. valg til 
+min. 70 % af populationen 
+(Stærk anbefaling for) 
+Lithium 
+ 
+Antipsykotika: 
+Aripiprazol 
+Quetiapin 
+Risperidon 
+ 
+Se table 1 og 2 Se tabel 1 og 2 
+Overvej 
+(Svag anbefaling for) 
+Olanzapin 
+Ziprasidon 
+  
+Anvend ikke rutinemæs-
+sigt 
+(Svag anbefaling imod) 
+Asenapin 
+Haloperidol 
+Valproat* 
+  
+Anvend ikke  
+(Stærk anbefaling imod) 
+Amisulprid 
+Clozapin  
+Lurasidon 
+Paliperidon 
+ 
+Antiepileptika 
+Carbamazepin 
+Gabapentin 
+Lamotrigin 
+Oxcarbazepin 
+Pregabalin 
+Topiramat 
+  
+* Valproat frarådes til piger i den fertile alder pga. teratogenicitet. 
+ 
+  
+ 
+RADS Behandlingsvejledning for medicinsk behandling af bipolar lidelse 
+Side 6 af 13 
+Igangsætning af behandling hos voksne 
+ 
+Igangsætning af behandling ved mani 
+1. Patienten er i forvejen i vedligeholdelsesbehandling 
+Hovedparten af patienter kendt med bipolar lidelse vil i forvejen være i vedligeholdelsesbehand-
+ling med psykofarmaka i forbindelse med ny manisk episode. Årsagen til sygdomsgennembrud er 
+mange fx manglende adherence, psykosociale belastninger eller misbrug.  
+ 
+Mulige farmakologiske interventioner: 
+ Seponer antidepressivum* 
+ Optimer dosis af aktuelle medicinske behandling 
+ Skift til et andet lægemiddel 
+ Kombiner med andet lægemiddel: 
+o Hvis patienten får lithium i tilstrækkelig høj dosis kombineres med et antipsykoti-
+kum eller valproat (valg iht. tabel 1)  
+o Hvis patienten får valproat i tilstrækkelig høj dosis kombineres med lithium eller 
+et antipsykotikum (valg iht. tabel 1) 
+o Hvis patienten får antipsykotikum i tilstrækkelig høj dosis kombineres med  
+lithium eller valproat 
+Misbrugsbehandling kan komme på tale. 
+* Vær opmærksom på udvikling af seponeringssyndrom, som vil kunne destabilisere tilstanden.  
+ 
+2. Patienten er aktuelt ikke i farmakologisk behandling 
+Hos den maniske patient, som ikke tidligere har været i behandling, eller for nuværende ikke er i 
+behandling med et lægemiddel mod mani, vil et antipsykotikum eller valproat oftest være at fore-
+trække, da effekt af lithium indsætter langsommere. Ved let til moderate manier kan man starte 
+med lithium, hvis tilstanden tillader det. Lithium optitreres over dage til én uge til antimaniske do-
+ser sv.t. et serum lithium niveau på 0.8-1.0 mmol/l. Ved mani under indlæggelse kan der titreres 
+op til 1.2. mmol/l. 
+ 
+Ved de sværeste manier kan initial kombinationsbehandling med atypisk antipsykotikum og 
+lithium eller valproat startes samtidig.  
+ 
+Igangsætning af behandling ved bipolar depression 
+Patienten vil ofte være i vedligeholdelsesbehandling. Alternativt skal vedligeholdelsesbehandling 
+startes ved udvikling af moderat til svær depressive episode.  
+ 
+Igangsætning af vedligeholdelsesbehandling 
+RADS anbefaler vedligeholdelsesbehandling efter manisk enkeltepisode (første mani) i mindst 
+ét år efter at remission er opnået. Vedligeholdelsesbehandling ud over ét år bør overvejes efter 
+manisk enkeltepisode og ved bipolar lidelse (to eller flere episoder), afhængigt af øvrige om-
+stændigheder.  
+ 
+Varighed af behandlingen skal løbende evalueres afhængig af effekt og bivirkninger (se afsnit 
+om seponering). I flere regioner kan patienter med debuterende bipolar lidelse henvises til 
+ambulante specialklinikker for affektive lidelser i to-årige forløb med tilbud om ”optimeret 
+farmakologisk behandling” og gruppe-psykoedukation. 
+ 
+RADS Behandlingsvejledning for medicinsk behandling af bipolar lidelse 
+Side 7 af 13 
+ 
+I forhold til valg af lægemiddel bør følgende (ud over de generelle anbefalinger, tabel 1 og 2) 
+indgå i overvejelserne: 
+1. Hos patienter med bipolar lidelse type I, som ikke tidligere har været i vedligeholdelses-
+behandling, bør lithium altid overvejes som 1. valg 
+2. Patientens præferencer 
+3. Effekten af evt. tidligere og nuværende behandling. Dette specielt hvis patienten har  
+responderet på et givent lægemiddel, som også har vist effekt i RCT 
+4. Anamnestiske oplysninger om hvorvidt sygdommen overvejende manifesterer sig med 
+hypomane/maniske vs. depressive faser og sandsynligheden for respons. Patienter, der 
+har tydelig tilbøjelighed til at udvikle affektive episode med bestemt polaritet, bør pri-
+mært modtage vedligeholdelsesbehandling som forebygger udvikling af episode af 
+samme polaritet 
+5. Tilstedeværelse eller fravær af psykotiske symptomer. Tidligere svære psykotiske episo-
+der kan eventuelt tale for antipsykotisk behandling i kombination med andre lægemidler 
+allerede fra behandlingsstart af vedligeholdelsesbehandling 
+6. Afklaring af hvorvidt tidligere episoder har været relateret til samtidig behandling med 
+antidepressiv medicin eller misbrug (især af central stimulantia) 
+7. Særlig risiko for specifikke langtidsbivirkninger, f.eks. vægtøgning 
+8. Selvmordstanker eller -forsøg i anamnesen. Vedligeholdelsesbehandling med lithium ser 
+ud til at reducere risiko for selvmord. 
+ 
+Igangsætning af behandling hos børn og unge 
+Før igangsætning af farmakologisk behandling hos børn og unge bør man, pga. den mangelfulde 
+evidens og større følsomhed for bivirkninger, i højere grad end hos voksne forsøge ikke-farmako-
+logisk behandling først. Det gælder især behandling af depression og vedligeholdelsesbehandling, 
+hvor der ikke er vist selvstændig evidens for effekt hos børn og unge.  
+ 
+Diagnostik og udredning af bipolar lidelse hos børn og unge: 
+Validiteten af diagnoserne enkeltstående mani og bipolar lidelse ved børn og unge under 18 år er 
+stadig omdiskuteret. Det centrale i diskussionen er hvorvidt mani ved børn og unge skal diagno-
+sticeres snævert som hos voksne med klart afgrænsede episoder eller mere bredt inkluderende 
+længerevarende irritabilitet og hyperaktivitet. Børn med meget hyppige vredesudbrud og konstant 
+(ikke-episodisk) irritabilitet/vrede, kan nu i DSM-V diagnosticeres med Disruptive Mood Dysregu-
+lation Disorder (DSM-V). 
+ 
+Diagnosticering af bipolar lidelse i barn- og ungdom følger i Danmark ICD-10 kriterier. I ICD-10 
+skal varigheden af maniske symptomer være syv dage eller indlæggelseskrævende og hypomani-
+ske symptomer fire dage for at opfylde diagnostiske kriterier. Blandt børn og unge ses disse 
+symptomer, til at begynde med, ofte med kortere varighed (1-3 dage), men op til 40 % udvikler 
+senere bipolar lidelse. Ved bipolar lidelse hos børn, ses depression hyppigere end ved voksen- 
+debut, hvorfor det er væsentligt, at være opmærksom på øget risiko for bipolar lidelse blandt børn 
+med hyppige depressioner, behandlingsresistent depression, erfaring for hypoman udvikling ved 
+antidepressiv behandling, samt disposition til bipolar lidelse. 
+  
+ 
+RADS Behandlingsvejledning for medicinsk behandling af bipolar lidelse 
+Side 8 af 13 
+ 
+Da der er tale om en meget kompleks lidelse hos relativt få børn er det vigtigt, at udredning og 
+behandling af bipolar lidelse foregår i specialiseret regi ved speciallæger i Børne- og Ungdoms 
+psykiatri med særlig erfaring og ekspertise med affektive lidelser hos børn og unge. 
+ 
+Hos børn og unge er det særligt vigtigt, at diagnosen stilles på baggrund af symptomer der mani-
+festerer sig på tværs af miljøer – hjemme, skole, fritid, hvorfor indsamling af oplysninger bør om-
+fatte patienten selv, dennes familie, samt beskrivelser fra det øvrige netværk. Symptomatologien 
+kan med fordel vurderes med et PSE interview eller med anvendelse af K-SADS.  
+ 
+Psykiatriske differentialdiagnoser: 
+ Ved depression hos børn og unge skal der altid spørges til tidligere episoder af ændret akti-
+vitets/energiniveau, irritabilitet og eretisme 
+ ADHD – skelnes ved at have en kontinuerlig og ikke episodisk, motorisk hyperaktiv præ-
+sentation 
+ Tilknytningsforstyrrelser – skelnes ved påviselig omsorgssvigt, samt den dysorganiserede/ 
+ambivalente eller uselektive adfærd 
+ Emotionelle og adfærdsforstyrrelser i adolescens og barndom 
+ Personlighedsforstyrrelser. 
+ 
+I øvrigt adskiller udredningen hos børn og unge sig ikke fra udredningen hos voksne og inkluderer 
+således også en vurdering af somatiske symptomer og sygdomme.  
+Monitorering af effekt og bivirkninger (TDM) 
+I akutte faser, under indlæggelse og umiddelbart efter udskrivelse bør tilstanden vurderes hyp-
+pigt. Initialt i vedligeholdelsesfasen kan der ligeledes være behov for tættere opfølgning til vurde-
+ring af adherence og monitorering af bivirkninger, samt evt. serum målinger mv. I monitorering af 
+behandlingens effekt, bør anvendes formaliserede rating skalaer, som f.eks. Hamilton Depression 
+Rating Scale (HDRS) for depressive symptomer og Young Mania Rating Scale (YMRS) for maniske 
+symptomer. 
+ 
+Terapeutisk monitorering af lægemiddelkoncentrationer  
+Nedenfor ses en oversigt over gængse referenceintervaller, der anvendes på regionernes danske 
+laboratorier og i promedicin.dk. For valproat, clozapin, risperidon er der uoverensstemmelser mel-
+lem de anbefalede plasmakoncentrationer. Disse koncentrationer er derfor vist med kursiv. Såle-
+des varierer den nedre grænse for valproat intervallet for manibehandling fra 200 til 350 µmol/L; 
+den øverste grænse for clozapin intervallet fra 1200 til 2000 nmol/L og den øvre grænse for rispe-
+ridon intervallet fra 120 til 200 nmol/L, afhængig af målemetode, studiepopulation og monitore-
+ringskriterier. Ved uoverensstemmelser anvendes, i tabellen nedenfor, det i promedicin.dk oplyste 
+koncentrationsinterval. Derudover er der foretaget en vurdering af koncentrationsmålingernes kli-
+niske anvendelighed med udgangspunkt i guidelines, samt efterfølgende konsensus i RADS.  
+ 
+A: Anvendes  
+TDM kan anbefales til dosistitrering i forhold til effekt og bivirkninger. Mht. lithium skal TDM an-
+vendes pga. det snævre terapeutiske index. 
+  
+ 
+RADS Behandlingsvejledning for medicinsk behandling af bipolar lidelse 
+Side 9 af 13 
+ 
+B:  Overvejes  
+TDM kan anvendes til at vurdere om plasmakoncentrationer er sandsynlige for en given dosis , i 
+særlige populationer (ældre patienter, børn og unge, kendt nyre- eller leverlidelse), kombinations-
+behandlinger, hvor interaktioner mistænkes, ved mistanke om non-adhærens til behandling, eller 
+mistanke om intoksikation (f.eks. pga. poor metabolizer status). 
+ 
+C: Anvendes ikke 
+TDM anbefales ikke til at styre behandling, men kan potentielt bruges i specielle situationer, her-
+under adhærens og mistanke om overdosering. 
+ 
+Anbefalede plasma koncentrationer  
+ Vejledende  
+plasmakonc. 
+Enhed 
+ 
+Klinisk 
+anvendelighed 
+Lithium 
+- Vedligeholdelses- 
+behandl. 
+0,5 – 0,8  mmol/L A 
+- Akut depression 0,6 - 1,2 mmol/L A 
+- Akut mani 0,8 - 1,2 mmol/L A 
+Antiepileptika 
+Carbamazepin 20-50 µmol/L B 
+Gabapentin 10-90 µmol/L C 
+Lamotrigin 10-50 µmol/L B 
+Oxcarbazepin 30-130 µmol/L B 
+Pregabalin 10-35 µmol/L C 
+Topiramat 6-30 µmol/L C 
+Valproat (kun mani) 350-700 µmol/L B 
+Antipsykotika 
+Amisulprid 270-870 nmol/L B 
+Aripiprazol 300-1700 nmol/L B 
+Asenapin - - -  
+Clozapin 300-2000 nmol/L B  
+Haloperidol 13-40 nmol/L B 
+Olanzapin 25-150 nmol/L B  
+Paliperidon 15-125 nmol/L B  
+Quetiapin 50-650 nmol/L B 
+Risperidon 50-200 nmol/L B  
+Ziprasidon 50-300 nmol/L B 
+Antidepressiva 
+SSRI - - C 
+SNRI - - C 
+ 
+  
+ 
+RADS Behandlingsvejledning for medicinsk behandling af bipolar lidelse 
+Side 10 af 13 
+ 
+Skift af vedligeholdelsesbehandling  
+ 
+Dosisøgning af igangværende vedligeholdelsesbehandling 
+Ved gennembrud af hypomani eller depression hos en patient som allerede er i vedligeholdelsesbe-
+handling, optimeres vedligeholdelsesbehandlingen ved at øge dosis. Dette skal ske under samtidig 
+monitorering af bivirkninger. 
+  
+Skift til andet lægemiddel 
+Skift bør overvejes, hvis patienten har hyppige tilbagefald og hvis symptomerne fortsætter med at 
+medføre en væsentlig funktionsnedsættelse. Kriteriet for effekt er ikke nødvendigvis fuldstændig 
+undgåelse af nye episoder, men en reduktion af antal, sværhedsgrad og varighed af episoderne.  
+En gennemgang af patientens anamnese før og efter iværksættelse af forebyggende behand ling 
+vil derfor være vigtig for at kunne vurdere effekten af den forebyggende vedligeholdelsesbehand-
+ling. En sådan vurdering kan først foretages med en vis sikkerhed, når patienten har fået vedlige-
+holdelsesbehandling i sufficient dosis og god adherence i mindst et år. I disse før- og efter evalue-
+ringer indgår tillige en vurdering af effekten af vedligeholdelsesbehandlingen på patientens fysiske 
+helbred og suicidalrisiko. 
+ 
+Begrænsende faktorer ved vedligeholdelsesbehandling og mulige årsager til at overveje skift af 
+behandling kan være: 
+1. Manglende effekt 
+2. Uacceptable bivirkninger 
+3. Tiltagende suicidale overvejelser 
+4. Nyopstået somatiske lidelse 
+5. Graviditet 
+6. Patientens ønske om at stoppe med forebyggende medicinsk behandling. 
+ 
+Overvej skift til lithium som vedligeholdelsesbehandling, hvis: 
+ Patienten aldrig har forsøgt behandling med lithium. 
+ 
+ 
+Kriterier for anvendelse af ECT 
+ 
+Manisk episode 
+Elektrokonvulsiv terapi (ECT) vurderes at have effekt hos 80 % af patienter med mani. Risiko for 
+relapse er ikke beskrevet, men det synes tilrådeligt at opstarte en farmakologisk forebyggende 
+behandling ved afslutning eller lige efter ECT behandlingen. I tilfælde med manisk delir kan ECT 
+være en effektiv og potentielt livreddende behandling. 
+ 
+Blandingstilstand 
+Det er en klinisk erfaring, at ECT også har effekt ved blandingstilstand. 
+ 
+Depressiv episode 
+ECT har vist effekt i form af respons ved behandlingsresistent bipolar depression. ECT bør således 
+overvejes tidligt i forløbet hos patienter med psykotisk eller behandlingsresistent bipolar depression, 
+høj selvmordsrisiko eller livstruende spisevægring. ECT kan endvidere anvendes, hvis patienten 
+tidligere har haft god effekt under en akut bipolar episode.  
+ 
+  
+ 
+RADS Behandlingsvejledning for medicinsk behandling af bipolar lidelse 
+Side 11 af 13 
+ 
+Vedligeholdelsesbehandling 
+ECT som vedligeholdelsesbehandling anbefales generelt ikke, men kan overvejes hos patienter 
+med alvorlige sygdomsforløb, hvor flere forskellige former for vedligeholdelsesbehandling er for-
+søgt og fundet utilstrækkelige. 
+ 
+Børn og unge 
+I helt særlige situationer kan ECT komme på tale på samme indikation som hos voksne.  
+ 
+Gravide 
+ECT kan overvejes i særlige tilfælde hos gravide med bipolar depression eller mani. 
+ 
+ 
+Seponering af behandling  
+ 
+Seponering efter akutte episoder 
+ 
+ Ved akut mani og blandingstilstand seponeres evt. behandling med antidepressiva umid-
+delbart. Vær opmærksom på udvikling af seponeringssymptomer, som forbigående vil 
+kunne destabilisere tilstanden. 
+ Efter behandling af akut depression, ved bipolar lidelse I, skal antidepressiva som ho-
+vedregel udtrappes gradvist. 
+ 
+Efter succesfuld behandling af akut mani eller depression fortsætter den opstartede behandling i en 
+vedligeholdelsesfase afhængig af om der særligt ønskes at forebygge mani eller depression (der 
+henvises til tabel 1). 
+ 
+Seponering af vedligeholdelsesbehandling 
+ 
+Følgende kriterier taler for at fortsætte farmakologisk vedligeholdelsesbehandling:  
+1. Arveligt dispostion til bipolar lidelse   
+2. Mange tidligere episoder med tendens til tilbagefald.  
+3. Svære og/eller psykotiske episoder 
+4. Suicidaltanker- og handlinger.  
+ 
+Følgende kriterier taler for seponering af vedligeholdelsesbehandling:  
+1. Patientens ønske om at stoppe  
+2. Alvorlige eller/eller uacceptable bivirkninger 
+3. Manglende effekt. Vurderingen heraf baserer sig på patientens vurdering, såvel som ob-
+jektiv vurdering. Pårørende inddrages evt. Den kliniske vurdering bør inkludere brug af 
+rating skalaer (HAMD og YMRS).  
+4. Graviditet eller ønske herom. 
+ 
+Strategi:  
+1. Adherence til behandlingen afdækkes, evt. suppleret af TDM monitorering.  
+2. Skift evt. til andet præparat. 
+3. Evt. tillægsbehandling med andet præparat. 
+ 
+ 
+RADS Behandlingsvejledning for medicinsk behandling af bipolar lidelse 
+Side 12 af 13 
+ 
+Seponering bør ske i samarbejde med speciallæge i psykiatri (evt shared-care) efter en risikovur-
+dering. Det bør overvejes om patient og pårørende har tilstrækkelig viden om sygdom og behand-
+ling. Der kan udarbejdes en nedskrevet tilbagefalds-handle-/risikoplan. Selvmonitorering af affek-
+tive symptomer kan overvejes.  Langsom udtrapning, hvis muligt, bør altid foretages med henblik 
+på minimering af risikoen for ny episode.  
+ 
+  
+ 
+RADS Behandlingsvejledning for medicinsk behandling af bipolar lidelse 
+Side 13 af 13 
+Fagudvalgets sammensætning 
+ 
+Fagudvalgets 
+sammensætning 
+Formand Lars Vedel Kessing, professor, overlæge, dr.med.  
+Dansk Psykiatrisk Selskab (DPS) 
+René Ernst Nielsen, Konst. 1. reservelæge i psykiatri, ph.d.  
+Region Nordjylland 
+Erik Roj Larsen, Uddannelsesansvarlige overlæge i psykiatri 
+Region Midtjylland 
+Piotr Machowski, afdelingslæge i børne- og ungdomspsykiatri 
+Region Midtjylland 
+John Teilmann Larsen, Specialeansvarlige overlæge i psykiatri, 
+ph.d. Region Syddanmark 
+Jørn Lindholdt, overlæge i psykiati,  
+Region Sjælland 
+Bent Kawa, overlæge i børne- og ungdomspsykiatri 
+Region Sjælland 
+Maj Vinberg, overlæge i psykiatri, Klinisk forskningslektor 
+Region Hovedstaden 
+Patrick Gosden, overlæge i børne- og ungdomspsykiatri, ph.d.  
+Region Hovedstaden 
+Søren Post Larsen, farmaceut  
+Dansk Selskab for Sygehusledelse (DSS) – til 1.8.2015 
+Gesche Jürgens, overlæge  
+Dansk Selskab for Klinisk Farmakologi (DSKF) 
+Hans Mørch Jensen, speciallæge  
+Dansk Psykiatrisk Selskab (DPS) 
+Klaus Munkholm, overlæge i psykiatri 
+Inviteret af formanden 
+Claus Havregaard Sørensen, overlæge i psykiatri 
+Inviteret af formanden 
+Pia Bohn Christiansen, Praktiserende speciallæge i psykiatri,  
+Inviteret af formanden 
+Rasmus Wentzer Licht, professor i klinisk psykiatri, forskningschef, 
+ph.d.  
+Inviteret af formanden 
+ 
+Ændringslog 
+ 
+Version Dato Ændring 
+1.0 Oktober 2015  
+ 
+ 
+ 

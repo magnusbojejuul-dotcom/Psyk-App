@@ -1,0 +1,258 @@
+RADS behandlingsvejledning vedr.  medicinsk behandling af psykotiske tilstande Side 1 af 6
+hos børn og unge  
+Behandlingsvejledning inklusiv lægemiddelrekommandation for 
+medicinsk behandling af psykotiske tilstande hos børn og unge
+Fagudvalg under Rådet for Anvendelse af Dyr Sygehusmedicin, RADS, er et rådgivende udvalg, 
+som udarbejder udkast til behandlingsvejledning og baggrundsnotat for anvendelse af medicin 
+inden for specifikke behandlingsområder. Dokumenterne forelægges RADS, som herefter 
+træffer beslutning om indholdet af den endelige behandlingsvejledning og baggrundsnotat.
+Målgruppe Relevante afdelinger
+Lægemiddelkomitéer
+Sygehusapoteker
+Andre relevante interessenter
+Udarbejdet af RADS fagudvalg vedrørende medicinsk behandling af psykoser
+Gældende fra 1. januar 2015 Version: 1.4
+Dokument nr. 144334
+Dato: December 2014
+Behandlingsvejledningen er udarbejdet på basis af Baggrundsnotatet for terapiområdet. 
+Baggrundsnotatet med referencer, samt denne behandlingsvejledning kan downloades fra 
+RADS hjemmeside, www.rads.dk. 
+For uddybende information gældende børn, unge og voksne (vedrørende baggrund, 
+lægemidler, metode, lægemiddelvurdering, behandlingskriterier, monitorering af effekt og 
+bivirkninger, individualiseret behandling, skiftekriterier, seponeringskriterier, polyfarmaci, 
+monitorering af lægemiddelforbrug, samt revurderingskriterier), se Baggrundsnotatet for 
+medicinsk behandling af psykoser. 
+Særligt for børn og unge vedrørende gennemgang af relevante metaanalyser og guidelines, 
+udvælgelse af relevante præparater, vurdering af udvalgte præparater, anbefalinger og doser 
+henvises til baggrundsnotatets bilag J om børn og unge.
+Formål
+Formålet med RADS behandlingsvejledninger er at sikre national konsensus om behandling 
+med lægemidler; herunder at definere hvilke lægemidler, der anses for ligestillede.
+Formålet med RADS lægemiddelrekommandationer er at konkretisere behandlingsvejledningen 
+med de anbefalede lægemidler og konkrete produkter, der skal anvendes.
+Lægemidler
+Baggrundsnotatet omfatter behandling af patienter med lidelser inden for det skizofreniforme 
+spektrum og relaterede lidelser omfattet af indikationsområdet F20-29. For børn og unge 
+omfatter lægemidler til behandling af indikationsområdet følgende lægemidler:
+aripiprazol (N05AX12)
+clozapin (N05AH02)
+haloperidol (N05AD01)
+olanzapin (N05AH03)
+paliperidon (N05AX13)
+quetiapin (N05AH04)
+risperidon (N05AX08)
+Ziprasidon, sertindol, lurasidon og amisulprid (som har anbefaling til voksne) anbefales ikke til 
+børn og unge med psykose, så længe der ikke er evidens for signifikant bedre effekt end 
+placebo. Disse lægemidler indgår derfor ikke i behandlingsvejledningen for børn og unge.
+RADS behandlingsvejledning vedr. medicinsk behandling af psykotiske tilstande Side 2 af 6
+hos børn og unge
+Kriterier for igangsætning af behandling
+Relevante patienter defineres som børn og unge under 18 år, der opfylder de diagnostiske 
+kriterier for skizofreniforme lidelser (ICD-10 F20-29). Validiteten for disse diagnoser hos børn 
+er lav og sjældent relevant før 7 års alderen. Evidensgrundlaget for antipsykotisk behandling af 
+psykoser er stærkt begrænset for børn, især før 13 års alderen. Behandling med antipsykotika 
+til børn og unge under 18 år varetages af speciallæger i børne- og ungdomspsykiatri, og 
+behandlingen af terapiresistente patienter med skizofreni varetages af højt specialiserede 
+børne- og ungdomspsykiatriske enheder. 
+Til behandlingsforsøg vælges blandt følgende lægemidler (præparaterne er nævnt 
+i alfabetisk, ikke prioriteret rækkefølge)
+Der henvises i øvrigt til algoritmen (lægemiddelvalg på side 3)
+Lægemiddel Dosisinterval i 
+vedligeholdelses
+fasen 13- 17 år
+Særlige karakteristika ift. børn (se i øvrigt 
+behandlingsvejledning for voksne)
+aripiprazol 10 – 30 mg Risiko for akatisi. Lav risiko for metaboliske 
+bivirkninger.
+Depotinjektionspræparat er ikke testet hos børn og 
+unge.
+clozapin 225-450 mg* Har effekt hos en del ellers behandlingsresistente 
+patienter. Bør tilbydes patienter tidligst som 3. 
+behandlingsforsøg, hvis årsagen til behandlingsskift er 
+manglende effekt af tidligere anvendte lægemidler. 
+Risiko for udtalt sedation, metaboliske bivirkninger og 
+knoglemarvs-påvirkning, hvorfor specialmonitorering 
+er påkrævet. Ringe risiko for EPS.
+olanzapin 10 – 20 mg Høj forekomst af metaboliske bivirkninger og sedation. 
+Depotinjektionspræparat er ikke testet hos børn og 
+unge.
+paliperidon 
+(oral)
+3 – 12 mg Høj risiko for hyperprolaktinæmi og ledsagende 
+kliniske symptomer.
+Visse bivirkninger, herunder EPS og moderat 
+vægtøgning ses hyppigere end hos voksne.
+Depotinjektionspræparat er ikke testet hos børn og 
+unge.
+quetiapin 400 – 800 mg
+(200 – 400 mg x 2) 
+Risiko for sedation, ortostatisk hypotension, ringe 
+risiko for EPS. Hos børn og unge er der risiko for 
+dyslipidæmi og nogen vægtstigning.
+Depottabletten er ikke testet hos børn og unge.
+risperidon 
+(oral)
+1 – 6 mg Dosisafhængig EPS og hyperprolaktinæmi (især >4 
+mg). Hos børn og unge nogen tendens til blodsukker- 
+og vægtstigning.
+Depotinjektionspræparat er ikke testet hos børn og 
+unge.
+FGA
+haloperidol 2 – 9 mg* Risiko for dosisafhængig EPS og hyperprolaktinæmi.
+Depotinjektionspræparat er ikke testet hos børn og 
+unge.
+*Der forligger ingen FDA/EMA godkendte dosis intervaller for clozapin og haloperidol. De 
+angivne doser herfor er fra Expert Consensus Guideline, Journal of Clinical Psychiatry 2003, 
+64, suppl 12. For detaljer, herunder doser til børn se baggrundsnotat bilag J. 
+# Clozapin bør kun anvendes til behandlingsresistent skizofreni.
+RADS behandlingsvejledning vedr. medicinsk behandling af psykotiske tilstande Side 3 af 6
+hos børn og unge
+ Lægemiddelrekommandation
+13-17 år: 
+1. og 2. valg er, i uprioriteret rækkefølge, aripiprazol, quetiapin, paliperidon eller risperidon, 
+som alle fire er godkendt af FDA til behandling af skizofreni hos børn og unge fra 13 år. 
+Quetiapin og risperidon har indgået i komparative studier, hvor de ikke har været inferiore på 
+primære outcomes. Aripiprazol er kun sammenlignet med placebo (og med paliperidon i et 
+upubliceret studie), men har generelt en lav risiko for bivirkninger bortset fra akathisi. 
+Paliperidon er sammenlignet med placebo (og med aripiprazol i et upubliceret studie). Hos 
+børn som er fyldt 15 år bør aripiprazol eller paliperidon forsøges først alene fordi de, som de 
+eneste antipsykotika, har registreret indikation fra EMA i denne aldersgruppe. 3. valg er 
+olanzapin, som placeres her, trods FDA godkendelse og deltagelse i komparative studier, 
+grundet høj risiko for metaboliske bivirkninger. Haloperidol placeres her, trods FDAs 
+godkendelse og deltagelse i komparative studier, pga. af en relativt høj risiko for EPS. 
+Under 13 år: 
+Generelt bør man være meget tilbageholdende og helst undgå antipsykotisk behandling hos 
+børn under 13 år. Der er ingen registrerede præparater til indikationen, dvs. der er ingen 
+evidens for effekt på skizofreni hos børn under 13 år. Her er førstevalg derfor først og 
+fremmest baseret på en vægtning af sikkerhedsprofilerne.
+1. valg er risperidon, som har registreret indikation hos både EMA og FDA til børn fra 5 år med 
+andre diagnoser, hvorfor risperidon vurderes at være et mere gennemprøvet og sikkert 
+præparat til aldersgruppen. 
+2. valg er aripiprazol og quetiapin, som hverken har EMA eller FDA indikation for skizofreni for 
+børn under 13, men som er FDA godkendt til brug ved andre diagnoser hos børn (aripiprazol: 
+Bipolar tilstand fra 10 år og irritabilitet ved autisme fra 6 år, quetiapin: Bipolar tilstand fra 10 
+år). Paliperidon medtages ikke for denne aldersgruppe, da der ikke er FDA eller EMA 
+indikationer til nogen diagnoser under 12 år.
+Som 3. valg medtages her ikke olanzapin, da det ikke har FDA eller EMA indikationer til nogen 
+diagnoser under 13 år. Haloperidols FDA godkendelse er uklar, hvorfor den heller ikke 
+medtages. Kun clozapin bibeholdes som mulighed ved behandlingsresistent skizofreni 
+(undersøgt fra 7 år).
+ 
+RADS behandlingsvejledning vedr. medicinsk behandling af psykotiske tilstande Side 4 af 6
+hos børn og unge
+Algoritme (lægemiddelvalg). 
+< 13 år 13-17 år
+1. valg risperidon# aripiprazol*
+paliperidon**
+quetiapin
+risperidon
+2. valg aripiprazol
+quetiapin
+aripiprazol
+paliperidon
+quetiapin
+risperidon
+3. valg clozapin (kun 
+behandlingsresistent 
+skizofreni)
+olanzapin
+haloperidol
+clozapin (kun behandlingsresistent 
+skizofreni)
+Ingen antipsykotika er godkendt til skizofreni hos børn og unge under 15 år.
+* Aripiprazol er godkendt til skizofreni fra 15 år og til mani fra 13 år 
+**Paliperidon er godkendt til skizofreni fra 15 år.
+# Risperidon er godkendt til børn fra 5 år på andre indikationer.
+Handelsnavne (efter udbud)
+Aripiprazol ”Paranova”
+Clozapin ”Actavis”
+Invega ”2Care4”
+Olanzapin ”Actavis”
+Quetiapin ”Actavis”
+For risperidon og haloperidol foreligger aktuelt ikke kontrakt.
+Ved 1., 2. og 3. behandlingsforsøg vælges fra de tilgængelige præparater i 1. valgsgruppen, 
+subsidiært 2. valgsgruppen. Når disse muligheder er udtømte kan der i de følgende 
+behandlingsforsøg anvendes præparater fra 3. valgsgruppen. Prioriteringer indenfor de enkelte 
+grupper baseres i vidt omfang på risikovurdering af bivirkningsprofil i relation til den 
+individuelle patient. Clozapin kan vælges ved terapiresistens og tidligst fra 3. 
+behandlingsforsøg. 15-17 årige: Aripiprazol eller paliperidon er 1. valg. 
+Dosering:
+Nedenfor er angivet vejledende doser med henvisning til de doser, som FDA har godkendt til 
+børn og unge med skizofreni i alderen 13-17 år. 
+Doser til børn og unge med skizofreni godkendt af FDA 
+ Alder Initialdosis
+Dosisinterval i 
+vedligeholdelsesfasen
+risperidon 13-17 år 0,5 mg 1-6 mg
+paliperidon 12-17 år 3 mg 3-12 mg*
+quetiapin 13-17 år 50 mg (25 mg x 2) 400-800 mg (200-400 mg x 2)
+olanzapin 13-17 år 2,5-5 mg 10-20 mg
+aripiprazol 13-17 år 2 mg 10-30 mg
+* Ved vægt <51 kg er maxdosis 6 mg 
+RADS behandlingsvejledning vedr. medicinsk behandling af psykotiske tilstande Side 5 af 6
+hos børn og unge
+Der er ikke godkendte FDA (eller EMA) doser for haloperidol og clozapin til børn og unge. For 
+yderligere detaljer se Baggrundsnotat, bilag J.
+Monitorering af effekten
+Monitorering af psykosesymptomer finder sted ved en klinisk vurdering.
+Graden af psykopatologi kan med fordel kvantificeres i daglig klinik ved anvendelse af 
+psykopatologi-ratingskalaer.
+Monitorering af eventuelle bivirkninger
+Monitorering af bivirkninger ved antipsykotisk behandling sker ved klinisk vurdering, eventuelt 
+ved brug af ratingskala (f.eks. UKU), samt ved paraklinisk monitorering (blodprøver/EKG).
+Da forbruget hos børn i praksis ofte foregår uden for godkendt indikation bør man være særlig 
+opmærksom på bivirkninger og indberette dem til Sundhedsstyrelsen.
+ 
+Kriterier for skift af behandling
+De færreste patienter i antipsykotisk behandling vil opleve fuldstændig symptomfrihed uden 
+bivirkninger, og man bør i hvert enkelt tilfælde vurdere situationen i samarbejde med 
+patienten/familien for at se om et problem kan mindskes med dosisjustering.
+Præparatskift bør overvejes, hvis patienten har persisterende væsentlige psykotiske 
+symptomer eller væsentlige bivirkninger relateret til ordineret lægemiddel. 
+Kriterier for seponering af behandling
+Udtrapning er kun relevant ved remission af psykosesymptomerne og foregår langsomt 
+(måneder til år) med øget opmærksomhed fra patients, pårørendes og behandleres side. 
+Varigheden af den antipsykotiske behandling vil afhænge af det aktuelle symptombillede og 
+eventuelt tidligere sygdomsbillede. For børn og unge er der for få langtidsstudier til at danne 
+grundlag for konkrete anbefalinger vedrørende behandlingsvarighed, men det bør tages i 
+betragtning, at der er høj risiko for tilbagefald i 1-2 år efter en akut psykotisk episode (NICE 
+guidelines 2013).
+ 
+RADS behandlingsvejledning vedr. medicinsk behandling af psykotiske tilstande Side 6 af 6
+hos børn og unge
+FAGUDVALGETS SAMMENSÆTNING
+Ændringslog:
+1.3 November 2013 Lægemiddelrekommandation indsat og opdatering til ny 
+skabelon
+1.4 December 2014 Ændring for paliperidon pga. indikationsudvidelse til børn fra 15 
+år.
+Fagudvalgets 
+sammensætning
+Anders Fink-Jensen, Formand, Professor, dr. med, 
+udpeget af Dansk Psykiatrisk Selskab
+Ib Rasmussen, overlæge, udpeget af Region Nordjylland
+Anne Grethe Viuff, overlæge, udpeget af Region Midtjylland
+John Teilmann Larsen, overlæge, klinisk lektor, ph.d., 
+udpeget af Region Syddanmark
+Michael Schmidt, ledende overlæge, udpeget af Region 
+Sjælland
+Linda Peacock, overlæge, udpeget af Region Hovedstaden
+Anne Dorte Stenstrøm, Overlæge ph.d., klinisk lektor, 
+udpeget af Børne- og Ungdomspsykiatrisk Selskab
+Dorte Glintborg, farmaceut, udpeget af Sundhedsstyrelsen 
+(indtil 1.9.2013)
+Kim Brøsen, overlæge, professor, dr. med, 
+udpeget af Dansk Selskab for Klinisk Farmakologi (DSKF)
+Marianne Lund Gudik-Sørensen, Klinisk farmaceut, 
+udpeget af Dansk Selskab for Sygehusapoteksledelse (DSS)
+Birte Yding Glenthøj, professor, overlæge, dr. med, 
+udpeget af formanden
+Anne Katrine Pagsberg, overlæge, speciallæge i børne – og 
+ungdomspsykiatri, klinisk lektor, ph.d., udpeget af formanden
+Lone Baandrup, læge, ph.d., udpeget af formanden    
+ 
+Version: Dato: Ændring:
+1.0 Juni 2013
+1.1 August 2013 Enkelte kosmetiske rettelser
+1.2 Oktober 2013 Ændret markering vedr. indikation for aripiprazol og tilføjet 
+bemærkning vedr. indberetning af bivirkninger.

@@ -1,0 +1,217 @@
+RADS behandlingsvejledning vedr. medicinsk behandling af psykotiske tilstande  Side 1 af 4
+Behandlingsvejledning for medicinsk behandling af psykotiske 
+tilstande hos voksne
+Fagudvalg under Rådet for Anvendelse af Dyr Sygehusmedicin, RADS, er et rådgivende udvalg, 
+som udarbejder udkast til behandlingsvejledning og baggrundsnotat for anvendelse af medicin 
+inden for specifikke behandlingsområder. Dokumenterne forelægges RADS, som herefter 
+træffer beslutning om indholdet af den endelige behandlingsvejledning og baggrundsnotat.
+Målgruppe Relevante afdelinger
+Lægemiddelkomiteer
+Sygehusapoteker
+Andre relevante interessenter
+Udarbejdet af RADS fagudvalg for medicinsk behandling af psykoser
+Gældende fra 4. januar 2016 Version: 1.6
+Dokument nr.: 205561
+Dato: december 2015
+Behandlingsvejledningen er udarbejdet på basis af baggrundsnotatet for terapiområdet. 
+Baggrundsnotatet med referencer, samt denne behandlingsvejledning kan downloades fra 
+RADS hjemmeside, www.rads.dk.
+Formål
+Formålet med RADS behandlingsvejledninger er at sikre national konsensus om behandling 
+med lægemidler; herunder at definere hvilke lægemidler, der anses for ligestillede.
+Lægemidler
+Baggrundsnotatet omfatter behandling af patienter med lidelser inden for det skizofreniforme 
+spektrum og relaterede lidelser omfattet af indikationsområdet F20-29 med følgende 
+antipsykotika.
+amisulprid (N05AL05)
+aripiprazol (N05AX12
+clozapin (N05AH02)
+haloperidol (N05AD01)
+lurasidon (N05AE05)*
+olanzapin (N05AH03)
+paliperidon, (N05AX13)
+perphenazin (N05AB03)
+quetiapin (N05AH04)
+risperidon (N05AX08)
+sertindol (N05AE03)
+ziprasidon (N05AE04)
+zuclopenthixol (N05AF05)
+*tilføjet december 2014
+Kriterier for igangsætning af behandling
+Relevante patienter som opfylder de diagnostiske kriterier for F20-29. Vejledningen omfatter: 
+ Patienter, som er eller tidligere har været i behandling med antipsykotika, men har 
+behov for at skifte antipsykotisk behandling
+ Patienter, som ikke tidligere har været i medicinsk behandling for en psykotisk lidelse 
+omfattet af indikationsområdet F20-29.
+RADS behandlingsvejledning vedr. medicinsk behandling af psykotiske tilstande  Side 2 af 4
+Konklusion vedr. valg af lægemiddel
+Ved valg af lægemiddel skelnes mellem:
+ Patienter som allerede er eller har været i behandlet med antipsykotika
+ Debuterende (behandlingsnaive) patienter. 
+Bemærk, at depotinjektionspræparater og quetiapin depottabletter i begge tilfælde ikke er 
+rekommanderet, men kan overvejes ved udtalte komplianceproblemer.
+ 
+Behandling af patienter som er eller har været i behandling med antipsykotika
+Vejledningen stiller ikke krav om, at en velbehandlet patient skal skifte behandling.
+Til en patient, som har behov for at skifte til et andet antipsykotikum eller genoptage 
+antipsykotisk behandling, vælges ét af de seks ligestillede lægemidler (se skema nedenfor). 
+Ved valg af lægemiddel tager behandleren hensyn til, hvilke lægemidler patienten allerede har 
+prøvet, samt de særlige karakteristika for de enkelte lægemidler. 
+Behandling af debuterende patienter
+Til en patient, som ikke tidligere er behandlet med antipsykotika, vælges som udgangspunkt 
+det billigste* lægemiddel i tabel 1 nedenfor (angivet i alfabetisk, uprioriteret rækkefølge). 
+Efterfølgende behov for skift sker under hensyn til de særlige karakteristika for de enkelte 
+lægemidler. 
+Bemærk at forudsætningen for, at rekommandere, amisulprid, lurasidon, paliperidon og 
+risperidon er, at daglig dosis ikke overstiger hhv. 600 mg, 74 mg, 6 mg og 4 mg.
+Tabel 1: Lægemidler som anbefales ved 1. og 2. behandlingsforsøg
+Lægemiddel
+med ækvi-
+effektive doser 
+(vejledende 
+dosisinterval)
+Særlige karakteristika, der anvendes som 
+kriterier for udvælgelse af lægemiddel
+Mål for lægemiddelforbruget 
+(andel i procent)
+Amisulprid
+450 mg
+(100-800 mg)
+Dosisafhængig EPS og hyperprolaktinæmi
+(særligt udtalt ved doser > 600 mg dgl., men ses 
+også ved lavere dosering). 
+Udskilles overvejende renalt (obs nyrefunktion)
+Aripiprazol*
+20 mg
+(15-30 mg)
+Risiko for akatisi.
+Findes som depotinjektionspræparat.
+Lurasidon
+74 mg
+(37-148 mg)
+Dosisafhængig akatisi og EPS, der især skal være 
+opmærksomhed på ved doser > 74 mg.
+Skal indtages med måltid.
+Paliperidon
+6 mg
+(3-12 mg)
+Dosisafhængig EPS og hyperprolaktinæmi (især 
+ved doser > 6 mg dgl.). 
+Findes som depotinjektionspræparat.
+Udskilles overvejende renalt (obs nyrefunktion).
+Quetiapin*
+500 mg
+(300-750 mg)
+Sedation, ortostatisk hypotension, beskeden risiko 
+for EPS.
+1./2. 
+valg:
+Risperidon*
+4 mg
+(1-10 mg)
+Dosisafhængig EPS og hyperprolaktinæmi
+(særligt udtalt ved doser > 4 mg dgl.).
+Findes som depotinjektionspræparat.
+Patienter med behov for skift af 
+tidligere lægemiddelbehandling:
+70 % bør behandles med ét af 
+de seks anførte lægemidler.
+* Bemærk, at der er store prisforskelle mellem præparaterne. Kun aripiprazol, risperidon og quetiapin tabletter har 
+generelt tilskud. Det har betydning, da størstedelen af forbruget af antipsykotika sælges via apoteker i 
+primærsektoren. Aktuelle priser kan ses på medicinpriser.dk.
+RADS behandlingsvejledning vedr. medicinsk behandling af psykotiske tilstande  Side 3 af 4
+Manglende behandlingsrespons
+Ved manglende behandlingsrespons ved 2. behandlingsforsøg rekommanderer fagudvalget 
+skift til clozapin (3. valg). Kan patienten ikke anvende clozapin, overvejes om det er relevant 
+at forsøge endnu ét af de ovenstående seks lægemidler. Hvis dette ikke er muligt skiftes til et 
+andet 3. valg (se skema for lægemidler der rekommanderes som 3. valg). 
+Tabel 2: Lægemidler der anbefales som 3. valgs-præparater
+Monitorering af effekten
+Monitorering af psykosesymptomer finder sted ved en klinisk vurdering. Graden af 
+psykopatologi kan med fordel kvantificeres i daglig klinik ved anvendelse af psykopatologi-
+ratingskalaer.
+Monitorering af eventuelle bivirkninger
+Monitorering af motoriske bivirkninger ved antipsykotisk behandling sker ved klinisk vurdering, 
+eventuelt ved brug af ratingskala.
+Kriterier for skift af behandling
+De færreste patienter i antipsykotisk behandling vil opleve fuldstændig symptomfrihed uden 
+bivirkninger, og man bør i hvert enkelt tilfælde vurdere situationen i samarbejde med 
+patienten, for at se om et problem kan mindskes med dosisjustering.
+Præparatskift bør overvejes, hvis patienten har persisterende væsentlige symptomer eller 
+væsentlige bivirkninger relateret til et ordineret lægemiddel.
+Kriterier for seponering af behandling
+Udtrapning er kun relevant ved remisson af psykosesymptomerne, og foregår langsomt 
+(måneder til år) med øget opmærksomhed fra patientens, pårørendes og behandleres side.
+Varigheden af den antipsykotiske behandling vil afhænge af det aktuelle symptombillede og 
+eventuelt tidligere sygdomsbillede.
+Lægemiddel Dosering pr. 
+døgn 
+Særlige karakteristika, der anvendes som kriterier for udvælgelse 
+af lægemiddel
+Clozapin 100-900 mg Har effekt hos en del ellers behandlingsresistente patienter. Bør tilbydes 
+alle patienter som 3. behandlingsforsøg, hvis årsagen til behandlingsskift 
+er manglende effekt af tidligere anvendte lægemidler. Udtalt sedation, 
+metaboliske bivirkninger og risiko for knoglemarvspåvirkning, hvorfor 
+specialmonitorering er påkrævet. Ringe risiko for EPS.
+Olanzapin 5-20 mg Høj forekomst af metaboliske bivirkninger og sedation. Findes som 
+depotpræparat. Kan anvendes til gravide.
+Sertindol 12-24 mg Kardiel monitorering påkrævet grundet risiko for QT-forlængelse. 
+Ziprasidon 40-160 Kræver god kompliance grundet dosering flere gange dagligt og i 
+forbindelse med fødeindtag. Kardiel monitorering grundet risiko for QT-
+forlængelse.
+FGA
+Haloperidol 1-15 mg Dosisafhængig EPS og hyperprolaktinæmi. 
+Findes som depotpræparat.
+Perphenazin 6-42 mg Dosisafhængig EPS og hyperprolaktinæmi. 
+Kan anvendes til gravide.
+Tabletter bestilles på særlige vilkår.
+Findes som depotpræparat.
+Zuclopenthixol 2-50 mg Dosisafhængig EPS og hyperprolaktinæmi. 
+Findes som depotpræparat.
+RADS behandlingsvejledning vedr. medicinsk behandling af psykotiske tilstande  Side 4 af 4
+Førsteepisode patienter:
+Rekommanderes 1-2 års behandling
+Et tidligere tilbagefald:
+Rekommanderes 2-5 års behandling
+Gentagne tilbagefald:
+Rekommanderes> 5 års behandling. Livslang behandling overvejes
+FAGUDVALGETS SAMMENSÆTNING
+Fagudvalgets 
+sammensætning
+Anders Fink-Jensen, Formand, Professor, dr. med, 
+udpeget af Dansk Psykiatrisk Selskab
+Ib Rasmussen, overlæge, udpeget af Region Nordjylland
+Anne Grethe Viuff, overlæge, udpeget af Region Midtjylland
+John Teilmann Larsen, overlæge, klinisk lektor, ph.d., 
+udpeget af Region Syddanmark
+Michael Schmidt, ledende overlæge, 
+udpeget af Region Sjælland
+Linda Peacock, overlæge, udpeget af Region hovedstaden
+Anne Dorte Stenstrøm, overlæge, ph.d., klinisk lektor
+udpeget af Børne- og Ungdomspsykiatrisk Selskab
+Dorte Glintborg, farmaceut, 
+udpeget af Sundhedsstyrelsen (indtil 1.9.2013)
+Kim Brøsen, overlæge, professor, dr. med, 
+udpeget af Dansk Selskab for Klinisk Farmakologi (DSKF)
+Marianne Lund Gudik-Sørensen, Klinisk farmaceut, 
+udpeget af Dansk Selskab for Sygehusapoteksledelse (DSS)
+Birte Yding Glenthøj, professor, overlæge, dr. med, 
+udpeget af formanden
+Anne Katrine Pagsberg, overlæge, speciallæge i børne – og 
+ungdomspsykiatri, lektor, ph.d., udpeget af formanden
+Lone Baandrup, læge, ph.d., udpeget af formanden   
+Ændringslog:
+Version: Dato: Ændring:
+1.0 Juni 2013
+1.1 August 2013 ATC kode for haloperidol rettet.
+1.2 Oktober 2013 Bemærkning vedr. retspsykiatriske patienter tilføjet.
+1.3 November 2013 Lægemiddelrekommandation indsat og opdatering til ny 
+skriveskabelon.
+1.4 December 2014 Tilføjelse af nyt lægemiddel (lurasidon), samt at aripiprazol nu 
+findes som depotinjektionspræparat.
+1.5 August 2015 Behandlingsvejledningen henviser nu til priserne i 
+primærsektoren for valg af billigste lægemiddel, fordi 
+størstedelen af salget foregår via apotekerne i primærsektoren.
+1.6 December 2015 Opdateret note til tabel 1, idet aripiprazol nu også har generelt 
+tilskud fra 4. januar 2015 pga prisfald som følge af tidligere 
+patentudløb. 
