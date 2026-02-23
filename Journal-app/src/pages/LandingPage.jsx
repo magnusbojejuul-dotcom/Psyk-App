@@ -67,11 +67,11 @@ function LandingPage({ onNavigate }) {
                         </div>
 
                         <h2 className="text-2xl font-bold text-[#3A4A40] mb-3 text-left leading-tight group-hover:text-[#2C3F34] transition-colors">
-                            Kliniske<br />Instrukser
+                            Gode<br />Dokumenter
                         </h2>
 
                         <p className="text-left text-[#839788] text-sm mb-8 leading-relaxed">
-                            Hurtigt og systematisk opslagsværk for lokale PRI dokumenter og evidensbaserede retningslinjer.
+                            Hurtigt og systematisk opslagsværk for gode dokumenter og behandlingsplaner.
                         </p>
 
                         <div className="mt-auto flex items-center gap-2 text-[#839788] text-sm font-bold group-hover:text-[#3A4A40] transition-colors">
@@ -86,11 +86,11 @@ function LandingPage({ onNavigate }) {
                         </div>
 
                         <h2 className="text-2xl font-bold text-[#3A4A40] mb-3 text-left leading-tight">
-                            Somatisk<br />Screening
+                            Scoringsværktøjer og<br />Vurderingsskalaer
                         </h2>
 
                         <p className="text-left text-[#839788] text-sm mb-8 leading-relaxed">
-                            Struktureret objektiv somatisk undersøgelsesguide.
+                            Forskellige scoringsværktøjer og skalaer.
                         </p>
 
                         <div className="mt-auto flex items-center gap-2 text-[#839788]/60 text-sm font-bold bg-[#E8E4D9]/30 px-3 py-1.5 rounded-lg">

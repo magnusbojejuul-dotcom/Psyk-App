@@ -1,23 +1,22 @@
-import sys
+import pdfplumber
 import os
 
-try:
-    import fitz  # PyMuPDF
-except ImportError:
-    os.system('pip install PyMuPDF')
-    import fitz
+files = [
+    'Gode instrukser + Edoks/Eksempel på behandlingsplan Anoreksi.pdf',
+    'Gode instrukser + Edoks/Eksempel på behandlingsplan.pdf',
+    'Gode instrukser + Edoks/Gennemgang.pdf'
+]
 
-def extract_pdf(pdf_path, output_path):
-    doc = fitz.open(pdf_path)
-    text = ""
-    for page in doc:
-        text += page.get_text()
-    
-    with open(output_path, "w", encoding="utf-8") as f:
-        f.write(text)
-
-if __name__ == "__main__":
-    pdf_file = sys.argv[1]
-    out_file = "pdf_extracted.txt"
-    extract_pdf(pdf_file, out_file)
-    print("Extraction complete.")
+with open('pdf_texts2.txt', 'w', encoding='utf-8') as f:
+    for file in files:
+        f.write(f"\n\n--- START OF {file} ---\n")
+        try:
+             with pdfplumber.open(file) as pdf:
+                 for page in pdf.pages:
+                     text = page.extract_text()
+                     if text:
+                        f.write(text + "\n")
+        except Exception as e:
+             f.write(f"Error extracting: {e}\n")
+        f.write(f"\n--- END OF {file} ---\n\n")
+        print(f"Extracted: {file}")
