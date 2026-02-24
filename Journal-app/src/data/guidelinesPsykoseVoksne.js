@@ -1,11 +1,12 @@
 export const PSYKOSE_VOKSNE_GUIDELINE = {
-    title: 'Medicinsk Behandling af Psykotiske Tilstande (Voksne)',
-    subtitle: 'Fælles retningslinje (RM) & Medicinrådets Anbefalinger (2020)',
+    title: 'Psykotiske Tilstande hos Voksne',
+    subtitle: 'NKR og RADS-vejledning for voksne',
     pdfs: [
-        { title: 'Print Vejledning', url: `${import.meta.env.BASE_URL}pdf/beh-jan-2016-psykotiske-tilstande-hos-voksne.pdf` },
-        { title: 'Print Forholdsregler', url: `${import.meta.env.BASE_URL}pdf/forholdsregler_antipsykotika_voksne.pdf` }
+        { title: 'RADS Psykotiske Tilstande (2016)', url: `${import.meta.env.BASE_URL}pdf/beh-jan-2016-psykotiske-tilstande-hos-voksne.pdf` },
+        { title: 'Forholdsregler Antipsykotika', url: `${import.meta.env.BASE_URL}pdf/Forholdsregler_ved_anvendelse_af_antipsykotika_hos_voksne_faelles_retningslinje_voksenpsykiatri_RM.pdf` },
+        { title: 'NKR Medicinsk Behandling Skizofreni', url: `${import.meta.env.BASE_URL}pdf/medicinsk-behandling-af-voksne-diagnosticeret-med-skizofreni.pdf` }
     ],
-    intro: 'Vejledningen sikrer national konsensus og regionale forsigtighedsregler. Den præciserer, at der før ordination og under behandling tages systematisk højde for forprøver, monitorering og individuelle risikofaktorer for voksne.',
+    intro: 'Vejledningen dækker medicinsk behandling og forholdsregler for voksne med psykotiske lidelser. Den indeholder bl.a. information om præparatvalg, monitorering og EKG-krav.',
     algorithm: [
         {
             title: 'Forprøver (Før Behandlingsstart)',

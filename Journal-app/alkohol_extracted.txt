@@ -1,0 +1,2755 @@
+
+
+--- START OF Gode instrukser + Edoks/national-klinisk-retningslinje-alkoholafhaengighed.pdf ---
+NNatioanatl kilinoiskn retaninlgs liknjel fiorn udiresdnking orge bethanndliinng agf sasmtlidiign alkjoeho laffhoængrig hued dog prsyekisdk lidnelsie n- Sugndh eodssgtyre lsen
+behandling af samtidig alkoholafhængighed og
+psykisk lidelse
+© Sundhedsstyrelsen, 2019. Publikationen kan frit refereres med tydelig kildeangivelse.
+Kategori: Faglig rådgivning
+Version: 1.1
+Format: PDF
+ISBN elektronisk udgave: 978-87-7014-328-8
+Kontaktperson
+Sundhedsstyrelsen
+Islandsbrygge 67, 2300 København S
+nkrsekretariat@sst.dk
++4572227400
+https://www.sst.dk/da/
+Sponsorer / Finansiering
+Sundhedsstyrelsen
+Ansvarsfraskrivelse
+Sundhedsstyrelsens nationale kliniske retningslinjer er systematisk udarbejdede udsagn med inddragelse af relevant
+sagkundskab. Nationale kliniske retningslinjer kan bruges af fagpersoner, når de skal træffe beslutninger om
+passende og god klinisk sundhedsfaglig ydelse i specifikke situationer. De nationale kliniske retningslinjer er
+offentligt tilgængelige, således at borgere og patienter også kan orientere sig i retningslinjerne.
+Nationale kliniske retningslinjer klassificeres som faglig rådgivning, hvilket indebærer, at Sundhedsstyrelsen
+anbefaler relevante fagpersoner at følge retningslinjerne. De nationale kliniske retningslinjer er ikke juridisk
+bindende, og det vil altid være det faglige skøn i den konkrete kliniske situation, der er afgørende for beslutningen
+om passende og korrekt sundhedsfaglig ydelse. Der er ingen garanti for et succesfuldt behandlingsresultat, selvom
+sundhedspersoner følger anbefalingerne. I visse tilfælde kan en behandlingsmetode med lavere evidensstyrke være
+at foretrække, fordi den passer bedre til patientens situation. Sundhedspersoner skal generelt inddrage patienten,
+når de vælger behandling.
+ISBN elektronisk udgave: 978-87-7014-328-8
+Version: 1.1
+2 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Indhold
+Centrale budskaber ........................................................................................................................................................................................................................................4
+1. Læsevejledning ........................................................................................................................................................................................................................................ 12
+2. Indledning .................................................................................................................................................................................................................................................. 14
+3. Identifikation af psykisk lidelse ..........................................................................................................................................................................................................18
+4. Identifikation af alkoholafhængighed ............................................................................................................................................................................................21
+5. Integreret behandling hos alkoholafhængige med psykisk lidelse ....................................................................................................................................24
+6. Ambulant behandling og døgnbehandling ..................................................................................................................................................................................27
+7. Dialektisk adfærdsterapi (DAT) og dobbeltfokuseret skematerapi .....................................................................................................................................30
+8. Familie-/netværksorienteret behandling .......................................................................................................................................................................................36
+9. Udgående/opsøgende indsatser ......................................................................................................................................................................................................42
+10. Efterbehandling/opfølgning ............................................................................................................................................................................................................46
+11. Acamprosat og naltrexon ..................................................................................................................................................................................................................49
+12. Referenceliste ......................................................................................................................................................................................................................................... 58
+13. Baggrund ................................................................................................................................................................................................................................................. 62
+14. Implementering .................................................................................................................................................................................................................................... 63
+15. Monitorering .......................................................................................................................................................................................................................................... 65
+16. Opdatering og videre forskning .....................................................................................................................................................................................................66
+17. Beskrivelse af anvendt metode .......................................................................................................................................................................................................67
+18. Fokuserede spørgsmål .......................................................................................................................................................................................................................68
+19. Beskrivelse af anbefalingernes styrke og impliktioner ..........................................................................................................................................................69
+20. Søgebeskrivelser og evidensvurderinger ....................................................................................................................................................................................72
+21. Arbejdsgruppen og referencegruppen ........................................................................................................................................................................................73
+22. Forkortelser og begreber ..................................................................................................................................................................................................................76
+Referencer ...................................................................................................................................................................................................................................................... 78
+3 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Centrale budskaber
+1. Læsevejledning
+2. Indledning
+3. Identifikation af psykisk lidelse
+God praksis (konsensus)
+Det er god praksis systematisk at identificere psykisk lidelse i forbindelse med udredning og behandling af
+alkoholafhængighed.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019.
+Bemærkning:
+Anbefalingen gælder for alle, der udredes eller behandles for alkoholafhængighed. De hyppigst forekomne psykiske lidelser sammen
+med alkoholafhængighed er affektive lidelser, angstlidelser, personlighedsforstyrrelser samt psykotiske lidelser (8,9). Der bør
+derfor systematisk screenes for disse lidelser i alkoholbehandlingsinstitutioner og andre psykiske lidelser, herunder ADHD og
+adfærdsforstyrrelser.
+Screeningen bør foretages så tidligt, som eventuelle abstinenssymptomer tillader, dvs. når abstinenserne er overstået, samt
+suppleres, når det undervejs i øvrigt skønnes relevant. Eventuelle symptomer på psykisk lidelse bør monitoreres løbende. Behandlere
+bør være opmærksomme på, at symptomer forårsaget af alkoholafhængighed kan minde om symptomer på psykisk lidelse.
+Sundhedsstyrelsen anbefaler, at der anvendes validerede screeningsværktøjer. Eftersom arbejdsgruppen ikke har sammenlignet
+viften af screeningsværktøjer eller undersøgt, hvilke kompetencer de enkelte screeningsværktøjer forudsætter, kan arbejdsgruppen
+ikke fremhæve ét eller flere screeningsværktøjer på bekostning af andre. I stedet henvises til en norsk retningslinje, som har
+undersøgt anvendeligheden af forskellige screeningsværktøjer til personer med rusmiddelafhængighed og psykisk lidelse (4).
+Screeningen skal følges op af relevant handling. Screening er forskellig fra diagnosticering og går forud for denne proces. Screening
+kan derfor ikke bruges til at stille en diagnose, men har alene til formål at identificere personer, som skal udredes yderligere.
+Identifikation af psykisk lidelse bør få indflydelse på tilrettelæggelsen af behandlingen og kan eksempelvis resultere i en henvisning
+til andre samarbejdspartnere, hvis der er behov for det. Som udgangspunkt bør både alkoholafhængigheden og den psykiske lidelse
+adresseres i det samlede behandlingsforløb (se afsnittet "Integreret/koordineret behandlingsforløb").
+En person bør ikke afvises fra alkoholbehandling, fordi vedkommende også har psykisk lidelse.
+4. Identifikation af alkoholafhængighed
+4 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+God praksis (konsensus)
+Det er god praksis systematisk at identificere alkoholafhængighed ved udredning og behandling af psykisk
+lidelse.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019.
+Bemærkning:
+Anbefalingen gælder for en bred række psykiske lidelser, herunder personlighedsforstyrrelser, affektive lidelser, angstlidelser,
+psykotiske lidelser, ADHD og adfærdsforstyrrelser.
+Alkoholafhængighed forekommer hyppigst sammen med personlighedsforstyrrelser, affektive lidelser, angstlidelser og psykotiske
+lidelser(8,9) og kan i sig selv medføre psykiske symptomer. Det er derfor relevant at identificere alkoholafhængighed i forbindelse
+med udredning og behandling af disse lidelser, men også ved andre psykiske lidelser, herunder ADHD og adfærdsforstyrrelser,
+sådan at adækvat behandling kan iværksættes, og fejlbehandling kan undgås. Behandlere bør være opmærksomme på, at
+symptomer på alkoholafhængighed og psykisk lidelse kan minde om hinanden, hvilket kun understreger vigtigheden af at screene
+for alkoholafhængighed, så denne identificeres.
+Screeningen bør foretages i udredningsfasen og suppleres undervejs i behandlingsfasen. Studier har vist, at personer svarer ærligt
+på spørgsmål om deres brug af rusmidler, hvis de føler sig trygge sammen med behandleren(13).
+Sundhedsstyrelsen anbefaler, at der anvendes validerede screeningsværktøjer såsom AUDIT. AUDIT anbefales også i den tidligere
+nævnte norske retningslinje(4).
+Screeningen skal følges op af relevant handling. Screening er forskellig fra diagnosticering og går forud for denne proces. Screening
+kan derfor ikke bruges til at stille en diagnose, men har alene til formål at identificere personer, som skal udredes yderligere.
+Identifikation af alkoholafhængighed bør få indflydelse på tilrettelæggelsen af behandlingen og kan eksempelvis resultere i en
+henvisning til andre samarbejdspartnere, hvis der er behov for det.
+Som udgangspunkt bør både alkoholafhængigheden og den psykiske lidelse adresseres i det samlede behandlingsforløb (se
+afsnittet 'Integreret/koordineret behandlingsforløb).
+En person bør ikke afvises fra behandling af den psykiske lidelse eller få afbrudt denne, fordi vedkommende også har en
+alkoholafhængighed.
+5. Integreret behandling hos alkoholafhængige med psykisk lidelse
+God praksis (konsensus)
+Det er god praksis at tilbyde integreret/koordineret behandling til personer med samtidig alkoholafhængighed
+og psykisk lidelse.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019.
+Bemærkning:
+Anbefalingen gælder for en bred række psykiske lidelser, herunder personlighedsforstyrrelser, affektive lidelser, angstlidelser,
+psykotiske lidelser, ADHD og adfærdsforstyrrelser.
+Psykiske symptomer kan fluktuere og forandre sig, særligt i begyndelsen af behandlingsforløbet, og bør derfor monitoreres nøje.
+Forandringer i personens alkoholafhængighed og/eller psykiske lidelse bør få indflydelse på behandlingsforløbet.
+Praktiske hensyn kan afgøre, om behandlingen skal være integreret eller koordineret, f.eks. personalets kompetencer eller den
+fysiske afstand mellem behandlingsinstitutioner. For personer med påvirket funktionsevne vil integreret behandling formentligt være
+mest hensigtsmæssig.
+Det er vigtigt at bemærke, at behandlingsforløbet bør tilrettelægges sammen med modtageren af behandlingen, dvs. personen med
+samtidig alkoholafhængighed og psykisk lidelse, og at det er behandlerne, der har ansvaret for at koordinere behandlingen.
+6. Ambulant behandling og døgnbehandling
+5 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+God praksis (konsensus)
+Det er god praksis, at ambulant behandling og døgnbehandling kombineres i behandlingsforløb for personer
+med samtidig alkoholafhængighed og psykisk lidelse, der i perioder har vanskeligt ved at møde op til ambulant
+behandling.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019.
+Bemærkning:
+Anbefalingen gælder for en bred række psykiske lidelser, herunder personlighedsforstyrrelser, affektive lidelser, angstlidelser,
+psykotiske lidelser, ADHD og adfærdsforstyrrelser.
+Ambulant behandling og døgnbehandling bør ikke ses som to alternativer, men i stedet som elementer, der kan kombineres i et
+sammenhængende behandlingsforløb efter behov. Døgnbehandling bør ikke betragtes som et selvstændigt behandlingsforløb eller
+som en akut foranstaltning.
+I behandlingsforløb for personer med samtidig alkoholafhængighed og psykisk lidelse bør både den ambulante behandling og
+døgnbehandlingen arbejde dobbeltfokuseret og integreret ud fra behandlingsprincipper, der understøtter hinanden (se
+afsnittet "Integreret behandling hos alkoholafhængige med psykisk lidelse).
+Særligt personer, der i perioder har vanskeligt ved at møde op til ambulant behandling, kan formentlig have gavn af et
+behandlingsforløb, der kombinerer ambulant behandling og døgnbehandling. Det kan f.eks. være personer med gentagne afbrudte
+ambulante behandlinger bag sig, personer, der ikke er sufficient udredt for psykisk lidelse, og personer, hvis psykiske lidelse giver sig
+udslag i påvirket funktionsevne.
+7. Dialektisk adfærdsterapi (DAT) og dobbeltfokuseret skematerapi
+Svag anbefaling
+Overvej at tilbyde DAT til personer med samtidig alkoholafhængighed og borderline personlighedsforstyrrelse.
+Overvej at tilbyde dobbeltfokuseret skematerapi til personer med samtidig alkoholafhængighed og
+personlighedsforstyrrelse.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019.
+Bemærkning:
+Evidensgrundlaget for anbefalingen om DAT bygger på et studie, som inkluderer personer med alkoholafhængighed og borderline
+personlighedsforstyrrelse, og anbefalingen gælder derfor denne gruppe.
+Evidensgrundlaget for anbefalingen om dobbeltfokuseret skematerapi bygger på et studie, som inkluderer personer med
+alkoholafhængighed og forskellige typer af personlighedsforstyrrelser, og denne anbefaling gælder derfor en bred gruppe af
+personlighedsforstyrrelser.
+Begge behandlingsformer forudsætter efteruddannelse samt løbende supervision. Behandleren bør som udgangspunkt være meget
+tro overfor behandlingsmanualen. Nogle personer ønsker formentlig ikke at deltage i gruppebehandling, som er en del af DAT. Disse
+personer bør ikke udelukkes fra behandling.
+8. Familie-/netværksorienteret behandling
+6 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Svag anbefaling
+Overvej at tilbyde familie-/netværksorienteret behandling til personer med samtidig alkoholafhængighed og
+psykotiske lidelser.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019.
+Bemærkning:
+Evidensgrundlaget består af ét studie, hvor populationen omfatter personer med samtidig alkoholafhængighed og psykotiske
+lidelser. For alkoholafhængighed og ikke-psykotiske lidelser henvises til Sundhedsstyrelsens nationale kliniske retningslinje for
+behandling af alkoholafhængighed (2015) (7), som også anbefaler at inddrage familie/netværk behandlingen. Der henvises desuden
+til Sundhedsstyrelsens publikation om familieorienteret alkoholbehandling (25).
+Behandlingen bør altid omfatte en udredning af, hvorvidt personen har hjemmeboende børn, da disse vil være belastet af en
+opvækst med en forælder med alkohol- og psykiske problemer. Tilsvarende har voksne, fraflyttede børn levet med en svær
+belastning, hvorfor det kan være relevant også at tilbyde dem støtte med henblik på at forebygge rusmiddelproblemer
+og psykisk lidelse i denne gruppe. Det bør sikres, at børnenes behov for støtte
+udredes, og at den relevante støtte/behandling tilbydes.
+Hvis en person ikke har en familie eller ikke ønsker at involvere denne i behandlingen, kan andet netværk inddrages, herunder
+venner, naboer eller professionelle, som personen betragter som sit netværk.
+Ofte vil man gennemføre individuelle samtaler med personen, inden familien/netværket inddrages. Det kan være forskelligt fra
+person til person, hvor meget familien/netværket bør inddrages. I nogle tilfælde vil det formentlig være tilstrækkeligt blot at
+involvere familien/netværket ved psykoedukation, mens det i andre tilfælde vil være mere hensigtsmæssigt at inddrage familien/
+netværket løbende i behandlingen. Derudover kan de pårørende have behov for støtte til bearbejdning af den belastning, de har
+levet med.
+God praksis (konsensus)
+Det er god praksis at tilbyde familie-netværksorienteret behandling til personer med samtidig
+alkoholafhængighed og øvrige psykiske lidelser.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019.
+Bemærkning: Evidensgrundlaget består af ét studie, hvor populationen omfatter personer med samtidig alkoholafhængighed og
+psykotiske lidelser. For alkoholafhængighed og ikke-psykotiske lidelser henvises til Sundhedsstyrelsens nationale kliniske
+retningslinje for behandling af alkoholafhængighed (2015) (7), som også anbefaler at inddrage familie/netværk behandlingen. Der
+henvises desuden til Sundhedsstyrelsens publikation om familieorienteret alkoholbehandling (25).
+Behandlingen bør altid omfatte en udredning af, hvorvidt personen har hjemmeboende børn, da disse vil være belastet af en
+opvækst med en forælder med alkohol- og psykiske problemer. Tilsvarende har voksne, fraflyttede børn levet med en svær
+belastning, hvorfor det kan være relevant også at tilbyde dem støtte med henblik på at forebygge rusmiddelproblemer
+og psykisk lidelse i denne gruppe. Det bør sikres, at børnenes behov for støtte
+udredes, og at den relevante støtte/behandling tilbydes.
+Hvis en person ikke har en familie eller ikke ønsker at involvere denne i behandlingen, kan andet netværk inddrages, herunder
+venner, naboer eller professionelle, som personen betragter som sit netværk.
+Ofte vil man gennemføre individuelle samtaler med personen, inden familien/netværket inddrages. Det kan være forskelligt fra
+person til person, hvor meget familien/netværket bør inddrages. I nogle tilfælde vil det formentlig være tilstrækkeligt blot at
+involvere familien/netværket ved psykoedukation, mens det i andre tilfælde vil være mere hensigtsmæssigt at inddrage familien/
+netværket løbende i behandlingen. Derudover kan de pårørende have behov for støtte til bearbejdning af den belastning, de har
+levet med.
+9. Udgående/opsøgende indsatser
+7 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Svag anbefaling
+Overvej at tilbyde integrerede udgående/opsøgende indsatser til personer med samtidig alkoholafhængighed og
+psykisk lidelse, som er i behandling.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019.
+Bemærkning:
+Anbefalingen gælder for en bred række psykiske lidelser, herunder personlighedsforstyrrelser, affektive lidelser, angstlidelser,
+psykotiske lidelser, ADHD og adfærdsforstyrrelser.
+Sundhedsstyrelsen anbefaler at supplere igangværende behandling med udgående/opsøgende indsatser, hvis en person har
+vanskeligheder med at møde stabilt op til behandling. Udgående/opsøgende indsatser gives i personens eget hjem eller nærmiljø
+og har til formål at støtte og hjælpe personen, bl.a. med at tage medicin og klare dagligdagens gøremål samt at fastholde
+vedkommende i behandling. Den udgående/opsøgende indsats bør være dobbeltfokuseret, dvs. fokusere både på personens
+alkoholafhængighed og psykiske lidelse.
+Det bør være personens funktionsevne frem for diagnose, der afgør, om en person bør tilbydes udgående/opsøgende indsatser.
+Der er tale om en behandling, som kan strække sig over længere tid. Indsatsen bør være fleksibel og indrette sig efter den enkeltes
+hverdag og behov.
+Udgående/opsøgende indsatser kræver opmærksomhed fra behandlerens side på etiske dilemmaer, idet behandleren på den ene
+side skal sikre omsorg for personen og understøtte personens udvikling gennem den opsøgende/udgående tilgang og på den
+anden side skal respektere personens privatliv og/eller personens ønske om ikke at blive kontaktet.
+10. Efterbehandling/opfølgning
+Svag anbefaling
+Overvej at tilbyde efterbehandling/opfølgning til personer med samtidig alkoholafhængighed og affektiv lidelse,
+angstlidelse og/eller adfærdsforstyrrelse.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019.
+Bemærkning:
+Evidensgrundlaget består af ét studie, hvor populationen omfatter personer med alkoholafhængighed og affektive
+lidelser, angstlidelser og/eller adfærdsforstyrrelser. For alkoholafhængighed og andre psykiske lidelser henvises til
+Sundhedsstyrelsens nationale kliniske retningslinje for behandling af alkoholafhængighed (2015)(7), som også anbefaler at overveje
+at tilbyde efterbehandling/opfølgning.
+Efterbehandling/opfølgning involverer en professionel og skal være forhandlet med modtageren, dvs. personen med samtidig
+alkoholafhængighed og psykisk lidelse, ved afslutningen af behandlingen.
+Indholdet af efterbehandlingen/opfølgningen bør aftales med og tilpasses den enkelte. Fokus for efterbehandlingen/ opfølgningen
+er at forebygge tilbagefald og sikre den nødvendige støtte ved tilbagefald. Da der kan være en risiko for, at personer med samtidig
+alkoholafhængighed og psykisk lidelse oplever tilbagefald, er det vigtigt, at behandleren er opmærksom på dette og inkluderer
+strategier for opfølgning ved eventuelt tilbagefald.
+Efterbehandling/opfølgning kan både inkludere telefonopkald og individuelle/gruppebaserede samtaler ved fremmøde.
+Det kan være forskelligt fra person til person, hvor lang tid efterbehandlingen/opfølgningen bør strække sig over. Efterbehandling/
+opfølgning bør som udgangspunkt have en længere varighed for personer med både alkoholafhængighed og psykisk lidelse
+sammenlignet med personer, som alene har en alkoholafhængighed.
+8 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+God praksis (konsensus)
+Det er god praksis at tilbyde efterbehandling/opfølgning til personer med samtidig alkoholafhængighed og
+øvrige psykiske lidelser.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019.
+Bemærkning: Evidensgrundlaget består af ét studie, hvor populationen omfatter personer med alkoholafhængighed og affektive
+lidelser, angstlidelser og/eller adfærdsforstyrrelser. For alkoholafhængighed og andre psykiske lidelser henvises til
+Sundhedsstyrelsens nationale kliniske retningslinje for behandling af alkoholafhængighed (2015)(7), som også anbefaler at overveje
+at tilbyde efterbehandling/opfølgning.
+Efterbehandling/opfølgning involverer en professionel og skal være forhandlet med modtageren, dvs. personen med samtidig
+alkoholafhængighed og psykisk lidelse, ved afslutningen af behandlingen.
+Indholdet af efterbehandlingen/opfølgningen bør aftales med og tilpasses den enkelte. Fokus for efterbehandlingen/ opfølgningen
+er at forebygge tilbagefald og sikre den nødvendige støtte ved tilbagefald. Da der kan være en risiko for, at personer med samtidig
+alkoholafhængighed og psykisk lidelse oplever tilbagefald, er det vigtigt, at behandleren er opmærksom på dette og inkluderer
+strategier for opfølgning ved eventuelt tilbagefald.
+Efterbehandling/opfølgning kan både inkludere telefonopkald og individuelle/gruppebaserede samtaler ved fremmøde.
+Det kan være forskelligt fra person til person, hvor lang tid efterbehandlingen/opfølgningen bør strække sig over. Efterbehandling/
+opfølgning bør som udgangspunkt have en længere varighed for personer med både alkoholafhængighed og psykisk lidelse
+sammenlignet med personer, som alene har en alkoholafhængighed.
+11. Acamprosat og naltrexon
+9 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Svag anbefaling
+Overvej at tilbyde acamprosat eller naltrexon i tillæg til samtalebehandling til personer med samtidig
+alkoholafhængighed og affektiv lidelse, angstlidelse eller psykotisk lidelse.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019.
+Bemærkning:
+Evidensgrundlaget består af syv studier, hvor populationen omfatter personer med samtidig alkoholafhængighed og affektive
+lidelser, angstlidelser eller psykotiske lidelser. For alkoholafhængighed og andre psykiske lidelser henvises til Sundhedsstyrelsens
+nationale kliniske retningslinje for behandling af alkoholafhængighed (2015)(7), som anbefaler at tilbyde acamprosat og at overveje
+at tilbyde naltrexon.
+For nogle personer med samtidig alkoholafhængighed og psykisk lidelse kan brug af acamprosat eller naltrexon som supplement til
+samtalebehandling være en hjælp til afholdenhed/reduceret alkoholbrug.
+De fundne studier har ikke undersøgt, hvilke personer med samtidig alkoholafhængighed og psykisk lidelse der må formodes at
+have mest gavn af henholdsvis acamprosat og naltrexon. Her henvises til den nationale kliniske retningslinje for behandling af
+alkoholafhængighed(7), hvor det fremgår, at acamprosat primært bør overvejes som støtte til alkoholafhængige personer, der
+ønsker afholdenhed frem for reduktion i alkoholforbruget, mens naltrexon kan være relevant til alkoholafhængige, der ikke har
+afholdenhed som målsætning. Det ser ud til, at personer med ’craving’ eller angst som fremtrædende symptomer vil have særlig
+gavn af behandling med acamprosat. Omvendt kan personer med tidlig debut af alkoholafhængighed og familiær disposition have
+særlig gavn af naltrexon.
+Brug af acamprosat og naltrexon er forbundet med en risiko for bivirkninger (se afsnittet 'Acamprosat og naltrexon). Behandleren
+skal informere personer med samtidig alkoholafhængighed og psykisk lidelse om mulige bivirkninger og risici ved brug af
+acamprosat og naltrexon, inden evt. behandling igangsættes.
+Ved kendt nyresygdom skal forsigtighed udvises ved acamprosat, og ved svær leversygdom skal forsigtighed udvises ved naltrexon.
+For personer med samtidig alkoholafhængighed og psykisk lidelse må der forventes øget risiko for polyfarmaci, og behandleren skal
+være opmærksom på dette. Behandleren bør ligeledes være opmærksom på mulige interaktionseffekter mellem indtag af alkohol
+og brug af psykofarmaka og drøfte dette med personen.
+Positiv virkning af acamprosat eller naltrexon vil typisk indtræde efter et par uger. Hvis personen ikke oplever en positiv virkning af
+medicinen inden for denne periode, bør medicinen seponeres straks.
+10 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+God praksis (konsensus)
+Det er god praksis at tilbyde acamprosat eller naltrexon i tillæg til samtalebehandling til personer med samtidig
+alkoholafhængighed og øvrige psykiske lidelser.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019.
+Bemærkning:
+Evidensgrundlaget består af syv studier, hvor populationen omfatter personer med samtidig alkoholafhængighed og affektive
+lidelser, angstlidelser eller psykotiske lidelser. For alkoholafhængighed og andre psykiske lidelser henvises til Sundhedsstyrelsens
+nationale kliniske retningslinje for behandling af alkoholafhængighed (2015)(7), som anbefaler at tilbyde acamprosat og at overveje
+at tilbyde naltrexon.
+For nogle personer med samtidig alkoholafhængighed og psykisk lidelse kan brug af acamprosat eller naltrexon som supplement til
+samtalebehandling være en hjælp til afholdenhed/reduceret alkoholbrug.
+De fundne studier har ikke undersøgt, hvilke personer med samtidig alkoholafhængighed og psykisk lidelse der må formodes at
+have mest gavn af henholdsvis acamprosat og naltrexon. Her henvises til den nationale kliniske retningslinje for behandling af
+alkoholafhængighed(7), hvor det fremgår, at acamprosat primært bør overvejes som støtte til alkoholafhængige personer, der
+ønsker afholdenhed frem for reduktion i alkoholforbruget, mens naltrexon kan være relevant til alkoholafhængige, der ikke har
+afholdenhed som målsætning. Det ser ud til, at personer med ’craving’ eller angst som fremtrædende symptomer vil have særlig
+gavn af behandling med acamprosat. Omvendt kan personer med tidlig debut af alkoholafhængighed og familiær disposition have
+særlig gavn af naltrexon.
+Brug af acamprosat og naltrexon er forbundet med en risiko for bivirkninger (se afsnittet 'Acamprosat og naltrexon). Behandleren
+skal informere personer med samtidig alkoholafhængighed og psykisk lidelse om mulige bivirkninger og risici ved brug af
+acamprosat og naltrexon, inden evt. behandling igangsættes.
+Ved kendt nyresygdom skal forsigtighed udvises ved acamprosat, og ved svær leversygdom skal forsigtighed udvises ved naltrexon.
+For personer med samtidig alkoholafhængighed og psykisk lidelse må der forventes øget risiko for polyfarmaci, og behandleren skal
+være opmærksom på dette. Behandleren bør ligeledes være opmærksom på mulige interaktionseffekter mellem indtag af alkohol
+og brug af psykofarmaka og drøfte dette med personen.
+Positiv virkning af acamprosat eller naltrexon vil typisk indtræde efter et par uger. Hvis personen ikke oplever en positiv virkning af
+medicinen inden for denne periode, bør medicinen seponeres straks.
+12. Referenceliste
+13. Baggrund
+14. Implementering
+15. Monitorering
+16. Opdatering og videre forskning
+17. Beskrivelse af anvendt metode
+18. Fokuserede spørgsmål
+19. Beskrivelse af anbefalingernes styrke og impliktioner
+20. Søgebeskrivelser og evidensvurderinger
+21. Arbejdsgruppen og referencegruppen
+22. Forkortelser og begreber
+11 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+1. Læsevejledning
+Retningslinjen er bygget op i to lag:
+1. Lag - Anbefalingen
+Stærk anbefaling for (Grøn)
+Der gives en stærk anbefaling for, når der er evidens af høj kvalitet, der viser, at de samlede fordele ved
+interventionen er klart større end ulemperne. Det betyder, at alle, eller næsten alle, patienter vil ønske den
+anbefalede intervention
+Stærk anbefaling imod (Rød)
+Der gives en stærk anbefaling imod, når der er evidens af høj kvalitet, der viser, at de samlede ulemper ved
+interventionen er klart større end fordelene. Der anvendes også en stærk anbefaling imod, når gennemgangen af
+evidensen viser, at en intervention med stor sikkerhed er nyttesløs.
+Svag/betinget anbefaling for (Gul)
+Der gives en svag/betinget anbefaling for interventionen, når det vurderes, at fordelene ved interventionen er
+større end ulemperne, eller den tilgængelige evidens ikke kan udelukke en væsentlig fordel ved interventionen,
+samtidig med at det vurderes, at skadevirkningerne er få eller fraværende. Denne anbefaling anvendes også, når
+det vurderes, at patienters præferencer varierer.
+Svag/betinget anbefaling imod (Orange)
+Der gives en svag/betinget anbefaling imod interventionen, når det vurderes, at ulemperne ved interventionen er
+større end fordelene, men hvor dette ikke er underbygget af stærk evidens. Denne anbefaling anvendes også, hvor
+der er stærk evidens for både gavnlige og skadelige virkninger, men hvor balancen mellem dem er vanskelige at
+afgøre. Ligeledes anvendes den også, når det vurderes, at patientens præferencer varierer.
+God praksis (Grå)
+God praksis anvendes, når der ikke foreligger relevant evidens, og bygger således på faglig konsensus blandt
+medlemmerne af arbejdsgruppen, der har udarbejdet den kliniske retningslinje. Anbefalingen kan være enten for
+eller imod interventionen. Da der er tale om faglig konsensus, er denne type anbefaling svagere end de
+evidensbaserede anbefalinger, uanset om de evidensbaseret er stærke eller svage.
+Se bilag "Beskrivelse af anbefalingernes styrke og implikationer" for mere information
+2. Lag – Grundlaget for anbefalingen
+Klik på anbefalingen, hvis du vil vide mere om grundlaget for anbefalingen
+Evidensprofilen: De samlede effektestimater samt referencer til studierne.
+Sammenfatning: Overblik over samt kort gennemgang af den tilgrundliggende evidens
+Kvaliteten af evidensen:
+Høj: Vi er meget sikre på, at den sande effekt ligger tæt på den estimerede effekt
+Moderat: Vi er moderat sikre på den estimerede effekt. Den sande effekt ligger sandsynligvis tæt på denne, men
+der er en mulighed for, at den er væsentligt anderledes
+Lav: Vi har begrænset tiltro til den estimerede effekt. Den sande effekt kan være væsentligt anderledes end den
+estimerede effekt
+Meget lav: Vi har meget ringe tiltro til den estimerede effekt. Den sande effekt vil sandsynligvis være væsentligt
+12 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+anderledes end den estimerede effekt.
+Nøgleinformation: Kort beskrivelse af gavnlige og skadelige virkninger, kvaliteten af evidensen og
+overvejelser om patientpræferencer.
+Rationale: Beskrivelse af hvorledes de ovenstående elementer blev vægtet i forhold til hinanden og
+resulterede i den aktuelle anbefalings retning og styrke.
+Praktiske oplysninger: Praktisk information vedrørende behandlingen og oplysninger om eventuelle særlige
+patientovervejelser.
+Adaption: Såfremt anbefalingen er adapteret fra en anden retningslinje, findes her en beskrivelse af
+eventuelle ændringer.
+Diskussion: Hvis du er logget ind som bruger, kan du her komme med kommentarer til specifikke
+anbefalinger.
+Referencer: Referenceliste for anbefalingen.
+Den anvendte graduering af evidensens kvalitet og anbefalingsstyrke baseres på GRADE (Grading of
+Recommendations Assessment, Development and Evaluation).
+For en hurtig og informativ intriduktion til GRADE anbefales følgende artikel G.Goldet, J.Howick. Understanding
+GRADE: an introduction. Journal of Evidence-Based Medicine 6 (2013) 50-54. Se
+også: http://www.gradeworkinggroup.org.
+Desuden henvises der til Sundhedsstyrelsens metodehåndbog for en overordnet introduktion til metoden bag
+udarbejdelsen af de Nationale Kliniske Retningslinjer.
+13 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+2. Indledning
+Formål
+Behandlingssystemet har haft vanskeligt ved at give personer, der både har alkoholafhængighed og psykisk lidelse,
+relevante behandlingstilbud. I det psykiatriske behandlingssystem kan alkoholafhængigheden opleves som en
+barriere for behandling af den psykiske lidelse. På samme måde kan personer med psykisk lidelse opleves som
+vanskelige
+at behandle i alkoholbehandlingsinstitutioner. Der er derfor behov for at afklare, hvordan denne gruppe udredes
+og behandles mest effektivt.
+På denne baggrund er det besluttet at udarbejde en national klinisk retningslinje for udredning og behandling af
+personer med samtidig alkoholafhængighed og psykisk lidelse.
+Formålet med retningslinjen er at beskrive den foreliggende evidens og komme med anbefalinger for udvalgte
+elementer inden for udredning og behandling af personer med samtidig alkoholafhængighed og psykisk lidelse.
+Målet er at sikre en evidensbaseret indsats af ensartet høj kvalitet på tværs af landet, at medvirke til
+hensigtsmæssige udrednings-og behandlingsforløb for den enkelte og vidensdeling på tværs af sektorer og
+faggrupper samt prioritering mellem indsatser.
+Afgrænsning af patientgruppe
+Retningslinjen omhandler behandling af voksne over 18 år med samtidig alkoholafhængighed (se kriterier for
+alkoholafhængighed i afsnittet "Baggrund" i venstre margen) og psykisk lidelse. Retningslinjen retter sig mod en
+bred gruppe af psykiske lidelser, heriblandt affektive lidelser, angstlidelser, psykotiske lidelser, ADHD (Attention
+Deficit/Hyperactivity Disorder), adfærdsforstyrrelser og personlighedsforstyrrelser.
+Retningslinjen inkluderer studier, der definerer alkoholafhængighed og psykisk lidelse ud fra
+klassifikationssystemerne ICD-10 eller DSM-IV/DSM-V (se afsnittet "Forkortelser og begreber").
+Arbejdsgruppen har valgt at fokusere på voksne over 18 år. Det har ikke været muligt inden for rammerne for
+udarbejdelse af retningslinjen at give specifikke anbefalinger til børn og unge under 18 år.
+En mindre andel af de personer, som henvender sig i alkoholbehandlingsinstitutioner, opfylder ikke kriterierne for
+alkoholafhængighed, men har et skadeligt forbrug af alkohol (se beskrivelse af skadeligt forbrug i afsnittet
+"Baggrund"). Disse personer er generelt også omfattet af retningslinjen. Dog vedrører anbefalingen om acamprosat
+og naltrexon kun personer, der opfylder kriterierne for alkoholafhængighed (se afsnittet "Acamprosat og naltrexon).
+Retningslinjen retter sig mod udredning og behandling af personer, hvor alkoholafhængighed er hovedproblemet
+snarere end afhængighed af andre rusmidler eller illegale stoffer. I de tilfælde, hvor stofafhængighed er
+hovedproblemet, henvises til Socialstyrelsens vidensportalstema vedr. personer med psykiske vanskeligheder og
+samtidigt misbrug, som er offentliggjort ultimo 2015 på vidensportal.dk.
+Målgruppe/brugere
+Denne retningslinje henvender sig til en bred vifte af professionelle, som beskæftiger sig med alkoholafhængighed
+og/eller psykisk lidelse, såsom læger, sygeplejersker, psykologer, socialrådgivere, pædagoger mv. Retningslinjen er
+relevant for behandlere i det regionale sundhedsvæsen, behandlere i kommunale alkoholbehandlingsinstitutioner,
+privatpraktiserende
+psykologer og psykiatere samt alment praktiserende læger mv. Endvidere er den relevant for ledere i såvel
+kommunalt som regionalt regi.
+Retningslinjen er desuden relevant for personer med samtidig alkoholafhængighed og psykisk lidelse samt
+pårørende, der ønsker information om udredning og behandling.
+14 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Herudover henvender retningslinjen sig til beslutningstagere på området og kan tjene som information til andre
+involverede parter.
+Emneafgrænsning
+Denne nationale kliniske retningslinje indeholder handlingsanvisninger for udvalgte og velafgrænsede kliniske
+problemstillinger (’punktnedslag i patientforløbet’), som er prioriteret af den faglige arbejdsgruppe.
+Arbejdsgruppen har udvalgt områder, hvor arbejdsgruppen vurderer, at der er et stort behov for at få afklaret
+evidensen. Arbejdsgruppen har
+generelt valgt at prioritere at undersøge interventioner, som enten allerede benyttes i en dansk kontekst, men hvor
+arbejdsgruppen vurderer, at der er behov for at afklare evidensgrundlaget, eller interventioner, som benyttes i
+udlandet, og hvor der skønnes at være evidens, men hvor disse interventioner endnu ikke praktiseres i Danmark.
+Arbejdsgruppen har også valgt at undersøge områder, som ikke allerede er belyst i andre retningslinjer, men som
+kan være relevante i en dansk kontekst. Arbejdsgruppen har omvendt valgt ikke at undersøge områder, hvor
+internationale retningslinjer allerede har undersøgt og fundet evidens for relevante interventioner, og hvor
+arbejdsgruppen samtidig vurderer, at disse interventioner aktuelt anvendes i Danmark.
+Der er således ikke tale om en udtømmende beskrivelse af evidensbaseret udredning og behandling af personer
+med samtidig alkoholafhængighed og psykisk lidelse, og retningslinjen er ikke en guideline eller klinisk
+behandlingsstandard for hele behandlingsforløbet.
+Retningslinjen bør ses som et tillæg til øvrig litteratur på området, herunder bl.a.:
+Alcohol-use disorders: diagnosis, assessment and management of harmful drinking and alcohol dependence (NICE,
+Storbritannien, 2011)(1)
+Clinical Practice Guideline for Psychosocial Interventions in Severe Mental Illness (Ministry of Science and Innovation,
+Spanien, 2009)(2)
+Good Clinical Practice in the Recognition and Treatment of ADHD in (Young) Adults with Addiction Problems (Forum
+for Addiction Medicine, Belgien, 2009)(3)
+Nasjonal faglig retningslinje for utredning, behandling og oppfølging av personer med samtidig rus og psykisk lidelse
+– ROP lidelser (Norge, Helsedirektoratet, 2012)(4)
+Psychosis with coexisting substance misuse: Assessment and management in adults and young people (NICE,
+Storbritannien, 2011)(5)
+S3-Leitlein “Alkoholbezogene Störungen: Screening, Diagnose und Behandlung” (Arbeitsgemeinschaft der
+Wissenschaftlichen Medizinischen Fachgesellschaften, Tyskland,2015)(6)
+National Klinisk Retningslinje for Behandling af alkoholafhængighed (Sundhedsstyrelsen, Danmark, 2015)(7)
+Det skal samtidig understreges, at behandling af personer med samtidig alkoholafhængighed og psykisk lidelse i
+høj grad er tværfaglig. De dele af behandlingsindsatsen, som retningslinjen undersøger, kan således ikke stå alene.
+De ni fokuserede spørgsmål, som er blevet undersøgt i denne retningslinje, kan inddeles i fire temaer:
+Identifikation
+• Bør man systematisk identificere psykisk lidelse hos personer, der udredes eller behandles for
+alkoholafhængighed? (Fokuseret spørgsmål 1)
+15 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+• Bør man systematisk identificere alkoholafhængighed i forbindelse med udredning og behandling af psykisk
+lidelse? (Fokuseret spørgsmål 2)
+Tilrettelæggelse af behandling
+• Bør personer med samtidig alkoholafhængighed og psykisk lidelse tilbydes et integreret/koordineret
+behandlingsforløb frem for et sekventielt behandlingsforløb?(Fokuseret spørgsmål 3)
+• Bør personer med samtidig alkoholafhængighed og psykisk lidelse tilbydes døgnbehandling frem for ambulant
+behandling? (Fokuseret spørgsmål 4)
+Ikke-farmakologisk behandling
+• Bør personer med samtidig alkoholafhængighed og personlighedsforstyrrelse tilbydes dialektisk adfærdsterapi
+(DAT) eller dobbeltfokuseret skematerapi frem forvanlig alkoholbehandling? (Fokuseret spørgsmål 5)
+• Bør personer med samtidig alkoholafhængighed og psykisk lidelse tilbydes familie-/netværksorienteret
+behandling frem for individuel behandling? (Fokuseret spørgsmål 6)
+• Bør personer med samtidig alkoholafhængighed og psykisk lidelse tilbydes udgående/opsøgende indsatser
+frem for vanlige indsatser? (Fokuseret spørgsmål 7)
+• Bør personer med samtidig alkoholafhængighed og psykisk lidelse tilbydes efterbehandling/opfølgning?
+(Fokuseret spørgsmål 8)
+Farmakologisk behandling af alkoholafhængighed ved samtidig psykisk lidelse
+• Bør personer med samtidig alkoholafhængighed og psykisk lidelse tilbydes samtalebehandling kombineret
+acamprosat eller naltrexon for deres alkoholafhængighed frem for samtalebehandling alene? (Fokuseret
+spørgsmål 9)
+Begrundelser for de udvalgte problemstillinger beskrives i de enkelte kapitler. Eftersom retningslinjen kun
+beskæftiger sig med udvalgte områder af udrednings- og behandlingsindsatsen, er der foretaget en række fravalg.
+F.eks. er det ikke undersøgt, hvilke specifikke screeningsværktøjer der bør anvendes til identifikation
+af alkoholafhængighed og psykisk lidelse. Dette område er belyst i en norsk retningslinje (4).
+Effekten af henholdsvis kognitiv adfærdsterapi og motiverende samtaler er heller ikke undersøgt, da effekten af
+begge behandlingstiltag er velundersøgt i andre retningslinjer (4-6). Disse retningslinjer anbefaler samstemmende,
+at personer med samtidig alkoholafhængighed og psykisk lidelse tilbydes kognitiv adfærdsterapi og motiverende
+samtaler.
+Effekten af behandlingsindsatser som Community Reinforcement Approach (CRA), Contingency Management og
+psykodynamisk terapi er ligeledes ikke undersøgt. Disse indsatser er belyst i en retningslinje fra NICE (1).
+Retningslinjen har kun undersøgt udvalgte former for farmakologisk behandling af
+alkoholafhængighed (acamprosat og naltrexon). Effekten af disulfiram undersøges f.eks. ikke; her henvises i stedet
+til den nationale kliniske retningslinje om alkoholbehandling (7).
+Ligeledes undersøges effekten af psykofarmaka målrettet den psykiske lidelse heller ikke; her henvises til relevante
+nationale kliniske retningslinjer og vejledninger for de enkelte psykiske lidelser.
+Tiltag vedr. fysisk træning/aktivitet er belyst i en norsk retningslinje (4), og effekten af akupunktur er undersøgt i en
+retningslinje fra NICE (1). Ingen af disse områder undersøges i nærværende retningslinje.
+Arbejdsgruppen har valgt at inkludere en bred gruppe af psykiske lidelser i søgningen efter studier vedr. de enkelte
+okuserede spørgsmål bortset fra i kapitel 5, hvor to interventioner målrettet samtidig alkoholafhængighed
+g personlighedsforstyrrelser undersøges. De to interventioner er valgt, fordi de er specielt målrettet personer med
+16 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+både stof- eller alkoholafhængighed og psykisk lidelse. Endvidere er personlighedsforstyrrelser den gruppe af
+psykiske lidelser, der hyppigst forekommer sammen med alkoholafhængighed (se afsnittet "Baggrund").
+Til vurdering af effekter har arbejdsgruppen valgt at fokusere på de outcomes (udfald), som arbejdsgruppen
+skønner vigtigst. Alle outcomes fra de forskellige kliniske studier er derfor ikke rapporteret i denne retningslinje.
+Arbejdsgruppen har vurderet, at frafald fra behandlingen er et kritisk outcome ved alle de fokuserede spørgsmål,
+fordi frafald antages at påvirke de øvrige outcomes. Frafald fra behandlingen er derfor på forhånd prioriteret højere
+end de øvrige outcomes. Symptomer på psykisk lidelse, alkoholbrug, selvmordsadfærd, afholdenhed, tid til recidiv,
+livskvalitet og funktionsevne er alle vigtige outcomes.
+Derudover er der for enkelte interventioner identificeret outcomes, som er specifikke for den pågældende
+intervention. En samlet liste over de fokuserede spørgsmål samt de valgte outcomes findes på Sundhedsstyrelsens
+hjemmeside (se afsnittet "Fokuserede spørgsmål").
+Evidensgrundlaget for denne retningslinje er spinkelt, da der er gennemført forholdsvis få studier vedr. udredning
+og behandling af personer med samtidig alkoholafhængighed og psykisk lidelse, der lever op til GRADE-kriterierne
+(jf. afsnittet "Beskrivelse af anvendt metode"). Der er i søgningen efter litteratur for hvert fokuseret spørgsmål søgt
+efter både randomiserede kontrollerede forsøg og observationelle studier. Arbejdsgruppen ønsker derfor at
+understrege, at der er behov for mere forskning på området.
+De nationale kliniske retningslinjer har pr. definition ikke til opgave at afklare spørgsmål vedr. økonomi, visitation
+og organisering. Denne retningslinje forholder sig derfor ikke til, hvem der skal foretage udredning og behandling
+af personer med samtidig alkoholafhængighed og psykisk lidelse, hvilket ellers er en central problematik, idet
+alkoholafhængighed og psykisk lidelse i mange tilfælde behandles i forskellige behandlingsinstitutioner. For at sikre
+retningslinjens relevans i alle sektorer er både arbejdsgruppen og referencegruppen sammensat bredt med
+deltagelse fra alle involverede sektorer og med repræsentation af mange faggrupper (se afsnittet "Arbejdsgruppen
+og referencegruppen).
+Patientperspektivet
+Det er vigtigt, at patientens værdier og præferencer løbende inddrages i patientforløbet. I denne retningslinje er
+patientperspektivet repræsenteret via Psykiatrifonden, Landsforeningen SIND, Bedre Psykiatri og Landsforeningen
+af nuværende og tidligere brugere af psykiatrien, som har udpeget medlemmer til den nedsatte referencegruppe.
+Udkast til retningslinje har desuden været sendt i bred offentlig høring, hvor alle interesserede har haft mulighed
+for at afgive høringssvar. Se medlemmer af referencegruppen og høringsparter i afsnittet "Arbejdsgruppen og
+referencegruppen".
+Rationale for ikke at opdatere i 2019
+SST har på baggrund af tilbagemeldinger fra faglige selskaber, samt en overordnet litteratursøgning, besluttet ikke
+at opdatere retningslinjen i 2019. Som udgangspunkt vil der tages stilling til behov for opdatering hvert tredje år.
+17 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+3. Identifikation af psykisk lidelse
+Fokuseret spørgsmål 1
+Bør man systematisk identificere psykisk lidelse hos personer, der udredes eller behandles
+for alkoholafhængighed?
+En række studier har vist, at personer med alkoholafhængighed har en øget risiko for at udvikle psykisk lidelse(8,10)
+(se afsnittet "Baggrund" i venstre margen for en mere detaljeret beskrivelse af prævalens).
+Tilstedeværelsen af ubehandlet komorbid psykisk lidelse kan reducere effekten af alkoholbehandlingen(11),
+herunder medføre dårligere overholdelse af behandlingen (compliance)(12) og øge risikoen for tilbagefald(10).
+Arbejdsgruppen ønskede på denne baggrund at undersøge, om en systematisk identifikation af psykisk lidelse i
+forbindelse med udredning eller behandling af alkoholafhængighed giver et bedre udbytte af alkoholbehandlingen.
+En retningslinje fra NICE(5) har undersøgt, hvilke elementer der bør indgå i udredningen af samtidig
+rusmiddelafhængighed og psykotisk lidelse, og hvorvidt udredningen bør tilpasses forskellige kontekster og
+subgrupper. Retningslinjen fandt ingen evidens, der kunne besvare dette spørgsmål. Forfatterne giver en
+praksisanbefaling, hvor de anbefaler, at personer med samtidig rusmiddelafhængighed og psykotisk lidelse, der er i
+stofmisbrugs-/alkoholbehandling, får en omfattende udredning af deres psykiske lidelse.
+En anden retningslinje fra NICE(1) anbefaler også, at komorbid psykisk lidelse vurderes og tages højde for i
+behandlingen af alkoholafhængighed.
+God praksis (konsensus)
+Det er god praksis systematisk at identificere psykisk lidelse i forbindelse med udredning og behandling af
+alkoholafhængighed.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019.
+Anbefalingen gælder for alle, der udredes eller behandles for alkoholafhængighed. De hyppigst forekomne psykiske lidelser sammen
+med alkoholafhængighed er affektive lidelser, angstlidelser, personlighedsforstyrrelser samt psykotiske lidelser (8,9). Der bør
+derfor systematisk screenes for disse lidelser i alkoholbehandlingsinstitutioner og andre psykiske lidelser, herunder ADHD og
+adfærdsforstyrrelser.
+Screeningen bør foretages så tidligt, som eventuelle abstinenssymptomer tillader, dvs. når abstinenserne er overstået, samt suppleres,
+når det undervejs i øvrigt skønnes relevant. Eventuelle symptomer på psykisk lidelse bør monitoreres løbende. Behandlere bør
+være opmærksomme på, at symptomer forårsaget af alkoholafhængighed kan minde om symptomer på psykisk lidelse.
+Sundhedsstyrelsen anbefaler, at der anvendes validerede screeningsværktøjer. Eftersom arbejdsgruppen ikke har sammenlignet viften
+af screeningsværktøjer eller undersøgt, hvilke kompetencer de enkelte screeningsværktøjer forudsætter, kan arbejdsgruppen
+ikke fremhæve ét eller flere screeningsværktøjer på bekostning af andre. I stedet henvises til en norsk retningslinje, som har undersøgt
+anvendeligheden af forskellige screeningsværktøjer til personer med rusmiddelafhængighed og psykisk lidelse (4).
+Screeningen skal følges op af relevant handling. Screening er forskellig fra diagnosticering og går forud for denne proces. Screening
+kan derfor ikke bruges til at stille en diagnose, men har alene til formål at identificere personer, som skal udredes yderligere.
+Identifikation af psykisk lidelse bør få indflydelse på tilrettelæggelsen af behandlingen og kan eksempelvis resultere i en henvisning til
+andre samarbejdspartnere, hvis der er behov for det. Som udgangspunkt bør både alkoholafhængigheden og den psykiske lidelse
+adresseres i det samlede behandlingsforløb (se afsnittet "Integreret/koordineret behandlingsforløb").
+En person bør ikke afvises fra alkoholbehandling, fordi vedkommende også har psykisk lidelse.
+18 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Praktiske oplysninger
+Se teksten i kursiv under anbefalingen
+Nøgleinformationer
+Gavnlige og skadelige virkninger
+Der forventes bedre effekt af behandlingen af den psykiske lidelse, hvis alkoholafhængighed udredes og
+behandles.
+Identifikation af alkoholafhængighed kan indebære en risiko for over-/underbehandling som følge af falsk
+positive/
+negative resultater. Der kan endvidere være risiko for, at nogle personer ekskluderes fra behandlingen af den
+psykiske lidelse ved identifikation af alkoholafhængighed, hvilket dog vil bryde med god klinisk praksis. Ellers
+ingen
+kendte skadevirkninger.
+Kvaliteten af evidensen
+Der er ikke fundet evidens for dette fokuserede spørgsmål.
+Patientpræferencer
+Arbejdsgruppen vurderer, at de fleste personer, der udredes eller behandles for en psykisk lidelse, formentlig
+gerne vil fortælle om evt. alkoholafhængighed, hvis de gøres opmærksom på sammenhængen mellem
+alkoholafhængighed og psykisk lidelse, og hvis behandleren agerer respektfuldt og fordomsfrit.
+Andre overvejelser
+Identifikation af alkoholafhængighed i forbindelse med udredning og behandling af psykisk lidelse
+forudsætter efteruddannelse og opkvalificering af personale.
+Rationale
+Der er i formuleringen af anbefalingen lagt vægt på, at identifikation og behandling af alkoholafhængighed
+vurderes at mindske frafald fra behandlingen af den psykiske lidelse samt bidrage til at undgå fejlbehandling.
+Der er en risiko for over-/underbehandling som følge af falsk positive/negative resultater. Denne risiko kan
+defineres nærmere og begrænses ved anvendelse af validerede screeningsværktøjer, og hvis screeningen
+gennemføres efter en eventuel abstinensfase. Endvidere er der risiko for, at nogle personer afvises fra
+behandlingen af den psykiske lidelse ved identifikation af alkoholafhængighed, hvilket dog vil bryde med god
+klinisk praksis. Anbefalingen er baseret på konsensus, da der ikke er fundet evidens for dette fokuserede
+spørgsmål.
+Fokuseret spørgsmål
+Population: Personer over 18 år med alkoholafhængighed
+Intervention: Systematisk opsporing af psykisk lidelse ved brug af spørgeskemaer i forbindelse med
+vanlig udredning/behandling af alkoholafhængighed på alkoholbehandlingsinstitutioner
+Sammenligning V: anlig behandling af alkoholafhængighed.
+19 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Sammenfatning
+Litteratursøgningen fandt ingen studier, som besvarede dette fokuserede spørgsmål. Flow charts findes
+på sst.dk.
+20 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+4. Identifikation af alkoholafhængighed
+Fokuseret spørgsmål 2
+Bør man systematisk identificere alkoholafhængighed i forbindelse med udredning og behandling af
+psykisk lidelse?
+Der er en stor forekomst af alkoholafhængighed blandt personer med psykisk lidelse(14) (se i
+afsnittet "Baggrund" for en mere detaljeret beskrivelse af prævalens). Ubehandlet komorbid alkoholafhængighed
+øger bl.a. risikoen for tilbagefald, resulterer i flere (gen)indlæggelser og reducerer muligheden for at komme
+sig(15).
+Arbejdsgruppen ønskede på den baggrund at undersøge, om identifikation af alkoholafhængighed i udredning og
+behandling af psykisk lidelse giver et bedre udbytte af behandlingen af den psykiske lidelse.
+En retningslinje fra NICE(5) har undersøgt, hvilke elementer der bør indgå i identifikationen af
+samtidig rusmiddelafhængighed og psykotisk lidelse, og hvorvidt udredningen bør tilpasses forskellige kontekster
+og subgrupper.
+Retningslinjen fandt ingen evidens på området. Forfatterne giver en praksisanbefaling, hvor de anbefaler, at
+personer med samtidig rusmiddelafhængighed og psykotisk lidelse, der er i behandling for deres psykiske
+lidelse, samtidig får vurderet deres tidligere og nuværende brug af stoffer og alkohol.
+God praksis (konsensus)
+Det er god praksis systematisk at identificere alkoholafhængighed ved udredning og behandling af psykisk lidelse.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019.
+Anbefalingen gælder for en bred række psykiske lidelser, herunder personlighedsforstyrrelser, affektive lidelser, angstlidelser,
+psykotiske lidelser, ADHD og adfærdsforstyrrelser.
+Alkoholafhængighed forekommer hyppigst sammen med personlighedsforstyrrelser, affektive lidelser, angstlidelser og psykotiske
+lidelser(8,9) og kan i sig selv medføre psykiske symptomer. Det er derfor relevant at identificere alkoholafhængighed i forbindelse med
+udredning og behandling af disse lidelser, men også ved andre psykiske lidelser, herunder ADHD og adfærdsforstyrrelser, sådan at
+adækvat behandling kan iværksættes, og fejlbehandling kan undgås. Behandlere bør være opmærksomme på, at symptomer på
+alkoholafhængighed og psykisk lidelse kan minde om hinanden, hvilket kun understreger vigtigheden af at screene for
+alkoholafhængighed, så denne identificeres.
+Screeningen bør foretages i udredningsfasen og suppleres undervejs i behandlingsfasen. Studier har vist, at personer svarer ærligt på
+spørgsmål om deres brug af rusmidler, hvis de føler sig trygge sammen med behandleren(13).
+Sundhedsstyrelsen anbefaler, at der anvendes validerede screeningsværktøjer såsom AUDIT. AUDIT anbefales også i den tidligere
+nævnte norske retningslinje(4).
+Screeningen skal følges op af relevant handling. Screening er forskellig fra diagnosticering og går forud for denne proces. Screening
+kan derfor ikke bruges til at stille en diagnose, men har alene til formål at identificere personer, som skal udredes yderligere.
+Identifikation af alkoholafhængighed bør få indflydelse på tilrettelæggelsen af behandlingen og kan eksempelvis resultere i en
+henvisning til andre samarbejdspartnere, hvis der er behov for det.
+Som udgangspunkt bør både alkoholafhængigheden og den psykiske lidelse adresseres i det samlede behandlingsforløb (se afsnittet
+'Integreret/koordineret behandlingsforløb).
+En person bør ikke afvises fra behandling af den psykiske lidelse eller få afbrudt denne, fordi vedkommende også har en
+alkoholafhængighed.
+21 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Praktiske oplysninger
+Se teksten i kursiv under anbefalingen
+Nøgleinformationer
+Gavnlige og skadelige virkninger
+Der forventes bedre effekt af behandlingen af den psykiske lidelse, hvis alkoholafhængighed udredes og
+behandles. Identifikation af alkoholafhængighed kan indebære en risiko for over-/underbehandling som
+følge af falsk positive/negative resultater. Der kan endvidere være risiko for, at nogle personer ekskluderes
+fra behandlingen af den
+psykiske lidelse ved identifikation af alkoholafhængighed, hvilket dog vil bryde med god klinisk praksis. Ellers
+ingen
+kendte skadevirkninger.
+Kvaliteten af evidensen
+Der er ikke fundet evidens for dette fokuserede spørgsmål.
+Patientpræferencer
+Arbejdsgruppen vurderer, at de fleste personer, der udredes eller behandles for en psykisk lidelse, formentlig
+gerne vil fortælle om evt. alkoholafhængighed, hvis de gøres opmærksom på sammenhængen mellem
+alkoholafhængighed og psykisk lidelse, og hvis behandleren agerer respektfuldt og fordomsfrit.
+Andre overvejelser
+Identifikation af alkoholafhængighed i forbindelse med udredning og behandling af psykisk lidelse
+forudsætter efteruddannelse og opkvalificering af personale.
+Rationale
+Der er i formuleringen af anbefalingen lagt vægt på, at identifikation og behandling af
+alkoholafhængighed vurderes at mindske frafald fra behandlingen af den psykiske lidelse samt bidrage til at
+undgå fejlbehandling. Der er en risiko for over-/underbehandling som følge af falsk positive/negative resultater.
+Denne risiko kan defineres nærmere og begrænses ved anvendelse af validerede screeningsværktøjer, og hvis
+screeningen gennemføres efter en eventuel abstinensfase. Endvidere er der risiko for, at nogle personer
+afvises fra behandlingen af den psykiske lidelse ved identifikation af alkoholafhængighed, hvilket dog vil bryde
+med god klinisk praksis. Anbefalingen er baseret på konsensus, da der ikke er fundet evidens for dette
+fokuserede spørgsmål.
+Fokuseret spørgsmål
+Population: Personer over 18 år med psykisk lidelse
+Intervention: Systematisk opsporing af alkoholafhængighed ved hjælp af spørgeskemaer i
+behandlingspsykiatrien, almen praksis, speciallægepraksis (psykiater) og/eller akutmodtagelser i
+forbindelse med vanlig udredning/behandling af psykiske lidelser
+Sammenligning V: anlig udredning/behandling af psykisk lidelse.
+22 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Sammenfatning
+Litteratursøgningen fandt ingen studier, som besvarede dette fokuserede spørgsml. Flow charts findes på
+sst.dk.
+23 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+5. Integreret behandling hos alkoholafhængige med psykisk lidelse
+Fokuseret spørgsmål 3
+Bør personer med samtidig alkoholafhængighed og psykisk lidelse tilbydes et integreret/ koordineret
+behandlingsforløb frem for et sekventielt behandlingsforløb?
+Flere personer med samtidig alkoholafhængighed og psykisk lidelse oplever, at deres psykiske symptomer giver
+anledning til alkoholindtagelse. Samtidig kan personer med alkoholafhængighed opleve, at den psykiske lidelse
+ikke kan blive udredt eller behandlet på grund af deres alkoholafhængighed.
+Arbejdsgruppen ønskede på den baggrund at undersøge effekten af henholdsvis integreret/koordineret
+behandling sammenlignet med sekventiel behandling.
+En sekventiel behandlingstilgang indebærer, at alkoholafhængigheden (eller den psykiske lidelse) behandles først,
+hvorefter den psykiske lidelse (eller alkoholafhængigheden) udredes og behandles.
+Ved integreret/koordineret behandling adresseres både alkoholafhængigheden og den psykiske lidelse samtidigt i
+ét sammenhængende behandlingsforløb(16).
+Integreret behandling indebærer, at begge lidelser behandles samtidigt af én behandlingsinstitution. Koordineret
+behandling indebærer, at begge lidelser behandles samtidigt, men af flere behandlingsinstitutioner, der indbyrdes
+koordinerer behandlingsforløbet(16).
+En tysk retningslinje fra 2015(6) har undersøgt samme fokuserede spørgsmål og kommer med den
+praksisanbefaling, at personer med alkoholafhængighed og psykisk lidelse bør tilbydes behandling for begge
+lidelser i samme behandlingsregi. I de tilfælde, hvor dette ikke er muligt, bør behandlingen være koordineret og
+evt. indebære case management. Anbefalingen gælder både for komorbid affektiv lidelse, angstlidelse, psykotisk
+lidelse, PTSD (Post-Traumatic Stress Disorder) og ADHD.
+Yderligere tre retningslinjer har undersøgt et fokuseret spørgsmål, der minder om nærværende, men hvor
+sammenligningsbehandlingen ikke er sekventiel behandling.
+Den ene er en norsk retningslinje(4). Denne retningslinje undersøgte effekten af integreret behandling over for
+ikke-integreret behandling. Sidstnævnte indebar vanlig alkoholbehandling og case management. Retningslinjen
+anbefaler, at behandlingen af komorbid stof-/alkoholafhængighed og psykisk lidelse foregår på grundlag af en
+integreret og samlet plan.
+Den anden er en spansk retningslinje(2). Denne retningslinje undersøgte integreret behandling overfor parallel
+behandling. Parallel behandling indebærer, at alkoholafhængigheden og den psykiske lidelse behandles samtidigt,
+men i to forskellige behandlingsinstitutioner, der ikke koordinerer behandlingen indbyrdes. Retningslinjen fandt
+ingen forskel mellem
+de to behandlingstilgange og anbefaler, at personer med stof-/alkoholafhængighed og svær psykisk lidelse
+tilbydes behandling for begge lidelser, enten på en integreret eller parallel måde.
+Den tredje er en retningslinje fra NICE(5), som undersøgte effekten af integreret behandling overfor ikke-integreret
+behandling. Sidstnævnte indebar ikke-integreret opsøgende behandling og standard case management. NICE
+anbefaler, at behandlingen af misbrug med psykiatrisk komorbiditet er integreret, evt. i socialpsykiatrisk regi. Ved
+svær alkohol-afhængighed eller blandingsmisbrug bør det overvejes at indlede et samarbejde
+med alkoholbehandlingsinstitutioner, dvs. en koordineret behandling.
+Retningslinjen om alkoholbehandling fra NICE(1) anbefaler, at såfremt personer med
+komorbid alkoholafhængighed og psykisk lidelse ikke oplever en signifikant reduktion af deres psykiske symptomer
+24 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+efter en relativ kort periode med afholdenhed fra alkohol (typisk tre til fire uger), bør man overveje at tilbyde eller
+henvise til specifik behandling af den psykiske lidelse.
+Arbejdsgruppen vurderer, at det er kendt viden, at både alkoholafhængigheden og den psykiske lidelse bør
+behandles. Arbejdsgruppen undersøger derfor ikke, om integreret behandling er bedre end alkoholbehandling
+alene eller psykiatrisk/psykosocial behandling alene, men i stedet om begge problematikker skal adresseres
+samtidigt, eller om den ene skal adresseres før den anden.
+God praksis (konsensus)
+Det er god praksis at tilbyde integreret/koordineret behandling til personer med samtidig alkoholafhængighed og psykisk
+lidelse.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019.
+Anbefalingen gælder for en bred række psykiske lidelser, herunder personlighedsforstyrrelser, affektive lidelser, angstlidelser,
+psykotiske lidelser, ADHD og adfærdsforstyrrelser.
+Psykiske symptomer kan fluktuere og forandre sig, særligt i begyndelsen af behandlingsforløbet, og bør derfor monitoreres nøje.
+Forandringer i personens alkoholafhængighed og/eller psykiske lidelse bør få indflydelse på behandlingsforløbet.
+Praktiske hensyn kan afgøre, om behandlingen skal være integreret eller koordineret, f.eks. personalets kompetencer eller den fysiske
+afstand mellem behandlingsinstitutioner. For personer med påvirket funktionsevne vil integreret behandling formentligt være
+mest hensigtsmæssig.
+Det er vigtigt at bemærke, at behandlingsforløbet bør tilrettelægges sammen med modtageren af behandlingen, dvs. personen med
+samtidig alkoholafhængighed og psykisk lidelse, og at det er behandlerne, der har ansvaret for at koordinere behandlingen.
+Praktiske oplysninger
+Se teksten i kursiv under anbefalingen
+Nøgleinformationer
+Gavnlige og skadelige virkninger
+Det forventes, at integreret/koordineret behandling vil forebygge frafald fra behandlingen og tilbagefald.
+Endvidere
+kan integreret/koordineret behandling mindske risiko for polyfarmaci, eftersom personen med
+samtidig alkoholafhængighed og psykisk lidelse ikke har flere uafhængige behandlingsforløb sideløbende.
+?Der er ingen kendte skadevirkninger.
+Kvaliteten af evidensen
+Der er ikke fundet evidens for dette fokuserede spørgsmål.
+Patientpræferencer
+Ikke alle personer i behandling for en psykisk lidelse vil være interesserede i at arbejde med evt.
+alkoholafhængighed. Det må også forventes, at nogle personer ikke er opmærksomme på, at deres
+alkoholafhængighed påvirker deres psykiske symptomer. I sådanne situationer er der behov for, at
+25 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+behandleren rådgiver
+personen.
+Andre overvejelser
+Der kan være organisatoriske udfordringer, hvilket bl.a. kan løses ved hjælp af samarbejdsaftaler med andre
+behandlingsinstitutioner.
+Der kan være behov for kompetenceudvikling/opkvalificering af personale.
+Rationale
+Der er i formuleringen af anbefalingen lagt vægt på, at integreret/koordineret behandling forventes at
+forebygge frafald fra behandlingen og tilbagefald. Endvidere formodes integreret/ koordineret behandling at
+mindske risiko for polyfarmaci, eftersom personen med samtidig alkoholafhængighed og psykisk lidelse ikke har
+flere uafhængige behandlingsforløb
+sideløbende. Der er ingen kendte skadevirkninger ved integreret/koordineret behandling, men det vil ikke være
+alle personer i behandling for en psykisk lidelse, som er interesserede i at arbejde med evt. alkoholafhængighed.
+Anbefalingen er baseret på konsensus, da der ikke er fundet evidens for dette fokuserede spørgsmål.
+Fokuseret spørgsmål
+Population: Personer over 18 år med alkoholafhængighed og psykisk lidelse
+Intervention: Integreret/koordineret parallel behandling, dvs. både alkoholafhængighed og den
+psykiske lidelse behandles samtidig, enten af ét behandlingsteam fra én behandlingsinstitution (integreret
+forløb) eller af flere behandlingsteam/institutioner, som koordinerer deres behandling ved hjælp af
+regelmæssig kontakt eller brug af tovholder som f.eks. case management (koordineret parallelt forløb).
+Sammenligning S:e kventiel behandling, dvs. enten behandles personens alkoholafhængighed først ét sted,
+mens personens psykiske lidelse behandles et andet sted bagefter eller omvendt.
+Sammenfatning
+Litteratursøgningen fandt ingen studier, som besvarede dette fokuserede spørgsmål. Flow charts findes
+på Sundhedsstyrelsens hjemmeside (link).
+Som nævnt ovenfor har en tysk retningslinje fra 2015 (6) undersøgt samme fokuserede spørgsmål. Den
+tyske retningslinje gennemsøgte litteraturen til og med sommeren 2012 og fandt ikke nogen studier, der
+kunne besvare spørgsmålet. Arbejdsgruppen opdaterede denne litteratursøgning, men fandt fortsat
+ingen evidens.
+26 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+6. Ambulant behandling og døgnbehandling
+Fokuseret spørgsmål 4
+Bør personer med samtidig alkoholafhængighed og psykisk lidelse tilbydes døgnbehandling frem for
+ambulant behandling?
+En forholdsvis stor andel af personer med samtidig alkoholafhængighed og psykisk lidelse har flere fejlslagne
+ambulante behandlingsforløb bag sig.
+Arbejdsgruppen ønskede på denne baggrund at undersøge, om der er større effekt af behandlingsforløb,
+hvor ambulant behandling og døgnbehandling kombineres, end af rene ambulante behandlingsforløb for personer
+med samtidig alkoholafhængighed og psykisk lidelse.
+Døgnbehandling indebærer, at personen er indlagt, dvs. at personen er afskåret fra kontakt til sine vante
+omgivelser, samt at behandlingen kan foregå intensivt. Døgnbehandlingen kan være af varierende varighed.
+Et ambulant behandlingsforløb defineres som et forløb, hvor personen ikke overnatter på behandlingsinstitutionen,
+men typisk møder op til behandlingssessioner en gang om ugen eller sjældnere. Ambulant behandling giver
+mulighed for, at personen lever i sit normale, daglige miljø under behandlingen, og behandlingen er således
+mindre indgribende end
+døgnbehandling.
+En norsk retningslinje(4) anbefaler, at døgnbehandling overvejes som supplement til udgående
+tiltag eller som alternativ til udgående tiltag, når udgående og hjemmebaserede indsatser viser sig utilstrækkelige.
+Et dansk projekt (Projekt SODA) har udviklet og afprøvet en model for samarbejde mellem ambulant behandling og
+døgnbehandling(17). Målgruppen i projektet var personer med samtidig alkoholafhængighed og psykisk lidelse, og
+behandlingstilgangen var dobbeltfokuseret. I projektet blev der arbejdet med et behandlingsforløb, der begyndte i
+ambulant
+regi efterfulgt af en periode i døgnregi, hvorefter det blev afsluttet i ambulant regi. Projektet havde gode erfaringer
+med at kombinere døgnbehandling med ambulant behandling.
+27 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+God praksis (konsensus)
+Det er god praksis, at ambulant behandling og døgnbehandling kombineres i behandlingsforløb for personer med
+samtidig alkoholafhængighed og psykisk lidelse, der i perioder har vanskeligt ved at møde op til ambulant behandling.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019.
+Anbefalingen gælder for en bred række psykiske lidelser, herunder personlighedsforstyrrelser, affektive lidelser, angstlidelser,
+psykotiske lidelser, ADHD og adfærdsforstyrrelser.
+Ambulant behandling og døgnbehandling bør ikke ses som to alternativer, men i stedet som elementer, der kan kombineres i et
+sammenhængende behandlingsforløb efter behov. Døgnbehandling bør ikke betragtes som et selvstændigt behandlingsforløb eller
+som en akut foranstaltning.
+I behandlingsforløb for personer med samtidig alkoholafhængighed og psykisk lidelse bør både den ambulante behandling og
+døgnbehandlingen arbejde dobbeltfokuseret og integreret ud fra behandlingsprincipper, der understøtter hinanden (se
+afsnittet "Integreret behandling hos alkoholafhængige med psykisk lidelse).
+Særligt personer, der i perioder har vanskeligt ved at møde op til ambulant behandling, kan formentlig have gavn af et
+behandlingsforløb, der kombinerer ambulant behandling og døgnbehandling. Det kan f.eks. være personer med gentagne afbrudte
+ambulante behandlinger bag sig, personer, der ikke er sufficient udredt for psykisk lidelse, og personer, hvis psykiske lidelse giver sig
+udslag i påvirket funktionsevne.
+Praktiske oplysninger
+Se teksten i kursiv under anbefalingen
+Nøgleinformationer
+Gavnlige og skadelige virkninger
+Erfaringerne fra SODA-projektet indikerer, at der er positive effekter ved at kombinere ambulant behandling
+og
+døgnbehandling til personer med samtidig alkoholafhængighed og psykisk lidelse.
+Der er ingen kendte skadevirkninger.
+Kvaliteten af evidensen
+Der er ikke fundet evidens for dette fokuserede spørgsmål.
+Patientpræferencer
+Nogle personer vil foretrække ambulant behandling eller døgnbehandling.
+Andre overvejelser
+Det er ikke alle døgnbehandlingsinstitutioner, der tilbyder behandling, som er målrettet personer, der både
+har en alkoholafhængighed og en psykisk lidelse.
+Sammenhængende behandlingsforløb bestående af både ambulant behandling og døgnbehandling stiller
+krav om koordinering, herunder fælles referenceramme, planlægningsværktøjer mv. samt efteruddannelse/
+28 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+opkvalificering af personale. Behovet for koordinering af ambulant behandling og døgnbehandling kan evt.
+imødegås ved hjælp af velfærdsteknologi, såsom brug af videokonference.
+Rationale
+Der er i formuleringen af anbefalingen lagt vægt på, at samarbejde mellem ambulant behandling og
+døgnbehandling forventes at kunne mindske risikoen for frafald fra behandlingen blandt personer med samtidig
+alkoholafhængighed og psykisk lidelse, som i perioder har vanskeligt ved at møde op til ambulant behandling.
+Nogle personer vil dog foretrække
+udelukkende ambulant behandling, og behandlingen bør tilrettelægges ud fra den enkeltes behov.
+Anbefalingen er baseret på konsensus, da der ikke er fundet evidens for dette fokuserede spørgsmål.
+Fokuseret spørgsmål
+Population: Personer over 18 år med alkoholafhængighed og psykisk lidelse
+Intervention: Intensiv behandling i døgnregi (ikke afrusning)
+Sammenligning A: mbulant behandling
+Sammenfatning
+Litteratursøgningen fandt ingen studier, som besvarede dette fokuserede spørgsmål. Flow charts findes
+på sst.dk.
+29 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+7. Dialektisk adfærdsterapi (DAT) og dobbeltfokuseret skematerapi
+Fokuseret spørgsmål 5
+Bør personer med samtidig alkoholafhængighed og personlighedsforstyrrelse tilbydes dialektisk
+adfærdsterapi (DAT) eller dobbeltfokuseret skematerapi frem for vanlig alkoholbehandling?
+DAT er allerede implementeret flere steder i Danmark. DAT er en modificeret form for kognitiv adfærdsterapi, der er
+udviklet til og har vist sig lovende i forhold til behandling af personer med emotionel ustabil personlighedsstruktur,
+borderline type (herefter borderline personlighedsforstyrrelse)(18). Det har vist sig, at DAT kan tilpasses personer,
+der udover en borderline personlighedsforstyrrelse også har en stof-/alkoholafhængighed(19). Terapien inddrager
+metoder fra bl.a. mindfulness og bygger på et princip om at lære personen at øge emotionel og kognitiv
+selvregulering. Terapien strækker sig typisk over to år og omfatter færdighedstræning i grupper samt individuelle
+samtaler.
+Skematerapi anvendes ligeledes flere steder i Danmark. Skematerapi ser også ud til at kunne være en effektiv
+behandling til personer med personlighedsforstyrrelse(20). Denne behandling er ligesom DAT videreudviklet,
+således at den kan målrettes personer med både personlighedsforstyrrelse og stof-/alkoholafhængighed
+(dobbeltfokuseret skematerapi)(21). Behandlingen integrerer tilbagefaldsforebyggelse i forhold til
+alkoholafhængigheden og fokuserer på tidlige maladaptive skemaer (dvs. tidligt indlærte tanke-, følelses
+og reaktionsmønstre, der er uhensigtsmæssige) samt copingstil (mestringsstil)(22). Dobbeltfokuseret skematerapi er
+oprindelig en individuel terapiform, men kan også foregå i gruppeformat. Terapien strækker sig typisk over 24
+uger(22).
+Arbejdsgruppen ønskede på denne baggrund at undersøge, om DAT og dobbeltfokuseret skematerapi er effektive
+behandlinger til personer med samtidig alkoholafhængighed og personlighedsforstyrrelse.
+Arbejdsgruppen har ikke fundet internationale retningslinjer, der har undersøgt dette spørgsmål.
+Svag anbefaling
+Overvej at tilbyde DAT til personer med samtidig alkoholafhængighed og borderline personlighedsforstyrrelse.
+Overvej at tilbyde dobbeltfokuseret skematerapi til personer med samtidig alkoholafhængighed og
+personlighedsforstyrrelse.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019.
+Evidensgrundlaget for anbefalingen om DAT bygger på et studie, som inkluderer personer med alkoholafhængighed og borderline
+personlighedsforstyrrelse, og anbefalingen gælder derfor denne gruppe.
+Evidensgrundlaget for anbefalingen om dobbeltfokuseret skematerapi bygger på et studie, som inkluderer personer med
+alkoholafhængighed og forskellige typer af personlighedsforstyrrelser, og denne anbefaling gælder derfor en bred gruppe af
+personlighedsforstyrrelser.
+Begge behandlingsformer forudsætter efteruddannelse samt løbende supervision. Behandleren bør som udgangspunkt være meget tro
+overfor behandlingsmanualen. Nogle personer ønsker formentlig ikke at deltage i gruppebehandling, som er en del af DAT. Disse
+personer bør ikke udelukkes fra behandling.
+Praktiske oplysninger
+Se teksten i kursiv under anbefalingen
+30 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Nøgleinformationer
+Gavnlige og skadelige virkninger
+DAT og skematerapi har vist sig lovende i forhold til personer med personlighedsforstyrrelser.
+Den fundne litteratur giver ikke anledning til at tro, at metoderne ikke også er brugbare i forhold til
+personer, som i tillæg til en personlighedsforstyrrelse har en alkoholafhængighed. De fundne studier viser
+således en mulig positiv effekt på frafald fra behandlingen, afholdenhed, tid til recidiv og selvmordsadfærd.
+?Der er ingen kendte skadevirkninger.
+Kvaliteten af evidensen
+Kvaliteten af evidensen er meget lav.
+Patientpræferencer
+Nogle personer ønsker formentlig ikke at deltage i gruppebehandling, som er en del af DAT.
+Andre overvejelser
+Brug af særlige terapiformer kræver kompetencer, herunder efteruddannelse og løbende supervision. DAT
+og dobbeltfokuseret skematerapi er intensive og ressourcekrævende behandlingsforløb.
+Rationale
+Kvaliteten af evidensen er meget lav. Der er i formuleringen af anbefalingen lagt vægt på, at de inkluderede
+studier viser en mulig positiv effekt på frafald fra behandlingen ved DAT/dobbeltfokuseret skematerapi, hvilket
+på forhånd var defineret som et kritisk outcome. Derudover viser studierne en mulig positiv effekt på en række
+af de vigtige outcomes, herunder afholdenhed og selvmordsadfærd. Der er ingen kendte skadevirkninger ved
+behandlingen, men der kan være personer, som foretrækker en behandling, der ikke involverer
+gruppebehandling.
+Fokuseret spørgsmål
+Population: PICO 5 for ALKO DOB FINAL
+Intervention: Intervention (DSFT or DBT)
+Sammenligning C: ontrol (alcohol treatment alone)
+Sammenfatning
+Evidensgrundlaget for besvarelsen af det fokuserede spørgsmål består af to randomiserede kontrollerede
+studier (23,24), n = 156. Det ene studie er fundet via litteratursøgningen, og det andet studie er fundet på
+anden vis. Flowchart findes på sst.dk.
+Det ene af de identificerede studier sammenlignede DAT med behandling, der alene
+fokuserer på alkoholafhængigheden (23). Begge behandlinger varede 52 uger. Deltagerne havde alle en
+borderline personligheds-forstyrrelse, men det var kun nogle af dem, der også havde en stof-
+/alkoholafhængighed. Studiet skelnede ikke mellem deltagere med og uden stof- og
+alkoholafhængighed, hvorfor tallene i evidenstabellen således også repræsenterer deltagere, der kun har
+31 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+en borderline personlighedsforstyrrelse.
+Det andet studie (24) sammenlignede Personality-Guided Treatment for Alcohol Dependence (PETAD), en
+metode inspireret primært af dobbeltfokuseret skematerapi, med alkoholbehandling alene.
+Behandlingerne varede 12 uger. Tre opfølgende sessioner (booster sessions) blev tilbudt i de
+efterfølgende seks måneder. Studiet inkluderede personer med samtidig alkoholafhængighed og
+personlighedsforstyrrelse.
+Studierne viste en tendens til mindre frafald i interventionsgruppen sammenlignet med kontrolgruppen.
+Derudover viste studierne en tendens til, at færre personer i interventionsgruppen havde forsøgt
+selvmord ved follow-up. Der var også en tendens til flere afholdende dage og længere tid til recidiv ved
+follow-up i interventionsgruppen. Ingen af forskellene var dog statistisk signifikante.
+Alkoholbrug målt ved hjælp af BPD Severity Index (alkohol subskalaen) var lavere
+for interventionsgruppen end kontrolgruppen ved endt behandling. Ved follow-up var det dog omvendt.
+Alkoholbrug målt som antal genstande per dag med massivt alkoholindtag var lavere for
+interventionsgruppen end for kontrolgruppen ved follow-up. Ingen af forskellene i alkoholbrug var
+statistisk signifikante.
+Studierne rapporterede ikke psykiske symptomer, livskvalitet eller funktionsevne ved follow-up.
+Afholdenhed opgjort ved endt behandling blev heller ikke rapporteret.
+Tiltro til
+estimaterne
+Sammenlignin
+Outcome Resultater og Intervention (at de afspejler
+g Sammenfatning
+Tidsramme målinger den sande
+effekt i
+populationen)
+32 13 Meget lav
+Risk of bias, kun ét
+Antal deltagere per 1.000 per 1.000 studie, bredt
+forsøgt selvmord konfidensinterval,
+Forskel: 19 færre per
+(number of inkluderer
+Relative risiko 0.41 1.000
+participants deltagere med
+(CI 95% 0.02 — 9.66)
+attempted Baseret på data fra 56 ( CI 95% 31 færre både stof-/ og
+— 277 flere ) alkoholafhængigh
+suicide) patienter i 1 studier. 1
+ed, og nogle
+Follow-up (Randomiserede studier)
+deltagere har kun
+en borderline
+6 Vigtig personlighedsforst
+yrrelse og ingen
+afhængighed
+328 190 Meget lav
+Frafald fra Risk of bias, bl.a.
+behandlingen (all Relative risiko 0.58 per 1.000 per 1.000 manglende
+(CI 95% 0.29 — 1.16)
+cause blinding, bl.a.
+Baseret på data fra 108 Forskel: 138 færre per
+discontinuation) patienter i 1 studier. 2 1.000 manglende
+blinding, kun ét
+Endt behandling
+(Randomiserede studier) ( CI 95% 233 færre studie, bredt
+(End of treatment)
+— 52 flere )
+konfidensinterval
+32 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Tiltro til
+estimaterne
+Sammenlignin
+Outcome Resultater og Intervention (at de afspejler
+g Sammenfatning
+Tidsramme målinger den sande
+effekt i
+populationen)
+9 Kritisk
+Målt med: Antal genstande 9.6 9.5
+Alkoholbrug Meget lav
+per dag med massivt
+(alcohol use) 3 drikkeindtag (gennemsnit) (gennemsnit) Risk of bias, bl.a.
+manglende
+Follow-up
+Forskel: MD 0.1 færre blinding, kun ét
+Baseret på data fra 59
+( CI 95% 32.15 studie, bredt
+4 Vigtig patienter i 1 studier. 4 færre — 31.95 konfidensinterval
+(Randomiserede studier)
+flere )
+Psykiske
+symptomer
+(psychiatric Vi fandt ingen studier, der
+opgjorde (forekomst af)
+symptoms)
+psykiske symptomer
+Follow-up
+(psychiatric symptoms)
+Livskvalitet
+(quality of life) Vi fandt ingen studier, der
+Follow-up opgjorde (forekomst af)
+livskvalitet (quality of life)
+2 2.55 Meget lav
+Risk of bias, kun ét
+(gennemsnit) (gennemsnit)
+studie, bredt
+Målt med: BPD Severity konfidensinterval,
+Alkoholbrug Index, alcohol subscale Forskel: MD 0.55 flere inkluderer
+(alcohol use) 5 (higher score indicates ( CI 95% 1.37 deltagere med
+more symptoms) færre — 2.47 flere både stof-/ og
+Follow-up
+) alkoholafhængigh
+Baseret på data fra 44 ed, og nogle
+4 Vigtig patienter i 1 studier. 6 deltagere har kun
+(Randomiserede studier) en borderline
+personlighedsforst
+yrrelse og ingen
+afhængighed
+Målt med: BPD Severity 1.61 2.56 Meget lav
+Alkoholbrug
+Index, alcohol subscale Risk of bias, kun ét
+(alcohol use) 7 (higher score indicates (gennemsnit) (gennemsnit) studie, bredt
+Endt behandling more symptoms) konfidensinterval,
+(End of treatment) Forskel: MD 0.95 færre inkluderer
+Baseret på data fra 48 ( CI 95% 2.67 deltagere med
+5 Vigtig patienter i 1 studier. 8 færre — 0.77 flere både stof-/ og
+)
+(Randomiserede studier) alkoholafhængigh
+33 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Tiltro til
+estimaterne
+Sammenlignin
+Outcome Resultater og Intervention (at de afspejler
+g Sammenfatning
+Tidsramme målinger den sande
+effekt i
+populationen)
+ed, og nogle
+deltagere har kun
+en borderline
+personlighedsforst
+yrrelse og ingen
+afhængighed
+13.3 20.7 Meget lav
+Tid til recidiv Risk of bias, bl.a.
+(gennemsnit) (gennemsnit)
+(time to relapse) manglende
+Baseret på data fra 59 blinding, kun ét
+Forskel: MD 7.4 flere
+patienter i 1 studier. 9 studie, bredt
+4 Vigtig (Randomiserede studier) ( CI 95% 0.32 konfidensinterval
+færre — 15.12
+10
+flere )
+Funktionsevne
+(level of
+Vi fandt ingen studier, der
+functioning) opgjorde (forekomst af)
+Follow-up funktionsevne (level of
+functioning)
+Målt med: Abstinens er 71.2 85.2 Meget lav
+Abstinens
+målt som procent Risk of bias, bl.a.
+(gennemsnit) (gennemsnit)
+(Abstinence) afholdende dage. manglende
+Follow-up blinding, kun ét
+Forskel: MD 14 flere
+Baseret på data fra 59 studie, bredt
+( CI 95% 59.94
+4 Vigtig patienter i 1 studier. 11 færre — 87.94 konfidensinterval
+(Randomiserede studier) 12
+flere )
+Afholdenhed
+(abstinence) Vi fandt ingen studier, der
+End of treatment opgjorde (forekomst af)
+afholdenhed (abstinence)
+1. Systematisk oversigtsartikel [1] med inkluderede studier: vandenBosch 2005. Baselinerisiko/komparator:
+Kontrolarm i reference brugt til interventionen.
+2. Systematisk oversigtsartikel [1] med inkluderede studier: Nielsen 2007. Baselinerisiko/komparator:
+Kontrolarm i reference brugt til interventionen.
+3. Antal genstande per dag med massivt drikkeindtag
+4. Systematisk oversigtsartikel [1] med inkluderede studier: Nielsen 2007. Baselinerisiko/komparator:
+Kontrolarm i reference brugt til interventionen.
+5. BPD Severity Index, alcohol subscale (higher score indicates more symptoms)
+6. Systematisk oversigtsartikel [1] med inkluderede studier: vandenBosch 2005. Baselinerisiko/komparator:
+34 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Kontrolarm i reference brugt til interventionen.
+7. BPD Severity Index, alcohol subscale (higher score indicates more symptoms)
+8. Systematisk oversigtsartikel [1] med inkluderede studier: vandenBosch 2005. Baselinerisiko/komparator:
+Kontrolarm i reference brugt til interventionen.
+9. Systematisk oversigtsartikel [1] med inkluderede studier: Nielsen 2007. Baselinerisiko/komparator:
+Kontrolarm i reference brugt til interventionen.
+10. Risiko for bias: meget alvorligt. Risk of bias, bl.a. manglende blinding. Inkonsistente resultater:
+ingen betydelig. Manglende overførbarhed: ingen betydelig. Upræcist effektestimat: meget alvorligt.
+Kun ét studie, bredt konfidensinterval. Publikationsbias: ingen betydelig.
+11. Systematisk oversigtsartikel [1] med inkluderede studier: Nielsen 2007. Baselinerisiko/komparator:
+Kontrolarm i reference brugt til interventionen.
+12. Risiko for bias: meget alvorligt. Risk of bias, bl.a. manglende blinding. Inkonsistente resultater:
+ingen betydelig. Manglende overførbarhed: ingen betydelig. Upræcist effektestimat: meget alvorligt.
+Kun ét studie, bredt konfidensinterval. Publikationsbias: ingen betydelig.
+35 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+8. Familie-/netværksorienteret behandling
+Fokuseret spørgsmål 6
+Bør personer med samtidig alkoholafhængighed og psykisk lidelse tilbydes familie-/netværksorienteret
+behandling frem for individuel behandling?
+Den nationale kliniske retningslinje for behandling af alkoholafhængighed (2015)(7) anbefaler, at personer med
+alkoholafhængighed tilbydes familieorienteret behandling. Ligeledes anbefaler den nationale kliniske retningslinje
+for behandling af mennesker med skizofreni og komplekse behandlingsforløb (2015)(26), at personer med
+skizofreni og betydelig funktionsnedsættelse tilbydes familiebehandling.
+I psykiatrien er der særlig gode erfaringer med at inddrage familien i behandlingen af unge
+med debuterende psykisk lidelse – såkaldt tidlige interventionsprogrammer. Andre grupper kan formentlig også
+have gavn af at inddrage familien i behandlingen, såsom partner, søskende eller forældre.
+Arbejdsgruppen ønskede på denne baggrund at undersøge, om anbefalinger om at inddrage familie/netværk i
+behandlingen også gælder personer, der både har en alkoholafhængighed og en psykisk lidelse.
+En norsk retningslinje(4) har undersøgt et tilsvarende spørgsmål, men fandt ikke tilstrækkelig evidens til at komme
+med en anbefaling.
+Svag anbefaling
+Overvej at tilbyde familie-/netværksorienteret behandling til personer med samtidig alkoholafhængighed og psykotiske
+lidelser.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019.
+Evidensgrundlaget består af ét studie, hvor populationen omfatter personer med samtidig alkoholafhængighed og psykotiske lidelser.
+For alkoholafhængighed og ikke-psykotiske lidelser henvises til Sundhedsstyrelsens nationale kliniske retningslinje for behandling
+af alkoholafhængighed (2015) (7), som også anbefaler at inddrage familie/netværk behandlingen. Der henvises desuden til
+Sundhedsstyrelsens publikation om familieorienteret alkoholbehandling (25).
+Behandlingen bør altid omfatte en udredning af, hvorvidt personen har hjemmeboende børn, da disse vil være belastet af en opvækst
+med en forælder med alkohol- og psykiske problemer. Tilsvarende har voksne, fraflyttede børn levet med en svær belastning,
+hvorfor det kan være relevant også at tilbyde dem støtte med henblik på at forebygge rusmiddelproblemer
+og psykisk lidelse i denne gruppe. Det bør sikres, at børnenes behov for støtte
+udredes, og at den relevante støtte/behandling tilbydes.
+Hvis en person ikke har en familie eller ikke ønsker at involvere denne i behandlingen, kan andet netværk inddrages, herunder
+venner, naboer eller professionelle, som personen betragter som sit netværk.
+Ofte vil man gennemføre individuelle samtaler med personen, inden familien/netværket inddrages. Det kan være forskelligt fra
+person til person, hvor meget familien/netværket bør inddrages. I nogle tilfælde vil det formentlig være tilstrækkeligt blot at involvere
+familien/netværket ved psykoedukation, mens det i andre tilfælde vil være mere hensigtsmæssigt at inddrage familien/netværket
+løbende i behandlingen. Derudover kan de pårørende have behov for støtte til bearbejdning af den belastning, de har levet med.
+Praktiske oplysninger
+Se teksten i kursiv under anbefaling
+36 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Nøgleinformationer
+Gavnlige og skadelige virkninger
+Det inkluderede studie viser, at en integreret behandling omfattende familie-/netværksorienteret behandling
+har en
+positiv effekt på funktionsevne. Studiet viser desuden en mulig positiv effekt på frafald fra behandlingen,
+afholdenhed samt positive og negative symptomer.
+Studiet undersøgte ikke effekten af familie-/netværksorienteret behandling alene, men i stedet effekten af
+en integreret behandling omfattende flere elementer. Derfor er det ikke sikkert, at den positive effekt alene
+kan tilskrives familie-/netværksorienteret behandling.
+Der er ingen rapporterede skadevirkninger.
+Kvaliteten af evidensen
+Den samlede kvalitet af evidensen er meget lav
+Patientpræferencer
+Det forventes, at de fleste vil tage imod tilbud om inddragelse af familie/netværk i behandlingen. Det er dog
+ikke alle personer, som ønsker, at deres familie/netværk inddrages. Tilsvarende er det ikke alle pårørende,
+der ønsker at deltage.
+Andre overvejelser
+Ikke alle har en familie eller et netværk, som de kan inddrage.
+Rationale
+Kvaliteten af evidensen er meget lav. Der er i formuleringen af anbefalingen lagt vægt på, at en integreret
+behandling omfattende familie-/netværksorienteret behandling har en positiv effekt på funktionsevne og en
+mulig positiv effekt på frafald fra behandlingen og en række andre vigtige outcomes. Det inkluderede studie
+undersøgte ikke effekten af familie-/ netværksorienteret behandling alene. Det er derfor ikke sikkert, at den
+positive effekt kan tilskrives familie-/netværksorienteret behandling. Der er ingen rapporterede
+skadevirkninger, og det forventes, at de fleste vil tage imod tilbud om inddragelse af familie/ netværk i
+behandlingen.
+Fokuseret spørgsmål
+Population: Personer over 18 år med alkoholafhængighed og psykisk lidelse
+Intervention: Familie-/netværksorienteret behandling
+Sammenligning In: dividuel behandling
+Sammenfatning
+Evidensgrundlaget for det fokuserede spørgsmål er ét randomiseret kontrolleret forsøg (27) fra et
+systematisk review fra 2013 (28), n=32. Flow charts findes på sst.dk.
+37 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Det identificerede studie sammenlignede integreret behandling plus vanlig behandling med vanlig
+behandling alene. Den integrerede behandling bestod af tre dele: 1) Motiverende samtaler, 2) individuel
+kognitiv adfærdsterapi og 3) en intervention, der involverende en familie- eller omsorgsperson. Studiet
+undersøgte således ikke kun effekten af at tilbyde familie-/netværksorienteret behandling, men effekten
+af den integrerede behandling omfattende alle tre dele. Deltagerne havde skizofreni samt stof- og/eller
+alkoholafhængighed.
+Studiet viste en tendens til et mindre frafald i interventionsgruppen sammenlignet med kontrolgruppen.
+Studiet viste endvidere en tendens til flere afholdende dage i interventionsgruppen, både efter endt
+behandling og ved follow-up. Endvidere havde interventionsgruppen færre psykiske symptomer end
+kontrolgruppen ved follow-up, idet interventionsgruppen havde en lavere samlet score på PANSS
+(Positive and Negative Symptom Scale) samt lavere score på subskalaerne vedr. positive og negative
+symptomer. Ingen af de nævnte forskelle var dog statistisk signifikante. Den eneste statistisk signifikante
+forskel var i forhold til deltagernes funktionsevne, hvor interventionsgruppen havde en klinisk relevant
+forbedring sammenlignet med kontrolgruppen ved follow-up.
+Studiet rapporterede hverken selvmordsadfærd, livskvalitet eller trivsel hos pårørende.Alkoholbrug
+opgjort ved antal genstande samt tid til recidiv blev heller ikke rapporteret.
+Tiltro til
+estimaterne
+Sammenlignin
+Outcome Resultater og Intervention (at de afspejler
+g Sammenfatning
+Tidsramme målinger den sande
+effekt i
+populationen)
+167 55 Meget lav
+Frafald af alle
+Risk of bias, bl.a.
+årsager (all cause per 1.000 per 1.000
+Relative risiko 0.33 single-blinded, lille
+discontinuation) (CI 95% 0.04 — 2.91) studiepopulation,
+Endt behandling Baseret på data fra 36 Forskel: 112 færre per studiet inkluderer
+(end of treatment) patienter i 1 studier. 1 1.000 både alkohol- og
+(Randomiserede studier) ( CI 95% 160 færre stofafhængige,
+9 Kritisk
+— 319 flere ) bredt
+konfidensinterval
+Selvmordsadsfær
+d (suicide
+Vi fandt ingen studier, der
+behaviour) opgjorde (forekomst af)
+Follow-up selvmordsadsfærd
+(suicide behaviour)
+4 Vigtig
+Målt med: GAF, higher 48.13 58.41 Meget lav
+Funktionsevne
+score = greater level of Single-blinded,
+(level of functioning (gennemsnit) (gennemsnit) uklarhed om
+functioning) 2
+blinding af
+Follow-up Baseret på data fra 32 Forskel: MD 10.28 flere deltagere, lille
+patienter i 1 studier. 3 ( CI 95% 0.22 flere studiepopulation,
+— 20.34 flere )
+4 Vigtig (Randomiserede studier) studiet inkluderer
+Opfølgningstid: 12 både alkohol- og
+38 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Tiltro til
+estimaterne
+Sammenlignin
+Outcome Resultater og Intervention (at de afspejler
+g Sammenfatning
+Tidsramme målinger den sande
+effekt i
+populationen)
+stofafhængige,
+months. bredt
+konfidensinterval
+Meget lav
+Abstinens
+Single-blinded,
+(abstinence) Baseret på data fra 32 lille Ikke muligt at trække
+data på dette outcome,
+Follow-up patienter i 1 studier. studiepopulation,
+se narrative beskrivelse
+(Randomiserede studier) studiet inkluderer
+ovenfor.
+4 Vigtig Opfølgningstid: 12 både alkohol- og
+months. stofafhængige.
+Abstinens Meget lav
+(abstinence) Single-blinded,
+Ikke muligt at trække
+Baseret på data fra 32 kun ét studie, lille
+Endt behandling data på dette outcome,
+patienter i 1 studier. studiepopulation,
+(end of treatment) se narrative beskrivelse
+(Randomiserede studier) studiet inkluderer
+ovenfor.
+Opfølgningstid: 9 både alkohol- og
+6 Vigtig
+months. stofafhængige.
+63.4 56.88 Meget lav
+Målt med: PANSS total
+Psykiske Single-blinded,
+score (higher score = (gennemsnit) (gennemsnit)
+symptomer lille
+more symptoms)
+(psychiatric studiepopulation,
+Forskel: MD 6.52 færre
+symptoms) 4 Baseret på data fra 32 studiet inkluderer
+( CI 95% 17.85 både alkohol- og
+Follow-up patienter i 1 studier. 5 færre — 4.81 flere stofafhængige,
+(Randomiserede studier) ) bredt
+5 Vigtig Opfølgningstid: 12 konfidensinterval,
+months.
+kun ét studie
+Målt med: Positive 16.07 13.35 Meget lav
+Psykiatriske symptoms subscale, Single-blinded,
+(gennemsnit) (gennemsnit)
+symptomer PANSS (higher score = lille
+(Psychiatric more symptoms) studiepopulation,
+Forskel: MD 2.72 færre
+symptoms) 6 studiet inkluderer
+Baseret på data fra 32 ( CI 95% 6.27 både alkohol- og
+Follow-up
+patienter i 1 studier. 7 færre — 0.83 flere stofafhængige,
+(Randomiserede studier) ) bredt
+4 Vigtig Opfølgningstid: 12 konfidensinterval,
+months. kun ét studie
+Målt med: Negative 14.67 12.65
+Psykiatriske Meget lav
+symptoms subscale,
+symptomer PANSS (higher score = (gennemsnit) (gennemsnit) Single-blinded,
+(Psychiatric kun ét studie, lille
+more symptoms)
+symptoms) 8 Forskel: MD 2.02 færre studiepopulation,
+Follow-up Baseret på data fra 32 ( CI 95% 5.88 studiet inkluderer
+patienter i 1 studier. 9 færre — 1.84 flere både alkohol- og
+) stofafhængige,
+5 Vigtig (Randomiserede studier) bredt
+Opfølgningstid: 12
+39 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Tiltro til
+estimaterne
+Sammenlignin
+Outcome Resultater og Intervention (at de afspejler
+g Sammenfatning
+Tidsramme målinger den sande
+effekt i
+populationen)
+months. konfidensinterval
+Livskvalitet
+(quality of life)
+Vi fandt ingen studier, der
+Follow-up
+opgjorde livskvalitet
+Alkoholbrug
+(alcohol use)
+Vi fandt ingen studier, der
+Follow-up
+opgjorde alkoholbrug
+Alkoholbrug
+(alcohol use)
+Endt behandling Vi fandt ingen studier, der
+(end of treatment) opgjorde alkoholbrug
+Tid til recidiv
+(time to recidive)
+Vi fandt ingen studier, der
+opgjorde tid til recidiv
+Trivsel hos
+pårørende
+(Relatives' well-
+Vi fandt ingen studier, der
+being) opgjorde trivsel hos
+Follow-up pårørende
+1. Systematisk oversigtsartikel [2] med inkluderede studier: Barrowclough 2001. Baselinerisiko/
+komparator: Kontrolarm i reference brugt til interventionen.
+2. GAF, higher score = greater level of functioning
+3. Systematisk oversigtsartikelmed inkluderede studier: Barrowclough 2001. Baselinerisiko/komparator:
+Kontrolarm i reference brugt til interventionen.
+4. PANSS total score (higher score = more symptoms)
+5. Systematisk oversigtsartikel [2] med inkluderede studier: Barrowclough 2001. Baselinerisiko/
+komparator: Kontrolarm i reference brugt til interventionen.
+40 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+6. Positive symptoms subscale, PANSS (higher score = more symptoms)
+7. Systematisk oversigtsartikel [2] . Baselinerisiko/komparator: Kontrolarm i reference brugt til
+interventionen.
+8. Negative symptoms subscale, PANSS (higher score = more symptoms)
+9. Systematisk oversigtsartikel [2] med inkluderede studier: Barrowclough 2001. Baselinerisiko/
+komparator: Kontrolarm i reference brugt til interventionen.
+God praksis (konsensus)
+Det er god praksis at tilbyde familie-netværksorienteret behandling til personer med samtidig alkoholafhængighed og
+øvrige psykiske lidelser.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019.
+Evidensgrundlaget består af ét studie, hvor populationen omfatter personer med samtidig alkoholafhængighed og psykotiske lidelser.
+For alkoholafhængighed og ikke-psykotiske lidelser henvises til Sundhedsstyrelsens nationale kliniske retningslinje for behandling
+af alkoholafhængighed (2015) (7), som også anbefaler at inddrage familie/netværk behandlingen. Der henvises desuden til
+Sundhedsstyrelsens publikation om familieorienteret alkoholbehandling (25).
+Behandlingen bør altid omfatte en udredning af, hvorvidt personen har hjemmeboende børn, da disse vil være belastet af en opvækst
+med en forælder med alkohol- og psykiske problemer. Tilsvarende har voksne, fraflyttede børn levet med en svær belastning,
+hvorfor det kan være relevant også at tilbyde dem støtte med henblik på at forebygge rusmiddelproblemer
+og psykisk lidelse i denne gruppe. Det bør sikres, at børnenes behov for støtte
+udredes, og at den relevante støtte/behandling tilbydes.
+Hvis en person ikke har en familie eller ikke ønsker at involvere denne i behandlingen, kan andet netværk inddrages, herunder
+venner, naboer eller professionelle, som personen betragter som sit netværk.
+Ofte vil man gennemføre individuelle samtaler med personen, inden familien/netværket inddrages. Det kan være forskelligt fra
+person til person, hvor meget familien/netværket bør inddrages. I nogle tilfælde vil det formentlig være tilstrækkeligt blot at involvere
+familien/netværket ved psykoedukation, mens det i andre tilfælde vil være mere hensigtsmæssigt at inddrage familien/netværket
+løbende i behandlingen. Derudover kan de pårørende have behov for støtte til bearbejdning af den belastning, de har levet med.
+41 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+9. Udgående/opsøgende indsatser
+Fokuseret spørgsmål 7
+Bør personer med samtidig alkoholafhængighed og psykisk lidelse tilbydes udgående/ opsøgende indsatser
+frem for vanlige indsatser?
+Nogle personer med samtidig alkoholafhængighed og psykisk lidelse har vanskeligt ved at benytte sig af de
+eksisterende ambulante behandlingstilbud, fordi de ikke møder op til de aftalte tider og i det hele taget har svært
+ved at indgå i en traditionel behandlingsalliance.
+Arbejdsgruppen ønskede på denne baggrund at undersøge, om personer med samtidig alkoholafhængighed og
+psykisk lidelse bør tilbydes udgående/opsøgende indsatser, hvis de har vanskeligheder med at møde stabilt op til
+behandlingen. Udgående/opsøgende indsatser kan både dække over indsatser, hvor en person ikke er i
+behandling, og indsatser, hvor
+personen allerede er i behandling. Sidstnævnte definition benyttes i denne retningslinje.
+Arbejdsgruppen fandt ingen internationale retningslinjer, der har undersøgt dette spørgsmål.
+Udgående/opsøgende indsatser for personer med stof-/alkoholafhængighed og psykisk lidelse har været afprøvet i
+dansk kontekst, bl.a. i Ballerup Kommune, Egedal Kommune, Hedensted Kommune og Syddjurs Kommune(29).
+Baseret på en survey blandt medarbejdere og borgere konkluderer evalueringsrapporten, at udgående/opsøgende
+indsatser havde en positiv effekt på motivation for at indgå i behandling og frafald fra behandlingen.
+Svag anbefaling
+Overvej at tilbyde integrerede udgående/opsøgende indsatser til personer med samtidig alkoholafhængighed og psykisk
+lidelse, som er i behandling.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019.
+Anbefalingen gælder for en bred række psykiske lidelser, herunder personlighedsforstyrrelser, affektive lidelser, angstlidelser,
+psykotiske lidelser, ADHD og adfærdsforstyrrelser.
+Sundhedsstyrelsen anbefaler at supplere igangværende behandling med udgående/opsøgende indsatser, hvis en person har
+vanskeligheder med at møde stabilt op til behandling. Udgående/opsøgende indsatser gives i personens eget hjem eller nærmiljø
+og har til formål at støtte og hjælpe personen, bl.a. med at tage medicin og klare dagligdagens gøremål samt at fastholde
+vedkommende i behandling. Den udgående/opsøgende indsats bør være dobbeltfokuseret, dvs. fokusere både på personens
+alkoholafhængighed og psykiske lidelse.
+Det bør være personens funktionsevne frem for diagnose, der afgør, om en person bør tilbydes udgående/opsøgende indsatser.
+Der er tale om en behandling, som kan strække sig over længere tid. Indsatsen bør være fleksibel og indrette sig efter den enkeltes
+hverdag og behov.
+Udgående/opsøgende indsatser kræver opmærksomhed fra behandlerens side på etiske dilemmaer, idet behandleren på den ene side
+skal sikre omsorg for personen og understøtte personens udvikling gennem den opsøgende/udgående tilgang og på den anden side
+skal respektere personens privatliv og/eller personens ønske om ikke at blive kontaktet.
+Praktiske oplysninger
+Se teksten i kursiv under anbefaling
+42 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Nøgleinformationer
+Gavnlige og skadelige virkninger
+De inkluderede studier viser en mulig positiv effekt i form af reduceret alkoholbrug ved udgående/
+opsøgende indsatser. Effekten af udgående/opsøgende indsatser undervurderes måske i de
+inkluderede studier, fordi en del af populationen i studierne er hjemløse, og fordi det er sværere at
+gennemføre udgående/opsøgende indsatser i forhold til denne gruppe.
+Ingen rapporterede skadevirkninger.
+Kvaliteten af evidensen
+Kvaliteten af evidensen er meget lav.
+Patientpræferencer
+Der kan være personer, der ikke er interesserede i at modtage udgående/ opsøgende indsatser.
+Andre overvejelser
+Det kan være ressourcekrævende og udfordrende for den professionelle at
+komme i kontakt med personer, der ikke har fast bolig eller telefon.
+Rationale
+Kvaliteten af evidensen er meget lav. Der er i formuleringen af anbefalingen lagt vægt på, at de inkluderede
+studier viser en svag tendens til reduceret alkoholbrug ved opsøgende/udgående indsatser til personer med
+samtidig alkoholafhængighed og psykisk lidelse. I to af de inkluderede studier var alle deltagere hjemløse, og
+det er tænkeligt, at indsatsen vil have større effekt på personer, som ikke er hjemløse. Der er ingen rapporterede
+skadevirkninger,
+men der kan være personer, som ikke ønsker at bliver kontaktet i eget hjem eller nærmiljø.
+Fokuseret spørgsmål
+Population: Personer over 18 år med alkoholafhængighed og psykisk lidelse
+Intervention: Opsøgende indsatser (integreret) som tillæg til vanlig behandling
+Sammenligning v:a nlig behandling
+Sammenfatning
+Evidensgrundlaget for dette fokuserede spørgsmål er tre randomiserede kontrollerede forsøg (30-32),
+n=496, publiceret i fire artikler (30-33) fra et systematisk review (28). Flow charts findes på sst.dk.
+To af de tre inkluderede studier sammenlignede integreret opsøgende behandling
+med standardbehandling (30,31). Behandlingerne varede i to år. Deltagerne havde en stof-
+/alkoholafhængighed og en psykisk lidelse i begge studier. I det ene studie var deltagerne hjemløse (31).
+Studierne undersøgte kun ét af de på forhånd prioriterede outcomes (alkoholbrug) og viste en svag
+tendens til reduceret alkoholbrug ved integreret opsøgende behandling.
+43 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Det sidste af de inkluderede studier sammenlignede integreret opsøgende behandling med integreret
+standard case management (32). Behandlingen i både interventions- og kontrolgruppen varede i tre år.
+Deltagerne havde både stof-/alkoholafhængighed og psykisk lidelse samt var hjemløse. Det var ikke
+muligt at udtrække data fra dette studie, og resultaterne fra studiet indgår derfor ikke i evidenstabellen
+nedenfor, men beskrives alene narrativt. Studiet viste, at der ved endt behandling ikke var væsentlig
+forskel på alkoholbrug i interventions- og kontrolgruppen, dvs. blandt deltagere, der havde modtaget
+integreret opsøgende behandling, og deltagere, der havde modtaget integreret standard case
+management. En anden publikation fra samme studie viste, at særlig personer med
+dyssocial personlighedsforstyrrelse og stof-/alkoholafhængighed synes at have gavn af
+integreret opsøgende/udgående behandling sammenlignet med integreret standard case
+management (33), idet integreret opsøgende/udgående behandling var forbundet med mindre
+alkoholbrug i denne subgruppe.
+Tiltro til
+estimaterne
+Outcome Sammenligning Intervention
+Resultater og målinger (at de afspejler den
+Tidsramme
+sande effekt i
+populationen)
+Frafald af alle årsager
+(all cause
+discontinuation)
+Ingen data på dette
+Endt behandling (end
+of treatment) outcome
+Opfølgningstid: 0 studier.
+9 Kritisk
+Selvmordsadfærd
+(suicide behavior)
+Ingen data på dette
+Follow-up
+outcome
+Opfølgningstid: 0 studier.
+Tid til recidiv (time to
+recidivism) Ingen data på dette
+outcome
+Opfølgningstid: 0 studier.
+Forskel: MD 0.03 lavere Meget lav
+Alkoholbrug (alcohol Målt med: AUS (Alcohol Use
+( CI 95% 0.31 lavere — Risk of bias, bl.a. uklar
+use) 1 Scale(1=abstinent,5=svær 0.26 højere ) blinding, Upræcist
+afhængighed)
+Endt behandling (end effektestimat,
+of treatment) Deltagerne er alle
+Baseret på data fra 251 patienter
+hjemløse. Inkluderer
+i 2 studier.
+5 Vigtig både stof- og
+Opfølgningstid: 24 mdr.
+alkoholafhængighed
+44 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Tiltro til
+estimaterne
+Outcome Sammenligning Intervention
+Resultater og målinger (at de afspejler den
+Tidsramme
+sande effekt i
+populationen)
+Funktionsevne (level
+of functioning)
+ingen data på dette
+Follow-up
+outcome
+Opfølgningstid: 0 studier.
+Psykiske symptomer
+(psychiatric
+symptoms) Ingen data på dette
+Follow-up outcome
+Opfølgningstid: 0 studier.
+Livskvalitet (quality of
+life)
+Ingen data på dette
+Follow-up
+outcome
+Opfølgningstid: 0 studier.
+Alkoholbrug (alcohol
+use)
+Ingen data på dette
+Follow-up
+outcome
+Opfølgningstid: 0 studier.
+Afholdenhed
+(abstinence)
+Endt behandling (end Ingen data på dette
+of treatment)
+outcome
+Opfølgningstid: 0 studier.
+Afholdenhed
+(abstinence)
+Ingen data på dette
+Follow-up
+outcome
+Opfølgningstid: 0 studier.
+1. AUS (Alcohol Use Scale(1=abstinent,5=svær afhængighed)
+45 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+10. Efterbehandling/opfølgning
+Fokuseret spørgsmål 8
+Bør personer med samtidig alkoholafhængighed og psykisk lidelse tilbydes efterbehandling/opfølgning?
+Sundhedsstyrelsens nationale kliniske retningslinje for behandling af alkoholafhængighed (2015)(7) anbefaler, at
+personer med alkoholafhængighed tilbydes efterbehandling efter et struktureret alkoholbehandlingsforløb.
+Arbejdsgruppen fandt det relevant at undersøge, om anbefalingerne også gælder personer, der både har en
+alkoholafhængighed og en psykisk lidelse.
+Arbejdsgruppen fandt ingen internationale retningslinjer, der har undersøgt dette spørgsmål.
+Svag anbefaling
+Overvej at tilbyde efterbehandling/opfølgning til personer med samtidig alkoholafhængighed og affektiv lidelse,
+angstlidelse og/eller adfærdsforstyrrelse.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019.
+Evidensgrundlaget består af ét studie, hvor populationen omfatter personer med alkoholafhængighed og affektive
+lidelser, angstlidelser og/eller adfærdsforstyrrelser. For alkoholafhængighed og andre psykiske lidelser henvises til Sundhedsstyrelsens
+nationale kliniske retningslinje for behandling af alkoholafhængighed (2015)(7), som også anbefaler at overveje at tilbyde
+efterbehandling/opfølgning.
+Efterbehandling/opfølgning involverer en professionel og skal være forhandlet med modtageren, dvs. personen med samtidig
+alkoholafhængighed og psykisk lidelse, ved afslutningen af behandlingen.
+Indholdet af efterbehandlingen/opfølgningen bør aftales med og tilpasses den enkelte. Fokus for efterbehandlingen/ opfølgningen er
+at forebygge tilbagefald og sikre den nødvendige støtte ved tilbagefald. Da der kan være en risiko for, at personer med samtidig
+alkoholafhængighed og psykisk lidelse oplever tilbagefald, er det vigtigt, at behandleren er opmærksom på dette og inkluderer
+strategier for opfølgning ved eventuelt tilbagefald.
+Efterbehandling/opfølgning kan både inkludere telefonopkald og individuelle/gruppebaserede samtaler ved fremmøde.
+Det kan være forskelligt fra person til person, hvor lang tid efterbehandlingen/opfølgningen bør strække sig over. Efterbehandling/
+opfølgning bør som udgangspunkt have en længere varighed for personer med både alkoholafhængighed og psykisk lidelse
+sammenlignet med personer, som alene har en alkoholafhængighed.
+Praktiske oplysninger
+Se teksten i kursiv under anbefalingen
+Nøgleinformationer
+Gavnlige og skadelige virkninger
+Det inkluderede studie viser, at efterbehandling/opfølgning har signifikant positiv effekt på afholdenhed.
+Der er ingen kendte skadevirkninger.
+Kvaliteten af evidensen
+Kvaliteten af evidensen er meget lav.
+46 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Patientpræferencer
+Der vil være forskel på, hvilken form for efterbehandling/opfølgning forskellige personer foretrækker. Det
+vigtige er, at
+behandleren tager en snak med den enkelte om, hvilket tilbud der er relevant/ hjælpsomt for den
+pågældende.
+Rationale
+Kvaliteten af evidensen er meget lav. Der er i formuleringen af anbefalingen lagt vægt på, at efterbehandling/
+opfølgning har en signifikant positiv effekt på afholdenhed. Der er ingen rapporterede skadevirkninger. Der vil
+være forskel på, hvilken form for efterbehandling/opfølgning forskellige personer foretrækker, og tilbud om
+efterbehandling/
+opfølgning skal derfor tilrettelægges i samarbejde med den enkelte.
+Fokuseret spørgsmål
+Population: Personer over 18 år med alkoholafhængighed og psykisk lidelse
+Intervention: Efterbehandling
+Sammenligning v:a nlig behandling
+Sammenfatning
+Evidensgrundlaget for det fokuserede spørgsmål er ét randomiseret kontrolleret forsøg (34), n=337. Flow
+charts findes på sst.dk.
+Det var ikke muligt at trække data fra studiet. Derfor er der ingen evidenstabel for dette fokuserede
+spørgsmål, men blot en narrativ beskrivelse af studiets resultater.
+Interventionsgruppen i studiet modtog efterbehandling/opfølgning kvartalsvist, hvilket involverede
+interview med behandleren, vurdering af deltagerens behov for behandling og evt. viderehenvisning til
+behandling, hvis der var behov for det. Kontrolgruppen blev blot interviewet kvartalsvist. Interventionen i
+begge grupper varede i to år, og alle deltagerne havde samtidig stof-/alkoholafhængighed og psykisk
+lidelse.
+Kun et af de på forhånd definerede outcomes er rapporteret i studiet. Studiet viste, at
+interventionsgruppen havde statistisk signifikant flere afholdende dage ved endt efterbehandling/
+opfølgning end deltagerne i kontrolgruppen (henholdsvis 501 afholdende dage i interventionsgruppen
+og 450 afholdende dage i kontrolgruppen). Arbejdsgruppen vurderer, at denne forskel er klinisk relevant.
+47 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+God praksis (konsensus)
+Det er god praksis at tilbyde efterbehandling/opfølgning til personer med samtidig alkoholafhængighed og øvrige
+psykiske lidelser.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019.
+Evidensgrundlaget består af ét studie, hvor populationen omfatter personer med alkoholafhængighed og affektive
+lidelser, angstlidelser og/eller adfærdsforstyrrelser. For alkoholafhængighed og andre psykiske lidelser henvises til Sundhedsstyrelsens
+nationale kliniske retningslinje for behandling af alkoholafhængighed (2015)(7), som også anbefaler at overveje at tilbyde
+efterbehandling/opfølgning.
+Efterbehandling/opfølgning involverer en professionel og skal være forhandlet med modtageren, dvs. personen med samtidig
+alkoholafhængighed og psykisk lidelse, ved afslutningen af behandlingen.
+Indholdet af efterbehandlingen/opfølgningen bør aftales med og tilpasses den enkelte. Fokus for efterbehandlingen/ opfølgningen er
+at forebygge tilbagefald og sikre den nødvendige støtte ved tilbagefald. Da der kan være en risiko for, at personer med samtidig
+alkoholafhængighed og psykisk lidelse oplever tilbagefald, er det vigtigt, at behandleren er opmærksom på dette og inkluderer
+strategier for opfølgning ved eventuelt tilbagefald.
+Efterbehandling/opfølgning kan både inkludere telefonopkald og individuelle/gruppebaserede samtaler ved fremmøde.
+Det kan være forskelligt fra person til person, hvor lang tid efterbehandlingen/opfølgningen bør strække sig over. Efterbehandling/
+opfølgning bør som udgangspunkt have en længere varighed for personer med både alkoholafhængighed og psykisk lidelse
+sammenlignet med personer, som alene har en alkoholafhængighed.
+48 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+11. Acamprosat og naltrexon
+Fokuseret spørgsmål 9
+Bør personer med samtidig alkoholafhængighed og psykisk lidelse tilbydes samtalebehandling kombineret
+med acamprosat eller naltrexon frem for samtalebehandling alene?
+Den nationale kliniske retningslinje for behandling af alkoholafhængighed (2015)(7) anbefaler, at personer med
+alkoholafhængighed tilbydes acamprosat og evt. naltrexon som supplement til samtalebehandling.
+Arbejdsgruppen ønskede på denne baggrund at undersøge, om anbefalingerne også gælder personer, der både
+har en alkoholafhængighed og en psykisk lidelse.
+Arbejdsgruppen fandt ingen internationale retningslinjer, der har undersøgt dette spørgsmål.
+Det fremhæves, at arbejdsgruppen kun har undersøgt evidensen for acamprosat og naltrexon og ikke evidensen for
+f.eks. disulfiram, abstinensbehandling eller psykofarmaka (se indledningen til denne retningslinje).
+Svag anbefaling
+Overvej at tilbyde acamprosat eller naltrexon i tillæg til samtalebehandling til personer med samtidig alkoholafhængighed
+og affektiv lidelse, angstlidelse eller psykotisk lidelse.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019.
+Evidensgrundlaget består af syv studier, hvor populationen omfatter personer med samtidig alkoholafhængighed og affektive lidelser,
+angstlidelser eller psykotiske lidelser. For alkoholafhængighed og andre psykiske lidelser henvises til Sundhedsstyrelsens
+nationale kliniske retningslinje for behandling af alkoholafhængighed (2015)(7), som anbefaler at tilbyde acamprosat og at overveje
+at tilbyde naltrexon.
+For nogle personer med samtidig alkoholafhængighed og psykisk lidelse kan brug af acamprosat eller naltrexon som supplement til
+samtalebehandling være en hjælp til afholdenhed/reduceret alkoholbrug.
+De fundne studier har ikke undersøgt, hvilke personer med samtidig alkoholafhængighed og psykisk lidelse der må formodes at have
+mest gavn af henholdsvis acamprosat og naltrexon. Her henvises til den nationale kliniske retningslinje for behandling af
+alkoholafhængighed(7), hvor det fremgår, at acamprosat primært bør overvejes som støtte til alkoholafhængige personer, der ønsker
+afholdenhed frem for reduktion i alkoholforbruget, mens naltrexon kan være relevant til alkoholafhængige, der ikke har afholdenhed
+som målsætning. Det ser ud til, at personer med ’craving’ eller angst som fremtrædende symptomer vil have særlig gavn af
+behandling med acamprosat. Omvendt kan personer med tidlig debut af alkoholafhængighed og familiær disposition have særlig
+gavn af naltrexon.
+Brug af acamprosat og naltrexon er forbundet med en risiko for bivirkninger (se afsnittet 'Acamprosat og naltrexon). Behandleren skal
+informere personer med samtidig alkoholafhængighed og psykisk lidelse om mulige bivirkninger og risici ved brug af acamprosat og
+naltrexon, inden evt. behandling igangsættes.
+Ved kendt nyresygdom skal forsigtighed udvises ved acamprosat, og ved svær leversygdom skal forsigtighed udvises ved naltrexon.
+For personer med samtidig alkoholafhængighed og psykisk lidelse må der forventes øget risiko for polyfarmaci, og behandleren skal
+være opmærksom på dette. Behandleren bør ligeledes være opmærksom på mulige interaktionseffekter mellem indtag af alkohol
+og brug af psykofarmaka og drøfte dette med personen.
+Positiv virkning af acamprosat eller naltrexon vil typisk indtræde efter et par uger. Hvis personen ikke oplever en positiv virkning af
+medicinen inden for denne periode, bør medicinen seponeres straks.
+Praktiske oplysninger
+Se teksten i kursiv under anbefaling
+49 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Nøgleinformationer
+Gavnlige og skadelige virkninger
+De inkluderede studier viser en positiv effekt i forhold til reduceret alkoholbrug
+ved brug af acamprosat eller naltrexon i tillæg til samtaleterapi. Begge præparater kan dog være forbundet
+med en række bivirkninger. For denne målgruppe kan der endvidere være en særlig risiko for polyfarmaci.
+Kvaliteten af evidensen
+Kvaliteten af evidensen er meget lav.
+Patientpræferencer
+Behandling med acamprosat eller naltrexon er præferencefølsomt.
+Nogle vil ikke have medicin eller oplever bivirkningerne som generende. Andre ønsker medicin som en
+støtte i forhold til at være afholdende/reducere alkoholbrug.
+Der kan være personer, der fravælger acamprosat eller naltrexon af økonomiske årsager.
+Andre overvejelser
+Acamprosat skal indtages tre gange dagligt, mens naltrexon skal indtages én gang dagligt.
+Rationale
+Kvaliteten af evidensen er meget lav. Der er i formuleringen af anbefalingen lagt vægt på, at der kan være en
+positiv effekt i form af reduceret alkoholbrug, hvis samtaleterapi kombineres med acamprosat eller naltrexon.
+Begge præparater kan dog være forbundet med en række bivirkninger, ligesom der for denne målgruppe er en
+særlig risiko for polyfarmaci.
+Anbefalingen er givet under forudsætning af, at personer med samtidig alkoholafhængighed og psykisk lidelse,
+der er i behandling med acamprosat eller naltrexon, følges tæt af en læge. Hvis personen ikke oplever en positiv
+effekt af medicinen inden for et par uger, bør det seponeres straks.
+Fokuseret spørgsmål
+Population: Personer over 18 år med alkoholafhængighed og psykisk lidelse
+Intervention: Samtalebehandling med fokus på alkoholafhængighed kombineret med anticraving
+medicin (naltrexon eller acamprosat).
+Sammenligning S:a mtalebehandling med fokus på alkoholafhængighed alene.
+Sammenfatning
+Evidensgrundlaget for dette fokuserede spørgsmål er et randomiseret kontrolleret forsøg (35) fra et
+systematisk review (36), n = 31, samt seks randomiserede kontrollerede forsøg fra den øvrige
+litteratursøgning, n = 438(37-42). Evidensgrundlaget er således syv randomiserede kontrollerede forsøg,
+som er publiceret i otte artikler (35,37-43). Flow charts findes på sst.dk.
+50 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Seks studier sammenlignede samtaleterapi og naltrexon med samtaleterapi og placebo (35,37-41). Ét
+studie sammenlignede samtaleterapi og acamprosat med samtaleterapi og placebo. I fem af studierne
+tog deltagerne også medicin for deres psykiske lidelse (35,37,39,40,42). I de inkluderede studier varede
+behandlingen med acamprosat og naltrexon 12-14 uger.
+Studierne viste samlet set en ingen forskel i frafald fra behandlingen. Der var heller ingen forskel, hvis
+man alene så på studierne af naltexon. Studiet af acamprosat alene viste en tendens til mindre frafald i
+interventionsgruppen.
+I forhold til alkoholbrug var der et statistisk signifikant fald i procent dage/antal dage med alkoholindtag
+ved endt behandling i interventionsgruppen. SMD var 0,48 for dette outcome (se evidenstabel), hvilket
+vidner om, at forskellen er moderat klinisk relevant (se evt. under faneblad "Beskrivelse af anvendt
+metode"). Der var også et statistisk signifikant fald i procent dage/antal dage med massivt alkoholindtag
+ved endt behandling i interventionsgruppen. Denne forskel er dog ikke klinisk relevant (SMD for dette
+outcome er 0,11 (se evidenstabel)). Endvidere var der en tendens til færre dage med alkoholindtag i
+interventionsgruppen ved follow-up. Alle de nævnte fund stammer fra studier af naltrexon. Studiet af
+acamprosat viste ingen effekt på alkoholbrug (målt som henholdsvis antal genstande per drikkedag og
+antal genstande per måned ved endt behandling).
+Tre studier rapporterede skadevirkninger (bivirkninger)(35,41,42). De undersøgte skadevirkninger er
+udvalgt af arbejdsgruppen. Det er således ikke alle skadevirkninger rapporteret i studierne, der indgår i
+evidenstabellen. Studierne viste en tendens til flere skadevirkninger i interventionsgruppen (se anneks til
+dette kapitel). Forskellen mellem interventions- og kontrolgruppen var statistisk signifikant ved to
+skadevirkninger (kvalme og abdominalsmerter), mens den ikke var statistisk signifikant ved øvrige
+skadevirkninger. Outcomes vedr. skadevirkningerne kvalme og søvnforstyrrelser indeholder både studier
+af acamprosat og naltrexon. Subgruppeanalyser blev gennemført for disse outcomes, men der var ingen
+forskel på, om studier vedr. de to præparater blev slået sammen eller set på hver for sig. Resultaterne
+vedr. hovedpine indeholder også både et studie af acamprosat og et studie af naltrexon.
+Subgruppeanalysen viste, at der var en tendens til mere hovedpine i interventionsgruppen, hvis man
+udelukkende så på studiet af naltrexon(35), mens der ikke var forskel på grupperne, når man så på studiet
+af acamprosat(42). Resultaterne vedr. diarré indeholder ligeledes data fra studier vedr. både acamprosat
+og naltrexon. En subgruppeanalyse viste, at der var tendens til mere diarré i interventionsgruppen i
+studiet af naltrexon (35), mens der var en tendens til mere diarré i kontrolgruppen i studiet af
+acamprosat (42) (subgruppeanalysen er ikke vist i evidenstabellen).
+Der var ingen forskel mellem grupperne i forhold til antal dage med afholdenhed for studierne samlet
+set. To af de inkluderede studier undersøgte dette outcome, hvoraf det ene involverede acamprosat, og
+det andet involverede naltrexon. Hvis man udelukkende ser på studiet af acamprosat (42), var der en
+tendens til flere dage med afholdenhed i interventionsgruppen. Omvendt hvis man udelukkende ser på
+studiet af naltrexon (41), var der en lille tendens til flere dage med afholdenhed i kontrolgruppen. Ingen
+af resultaterne var statistisk signifikante. Der var en tendens til, at flere deltagere havde total afholdenhed
+i interventionsgruppen (data er baseret på studiet, der involverer naltrexon). Ingen studier rapporterede
+afholdenhed ved follow-up.
+Studierne viste en tendens til kortere tid til recidiv i interventionsgruppen, men forskellenmellem
+interventions- og kontrolgruppen var ikke statistisk signifikant.
+Endvidere viste studierne en tendens til færre psykiske symptomer (PTSD-symptomer) ved follow-up i
+interventionsgruppen. Denne forskel var heller ikke statistisk signifikant.
+51 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Ingen af de inkluderede studier rapporterede resultater vedr. selvmordsadfærd, livskvalitet eller
+funktionsevne ved follow-up.
+Tiltro til
+estimaterne
+Sammenlignin
+Outcome Resultater og Intervention (at de afspejler
+g Sammenfatning
+Tidsramme målinger den sande
+effekt i
+populationen)
+462 611
+Kvalme (nausea) Relative risiko 1.32
+per 1.000 per 1.000
+Endt behandling (CI 95% 1.09 — 1.61)
+Moderat
+(end of treatment) Baseret på data fra 308
+Forskel: 149 flere per
+patienter i 4 studier. 1 1.000 Risiko for bias
+(Randomiserede studier)
+( CI 95% 42 flere
+— 282 flere )
+Hovedpine(head 467 612
+Relative risiko 1.31
+ache) (CI 95% 0.69 — 2.49) per 1.000 per 1.000 Lav
+Endt behandling Baseret på data fra 54 Risiko for bias,
+(end of treatment) patienter i 2 studier. 2 Forskel: 145 flere per bredt
+(Randomiserede studier) 1.000 konfidensinterval
+Opfølgningstid: 12 uger. ( CI 95% 145 færre
+— 696 flere )
+Krafteløshed 0 687
+Relative risiko 21.65
+Lav
+(weakness) (CI 95% 1.39 — 337.9) per 1.000 per 1.000
+Risiko for bias,
+Endt behandling Baseret på data fra 31
+bredt
+(end of treatment) patienter i 1 studier. 3 Forskel: 687 flere per
+konfidensinterval,
+(Randomiserede studier) 1.000
+kun ét studie
+Opfølgningstid: 12 uger. ( CI 95% 0 færre
+— 0 færre )
+600 930
+Relative risiko 1.55
+Diarré (diarrhea)
+(CI 95% 0.2 — 1.99) per 1.000 per 1.000 Lav
+Endt behandling
+Baseret på data fra 54 Risiko for bias,
+(end of treatment)
+patienter i 2 studier. 4 Forskel: 330 flere per bredt
+(Randomiserede studier) 1.000 konfidensinterval
+Opfølgningstid: 12 uger. ( CI 95% 480 færre
+— 594 flere )
+Rastløshed 828 828
+Relative risiko 1
+(restlessness) Lav
+(CI 95% 0.79 — 1.27) per 1.000 per 1.000
+Endt behandling Risiko for bias,
+Baseret på data fra 285
+(end of treatment) bredt
+patienter i 3 studier. 5 Forskel: 0 færre per 1.000
+(Randomiserede studier) ( CI 95% 175 færre konfidensinterval
+— 222 flere )
+52 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Tiltro til
+estimaterne
+Sammenlignin
+Outcome Resultater og Intervention (at de afspejler
+g Sammenfatning
+Tidsramme målinger den sande
+effekt i
+populationen)
+Søvnforstyrrelser, 467 495
+søvnløshed og
+per 1.000 per 1.000
+mareridt (sleep
+Relative risiko 1.06
+disturbances,
+(CI 95% 0.52 — 2.14) Forskel: 28 flere per 1.000 Lav
+insomnia and Baseret på data fra 54 ( CI 95% 224 færre Risiko for bias,
+nightmares) patienter i 2 studier. 6 — 532 flere ) bredt
+Endt behandling (Randomiserede studier) konfidensinterval
+(end of treatment) Opfølgningstid: 12 uger.
+Allergiske 200 375
+reaktioner
+(Allergic Relative risiko 1.88 per 1.000 per 1.000 Meget lav
+(CI 95% 0.57 — 6.19)
+Risiko for bias.
+reactions) Baseret på data fra 31
+Forskel: 175 flere per Bredt
+Endt behandling patienter i 1 studier. 7 1.000 konfidensinterval.
+(end of treatment) (Randomiserede studier) ( CI 95% 86 færre
+Kun ét studie
+Opfølgningstid: 12 uger. — 103 flere )
+Abdominalsmert 408 575
+er (abdominal
+Relative risiko 1.41 per 1.000 per 1.000 Lav
+pain) (CI 95% 1.09 — 1.83) Risiko for bias,
+Endt behandling Baseret på data fra 254 bl.a. manglende
+Forskel: 168 flere per
+(end of treatment) patienter i 2 studier. 8 1.000 blinding, kun ét
+(Randomiserede studier) ( CI 95% 38 flere studie.
+— 336 flere )
+Opkast Relative risiko 1.2 277 332 Meget lav
+(vomiting) (CI 95% 0.83 — 1.74) per 1.000 per 1.000 Bredt
+Endt behandling Baseret på data fra 254 konfidensinterval.
+(end of treatment) patienter i 2 studier. 9 Forskel: 55 flere per 1.000 Manglende
+(Randomiserede studier) ( CI 95% 48 færre blinding. Kun ét
+Opfølgningstid: 12 uger. — 204 flere ) studie.
+Nervøsitet 781 883
+Relative risiko 1.13
+Meget lav
+(nervousness) (CI 95% 0.93 — 1.37) per 1.000 per 1.000
+Manglende
+Endt behandling Baseret på data fra 254
+blinding. Bredt
+(end of treatment) patienter i 2 studier. 10 Forskel: 102 flere per
+konfidensinterval.
+(Randomiserede studier) 1.000
+Kun ét studie.
+Opfølgningstid: 12 uger. ( CI 95% 55 færre
+— 289 flere )
+Total abstinens ( Relative risiko 1.11 504 559 Lav
+total abstinence) (CI 95% 0.87 — 1.42) per 1.000 per 1.000 Risiko for bias,
+Endt behandling Baseret på data fra 524 bl.a. manglende
+53 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Tiltro til
+estimaterne
+Sammenlignin
+Outcome Resultater og Intervention (at de afspejler
+g Sammenfatning
+Tidsramme målinger den sande
+effekt i
+populationen)
+(end of treatment) patienter i 6 studier. 11 Forskel: 55 flere per 1.000 blinding. Risiko for
+( CI 95% 66 færre selektionsbias.
+(Randomiserede studier)
+— 209 flere ) Bredt
+5 Vigtig Opfølgningstid: 12 weeks.
+konfidensinterval
+Frafald af alle 346 345
+årsager (all cause Relative risiko 1 Lav
+per 1.000 per 1.000
+(CI 95% 0.79 — 1.26) Risiko for bias,
+discontinuation)
+Baseret på data fra 767 bl.a. manglende
+Endt behandling
+patienter i 7 studier. 12 Forskel: 1 færre per 1.000 blinding, bredt
+( CI 95% 73 færre
+(Randomiserede studier) konfidensinterval
+9 Kritisk — 90 flere )
+Selvmordsadfær
+d (suicide
+Vi fandt ingen studier, der
+behavior)
+opgjorde forekomst af
+Follow up
+selvmordsadfærd
+Psykiske Målt med: PTSD Symptom Forskel: MD 1.16 færre
+Meget lav
+symptomer Severity Scale (higher ( CI 95% 5.56
+Manglende
+(psychiatric score = more symptoms) færre — 3.24 flere
+blinding. Risiko for
+Symptoms) 13 ) selektionsbias.
+Baseret på data fra 111
+Follow-up Bredt
+patienter i 2 studier. 14
+konfidensinterval.
+(Randomiserede studier)
+5 Vigtig Opfølgningstid: 12 weeks. Kun ét studie
+Målt med: Timeline Forskel: MD 8.53 færre
+Meget lav
+Followback Interview ( CI 95% 20.13
+Alkoholbrug Risiko for bias,
+(procent dage med færre — 3.06 flere
+(alcohol use) 15 alkoholindtag) ) bl.a. manglende
+blinding, risiko for
+Follow-up
+selektionsbias.
+Baseret på data fra 111
+Bredt
+9 Kritisk patienter i 1 studier. 16 konfidensinterval.
+(Randomiserede studier)
+Kun ét studie
+Opfølgningstid: 12 weeks.
+Målt med: Timeline Forskel: SMD 0.11 færre
+Alkoholbrug 17 Followback Interview - ( CI 95% 0.34
+Endt behandling massivt alkoholindtag færre — 0.12 Moderat
+(end of treatment) færre ) Risiko for bias,
+Baseret på data fra 285 bl.a. manglende
+patienter i 3 studier. 18 blinding
+6 Vigtig
+(Randomiserede studier)
+Opfølgningstid: 12 weeks.
+Funktionsevne Vi fandt ingen studier, der
+54 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Tiltro til
+estimaterne
+Sammenlignin
+Outcome Resultater og Intervention (at de afspejler
+g Sammenfatning
+Tidsramme målinger den sande
+effekt i
+populationen)
+(level of
+functioning)
+Follow-up opgjorde funktionsevne
+Livskvalitet
+(quality of life)
+Vi fandt ingen studier, der
+Follow-up
+opgjorde livskvalitet
+Afholdenhed
+(abstinence)
+Vi fandt ingen studier, der
+Follow-up
+opgjorde afholdenhed
+Forskel: MD 0.55 flere Meget lav
+Abstinens Målt med: Procent
+( CI 95% 2.12 Risiko forbias, bl.a.
+afholdende dage
+(abstinent) færre — 3.22 flere manglende
+End of treatment ) blinding. Risiko for
+Baseret på data fra 277
+selektionsbias.
+patienter i 3 studier. 19
+6 Vigtig Bredt
+(Randomiserede studier)
+konfidensinterval.
+Tid til recidiv Forskel: MD 13.39 flere Meget lav
+(time to relapse) ( CI 95% 6.4 færre Risiko for bias,
+Baseret på data fra 170 — 33.18 flere ) bl.a. manglende
+Endt of treatment
+patienter i 2 studier. 20 blinding. Bredt
+(Randomiserede studier) konfidensinterval.
+5 Vigtig
+Opfølgningstid: 14 weeks. Kun ét studie
+61 61 Meget lav
+Målt med: genstande pr. Risiko forbias, bl.a.
+Alkoholbrug (gennemsnit) (gennemsnit)
+måned) manglende
+(alcohol use) blinding. Risiko for
+Baseret på data fra 23 Forskel: MD 0 færre selektionsbias.
+4 Vigtig patienter i 1 studier. 21 ( CI 95% 59.01 Bredt
+(Randomiserede studier) færre — 59.01 konfidensinterval.
+flere )
+Kun ét studie
+Alkoholbrug Målt med: Procent dage Forskel: SMD 0.48 færre Meget lav
+(alcohol use) med alkoholindtag ( CI 95% 0.8 færre Risiko forbias, bl.a.
+— 0.15 færre ) manglende
+Baseret på data fra 152 blinding. Risiko for
+9 Kritisk patienter i 3 studier. 22 selektionsbias.
+55 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Tiltro til
+estimaterne
+Sammenlignin
+Outcome Resultater og Intervention (at de afspejler
+g Sammenfatning
+Tidsramme målinger den sande
+effekt i
+populationen)
+Bredt
+(Randomiserede studier) konfidensinterval.
+Kun ét studie.
+Målt med: Genstande per 4 4
+Alkoholbrug Meget lav
+drikkedag
+(alcohol use) (gennemsnit) (gennemsnit) Risiko forbias, bl.a.
+manglende
+End of treatment Baseret på data fra 23
+Forskel: MD 0 flere blinding. Kun ét
+patienter i 1 studier. 23
+( CI 95% 2.62 studie. Upræcist
+4 Vigtig (Randomiserede studier) færre — 2.62 flere effektestimat.
+Opfølgningstid: 12 weeks.
+)
+1. Systematisk oversigtsartikel [3] med inkluderede studier: Witte 2012, Petrakis 2005, Petrakis 2004, Petrakis
+2005a. Baselinerisiko/komparator: Kontrolarm i reference brugt til interventionen.
+2. Systematisk oversigtsartikel [3] med inkluderede studier: Petrakis 2004, Witte 2012. Baselinerisiko/
+komparator: Kontrolarm i reference brugt til interventionen.
+3. Systematisk oversigtsartikel [3] med inkluderede studier: Petrakis 2004. Baselinerisiko/komparator:
+Kontrolarm i reference brugt til interventionen.
+4. Systematisk oversigtsartikel [3] med inkluderede studier: Petrakis 2004, Witte 2012. Baselinerisiko/
+komparator: Kontrolarm i reference brugt til interventionen.
+5. Systematisk oversigtsartikel [3] med inkluderede studier: Petrakis 2004, Petrakis 2005a, Petrakis 2005.
+Baselinerisiko/komparator: Kontrolarm i reference brugt til interventionen.
+6. Systematisk oversigtsartikel [3] med inkluderede studier: Petrakis 2004, Witte 2012. Baselinerisiko/
+komparator: Kontrolarm i reference brugt til interventionen.
+7. Systematisk oversigtsartikel [3] med inkluderede studier: Petrakis 2004. Baselinerisiko/komparator:
+Kontrolarm i reference brugt til interventionen.
+8. Systematisk oversigtsartikel [3] med inkluderede studier: Petrakis 2005, Petrakis 2005a. Baselinerisiko/
+komparator: Kontrolarm i reference brugt til interventionen.
+9. Systematisk oversigtsartikel [3] med inkluderede studier: Petrakis 2005a, Petrakis 2005. Baselinerisiko/
+komparator: Kontrolarm i reference brugt til interventionen.
+10. Systematisk oversigtsartikel [3] med inkluderede studier: Petrakis 2005, Petrakis 2005a. Baselinerisiko/
+komparator: Kontrolarm i reference brugt til interventionen.
+11. Systematisk oversigtsartikel [4] med inkluderede studier: Brown 2009, Pettinati 2010a, Petrakis 2005,
+Oslin 2003, Pettinati 2010, Petrakis 2005a. Baselinerisiko/komparator: Kontrolarm i reference brugt til
+interventionen.
+12. Systematisk oversigtsartikel [4] med inkluderede studier: Pettinati 2010a, Pettinati 2010, Witte 2012,
+Petrakis 2004, Oslin 2003, Petrakis 2005a, Petrakis 2005, Brown 2009, Foa 2013a, Foa 2013. Baselinerisiko/
+komparator: Kontrolarm i reference brugt til interventionen.
+13. PTSD Symptom Severity Scale (higher score = more symptoms)
+14. Systematisk oversigtsartikel [4] med inkluderede studier: Foa 2013, Foa 2013a. Baselinerisiko/
+komparator: Kontrolarm i reference brugt til interventionen.
+15. Timeline Followback Interview
+16. Systematisk oversigtsartikel [4] med inkluderede studier: Foa 2013a, Foa 2013. Baselinerisiko/
+komparator: Kontrolarm i reference brugt til interventionen.
+56 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+17. Timeline Followback Interview
+18. Systematisk oversigtsartikel [4] med inkluderede studier: Petrakis 2005, Petrakis 2005a, Petrakis 2004.
+Baselinerisiko/komparator: Kontrolarm i reference brugt til interventionen.
+19. Systematisk oversigtsartikel [4] med inkluderede studier: Witte 2012, Petrakis 2005, Petrakis 2005a.
+Baselinerisiko/komparator: Kontrolarm i reference brugt til interventionen.
+20. Systematisk oversigtsartikel [4] med inkluderede studier: Pettinati 2010, Pettinati 2010a. Baselinerisiko/
+komparator: Kontrolarm i reference brugt til interventionen.
+21. Systematisk oversigtsartikel [4] med inkluderede studier: Witte 2012. Baselinerisiko/komparator:
+Kontrolarm i reference brugt til interventionen.
+22. Systematisk oversigtsartikel [4] med inkluderede studier: Petrakis 2004, Foa 2013, Foa 2013a.
+Baselinerisiko/komparator: Kontrolarm i reference brugt til interventionen.
+23. Systematisk oversigtsartikel [4] med inkluderede studier: Witte 2012. Baselinerisiko/komparator:
+Kontrolarm i reference brugt til interventionen.
+God praksis (konsensus)
+Det er god praksis at tilbyde acamprosat eller naltrexon i tillæg til samtalebehandling til personer med samtidig
+alkoholafhængighed og øvrige psykiske lidelser.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019.
+Evidensgrundlaget består af syv studier, hvor populationen omfatter personer med samtidig alkoholafhængighed og affektive lidelser,
+angstlidelser eller psykotiske lidelser. For alkoholafhængighed og andre psykiske lidelser henvises til Sundhedsstyrelsens
+nationale kliniske retningslinje for behandling af alkoholafhængighed (2015)(7), som anbefaler at tilbyde acamprosat og at overveje
+at tilbyde naltrexon.
+For nogle personer med samtidig alkoholafhængighed og psykisk lidelse kan brug af acamprosat eller naltrexon som supplement til
+samtalebehandling være en hjælp til afholdenhed/reduceret alkoholbrug.
+De fundne studier har ikke undersøgt, hvilke personer med samtidig alkoholafhængighed og psykisk lidelse der må formodes at have
+mest gavn af henholdsvis acamprosat og naltrexon. Her henvises til den nationale kliniske retningslinje for behandling af
+alkoholafhængighed(7), hvor det fremgår, at acamprosat primært bør overvejes som støtte til alkoholafhængige personer, der ønsker
+afholdenhed frem for reduktion i alkoholforbruget, mens naltrexon kan være relevant til alkoholafhængige, der ikke har afholdenhed
+som målsætning. Det ser ud til, at personer med ’craving’ eller angst som fremtrædende symptomer vil have særlig gavn af
+behandling med acamprosat. Omvendt kan personer med tidlig debut af alkoholafhængighed og familiær disposition have særlig
+gavn af naltrexon.
+Brug af acamprosat og naltrexon er forbundet med en risiko for bivirkninger (se afsnittet 'Acamprosat og naltrexon). Behandleren skal
+informere personer med samtidig alkoholafhængighed og psykisk lidelse om mulige bivirkninger og risici ved brug af acamprosat og
+naltrexon, inden evt. behandling igangsættes.
+Ved kendt nyresygdom skal forsigtighed udvises ved acamprosat, og ved svær leversygdom skal forsigtighed udvises ved naltrexon.
+For personer med samtidig alkoholafhængighed og psykisk lidelse må der forventes øget risiko for polyfarmaci, og behandleren skal
+være opmærksom på dette. Behandleren bør ligeledes være opmærksom på mulige interaktionseffekter mellem indtag af alkohol
+og brug af psykofarmaka og drøfte dette med personen.
+Positiv virkning af acamprosat eller naltrexon vil typisk indtræde efter et par uger. Hvis personen ikke oplever en positiv virkning af
+medicinen inden for denne periode, bør medicinen seponeres straks.
+57 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+12. Referenceliste
+(1) National Institute for Health and Care Excellence (NICE). Alcohol-use disorders: diagnosis, assessment and
+management of harmful drinking and alcohol dependence (CG115). NICE, 2011 (NICE Clinical Guidelines 115).
+(2) Guideline Development Group of the CPG on Psychosocial Interventions in Severe Mental Illness. Clinical
+practice guidelines for psychosocial interventions in severe mental illness. Madrid : Aragon Institute of Health
+Sciences (IACS). Quality Plan for the National Health System, Ministry of Health and Social Policy, 2009. (Clinical
+practice guidelines in the NHS IACS; no. 2009/05).
+(3) Matthys F, Möbius D, Stes S, Joostens P, Tremmery S, Vermassen A, et al. Good Clinical Practice in the
+Recognition and Treatment of ADHD in (Young) Adults with Addiction Problems : Guidelines for Clinical Practice.
+Brussel : Association for Alcohol and Other Drug Problems - Forum for Addiction Medicine, 2010 (D/2010/6030/28).
+(4) Nasjonal faglig retningslinje for utredning, behandling og oppfølging av personer med samtidig ruslidelse og
+psykisk lidelse – ROP-lidelser : Sammensatte tjenester – samtidig behandling. : Helsedirektoratet, 2012 (IS-1948).
+(5) National Institute for Health and Care Excellence (NICE). Psychosis with coexisting substance misuse :
+Assessment and management in adults and young people (CG 120). NICE, 2011 (NICE clinical guideline 120).
+(6) Deutsche Gesellschaft für Suchtforschung und Suchttherapie. Alkoholbezogene Störungen: Screening, Diagnose
+und Behandlung (S3-Leitlein). Arbeitsgemeinschaft der Wissenschaftlichen Medizinischen Fachgesellschaften
+(AWMF), 2015. (AWMF-Register Nr. 076-001).
+(7) National klinisk retningslinje for behandling af alkoholafhængighed. [Version] 1.0 Sundhedsstyrelsen, 2015. Link.
+(8) Flensborg-Madsen T, Mortensen EL, Knop J, Becker U, Sher L, Gronbaek M. Comorbidity and temporal ordering
+of alcohol use disorders and other psychiatric disorders: results from a Danish register-based study. Compr
+Psychiatry 2009;50(4):307-314.
+(9) Landheim AS, Bakken K, Vaglum P. Psychiatric disorders among substance abusers treated in the substance
+abuse field. Norsk Epidemiologi 2002;12(3):309-18.
+(10) Grant BF, Stinson FS, Dawson DA, Chou SP, Dufour MC, Compton W, et al. Prevalenceand co-occurrence of
+substance use disorders and independent mood and anxiety disorders: results from the National Epidemiologic
+Survey on Alcohol and Related Conditions. Arch Gen Psychiatry 2004;61(8):807-816.
+(11) Rounsaville BJ, Dolinsky ZS, Babor TF, Meyer RE. Psychopathology as a predictor of treatment outcome in
+alcoholics. Arch Gen Psychiatry 1987;44(6):505-513.
+(12) Dixon L. Dual diagnosis of substance abuse in schizophrenia: prevalence and impacton outcomes. Schizophr
+Res 1999;35 Suppl:S93-100.
+(13) Helseth V, Lykke-Enger T, Aamo TO, Johnsen J. Rusmiddelscreening av pasienter i alderen 17 - 40 år innlagt
+med psykose. Tidsskr Nor Laegeforen 2005;125(9):1178-1180.
+(14) Toftdahl NG, Nordentoft M, Hjorthoj C. Prevalence of substance use disorders in psychiatric patients: a
+nationwide Danish population-based study. Soc Psychiatry Psychiatr Epidemiol 2015 Aug 11 [Epub].
+(15) Sullivan LE, Fiellin DA, O'Connor PG. The prevalence and impact of alcohol problems in major depression: a
+systematic review. Am J Med 2005;118(4):330-341.
+58 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+(16) Sterling S, Chi F, Hinman A. Integrating care for people with co-occurring alcohol and other drug, medical, and
+mental health conditions. Alcohol Res Health 2011;33(4):338-349.
+(17) Nielsen P, Røjskjær S, Josiasen T. Afrapportering af Projekt SODA : Samarbejde Om Dobbeltbelastede
+Alkoholklienter : Et modelprojekt om organisering og udførelse af flerfaset dobbeltfokuseret behandling. Middelfart
+: Ringgården, Kompetencecenter for Dobbeltfokuseret Afhængighedsbehandling, 2013. Link.
+(18) Lynch TR, Trost WT, Salsman N, Linehan MM. Dialectical behavior therapy for borderline personality disorder.
+Annu Rev Clin Psychol 2007;3:181-205.
+(19) Koerner K, Linehan MM. Research on dialectical behavior therapy for patients with borderline personality
+disorder. Psychiatr Clin North Am 2000;23(1):151-167.
+(20) Bamelis LL, Evers SM, Spinhoven P, Arntz A. Results of a multicenter randomized controlled trial of the clinical
+effectiveness of schema therapy for personality disorders. Am J Psychiatry 2014;171(3):305-322.
+(21) Ball SA, Cobb-Richardson P, Connolly AJ, Bujosa CT, O'neall TW. Substance abuse and personality disorders in
+homeless drop-in center clients: symptom severity and psychotherapy retention in a randomized clinical trial.
+Compr Psychiatry 2005;46(5):371-379.
+(22) Ball SA, Young JE. Dual Focus Schema Therapy for personality disorders and substance dependence: Case study
+results. Cognitive and Behavioral Practice 2000;7(3):270- 281.
+(23) van den Bosch LM, Koeter MW, Stijnen T, Verheul R, van den Brink W. Sustained efficacy of dialectical
+behaviour therapy for borderline personality disorder. Behav Res Ther 2005;43(9):1231-1241.
+(24) Nielsen P, Rojskjaer S, Hesse M. Personality-guided treatment for alcohol dependence: a quasi-randomized
+experiment. Am J Addict 2007;16(5):357-364.
+(25) Lindgaard H, Sundhedsstyrelsen. Familieorienteret alkoholbehandling - et litteraturstudium af
+familiebehandlingens effekt. København: Sundhedsstyrelsen, 2006. Link.
+(26) National klinisk retningslinje for behandling af patienter med skizofreni og kompleksebehandlingsforløb :
+vedvarende symptomer, misbrug eller mangelfuld behandlingstilknytning.[Version] 1.0. Sundhedsstyrelsen, 2015.
+Link.
+(27) Barrowclough C, Haddock G, Tarrier N, Lewis SW, Moring J, O'Brien R, et al. Randomized controlled trial of
+motivational interviewing, cognitive behavior therapy, and family intervention for patients with comorbid
+schizophrenia and substance use disorders. Am J Psychiatry 2001;158(10):1706-1713.
+(28) Hunt GE, Siegfried N, Morley K, Sitharthan T, Cleary M. Psychosocial interventions for people with both severe
+mental illness and substance misuse. Cochrane Database Syst Rev 2013;10:CD001088.
+(29) Integreret indsats for borgere med sindslidelse og misbrug : Evalueringsrapport. : Deloitte. Social og
+Socialstyrelsen, 2015. Link.
+(30) Morse GA, Calsyn RJ, Klinkenberg WD, Helminiak TW, Wolff N, Drake RE, et al. Treating homeless clients with
+severe mental illness and substance use disorders: costs and outcomes. Community Ment Health J
+2006;42(4):377-404.
+(31) Drake RE, McHugo GJ, Clark RE, Teague GB, Xie H, Miles K, et al. Assertive community treatment for patients
+59 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+with co-occurring severe mental illness and substance use disorder: a clinical trial. Am J Orthopsychiatry
+1998;68(2):201-215.
+(32) Essock SM, Mueser KT, Drake RE, Covell NH, McHugo GJ, Frisman LK, et al. Comparison of ACT and standard
+case management for delivering integrated treatment for co-occurring disorders. Psychiatr Serv 2006;57(2):185-196.
+(33) Frisman LK, Mueser KT, Covell NH, Lin H, Crocker A, Drake RE, et al. Use of integrated dual disorder treatment
+via assertive community treatment versus clinical case management for persons with co-occurring disorders and
+antisocial personality disorder. J Nerv Ment Dis Nov 2009;197(11):822-828.
+(34) Rush BR, Dennis ML, Scott CK, Castel S, Funk RR. The interaction of co-occurring mental disorders and recovery
+management checkups on substance abuse treatment participation and recovery. Eval Rev 2008;32(1):7-38.
+(35) Petrakis IL, O'Malley S, Rounsaville B, Poling J, McHugh-Strong C, Krystal JH, et al. Naltrexone augmentation of
+neuroleptic treatment in alcohol abusing patients with schizophrenia. Psychopharmacology (Berl)
+2004;172(3):291-297.
+(36) Petrakis IL, Nich C, Ralevski E. Psychotic spectrum disorders and alcohol abuse: a
+review of pharmacotherapeutic strategies and a report on the effectiveness of naltrexone and disulfiram. Schizophr
+Bull 2006;32(4):644-654.
+(37) Brown ES, Carmody TJ, Schmitz JM, Caetano R, Adinoff B, Swann AC, et al. A randomized, double-blind,
+placebo-controlled pilot study of naltrexone in outpatients with bipolar disorder and alcohol dependence.
+Alcoholism: Clinical & Experimental Research 2009;33(11):1863-1869.
+(38) Foa EB, Yusko DA, McLean CP, Suvak MK, Bux DAJ, Oslin D, et al. Concurrent naltrexone and prolonged
+exposure therapy for patients with comorbid alcohol dependence and PTSD: A randomized clinical trial. JAMA:
+Journal of the American Medical Association 2013;310(5):488-495.
+(39) Oslin DW. Treatment of late-life depression complicated by alcohol dependence. Am J Geriatr
+Psychiatry 2005;13(6):491-500.
+(40) Pettinati HM, Oslin DW, Kampman KM, Dundon WD, Xie H, Gallis TL, et al. A double-blind, placebo-controlled
+trial combining sertraline and naltrexone for treating cooccurring depression and alcohol dependence. Am J
+Psychiatry 2010;167(6):668-675.
+(41) Petrakis IL, Poling J, Levinson C, Nich C, Carroll K, Rounsaville B, et al. Naltrexone and disulfiram in patients with
+alcohol dependence and comorbid psychiatric disorders. Biol Psychiatry 2005;57(10):1128-1137.
+(42) Witte J, Bentley K, Evins AE, Clain AJ, Baer L, Pedrelli P, et al. A randomized, controlled, pilot study of
+acamprosate added to escitalopram in adults with major depressive disorder and alcohol use disorder. J Clin
+Psychopharmacol 2012;32(6):787-796.
+(43) Petrakis IL, Poling J, Levinson C, Nich C, Carroll K, Ralevski E, et al. Naltrexone and Disulfiram in Patients with
+Alcohol Dependence and Comorbid Post-Traumatic Stress Disorder. Biol Psychiatry 2006;60(7):777-783.
+(44) Hvidtfeld UA, Gottlieb Hansen AB, Grønbæk M, Tolstrup JSA. Alkoholforbrug i Danmark: kvantificering og
+karakteristik af storforbrugere og afhængige. Statens Institut for Folkesundhed, 2008. Link
+(45) Koskinen J, Lohonen J, Koponen H, Isohanni M, Miettunen J. Prevalence of alcohol use disorders in
+schizophrenia--a systematic review and meta-analysis. Acta Psychiatr Scand 2009 Aug;120(2):85-96.
+60 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+(46) Cornelius JR, Salloum IM, Mezzich J, Cornelius MD, Fabrega H,Jr, Ehler JG, et al. Disproportionate suicidality in
+patients with comorbid major depression and alcoholism. Am J Psychiatry 1995;152(3):358-364.
+(47) Schmidt LM, Hesse M, Lykke J. The impact of substance use disorders on the course of schizophrenia--a
+15-year follow-up study: dual diagnosis over 15 years. Schizophr Res 2011;130(1-3):228-233.
+(48) Gerding LB, Labbate LA, Measom MO, Santos AB, Arana GW. Alcohol dependence and hospitalization in
+schizophrenia. Schizophr Res 1999;38(1):71-75.
+61 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+13. Baggrund
+Der er i Danmark ca. 140.000 personer med alkoholafhængighed(44). Alkoholafhængighed er karakteriseret ved
+tilstedeværelse af mindst tre af følgende symptomer inden for det seneste år: Alkoholtrang, kontroltab ved
+alkoholindtagelse, abstinenser, tolerance (større og større mængder alkohol er nødvendig for at opnå samme
+virkning), fortsat indtag trods kendt skadevirkning, og at alkohol spiller en dominerende rolle i personens liv
+(ICD-10).
+Skadeligt forbrug af alkohol er karakteriseret ved et forbrug af alkohol, der har medført skade (fysisk, mentalt eller
+socialt), hvor personen ikke nødvendigvis opfylder de diagnostiske kriterier for alkoholafhængighed.
+En stor andel af personer med alkoholafhængighed har også en psykisk lidelse. Et dansk studie anslår, at cirka
+halvdelen af personer med alkoholafhængighed vil få en psykisk lidelse i løbet af livet(8).
+Omvendt er der også stor forekomst af alkoholafhængighed blandt personer, der er diagnosticeret med en psykisk
+lidelse. Et dansk studie har undersøgt prævalensen af alkoholafhængighed blandt patienter med en psykisk
+lidelse(14). Studiet fandt samtidig alkoholafhængighed hos 28 % af patienter med skizofreni, hos 25 % af patienter
+med skizotypal lidelse, hos 23 % af patienter med andre psykoser, hos 28 % af patienter med bipolar lidelse, hos 21
+% af patienter med depression, hos 20 % af patienter med angst, hos 9 % af patienter med OCD, hos 13 % af
+patienter med PTSD og hos 39 % af patienter med personlighedsforstyrrelser.
+Studier har vist, at samtidig alkoholafhængighed og psykisk lidelse er forbundet med forværrede psykiske
+symptomer(12), somatiske komplikationer(45), dårligere compliance til behandlingen(12), for tidlig død (46, 47),
+hyppigere og længere indlæggelser(48) og større brug af akuttilbud såsom skadestuer(48).
+Endvidere kan samtidig alkoholafhængighed og psykisk lidelse medføre massive sociale problemer(12).
+62 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+14. Implementering
+Dette afsnit beskriver, hvilke aktører (organisationer, faggrupper, myndigheder) der har et medansvar for at sikre
+kendskabet til samt anvendelse af retningslinjens anbefalinger blandt personale, der i den kliniske praksis møder
+personer med samtidig alkoholafhængighed og psykisk lidelse og skal tage stilling til udredning og behandling af
+denne gruppe. Afsnittet indeholder desuden arbejdsgruppens forslag til de konkrete aktiviteter, som de
+pågældende aktører kan iværksætte for at understøtte implementeringen.
+Behandlingen af personer med alkoholafhængighed og psykisk lidelse varetages af forskellige sektorer, og dette
+kan vanskeliggøre implementeringen af retningslinjen. I Norge eksisterer et nationalt kompetencecenter for
+samtidig rusmiddelmisbrug og psykisk lidelse (ROP-tjenesten), der skal sikre kompetenceudvikling og
+kompetencespredning på området. Arbejdsgruppen formoder, at et lignende tiltag i Danmark ville kunne styrke
+implementeringen
+af retningslinjen.
+I Danmark vil kommunale og regionale behandlingsinstitutioner spille en afgørende rolle i forhold til at
+understøtte implementeringen af retningslinjen gennem formidling af retningslinjens indhold og ved at understøtte
+retningslinjens anvendelse i praksis. For at understøtte retningslinjens anvendelse lokalt er det hensigtsmæssigt, at
+anbefalingerne i retningslinjen samstemmes med eller integreres i de forløbsbeskrivelser, instrukser og
+vejledninger, som allerede anvendes her.
+Almen praksis spiller en vigtig rolle i forhold til implementering af anbefalinger vedr. identifikation af
+alkoholafhængighed og psykisk lidelse samt ordination af medicin.
+Herudover spiller frivillige organisationer, herunder patient- og brugerforeninger, en vigtig rolle i forhold til at
+understøtte implementeringen af retningslinjens indhold.
+De faglige selskaber er ligeledes centrale aktører i forhold til at udbrede kendskabet til retningslinjen. Her tænkes
+bl.a. på Alkoholfagligt forum, Dansk Psykolog Forening, Dansk Psykiatrisk Selskab, Dansk Selskab for
+Gastroenterologi og Hepatologi, Dansk Sygeplejeråd, Dansk Selskab for Almen Medicin, Dansk Selskab for Addiktiv
+Medicin, Dansk Selskab for Addiktiv Psykiatri, Fagligt Selskab for Addiktiv Sygepleje, Selskab for Misbrugspsykologi,
+Centerlederforeningen, Socialrådgiverforeningen samt Alkohol og Samfund. Sundhedsstyrelsen foreslår, at
+retningslinjen omtales på de relevante foreningers/faglige selskabers hjemmeside med orientering om, hvad den
+indebærer for det pågældende speciale og med et link til den fulde version af retningslinjen.
+Sundhedsstyrelsen foreslår endvidere, at retningslinjen præsenteres på KL’s misbrugskonference og årsmøde i
+Dansk Psykiatrisk Selskab i første halvår 2016 samt ved andre årsmøder i regi af de faglige selskaber og på
+lægedage.
+Information om retningslinjen kan også formidles via artikler i Månedsskrift for almen praksis, RUS, Dagens
+Medicin, Ugeskrift for Læger, P-Psykologernes Fagmagasin, Sygeplejersken mv.
+Indholdet af retningslinjen bør integreres i relevante uddannelser og efteruddannelser,herunder f.eks.
+grunduddannelsen for alkoholbehandlere, kurser for alment praktiserende læger, psykologer og psykiatere mv.
+Endvidere bør retningslinjens indhold formidles til personer med samtidig alkoholafhængighed og psykisk lidelse.
+Her spiller relevante patientforeninger en vigtig rolle.
+Arbejdsgruppen anbefaler også, at retningslinjen formidles til relevante forskningsmiljøer.
+Samarbejdet mellem sektorerne er yderst vigtigt. Arbejdsgruppen repræsenterer forskellige sektorer og anerkender,
+63 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+at sektorgrænseflader let kan blive barrierer for etablering af sammenhængende indsatser og vanskeliggøre
+implementering af retningslinjens anbefalinger. Denne udfordring blev også nævnt af referencegruppen samt
+fremhævet i de høringssvar, som arbejdsgruppen modtog i forbindelse med udarbejdelsen af
+retningslinjen. Organisatoriske udfordringer kan formentlig kun til en vis grad imødegås ved hjælp af eksisterende
+værktøjer som f.eks. sundhedsaftaler, koordinerede indsatsplaner og ved brug af forløbskoordinatorer. Endvidere er
+der stor variation i den behandling, der tilbydes forskellige steder i Danmark. Arbejdsgruppen opfordrer til, at der
+udarbejdes en grundlæggende analyse af området, som afdækker de eksisterende udfordringer.
+Implementeringen af retningslinjen er som udgangspunkt et lokalt ansvar. Dog ønsker Sundhedsstyrelsen at
+understøtte implementeringen. I foråret 2014 publicerede Sundhedsstyrelsen således en værktøjskasse med
+konkrete redskaber til implementering. Den er tilgængelig som et elektronisk opslagsværk på sst.dk.
+Værktøjskassen bygger på evidens for effekten af interventioner, og den er tænkt som en hjælp til lederen eller
+projektlederen, der lokalt skal arbejde med implementering af forandringer.
+Foruden den fulde retningslinje udgives en quick guide. Quick guiden er en kort version på 1-2 A4-ark. Den
+gengiver alene retningslinjens anbefalinger og centrale budskaber med angivelse af evidensgraduering og
+anbefalingens styrke.
+64 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+15. Monitorering
+Arbejdsgruppen peger på, at indikatorerne opstillet nedenfor vil kunne anvendes til at vurdere retningslinjens
+implementering. Indikatorerne er udvalgt, sådan at de så vidt muligt baseres på eksisterende data og ikke kræver
+øget registrering på behandlingsinstitutionerne.
+Procesindikatorer
+• Andelen af personer med samtidig alkoholafhængighed og psykisk lidelse, der modtager alkoholbehandling,
+og som indløser recept på acamprosat eller naltrexon (NAB, Lægemiddelstatistikregisteret og LPR PSYK).
+• Andelen af patienter i psykiatrien, hvor information om alkoholbrug er udfyldt i forbindelse med undersøgelse
+af KRAM (regionale databaser, f.eks. BI-portalen i Region Midtjylland)
+• Andelen af patienter i psykiatrien, som modtager behandling for alkoholafhængighed, hvor pårørende
+inddrages (NAB og regionale databaser)
+• Andelen af behandlingsinstitutioner/behandlingsforløb, hvor anbefalinger følges (tilsyn/audit)
+Effektindikatorer
+• Antallet af personer med samtidig alkoholafhængighed og psykisk lidelse, der modtager alkoholbehandling
+(NAB, lægemiddelstatistikregisteret og LPR PSYK)
+• Antallet af personer med samtidig alkoholafhængighed og psykisk lidelse, der gennemfører alkoholbehandling/
+afsluttes som færdigbehandlede for alkoholafhængighed (NAB, lægemiddelstatistikregisteret og LPR PSYK).
+• Antallet af personer med samtidig alkoholafhængighed og psykisk lidelse, der modtager behandling for både
+alkoholafhængighed og psykisk lidelse (NAB, lægemiddelstatistikregisteret og LPR PSYK)
+• Antallet af personer, der afvises fra psykiatrisk behandling i Den Centrale Visitation (CVI) grundet
+alkoholafhængighed
+Datakilder
+Eksisterende data kan indhentes fra Det Nationale Alkoholbehandlingsregister (NAB), Lægemiddelstatistikregisteret,
+Landspatientregisteret (LPR) samt regionale databaser, f.eks. BI-portalen i Region Midtjylland.
+65 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+16. Opdatering og videre forskning
+Opdatering
+Som udgangspunkt vil der tages stilling til behov for opdatering hvert tredje år med mindre ny evidens eller den
+teknologiske udvikling på området tilsiger andet.
+Videre forskning
+Evidens inden for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse, der lever op til
+GRADE-systemets kvalitetskriterier, er yderst sparsom. Arbejdsgruppen har kun fundet forholdsvis få randomiserede
+kontrollerede forsøg på området. Nedenfor oplistes Sundhedsstyrelsens forslag til forskningsområder inden for
+udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse:
+• Forskning i screening for alkoholafhængighed og psykisk lidelse, herunder screeningsværktøjer og effekten af
+screening målrettet personer med samtidig alkoholafhængighed og psykisk lidelse
+• Forskning i integreret/koordineret behandling overfor sekventiel behandling til personer med samtidig
+alkoholafhængighed og psykisk lidelse
+• Forskning i døgnbehandling til personer med samtidig alkoholafhængighed og psykisk lidelse
+• Forskning i dialektisk adfærdsterapi (DAT) og dobbeltfokuseret skematerapi til personer med samtidig
+alkoholafhængighed og personlighedsforstyrrelse
+• Forskning i inddragelse af familie/netværk i behandlingen af personer med samtidig alkoholafhængighed og
+psykisk lidelse
+• Forskning i udgående/opsøgende indsatser til personer med samtidig alkoholafhængighed og psykisk lidelse
+• Forskning i efterbehandling/opfølgning til personer med samtidig alkoholafhængighed og psykisk lidelse
+• Forskning i farmakologisk behandling til personer med samtidig alkoholafhængighed og psykisk lidelse
+• Langtidsstudier – det vil sige studier, som evaluerer effekten af behandling på længere sig
+• Implementeringsforskning
+• Forskning i brug af sundhedsteknologi på feltet
+• Forskning i, hvordan personer med samtidig alkoholafhængighed og psykisk lidelse oplever deres udrednings-
+og behandlingsforløb
+Sundhedsstyrelsen opfordrer til, at danske forskere på området engagerer sig internationalt, bl.a. for at kunne
+gennemføre studier med større populationer.
+66 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+17. Beskrivelse af anvendt metode
+Arbejdsgruppen har været ansvarlig for at udvælge de fokuserede spørgsmål, vurdere evidensen og formulere
+anbefalinger/sammenfatte nærværende retningslinje. Der har været afholdt seks møder i arbejdsgruppen undervejs
+i processen. Herudover har der været afholdt to møder i referencegruppen, hvor referencegruppen har
+kommenteret på udkast til fokuserede spørgsmål og anbefalinger. En liste over medlemmer i henholdsvis
+arbejdsgruppe
+og referencegruppe ses under fanebladet "Arbejdsgruppe og referencegruppe".
+De nationale kliniske retningslinjer har alene til opgave at undersøge den eksisterende evidens for effekten af
+udvalgte udrednings- og behandlingstiltag. Evidensens kvalitet vurderes ud fra det internationale system GRADE
+(Grade of Recommendations Assessment, Development and Evaluation). Kun litteratur, der vurderes at være af
+tilstrækkelig høj kvalitet i henhold til GRADE, inkluderes som grundlag for formulering af anbefalinger.
+Ved vurdering af evidensen er det vigtigt at minde om, at evt. manglende evidens for effekten af et tiltag ikke
+nødvendigvis betyder, at der ikke er en effekt, men blot kan betyde, at effekten ikke er tilstrækkeligt undersøgt.
+For en uddybende beskrivelse af metoden henvises til Sundhedsstyrelsens NKR metodehåndbog version 2.1.
+Metodehåndbogen kan tilgås på sst.dk.
+Fortolkning af effektestimater
+Effektestimater er vurderet statistisk signifikante, hvis p < 0,05. Signifikansniveauet kan også aflæses ud fra, hvorvidt
+95 % konfidensintervallet indeholder værdien for ingen effekt. For effektmålene relativ risiko og odds ratio vil dette
+være 1, mens det for gennemsnitlige forskelle og standardiserede gennemsnitlige forskelle vil være 0. Hvis
+konfidensintervallet indeholder værdien for ingen effekt, er det pågældende effektestimat ikke statistisk signifikant.
+Effektestimater er også vurderet med hensyn til, om de er klinisk relevante, jf. nedenfor.
+Ordet ’tendens’ benyttes i de tilfælde, hvor der ikke er tale om en statistisk signifikant forskel mellem interventions-
+og kontrolgruppe, men hvor estimatet ser ud til at pege i retning af en effekt.
+Vurdering af klinisk relevans
+Arbejdsgruppen vurderer, hvorvidt en forskel er klinisk relevant. Beslutningen træffes på baggrund af den skala, der
+er anvendt i studiet. Når forskellen er målt som en SMD (standardised mean difference), afgør størrelsen på en
+SMD, hvorvidt forskellen er klinisk relevant. En SMD på 0,2 eller derunder indikerer normalt en forskel, der ikke er
+klinisk relevant, mens en SMD på 0,8 eller derover indikerer en stor, klinisk relevant forskel. En SMD på 0,5 indikerer
+en moderat, klinisk relevant
+forskel.
+67 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+18. Fokuserede spørgsmål
+For en uddybet beskrivelse af de spørgsmål, denne kliniske retningslinje besvarer se venligst dokumentet vedr.
+fokuserede spørgsmål på sst.dk.
+68 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+19. Beskrivelse af anbefalingernes styrke og impliktioner
+Formulering af evidensbaserede anbefalinger:
+En anbefaling kan enten være for eller imod en given intervention. En anbefaling kan enten være stærk eller svag/
+betinget. Ved evidens vælges en af følgende fire typer af anbefalinger
+Stærk anbefaling for (Grøn)
+Der gives en stærk anbefaling for, når der er pålidelig evidens, der viser, at de samlede fordele ved interventionen
+er klart større end ulemperne.
+Det er klart, at fordelene opvejer ulemperne. Det betyder, at alle, eller næsten alle, patienter vil ønske den
+anbefalede intervention
+Ordlyd: Giv/brug/anvend…
+Følgende vil trække i retning af en stærk anbefaling for:
+Høj eller moderat tiltro til de estimerede effekter.
+Stor gavnlig effekt og ingen eller få skadevirkninger.
+Patienternes værdier og præferencer er velkendte og ensartet til fordel for interventionen.
+Implikationer:
+De fleste patienter vurderes at ønske interventionen.
+Langt de fleste klinikere vil tilbyde interventionen.
+Stærk anbefaling imod (Grøn+Rød)
+Der gives en stærk anbefaling imod, når der er høj tiltro til, at de samlede ulemper er klart større end fordelene. Det
+samme gælder, hvis der er stor tiltro til, at en intervention er nyttesløs.
+Ordlyd: Giv ikke/brug ikke/anvend ikke/undlad at…
+Følgende vil trække i retning af en stærk anbefaling imod:
+Høj eller moderat tiltro til de estimerede effekter.
+Der er stor tiltro til, at interventionen ikke gavner, eller at den gavnlige effekt er lille.
+Der er stor tiltro til, at interventionen har betydelige skadevirkninger.
+Patienternes værdier og præferencer er velkendte og ensartede imod interventionen.
+Implikationer:
+De fleste patienter vurderes ikke at ville ønske interventionen.
+Klinikeren vil meget sjældent tilbyde interventionen.
+Svag anbefaling for (Gul)
+Der gives en svag anbefaling for interventionen, når det vurderes, at fordelene ved interventionen er marginalt
+større end ulemperne, eller den tilgængelige evidens ikke kan udelukke en væsentlig fordel ved en eksisterende
+praksis, samtidig med at skadevirkningerne er få eller fraværende. Der er større mulighed for variation i individuelle
+69 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+præferencer.
+Ordlyd: Overvej at…
+Følgende vil trække i retning af en svag anbefaling for:
+Lav eller meget lav tiltro til de estimerede effekter.
+Balancen mellem gavnlige og skadelige virkninger ikke er entydig.
+Patienternes præferencer og værdier vurderes at variere væsentligt, eller de er ukendte.
+Implikationer:
+De fleste patienter vurderes at ønske interventionen, men nogen vil afstå.
+Klinikeren vil skulle bistå patienten med at træffe en beslutning, der passer til patientens værdier og præferencer.
+Svag anbefaling imod (Orange)
+Der gives en svag anbefaling imod interventionen, når ulemperne ved interventionen vurderes at være større end
+fordelene, men hvor man ikke har høj tiltro til de estimerede effekter. Den svage anbefaling imod, anvendes også
+hvor der er stærk evidens for både gavnlige og skadelige virkninger, men hvor balancen mellem dem er vanskelig
+at afgøre.
+Ordlyd: Anvend kun … efter nøje overvejelse, da den gavnlige effekt er usikker og/eller lille, og der er dokumenterede
+skadevirkninger såsom…
+Følgende vil trække i retning af en svag anbefaling imod:
+Lav eller meget lav tiltro til de estimerede effekter. Balancen mellem gavnlige og skadelige virkninger ikke er
+entydig.
+Skadevirkningerne vurderes at være marginalt større end den gavnlige effekt.
+Patienternes præferencer og værdier vurderes at variere væsentligt, eller de er ukendte.
+Implikationer:
+De fleste patienter vurderes at ville afstå fra interventionen, men nogen vil ønske den.
+Klinikeren vil skulle bistå patienten med at træffe en beslutning, der passer til patientens værdier og præferencer.
+Formulering af anbefaling ved mangel på evidens:
+God praksis anbefaling (Grå)
+God praksis anvendes, når der ikke foreligger relevant evidens, og bygger således udelukkende på faglig konsensus
+blandt medlemmerne af arbejdsgruppen. Anbefalingen kan være enten for eller imod interventionen. Da der
+udelukkende er tale om faglig konsensus, er denne type anbefaling svagere end de evidensbaserede anbefalinger,
+uanset om de evidensbaseret er stærke eller svage.
+De to typer af anbefalinger til god praksis anbefalinger
+Ordlyd:
+For:
+70 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Det er god praksis at overveje....
+Imod:
+Det er ikke god praksis rutinemæssigt at…
+71 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+20. Søgebeskrivelser og evidensvurderinger
+Søgebeskrivelser samt evidensvurderinger er offentliggjort på sst.dk.
+• Søgebeskrivelser kan tilgås på sst.dk.
+• AGREE-vurderinger kan tilgås på sst.dk.
+• AMSTAR-vurderinger kan tilgås på sst.dk.
+• RevMan-filer med risiko for bias-vurderinger og meta-analyser samt beskrivelse af inkluderede og ekskluderede
+studier kan tilgås på sst.dk.
+• Flow charts kan tilgås på sst.dk.
+72 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+21. Arbejdsgruppen og referencegruppen
+Arbejdsgruppen
+Arbejdsgruppen vedr. den nationale kliniske retningslinje for udredning og behandling af samtidig
+alkoholafhængighed og psykisk lidelse består af følgende personer:
+• Anette Søgaard Nielsen (formand), udpeget af Sundhedsstyrelsen, projektdirektør og adjunkt ved
+Forskningsenheden for klinisk alkoholforskning, Syddansk Universitet
+• Birgit Blum Andresen, udpeget af Socialrådgiverforeningen, souschef, Blå Kors ”Rold Skov”
+• Ulrik Becker, udpeget af Dansk Selskab for Gastroenterologi og Hepatologi,
+• overlæge, dr.med., Gastroenheden, Hvidovre Hospital, og professor, Statens Institut
+• for Folkesundhed, Syddansk Universitet
+• Anders Beich, udpeget af Dansk Selskab for Almen Medicin, praktiserende læge
+• Bjarne Stenger Elholm, udpeget af DASYS, afdelingsleder, Center for Misbrugsbehandling og Pleje, Københavns
+Kommune
+• Thomas Fahmy, udpeget af Alkoholfagligt Forum, overlæge, Lænkeambulatorierne i Danmark
+• Anja Frandsen, udpeget af Dansk Psykiatrisk Selskab, overlæge, Psykiatrisk Center Hvidovre
+• Bente Helweg-Mikkelsen, udpeget af Alkoholfagligt Forum, leder, Syddjurs Kommunes Misbrugscenter
+• Helle Kjær, udpeget af Dansk Psykologforening, centerleder, Blå Kors Behandlingscenter Taastrup
+• Per Nielsen, udpeget af Dansk Psykologforening, leder, Ringgården, Kompetencecenter for Dobbeltfokuseret
+Afhængighedsbehandling
+• Jeppe Nygaard Perrild, udpeget af Dansk Psykiatrisk Selskab, 1. reservelæge, Psykiatrisk Center København
+• Casper Westergaard, udpeget af Dansk Psykiatrisk Selskab, 1. reservelæge, Psykiatrisk Center Nordsjælland
+• Roland J. Westerlund, udpeget af Dansk Psykologforening, specialpsykolog, Psykiatrisk Center Hvidovre
+Fagkonsulenten Pernille Pinderup Jeppesen har som en del af sekretariatet, jf. nedenfor, været overordnet ansvarlig
+for litteraturgennemgangen og for at udarbejde udkast til retningslinje til drøftelse i arbejdsgruppen.
+Habilitetsforhold
+En person, der virker inden for det offentlige, og som har en personlig interesse i udfaldet af en konkret sag, må
+ikke deltage i behandlingen af denne sag. Hvis en person er inhabil, er der risiko for, at han eller hun ikke er uvildig
+ved vurderingen af en sag.
+Der foreligger habilitetserklæringer for alle arbejdsgruppemedlemmer. Habilitetserklæringerne kan tilgås på sst.dk.
+Referencegruppen
+Referencegruppen er udpeget af regioner, kommuner, patientforeninger og andre relevante interessenter på
+området, og dens opgave har bestået i at kommentere på afgrænsningen af og det faglige indhold i retningslinjen.
+Referencegruppen vedr. den nationale kliniske retningslinje for udredning og behandling af samtidig
+alkoholafhængighed og psykisk lidelse består af følgende personer:
+• Anette Søgaard Nielsen (formand), udpeget af Sundhedsstyrelsen, projektdirektø og adjunkt ved
+Forskningsenheden for klinisk alkoholforskning, Syddansk Universitet
+• Rafai Al-Atia, udpeget af KL, konsulent
+• Alberte Bryld Burgaard, udpeget af KKR Hovedstaden, myndighedschef
+• Malene Majlund Fischer, udpeget af KKR Syddanmark, centerleder (erstattet af Connie Krogh Sjursen, behandler
+og visitator)
+• Helene Gildebro, udpeget af Region Midtjylland, kvalitetskonsulent
+• Britta Glargaard, udpeget af KKR Nordjylland, afdelingsleder
+• Erik Høyer, udpeget af Region Nordjylland, overlæge
+• Palle Tovborg Havskov Jensen, udpeget af centerlederforeningen, centerleder
+73 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+• Anne Thalsgård Jørgensen, udpeget af Region Hovedstaden, klinikchef
+• Jannie Bruun Andersen, udpeget af Danske Regioner, konsulent
+• Anne Lindhardt, udpeget af Psykiatrifonden, formand
+• Sara Lindhardt, udpeget af Socialstyrelsen, specialkonsulent
+• Kirsten Midtgaard, udpeget af Landsforeningen SIND, koordinator
+• Bent Nielsen, udpeget af Region Syddanmark, professor
+• Erik Ravn, udpeget af Bedre Psykiatri – Landsforeningen for pårørende, næstformand
+• Helene Bygholm Risager, udpeget af KKR Midtjylland, centerleder
+• Amir Samkani, udpeget af Landsforeningen af Væresteder, konsulent
+• René Strøm, udpeget af Landsforeningen af nuværende og tidligere brugere af psykiatrien, LAP
+• Dennis Pihl Thomsen, udpeget af Sundheds- og Ældreministeriet, fuldmægtig
+Sekretariat
+Sekretariatet for begge grupper består af følgende personer:
+• Kirsten Birkefoss, søgespecialist, Sundhedsstyrelsen
+• Kit Broholm, specialkonsulent, Sundhedsstyrelsen
+• Sasja Juul Håkonsen, metodekonsulent, Sundhedsstyrelsen
+• Tina Myung Povlsen, metodekonsulent, Sundhedsstyrelsen
+• Marie Jakobsen, projektleder, Sundhedsstyrelsen
+• Pernille Pinderup Jeppesen, fagkonsulent, Sundhedsstyrelsen
+Peer review og offentlig høring
+Den nationale kliniske retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse
+har forud for udgivelsen været i bred offentlig høring. Følgende institutioner er opfordret til og/eller har afgivet
+høringssvar:
+• ADHD-foreningen
+• Alkoholfagligt Forum
+• Alkohol og Samfund
+• Bedre Psykiatri
+• Centerlederforeningen
+• Danske Patienter
+• Danske Regioner
+• Dansk Psykiatrisk Selskab
+• Dansk Psykolog Forening
+• Dansk Selskab for Addiktiv Medicin
+• Dansk Selskab for Almen Medicin
+• Dansk Selskab for Gastroenterologi og Hepatologi
+• Dansk Sygeplejeråd
+• Dansk Sygepleje Selskab (DASYS)
+• Fagligt Selskab for Addiktiv Sygepleje
+• KL
+• Landsforeningen af Væresteder
+• Landsforeningen af nuværende og tidligere brugere af psykiatrien (LAP)
+• Landsforeningen SIND
+• Lænken
+• Psykiatrifonden
+• Selskab for Misbrugspsykologi
+• Socialrådgiverforeningen
+• Socialpædagogernes Landsforbund
+• Socialstyrelsen
+• Social- og Indenrigsministeriet
+74 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+• Sundheds- og Ældreministeriet
+Retningslinjen er desuden i samme periode peer reviewet af:
+• Lars Linderoth, psykiater, faglig rådgiver, Nasjonal kompetancetjeneste for samtidig rusmisbruk og psykisk
+lidelse, Norge
+• Claudia Fahlke, psykolog, professor, Gøteborg Universitet, Sverige
+75 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+22. Forkortelser og begreber
+Acamprosat Præparatet markedsføres pr. 23.10.15 i Danmark under følgende navne: Aotal og Campral
+ADHD Attention-Deficit/Hyperactivity Disorder
+The Appraisal of Guidelines for Research and Evaluation. Værktøj til vurdering af kliniske
+AGREE
+retningslinjer
+A Measurement Tool to Assess Systematic Reviews. Værktøj til vurdering af systematiske
+AMSTAR
+reviews
+AUS Alcohol Use Scale
+Bias Bias er systematiske fejl i en undersøgelse, der fører til over eller underestimering af effekten
+Blinding indebærer, at det under forsøget er ukendt for deltageren, hvilken gruppe
+Blinding vedkommende er fordelt til. Flere parter, udover deltageren, kan være blindet, f.eks.
+behandleren, den der vurderer udfald, og den der analyserer data.
+BPD Serverity
+Borderline Personality Disorder Severity Index
+Index
+Case
+Behandlingskoordination
+management
+CI Konfidensinterval
+Compliance Overholdelse af behandlingen
+CVI Den Centrale Visitation
+DAT Dialektisk adfærdsterapi
+Disulfiram Præparatet markedsføres i Danmark som antabus
+Dobbeltfokuseret
+Behandling, som fokuserer på både alkoholafhængighed og psykisk lidelse
+behandling
+Drikkedag En drikkedag er defineret som en dag, hvor personen drikker alkohol
+Diagnostic and Statistical Manual of Mental Disorders, 4. og 5. udgave. Det amerikanske
+DSM-IV, DSMV klassifikations- og diagnosesystem for psykiske lidelser, udgivet af the American Psychiatric
+Association
+GAF Global Assessment of Functioning
+GRADE Grading of Recommendations Assessment, Development and Evaluation
+International Classification of Diseases, 10. udgave. System til klassifikation af sygdomme,
+ICD-10
+udformet af WHO
+Komorbiditet Forekomsten af samtidige sygdomme med forskellig ætiologi
+KRAM Kost, Rygning, Alkohol og Motion
+LPR Landspatientregisteret
+76 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+NAB Det Nationale Alkoholbehandlingsregister
+Præparatet markedsføres pr. 23.10.15 i Danmark under følgende navne: Naltrexon ”Accord”,
+Naltrexon
+Naltrexon ”AOP”, Naltrexone ”POA Pharma”, Apend samt Relistor®
+NICE National Institute of Clinical Excellence
+Outcomes Udfald
+PANSS Positive and Negative Symptom Scale
+PETAD Personality-Guided Treatment for Alcohol Dependence
+Polyfarmaci Samtidig brug af flere lægemidler
+Prævalens Andelen af en population med en bestemt tilstand
+Psykoedukation Undervisning af patienter og deres pårørende om psykisk lidelse
+PTSD Post-Traumatic Stress Disorder
+RCT Randomiseret kontrolleret studie
+Risiko for bias. En vurdering af hvor stor risikoen for bias er i et studie eller på tværs af en
+Risk of bias
+samling af studier
+ROP-lidelser Ruslidelser og psykiske lidelser
+RR Relativ risiko
+Selektionsbias Bias, der kan opstå, hvis deltagere ikke fordeles tilfældigt mellem grupperne i et forsøg
+SMD Standardised mean difference
+Teknologier og ydelser, der bl.a. er arbejdstids- besparende og kan øge kvaliteten af
+Velfærdsteknologi
+ydelserne. Et eksempel er videokonferencer
+77 of 78
+National klinisk retningslinje for udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse - Sundhedsstyrelsen
+Referencer
+1. PICO 5 for ALKO DOB FINAL.
+2. PICO 6 for ALKO DOB FINAL.
+3. rev man export for pico 9_dob_adverse events.
+4. PICO 9 (BACK UP) for alko outcomes.
+78 of 78
+
+--- END OF Gode instrukser + Edoks/national-klinisk-retningslinje-alkoholafhaengighed.pdf ---
+

@@ -1,11 +1,12 @@
 export const ADHD_GUIDELINE = {
-    title: 'Medicinsk Behandling af ADHD (Børn, Unge, Voksne)',
-    subtitle: 'RADS-vejledning (National Konsensus)',
+    title: 'Medicinsk Behandling af ADHD / ADD for Voksne',
+    subtitle: 'NKR og RADS-vejledning for voksne',
     pdfs: [
-        { title: 'Print RADS Pixi', url: `${import.meta.env.BASE_URL}pdf/rads_adhd-pixi_4.pdf` },
-        { title: 'Print Lægemiddelrek.', url: `${import.meta.env.BASE_URL}pdf/adhd-beh-juni-2016.pdf` }
+        { title: 'RADS ADHD (2016)', url: `${import.meta.env.BASE_URL}pdf/rads_adhd-pixi_4.pdf` },
+        { title: 'NKR ADHD Voksne', url: `${import.meta.env.BASE_URL}pdf/national-klinisk-retningslinje-adhd-hos-voksne.pdf` },
+        { title: 'Adhd-beh-juni-2016', url: `${import.meta.env.BASE_URL}pdf/adhd-beh-juni-2016.pdf` }
     ],
-    intro: 'Vejledningen sikrer national konsensus om den medicinske behandling af børn, unge og voksne med ADHD. Udredning, opstart og medicinsk skift varetages altid af speciallæger.',
+    intro: 'Vejledningen sikrer national konsensus for diagnostik, behandling og rammerne for kontrol af ADHD hos voksne.',
     algorithm: [
         {
             title: 'Udredning (Diagnostik)',

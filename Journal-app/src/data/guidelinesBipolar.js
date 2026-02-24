@@ -1,11 +1,12 @@
 export const BIPOLAR_GUIDELINE = {
     title: 'Medicinsk Behandling af Bipolar Lidelse',
-    subtitle: 'RADS-vejledning (National Konsensus)',
+    subtitle: 'Referenceprogram (RADS) og NKR (2021)',
     pdfs: [
-        { title: 'Print RADS Pixi', url: `${import.meta.env.BASE_URL}pdf/bipolar-lidelse-pixiudgave-februar-2016.pdf` },
-        { title: 'Print Lægemiddelrek.', url: `${import.meta.env.BASE_URL}pdf/beh-bipolar-okt-2015-221233.pdf` }
+        { title: 'RADS Bipolar Lidelse (2015)', url: `${import.meta.env.BASE_URL}pdf/beh-bipolar-okt-2015-221233.pdf` },
+        { title: 'Pixi-udgave Bipolar Lidelse', url: `${import.meta.env.BASE_URL}pdf/bipolar-lidelse-pixiudgave-februar-2016.pdf` },
+        { title: 'NKR Farmakologisk Behandling', url: `${import.meta.env.BASE_URL}pdf/nkr-for-farmakologisk-behandling-af-bipolar-lidelse.pdf` }
     ],
-    intro: 'Vejledningen sikrer national konsensus om den medicinske behandling af bipolar lidelse type I og type II, herunder håndtering af maniske og depressive episoder, blandingstilstande samt vedligeholdelsesbehandling og udredning.',
+    intro: 'Vejledningen sikrer national konsensus om kriterier for opstart, opfølgning, varighed og seponering af medicinsk behandling for voksne med bipolar lidelse. Den bygger på internationale guidelines (WFSBP, CANMAT, NICE, BAP).',
     algorithm: [
         {
             title: 'Sygdomskarakteristika (Type I vs. Type II)',

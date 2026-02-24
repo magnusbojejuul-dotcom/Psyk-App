@@ -145,10 +145,17 @@ function MMS() {
     // 18-23 Let til moderat demens
     // <18 Svær demens
     const getScoreColor = () => {
-        if (!isComplete) return "text-slate-400 bg-slate-50";
+        if (!isComplete && totalScore === 0) return "text-slate-400 bg-slate-50";
         if (totalScore >= 24) return "text-emerald-700 bg-emerald-100 border-emerald-200";
         if (totalScore >= 18) return "text-yellow-700 bg-yellow-100 border-yellow-200";
         return "text-red-700 bg-red-100 border-red-200";
+    };
+
+    const getScoreInterpretation = () => {
+        if (totalScore === 0 && Object.keys(scores).length === 0) return "Afventer...";
+        if (totalScore >= 24) return "Normal / let kognitiv svækkelse";
+        if (totalScore >= 18) return "Let til moderat demens";
+        return "Svær demens";
     };
 
     return (
@@ -225,7 +232,9 @@ function MMS() {
                             <Brain className="w-5 h-5" />
                         </div>
                         <div>
-                            <p className="text-sm font-semibold opacity-80">Total Score</p>
+                            <p className="text-sm font-semibold opacity-80">
+                                Resultat: {getScoreInterpretation()}
+                            </p>
                             <p className="text-xs opacity-70">
                                 {Object.keys(scores).length} af {MMS_QUESTIONS.length} domæner
                             </p>

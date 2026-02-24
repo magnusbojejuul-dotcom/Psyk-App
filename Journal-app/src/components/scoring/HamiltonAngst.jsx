@@ -193,11 +193,19 @@ function HamiltonAngst() {
     // HAM-A Score Interpretation: 
     // <14 (Mild/Ingen), 14-17 (Mild til moderat), 18-24 (Moderat til svær), ≥25 (Svær)
     const getScoreColor = () => {
-        if (!isComplete) return "text-slate-400 bg-slate-50";
+        if (!isComplete && totalScore === 0) return "text-slate-400 bg-slate-50";
         if (totalScore >= 25) return "text-red-700 bg-red-100 border-red-200";
         if (totalScore >= 18) return "text-amber-700 bg-amber-100 border-amber-200";
         if (totalScore >= 14) return "text-yellow-700 bg-yellow-100 border-yellow-200";
         return "text-emerald-700 bg-emerald-100 border-emerald-200";
+    };
+
+    const getScoreInterpretation = () => {
+        if (totalScore === 0 && Object.keys(scores).length === 0) return "Afventer...";
+        if (totalScore >= 25) return "Svær angst";
+        if (totalScore >= 18) return "Moderat til svær angst";
+        if (totalScore >= 14) return "Let til moderat angst";
+        return "Ingen/mild angst";
     };
 
     return (
@@ -273,7 +281,9 @@ function HamiltonAngst() {
                             <Brain className="w-5 h-5" />
                         </div>
                         <div>
-                            <p className="text-sm font-semibold opacity-80">Total Score</p>
+                            <p className="text-sm font-semibold opacity-80">
+                                Resultat: {getScoreInterpretation()}
+                            </p>
                             <p className="text-xs opacity-70">
                                 {Object.keys(scores).length} af {HAMA_QUESTIONS.length} besvaret
                             </p>

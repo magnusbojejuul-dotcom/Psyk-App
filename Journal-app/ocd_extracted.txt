@@ -1,0 +1,2427 @@
+
+
+--- START OF Gode instrukser + Edoks/national-klinisk-retningslinje-behandling-af-obsessiv-kompultiv-tilstand.pdf ---
+National klinisk retningslinje for behandling af
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+obsessiv-kompulsiv tilstand (OCD)
+© Sundhedsstyrelsen, 2019. Publikationen kan frit refereres med tydelig kildeangivelse.
+Kategori: Faglig rådgivning
+Version: 1.1
+Format: PDF
+ISBN elektronisk udgave: 978-87-7014-324-0
+Kontaktperson
+Sundhedsstyrelsen
+Islands Brygge 67 DK 2300 København S
+nkrsekretariatet@sst.dk
+72227400
+Ansvarsfraskrivelse
+Sundhedsstyrelsens nationale kliniske retningslinjer er systematisk udarbejdede udsagn med inddragelse af relevant sagkundskab.
+Nationale kliniske retningslinjer kan bruges af fagpersoner, når de skal træffe beslutninger om passende og god klinisk sundhedsfaglig
+ydelse i specifikke situationer. De nationale kliniske retningslinjer er offentligt tilgængelige, således at borgere og patienter også kan
+orientere sig i retningslinjerne.
+Nationale kliniske retningslinjer klassificeres som faglig rådgivning, hvilket indebærer, at Sundhedsstyrelsen anbefaler relevante
+fagpersoner at følge retningslinjerne. De nationale kliniske retningslinjer er ikke juridisk bindende, og det vil altid være det faglige skøn i
+den konkrete kliniske situation, der er afgørende for beslutningen om passende og korrekt sundhedsfaglig ydelse. Der er ingen garanti
+for et succesfuldt behandlingsresultat, selvom sundhedspersoner følger anbefalingerne. I visse tilfælde kan en behandlingsmetode med
+lavere evidensstyrke være at foretrække, fordi den passer bedre til patientens situation. Sundhedspersoner skal generelt inddrage
+patienten, når de vælger behandling.
+ISBN elektronisk udgave: 978-87-7014-324-0
+Version: 1.1
+2 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Indhold
+Centrale budskaber ....................................................................................................................................................................................................................4
+1 - Læsevejledning ......................................................................................................................................................................................................................9
+2 - Indledning .............................................................................................................................................................................................................................11
+3 - Behandling af mild OCD ...................................................................................................................................................................................................14
+4 - Familiebehandling til børn og unge med OCD .............................................................................................................................................................17
+5 - Kognitiv adfærdsterapi individuelt eller i gruppe ........................................................................................................................................................21
+6 - Tredjebølge Kognitiv Adfærdsterapi ...............................................................................................................................................................................26
+7 - Førstevalgsbehandling af børn og unge med moderat til svær OCD .....................................................................................................................30
+8 - Førstevalgsbehandling af voksne med moderat til svær OCD .................................................................................................................................35
+9 - Varighed af behandling med kognitiv adfærdsterapi til børn, unge og voksne med OCD ................................................................................40
+10 - Tillægsbehandling med atypisk antipsykotikum til voksne med svær OCD .......................................................................................................42
+11 - Seponering af antidepressiva ........................................................................................................................................................................................47
+12 - Baggrund ............................................................................................................................................................................................................................52
+13 - Implementering .................................................................................................................................................................................................................53
+14 - Monitorering .....................................................................................................................................................................................................................54
+15 - Opdatering og videre forskning ....................................................................................................................................................................................55
+16 - Beskrivelse af anvendt metode .....................................................................................................................................................................................56
+17 - Fokuserede spørgsmål ....................................................................................................................................................................................................57
+18 - Beskrivelse af anbefalingernes styrke og implikationer ..........................................................................................................................................58
+19 - Søgebeskrivelser og evidensvurderinger ....................................................................................................................................................................60
+20 - Arbejdsgruppen og referencegruppen ........................................................................................................................................................................61
+21 - Forkortelser og begreber ................................................................................................................................................................................................64
+22 - Referenceliste ...................................................................................................................................................................................................................66
+Referencer ..................................................................................................................................................................................................................................71
+3 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Centrale budskaber
+1 - Læsevejledning
+2 - Indledning
+3 - Behandling af mild OCD
+God praksis (konsensus)
+Det er god praksis at tilbyde kognitiv adfærdsterapi til børn, unge og voksne med mild OCD, da der er påvist en mulig
+effekt, og der ikke er kendte ulemper ved behandlingen.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019
+Remark: Praktiske råd og særlige patientovervejelser
+Motivationen hos den enkelte patient bør overvejes og medinddrages i beslutningsprocessen om et behandlingstilbud til patienter med mild
+OCD. Således kan motivationen hos børn og unge ligge hos familien snarere end hos barnet selv. Dette er væsentligt at afdække, idet en
+manglende motivation hos patienten kan resultere i mindre behandlingseffekt og højt dropout.
+Tilbud om behandling bør ligeledes overvejes under hensyntagen til, hvorvidt behandlingen kan passes ind i forhold til patientens og familiens
+dagligliv, som fx skole og arbejde samt præferencer for behandlingsintensitet, som modereres af bl.a. motivation for behandlingen.
+Afhængigt af patientens præferencer og ressourcer kan der tilbydes selvhjælpsbehandlinger i form af fx biblioterapi (dvs. anvendelse af
+litteratur i en psykoterapeutisk proces, enten ved at patienten selv skriver og evt. fremfører egne tekster eller ved læsning af
+litteratur), selvhjælpsgrupper og internetbaseret eller behandlerbaseret KAT for OCD.
+4 - Familiebehandling til børn og unge med OCD
+Svag anbefaling
+Manualiseret familiebaseret kognitiv adfærdsterapi og manualiseret kognitiv adfærdsterapi kan begge overvejes til
+behandling af børn og unge med OCD, idet der ikke er dokumenteret en forskel i effekt mellem de to behandlingsformer.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019
+Remark: Praktiske råd og særlige patientovervejelser
+Ved behandlingen af børn og unge er det altid vigtigt at inddrage forældre og/eller omsorgspersoner med særlig tæt tilknytning til barnet eller
+den unge, da familien kan være en værdifuld støtte i bedringsprocessen. Hvor meget, de pårørende skal inddrages i behandlingen, vil afhænge
+af alder, personlige præferencer hos barnet eller den unge og forældrene, familiedynamik samt samarbejdet mellem familie og behandler.
+Såfremt scoringen på familietilpasning i OCD problematikken skønnes høj, er det en god idé at overveje at inddrage forældrene eller hele
+familien systematisk i behandlingen.
+Valget af behandlingsformat bør ske på baggrund af en individuel vurdering af både patienten og patientens familie.
+5 - Kognitiv adfærdsterapi individuelt eller i gruppe
+4 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Svag anbefaling
+Overvej at tilbyde kognitiv adfærdsterapi enten individuelt eller i gruppe til voksne med OCD, da der ikke er
+dokumenteret klinisk relevante forskelle.
+Det er god praksis at være tilbageholdende med at tilbyde gruppebehandling til børn og unge med OCD, da der ikke
+foreligger evidens og dansksprogede manualer herfor.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019
+Remark: Praktiske råd og særlige patientovervejelser
+Typen af OCD-symptomer og eventuel komorbiditet spiller en væsentlig rolle i vurderingen af, om en patient vil kunne profitere af et
+gruppetilbud. Fx kan nogle problematikker (ofte personlige eller intime emner) være svære at håndtere i en gruppesammenhæng, og et
+individuelt forløb vil være at foretrække af patienten.
+De to behandlingsformer kan med fordel kombineres, hvor nogle sessioner afholdes i gruppe og andre i individuelformat, da nogle symptomer
+eller problematikker kan være mere egnet til et individuel- eller gruppeformat.
+Der er ingen kendt dansksproget behandlingsmanual for KAT i gruppeformat til børn og unge, hvorfor en kvalificeret behandlingsmanual ikke
+kan tilbydes.
+Valget af behandlingsformat hos børn, unge og voksne med OCD bør ske på grundlag af en individuel vurdering af den enkelte patients behov
+og ressourcer.
+God praksis (konsensus) Ny
+Det er god praksis at være tilbageholdende med at tilbyde gruppebehandling til børn og unge med OCD, da der ikke
+foreligger evidens og dansksprogede manualer herfor.
+Remark: Praktiske råd og særlige patientovervejelser
+Typen af OCD-symptomer og eventuel komorbiditet spiller en væsentlig rolle i vurderingen af, om en patient vil kunne profitere af et
+gruppetilbud. Fx kan nogle problematikker (ofte personlige eller intime emner) være svære at håndtere i en gruppesammenhæng, og et
+individuelt forløb vil være at foretrække af patienten.
+De to behandlingsformer kan med fordel kombineres, hvor nogle sessioner afholdes i gruppe og andre i individuelformat, da nogle symptomer
+eller problematikker kan være mere egnet til et individuel- eller gruppeformat.
+Der er ingen kendt dansksproget behandlingsmanual for KAT i gruppeformat til børn og unge, hvorfor en kvalificeret behandlingsmanual ikke
+kan tilbydes.
+Valget af behandlingsformat hos børn, unge og voksne med OCD bør ske på grundlag af en individuel vurdering af den enkelte patients behov
+og ressourcer.
+6 - Tredjebølge Kognitiv Adfærdsterapi
+Svag anbefaling mod
+Anvend kun tredjebølge kognitiv terapi frem for standard kognitiv adfærdsterapi efter nøje overvejelse til behandling af
+børn, unge og voksne med OCD, da effekten er usikker.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019
+Remark: Praktiske råd og særlige patientovervejelser
+Hvis der er et stærkt patientønske, og der indgår eksponering og responshindring, kan tredjebølge KAT overvejes (evt. under nøje opfølgning i
+forhold til effekt).
+5 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+7 - Førstevalgsbehandling af børn og unge med moderat til svær OCD
+Stærk anbefaling mod
+Anvend ikke selektive serotoningenoptagshæmmere (SSRI) som tillæg til behandling med kognitiv adfærdsterapi som
+førstevalgsbehandling til børn og unge med moderat til svær OCD, da der ikke er fundet dokumenteret effekt, og der er
+kendte bivirkninger forbundet med SSRI.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019
+Remark: Praktiske råd og særlige patientovervejelser
+Behandling med SSRI som tillæg til KAT kan overvejes, hvis KAT ikke har effekt eller hvis der er forhold, der forhindrer fuld effekt af KAT (som
+komorbiditet, familiefaktorer, dårlig indsigt osv.).
+Børn og unge med moderat til svær OCD, som sættes i behandling med et SSRI-præparat, bør monitoreres tæt, da denne behandling kan øge
+risikoen for selvmordstanker og selvmordsrelateret adfærd. Se også gældende vejledning om behandling af børn og unge med
+psykofarmaka(28).
+8 - Førstevalgsbehandling af voksne med moderat til svær OCD
+Svag anbefaling mod
+Anvend kun efter nøje overvejelse selektive serotoningenoptagshæmmere (SSRI) som tillæg til behandling med kognitiv
+adfærdsterapi som førstevalg i behandlingen af voksne med moderat til svær OCD, da der ikke er påvist en forskel i
+effekt, og der er kendte bivirkninger forbundet med SSRI.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019
+Remark: Praktiske råd og særlige patientovervejelser
+Behandling med SSRI som tillæg til KAT kan overvejes, hvis KAT alene ikke har effekt eller, hvis der er forhold, der forhindrer fuld effekt af KAT.
+Patienter, som sættes i behandling med et SSRI-præparat, bør monitoreres tæt. Dette gælder særligt unge under 25 år og patienter med
+komorbid depression, da denne type behandling kan øge risikoen for selvmordstanker og selvmordsrelateret adfærd for disse grupper.
+9 - Varighed af behandling med kognitiv adfærdsterapi til børn, unge og voksne med OCD
+God praksis (konsensus)
+Det er god praksis at overveje at tilbyde børn, unge og voksne, der fortsat har moderat til svær OCD efter et forløb med
+kognitiv adfærdsterapi, yderligere et forløb med kognitiv adfærdsterapi.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019
+Remark: Praktiske råd og særlige patientovervejelser
+Tilbuddet om længerevarende behandling med KAT skal altid ske på baggrund af en individuel vurdering. Den individuelle vurdering skal
+inkludere overvejelser om, hvorvidt et andet terapiformat for den enkelte patient (fx gruppe, familie, parbehandling), behandlerskift og/eller
+om et andet tidspunkt for behandling kan bidrage til en bedre respons på behandlingen. Derudover skal patientens motivation for behandling
+med KAT inddrages i overvejelserne. Endelig bør en diagnostisk revurdering overvejes.
+10 - Tillægsbehandling med atypisk antipsykotikum til voksne med svær OCD
+6 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Svag anbefaling mod
+Anvend kun efter nøje overvejelse et atypisk antipsykotikum som tillægsbehandling til voksne med svær OCD, som ikke
+har effekt af behandling med kognitiv adfærdsterapi og antidepressiva (SSRI), da der ikke er påvist en klinisk relevant
+effekt heraf, og der er risiko for bivirkninger.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019
+Remark: Praktiske råd og særlige patientovervejelser
+Diagnosen OCD skal genovervejes før opstart af behandling med atypisk antipsykotika.
+For patienter med en særlig svær grad af OCD, vil behandling med atypisk antipsykotikum være en mulighed. Ved behandling af OCD med
+atypisk antipsykotika skal der i udgangspunktet anvendes en lav dosis, der optrappes langsomt og aldrig til doser som ved psykosebehandling.
+Opstart af kombinationsbehandlingen bør kun udføres af en fagperson med psykiatrisk specialviden.
+Behandling med atypiske antipsykotika til OCD er off-label, der er derfor øget krav til information og dokumentation af brug.
+Ved manglende effekt efter en måned bør den atypiske antipsykotiske tillægsbehandling seponeres. Dette gælder også ved vedvarende
+bivirkninger.
+11 - Seponering af antidepressiva
+Svag anbefaling
+Overvej at seponere antidepressiv behandling 6 måneder efter stabilisering af symptombilledet frem for efter 12
+måneder hos børn, unge og voksne med OCD.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019
+Remark: Praktiske råd og særlige patientovervejelser
+Seponering skal ske i samråd med patientens præferencer, da nogle patienter vil ønske en tidlig seponering af antidepressiva, mens andre vil
+føle tryghed i behandlingen med antidepressiva.
+Det er vigtigt, at seponering sker ved langsom nedtrapning. Varigheden af nedtrapningen afhænger af bl.a. dosisstørrelse og patients
+præference for hurtig/langsom udtrapning, men bør som tommelfingerregel forløbe over minimum to måneder. Seponeringssymptomer
+omfatter svimmelhed, ataksi, gastro-intestinale symptomer, influenzalignende symptomer, insomni, mareridt, angst, agitation, grådlabilitet,
+irritabilitet, overaktivitet, koncentrations- og hukommelsesproblemer, nedsat stemningsleje, konfusion, depersonalisationssymptomer og
+muskeltrækninger (61).
+12 - Baggrund
+13 - Implementering
+14 - Monitorering
+15 - Opdatering og videre forskning
+16 - Beskrivelse af anvendt metode
+17 - Fokuserede spørgsmål
+18 - Beskrivelse af anbefalingernes styrke og implikationer
+19 - Søgebeskrivelser og evidensvurderinger
+20 - Arbejdsgruppen og referencegruppen
+7 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+21 - Forkortelser og begreber
+22 - Referenceliste
+8 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+1 - Læsevejledning
+Retningslinjen er bygget op i to lag:
+1. Lag - Anbefalingen
+Stærk anbefaling for (Grøn)
+Der gives en stærk anbefaling for, når der er evidens af høj kvalitet, der viser, at de samlede fordele ved interventionen er klart større
+end ulemperne. Det betyder, at alle, eller næsten alle, patienter vil ønske den anbefalede intervention
+Stærk anbefaling imod (Grøn + Rød)
+Der gives en stærk anbefaling imod, når der er evidens af høj kvalitet, der viser, at de samlede ulemper ved interventionen er klart større
+end fordelene. Der anvendes også en stærk anbefaling imod, når gennemgangen af evidensen viser, at en intervention med stor
+sikkerhed er nyttesløs.
+Svag/betinget anbefaling for (Gul)
+Der gives en svag/betinget anbefaling for interventionen, når det vurderes, at fordelene ved interventionen er større end ulemperne,
+eller den tilgængelige evidens ikke kan udelukke en væsentlig fordel ved interventionen, samtidig med at det vurderes, at
+skadevirkningerne er få eller fraværende. Denne anbefaling anvendes også, når det vurderes, at patienters præferencer varierer.
+Svag/betinget anbefaling imod (Gul + Rød)
+Der gives en svag/betinget anbefaling imod interventionen, når det vurderes, at ulemperne ved interventionen er større end fordelene,
+men hvor dette ikke er underbygget af stærk evidens. Denne anbefaling anvendes også, hvor der er stærk evidens for både gavnlige og
+skadelige virkninger, men hvor balancen mellem dem er vanskelige at afgøre. Ligeledes anvendes den også, når det vurderes, at
+patientens præferencer varierer.
+God praksis (Grå)
+God praksis anvendes, når der ikke foreligger relevant evidens, og bygger således på faglig konsensus blandt medlemmerne af
+arbejdsgruppen, der har udarbejdet den kliniske retningslinje. Anbefalingen kan være enten for eller imod interventionen. Da der er tale
+om faglig konsensus, er denne type anbefaling svagere end de evidensbaserede anbefalinger, uanset om de evidensbaseret er stærke
+eller svage.
+Se bilag "Beskrivelse af anbefalingernes styrke og implikationer" for mere information
+2. Lag – Grundlaget for anbefalingen
+Klik på anbefalingen, hvis du vil vide mere om grundlaget for anbefalingen
+Evidensprofilen: De samlede effektestimater samt referencer til studierne.
+Sammenfatning: Overblik over samt kort gennemgang af den tilgrundliggende evidens
+Kvaliteten af evidensen:
+Høj: Vi er meget sikre på, at den sande effekt ligger tæt på den estimerede effekt
+Moderat: Vi er moderat sikre på den estimerede effekt. Den sande effekt ligger sandsynligvis tæt på denne, men der er en mulighed for,
+at den er væsentligt anderledes
+Lav: Vi har begrænset tiltro til den estimerede effekt. Den sande effekt kan være væsentligt anderledes end den estimerede effekt
+Meget lav: Vi har meget ringe tiltro til den estimerede effekt. Den sande effekt vil sandsynligvis være væsentligt anderledes end den
+estimerede effekt.
+Nøgleinformation: Kort beskrivelse af gavnlige og skadelige virkninger, kvaliteten af evidensen og overvejelser om
+patientpræferencer.
+Rationale: Beskrivelse af hvorledes de ovenstående elementer blev vægtet i forhold til hinanden og resulterede i den aktuelle
+anbefalings retning og styrke.
+9 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Praktiske oplysninger: Praktisk information vedrørende behandlingen og oplysninger om eventuelle særlige patientovervejelser.
+Adaption: Såfremt anbefalingen er adapteret fra en anden retningslinje, findes her en beskrivelse af eventuelle ændringer.
+Diskussion: Hvis du er logget ind som bruger, kan du her komme med kommentarer til specifikke anbefalinger.
+Referencer: Referenceliste for anbefalingen.
+Den anvendte graduering af evidensens kvalitet og anbefalingsstyrke baseres på GRADE (Grading of Recommendations Assessment,
+Development and Evaluation).
+For en hurtig og informativ intriduktion til GRADE anbefales følgende artikel G.Goldet, J.Howick. Understanding GRADE: an
+introduction. Journal of Evidence-Based Medicine 6 (2013) 50-54. Se også: http://www.gradeworkinggroup.org.
+Desuden henvises der til Sundhedsstyrelsens metodehåndbog for en overordnet introduktion til metoden bag udarbejdelsen af de
+Nationale Kliniske Retningslinjer.
+10 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+2 - Indledning
+Formål
+Formålet med de nationale kliniske retningslinjer er at sikre en evidensbaseret indsats afensartet høj kvalitet på tværs af landet,
+medvirke til hensigtsmæssige patientforløb og vidensdeling på tværs af sektorer og faggrupper samt prioritering i sundhedsvæsenet.
+Obsessiv-kompulsiv tilstand (OCD) har ved effektiv og tidlig behandling en god prognose(1,2). Ubehandlet eller ved manglende effekt af
+behandlingen kan OCD påvirke funktionsevnen og forringe både patienten og de pårørendes livskvalitet. Der er brug for
+danske retningslinjer for at formidle den forskningsbaserede viden, der er på området og tilbyde en effektiv behandling af børn, unge og
+voksne i Danmark.
+Afgrænsning af patientgruppe
+Retningslinjen omhandler behandling af børn, unge og voksne med OCD, også kaldet tvangslidelse (DF42). OCD er en heterogen lidelse
+karakteriseret ved tilbagevendende obsessioner (tvangstanker) og kompulsioner (tvangshandlinger). Obsessioner er gentagne uønskede
+og påtrængende tanker, billeder, voldsom trang eller fornemmelser. Obsessioner
+kan fx omhandle snavs og smitte, at noget frygteligt skal ske, sygdom, seksualitet, død og angst for at forvolde sig selv eller andre skade.
+Kompulsioner er handlinger, somden enkelte skal gentage, ofte flere gange og/eller på en ritualiseret måde, for at forhindre ubehag.
+Kompulsioner kan fx være vaskeritualer, tjekkeritualer, gentagelsesritualer og symmetri tvang. Indhold af obsessioner og kompulsioner
+er individuelt forskellige. Den enkelte person bruger typisk meget af sin tid på at udføre kompulsioner og involvere andre i dem.
+Symptomerne er ofte ledsaget af angst og voldsomt ubehag, der påvirker den enkeltes livskvalitet og sociale funktionsevne.
+Ved OCD er der stor komorbiditet med øget forekomst af alle andre typer af psykiske lidelser sammenlignet med normalpopulationen.
+De hyppigste komorbide lidelser er affektive lidelser og angstlidelser. Men alkoholmisbrug, spiseforstyrrelser,
+personlighedsforstyrrelser (primært tvangspræget og ængstelig evasiv), tics og opmærksomhedsforstyrrelse og hyperaktivitet samt
+psykotiske symptomer kan også forekomme(3). Graden og typen
+af komorbiditet hos børn, unge og voksne med OCD varierer i høj grad. Det er derfor centralt at tage højde for komorbiditet i
+behandlingsplanlægningen. Komorbiditet komplicerer behandlingen på forskellig vis og i forskellig udstrækning, hvorfor denne
+retningslinje ikke indeholder anbefalinger herfor. Under punktet ’særlige patientovervejelser' er der i enkelte anbefalinger taget hensyn
+til patienter med komorbide lidelser. I litteratursøgningen til denne retningslinje har komorbiditet ikke været et eksklusionskriterium, så
+længe OCD var hoveddiagnosen. Obsessive og/eller kompulsive symptomer eller adfærd kan optræde i mange andre psykiske lidelser.
+En grundig udredning og differentiel diagnostisk vurdering er derfor meget vigtig.
+Nogle af retningslinjens anbefalinger gælder både for børn, unge og voksne, mens andre kun gælder for voksne eller børn og unge. Det
+er specificeret i retningslinjen, når en anbefaling ikke er gældende for alle aldersgrupper. Denne retningslinje omhandler behandlingen af
+patienter med hoveddiagnosen OCD. OCD opdeles i retningslinjen i sværhedsgrader af mild, moderat, svær og meget svær OCD i tråd
+med Sundhedsstyrelsens referenceprogram for angstlidelser(4), NICE guideline for OCD(5) og den landsdækkende kliniske retningslinje
+vedrørende udredning og behandling af OCD hos børn og unge(6). Sværhedsgraden bliver målt ved brug af Yale-Brown Obsessive
+Compulsive Scale (Y-BOCS) eller Children Yale-Brown Obsessive Compulsive Scale (CY-BOCS). Y-BOCS og CYBOCS inddrager antal
+symptomer, tidsforbrug, graden af svækkelse af social funktionsevne, graden af ubehag relateret til symptomerne, hvor meget
+modstand, der kan ydes mod tvangssymptomerne og hvor meget denne modstand lykkes. Nogle af anbefalingerne retter sig primært
+mod bestemte sværhedsgrader af OCD (enten mild OCD eller moderat til svær OCD), i disse tilfælde vil det fremgå af den enkelte
+anbefaling. Andre anbefalinger er ikke afhængig af sværhedsgraden.
+Målgruppe/brugere
+Denne retningslinje henvender sig primært til sundhedsprofessionelle, som behandler patienter med OCD. Dette indebærer en bred
+gruppe af fagfolk, såsom læger, psykologer, sygeplejersker m.fl. Derudover henvender retningslinjen sig til beslutningstagere på området
+og kan tjene som information til andre involverede parter.
+Sekundært henvender retningslinjen sig til personale på sygehuse og i kommunerne, som møder patienter med OCD. Viden om
+evidensbaseret behandling kan være med til at øge opmærksomheden på korrekt henvisning og behandlingstilbud til patienter med
+OCD. Patienter og pårørende kan ligeledes orientere sig i retningslinjen.
+11 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Emneafgrænsning
+Den nationale kliniske retningslinje indeholder handlingsanvisninger for udvalgte og velafgrænsede kliniske problemstillinger
+(’punktnedslag i patientforløbet’). Disse problemstillinger er prioriteret af den faglige arbejdsgruppe som de områder, hvor det er vigtigst
+at få afklaret evidensen.
+Denne nationale kliniske retningslinje for OCD beskæftiger sig således kun med udvalgte behandlingsindsatser. Retningslinjen retter sig
+ikke mod den pædagogiske eller rehabiliterende indsats. Der er således ikke tale om en udtømmende beskrivelse af evidensbaseret
+behandling af OCD, og det er ikke en guideline eller klinisk behandlingsstandard for hele behandlingsforløbet.
+Behandling af børn, unge og voksne med OCD bør altid inddrage kombinationen af biologiske, psykologiske og sociale forhold.
+Endvidere bør behandling af børn, unge og voksne med OCD tage udgangspunkt i den enkelte patients ressourcer og lidelsens
+sværhedsgrad. Retningslinjen går frem efter princippet om ”stepped care” i formuleringen af nedslagspunkterne. Stepped care henviser
+til forskellige gradvise skridt i et individuelt behandlingsforløb, herunder førstevalg af behandlingstilbud (der altid vil udgøre den mindst
+indgribende behandling) og ved udeblivende ønsket effekt heraf andet valg i behandlingsforløbet.
+Følgende ni fokuserede spørgsmål er undersøgt:
+• Bør børn, unge og voksne med mild OCD tilbydes kognitiv adfærdsterapi af minimum seks sessioners varighed?
+• Bør børn og unge med OCD tilbydes manualiseret familiebaseret kognitiv adfærdsterapi eller manualiseret kognitiv adfærdsterapi?
+• Bør børn, unge og voksne med OCD tilbydes individuel kognitiv adfærdsterapi eller kognitiv adfærdsterapi i gruppe?
+• Bør børn, unge og voksne med OCD tilbydes kognitiv adfærdsterapi eller tredjebølge kognitiv terapi?
+• Bør børn og unge med moderat til svær OCD tilbydes kognitiv adfærdsterapi eller en kombinationsbehandling bestående af
+kognitiv adfærdsterapi og selektive serotoningenoptagshæmmere (SSRI) som førstevalgsbehandling?
+• Bør voksne med moderat til svær OCD tilbydes kognitiv adfærdsterapi eller en kombinationsbehandling bestående af kognitiv
+adfærdsterapi og selektive serotoningenoptagshæmmere (SSRI) som førstevalgsbehandling?
+• Bør børn, unge og voksne, der fortsat har moderat til svær OCD efter 10 sessioner kognitiv adfærdsterapi tilbydes op til yderligere
+fem eller op til yderligere 6 til 14 sessioner?
+• Bør voksne, som fortsat har svær OCD efter kombinationsbehandling med kognitiv adfærdsterapi og antidepressiva (SSRI), tilbydes
+tillægsbehandling med et atypisk antipsykotikum?
+• Bør seponering af antidepressiva forsøges 6 måneder eller 12 måneder efter stabilisering af symptombilledet hos børn, unge og
+voksne med OCD?
+I udvælgelsen og prioriteringen af relevante fokuserede spørgsmål er der lagt vægt på områder, hvor evidensen har været sparsom, og
+den kliniske praksis varierer på tværs af landet, samt områder, hvor der er usikkerhed omkring evidensen for effekten af den udøvede
+praksis eller evidensgrundlaget formodes at have udviklet sig i løbet af de seneste år. Endvidere tog arbejdsgruppen udgangspunkt i
+kendt viden om, at kognitiv adfærdsterapi (KAT) er den mest effektive psykoterapeutiske behandling til børn, unge og voksne som lider
+af OCD(4,5,7-10). Standard manualiseret KAT til OCD indeholder terapielementerne psykoedukation, kognitiv omstrukturering,
+eksponering og responshindring. Et standard KAT forløb er på 12-14 sessioner.
+Til at vurdere effekten af de undersøgte behandlingsformer har arbejdsgruppen udvalgt centrale outcomes (udfald), som denne
+retningslinje fokuserer på. Ændringer i livskvalitet og social funktionsevne udgør kritiske outcomes i alle fokuserede spørgsmål.
+Derudover, indgår 30 % reduktion på OCD symptomer efter endt behandling eller ved opfølgning af patienterne efter en periode uden
+behandling (follow-up) som kritisk outcomes i syv ud af retningslinjens ni fokuserede spørgsmål. I de to fokuserede spørgsmål, som
+omhandler tillægsbehandling med SSRI hos børn, unge og voksne udgør frafald på grund af bivirkninger et kritisk outcome. Spørgsmålet
+om længde af SSRI behandling har ud over de ovennævnte kritiske outcomes også alvorlige medicinske bivirkninger, antal af patienter i
+remission og et mål for klinisk behandlingsrespons (CGI-I/CGI-S) som kritiske outcomes. De kritiske outcomes er valgt med
+udgangspunkt i et patientperspektiv, dvs. outcomes som vurderes at have størst betydning for patienten. En score på ≤9 på CY-BOCS/
+Y-BOCS skalaen er valgt som outcome mål for remission, da dette afspejler en cut-off værdi, som vurderes klinisk relevant.
+Arbejdsgruppen ønskede også at undersøge effekten af psykoterapeutisk efterbehandling og effekten af internet-/computerbaseret
+KAT. Under formuleringen af nedslagspunkterne blev de to områder lagt sammen til ét fokuseret spørgsmål: ”Bør børn, unge og voksne
+med OCD tilbydes efterbehandling i form af selvhjælpsinterventioner med internet-/computerbaseret KAT?”. Spørgsmålet er imidlertid
+blevet trukket ud af retningslinjen, da det i arbejdet med spørgsmålet blevet tydeligt for arbejdsgruppen, at det ikke var hensigtsmæssigt
+at samle de to spørgsmål i ét, og det ikke var muligt at give en anbefaling på baggrund af det stillede spørgsmål. Arbejdsgruppen
+vurderer dog stadig, at efterbehandling og internet-/computerbaseret KAT afspejler vigtige områder, som vil have gavn af at blive
+12 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+undersøgt nærmere i fremtiden.
+En uddybende beskrivelse af de fokuserede spørgsmål samt de valgte outcomes findes i afsnittet "Fokuserede spørgsmål". Konsensus
+vedrørende indhold og styrke af de udarbejdede anbefalinger er opnået gennem drøftelser i arbejdsgruppen.
+Patientperspektivet
+Det er vigtigt, at patientens værdier og præferencer løbende inddrages i patientforløbet. I denne retningslinje er patientperspektivet
+repræsenteret via OCD-foreningen, som har udpeget et medlem i den nedsatte referencegruppe. Derudover har de haft mulighed for at
+afgive høringssvar til udkastet til den færdige retningslinje. Se medlemmerne af referencegruppen i afsnittet "Arbejdsgruppen og
+referencegruppen".
+Rationale for ikke at opdatere i 2019
+SST har på baggrund af tilbagemeldinger fra faglige selskaber, samt en overordnet litteratursøgning, besluttet ikke at opdatere
+retningslinjen i 2019. Som udgangspunkt vil der tages stilling til behov for opdatering hvert tredje år.
+13 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+3 - Behandling af mild OCD
+Fokuseret spørgsmål 1: Bør børn, unge og voksne med mild OCD tilbydes kognitiv adfærdsterapi af minimum seks sessioners
+varighed?
+KAT har effekt i behandling af børn, unge og voksne med moderat og svær OCD(5,7,8). Patienter med en mild grad af OCD (defineret
+som en C-YBOCS/Y- BOCS score mellem 10-18 og/ eller CGI-S ≥2) tilbydes aktuelt ingen behandling. Der er behov for viden
+om, hvorvidt et behandlingstilbud med KAT har en gavnlig effekt på OCD symptomerne hos børn, unge og voksne med mild OCD (se
+også delafsnittet om emneafgræsning i afsnittet "Indledning").
+God praksis (konsensus)
+Det er god praksis at tilbyde kognitiv adfærdsterapi til børn, unge og voksne med mild OCD, da der er påvist en mulig effekt, og
+der ikke er kendte ulemper ved behandlingen.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019
+Praktiske råd og særlige patientovervejelser
+Motivationen hos den enkelte patient bør overvejes og medinddrages i beslutningsprocessen om et behandlingstilbud til patienter med mild
+OCD. Således kan motivationen hos børn og unge ligge hos familien snarere end hos barnet selv. Dette er væsentligt at afdække, idet en
+manglende motivation hos patienten kan resultere i mindre behandlingseffekt og højt dropout.
+Tilbud om behandling bør ligeledes overvejes under hensyntagen til, hvorvidt behandlingen kan passes ind i forhold til patientens og
+familiens dagligliv, som fx skole og arbejde samt præferencer for behandlingsintensitet, som modereres af bl.a. motivation for behandlingen.
+Afhængigt af patientens præferencer og ressourcer kan der tilbydes selvhjælpsbehandlinger i form af fx biblioterapi (dvs. anvendelse af
+litteratur i en psykoterapeutisk proces, enten ved at patienten selv skriver og evt. fremfører egne tekster eller ved læsning af
+litteratur), selvhjælpsgrupper og internetbaseret eller behandlerbaseret KAT for OCD.
+Praktiske Oplysninger
+Se teksten i kursiv under "God praksis"
+Nøgleinformationer
+Gavnlige og skadelige virkninger
+Tilbud om behandling med KAT til børn, unge og voksne med mild OCD kan muligvis give en effekt, som er bedre end ingen
+behandling.
+Behandling med KAT, kan have en mulig forebyggende effekt, da en tidlig behandlingsindsats formodes at forebygge en
+forværring af OCD symptomerne.
+Der vurderes ikke at være skadevirkninger ved KAT behandlingen.
+Kvaliteten af evidensen
+Der er ikke fundet evidens
+Patientpræferencer
+Hos børn og unge ses i nogle tilfælde, at præference/motivation for behandling kun ligger hos familien og ikke hos barnet eller
+den unge selv.
+14 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Behandlingen er tidskrævende og ofte inden for normal skole- eller arbejdstid, hvilket kan være problematisk i forhold til
+fremmøde.
+Andre overvejelser
+Kun personer mellem 18 og 38 år kan i dag få tilskud til behandling for en mild grad af OCD(13).
+Rationale
+Der er i anbefalingen lagt vægt på, at tidligere studier har vist, at behandlingen med KAT
+for OCD har effekt hos børn, unge og voksne med moderat til svær OCD. Derfor vurderes
+det af arbejdsgruppen, at patienter med mild OCD også vil kunne have gavn af tilbud om
+behandling med KAT, og at der ikke er kendte skadevirkninger ved en behandling med
+KAT.
+Fokuseret Spørgsmål
+Population: Børn, unge og voksne med mild OCD (CY-BOCS/Y-BOCS score mellem 10-18 eller CGI-S≥ 3)
+Intervention: Interventionsformen er manualiseret kognitiv adfærdsterapi for OCD. Varighed: mindst 6 sessioner
+Sammenligning: Ingen behandling
+Sammenfatning
+Litteratursøgningen fandt ingen randomiserede kontrollerede forsøg, som besvarede dette fokuserede spørgsmål. Flow
+charts findes her.
+Litteratursøgningen identificerede imidlertid to studier, som har undersøgt effekten af KAT behandling hos børn, unge og
+voksne med OCD(11,12). Studierne ekskluderer ikke mild OCD fra deres population, men da de ikke specifikt undersøger
+effekten af behandlingen med KAT hos børn, unge og voksne med mild OCD, kan studierne ikke inddrages i
+evidensgrundlaget for anbefalingen. Studierne er i stedet blevet brugt som baggrund for overvejelserne til en god praksis
+anbefaling. De to studier viste en positiv effekt efter behandlingen med KAT(11,12). Det ene studie undersøgte effekten af
+behandlingen med KAT for OCD i 12 sessioner henover 3 måneder hos børn og unge mellem 10 og 18 år(12). I det andet
+studie var populationen voksne mellem 18 og 65 år med primært tvangstanker (obsessioner), som blev behandlet med 12
+ugentlige sessioner med KAT for OCD(11) .
+I sammenligning med ingen behandling (venteliste kontrol) fandt begge studier en klinisk relevant reduktion i CY-BOCS/Y-
+BOCS symptomscore efter behandlingen med KAT(11,12). Forskellen i antal børn, unge og voksne i remission samt med en
+reduktion på over 30 % på CY-BOCS efter behandling med KAT var ligeledes klinisk relevant(12) . Begge studier
+rapporterede en forbedring af social funktionsevne efter behandlingen. Et af studierne beskriver en yderligere forbedring af
+livskvalitet efter behandlingen(12). I begge studier blev der rapporteret færre angst- og depressionssymptomer efter
+behandlingen med KAT(11,12) .
+I et af studierne blev der foretaget en subanalyse af OCD sværhedsgradens påvirkning på den samlede effekt af terapien.
+Analysen viste ingen forskel mellem grupperne, dvs. der var samme resultater af behandlingseffekt for gruppen med og
+uden mild OCD i starten af behandlingen(12) .
+15 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Tiltro til
+Effektestimater estimaterne
+Outcome Ingen behandling Interventionsformen (at de afspejler
+Resultater og målinger Sammendrag
+Tidsramme er manualiseret den sande
+kognitiv effekt i
+adfærdsterapi for populationen)
+Alle outcome (All
+outcomes)
+Vi fandt ingen evidens for
+disse outcome
+16 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+4 - Familiebehandling til børn og unge med OCD
+Fokuseret spørgsmål 2: Bør børn og unge med OCD tilbydes manualiseret familiebaseret kognitiv adfærdsterapi eller manualiseret
+kognitiv adfærdsterapi?
+I behandlingen af børn og unge er familien vigtig og bør ofte inddrages. Undersøgelser peger på, at familiens handlemønstre kan være
+medvirkende til at fastholde OCD symptomer og OCD adfærd hos det enkelte barn eller den unge. Derfor bør familien inddrages i
+større eller mindre omfang, således at barnet eller den unge ved de nære omsorgspersoners indsigt og hjælp har nemmere ved at bryde
+den kompulsive adfærd(14) .
+Der mangler viden om, hvorvidt familiebaseret KAT med ekstensiv inddragelse af familien bidrager til bedre behandlingsresultater for
+børn og unge med OCD end standard KAT, hvor familien indgår i mindre omfang (se delafsnittet om emneafgrænsning i afsnittet
+"Indledning"). Ved familiebaseret KAT er hele familien i fokus for terapien, modsat standard KAT, hvor familien deltager i behandlingen,
+men hvor fokus for selve behandlingen er på barnet eller den unge alene.
+Svag anbefaling
+Manualiseret familiebaseret kognitiv adfærdsterapi og manualiseret kognitiv adfærdsterapi kan begge overvejes til behandling af
+børn og unge med OCD, idet der ikke er dokumenteret en forskel i effekt mellem de to behandlingsformer.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019
+Praktiske råd og særlige patientovervejelser
+Ved behandlingen af børn og unge er det altid vigtigt at inddrage forældre og/eller omsorgspersoner med særlig tæt tilknytning til barnet
+eller den unge, da familien kan være en værdifuld støtte i bedringsprocessen. Hvor meget, de pårørende skal inddrages i behandlingen, vil
+afhænge af alder, personlige præferencer hos barnet eller den unge og forældrene, familiedynamik samt samarbejdet mellem familie og
+behandler. Såfremt scoringen på familietilpasning i OCD problematikken skønnes høj, er det en god idé at overveje at inddrage forældrene
+eller hele familien systematisk i behandlingen.
+Valget af behandlingsformat bør ske på baggrund af en individuel vurdering af både patienten og patientens familie.
+Nøgleinformationer
+Gavnlige og skadelige virkninger
+Resultaterne vedr. social funktionsevne, familietilpasning og remission udelukker ikke en klinisk relevant effekt af familiebaseret
+KAT i forhold til standard KAT for børn og unge. Der er ingen kendte skadevirkninger ved familiebaseret KAT. Der er frafald ved
+begge behandlinger og en klinisk relevant forskel imellem grupperne kan ikke udelukkes.
+Kvaliteten af evidensen
+Kvaliteten af evidensen er meget lav
+Patientpræferencer
+Nogle børn og familier vil vælge behandlingen med et familiebaseret fokus, mens andre, måske i særdeleshed unge, ikke vil
+ønske en behandling med en speciel familiebaseret fokus. Den unges modenhed og afhængighed af familien formodes at være
+afgørende for præferencen.
+Rationale
+Der er i formuleringen af anbefalingen lagt vægt på, at der ikke er fundet en klinisk relevant forskel i effekten mellem familiebaseret
+17 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+KAT og standard KAT behandling til børn og unge med OCD. Samtidig kan der dog ikke udelukkes at være en fordel ved behandling
+med et familiebaseret fokus i KAT. Der er ingen kendte skadevirkninger ved de to behandlingsmetoder. Det må formodes, at
+patienter kan have forskellige præferencer i forhold til familieinddragelse. Anbefalingen er svag, da der ud fra evidensen ikke blev
+fundet klinisk relevante forskelle til fordel for behandlingerne, der kun indgik to studier i evidensgrundlaget og det kritiske outcome
+livskvalitet ikke blev besvaret.
+Fokuseret Spørgsmål
+Population: Børn og unge med OCD
+Intervention: Manualiseret familiebaseret kognitiv adfærdsterapi for OCD. Varighed: mindst 6 sessioner
+Sammenligning: Manualiseret kognitiv adfærdsterapi for OCD. Varighed: mindst 6 sessioner
+Sammenfatning
+Evidensgrundlaget er ét randomiseret forsøg(15) fremsøgt via to systematiske review(16,17) , suppleret med ét
+randomiseret forsøg(18) fra en opdateret litteratursøgning. Flow charts findes på sst.dk.
+Populationen i de to studier var børn og unge mellem 8 og 17 år (N=70). Interventionen bestod af op til 18 sessioner KAT. I
+begge studier var der i interventionen fokus på en intensiv familieinddragelse. I det ene studie deltog familien således i alle
+sessioner(18), mens forældrene kun deltog i de sidste 60 minutter af hver 90 minutters session i det andet studie(15) . I
+begge studier var der i behandlingsmanualen fokus på at ændre uhensigtsmæssige tanke- og handlemønstre i familien.
+Kontrolarmen i studierne bestod af standard KAT, hvor familien deltog i tre sessioner (session et, syv og den sidste
+session)(18), eller i den sidste del af hver session(15). Uhensigtsmæssige tanke- og handlemønstre i familien blev ikke
+adresseret i behandlingsmanualerne.
+I forhold til det kritiske outcome social funktionsevne udelukker resultatet ikke en klinisk relevant forskel efter behandling
+med familiebaseret KAT. Der blev ikke fundet klinisk relevant forskel på de andre kritiske outcomes, livskvalitet og antal af
+patienter med en mindst 30 % reduktion på CY-BOCS.
+I forhold til de vigtige outcome familietilpasning (Family Accomodation Scale - FAS) og remission (≤9 CY-BOCS) kan det ikke
+udelukkes, at disse bedres efter endt behandling med familiebaseret KAT. I forhold til det vigtige outcome frafald kan en
+klinisk relevant forskel mellem behandlingerne ikke udelukkes.
+Tiltro til
+estimaterne
+Outcome Effektestimater (at de afspejler
+Resultater og målinger Sammendrag
+Tidsramme KAT Familiebaseret den sande
+KAT effekt i
+populationen)
+Frafald (Dropout) 57 114
+Relative risiko 2 Lav
+Ved
+(CI 95% 0.4 - 9.95) per 1.000 per 1.000 Upræcist
+behandlingsafslutning
+Baseret på data fra 70 effektmål: KI
+patienter i 2 studier. 1 Forskel: 40 flere per 1.000 udelukker ikke
+6 Vigtig (Randomiserede studier) ( CI 95% 90 færre - 160 flere ) relevant forskel
+Symptomscore min
+30% reduktion i
+371 480
+Relative risiko 1.29 Lav
+CY-BOCS
+(Minimum 30 % (CI 95% 0.67 - 2.49) per 1.000 per 1.000 outcome
+Baseret på data fra 70 rapporteret som
+symptom reduction
+on the CY-BOCS patienter i 2 studier. 2 Forskel: 109 flere per 1.000 10 point fald i
+(Randomiserede studier) CYBOCS/YBOCS
+score) ( CI 95% 122 færre - 554 flere )
+Ved
+18 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Tiltro til
+estimaterne
+Outcome Effektestimater (at de afspejler
+Resultater og målinger Sammendrag
+Tidsramme KAT Familiebaseret den sande
+KAT effekt i
+populationen)
+behandlingsafslutning
+9 Kritisk
+Symptomscore min
+30% reduktion i
+CY-BOCS
+560 600
+(Minimum 30 % Relative risiko 1.07 Lav
+symptom reduction (CI 95% 0.67 - 1.72) per 1.000 per 1.000 outcome
+on the CY-BOCS Baseret på data fra 50 rapporteret som
+score) patienter i 1 studier. 3 Forskel: 40 flere per 1.000 10 points fald i
+Længste follow-up (Randomiserede studier) ( CI 95% 186 færre - 402 flere ) CYBOCS/YBOCS
+6 Vigtig
+Remission
+Symptomscore (CY- Lav
+BOCS: mindre eller KI udelukker ikke
+200 500
+ligemed 9) ( CY- Relative risiko 2.5 en klinisk relevant
+BOCS less than or (CI 95% 0.63 - 10) per 1.000 per 1.000 forskel. Studiet
+equal to 9) Baseret på data fra 20 afrapporterer en
+Ved patienter i 1 studier. 4 Forskel: 300 flere per 1.000 CY-BOCS score
+behandlingsafslutning (Randomiserede studier) ( CI 95% 100 færre - 700 flere ) <10, der blev ikke
+nedgraderet for
+indirectness
+6 Vigtig
+Livskvalitet (Quality
+of Life)
+Længste follow-up Vi fandt ingen evidens
+for dette outcome
+9 Kritisk
+CY-BOCS
+symptomscore Målt med: CY-BOCS
+Ved Skala: 0-40 Lavere bedre
+behandlingsafslutning Baseret på data fra: 70 Forskel: MD 2.01 flere Høj
+patienter i 2 studier. 5 ( CI 95% 6.59 flere - 2.57 flere )
+(Randomiserede studier)
+6 Vigtig
+Social Målt med: CGAS
+Lav
+funktionsevne Skala: 1-100 Højere
+(social functioning) bedre Forskel: MD 5.34 flere KI udelukker ikke
+en klinisk relevant
+6 Baseret på data fra: 16 ( CI 95% 1.46 færre - 12.14 flere )
+Længste follow-up patienter i 1 studier. 7 forskel
+19 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Tiltro til
+estimaterne
+Outcome Effektestimater (at de afspejler
+Resultater og målinger Sammendrag
+Tidsramme KAT Familiebaseret den sande
+KAT effekt i
+populationen)
+(Randomiserede studier)
+9 Kritisk
+Familietilpasning
+(FAS) (Family
+Målt med: FAS
+Accommodation Lav
+Skala: 0-52 Lavere bedre
+Scale) Baseret på data fra: 16 Forskel: MD 6 flere KI udelukker ikke
+Længste follow up patienter i 1 studier. 8 ( CI 95% 14.19 færre - 2.19 flere ) en klinisk relevant
+forskel
+(Randomiserede studier)
+9 Kritisk
+1. Systematisk oversigtsartikel [1] med inkluderede studier: Reynolds 2013, Peris 2013. Baselinerisiko/komparator: Kontrolarm
+i reference brugt til interventionen.
+2. Systematisk oversigtsartikel [1] med inkluderede studier: Peris 2013, Reynolds 2013. Baselinerisiko/komparator: Kontrolarm
+i reference brugt til interventionen.
+3. Systematisk oversigtsartikel [1] med inkluderede studier: Reynolds 2013. Baselinerisiko/komparator: Kontrolarm i reference
+brugt til interventionen.
+4. Systematisk oversigtsartikel [1] med inkluderede studier: Peris 2013. Baselinerisiko/komparator: Kontrolarm i reference
+brugt til interventionen.
+5. Systematisk oversigtsartikel [1] med inkluderede studier: Reynolds 2013, Peris 2013. Baselinerisiko/komparator: Kontrolarm
+i reference brugt til interventionen.
+6. CGAS 1-100 (high is better)
+7. Systematisk oversigtsartikel [1] med inkluderede studier: Peris 2013. Baselinerisiko/komparator: Kontrolarm i reference
+brugt til interventionen.
+8. Systematisk oversigtsartikel [1] med inkluderede studier: Peris 2013. Baselinerisiko/komparator: Kontrolarm i reference
+brugt til interventionen.
+20 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+5 - Kognitiv adfærdsterapi individuelt eller i gruppe
+Fokuseret spørgsmål 3: Bør børn, unge og voksne med OCD tilbydes individuel kognitiv adfærdsterapi eller kognitiv adfærdsterapi i
+gruppe?
+Tidligere studier har vist effekt af både individuel KAT behandling og KAT behandling i gruppe(19) (se også delafsnittet
+"Emneafgrænsning" i afsnittet "Indledning"). Begge former for behandling tilbydes i Danmark, men er ofte afhængigt af behandlingssted.
+Der er behov for at afklare, om den ene behandlingsform er at foretrække frem for den anden til behandling af både børn, unge og
+voksne med OCD.
+Svag anbefaling
+Overvej at tilbyde kognitiv adfærdsterapi enten individuelt eller i gruppe til voksne med OCD, da der ikke er dokumenteret klinisk
+relevante forskelle.
+Det er god praksis at være tilbageholdende med at tilbyde gruppebehandling til børn og unge med OCD, da der ikke foreligger
+evidens og dansksprogede manualer herfor.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019
+Praktiske råd og særlige patientovervejelser
+Typen af OCD-symptomer og eventuel komorbiditet spiller en væsentlig rolle i vurderingen af, om en patient vil kunne profitere af et
+gruppetilbud. Fx kan nogle problematikker (ofte personlige eller intime emner) være svære at håndtere i en gruppesammenhæng, og et
+individuelt forløb vil være at foretrække af patienten.
+De to behandlingsformer kan med fordel kombineres, hvor nogle sessioner afholdes i gruppe og andre i individuelformat, da nogle
+symptomer eller problematikker kan være mere egnet til et individuel- eller gruppeformat.
+Der er ingen kendt dansksproget behandlingsmanual for KAT i gruppeformat til børn og unge, hvorfor en kvalificeret behandlingsmanual
+ikke kan tilbydes.
+Valget af behandlingsformat hos børn, unge og voksne med OCD bør ske på grundlag af en individuel vurdering af den enkelte patients
+behov og ressourcer.
+Nøgleinformationer
+Gavnlige og skadelige virkninger
+Der er fundet en klinisk relevant forskel efter endt behandling til fordel for gruppebehandling i form af en reduktion af OCD
+symptomer målt på Y-BOCS score. Ved længste follow-up var denne forskel imidlertid ikke længere klinisk relevant. Der var
+højere drop–out ved individuel KAT.
+Der er fundet en klinisk relevant forskel til fordel for individuel KAT på livskvalitet.
+Der er ingen kendte bivirkninger ved de to behandlingsmetoder.
+Kvaliteten af evidensen
+Kvaliteten af evidensen er samlet set moderat, og der er ikke fundet evidens omhandlende børn og unge.
+Patientpræferencer
+Nogle patienter vil værdsætte muligheden for at tale med andre patienter med samme problemstillinger. Andre patienter
+21 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+foretrækker fleksibiliteten i individuel behandling, kan have svært ved at indgå konstruktivt i en gruppe eller vil foretrække et
+individuelt forløb grundet intime eller personlige emner, som er nemmere at arbejde med i et individuelt forløb.
+Andre overvejelser
+Gruppebehandling kan muligvis have en økonomisk fordel for behandlingsstedet, men dette bør ikke have indflydelse på valget
+af den rette behandling til den enkelte patient.
+Drop-out har andre konsekvenser i gruppebehandling, da hele gruppeprocessen og de enkelte gruppemedlemmers forløb
+påvirkes.
+Rationale
+Der er i formuleringen af anbefalingen lagt vægt på, at begge behandlingsformer giver positive resultater og vurderes ikke at have
+skadevirkninger. Anbefalingen er svag for begge behandlingsformer i forhold til behandling af voksne med OCD, da hverken
+evidensen eller patientpræferencer er entydige i forhold til den ene eller den anden behandlingsform.
+I forhold til børn og unge gives en god praksis anbefaling imod gruppebehandling, da ingen af de inkluderede studier omhandler
+børn og unge, og der ikke er dansksprogede behandlingsmanualer for behandlingen med KAT i gruppe til børn og unge.
+Fokuseret Spørgsmål
+Population: Børn, unge og voksne med OCD
+Intervention: Manualiseret kognitiv adfærdsterapi for OCD i gruppe format. Varighed: Mindst 6 sessioner
+Sammenligning: Manualiseret kognitiv adfærdsterapi for OCD i individuelt format. Varighed: Mindst 6 sessioner
+Sammenfatning
+Evidensgrundlaget er fem randomiserede kontrollerede studier(20-24). Tre studier(20,22,24) er fra et systematisk
+review(19), mens de sidste to er fra den opdaterede litteratursøgning(21,23) . Flow charts findes på her.
+Interventionen i alle fem studier bestod af KAT behandling i gruppe mod individuel KAT behandling til voksne (over 17 år)
+med OCD (N=269)(20-24). Antallet af sessioner varierede mellem 10-24 sessioner.
+Der blev fundet en klinisk relevant forskel på det kritiske outcome, andelen af patienter med en 30 % reduktion på Y-BOCS
+efter endt behandling, til fordel for gruppeformat(20,21). Der sås ikke tilsvarende klinisk relevant effekt ved længste follow-
+up, som var et vigtigt outcome. Omvendt blev der fundet en klinisk relevant forskel på det kritiske outcome livskvalitet(20),
+til fordel for individuel KAT. Der var ingen klinisk relevant forskelle i det kritiske outcome social funktionsevne(20) .
+I forhold til de vigtige outcomes var der højere drop-out ved KAT behandling i individuelt format(20-24) . Der var ingen
+klinisk relevant forskel på de vigtige outcomes angst og depression(20-24). Det vigtige outcome remission blev ikke
+rapporteret i studierne.
+Litteratursøgningen identificerede et randomiseret kontrolleret studie, som har undersøgt familiebaseret KAT i gruppe mod
+familiebaseret KAT i individuelt format hos børn og unge med OCD(25). Studiet blev ikke inkluderet i evidensgrundlaget, da
+der ikke var den ønskede sammenligning, idet de inkluderede indsatser var familiebaseret. De inkluderede studier omhandler
+således kun patienter over 17 år. Det vurderes, at evidensen på voksenområdet ikke direkte kan overføres til børn og unge,
+da behandling med børn og unge altid vil involvere familien, hvilket gør gruppeformatet vanskeligere.
+22 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Tiltro til
+estimaterne
+Outcome Resultater og målinger Effektestimater (at de afspejler Sammendrag
+Tidsramme den sande
+individuelt KAT gruppe KAT
+effekt i
+populationen)
+Symptomscore,
+minimum 30 %
+reduktion i CY-
+BOCS/Y-BOCS)
+149 251
+(Minimum 30 % Relative risiko 1.68
+symptom reduction (CI 95% 0.84 - 3.38) per 1.000 per 1.000 Rapporteret som Y-
+on the CY-BOCS/ Baseret på data fra 139 Høj BOCS <14 plus > 10
+Y-BOCS) patienter i 2 studier. 1 Forskel: 102 flere per 1.000 point fald i Y-BOCS.
+(Randomiserede studier)
+Ved ( CI 95% 24 færre - 355 flere )
+behandlingsafslutning
+9 Kritisk
+Symptomscore,
+minimum 30 %
+reduktion i CY-
+BOCS/Y-BOCS)
+169 196
+(Minimum 30 % Relative risiko 1.16
+symptom reduction (CI 95% 0.55 - 2.43) per 1.000 per 1.000 Rapporteret som Y-
+on the CY-BOCS/ Baseret på data fra 124 Høj BOCS <14 plus > 10
+Y-BOCS ) patienter i 2 studier. 2 Forskel: 26 flere per 1.000 point fald i Y-BOCS.
+(Randomiserede studier)
+Længste follow-up ( CI 95% 76 færre - 242 flere )
+(mindst 3 mdr)
+6 Vigtig
+Remission (CY-
+BOCS/Y-BOCS
+mindre eller
+ligemed 9)
+(remission: CY-
+BOCS/Y-BOCS less Vi fandt ingen evidens
+than or equal to 9) for dette outcome
+Ved
+behandlingsafslutning
+6 Vigtig
+Frafald (Dropout) 173 91
+Ved Relative risiko 0.52
+behandlingsafslutning (CI 95% 0.27 - 1) per 1.000 per 1.000
+Høj
+Baseret på data fra 269
+patienter i 5 studier. 3 Forskel: 82 færre per 1.000
+6 Vigtig ( CI 95% 125 færre - 0 færre )
+Symptomscore (CY- Målt med: CY-BOCS/Y-
+BOCS/Y-BOCS) BOCS Forskel: MD 1.38 højere Høj
+23 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Tiltro til
+estimaterne
+Outcome Resultater og målinger Effektestimater (at de afspejler Sammendrag
+Tidsramme den sande
+individuelt KAT gruppe KAT
+effekt i
+populationen)
+Ved
+behandlingsafslutning Skala: 0-40 Lavere bedre
+Baseret på data fra: 255 ( CI 95% 0.73 højere - 3.49 højere )
+patienter i 5 studier. 4
+6 Vigtig
+Depression
+Målt med: BDI (0-63) /
+Ved
+HAM-D (0-54) Moderat
+behandlingsafslutning Lavere bedre Forskel: SMD 0.21 højere Høj inkonsistens
+Baseret på data fra: 251 ( CI 95% 0.14 højere - 0.56 højere ) blandt studierne
+6 Vigtig patienter i 5 studier. 5
+Angst (Anxiety)
+Målt med: BAI (0-63) Moderat
+Ved
+/HAM-A (0-56) Høj inkonsistens
+behandlingsafslutning Lavere bedre Forskel: SMD 0.25 højere blandt
+Baseret på data fra: 214 ( CI 95% 0.18 højere - 0.69 højere ) studieresultaterne
+6 Vigtig patienter i 4 studier. 6
+Social
+funktionsevne Målt med: GAF
+(Social functioning) Skala: 1-100 Højere
+7 bedre Forskel: MD 5.8 flere Moderat
+Længste Follow-up Baseret på data fra: 31 kun 1 studie
+( CI 95% 14.33 flere - 2.73 flere )
+patienter i 1 studier. 8
+(Randomiserede studier)
+9 Kritisk
+Livskvalitet (Quality Målt med: Q-LES-Q
+of Life) 9 Skala: 14-70 Højere Kritisk outcome. Kun 1
+Længste Follow-up bedre Forskel: MD 9.4 flere Moderat studie. Skala: Q-LES-Q
+Baseret på data fra: 31 kun et studie (14–70) (jo højere jo
+( CI 95% 24.11 flere - 5.31 flere )
+patienter i 1 studier. 10 bedre)
+9 Kritisk (Randomiserede studier)
+1. Systematisk oversigtsartikel [3] med inkluderede studier: Jonsson 2011, Anderson 2007. Baselinerisiko/komparator:
+Kontrolarm i reference brugt til interventionen.
+2. Systematisk oversigtsartikel [3] med inkluderede studier: Jonsson 2011, Anderson 2007. Baselinerisiko/komparator:
+Kontrolarm i reference brugt til interventionen.
+3. Systematisk oversigtsartikel [3] med inkluderede studier: Anderson 2007, O'Connor 2005, Fals Stewart 1993, Jonsson 2011,
+Jaurrieta 2008. Baselinerisiko/komparator: Kontrolarm i reference brugt til interventionen.
+4. Systematisk oversigtsartikel [3] med inkluderede studier: Fals Stewart 1993, Jonsson 2011, O'Connor 2005, Jaurrieta 2008,
+Anderson 2007. Baselinerisiko/komparator: Kontrolarm i reference brugt til interventionen.
+5. Systematisk oversigtsartikel [3] med inkluderede studier: Jonsson 2011, Anderson 2007, O'Connor 2005, Jaurrieta 2008,
+Fals Stewart 1993. Baselinerisiko/komparator: Kontrolarm i reference brugt til interventionen.
+6. Systematisk oversigtsartikel [3] med inkluderede studier: Jonsson 2011, Fals Stewart 1993, O'Connor 2005, Jaurrieta 2008.
+Baselinerisiko/komparator: Kontrolarm i reference brugt til interventionen.
+24 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+7. GAF 1-100 (higher is better)
+8. Systematisk oversigtsartikel [3] med inkluderede studier: Anderson 2007. Baselinerisiko/komparator: Kontrolarm i reference
+brugt til interventionen.
+9. Q-LES-Q højre er bedre (14-70)
+10. Systematisk oversigtsartikel [3] med inkluderede studier: Anderson 2007. Baselinerisiko/komparator: Kontrolarm i
+reference brugt til interventionen.
+God praksis (konsensus) Ny
+Det er god praksis at være tilbageholdende med at tilbyde gruppebehandling til børn og unge med OCD, da der ikke foreligger
+evidens og dansksprogede manualer herfor.
+Praktiske råd og særlige patientovervejelser
+Typen af OCD-symptomer og eventuel komorbiditet spiller en væsentlig rolle i vurderingen af, om en patient vil kunne profitere af et
+gruppetilbud. Fx kan nogle problematikker (ofte personlige eller intime emner) være svære at håndtere i en gruppesammenhæng, og et
+individuelt forløb vil være at foretrække af patienten.
+De to behandlingsformer kan med fordel kombineres, hvor nogle sessioner afholdes i gruppe og andre i individuelformat, da nogle
+symptomer eller problematikker kan være mere egnet til et individuel- eller gruppeformat.
+Der er ingen kendt dansksproget behandlingsmanual for KAT i gruppeformat til børn og unge, hvorfor en kvalificeret behandlingsmanual
+ikke kan tilbydes.
+Valget af behandlingsformat hos børn, unge og voksne med OCD bør ske på grundlag af en individuel vurdering af den enkelte patients
+behov og ressourcer.
+25 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+6 - Tredjebølge Kognitiv Adfærdsterapi
+Fokuseret spørgsmål 4: Bør børn, unge og voksne med OCD tilbydes standard kognitiv adfærdsterapi eller tredjebølge kognitiv terapi?
+KAT er førstevalg som psykoterapiretning til personer med OCD. De senere år er der kommet flere nye psykoterapeutiske
+behandlingstilbud. Metakognitiv terapi (herfra MCT), mindfulness baseret kognitiv terapi og ’acceptance and commitment terapi’ (herfra
+ACT) repræsenterer nogle af de behandlingsformer, som under en samlebetegnelse ofte er blevet kaldt tredjebølge KAT. Tredjebølge
+KAT tilbydes i primærsektoren bl.a. til behandling af voksne med andre angstlidelser end OCD og til behandling af depression.
+Det fokuserede spørgsmål skal afklare, om tredjebølge KAT er ligeså effektiv til behandling af børn, unge og voksne med OCD som
+standard KAT (se delafsnittet "Emneafgrænsnig" under afsnittet "Indledning").
+Svag anbefaling mod
+Anvend kun tredjebølge kognitiv terapi frem for standard kognitiv adfærdsterapi efter nøje overvejelse til behandling af børn,
+unge og voksne med OCD, da effekten er usikker.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019
+Praktiske råd og særlige patientovervejelser
+Hvis der er et stærkt patientønske, og der indgår eksponering og responshindring, kan tredjebølge KAT overvejes (evt. under nøje opfølgning
+i forhold til effekt).
+Nøgleinformationer
+Gavnlige og skadelige virkninger
+Det er vanskeligt ud fra det lille evidensgrundlag (N=10) at sige noget definitivt om effekten af tredjebølge behandlingen, da der
+ses en reduktion i OCD symptomer både ved behandling med eksponering og responshindring, samt ved behandling med
+metakognitiv terapi.
+Der er ingen kendte skadevirkninger ved de to behandlingsformer.
+Kvaliteten af evidensen
+Kvaliteten af evidensen er meget lav.
+Patientpræferencer
+Der kan, hos den enkelte patient, være individuelle præferencer for et andet terapeutisk behandlingstilbud end KAT.
+Rationale
+Der er i formuleringen af anbefalingen lagt vægt på, at der ikke er forskel i effekten mellem de to terapiretninger. Anbefalingen er
+svag imod tredjebølge KAT, da der kun indgår 10 patienter i evidensgrundlaget, og kvaliteten af evidensen for tredjebølge
+behandlingen er svag.
+Fokuseret Spørgsmål
+Population: Børn, unge og voksne med OCD, som har indikation for kognitiv adfærdsterapi (KAT)
+Intervention: Interventionsformen er manualiseret kognitiv adfærdsterapi for OCD. Varighed: mindst 6 sessioner
+26 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Sammenligning: Interventionsformen er manualiseret enten Acceptance commitment terapi (ACT), Mindfullnessbaseret
+terapi eller metakognitiv terapi Varighed: mindst 6 sessioner
+Sammenfatning
+Evidensgrundlaget udgøres af ét randomiseret forsøg(26) fra den opdaterende litteratursøgning. Flow charts findes her.
+Populationen var børn og unge mellem otte og 17 år (N=10). Interventionen var op til 20 ugentlige sessioner med enten
+manualiseret metakognitiv terapi eller eksponering og responshindring. Da eksponering og responshindring er en vigtig
+komponent i standard KAT til patienter med OCD, men ikke er identisk med KAT, indgår dette studie som indirekte evidens.
+Ved endt behandling oplevede alle patienter i begge grupper en 30 % reduktion i CYBOCS score, hvilket var et kritisk
+outcome. Disse fund blev bibeholdt ved follow-up efter to år. Der blev ikke fundet evidens for de to kritiske outcomes social
+funktionsevne og livskvalitet.
+I forhold til de vigtige outcomes ’ændring på CY-BOCS/ Y-BOCS’, ’en 30 % reduktion på CY-BOCS/Y-BOCS’ og ’forbedring
+af depression’ kan en klinisk relevant forskel til fordel for eksponering og responshindring ikke udelukkes.
+Litteratursøgningen identificerede et enkelt randomiseret kontrolleret forsøg af behandlingen med ACT hos voksne med
+OCD. Studiet finder, at behandlingen med ACT giver bedre effekt end sammenligningen progressiv afspændingsterapi(27).
+Studiet indgår imidlertid ikke i evidensgrundlaget, da det ikke har den ønskede sammenligning
+Tiltro til
+estimaterne
+Outcome Resultater og målinger Effektestimater (at de afspejler Sammendrag
+Tidsramme den sande
+Tredjebølge terapi KAT
+effekt i
+populationen)
+Symptomscore,
+minimum 30 %
+reduktion i CY-
+BOCS/Y-BOCS)
+1,000 1,000 Meget lav
+(Minimum 30 %
+Relative risiko 1 KI udelukker ikke
+symptom reduction (CI 95% 0.71 - 1.41) per 1.000 per 1.000 en relevant forskel
+on the CY-BOCS/
+Baseret på data fra 10 og kun ét studie.
+Y-BOCS) patienter i 1 studier. 1 Forskel: 0 færre per 1.000 Ingen studier med
+Ved ( CI 95% 289 færre - 407 flere ) voksne
+behandlingsafslutning
+9 Kritisk
+Symptomscore,
+minimum 30 %
+reduktion i CY-
+BOCS/Y-BOCS) 1,000 1,000 Meget lav
+(Minimum 30 % Relative risiko 1 KI udelukker ikke
+symptom reduction (CI 95% 0.68 - 1.46) per 1.000 per 1.000 en relevant forskel
+on the CY-BOCS/ Baseret på data fra 9 og kun ét studie.
+Y-BOCS) patienter i 1 studier. 2 Forskel: 0 færre per 1.000 Ingen studier med
+Længste follow-up ( CI 95% 315 færre - 461 flere ) voksne
+6 Vigtig
+27 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Tiltro til
+estimaterne
+Outcome Resultater og målinger Effektestimater (at de afspejler Sammendrag
+Tidsramme den sande
+Tredjebølge terapi KAT
+effekt i
+populationen)
+Social
+funktionsevne
+(Social functioning)
+Ved Vi fandt ingen evidens
+behandlingsafslutning for dette outcome
+9 Kritisk
+Livskvalitet (Quality
+of Life)
+Ved
+Vi fandt ingen evidens
+behandlingsafslutning
+for dette outcome
+9 Kritisk
+Angst (Anxiety)
+Ved
+behandlingsafslutning Vi fandt ingen evidens
+for dette outcome
+6 Vigtig
+Symptomscore (Y-
+Meget lav
+BOCS/CY-BOCS) Målt med: CY-BOCS/Y-
+KI udelukker ikke
+Ved BOCS
+behandlingsafslutning Skala: 0-40 Forskel: MD 5 flere en relevant forskel
+og kun ét studie.
+Baseret på data fra: 10 ( CI 95% 12.53 flere - 2.53 flere )
+Ingen studier med
+patienter i 1 studier. 3
+6 Vigtig voksne 4
+Depression 5 Meget lav
+Ved Målt med: BDI-II KI udelukker ikke
+behandlingsafslutning Skala: 0-63 Lavere bedre Forskel: MD 3 færre en relevant forskel
+Baseret på data fra: 10 og kun et studie.
+( CI 95% 62.23 færre - 56.23 flere )
+patienter i 1 studier. 6 Ingen studier med
+6 Vigtig
+voksne
+1. Systematisk oversigtsartikel [5] med inkluderede studier: Simons 2006. Baselinerisiko/komparator: Kontrolarm i reference
+brugt til interventionen.
+2. Systematisk oversigtsartikel [5] med inkluderede studier: Simons 2006. Baselinerisiko/komparator: Kontrolarm i reference
+brugt til interventionen.
+3. Systematisk oversigtsartikel [5] med inkluderede studier: Simons 2006. Baselinerisiko/komparator: Kontrolarm i reference
+brugt til interventionen.
+4. Upræcist effektestimat: Meget alvorligt. KI udelukker ikke en relevant forskel.
+5. BDI-II (lower is better)
+6. Systematisk oversigtsartikel [5] med inkluderede studier: Simons 2006. Baselinerisiko/komparator: Kontrolarm i reference
+28 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+brugt til interventionen.
+29 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+7 - Førstevalgsbehandling af børn og unge med moderat til svær OCD
+Fokuseret spørgsmål 5: Bør børn og unge med moderat til svær OCD tilbydes kognitiv adfærdsterapi eller en kombinationsbehandling
+bestående af kognitiv adfærdsterapi og selektive serotoningenoptagshæmmere (SSRI) som førstevalgsbehandling?
+Dette spørgsmål retter sig mod førstevalget til behandling af børn og unge med moderat til svær OCD. Eksisterende guidelines anbefaler
+KAT som førstevalgsbehandling til børn og unge med OCD frem for antidepressiva(5,29), men ofte kombineres disse som førstevalg.
+Ved ringe behandlingsresultater anbefaler disse guidelines at behandle med et antidepressiva som tillæg til KAT(5,6,29) .
+Der er behov for et overblik over evidensen på området, således at brugen af SSRIpræparater kan tilpasses den foreliggende viden på
+området.
+Fokus er på behandlingsforløbet, der strækker sig ud over psykoedukation. Således skal KAT forløbet være på mindst 10 sessioner (se
+delafsnittet om "Emneafgrænsning i afsnittet "Indledning"). Der medtages udelukkende studier, som har anvendt SSRI præparater, der er
+de mest anvendte til medikamentel behandling af børn og unge med OCD i Danmark. Tricykliske antidepressiva vurderes ikke anvendt
+til behandling af børn og unge med OCD i Danmark, grundet øget risiko for bivirkninger, hvorfor dette fokuserede spørgsmål alene
+fokuserer på kombinationsbehandlingen med SSRI.
+Stærk anbefaling mod
+Anvend ikke selektive serotoningenoptagshæmmere (SSRI) som tillæg til behandling med kognitiv adfærdsterapi som
+førstevalgsbehandling til børn og unge med moderat til svær OCD, da der ikke er fundet dokumenteret effekt, og der er kendte
+bivirkninger forbundet med SSRI.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019
+Praktiske råd og særlige patientovervejelser
+Behandling med SSRI som tillæg til KAT kan overvejes, hvis KAT ikke har effekt eller hvis der er forhold, der forhindrer fuld effekt af KAT
+(som komorbiditet, familiefaktorer, dårlig indsigt osv.).
+Børn og unge med moderat til svær OCD, som sættes i behandling med et SSRI-præparat, bør monitoreres tæt, da denne behandling kan øge
+risikoen for selvmordstanker og selvmordsrelateret adfærd. Se også gældende vejledning om behandling af børn og unge med
+psykofarmaka(28).
+Nøgleinformationer
+Gavnlige og skadelige virkninger
+Studierne viser, at der ikke er en klinisk relevant effekt af behandlingen af OCD symptomer ved kombinationsbehandling. Der er
+ingen forskel i rapporterede bivirkninger og selvmordstanker/- adfærd.
+Selvom alvorlige bivirkninger af SSRI er sjældne, har studier dog vist, at brugen af SSRI kan give bivirkninger såvel som føre til
+selvmordstanker eller selvmordsrelateret adfærd.
+Det vurderes, at de mulige gavnlige effekter ikke opvejer de mulige skadelige effekter af behandlingen med SSRI.
+Kvaliteten af evidensen
+Kvaliteten af evidensen er lav
+30 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Patientpræferencer
+Det skønnes, at de fleste patienter vil ønske en non-farmakologisk behandling, da farmakologisk behandling kan være forbundet
+med bivirkninger
+Rationale
+Der er i formuleringen af anbefalingen lagt vægt på, at der ikke er en klinisk relevant forskel i effekt, men at farmakologisk
+behandling er blevet forbundet med flere bivirkninger, herunder risiko for selvmordstanker og adfærd. Anbefalingen er stærk på
+trods af den lave kvalitet af evidensen, idet der ikke er nok viden om den gavnlige effekt, samt at der er frygt for potentielt alvorlige
+bivirkninger hos børn og unge.
+Fokuseret Spørgsmål
+Population: Børn og unge (<18 år) med moderat til svær OCD (CY-BOCS >18). Ingen behandling indenfor de sidste 6
+mdr for OCD.
+Intervention: Interventionsformen er manualiseret kognitiv adfærdsterapi for OCD. Varighed: mindst 10 sessioner
+Sammenligning: Interventionsformen er kombinationsbehandlingen af manualiseret kognitiv adfærdsterapi for OCD og et
+SSRI-præparat. Varighed: mindst 10 sessioner terapi og mindst 12 ugers behandling med SSRI
+Sammenfatning
+Evidensgrundlaget består af ét randomiseret forsøg(30), som indgår i tre systematiske reviews (7,31,32) , suppleret med ét
+randomiseret forsøg fra den opdaterede søgning(33) . Flow charts findes her.
+Populationen i de to studier var børn og unge mellem 7 og 17 år (N= 86). Interventionen i studierne var manualiseret KAT
+(inklusive sessioner med eksponering og responshindring) på 14 sessioner (fordelt over enten 12 eller 14 uger) med eller
+uden tillæg af sertralin på maks. 200 mg/dag i henholdsvis 12(30) og 18(33) uger. I det ene studie blev der nedgraderet for
+’risk of bias’, grundet at der i undersøgelsen ikke er blevet taget hensyn til forskellen af effekt mellem de inkluderede centre i
+analysen(30) .
+Den lille population bidrog til en lav kvalitet af evidensen. Ud fra de fundne studier er det ikke muligt at undersøge effekten
+af andre doser og andre SSRI-præparater. På baggrund af evidensen vides det ikke, om længerevarende medicinsk
+behandling vil resultere i andre effektstørrelser eller skadevirkninger.
+I forhold til de kritiske outcomes, var der ingen klinisk relevant forskel i effekt på social funktionsevne(33) og ingen forskel
+på frafald på grund af bivirkninger, mens effekten vedrørende det kritiske outcome, livskvalitet, ikke blev belyst i studierne.
+I forhold til det vigtige outcome remission (≤9 CY-BOCS), kunne en klinisk relevant forskel til fordel for
+kombinationsbehandlingen ikke udelukkes. Den gennemsnitlige reduktion på 1,78 point forskel i CY-BOCS til fordel for
+kombinationsbehandling blev ikke vurderet at være klinisk relevant. Der sås ingen klinisk relevant forskel i de vigtige
+outcomes graden af angst, dropout, rapporteret selvmordstanker/-adfærd og alvorlige bivirkninger (SAE) efter endt
+behandling.
+Populationen i de inkluderede randomiserede kontrollerede studier af børn og unge med OCD er for lille til at danne
+grundlag for vurdering af den sjældne hændelse selvmordstanker/- adfærd efter behandling med SSRI. Til belysning af
+bivirkningerne af SSRIbehandling blev der derfor inddraget tre andre metaanalyser. En metaanalyse af 27 randomiserede
+kontrollerede studier af børn og unge behandlet med antidepressiva (hvoraf seks studier omhandlede OCD) undersøgte
+sammenhængen mellem forekomsten af selvmordstanker/-adfærd efter antidepressiv behandling(34). Metaanalysen viste
+en klinisk relevant øgning af selvmordstanker/-adfærd og antidepressiv behandling. To nyere metaanalyser, som undersøgte
+forekomsten af selvmordstanker-og adfærd under behandling med antidepressiva i en population med psykiske lidelser, som
+har indikation for antidepressiv medicin, kom frem til samme resultat(35,36). Den ene metaanalyse er baseret på 5
+observationelle studier med børn og unge med depression, mens den anden er baseret på 372 randomiserede kontrollerede
+studier med børn, unge og voksne (27,6 % havde en anden psykisk lidelse end depression, herunder OCD). Resultatet af
+analyserne viste en klinisk relevant øget forekomst af selvmordstanker-og adfærd under behandling med antidepressiva hos
+børn og unge, som var yngre end 25 år(35,36) .
+31 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Tiltro til
+estimaterne
+Outcome Resultater og målinger Effektestimater (at de afspejler Sammendrag
+Tidsramme den sande
+KAT+SSRI KAT
+effekt i
+populationen)
+Remission
+500 332
+Symptomscore Relative risiko 0.66
+Ved (CI 95% 0.4 - 1.12) per 1.000 per 1.000 Moderat
+behandlingsafslutning Baseret på data fra 86 KI udelukker ikke
+patienter i 2 studier. 1 Forskel: 168 færre per 1.000 ingen forskel
+(Randomiserede studier)
+6 Vigtig ( CI 95% 302 færre - 58 flere )
+Symptomscore,
+minimum 30 %
+reduktion i CY-
+571 625
+BOCS (Minimum Relative risiko 1.09
+Lav
+30 % symptom (CI 95% 0.61 - 1.98) per 1.000 per 1.000 kun 1 studie, KI
+reduction on the Baseret på data fra 30
+udelukker ikke
+CY-BOCS) patienter i 1 studier. 2 Forskel: 54 flere per 1.000 relevant forskel
+Længste follow-up (Randomiserede studier) ( CI 95% 225 færre - 558 flere )
+6 Vigtig
+Høj
+Frafald (Dropout) 214 128
+Relative risiko 0.6 KI udelukker ikke
+Ved
+(CI 95% 0.24 - 1.52) per 1.000 per 1.000 en klinisk relevant
+behandlingsafslutning
+Baseret på data fra 86 forskel. Outcome
+patienter i 2 studier. 3 Forskel: 86 færre per 1.000 målt på intention-
+6 Vigtig (Randomiserede studier) ( CI 95% 164 færre - 112 flere ) to-treat
+population
+Selvmordstanker/
+Selvmordsadfærd
+34 99
+(Suicidal thoughts Relative risiko 2.91
+Lav
+and behaviours) (CI 95% 0.54 - 15.66) per 1.000 per 1.000 KI udelukker ikke
+Ved Baseret på data fra 103 en klinisk relevant
+behandlingsafslutning patienter i 2 studier. Forskel: 20 flere per 1.000 forskel
+(Randomiserede studier)
+( CI 95% 70 færre - 110 flere )
+6 Vigtig
+Frafald på grund af
+bivirkninger
+48 15
+(Dropout due to Relative risiko 0.31
+Lav
+adverse events) (CI 95% 0.03 - 2.88) per 1.000 per 1.000 KI udelukker ikke
+Ved Baseret på data fra 86 en klinisk relevant
+behandlingsafslutning patienter i 2 studier. 4 Forskel: 33 færre per 1.000 forskel
+(Randomiserede studier)
+( CI 95% 46 færre - 90 flere )
+9 Kritisk
+32 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Tiltro til
+estimaterne
+Outcome Resultater og målinger Effektestimater (at de afspejler Sammendrag
+Tidsramme den sande
+KAT+SSRI KAT
+effekt i
+populationen)
+Alvorlige
+bivirkninger (SAE)
+24 21
+(serious adverse Relative risiko 0.88
+Lav
+events) (CI 95% 0.06 - 12.73) per 1.000 per 1.000 KI udelukker ikke
+Ved Baseret på data fra 86 en klinisk relevant
+behandlingsafslutning patienter i 2 studier. 5 Forskel: 3 færre per 1.000 forskel
+(Randomiserede studier)
+( CI 95% 23 færre - 282 flere )
+6 Vigtig
+CY-BOCS
+symptomscore Målt med: CY-BOCS
+Høj
+Ved Skala: 0-40 Lavere bedre
+behandlingsafslutning Baseret på data fra: 86 Forskel: MD 1.78 højere KI udelukker ikke
+en klinisk relevant
+patienter i 2 studier. 6 ( CI 95% 1.95 højere - 5.51 højere )
+forskel
+(Randomiserede studier)
+6 Vigtig
+Social
+funktionsevne
+Målt med: COIS-C
+(Social functioning) Lav
+Skala: 0-99 Lavere bedre
+7 Baseret på data fra: 30 Forskel: MD 3.43 højere kun 1 studie; KI
+Længste Follow-up patienter i 1 studier. 8 ( CI 95% 3.02 højere - 9.88 højere ) udelukker ikke en
+relevant forskel
+(Randomiserede studier)
+9 Kritisk
+Livskvalitet (Quality
+of Life)
+Længste follow-up Vi fandt ingen evidens
+for dette outcome
+9 Kritisk
+Angst (Anxiety) Målt med: MASC
+Ved Skala: 39-156 Lavere Lav
+behandlingsafslutning bedre Forskel: MD 3.5 højere kun 1 studie; KI
+Baseret på data fra: 30 udelukker ikke en
+( CI 95% 18.4 højere - 11.4 højere )
+patienter i 1 studier. 9 relevant forskel
+6 Vigtig
+(Randomiserede studier)
+1. Systematisk oversigtsartikel [7] med inkluderede studier: POTS 2004, Storch 2013. Baselinerisiko/komparator: Kontrolarm i
+reference brugt til interventionen.
+2. Systematisk oversigtsartikel [7] med inkluderede studier: Storch 2013. Baselinerisiko/komparator: Kontrolarm i reference
+brugt til interventionen.
+3. Systematisk oversigtsartikel [7] med inkluderede studier: POTS 2004, Storch 2013. Baselinerisiko/komparator: Kontrolarm i
+reference brugt til interventionen.
+4. Systematisk oversigtsartikel [7] med inkluderede studier: Storch 2013, POTS 2004. Baselinerisiko/komparator: Kontrolarm i
+33 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+reference brugt til interventionen.
+5. Systematisk oversigtsartikel [7] med inkluderede studier: Storch 2013, POTS 2004. Baselinerisiko/komparator: Kontrolarm i
+reference brugt til interventionen.
+6. Systematisk oversigtsartikel [7] med inkluderede studier: Storch 2013, POTS 2004. Baselinerisiko/komparator: Kontrolarm i
+reference brugt til interventionen.
+7. COIS-C (lower is better)
+8. Systematisk oversigtsartikel [7] med inkluderede studier: Storch 2013. Baselinerisiko/komparator: Kontrolarm i reference
+brugt til interventionen.
+9. Systematisk oversigtsartikel [7] med inkluderede studier: Storch 2013. Baselinerisiko/komparator: Kontrolarm i reference
+brugt til interventionen.
+34 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+8 - Førstevalgsbehandling af voksne med moderat til svær OCD
+Fokuseret spørgsmål 6: Bør voksne med moderat til svær OCD tilbydes kognitiv adfærdsterapi eller en kombinationsbehandling
+bestående af kognitiv adfærdsterapi og selektive serotoningenoptagshæmmere (SSRI) som førstevalgsbehandling?
+Dette spørgsmål retter sig mod førstevalget til behandling af voksne med moderat til svær OCD. Eksisterende guidelines anbefaler KAT
+som førstevalgsbehandling til voksne med OCD frem for antidepressiva(5), men ofte kombineres disse som førstevalg. Ved ringe
+behandlingsresultater anbefales at behandle med antidepressiva som tillæg til KAT(5) .
+Der er behov for et overblik over evidensen på området, således at brugen af SSRIpræparater kan tilpasses den foreliggende viden på
+området.
+Fokus er på et behandlingsforløb, der strækker sig ud over psykoedukation. Således skal KAT forløbet være på mindst 10 sessioner (se
+også delafsnittet "Emneafgrænsning" i afsnittet "Indledning"). Der medtages udelukkende studier, som har anvendt SSRI-præparater, da
+disse primært bruges som førstevalg i medikamentel behandling af voksne med OCD i Danmark.
+Svag anbefaling mod
+Anvend kun efter nøje overvejelse selektive serotoningenoptagshæmmere (SSRI) som tillæg til behandling med kognitiv
+adfærdsterapi som førstevalg i behandlingen af voksne med moderat til svær OCD, da der ikke er påvist en forskel i effekt, og der
+er kendte bivirkninger forbundet med SSRI.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019
+Praktiske råd og særlige patientovervejelser
+Behandling med SSRI som tillæg til KAT kan overvejes, hvis KAT alene ikke har effekt eller, hvis der er forhold, der forhindrer fuld effekt af
+KAT.
+Patienter, som sættes i behandling med et SSRI-præparat, bør monitoreres tæt. Dette gælder særligt unge under 25 år og patienter med
+komorbid depression, da denne type behandling kan øge risikoen for selvmordstanker og selvmordsrelateret adfærd for disse grupper.
+Praktiske Oplysninger
+Se teksten i kursiv under "Anbefaling"
+Nøgleinformationer
+Gavnlige og skadelige virkninger
+Der er efter endt behandling ingen klinisk relevant forskel på Y-BOCS score og social funktionsevne mellem interventionerne.
+En klinisk relevant forskel kan ikke udelukkes i forhold til antal patienter med en 30 % reduktion på YBOCS ved follow-up til
+fordel for kombinationsbehandlingen.
+Tre studier viser et højere frafald på grund af bivirkninger og dropout i kombinationsbehandlingen. Grundet det meget lille
+evidensgrundlag kan der ikke konkluderes på forekomsten af skadelige virkninger.
+Der vurderes, at de mulige gavnlige effekter ikke opvejer de mulige skadelige effekter af behandlingen med SSRI.
+Kvaliteten af evidensen
+Kvaliteten af evidensen er samlet set meget lav.
+35 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Patientpræferencer
+Der forventes at være en præferencefølsomhed hos den enkelte patient overfor enten farmakologisk eller ikkefarmakologisk
+behandling.
+Rationale
+Der er i formuleringen af anbefalingen lagt vægt på, at der ikke er en klinisk relevant forskel på Y-BOCS score og social
+funktionsevne til fordel for behandling med eller uden tillæg af SSRI. Ligeledes er der lagt vægt på, at evidensgrundlaget for alle
+outcomes, inklusive skadevirkninger er på en meget lille population. Arbejdsgruppen lagde i anbefalingen vægt på det højere antal af
+rapporterede bivirkninger og drop-out forbundet med kombinationsbehandling.
+Anbefalingen er svag, da kvaliteten af evidensen er meget lav, og der ikke er relevant forskel til fordel for
+kombinationsbehandlingen. Desuden viser de inkluderede studier en risiko for bivirkninger ved kombinationsbehandling, dog
+dokumenteres ikke en øget risiko for selvmordstanker/-adfærd i den undersøgte aldersgruppe
+Fokuseret Spørgsmål
+Population: Voksne (>18) med moderat til svær OCD (Y-BOCS > 18). Ingen behandling for OCD indenfor de sidste 6
+mdr.
+Intervention: Interventionsformen er manualiseret kognitiv adfærdsterapi for OCD. Varighed: mindst 10 sessioner
+Sammenligning: Interventionsformen er kombinationsbehandlingen af manualiseret kognitiv adfærdsterapi for OCD og et
+SSRI-præparat. Varighed: mindst 10 sessioner terapi og mindst 12 ugers behandling med SSRI
+Sammenfatning
+Evidensgrundlaget er ét systematisk review(31) hvorfra der blev inkluderet tre randomiserede studier(37-39). Flow charts
+findes her.
+Populationen i de tre studier var voksne over 17 år (N= 103). I to af de tre studier var der tale om voksne med svær OCD,
+som enten var indlagt(38) eller blev betegnet som kroniske patienter(39) .
+Interventionen var manualiseret KAT på 8-25 ugentlige sessioner (to studier inkluderede eksponering og responshindring
+sessioner(38,39)) med eller uden tillæg af en maksimum dosis på 300 mg fluvoxamin per dag i otte til 24 uger(37-39) . Det er
+ikke muligt ud fra de fundne studier at undersøge effekten af andre doser og andre SSRI-præparater. På baggrund af
+evidensen vides det ikke, om længerevarende medicinsk behandling vil resultere i andre effektstørrelser eller
+skadevirkninger. Et studie var ikke placebokontrolloret(37) .
+Der blev fundet en klinisk relevant forskel i det kritiske outcome ’frafald på grund af bivirkninger’ til fordel for KAT(37,39) . I
+forhold til det kritiske outcome ’antallet af patienter med en reduktion på mindst 30 % på Y-BOCS skalaen’ kan der ikke
+udelukkes at være en klinisk relevant forskel til fordel for kombinationsbehandlingen. Der var ingen klinisk relevant forskel
+på social funktionsevne(38) . Det kritiske outcome livskvalitet blev ikke afrapporteret i de tre studier.
+I forhold til de vigtige outcomes kunne en klinisk relevant forskel til fordel for KAT i antal af frafald ikke udelukkes(37,39).
+Der var ingen klinisk relevant forskel i de vigtige outcomes: Antal af selvmordstanker/- adfærd, depression, ændring på Y-
+BOCS og alvorlige bivirkninger (SAE) efter endt behandling i de inkluderede studier.
+De i fokusspørgsmål 5 anvendte studier til vurdering af selvmordstanker/- adfærd efter behandling med SSRI er alle
+udelukkende baseret på studier af børn og unge med OCD, og kan derfor ikke anvendes ved besvarelsen af dette
+fokusspørgsmål. Til belysning af bivirkningerne af SSRI-behandling er der derfor inddraget evidensen fra to andre
+metaanalyser(35,36). Den ene metaanalyse er baseret på 9 observationelle studier af voksne over 18 år, som har indikation
+for behandling med antidepressiva, og som er i behandling for en psykisk lidelse(35). Den anden metaanalyse er baseret på
+372 randomiserede kontrollerede studier med børn, unge og voksne, med en psykisk eller adfærdsmæssig diagnose, som
+havde indikation for behandling med antidepressiva (27,6 % af populationen havde en anden psykisk lidelse end depression
+og adfærdsproblemer herunder OCD)(36). Begge metaanalyserne viste, at der ikke var en øget klinisk relevant risiko for
+36 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+selvmordstanker/-adfærd i en voksenpopulation (over henholdsvis 18 år(35) og 25 år(36)) efter behandling med
+antidepressiva (herunder SSRI). Risikoen for selvmordstanker hos unge/voksne under 25 år er imidlertid forøget i den ene
+metaanalyse(36) .
+Tiltro til
+estimaterne
+Outcome Resultater og målinger Effektestimater (at de afspejler Sammendrag
+Tidsramme den sande
+CBT + SSRI CBT
+effekt i
+populationen)
+Drop-out 318 243
+Relative risiko 0.76
+Ved
+(CI 95% 0.37 - 1.58) per 1.000 per 1.000 Moderat
+behandlingsafslutning
+Baseret på data fra 89 KI udelukker ikke
+patienter i 2 studier. 1 Forskel: 75 færre per 1.000 relevant forskel
+6 Vigtig (Randomiserede studier) ( CI 95% 201 færre - 185 flere )
+Remission
+symptomscore (Y-
+BOCS lige med eller
+under 10)
+(Remission: Y-BOCS
+less than or equal to Vi fandt ingen evidens
+9) for dette outcome
+Ved
+behandlingsafslutning
+6 Vigtig
+Symptomscore
+minimum 30 %
+reduktion i Y-BOCS
+875 600
+(minimum 30 % Relative risiko 0.69
+symptom reduction (CI 95% 0.48 - 0.98) per 1.000 per 1.000 Lav
+on the Y-BOCS Baseret på data fra 49 Høj risiko for bias,
+score) patienter i 1 studier. 2 Forskel: 275 færre per 1.000 Kun 1 studie
+Længste follow-up (Randomiserede studier) ( CI 95% 454 færre - 20 færre )
+9 Kritisk
+Selvmordstanker/
+Selvmordsadfærd
+28 41
+(Suicidal thoughts Relative risiko 1.46
+and behaviours) (CI 95% 0.21 - 10.3) per 1.000 per 1.000 Moderat
+Ved Baseret på data fra 139 KI udelukker ikke
+behandlingsafslutning patienter i 2 studier. 3 Forskel: 13 flere per 1.000 relevant forskel
+(Randomiserede studier)
+( CI 95% 22 færre - 258 flere )
+6 Vigtig
+37 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Tiltro til
+estimaterne
+Outcome Resultater og målinger Effektestimater (at de afspejler Sammendrag
+Tidsramme den sande
+CBT + SSRI CBT
+effekt i
+populationen)
+Frafald på grund af
+bivirkninger (AE)
+167 60
+(Dropout due to Lav
+Relative risiko 0.36
+adverse events) (CI 95% 0.02 - 7.42) per 1.000 per 1.000 Høj inkonsistens
+Ved Baseret på data fra 139 blandt
+behandlingsafslutning patienter i 2 studier. 4 Forskel: 90 færre per 1.000 studieresultaterne
+( CI 95% 300 færre - 130 flere )
+9 Kritisk
+Alvorlige
+bivirkninger (SAE)
+(serious adverse
+events)
+Vi fandt ingen evidens
+(Ved for dette outcome
+behandlingsafslutning)
+9 Kritisk
+Symptomscore (Y-
+BOCS)
+Målt med: Y-BOCS
+behandlin V g e s d a fslutning Skala: 0-40 Lavere bedre Forskel: MD 0.93 højere Lav
+Baseret på data fra: 82 Høj risiko for bias
+( CI 95% 4.54 højere - 6.4 højere )
+patienter i 2 studier. 5
+6 Vigtig
+Social
+funktionsevne
+Målt med: GAS
+(Social functioning) Meget lav
+Længste follow-up S B ka a l s a e : r 1 e - t 9 p 0 å H d ø at je a r f e r a b : e 4 d 9 re Forskel: MD 3.3 højere KI udelukker ikke
+patienter i 1 studier. 6 ( CI 95% 11.99 lavere - 5.39 højere ) en mulig forskel
+9 Kritisk
+Livskvalitet (Quality
+of Life)
+Længste follow-up Vi fandt ingen evidens
+for dette outcome
+9 Kritisk
+Depression
+Ved
+behandlingsafslutning Forskel: SMD 0.28 højere Lav
+Baseret på data fra: 113 Høj risiko for bias
+( CI 95% 0.18 højere - 0.73 højere )
+patienter i 3 studier. 7
+6 Vigtig
+38 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+1. Systematisk oversigtsartikel [9] med inkluderede studier: Cottraux 1990, vanBalkom 1998. Baselinerisiko/komparator:
+Kontrolarm i reference brugt til interventionen.
+2. Systematisk oversigtsartikel [9] med inkluderede studier: Hohagen 1998. Baselinerisiko/komparator: Kontrolarm i reference
+brugt til interventionen.
+3. Systematisk oversigtsartikel [9] med inkluderede studier: vanBalkom 1998, Cottraux 1990. Baselinerisiko/komparator:
+Kontrolarm i reference brugt til interventionen.
+4. Systematisk oversigtsartikel [9] med inkluderede studier: vanBalkom 1998, Cottraux 1990. Baselinerisiko/komparator:
+Kontrolarm i reference brugt til interventionen.
+5. Systematisk oversigtsartikel [9] med inkluderede studier: vanBalkom 1998, Hohagen 1998. Baselinerisiko/komparator:
+Kontrolarm i reference brugt til interventionen.
+6. Systematisk oversigtsartikel [9] med inkluderede studier: Hohagen 1998. Baselinerisiko/komparator: Kontrolarm i reference
+brugt til interventionen.
+7. Systematisk oversigtsartikel [9] med inkluderede studier: vanBalkom 1998, Hohagen 1998, Cottraux 1990. Baselinerisiko/
+komparator: Kontrolarm i reference brugt til interventionen.
+39 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+9 - Varighed af behandling med kognitiv adfærdsterapi til børn, unge og voksne med OCD
+Fokuseret spørgsmål 7: Bør børn, unge og voksne, der fortsat har moderat til svær OCD efter 10 sessioner kognitiv adfærdsterapi
+tilbydes op til yderligere 5 eller op til yderligere 6 -14 sessioner?
+Børn, unge og voksne med OCD er en gruppe, hvor et standard behandlingsforløb i nogle tilfælde ikke har den ønskede effekt i form af
+reduktion i OCD symptomer, forbedring af livskvalitet og social funktionsevne. Der er behov for viden om, hvor længe KAT
+behandlingen til børn, unge og voksne, som efter 10 sessioner KAT fortsat har moderat til svær OCD, skal forlænges (se også
+delafsnittet "Emneafgræsning" i afsnittet "Indledning").
+God praksis (konsensus)
+Det er god praksis at overveje at tilbyde børn, unge og voksne, der fortsat har moderat til svær OCD efter et forløb med kognitiv
+adfærdsterapi, yderligere et forløb med kognitiv adfærdsterapi.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019
+Praktiske råd og særlige patientovervejelser
+Tilbuddet om længerevarende behandling med KAT skal altid ske på baggrund af en individuel vurdering. Den individuelle vurdering skal
+inkludere overvejelser om, hvorvidt et andet terapiformat for den enkelte patient (fx gruppe, familie, parbehandling), behandlerskift og/eller
+om et andet tidspunkt for behandling kan bidrage til en bedre respons på behandlingen. Derudover skal patientens motivation for
+behandling med KAT inddrages i overvejelserne. Endelig bør en diagnostisk revurdering overvejes.
+Praktiske Oplysninger
+Se teksten i kursiv under "God praksis"
+Nøgleinformationer
+Gavnlige og skadelige virkninger Lille netto gevinst eller små forskelle mellem alternativerne
+Tilbud om en længerevarende KAT behandling til børn, unge og voksne med moderat til svær OCD, der i første omgang ikke
+responderer på KAT behandlingen, kan muligvis give en effekt, hvis patienten er motiveret for behandlingen,
+behandlingsformatet er det rette, timingen er god, og der er god alliance mellem patient og behandler.
+Der vurderes ikke at være skadevirkninger ved en forlængelse af KAT behandlingen.
+Kvaliteten af evidensen Meget lav
+Der er ikke fundet evidens
+Patientpræferencer Betydelig variation er forventet eller usikker
+Behandlingen vurderes at være præferencefølsom, da det for nogle patienter vil være for ressourcekrævende at deltage i ekstra
+behandling, mens andre patienter gerne vil tage imod tilbuddet
+Andre overvejelser Ingen væsentlige problemer med anbefalet alternativ
+Ved udeblivende respons bør det overvejes at revurdere diagnosen OCD som hoveddiagnose
+Rationale
+Der er i anbefalingen lagt vægt på, at behandlingsresistente patienter vil kunne have gavn af tilbud om yderligere behandling, og at
+der ikke er kendte skadevirkninger ved en længerevarende behandling med KAT.
+40 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Fokuseret Spørgsmål
+Population: Børn, unge og voksne med moderat til svær OCD (> 18 CY-BOCS/Y-BOCS), som ikke har haft min. 30 %
+symptomreduktion efter 10 sessioner kognitiv adfærdsterapi (KAT) med eller uden kombinationsbehandling med
+antidepressiva i 12 uger.
+Intervention: Interventionsformen er udvidet manualiseret kognitiv adfærdsterapi for OCD. Varighed: mindst 5
+sessioner yderligere
+Sammenligning: Interventionsformen er standard manualiseret kognitiv adfærdsterapi for OCD. Varighed: maksimalt 14
+sessioner.
+Sammenfatning
+Litteratursøgningen fandt ingen randomiserede kontrollerede forsøg, som besvarede dette fokuserede spørgsmål. Flow
+charts findes her
+Der er imidlertid fundet tre studier, som har undersøgt effekten af KAT behandling hos behandlingsresistente børn og unge
+med moderat til svær OCD(40-42). Den behandlingsresistente population var her defineret som havende mindre end en 30
+% reduktion på CYBOCS efter endt behandling, eller en manglende reduktion på grund af en foregående teknisk insufficient
+behandling(40). Et af studierne var et RCT, der sammenlignede yderligere behandling med KAT (10-12 sessioner) med
+behandling med SSRI (i 12-16 uger) hos behandlingsresistente børn og unge(41). Det andet studie undersøgte effekten af
+yderligere behandling med KAT (mellem 8-37 sessioner) hos behandlingsresistente børn og unge, som tidligere havde
+modtaget KAT behandling(40). Det tredje studie undersøgte langtidseffekten i behandlingen med KAT sammenlignet med
+eksponering og responshindring (16 sessioner) i en voksen population med OCD(42). Da ingen af de tre studier
+sammenlignede længevarende med korterevarende behandling med KAT, indgik de ikke i evidensgrundlaget for
+anbefalingen, men er i stedet blevet brugt som baggrund for overvejelserne til en god praksis anbefaling.
+Alle tre studier fandt en positiv effekt af yderligere behandling med KAT ved behandlingsafslutning og follow-up, samt en
+klinisk relevant reduktion i CY-BOCS/Y-BOCS score efter yderligere behandling hos behandlingsresistente børn, unge og
+voksne(40-42). I to studier var forskellen i antal børn og unge i remission samt antallet af dem med en reduktion på over 30
+% på CY-BOCS efter behandling med KAT klinisk relevant(40,41). Et studie afrapporterede en klinisk relevant forskel på
+social funktionsevne til fordel for yderligere behandling med KAT(40), mens et andet studie ikke fandt en klinisk relevant
+forskel på dette outcome(41) .
+Tiltro til
+Effektestimater estimaterne
+Outcome Resultater og InterventionsformenI nterventionsformen (at de afspejler
+Sammendrag
+Tidsramme målinger er standard er udvidet den sande
+manualiseret manualiseret effekt i
+kognitiv adfærdste kognitiv adfærdster populationen)
+All outcome (All
+outcomes)
+Vi fandt ingen evidens
+for disse outcome
+41 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+10 - Tillægsbehandling med atypisk antipsykotikum til voksne med svær OCD
+Fokuseret spørgsmål 8: Bør voksne, som fortsat har svær OCD efter kombinationsbehandling med kognitiv adfærdsterapi og
+antidepressiva (SSRI), tilbydes tillægsbehandling med et atypisk antipsykotikum?
+Behandlingen med KAT alene og i kombination med antidepressiva (SSRI) er henholdsvis første- og andetvalg i behandlingen af voksne
+med svær OCD. Patienter, der ikke responderer på disse behandlinger, bliver i nogle tilfælde tilbudt augmentationsbehandling med et
+atypisk antipsykotikum.
+Der er ingen antipsykotika, som har indikation for behandling af OCD i Danmark. Da de atypiske antipsykotika er associeret med færre
+bivirkninger end de typiske, og primært bliver brugt som førstevalg ved behandling med antipsykotika i Danmark, undersøges effekten
+af et tillæg af lav dosis af atypiske antipsykotika til voksne, som fortsat har svær OCD, og som ikke har haft effekt af en forudgående
+behandling med en kombinationsbehandling af KAT og antidepressiva (SSRI).
+Der er mangel på viden omkring effekter og bivirkninger af tillægsbehandlingen med atypiske antipsykotika hos voksne med OCD, som
+ikke har responderet på en kombination antidepressiva (SSRI) og KAT (se også delafsnittet "Emneafgrænsning" i afsnittet "Indledning").
+Da der ikke foreligger tilstrækkelig evidensgrundlag fra den pædiatriske litteratur om tillægsbehandling med antipsykotika er
+spørgsmålet alene rettet mod voksne(43) .
+Svag anbefaling mod
+Anvend kun efter nøje overvejelse et atypisk antipsykotikum som tillægsbehandling til voksne med svær OCD, som ikke har effekt
+af behandling med kognitiv adfærdsterapi og antidepressiva (SSRI), da der ikke er påvist en klinisk relevant effekt heraf, og der er
+risiko for bivirkninger.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019
+Praktiske råd og særlige patientovervejelser
+Diagnosen OCD skal genovervejes før opstart af behandling med atypisk antipsykotika.
+For patienter med en særlig svær grad af OCD, vil behandling med atypisk antipsykotikum være en mulighed. Ved behandling af OCD med
+atypisk antipsykotika skal der i udgangspunktet anvendes en lav dosis, der optrappes langsomt og aldrig til doser som ved
+psykosebehandling. Opstart af kombinationsbehandlingen bør kun udføres af en fagperson med psykiatrisk specialviden.
+Behandling med atypiske antipsykotika til OCD er off-label, der er derfor øget krav til information og dokumentation af brug.
+Ved manglende effekt efter en måned bør den atypiske antipsykotiske tillægsbehandling seponeres. Dette gælder også ved vedvarende
+bivirkninger.
+Praktiske Oplysninger
+Se teksten i kursiv under "Anbefaling"
+Nøgleinformationer
+Gavnlige og skadelige virkninger
+Der ses en effekt ved behandling med atypisk antipsykotikum i form af et fald på 2,5 point på Y-BOCS, som dog ikke er klinisk
+relevant.
+Der er skadevirkninger ved behandling med atypisk antipsykotikum i form af vægtøgning, samt et øget frafald som følge af
+bivirkninger. Forskellen på rapporterede alvorlige bivirkninger er i evidensgrundlaget ikke klinisk relevant.
+Kvaliteten af evidensen
+42 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Den samlede kvalitet af evidensen er meget lav.
+Patientpræferencer
+De færreste patienter vil i udgangspunktet ønske at blive behandlet med atypisk antipsykotikum grundet de omtalte
+bivirkninger.
+Rationale
+I formuleringen af anbefalingen er der lagt vægt på, at tillægsbehandling med atypisk antipsykotikum ikke vurderes at medføre en
+klinisk relevant forbedring i forhold til de kritiske outcomes, samt at den samlede evidens af kvaliteten er meget lav, da der ikke kan
+udelukkes industribias og publikationsbias. Derudover er der lagt vægt på, at tillægsbehandling med atypisk antipsykotikum
+vurderes at være præferencefølsomt grundet øgede bivirkningerne (fx vægtøgning). Anbefalingen er en svag anbefaling imod, da en
+gavnlig effekt af tillægsbehandlingen ikke kan udelukkes, men denne vurderes ikke at opveje de associerede bivirkninger og mulig
+vægtøgning, som gør behandlingen særlig præferencefølsom.
+Fokuseret Spørgsmål
+Population: Voksne (>18 år) som fortsat har svær OCD (Y-BOCS > 24 eller CGI-S?4), efter kombination af kognitiv
+adfærdsterapi (KAT) og antidepressiva.
+Intervention: Kombinationsbehandling bestående af manualiseret kognitiv adfærdsterapi for OCD og et SSRI-præparat
+samt augmentationsbehandling med et atypisk antipsykotikum i lav dosering. Varighed: mindst 6 uger
+Sammenligning: Fortsat kombinationsbehandling bestående af kognitiv adfærdsterapi og et SSRI-præparat Varighed:
+mindst 6 uger
+Sammenfatning
+Evidensgrundlaget er to systematiske reviews(44,45), hvorfra der blev udvalgt ni randomiserede forsøg(46-54). Disse blev
+suppleret med fem randomiserede forsøg(55-59) fra den opdaterende søgning. Evidensgrundlaget udgøres således af 14
+randomiserede forsøg. Flow charts findes her
+Populationen i de 14 inkluderede studier var voksne over 17 år (N= 477). I alle studier var der tale om patienter med svær
+OCD, som blev beskrevet som behandlingsresistente efter en foregående behandling med antidepressiva.
+Interventionen i de inkluderede studier svarede ikke fuldt til det fokuserede spørgsmål, idet KAT komponenten ikke indgik
+efter randomisering. Behandling med antidepressiva udgjorde den ene intervention, mens den anden intervention i
+studierne bestod af antidepressiva og tillægsbehandling med atypisk antipsykotika. I fire studier fik patienterne risperidon
+(dosis 0,5 til højst 4 mg/dag)(47,48,50,58), i to studier olanzapin (dosis 5 til højst 20 mg /dag)(51,53), i fem studier quetiapin
+(dosis 25 til højst 400 mg/dag)(46,49,52,54,55), i to studier aripiprazol (dosis 10 til højst 15 mg/dag)(56,60) og i ét studie
+paliperidon (dosis op til 9 mg/dag)(59) . I alle studier modtog patienterne i kontrolgruppen placebotabletter.
+Evidensgrundlaget til besvarelse af det fokuserede spørgsmål betragtes som indirekte evidens, da ingen af studierne
+inkluderede KAT.
+Syv ud af de 14 studier angiver at være sponsoreret af industrien(46-48,52-55), hvorfor en evt. industribias ikke kan
+udelukkes.
+Der blev ikke fundet klinisk relevant forskel i de kritiske outcomes, social funktionsevne(46,52,54,58) og livskvalitet(49,58).
+Ingen af studierne rapporterede en 30 % reduktion på YBOCS efter endt behandling, men der blev rapporteret en klinisk
+relevant forskel til fordel for tillægsbehandlingen på antallet af patienter med enten 25 % eller 35 % reduktion på Y-BOCS
+efter endt behandling(46-55,57-59) .
+I forhold til de vigtige outcomes, var den gennemsnitlige forskel på den samlede YBOCS score efter endt behandling 2,5
+point, hvilket ikke vurderes som værende en klinisk relevant ændring(46-59) . Der var en forskel til fordel for
+43 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+tillægsbehandlingen i antallet af patienter i remission (Y-BOCS på ≤9)(54,58) . Der var ingen relevant forskel i drop-out(46-
+59) og CGI-S ≤2(46,49,50,54,59) efter endt behandling ved tillægsbehandling med atypisk antipsykotika.
+Forskellen i frafald grundet bivirkninger(46-49,51-55,57-59) og vægtøgning(46,51,53,54,57,58) viste en klinisk relevant
+forskel til fordel for ikke-tillægsbehandlingen. Der var ingen forskel i alvorlige bivirkninger mellem de to
+interventioner(46,49,52,55,58,59) .
+Det vigtige outcome, 30 % reduktion på Y-BOCS ved mindst 3 måneders follow-up, blev ikke afrapporteret i studierne.
+Tiltro til
+estimaterne
+Outcome Effektestimater (at de afspejler
+Resultater og målinger Sammendrag
+Tidsramme SSRI SSRI + den sande
+antipsykotikum effekt i
+populationen)
+Alvorlige
+bivirkninger (SAE)
+28 8 Meget lav
+(serious adverse
+Relative risiko 0.35 sponsoreringen
+events) (CI 95% 0.04 - 3.09) per 1.000 per 1.000 fra medicinal
+Ved Baseret på data fra 231 industrien, KI
+behandlingsafslutning patienter i 6 studier. 1 Forskel: 10 færre per 1.000 udelukker ikke en
+( CI 95% 50 færre - 40 flere ) relevant forskel
+6 Vigtig
+Vægtøgning/ BMI
+17 65
+(weight gain/BMI)
+Relative risiko 3.83 Lav
+Ved (CI 95% 1.37 - 10.68) per 1.000 per 1.000 sponsoreringen
+behandlingsafslutning
+Baseret på data fra 250 fra medicinal
+patienter i 6 studier. 2 Forskel: 48 flere per 1.000 industrien
+6 Vigtig ( CI 95% 6 flere - 165 flere )
+Symptomscore,
+minimum 30%
+reduktion i Y-BOCS
+204 335 Meget lav
+(minimum 30 %
+Relative risiko 1.64 sponsoreringen
+symptom reduction (CI 95% 1.05 - 2.56) per 1.000 per 1.000 fra medicinal
+in the Y-BOCS) Baseret på data fra 448 industrien, KI
+Ved patienter i 13 studier. 3 Forskel: 131 flere per 1.000 udelukker ikke en
+behandlingsafslutning ( CI 95% 11 flere - 318 flere ) relevant forskel
+9 Kritisk
+Symptomscore,
+minimum 30%
+reduktion i Y-BOCS
+(minimum 30 % Vi fandt ingen evidens
+symptom reduction for dette outcome
+in the Y-BOCS)
+Længste follow-up
+(min 3 mdr)
+44 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Tiltro til
+estimaterne
+Outcome Effektestimater (at de afspejler
+Resultater og målinger Sammendrag
+Tidsramme SSRI SSRI + den sande
+antipsykotikum effekt i
+populationen)
+6 Vigtig
+Remission
+Symptomscore (Y-
+BOCS lige med
+eller under 9) 25 66
+(Remission: Y- Relative risiko 2.64 Meget lav
+BOCS less than or (CI 95% 0.47 - 14.96) per 1.000 per 1.000 sponsoreringen
+equal to 9) Baseret på data fra 100 fra medicinal
+Ved patienter i 2 studier. 4 Forskel: 41 flere per 1.000 industrien
+( CI 95% 13 færre - 349 flere )
+behandlingsafslutning
+6 Vigtig
+Clinical Global
+Impressions-
+226 353 Meget lav
+Severity (CGI-S) lige
+Relative risiko 1.56 sponsoreringen
+med eller under 2 (CI 95% 0.71 - 3.44) per 1.000 per 1.000 fra medicinal
+Ved Baseret på data fra 186 industrien, KI
+behandlingsafslutning patienter i 5 studier. 5 Forskel: 127 flere per 1.000 udelukker ikke en
+( CI 95% 65 færre - 551 flere ) relevant forskel
+6 Vigtig
+Frafald (Dropout) 156 176 Meget lav
+Ved Relative risiko 1.13 sponsoreringen
+behandlingsafslutning (CI 95% 0.75 - 1.69) per 1.000 per 1.000 fra medicinal
+Baseret på data fra 489 industrien, KI
+patienter i 14 studier. 6 Forskel: 20 flere per 1.000 udelukker ikke en
+6 Vigtig ( CI 95% 39 færre - 108 flere ) relevant forskel
+Frafald på grund af
+bivirkninger
+25 64
+(Dropout due to
+Relative risiko 2.52 Lav
+adverse events) (CI 95% 1.11 - 5.72) per 1.000 per 1.000 sponsoreringen
+Ved Baseret på data fra 416 fra medicinal
+behandlingsafslutning patienter i 12 studier. 7 Forskel: 38 flere per 1.000 industrien
+( CI 95% 3 flere - 119 flere )
+6 Vigtig
+Meget lav
+Symptomscore (Y- Målt med: Y-BOCS
+sponsoreringen
+BOCS) Skala: 0-40 Lavere bedre Forskel: MD 2.51 højere fra medicinal
+Ved Baseret på data fra: 477
+( CI 95% 4.82 højere - 0.21 højere ) industrien, høj
+behandlingsafslutning patienter i 14 studier. 8
+heterogenitet
+45 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Tiltro til
+estimaterne
+Outcome Effektestimater (at de afspejler
+Resultater og målinger Sammendrag
+Tidsramme SSRI SSRI + den sande
+antipsykotikum effekt i
+populationen)
+6 Vigtig
+Social
+funktionsevne Meget lav
+(Social functioning) Målt med: SDS/ SAS-SR sponsoreringen
+9 Skala: 0-30 Lavere bedre Forskel: SMD 0.04 højere fra medicinal
+Længste follow-up Baseret på data fra: 151 industrien, KI
+( CI 95% 0.39 højere - 0.32 højere )
+patienter i 4 studier. 10 udelukker ikke en
+relevant forskel
+9 Kritisk
+Livskvalitet (Quality Målt med: SF-36 (range
+of Life) 11 0-100)/ Q-LES-Q (range Lav
+Længste follow-up 14-70) Forskel: SMD 0.43 højere sponsoreringen
+Højere bedre fra medicinal
+( CI 95% 0.87 højere - 0.01 højere )
+Baseret på data fra: 87 industrien
+9 Kritisk patienter i 2 studier. 12
+1. Systematisk oversigtsartikel [11] med inkluderede studier: Simpson 2013, Kordon 2008, Storch 2013, Carey 2005, Diniz
+2011, Fineberg 2005. Baselinerisiko/komparator: Kontrolarm i reference brugt til interventionen.
+2. Systematisk oversigtsartikel [11] med inkluderede studier: Bystritsky 2004, Sayyah 2012, Simpson 2013, Shapira 2004,
+Denys 2004, Carey 2005. Baselinerisiko/komparator: Kontrolarm i reference brugt til interventionen.
+3. Systematisk oversigtsartikel [11] med inkluderede studier: Simpson 2013, Diniz 2011, Shapira 2004, Denys 2004, Storch
+2013, Kordon 2008, Erzegovesi 2005, Fineberg 2005, Sayyah 2012, McDougle 2000, Hollander 2003, Carey 2005, Bystritsky
+2004. Baselinerisiko/komparator: Kontrolarm i reference brugt til interventionen.
+4. Systematisk oversigtsartikel [11] med inkluderede studier: Denys 2004, Simpson 2013. Baselinerisiko/komparator:
+Kontrolarm i reference brugt til interventionen.
+5. Systematisk oversigtsartikel [11] med inkluderede studier: Kordon 2008, Denys 2004, Carey 2005, Storch 2013, McDougle
+2000. Baselinerisiko/komparator: Kontrolarm i reference brugt til interventionen.
+6. Systematisk oversigtsartikel [11] med inkluderede studier: Shapira 2004, Muscatello 2011, Carey 2005, Denys 2004, Diniz
+2011, Erzegovesi 2005, Storch 2013, Sayyah 2012, Kordon 2008, Bystritsky 2004, McDougle 2000, Hollander 2003, Simpson
+2013, Fineberg 2005. Baselinerisiko/komparator: Kontrolarm i reference brugt til interventionen.
+7. Systematisk oversigtsartikel [11] med inkluderede studier: Carey 2005, Fineberg 2005, Diniz 2011, Storch 2013, Shapira
+2004, Denys 2004, Kordon 2008, Sayyah 2012, Bystritsky 2004, Simpson 2013, Erzegovesi 2005, Hollander 2003.
+Baselinerisiko/komparator: Kontrolarm i reference brugt til interventionen.
+8. Systematisk oversigtsartikel [11] med inkluderede studier: Kordon 2008, Hollander 2003, Shapira 2004, McDougle 2000,
+Bystritsky 2004, Simpson 2013, Muscatello 2011, Diniz 2011, Fineberg 2005, Sayyah 2012, Erzegovesi 2005, Carey 2005,
+Storch 2013, Denys 2004. Baselinerisiko/komparator: Kontrolarm i reference brugt til interventionen.
+9. SDS/ SAS-SR (lower is better)
+10. Systematisk oversigtsartikel [11] med inkluderede studier: Denys 2004, Carey 2005, Simpson 2013, Fineberg 2005.
+Baselinerisiko/komparator: Kontrolarm i reference brugt til interventionen.
+11. SF-36 / Q-LES-Q (higher is better)
+12. Systematisk oversigtsartikel [11] med inkluderede studier: Simpson 2013, Kordon 2008. Baselinerisiko/komparator:
+Kontrolarm i reference brugt til interventionen.
+46 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+11 - Seponering af antidepressiva
+Fokuseret spørgsmål 9: Bør seponering af antidepressiva forsøges 6 måneder eller 12 måneder efter stabilisering af symptombilledet
+hos børn, unge og voksne med OCD?
+Der findes ingen retningslinje for seponering af antidepressiva, og der er generel mangel på viden omkring tidspunkt for seponering
+efter stabilisering af symptombilledet hos den enkelte patient.
+Blandt patienter og behandlere er der en efterspørgsel på viden om, hvornår børn, unge og voksne med et stabilt symptombillede kan
+starte på seponering af antidepressiv medicin. Det er i dag udbredt i Danmark at starte seponering 12 måneder efter stabilisering af
+symptombilledet.
+Svag anbefaling
+Overvej at seponere antidepressiv behandling 6 måneder efter stabilisering af symptombilledet frem for efter 12 måneder hos
+børn, unge og voksne med OCD.
+Opdatering af anbefalingen er ikke vurderet nødvendig i 2019
+Praktiske råd og særlige patientovervejelser
+Seponering skal ske i samråd med patientens præferencer, da nogle patienter vil ønske en tidlig seponering af antidepressiva, mens andre vil
+føle tryghed i behandlingen med antidepressiva.
+Det er vigtigt, at seponering sker ved langsom nedtrapning. Varigheden af nedtrapningen afhænger af bl.a. dosisstørrelse og patients
+præference for hurtig/langsom udtrapning, men bør som tommelfingerregel forløbe over minimum to måneder. Seponeringssymptomer
+omfatter svimmelhed, ataksi, gastro-intestinale symptomer, influenzalignende symptomer, insomni, mareridt, angst, agitation, grådlabilitet,
+irritabilitet, overaktivitet, koncentrations- og hukommelsesproblemer, nedsat stemningsleje, konfusion, depersonalisationssymptomer og
+muskeltrækninger (61).
+Praktiske Oplysninger
+Se teksten i kursiv under "Anbefaling"
+Nøgleinformationer
+Gavnlige og skadelige virkninger
+Grundet den korte nedtrapningstid, kan det ikke vurderes om andelen af tilbagefald hos børn, unge og voksne med OCD er
+lavere ved seponering efter 12 måneder end efter seks måneder efter en stabilisering af symptombilledet.
+Der er ikke færre bivirkninger ved nedtrapning efter længere behandling med SSRI. Bivirkningerne kan grundet den hurtigt
+foretagede nedtrapning i studierne ikke skelnes fra seponeringsbivirkninger.
+Kvaliteten af evidensen
+Kvaliteten af evidensen er meget lav.
+Patientpræferencer
+Der kan være individuelle præferencer, som afgør tidspunktet for seponering. Nogle patienter ønsker at blive fri af
+antidepressiva så tidligt som muligt, mens andre finder en tryghed i fortsat at være i farmakologisk behandling længere tid efter
+symptombilledet er stabiliseret.
+47 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Specielt hos børn og unge kan der være en særlig præference til at seponere så hurtigt som muligt.
+Rationale
+Der er i anbefalingen lagt vægt på, at der grundet den hurtige seponering ikke kan vurderes at være en relevant klinisk forskel i øget
+antal bivirkninger. Herudover er der lagt vægt på, at der ikke ses forskel i frafald grundet bivirkninger til fordel for en nedtrapning
+efter 12 måneder, og der vil være samme seponeringsbivirkninger forbundet med en nedtrapning efter 6 eller efter 12 måneder. Der
+vurderes ikke at være forskel mellem seponeringstidspunkterne, men da den samlede evidens kun indirekte besvarer det fokuserede
+spørgsmål med hensyn til population og intervention, gives der en svag anbefaling.
+Fokuseret Spørgsmål
+Population: Børn, unge og voksne med OCD, der er i antidepressiv behandling for OCD. OCD skal være i remission (Y-
+BOCS/CY-BOCS score?9)
+Intervention: Behandling med SSRI min. 12 måneder efter remission af symptomerne
+Sammenligning: Behandling med SSRI i 6 mdr efter remission af symptomerne
+Sammenfatning
+Evidensgrundlaget består af ét systematisk review(62), hvorfra der er brugt seks randomiserede kontrollerede forsøg(63-68),
+hvoraf et forsøg ikke er blevet publiceret(63). En opdaterende litteratursøgning fandt ingen andre randomiserede
+kontrollerede studier. Flow charts findes her.
+Populationen var børn og unge mellem 8 og 17 år (N = 193)(67) og voksne over 17 år (N = 761)(63-66,68) . Da ikke alle
+patienterne i studierne havde en Y-BOCS/CY-BOCS på ≤ 9 på starttidspunktet for seponering og ingen af studierne havde
+den ønskede sammenligning, indgår studierne kun indirekte i besvarelsen af det fokuserede spørgsmål.
+I forhold til interventionen var der ingen af studierne, der sammenlignede seponering efter seks måneder med seponering
+efter 12 måneder efter stabilisering af symptombilledet. Alle studier sammenlignede seponering med fortsat behandling hos
+patienter, som inden randomisering havde haft effekt af undersøgte antidepressiva. I henhold til det fokuserede spørgsmål
+var populationen ikke i remission, da populationen havde en mean score på omkring 11 på Y-BOCS/CY-BOCS, hvorfor der
+er tale om indirekte evidens. Seponeringen skete efter henholdsvis 16 ugers behandling(66,67), 20-26 ugers
+behandling(63-65) og 52 ugers behandling(68). For at undersøge effekten af tidspunktet for seponeringsstart blev studierne
+grupperet i henhold til deres starttidspunkt for seponering (16, 20-26 og 52 uger). Forskellen på effekten af seponering blev
+vurderet ved at kigge på, om der var forskel mellem de forskellige seponeringstidspunktsgrupper, se bilag 8 for
+metaanalyserne herpå.
+I forhold til de kritiske outcomes var der ingen klinisk relevant forskel på social funktionsevne mellem de forskellige
+seponeringsgrupper (P = 0,23). Det kritiske outcome, alvorlige bivirkninger, blev kun rapporteret i 16 ugers og 20-26 ugers
+studierne, og der var ingen klinisk relevant forskel mellem tidspunkterne for seponering sammenlignet mellem
+seponeringsgrupperne (P=0,15)(65,66) . Kun et studie afrapporterede det kritiske outcome livskvalitet, hvorfor der ikke kan
+laves en sammenligning mellem seponeringstidspunktsgrupperne(68) . De kritiske outcomes, antal af patienter i remission
+(symptomscore på ≤ 9 på Y-BOCS/CY-BOCS) og antal af patienter med CGI-I >4 eller CGI-S på ≤ 2 blev ikke afrapporteret i
+studierne.
+I forhold til de vigtige outcome, var der ingen klinisk relevant forskel på antal frafald grundet bivirkninger mellem de
+forskellige seponeringsgrupper (P=0,71). Antal genhenvisninger, som er et vigtigt outcome, blev ikke afrapporteret i
+studierne. Der var ingen klinisk relevant forskel på antal af tilbagefald mellem de forskellige seponeringstidspunktsgrupper
+(P=1,00) eller på drop-out efter nedtrapning (P=0,90). Der var således ikke færre, der droppede ud af studiet med
+seponering efter 52-uger behandling fremfor studier med seponering efter 16-ugers behandling. Kun et studie
+afrapporterede det vigtige outcome angst, hvorved ingen sammenligning mellem grupperne kunne laves(66) .
+Selve seponeringen foregik over enten tre uger(68), en uge(66), ved ingen nedtrapning(65) (abrupt seponering) eller var ikke
+beskrevet(63,64,67) . Det vurderes, at nedtrapning i studierne skete over så kort tid, at både tilbagefald (relapse), frafald på
+grund af bivirkninger og alvorlige bivirkninger i praksis er svære at skelne fra seponeringsbivirkninger. Det kan således ikke
+udelukkes, at en langsom nedtrapning ville føre til færre bivirkninger.
+48 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Tiltro til
+estimaterne
+Outcome Resultater og målinger Effektestimater (at de afspejler Sammendrag
+Tidsramme den sande
+Udtrapning SSRI
+effekt i
+populationen)
+Meget lav
+Frafald på grund af
+Manglende
+bivirkninger
+103 49 overførbarhed:
+(Dropout due to
+Relative risiko 0.48 utrapning sker
+adverse events) (CI 95% 0.23 - 0.98) per 1.000 per 1.000 over kort tid,
+Ved Baseret på data fra 912 patienter er ikke i
+behandlingsafslutning patienter i 6 studier. 1 Forskel: 54 færre per 1.000 remission efter
+( CI 95% 79 færre - 2 færre ) udtrapning, ingen
+studier omhandler
+børn
+Meget lav
+Alvorlige
+Manglende
+bivirkninger (SAE)
+15 18 overførbarhed:
+(Serious adverse
+Relative risiko 1.18 utrapning sker
+events) (CI 95% 0.28 - 4.91) per 1.000 per 1.000 over kort tid,
+Ved Baseret på data fra 662 patienter er ikke i
+behandlingsafslutning patienter i 6 studier. 2 Forskel: 3 flere per 1.000 remission efter
+( CI 95% 11 færre - 59 flere ) udtrapning, ingen
+studier omhandler
+børn
+Meget lav
+Manglende
+Frafald (Dropout) 617 392 overførbarhed:
+Relative risiko 0.64
+Ved utrapning sker
+behandlingsafslutning (CI 95% 0.53 - 0.76) per 1.000 per 1.000 over kort tid,
+Baseret på data fra 954
+patienter er ikke i
+patienter i 6 studier. 3 Forskel: 225 færre per 1.000 remission efter
+6 Vigtig (Randomiserede studier) ( CI 95% 290 færre - 148 færre ) udtrapning, ingen
+studier omhandler
+børn
+Symptomscore CY-
+BOCS/Y-BOCS lige
+med eller under 9) (
+CY-BOCS/Y-BOCS
+less than or equal
+Vi fandt ingen evidens
+to 9) for dette outcome
+Efter udtrapning
+(indenfor 6 mdr.)
+9 Kritisk
+CGI-S lige med eller
+under 2 / CGI-I >4
+(Clinical Global Vi fandt ingen evidens
+Impressions- for dette outcome
+Severity less than
+or equal to 2 /
+49 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Tiltro til
+estimaterne
+Outcome Resultater og målinger Effektestimater (at de afspejler Sammendrag
+Tidsramme den sande
+Udtrapning SSRI
+effekt i
+populationen)
+Clinical Global
+Impression-
+Improvement >4)
+Efter udtrapning
+(indenfor 6 mdr.)
+9 Kritisk
+Meget lav
+Genhenvisninger Manglende
+overførbarhed:
+(~relapse) (Number 325 194
+Relative risiko 0.6 Udtrapning af
+of re-referrals
+(CI 95% 0.46 - 0.78) per 1.000 per 1.000 SSRI sker over for
+(~relapse) )
+Baseret på data fra 911 kort tid;
+Efter udtrapning patienter i 5 studier. 4 Forskel: 131 færre per 1.000 patienterne er
+(Randomiserede studier) ikke i remission
+( CI 95% 177 færre - 70 færre )
+6 Vigtig
+ved udtrapning;
+ingen studier
+omhandler børn
+Meget lav
+Manglende
+Angst (Anxiety) overførbarhed:
+Ved utrapning sker
+behandlingsafslutning Forskel: MD 1.3 højere over kort tid,
+Baseret på data fra: 190 patienter er ikke i
+( CI 95% 2.84 højere - 0.24 højere )
+patienter i 1 studier. 5 remission efter
+6 Vigtig udtrapning, ingen
+studier omhandler
+børn
+Meget lav
+Social Manglende
+funktionsevne overførbarhed:
+Målt med: SF-36
+(Social functioning) utrapning sker
+Skala: 0-100 Højere
+Efter udtrapning bedre Forskel: MD 1.78 højere over kort tid,
+(indenfor 6 mdr.) Baseret på data fra: 259 ( CI 95% 1.51 højere - 5.07 højere ) patienter er ikke i
+remission efter
+patienter i 2 studier. 6
+udtrapning, ingen
+9 Kritisk studier omhandler
+børn
+Meget lav
+Livskvalitet (Quality Manglende
+of Life) Målt med: Q-LES-Q overførbarhed:
+Efter udtrapning Skala: 14-70 Højere utrapning sker
+(indenfor 6 mdr.) bedre Forskel: MD 9.8 højere over kort tid,
+Baseret på data fra: 215 ( CI 95% 4.91 højere - 14.69 højere ) patienter er ikke i
+patienter i 1 studier. 7 remission efter
+9 Kritisk udtrapning, ingen
+studier omhandler
+50 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Tiltro til
+estimaterne
+Outcome Resultater og målinger Effektestimater (at de afspejler Sammendrag
+Tidsramme den sande
+Udtrapning SSRI
+effekt i
+populationen)
+børn
+1. Systematisk oversigtsartikel [13] med inkluderede studier: Fineberg 2007, Geller 2003, GSK-CPMS-127, Hollander 2003,
+Koran 2002, Romano 2001. Baselinerisiko/komparator: Kontrolarm i reference brugt til interventionen.
+2. Systematisk oversigtsartikel [13] med inkluderede studier: Koran 2002, Romano 2001, Fineberg 2007, Geller 2003, GSK-
+CPMS-127, Hollander 2003. Baselinerisiko/komparator: Kontrolarm i reference brugt til interventionen.
+3. Systematisk oversigtsartikel [13] med inkluderede studier: Romano 2001, Fineberg 2007, GSK-CPMS-127, Geller 2003,
+Koran 2002, Hollander 2003. Baselinerisiko/komparator: Kontrolarm i reference brugt til interventionen.
+4. Systematisk oversigtsartikel [13] med inkluderede studier: Fineberg 2007, Hollander 2003, Geller 2003, Romano 2001,
+Koran 2002. Baselinerisiko/komparator: Kontrolarm i reference brugt til interventionen.
+5. Systematisk oversigtsartikel [13] med inkluderede studier: Geller 2003. Baselinerisiko/komparator: Kontrolarm i reference
+brugt til interventionen.
+6. Systematisk oversigtsartikel [13] med inkluderede studier: Romano 2001, Geller 2003. Baselinerisiko/komparator:
+Kontrolarm i reference brugt til interventionen.
+7. Systematisk oversigtsartikel [13] med inkluderede studier: Koran 2002. Baselinerisiko/komparator: Kontrolarm i reference
+brugt til interventionen.
+51 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+12 - Baggrund
+OCD symptomer er karakteriseret ved tilbagevendende tvangstanker og/eller gentagende tvangshandlinger. Lidelsen er ofte ledsaget af
+angst og ubehagelige følelser, der typisk er mest fremtrædende, hvis de tvangsprægede impulser ikke efterkommes eller prøves
+undertrygt af patienten. Ved OCD er der desuden høj forekomst af komorbiditet med andre typer af psykiske lidelser sammenlignet med
+normalpopulationen. De hyppigste komorbide lidelser er affektive lidelser og angstlidelser. Derudover kan der også forekomme
+alkoholmisbrug, spiseforstyrrelser, personlighedsforstyrrelser (primært tvangspræget og ængstelig evasiv), tics og
+opmærksomhedsforstyrrelse og hyperaktivitet samt psykotiske symptomer(3) .
+Befolkningsstudier har vist, at 2,3 % af befolkningen har eller har haft OCD i løbet af deres liv(6,7). Studierne peger endvidere på, at
+tidligt debuterende OCD (i barndommen), hvis ubehandlet eller ved udeblivende effekt af behandlingen, ofte vil fortsætte i ungdoms- og
+voksenalderen og kan udvikle sig til en kronisk lidelse(6,7). De fleste debuterer før 35 års alderen og ca. 25 % vil debutere i
+barndommen (før 14 årsalderen)(69,70). Denne retningslinje fokuserer på behandlingen af børn, unge og voksne.
+For at opfylde diagnosen OCD ifølge ICD-10 er det et krav, at symptomerne påvirker den enkeltes funktionsevne eller medfører lidelse
+og opleves som ubehagelige. På baggrund af en vurdering af, at OCD symptomerne medfører en svær funktionspåvirkning og nedsat
+livskvalitet er OCD på plads 10 på WHO’s liste over de mest belastende lidelser verden over. Ofte er det primære og sekundære
+outcome i studier dog ikke dette patientrelaterede outcome. Symptomerne og deres påvirkning af social funktionsevne medfører, at
+personer med OCD kan have svært ved at gennemføre en uddannelse eller fungere på en arbejdsplads. Desuden vil der ofte være en
+stor belastning for pårørende hos patienter med OCD.
+Behandlingen af OCD har tidligere varieret mellem regionerne, men indførelsen af de fællesregionale pakkeforløb har ført til større
+ensartethed. Typisk inkluderer behandlingen KAT og antidepressiva alene eller kombinationsbehandling. Behandlingstilbuddet afhænger
+også af forekomsten af samtidig sygdom (komorbiditet).
+Retningslinjen for OCD forventes at hjælpe til en ensartethed af den mest effektive behandling for mild, moderat, svær og meget svær
+OCD både for børn, unge og voksne på tværs af landet.
+52 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+13 - Implementering
+Regionerne og regionernes sygehuse spiller en vigtig rolle i at understøtte implementeringen af den nationale kliniske retningslinje
+gennem formidling af retningslinjens indhold og ved at understøtte retningslinjens anvendelse i praksis. For at understøtte
+retningslinjens anvendelse lokalt er det hensigtsmæssigt, at den nationale kliniske retningslinje samstemmes med eller integreres i de
+forløbsbeskrivelser, instrukser og vejledninger, som allerede anvendes her. Regionerne bør således sikre, at de anbefalinger, som må
+være relevante for specialiserede afdelinger på sygehusniveau, indarbejdes i instrukser og vejledninger i den pågældende region.
+For almen praksis indebærer det, at anbefalinger fra den nationale kliniske retningslinje indarbejdes i regionernes forløbsbeskrivelser for
+OCD. Således vil de evidensbaserede relevante anbefalinger indgå i de patientvejledninger, som alment praktiserende læger allerede
+anvender, og som forholder sig til organisering i øvrigt i den pågældende region. Forløbsbeskrivelserne kan med fordel indeholde et link
+til den fulde nationale kliniske retningslinje.
+Herudover kan der med fordel indsættes et link til den nationale kliniske retningslinje i lægehåndbogen. Regionernes praksiskonsulenter
+kan desuden have en rolle i at tage stilling til den konkrete implementering.
+De faglige selskaber er en vigtig aktør i at udbrede kendskabet til retningslinjen. Sundhedsstyrelsen foreslår således, at den nationale
+kliniske retningslinje omtales på de relevante faglige selskabers hjemmeside, evt. med orientering om, hvad den indebærer for det
+pågældende speciale og med et link til den fulde version af retningslinjen. Her tænkes særligt på Dansk Psykiatrisk Selskab, Børne- og
+Ungdomspsykiatrisk Selskab, Dansk Psykolog Forening og Dansk Sygepleje Selskab. Sundhedsstyrelsen foreslår ligeledes, at
+retningslinjen præsenteres på årsmøder i regi af de faglige selskaber og på Lægedage. Informationen kan også formidles via
+medlemsblade og elektroniske nyhedsbreve.
+Sundhedsstyrelsen foreslår desuden, at retningslinjens indhold formidles til patienterne, og OCD-foreningen, samt andre relevante
+patientforeninger.
+Implementering af den nationale kliniske retningslinje for OCD er som udgangspunkt et regionalt ansvar. Dog ønsker Sundhedsstyrelsen
+at understøtte implementeringen. I for- året 2014 publicerede Sundhedsstyrelsen således en værktøjskasse med konkrete redskaber til
+implementering. Den er tilgængelig som et elektronisk opslagsværk på Sundhedsstyrelsens hjemmeside. Værktøjskassen bygger på
+evidensen for effekten af interventioner, og den er tænkt som en hjælp til lederen eller projektlederen, der lokalt skal arbejde med
+implementering af forandringer af et vist omfang.
+Foruden den fulde retningslinje udgives en quick guide. Quick guiden er en kort version på 1-2 A4-ark. Den gengiver alene
+retningslinjens anbefalinger og evt. centrale budskaber, med angivelse af evidensgraduering og anbefalingens styrke.
+53 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+14 - Monitorering
+Proces- og effektindikatorer
+Der findes hverken en klinisk kvalitetsdatabase eller et selvstændigt register for behandlingen af OCD. Det er således vanskeligt at tilgå
+data, der kan anvendes til at opgøre relevante proces- og effektindikatorer i relation til den nationale kliniske retningslinje for OCD.
+Datakilder
+Det skønnes, at data fra henholdsvis Landspatientregisteret eller Lægemiddelregisteret kan anvendes i belysningen af, hvorvidt
+retningslinjens anbefalinger følges i forhold til om SSRI som førstevalg kun anvendes hos patienter med OCD og en komorbid lidelse.
+Det anbefales derudover, at man ved opdateringen af retningslinjen vurderer, om der eksisterer egnede data, som kan anvendes som
+grundlag til proces- og effektindikatorer.
+54 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+15 - Opdatering og videre forskning
+Opdatering
+Som udgangspunkt vil der tages stilling til behov for opdatering hvert tredje år med mindre ny evidens eller den teknologiske udvikling
+på området tilsiger andet.
+Videre forskning
+Evidensen inden for behandling af OCD er overordnet set meget sparsom, og arbejdsgruppen har haft vanskeligt ved at finde et
+tilstrækkeligt antal randomiserede kontrollerede studier af høj kvalitet til besvarelse af størstedelen af de fokuserede spørgsmål.
+Nedenfor oplistes forslag til forskningsområder inden for behandling af OCD, som direkte udspringer af litteratursøgningen efter
+evidens til denne nationale kliniske retningslinje:
+• Viden om effekten af psykoterapi for OCD for børn, unge og voksne er generelt underbelyst. Der mangler head-to head studier af
+psykoterapi samt viden om, hvordan familien inddrages bedst muligt.
+• Andre psykoterapiformer end KAT har begrænset evidens, men der er børn, unge og voksne med OCD, som ikke profiterer af
+denne behandling. Der er derfor behov for mere viden om effekten af forskellige psykoterapiformer og formater. Særligt indenfor
+nyere former for KAT som tredjebølge KAT og internet- /computerbaseret KAT og effekten af andre formater såsom
+gruppebehandling sammenlignet med individuel behandling.
+• Længden af interventionen i studierne afspejler ikke i alle tilfælde den kliniske praksis. Det ville være interessant at undersøge
+længerevarende effekter og bivirkninger af både KAT og medicinering med SSRI-præparater og atypisk antipsykotika hos såvel
+børn, unge og voksne med OCD. Derudover mangler der forskningsbaseret viden om det optimale seponeringstidspunktet for
+patienter, som er i remission efter farmakologisk behandling. Ligeledes mangler der viden om, hvorvidt en tidlig indsats kan
+forhindre udvikling af svær sygdom.
+• Ved moderate og svære grader af OCD er medicinsk behandling med eller uden kombinationen af KAT ofte klinisk praksis. Der er
+kun få studier, der afdækker effekten af om længerevarende behandling med psykoterapi kan være effektivt til denne
+patientgruppe. Der mangler viden om betydningen af efterbehandling (boostersessioner) som en måde til at konsolidere tidligere
+opnået behandlingseffekt og til at modvirke tilbagefald i behandlingen af personer med OCD. Ligeledes mangler der viden om,
+hvorvidt og hvordan internet-/computerbaseret KAT kan supplere og facilitere traditionel behandling af personer med OCD.
+• Der mangler viden om indholdsmæssige forskelle af de enkelte behandlingsmanualer for KAT. For eksempel i forhold til graden af
+familieinddragelse i familiebaseret KAT og den indholdsmæssige forskel i tredjebølge KAT mod standard KAT. Der er brug for
+forskning på området, der kan afdække eventuelle forskelle i behandlingerne.
+• Forskningen er generelt yderst sparsom vedrørende patientrelevante outcomes, såsom patientens funktionsevne og livskvalitet.
+Det er i høj grad relevant at fokusere på effekt af behandling ved at fokusere på og inddrage patientperspektivet.
+55 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+16 - Beskrivelse af anvendt metode
+For en uddybet beskrivelse af metoden henvises til Sundhedsstyrelsens NKR metodehåndbog version 2.1. Metodehåndbogen kan tilgås
+her.
+56 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+17 - Fokuserede spørgsmål
+For en uddybet beskrivelse af de spørgsmål, som denne kliniske retningslinje besvarer, se venligst dokumentet vedr. fokuserede
+spørgsmål her
+57 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+18 - Beskrivelse af anbefalingernes styrke og implikationer
+Formulering af evidensbaserede anbefalinger:
+En anbefaling kan enten være for eller imod en given intervention. En anbefaling kan enten være stærk eller svag/betinget. Ved evidens
+vælges en af følgende fire typer af anbefalinger
+Stærk anbefaling for (Grøn)
+Der gives en stærk anbefaling for, når der er pålidelig evidens, der viser, at de samlede fordele ved interventionen er klart større end
+ulemperne.
+Det er klart, at fordelene opvejer ulemperne. Det betyder, at alle, eller næsten alle, patienter vil ønske den anbefalede intervention
+Ordlyd: Giv/brug/anvend…
+Følgende vil trække i retning af en stærk anbefaling for:
+Høj eller moderat tiltro til de estimerede effekter.
+Stor gavnlig effekt og ingen eller få skadevirkninger.
+Patienternes værdier og præferencer er velkendte og ensartet til fordel for interventionen.
+Implikationer:
+De fleste patienter vurderes at ønske interventionen.
+Langt de fleste klinikere vil tilbyde interventionen.
+Stærk anbefaling imod (Grøn+Rød)
+Der gives en stærk anbefaling imod, når der er der er høj tiltro til, der viser, at de samlede ulemper er klart større end fordelene. Det
+samme gælder, hvis der er stor tiltro til, at en intervention er nyttesløs.
+Ordlyd: Giv ikke/brug ikke/anvend ikke/undlad at…
+Følgende vil trække i retning af en stærk anbefaling imod:
+Høj eller moderat tiltro til de estimerede effekter.
+Der er stor tiltro til, at interventionen ikke gavner, eller at den gavnlige effekt er lille.
+Der er stor tiltro til, at interventionen har betydelige skadevirkninger.
+Patienternes værdier og præferencer er velkendte og ensartede imod interventionen.
+Implikationer:
+De fleste patienter vurderes ikke at ville ønske interventionen.
+Klinikeren vil meget sjældent tilbyde interventionen.
+Svag anbefaling for (Gul)
+Der gives en svag anbefaling for intervention en, når det vurderes, at fordelene ved interventionen er marginalt større end ulemperne,
+eller den tilgængelige evidens ikke kan udelukke en væsentlig fordel ved en eksisterende praksis, samtidig med at skadevirkningerne er
+få eller fraværende. Der er større mulighed for variation i individuelle præferencer.
+Ordlyd: Overvej at…
+Følgende vil trække i retning af en svag anbefaling for:
+Lav eller meget lav tiltro til de estimerede effekter.
+Balancen mellem gavnlige og skadelige virkninger ikke er entydig.
+Patienternes præferencer og værdier vurderes at variere væsentligt, eller de er ukendte.
+Implikationer:
+De fleste patienter vurderes at ønske interventionen, men nogen vil afstå.
+Klinikeren vil skulle bistå patienten med at træffe en beslutning, der passer til patientens værdier og præferencer.
+Svag anbefaling imod (Gul+Rød)
+58 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Der gives en svag anbefaling imod interventionen, når ulemperne ved interventionen vurderes at være større end fordelene, men hvor
+man ikke har høj tiltro til de estimerede effekter. Den svage anbefaling imod, anvendes også hvor der er stærk evidens for både gavnlige
+og skadelige virkninger, men hvor balancen mellem dem er vanskelig at afgøre.
+Ordlyd: Anvend kun … efter nøje overvejelse, da den gavnlige effekt er usikker og/eller lille, og der er dokumenterede skadevirkninger såsom…
+Følgende vil trække i retning af en svag anbefaling imod:
+Lav eller meget lav tiltro til de estimerede effekter. Balancen mellem gavnlige og skadelige virkninger ikke er entydig.
+Skadevirkningerne vurderes at være marginalt større end den gavnlige effekt.
+Patienternes præferencer og værdier vurderes at variere væsentligt, eller de er ukendte.
+Implikationer:
+De fleste patienter vurderes at ville afstå fra interventionen, men nogen vil ønske den.
+Klinikeren vil skulle bistå patienten med at træffe en beslutning, der passer til patientens værdier og præferencer.
+Formulering af anbefaling ved mangel på evidens:
+God praksis anbefaling (Grå)
+God praksis anvendes, når der ikke foreligger relevant evidens, og bygger således udelukkende på faglig konsensus blandt medlemmerne
+af arbejdsgruppen. Anbefalingen kan være enten for eller imod interventionen. Da der udelukkende er tale om faglig konsensus, er
+denne type anbefaling svagere end de evidensbaserede anbefalinger, uanset om de evidensbaseret er stærke eller svage.
+De to typer af anbefalinger til god praksis anbefalinger
+Ordlyd:
+For:
+Det er god praksis at overveje....
+Imod:
+Det er ikke god praksis rutinemæssigt at…
+59 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+19 - Søgebeskrivelser og evidensvurderinger
+Søgebeskrivelser samt evidensvurderinger er offentliggjort på Sundhedsstyrelsens hjemmeside, hvor:
+• Søgebeskrivelser kan tilgås
+• AMSTAR-vurderinger kan tilgås
+• RevMan-filer med risiko for bias-vurderinger og meta-analyser samt beskrivelse af in- og eksluderede studier kan tilgås
+• Flowcharts kan tilgås
+60 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+20 - Arbejdsgruppen og referencegruppen
+Arbejdsgruppen
+Arbejdsgruppen vedr. NKR for behandling af obsessiv-kompulsiv tilstand (OCD) består af følgende personer:
+• Kristoffer Lande Andersen, formand, Sundhedsstyrelsen
+• Clas Winding, overlæge, Psykoterapeutisk Klinik, Region Hovedstaden, udpeget af Dansk Psykiatrisk Selskab
+• Gunnar Axelgaard, praktiserende læge i Vildbjerg, udpeget af Dansk Selskab for Amen Medicin
+• Hjalti Jonsson, psykolog, adjunkt, Institut for Psykologi, Syddansk Universitet, udpeget af Dansk Psykolog Forening
+• Judith Becker Nissen, psykiater, klinisk lektor, Institut for Klinisk Medicin - Børne- og Ungdomspsykiatrisk Regionscenter, Risskov,
+udpeget af Børne- og Ungdomspsykiatrisk Selskab
+• Katja Anna Hybel, psykolog, Institut for Klinisk Medicin - Børne- og Ungdomspsykiatrisk Regionscenter, Risskov, udpeget af Dansk
+Psykolog Forening
+• Lillian Kaag Thomsen, sygeplejerske, Klinik for OCD og angstlidelser, AUH Risskov, udpeget af Dansk Sygepleje Selskab
+• Morten Munthe Fenger, psykolog, Psykoterapeutisk Center Stolpegård, udpeget af Dansk Psykolog Forening
+• Sidse Arnfred, speciallæge i almen medicin og psykiatri, forskningslektor og overlæge, ved Psykiatrisksygehuset i Slagelse,
+Psykiatrien i Regions Sjælland, udpeget af Dansk Psykiatrisk Selskab
+Fagkonsulenten Anne Dorothee Müller har som en del af sekretariatet, jf. nedenfor, været overordnet ansvarlig for
+litteraturgennemgangen og for at udarbejde udkast til retningslinjen til drøftelse i arbejdsgruppen.
+Habilitetsforhold
+En person, der virker inden for det offentlige, og som har en personlig interesse i udfaldet af en konkret sag, må ikke deltage i
+behandlingen af denne sag. Hvis en person er inhabil, er der risiko for, at han eller hun ikke er uvildig ved vurderingen af en sag. Der
+foreligger habilitetserklæringer for alle arbejdsgruppemedlemmer. Habilitetserklæringerne kan tilgås her.
+Referencegruppen
+Referencegruppen er udpeget af regioner, kommuner, patientforeninger og andre relevante interessenter på området, og dens opgave
+har bestået i at kommentere på afgrænsningen af og det faglige indhold i retningslinjen. Referencegruppen vedr. NKR for behandling af
+obsessiv-kompulsiv tilstand(OCD) består af følgende personer:
+• Carsten Stoemann Rasmussen, bestyrelsesmedlem i OCD-foreningen, udpeget af OCD-foreningen
+• Christian Hald Jensen, chefkonsulent i Region Sjælland, udpeget af Region Sjælland
+• Finn Blickfeldt Juliussen, faglig konsulent i Socialstyrelsen, udpeget af Socialstyrelsen
+61 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+• Lærke Steenberg Smith, fuldmægtig i Sundheds- og Ældreministeriet, udpeget af Sundheds- og Ældreministeriet
+• Mikkel Arendt, psykolog, Klinik for OCD og Angstlidelser & Klinik for Selvmordsforebyggelse, udpeget af Region Midtjylland
+• Josefina Hindenburg Krusing, Chefrådgiver i Danske Regioner, udpeget af Danske Regioner
+• Rudolf Oderkerk, speciallæge i psykiatri i Vejle, udpeget af Region Syd
+• Søren Drivsholm, fysioterapeut, Retspsykiatrisk rehabilitering, Aarhus universitetshospital, udpeget af Dansk Selskab for Fysioterapi
+Sekretariat
+Sekretariatet for begge grupper:
+• Ane Bonnerup Vind, overlæge, Sundhedsstyrelsen
+• Anne Dorothee Müller, fagkonsulent, Sundhedsstyrelsen
+• Betina Højgaard, projektleder, Sundhedsstyrelsen
+• Birgitte Holm Petersen, søgespecialist, Sundhedsstyrelsen
+• Simon Tarp, metodekonsulent, Sundhedsstyrelsen
+Peer review og offentlig høring
+Den nationale kliniske retningslinje for behandling af obsessiv-kompulsiv tilstand(OCD) har forud for udgivelsen været i høring blandt
+følgende høringsparter:
+• Landsforeningen SIND
+• OCD Foreningen
+• Børne- og Ungdomspsykiatrisk Selskab i Danmark
+• Dansk Psykiatrisk Selskab
+• Dansk Psykolog Forening
+• Dansk Selskab for Almen Medicin
+• Dansk Selskab for Distriktspsykiatri
+62 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+• Dansk Selskab for Fysioterapi
+• Dansk Socialrådgiverforening
+• Dansk Sygepleje Selskab
+• Danske Regioner
+• KL
+• Social- og Indenrigsministeriet
+• Socialstyrelsen
+• Sundheds- og Ældreministeriet
+Retningslinjen er desuden i samme periode peer reviewet af:
+• Bernhard Weidle, Psykiater, Adjunct Associate Professor, ph.d., Regional Centre for Child and Youth Mental Health and Child
+Welfare Faculty of Medicine, Norwegian University of Science and Technology.
+• Lars-Göran Öst, Professor, Department of psychology, Stockholm University
+63 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+21 - Forkortelser og begreber
+ACT Acceptance Commitment Therapy
+Appraisal of Guidelines for Research and Evaluation. Værktøj til
+AGREE
+vurdering af guidelines.
+A Measurement Tool to Assess Systematic Reviews. Værktøj til vurdering
+AMSTAR
+af systematiske reviews.
+CGI-I Clinical Global Impression – Improvement Scale
+CGI-S Clinical Global Impression – Severity Scale
+cKAT Computerbaseret kognitiv adfærdsterapi
+CY-BOCS Children Yale-Brown Obsessive Compulsive Scale
+Antal patienter, som ikke gennemfører den planlagte behandling og/eller
+Dropout
+undersøgelse
+The Grading of Recommendations Assessment, Development and
+GRADE Evaluation. Værktøj til vurdering af evidensens kvalitet samt styrken af
+anbefalinger
+International Classification of Diseases, 10. udgave. Udgives af World
+ICD-10
+Health Organization (WHO).
+iKAT Internetbaseret kognitiv adfærdsterapi
+KAT Kognitiv adfærdsterapi
+KI Konfidensinterval
+Komorbiditet Forekomsten af samtidige sygdomme med forskellig ætiologi
+MCT Metakognitiv terapi
+NICE National Institute of Clinical Excellence
+OCD Obsessiv-kompulsiv forstyrrelse
+Prævalens Andelen af en population med en bestemt tilstand
+Undervisning i psykisk lidelse, medfølgende problemstillinger og
+Psykoedukation
+behandling
+RCT Randomiseret kontrolleret studie
+Remission En patient, som er i bedring, og som stadig har få symptomer på lidelsen
+64 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+RR Relativ Risiko
+SSRI Selektive serotoningenoptagshæmmere
+WHO World Health Organization
+Y-BOCS Yale-Brown Obsessive Compulsive Scale
+65 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+22 - Referenceliste
+(1) Stewart SE, Geller DA, Jenike M, Pauls D, Shaw D, Mullin B, et al. Long-term outcome of pediatric obsessive-compulsive disorder: a
+meta-analysis and qualitative review of the literature. Acta Psychiatr Scand 2004;110(1):4-13.
+(2) Eisen JL, Pinto A, Mancebo MC, Dyck IR, Orlando ME, Rasmussen SA. A 2-year prospective follow-up study of the course of
+obsessive-compulsive disorder. J Clin Psychiatry 2010;71(8):1033-1039.
+(3) Mancebo MC, Eisen JL, Pinto A, Greenberg BD, Dyck IR, Rasmussen SA. The Brown Longitudinal Obsessive Compulsive Study:
+Treatments received and patient impressions of improvement. J Clin Psychiatry 2006;67(11):1713-1720.
+(4) Sundhedsstyrelsen. Referenceprogram for angstlidelser hos voksne. Udarbejdet af en arbejdsgruppe nedsat af Sekretariatet for
+Referenceprogrammer - SfR. Sundhedsstyrelsen, 2007. 166 s.
+(5) NICE (UK) - National Institute for Health and Care Excellence. Obsessive compulsive disorder (OCD) and body dysmorphic disorder
+(BDD).NICE, 2005 (CG31).
+(6) Nissen JB, Hybel K, Moltke B, Ribberholt B. Landsdækkende klinisk retningslinje vedrørende udredning og behandling af Obsessiv-
+kompulsiv tilstand (OCD) hos børn og unge. Børne- og Ungdomspsykiatrisk Selskab. Børne- og Ungdomspsykiatrisk Selskab i Danmark,
+[2010]. 18 s.
+(7) O'Kearney RT, Anstey KJ, von Sanden C. Behavioural and cognitive behavioural therapy for obsessive compulsive disorder in children
+and adolescents. Cochrane Database of Systematic Reviews 2006;4:CD004856.
+(8) Gava I, Barbui C, Aguglia E, Carlino D, Churchill R, De Vanna M, et al. Psychological treatments versus treatment as usual for
+obsessive compulsive disorder (OCD). Cochrane Database of Systematic Reviews 2007;2:CD005333.
+(9) New AACAP practice parameter for pediatric OCD. Brown Univ Child Adolesc Behav Lett 2012;28(3):1-6.
+(10) Ost LG, Havnen A, Hansen B, Kvale G. Cognitive behavioral treatments of obsessive-compulsive disorder. A systematic review and
+meta-analysis of studies published 1993-2014. Clin Psychol Rev 2015;40:156-169.
+(11) Whittal ML, Woody SR, McLean PD, Rachman SJ, Robichaud M. Treatment of obsessions: a randomized controlled trial. Behaviour
+Research & Therapy 2010;48(4):295- 303.
+(12) Bolton D, Williams T, Perrin S, Atkinson L, Gallop C, Waite P, et al. Randomized controlled trial of full and brief cognitive-behaviour
+therapy and wait-list for paediatric obsessive-compulsive disorder. Journal of Child Psychology & Psychiatry & Allied Disciplines
+2011;52(12):1269-1278.
+(13) Sundhed.dk: Henvisning til psykologhjælp. Henvisningsvejledning. Opdateret 03.04.12. Senest hentet: 02-02-2016. Link
+(14) Lebowitz ER, Panza KE, Su J, Bloch MH. Family accommodation in obsessivecompulsive disorder. Expert Review of
+Neurotherapeutics 2012;12(2):229-238.
+(15) Peris TS, Piacentini J. Optimizing treatment for complex cases of childhood obsessive compulsive disorder: a preliminary trial.
+Journal of Clinical Child & Adolescent Psychology 2013;42(1):1-8.
+(16) ThompsonHollands J, Edson A, Tompson MC, Comer JS. Family involvement in the psychological treatment of obsessive-compulsive
+disorder: A meta-analysis. Journal of Family Psychology Jun 2014;28(3):287-298.
+(17) Skarphedinsson G, Hanssen-Bauer K, Kornor H, Heiervang ER, Landro NI, Axelsdottir B, et al. Standard individual cognitive
+behaviour therapy for paediatric obsessivecompulsive disorder: a systematic review of effect estimates across comparisons. Nordic
+Journal of Psychiatry 2015;69(2):81-92.
+(18) Reynolds SA, Clark S, Smith H, Langdon PE, Payne R, Bowers G, et al. Randomized controlled trial of parent-enhanced CBT
+compared with individual CBT for obsessive-compulsive disorder in young people. J Consult Clin Psychol 2013;81(6):1021-1026.
+66 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+(19) Jonsson H, Hougaard E. Group cognitive behavioural therapy for obsessivecompulsive disorder: a systematic review and meta-
+analysis. Acta Psychiatr Scand 2009;119(2):98-106.
+(20) Anderson RA, Rees CS. Group versus individual cognitive-behavioural treatment for obsessive-compulsive disorder: a controlled
+trial. Behaviour Research & Therapy 2007;45(1):123-137.
+(21) Jonsson H, Hougaard E, Bennedsen BE. Randomized comparative study of group versus individual cognitive behavioural therapy for
+obsessive compulsive disorder. Acta Psychiatr Scand 2011;123(5):387-397.
+(22) Fals-Stewart W, Marks AP, Schaffer JBA. A Comparison of behavioral group therapy and individual behavior therapy in treating
+obessive Compulsive disorder. Journal of Nervous & Mental Disease 1993 March;181(3):189-193.
+(23) Jaurrieta N, Jimenez-Murcia S, Alonso P, Granero R, Segalas C, Labad J, et al. Individual versus group cognitive behavioral treatment
+for obsessive-compulsive disorder: follow up. Psychiatry & Clinical Neurosciences 2008;62(6):697-704.
+(24) O'Connor K, Freeston MH, Gareau D, Careau Y, Dufour MJ, Aardema F, et al. Group versus individual treatment in obsessions
+without compulsions. Clinical Psychology & Psychotherapy 2005;12(2):87-96.
+(25) Barrett P, Healy-Farrell L, March JS. Cognitive-behavioral family treatment of childhood obsessive-compulsive disorder: a controlled
+trial. Journal of the American Academy of Child & Adolescent Psychiatry 2004;43(1):46-62.
+(26) Simons M, Schneider S, Herpertz-Dahlmann B. Metacognitive therapy versus exposure and response prevention for pediatric
+obsessive-compulsive disorder. A case series with randomized allocation. Psychotherapy & Psychosomatics 2006;75(4):257-264.
+(27) Twohig MP, Hayes SC, Plumb JC, Pruitt LD, Collins AB, Hazlett-Stevens H, et al. A randomized clinical trial of acceptance and
+commitment therapy versus progressive relaxation training for obsessive-compulsive disorder. Journal of Consulting & Clinical
+Psychology 2010;78(5):705-716.
+(28) Vejledning om medikamentel behandling af børn og unge med psykiske lidelser. Vejledning nr. 9194 af 11.april 2013.
+Sundhedsstyrelsen. Link.
+(29) New AACAP practice parameter for OCD offers 11 recommendations. Brown Univ Psychopharmacol Update 2012;23(3):1-7.
+(30) Pediatric OCD Treatment Study (POTS) Team. Cognitive-behavior therapy, sertraline, and their combination for children and
+adolescents with obsessive-compulsive disorder: the Pediatric OCD Treatment Study (POTS) randomized controlled trial. JAMA
+2004;292(16):1969-1976.
+(31) Romanelli RJ, Wu FM, Gamba R, Mojtabai R, Segal JB. Behavioral therapy and serotonin reuptake inhibitor pharmacotherapy in the
+treatment of obsessive-compulsive disorder: a systematic review and meta-analysis of head-to-head randomized controlled trials.
+Depression & Anxiety 2014;31(8):641-652.
+(32) Ivarsson T, Skarphedinsson G, Kornor H, Axelsdottir B, Biedilae S, Heyman I, et al. The place of and evidence for serotonin reuptake
+inhibitors (SRIs) for obsessive compulsive disorder (OCD) in children and adolescents: Views based on a systematic review and meta-
+analysis. Psychiatry Res 2015;227(1):93-103.
+(33) Storch EA, Bussing R, Small BJ, Geffken GR, McNamara JP, Rahman O, et al. Randomized, placebo-controlled trial of cognitive-
+behavioral therapy alone or combined with sertraline in the treatment of pediatric obsessive-compulsive disorder. Behaviour Research &
+Therapy 2013;51(12):823-829.
+(34) Bridge JA, Iyengar S, Salary CB, Barbe RP, Birmaher B, Pincus HA, et al. Clinical response and risk for reported suicidal ideation and
+suicide attempts in pediatric antidepressant treatment: a meta-analysis of randomized controlled trials. JAMA 2007;297(15):1683-1696.
+(35) Barbui C, Esposito E, Cipriani A. Selective serotonin reuptake inhibitors and risk of suicide: a systematic review of observational
+studies. CMAJ 2009;180(3):291-297.
+67 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+(36) Stone M, Laughren T, Jones ML, Levenson M, Holland PC, Hughes A, et al. Risk of suicidality in clinical trials of antidepressants in
+adults: analysis of proprietary data submitted to US Food and Drug Administration. BMJ 2009;339:b2880.
+(37) van Balkom AJ, de Haan E, van Oppen P, Spinhoven P, Hoogduin KA, van Dyck R. Cognitive and behavioral therapies alone versus in
+combination with fluvoxamine in the treatment of obsessive compulsive disorder. J Nerv Ment Dis 1998;186(8):492-499.
+(38) Hohagen F, Winkelmann G, Rasche-Ruchle H, Hand I, Konig A, Munchau N, et al. Combination of behaviour therapy with
+fluvoxamine in comparison with behaviour therapy and placebo. Results of a multicentre study. Br J Psychiatry Suppl 1998;(35)(35):71-
+78.
+(39) Cottraux J, Mollard E, Bouvard M, Marks I, Sluys M, Nury AM, et al. A controlled study of fluvoxamine and exposure in obsessive-
+compulsive disorder. Int Clin Psychopharmacol 1990;5(1):17-30.
+(40) Krebs G, Isomura K, Lang K, Jassi A, Heyman I, Diamond H, et al. How resistant is 'treatment-resistant' obsessive-compulsive
+disorder in youth? Br J Clin Psychol 2015;54(1):63-75.
+(41) Skarphedinsson G, Weidle B, Thomsen PH, Dahl K, Torp NC, Nissen JB, et al. Continued cognitive-behavior therapy versus
+sertraline for children and adolescents with obsessive-compulsive disorder that were non-responders to cognitive-behavior therapy: A
+randomized controlled trial. Eur Child Adolesc Psychiatry 2014 Sep 20 [Epub].
+(42) de Haan E, van Oppen P, van Balkom AJ, Spinhoven P, Hoogduin KA, Van Dyck R. Prediction of outcome and early vs. late
+improvement in OCD patients treated with cognitive behaviour therapy and pharmacotherapy. Acta Psychiatr Scand
+1997;96(5):354-361.
+(43) Bloch MH, Storch EA. Assessment and management of treatment-refractory obsessive-compulsive disorder in children. Journal of
+the American Academy of Child & Adolescent Psychiatry 2015;54(4):251-262.
+(44) Komossa K, Depping AM, Meyer M, Kissling W, Leucht S. Second-generation antipsychotics for obsessive compulsive disorder.
+Cochrane database of systematic reviews 2010;12:CD008141.
+(45) Dold M, Aigner M, Lanzenberger R, Kasper S. Antipsychotic Augmentation of Serotonin Reuptake Inhibitors in Treatment-Resistant
+Obsessive-Compulsive Disorder: An Update Meta-Analysis of Double-Blind, Randomized, Placebo-Controlled Trials. International
+Journal of Neuropsychopharmacology 2015;18(9).
+(46) Carey PD, Vythilingum B, Seedat S, Muller JE, van Ameringen M, Stein DJ. Quetiapine augmentation of SRIs in treatment refractory
+obsessive-compulsive disorder: a double-blind, randomised, placebo-controlled study [ISRCTN83050762]. BMC Psychiatry 2005;5:5.
+(47) Erzegovesi S, Guglielmo E, Siliprandi F, Bellodi L. Low-dose risperidone augmentation of fluvoxamine treatment in obsessive-
+compulsive disorder: a double-blind, placebocontrolled study. Eur Neuropsychopharmacol 2005;15(1):69-74.
+(48) Hollander E, Baldini Rossi N, Sood E, Pallanti S. Risperidone augmentation in treatment-resistant obsessive-compulsive disorder: a
+double-blind, placebo-controlled study. Int J Neuropsychopharmacol 2003;6(4):397-401.
+(49) Kordon A, Wahl K, Koch N, Zurowski B, Anlauf M, Vielhaber K, et al. Quetiapine addition to serotonin reuptake inhibitors in
+patients with severe obsessive-compulsivedisorder: a double-blind, randomized, placebo-controlled study. J Clin Psychopharmacol
+2008;28(5):550-554.
+(50) McDougle CJ, Epperson CN, Pelton GH, Wasylink S, Price LH. A double-blind, placebo-controlled study of risperidone addition in
+serotonin reuptake inhibitor-refractory obsessive-compulsive disorder. Arch Gen Psychiatry 2000;57(8):794-801.
+(51) Shapira NA, Ward HE, Mandoki M, Murphy TK, Yang MC, Blier P, et al. A doubleblind, placebo-controlled trial of olanzapine
+addition in fluoxetine-refractory obsessivecompulsive disorder. Biol Psychiatry 2004;55(5):553-555.
+(52) Fineberg NA, Sivakumaran T, Roberts A, Gale T. Adding quetiapine to SRI in treatment-resistant obsessive-compulsive disorder: a
+randomized controlled treatment study. Int Clin Psychopharmacol 2005;20(4):223-226.
+68 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+(53) Bystritsky A, Ackerman DL, Rosen RM, Vapnik T, Gorbis E, Maidment KM, et al. Augmentation of serotonin reuptake inhibitors in
+refractory obsessive-compulsive disorder using adjunctive olanzapine: a placebo-controlled trial. J Clin Psychiatry 2004;65(4):565-568.
+(54) Denys D, de Geus F, van Megen HJ, Westenberg HG. A double-blind, randomized, placebo-controlled trial of quetiapine addition in
+patients with obsessive-compulsive disorder refractory to serotonin reuptake inhibitors. J Clin Psychiatry 2004;65(8):1040-1048.
+(55) Diniz JB, Shavitt RG, Fossaluza V, Koran L, Pereira CA, Miguel EC. A doubleblind, randomized, controlled trial of fluoxetine plus
+quetiapine or clomipramine versus fluoxetine plus placebo for obsessive-compulsive disorder. J Clin Psychopharmacol 2011
+Dec;31(6):763-768.
+(56) Muscatello MR, Bruno A, Pandolfo G, Mico U, Scimeca G, Romeo VM, et al. Effect of aripiprazole augmentation of serotonin
+reuptake inhibitors or clomipramine in treatment-resistant obsessive-compulsive disorder: a double-blind, placebo-controlled study. J
+Clin Psychopharmacol 2011 Apr;31(2):174-179.
+(57) Sayyah M, Sayyah M, Boostani H, Ghaffari SM, Hoseini A. Effects of aripiprazole augmentation in treatment-resistant obsessive-
+compulsive disorder (a double blind clinical trial). Depression & Anxiety 2012;29(10):850-854.
+(58) Simpson HB, Foa EB, Liebowitz MR, Huppert JD, Cahill S, Maher MJ, et al. Cognitive-behavioral therapy vs risperidone for
+augmenting serotonin reuptake inhibitors in obsessive-compulsive disorder: a randomized clinical trial. JAMA Psychiatry
+2013;70(11):1190-1199.
+(59) Storch EA, Goddard AW, Grant JE, De Nadai AS, Goodman WK, Mutch PJ, et al. Double-blind, placebo-controlled, pilot trial of
+paliperidone augmentation in serotonin reuptake inhibitor-resistant obsessive-compulsive disorder. J Clin Psychiatry
+2013;74(6):e527-32.
+(60) Sayyah M, Sayyah M, Boostani H, Ghaffari SM, Hoseini A. Effects of aripiprazole augmentation in treatment-resistant obsessive-
+compulsive disorder (a double blind clinical trial). Depress Anxiety 2012 Oct;29(10):850-854.
+(61) Lægehåndbogen: Antidepressivt seponeringssyndrom. Opdateret 07.10.2015. Senest hentet: 02-02-2016. Link
+(62) Donovan MR, Glue P, Kolluri S, Emir B. Comparative efficacy of antidepressants in preventing relapse in anxiety disorders - a meta-
+analysis. J Affect Disord 2010;123(1- 3):9-16.
+(63) Long-term treatment with paroxetine of outpatients with obsessive-compulsive disorder: An extension of the companion study.
+GlaxoSmithKline, 2005. (Study No: MY- 1053/BRL-029060/CPMS-127). Opdateret: 08-03-2005. Senest hentet: 02-02-2016. Link
+(64) Romano S, Goodman W, Tamura R, Gonzales J. Long-term treatment of obsessivecompulsive disorder after an acute response: a
+comparison of fluoxetine versus placebo. J Clin Psychopharmacol 2001;21(1):46-52.
+(65) Hollander E, Allen A, Steiner M, Wheadon DE, Oakes R, Burnham DB, et al. Acute and long-term treatment and prevention of
+relapse of obsessive-compulsive disorder with paroxetine. J Clin Psychiatry 2003;64(9):1113-1121.
+(66) Fineberg NA, Tonnoir B, Lemming O, Stein DJ. Escitalopram prevents relapse of obsessive-compulsive disorder. Eur
+Neuropsychopharmacol 2007;17(6-7):430-439.
+(67) Geller DA, Biederman J, Stewart SE, Mullin B, Farrell C, Wagner KD, et al. Impact of comorbidity on treatment response to
+paroxetine in pediatric obsessive-compulsive disorder: is the use of exclusion criteria empirically supported in randomized clinical trials?
+J Child Adolesc Psychopharmacol 2003;13 Suppl 1:S19-29.
+(68) Koran LM, Hackett E, Rubin A, Wolkow R, Robinson D. Efficacy of sertraline in the long-term treatment of obsessive-compulsive
+disorder. Am J Psychiatry 2002;159(1):88-95.
+(69) Ruscio AM, Stein DJ, Chiu WT, Kessler RC. The epidemiology of obsessivecompulsive disorder in the National Comorbidity Survey
+Replication. Mol Psychiatry 2010;15(1):53-63.
+(70) Kessler RC, Chiu WT, Demler O, Merikangas KR, Walters EE. Prevalence, severity, and comorbidity of 12-month DSM-IV disorders
+69 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+in the National Comorbidity Survey Replication. Arch Gen Psychiatry 2005;62(6):617-627.
+70 of 71
+National klinisk retningslinje for behandling af obsessiv-kompulsiv tilstand (OCD) - Sundhedsstyrelsen
+Referencer
+1. Sundhedsstyrelsen. National klinisk retningslinje - Behandling af OCD. RevMan-analyse. Familiebehandling til børn og unge med
+OCD. Kbh.: Sundhedsstyrelsen; 2016. Link
+2. Sundhedsstyrelsen. National klinisk retningslinje - Behandling af OCD. Metaanalyse. Familiebehandling til børn og unge med OCD.
+Kbh.: Sundhedsstyrelsen; 2016.
+3. Sundhedsstyrelsen. National klinisk retningslinje - Behandling af OCD. RevMan-analyse. Kognitiv adfærdsterapi individuelt eller i
+gruppe. Kbh.: Sundhedsstyrelsen; 2016. Link
+4. Sundhedsstyrelsen. National klinisk retningslinje - Behandling af OCD. Metaanalyse. Kognitiv adfærdsterapi individuelt eller i gruppe.
+Kbh.: Sundhedsstyrelsen; 2016.
+5. Sundhedsstyrelsen. National klinisk retningslinje - Behandling af OCD. RevMan-analyse. Tredjebølge Kognitiv Adfærdsterapi. Kbh.:
+Sundhedsstyrelsen; 2016. Link
+6. Sundhedsstyrelsen. National klinisk retningslinje - Behandling af OCD. Metaanalyse. Tredjebølge Kognitiv Adfærdsterapi. Kbh.:
+Sundhedsstyrelsen; 2016.
+7. Sundhedsstyrelsen. National klinisk retningslinje - Behandling af OCD. RevMan-analyse. Førstevalgsbehandling af børn og unge med
+moderat til svær OCD. Kbh.: Sundhedsstyrelsen; 2016. Link
+8. Sundhedsstyrelsen. National klinisk retningslinje - Behandling af OCD. Metaanalyse. Førstevalgsbehandling af børn og unge med
+moderat til svær OCD. Kbh.: Sundhedsstyrelsen; 2016.
+9. Sundhedsstyrelsen. National klinisk retningslinje - Behandling af OCD. RevMan-analyse. Førstevalgsbehandling af voksne med
+moderat til svær OCD. Kbh.: Sundhedsstyrelsen; 2016. Link
+10. Sundhedsstyrelsen. National klinisk retningslinje - Behandling af OCD. Metaanalyse. Førstevalgsbehandling af voksne med moderat
+til svær OCD. Kbh.: Sundhedsstyrelsen; 2016.
+11. Sundhedsstyrelsen. National klinisk retningslinje - Behandling af OCD. RevMan-analyse. Tillægsbehandling med atypisk
+antipsykotikum til voksne med svær OCD. Kbh.: Sundhedsstyrelsen; 2016. Link
+12. Sundhedsstyrelsen. National klinisk retningslinje - Behandling af OCD. Metaanalyse. Tillægsbehandling med atypisk antipsykotikum
+til voksne med svær OCD. Kbh.: Sundhedsstyrelsen; 2016.
+13. Sundhedsstyrelsen. National klinisk retningslinje - Behandling af OCD. RevMan-analyse. Seponering af antidepressiva. Kbh.:
+Sundhedsstyrelsen; 2016. Link
+14. Sundhedsstyrelsen. National klinisk retningslinje - Behandling af OCD. Metaanalyse. Seponering af antidepressiva. Kbh.:
+Sundhedsstyrelsen; 2016.
+71 of 71
+
+--- END OF Gode instrukser + Edoks/national-klinisk-retningslinje-behandling-af-obsessiv-kompultiv-tilstand.pdf ---
+

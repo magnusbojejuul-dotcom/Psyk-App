@@ -2,12 +2,10 @@ import pdfplumber
 import os
 
 files = [
-    'Gode instrukser + Edoks/Eksempel på behandlingsplan Anoreksi.pdf',
-    'Gode instrukser + Edoks/Eksempel på behandlingsplan.pdf',
-    'Gode instrukser + Edoks/Gennemgang.pdf'
+    'Gode instrukser + Edoks/farmakologisk-behandling-i-almen-praksis-af-angsttilstande_2020.pdf'
 ]
 
-with open('pdf_texts2.txt', 'w', encoding='utf-8') as f:
+with open('angst_extracted.txt', 'w', encoding='utf-8') as f:
     for file in files:
         f.write(f"\n\n--- START OF {file} ---\n")
         try:

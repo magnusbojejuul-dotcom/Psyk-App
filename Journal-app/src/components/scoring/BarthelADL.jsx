@@ -116,10 +116,19 @@ function BarthelADL() {
 
     // Determine color based on the score (0-100 scale)
     const getScoreColor = () => {
-        if (!isComplete) return "text-slate-400 bg-slate-50";
+        if (!isComplete && totalScore === 0) return "text-slate-400 bg-slate-50";
         if (totalScore >= 80) return "text-emerald-700 bg-emerald-100 border-emerald-200";
         if (totalScore >= 50) return "text-amber-700 bg-amber-100 border-amber-200";
         return "text-red-700 bg-red-100 border-red-200";
+    };
+
+    const getScoreInterpretation = () => {
+        if (totalScore === 0 && Object.keys(scores).length === 0) return "Afventer...";
+        if (totalScore >= 95) return "Selvhjulpen";
+        if (totalScore >= 75) return "Let hjælpebehov";
+        if (totalScore >= 50) return "Moderat hjælpebehov";
+        if (totalScore >= 25) return "Svært hjælpebehov";
+        return "Totalt afhængig";
     };
 
     return (
@@ -174,8 +183,8 @@ function BarthelADL() {
                                         key={opt.value}
                                         onClick={() => handleOptionSelect(q.id, opt.value)}
                                         className={`flex items-center justify-between p-4 rounded-xl border text-left transition-all duration-300 ${isSelected
-                                                ? 'bg-[#F2F6F3] border-[#839788] shadow-sm ring-1 ring-[#839788]'
-                                                : 'bg-white border-[#E2E8DF] hover:border-[#839788]/50 hover:bg-[#F9FAF9]'
+                                            ? 'bg-[#F2F6F3] border-[#839788] shadow-sm ring-1 ring-[#839788]'
+                                            : 'bg-white border-[#E2E8DF] hover:border-[#839788]/50 hover:bg-[#F9FAF9]'
                                             }`}
                                     >
                                         <span className={`font-medium ${isSelected ? 'text-[#3A4A40]' : 'text-[#5C6D63]'}`}>
@@ -201,7 +210,9 @@ function BarthelADL() {
                             <Activity className="w-5 h-5" />
                         </div>
                         <div>
-                            <p className="text-sm font-semibold opacity-80">Total Score</p>
+                            <p className="text-sm font-semibold opacity-80">
+                                Resultat: {getScoreInterpretation()}
+                            </p>
                             <p className="text-xs opacity-70">
                                 {Object.keys(scores).length} af {BARTHEL_QUESTIONS.length} besvaret
                             </p>

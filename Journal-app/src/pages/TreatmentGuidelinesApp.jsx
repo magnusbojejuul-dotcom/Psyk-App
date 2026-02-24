@@ -6,7 +6,14 @@ import { BIPOLAR_GUIDELINE } from '../data/guidelinesBipolar';
 import { PSYKOSE_VOKSNE_GUIDELINE } from '../data/guidelinesPsykoseVoksne';
 import { PSYKOSE_BOERN_GUIDELINE } from '../data/guidelinesPsykoseBoern';
 import { ADHD_GUIDELINE } from '../data/guidelinesADHD';
+import { ANGST_GUIDELINE } from '../data/guidelinesAngst';
+import { ALKOHOL_GUIDELINE } from '../data/guidelinesAlkohol';
+import { SPISEFORSTYRRELSER_GUIDELINE } from '../data/guidelinesSpiseforstyrrelser';
+import { OCD_GUIDELINE } from '../data/guidelinesOCD';
+import { AUTISME_GUIDELINE } from '../data/guidelinesAutisme';
+import { BORDERLINE_GUIDELINE } from '../data/guidelinesPersonlighed';
 import { AlgorithmFlow } from '../components/AlgorithmFlow';
+import { SplitAlgorithmFlow } from '../components/SplitAlgorithmFlow';
 
 function TreatmentGuidelinesApp({ onNavigate }) {
     const [activeGuideline, setActiveGuideline] = useState('akut_beroligende');
@@ -187,7 +194,11 @@ function TreatmentGuidelinesApp({ onNavigate }) {
 
                 <div className="mt-4">
                     <h3 className="text-lg font-bold text-[#3A4A40] mb-6 uppercase tracking-widest text-center">Behandlingsalgoritme</h3>
-                    <AlgorithmFlow steps={guideline.algorithm} />
+                    {guideline.splitAlgorithm ? (
+                        <SplitAlgorithmFlow data={guideline.splitAlgorithm} />
+                    ) : (
+                        <AlgorithmFlow steps={guideline.algorithm} />
+                    )}
                 </div>
             </div>
         );
@@ -196,10 +207,16 @@ function TreatmentGuidelinesApp({ onNavigate }) {
     const navItems = [
         { id: 'akut_beroligende', label: 'Akut Beroligende Medicin', icon: Activity },
         { id: 'psykose_voksne', label: 'Psykotiske Tilstande (Voksne)', icon: Brain },
-        { id: 'psykose_boern', label: 'Psykotiske Tilstande (Børn)', icon: User },
+        { id: 'psykose_boern', label: 'Psykotiske Tilstande (Børn/Unge)', icon: User },
         { id: 'bipolar', label: 'Bipolar Lidelse', icon: Activity },
         { id: 'depression', label: 'Unipolar Depression', icon: Brain },
-        { id: 'adhd', label: 'ADHD', icon: Activity },
+        { id: 'adhd', label: 'ADHD / ADD (Voksne)', icon: Activity },
+        { id: 'angst', label: 'Angsttilstande', icon: Activity },
+        { id: 'ocd', label: 'Obsessiv-kompulsiv Tilstand (OCD)', icon: Activity },
+        { id: 'autisme', label: 'Autisme (Børn/Unge)', icon: User },
+        { id: 'spiseforstyrrelser', label: 'Spiseforstyrrelser', icon: Activity },
+        { id: 'borderline', label: 'Emotionel Ustabil Personlighedsstruktur', icon: Brain },
+        { id: 'alkohol', label: 'Alkoholafhængighed', icon: Activity },
     ];
 
     return (
@@ -264,6 +281,12 @@ function TreatmentGuidelinesApp({ onNavigate }) {
                     {activeGuideline === 'bipolar' && renderAlgorithm(BIPOLAR_GUIDELINE)}
                     {activeGuideline === 'psykose_voksne' && renderAlgorithm(PSYKOSE_VOKSNE_GUIDELINE)}
                     {activeGuideline === 'psykose_boern' && renderAlgorithm(PSYKOSE_BOERN_GUIDELINE)}
+                    {activeGuideline === 'angst' && renderAlgorithm(ANGST_GUIDELINE)}
+                    {activeGuideline === 'ocd' && renderAlgorithm(OCD_GUIDELINE)}
+                    {activeGuideline === 'autisme' && renderAlgorithm(AUTISME_GUIDELINE)}
+                    {activeGuideline === 'spiseforstyrrelser' && renderAlgorithm(SPISEFORSTYRRELSER_GUIDELINE)}
+                    {activeGuideline === 'borderline' && renderAlgorithm(BORDERLINE_GUIDELINE)}
+                    {activeGuideline === 'alkohol' && renderAlgorithm(ALKOHOL_GUIDELINE)}
                 </main>
             </div>
         </div>

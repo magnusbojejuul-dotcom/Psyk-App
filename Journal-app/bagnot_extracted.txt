@@ -1,0 +1,1528 @@
+Side 1 af 36 
+ 
+   
+     
+Den Nationale Rekommandationsliste 
+ 
+Antidepressiva til unipolar depression 
+ 
+IRF 
+ 
+  
+2019 
+Side 2 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+Indhold 
+ 
+Antidepressiva til unipolar depression 1 
+Indledning 3 
+Selektive serotonin-genoptagelseshæmmere (SSRI) 5 
+Serotonin-noradrenalin-genoptagelseshæmmere (SNRI) 15 
+Noradrenalin og specifikke serotonin-antidepressiva (NaSSA) 18 
+Noradrenalin-genoptagelseshæmmere (NaRI) 21 
+Melatoninagonister 23 
+Andre antidepressiva med modulerende virkning på serotoninsystemet 25 
+Relevante danske behandlingsvejledninger 29 
+Ændringslog 29 
+Specialistgruppe 29 
+Juridiske forhold 29 
+Referencer 30 
+Ordliste   31 
+Bilag 1: Fokuserede spørgsmål 31 
+Bilag 2: Litteratursøgning og udvælgelse af evidensgrundlag 36 
+ 
+  
+Side 3 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+Indledning 
+Om Den Nationale Rekommandationsliste 
+Den Nationale Rekommandationsliste (NRL) udarbejdes af Indsatser for Rationel Farmakoterapi 
+(IRF) i Sundhedsstyrelsen i samarbejde med en specialistgruppe under rådgivning af et eksternt 
+Rådgivende Udvalg. NRL støtter alment praktiserende læger i valget mellem tilgængelige 
+lægemidler inden for en defineret lægemiddelgruppe og til en udvalgt patientgruppe. Dette 
+baggrundsnotat omhandler antidepressive lægemidler anvendt i almen praksis til behandling af 
+medicinsk behandlingskrævende episode af unipolar depression blandt voksne.  
+Udarbejdelsen af NRL er baseret på fokuserede spørgsmål (bilag 1), en dokumenteret systematisk 
+litteratursøgning (bilag 2)  og gennemgang af evidens for lægemidlernes effekt  og udvalgte 
+bivirkninger, kontraindikationer, interaktioner og med inddragelse af specialistgruppens kliniske 
+erfaringer samt eventuelle vurderede relevante patientpræferencer.  
+NRL er ikke en behandlingsvejledning, men beslutningsstøtte til valg eller fravalg af lægemidler 
+inden for en defineret lægemiddelgruppe til en specifik patientgruppe. Der gives ikke anbefalinger 
+i forhold til valg af lægemiddel på tværs af de forskellige grupper af antidepressive lægemidler, 
+hvilket betyder, at et rekommanderet lægemiddel i én lægemiddelgruppe ikke nødvendigvis er 
+ligeværdigt med et rekommanderet lægemiddel i en anden lægemiddelgruppe. Der er i 
+udarbejdelsen af anbefalingerne ikke taget hensyn til pris eller tilskudsstatus. Rekommanderede 
+lægemidler inden for de n enkelte lægemiddelgruppe, i de anførte doser, betragtes som 
+ligeværdige, og en prissammenligning er her mulig. Inden for de enkelte læg emiddelgrupper er 
+lægemidler, som rekommanderes i sæ rlige tilfælde , ikke nødvendigvis ligeværdige valg.  
+Ligeledes er ikke-rekommanderede lægemidler ikke nødvendigvis ligeværdige. Anbefalingerne 
+fra NRL kan ikke stå alene, men skal ses i sammenhæng med relevant behandlingsvejledning. 
+Anbefalingerne kan ligeledes indgå i behandlingsvejledninger såvel som regionernes arbejde med 
+basislister kan tage udgangspunkt i anbefalingerne fra NRL. Baggrundsnotatet vil blive opdateret 
+løbende i takt med, at der kommer ny relevant viden om de omfattede lægemidler, eller der bliver 
+markedsført nye lægemidler relevant for baggrundsnotatet . Den anvendte metode følger IRF s 
+model for udarbejdelse af 
+NRL. 
+Om baggrundsnotat vedrørende antidepressiva til medicinsk behandlingskrævende 
+unipolar depression 
+Dette baggrundsnotat i regi af NRL  omhandler medicinsk behandlingskrævende episode af 
+unipolar depression hos voksne. Medicinsk behandlingskrævende episode af unipolar depression 
+er de tilfælde af depression, hvor lægemiddelbehandling er indiceret  og hvor 
+lægemiddelbehandling kan iværksættes  i almen praksis.  I henhold til Sundhedsstyrelsens 
+”Vejledning om behandling af voksne med antidepressive lægemidler ” er igangsættelse af 
+behandling med antidepressive lægemidler hos unge voksne under 25 år der lider af unipolar 
+depression en specialistopgave(1).  
+Indikation for medicinsk behandlingskrævende unipolar depression bør følge relevante 
+behandlingsvejledninger. En grundig udredning, diagnose, vurdering af depressionens 
+sværhedsgrad samt individuel vurdering af den enkelte patient er forudsætning for igangsættelse 
+af lægemiddelbehandling. Med henblik på indikation for behandling henvises der fx til 
+Side 4 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+behandlingsvejledning vedrørende medicinsk behandling af unipolar depression blandt voksne 
+udarbejdet af Rådet for Anvendelse af Dyr Sygehusmedicin (RADS)(2). Medicinsk behandling af 
+unipolar depression kan ikke s tå alene, men bør ske sideløben de med tilbud om støttende 
+samtale/samtaleterapi og der henvises til fx Sundhedsstyrelsens Nationale Kliniske Retningslinje 
+for non-farmakologisk behandling af unipolar depression(3). 
+Lægemidler som i udgangspunktet kan iværksættes i almen praksis omtales i dette 
+baggrundsnotat. Lægemidler som kun bør initieres af læger med særligt kendskab eller med 
+psykiatrisk speciallægeuddannelse er ikke omfattet a f baggrundsnotatet. Tricykl iske 
+antidepressiva (TCA), monoaminoxidasehæmmere (MAO), litium samt antipsykotika er således 
+ikke omfattet af dette baggrundsnotat. Lægemiddelgrupper i baggrundsnotatet for unipolar 
+depression afgrænses af de antidepressive lægemidlers virkningsmekanismer. 
+Baggrundsnotatet omfatter lægemidler tilhørende følgende grupper: 
+• Selektive serotonin-genoptagelseshæmmere (SSRI) 
+• Serotonin-noradrenalin-genoptagelseshæmmere (SNRI) 
+• Noradrenalin og specifik ke serotonin-antidepressiva (NaSSA) Noradrenalin-
+genoptagelseshæmmere (NaRI) 
+• Melatoninagonister 
+• Andre antidepressiva med modulerende virkning på serotoninsystemet 
+Valgte doser knyttet til de enkelte lægemiddelstoffer betragtes efter specialistgruppens vurdering 
+som sammenlignelige begyndelsesdoser. Endvidere er der for de enkelte stoffer angivet det  
+dosisinterval, som størstedelen af patienter i almen praksis med  enkeltepisode af  unipolar 
+depression vil kunne behandles med og herunder med hensyn til patientsikkerhed.  
+ 
+I henhold til formulerede fokuserede spørgsmål præsenteres evidens i det omfang denne 
+foreligger for hvert lægemiddel i samtlige lægemiddelgrupper. For hvert lægemiddel gennemgås 
+evidens i forhold til ænd ring af depressive symptomer  over tid; respons  (≥ 50 % reduktion i 
+depressive symptomer  i forhold til udgangsværdi)  samt gennemsnitlig ændring/reduktion i 
+depressive symptomer fra udgangsværdi til afslutning af akutbehandling, remission (fald til under 
+en bestemt grænsesværhedsgrad som svarer til et minimum af depression), ophør med behandling 
+uanset årsag, tilbagefald (forebyggelse af tilbagefald efter opnået remission ). Derudover 
+gennemgås seksuelle bivirkninger, suicidalitet, QTc -forlængelse, interaktion er, relevante 
+kontraindikationer og forsigtighedsregler  samt eventuelt patientrelevante forhold
+a. For hver 
+lægemiddelgruppe afsluttes evidensgennemgangen med en sammenfatning o g 
+rekommandationer.   
+ 
+Estimater af dikotome behandlingsudfald – fx respons – i sammenligning mellem lægemiddel og 
+placebo eller to lægemidler over for hinanden udtrykkes ved odds ratio (OR) eller relativ risiko 
+(RR). En statistisk signifikant OR eller RR > 1 er således ensbetydende med en højere forekomst 
+og dermed højere sandsynlighed af et givent udfald knyttet til det førstnævnte lægemiddel i en 
+sammenstilling mellem to lægemiddelstoffer. Den kontinuerte variabel gennemsnitlig 
+ændring/reduktion i depressive symptomer  fra udga ngsværdi til afslutning af akutbehandling  
+                                                      
+a Bivirkningsfokus i de fokuserede spørgsmål beror på specialistgruppens vurdering af relevans, alvorlighed set i 
+forhold til behandlingens gennemførelse samt mulighed for at kunne gennemføre en klinisk relevant differentiering 
+mellem de enkelte lægemidler 
+Side 5 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+rapporteres i dette baggrundsnotat  som ”standardized mean difference (SMD)”, som anvendes 
+når afrapportering af et udfald/outcomes sker ved brug af forskellige skalaer i de studier som 
+inkluderes i fx en metaanalyse. En negativ værdi af SMD indikerer at det førstnævnte lægemiddel 
+i en sammenligning med et andet lægemiddel eller ingen farmakologisk behandling vurderes at 
+have større effekt end sidstnævnte. Estimater ekstraheres fra netværksmetaanalyser med angivelse 
+af sandsynlighedsintervallet (credibility intervals) (CrI) samt fra metaanalyser med angivelse af 
+konfidensintervaller (CI). Begge typer af intervaller kan læses som 95 % - sikkerhedsintervaller.  
+I forbindelse med evidensgennemgangen af de enkelte lægemid ler beregnes NNT for respons i 
+forhold til placebobehandling . De beregnede NNT skal for samtlige antidepressive lægemidler  
+betragtes som vejledende og beror på en antaget placeborespons -rate på 37,5 %  gældende for 
+samtlige antidepressive lægemidler omfattet af baggrundsnotatet. Denne antagne placeborespons-
+rate begrundes med henvisning til et systematisk review af placebo -responsrater afrapporteret i 
+randomiserede kliniske undersøgelser ( RCT) i perioden 1991-2015 som anfører, at disse ligger 
+stabilt i perioden og andrager størrelsesordenen 35- 40 %
+(4). Den anvendte placeboresponsrate 
+understøttes af en placeboresponsrate på 36,8 % som kan beregnes på baggrund responsrater 
+afrapporteret i 271 placeboarme fra studier som indgår i ”Cipriani et al. 2018”, som er det hidtil 
+største publicerede systematiske review og dertilhørende metaanalyse samt netværksmetaanalyse 
+omhandlende antidepressive lægemidler (5). OR fra evidensgennemgangen af de enkelte 
+lægemidler fra netværk(metaanalyser) anvendes i beregningen af NNT.  
+Selektive serotonin-genoptagelseshæmmere (SSRI) 
+Skema over vurderede lægemidler 
+Lægemiddel  Sædvanlig daglig begyndelsesdosis og i 
+parentes sædvanligt dosisinterval  
+Citalopram (tablet) 20 mg (20 mg - 40 mg) 
+Escitalopram (tablet, smeltetablet, 
+orale dråber) 
+10 mg (10 mg - 20 mg) 
+Fluoxetin (tablet, kapsel, 
+opløselig/dispergibel tablet) 
+20 mg (20 mg – 40 mg) 
+Fluvoxamin (tablet) 100 mg (100 mg - 200mg) 
+Paroxetin (tablet) 20 mg (20 mg – 40 mg) 
+Sertralin (tablet) 50 mg (50 mg -100 mg) 
+ 
+Virkningsmekanisme 
+SSRI-lægemidler virker bl.a. ved at hæmme genoptagelsen af serotonin fra den synaptiske spalte 
+og ind i det præsynaptiske neuron gennem inhibering af serotonintransportøren.  
+Evidensgennemgang  
+Februar 2018 blev det hidtil største system atiske review og dertilhørende metaanalyse samt 
+netværksmetaanalyse omhandlende antidepressive lægemidler publiceret, hvor 21 antidepressive 
+lægemidler i myndighedsgodkendte doser vurderes overfor hinanden såvel som i forhold til 
+placebo(5) . Dette review omtales ”Cipriani et al. 2018”, og anvendes til at belyse effekt (respons 
+Side 6 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+og gennemsnitlig ændring/reduktion i depressive symptomer  fra udgangsværdi til afslutning af 
+akutbehandling), remission samt ophør med behandling uanset årsag . Reviewet inkludererede 
+dobbeltblindede RCT, hvor der indgik patienter med moderat til svær depression på 18 år og 
+derover. Analyserne hviler på 522 studier med i alt 116 .477 patienter. Der blev gennemført en 
+overordnet vurdering af risiko for biasb og 46 (9 %) af de inkluderede studier blev kategoriseret 
+som havende høj risiko for bias. 380 studier (73 %) blev vurderet til at have moderat risiko for 
+bias, mens 96 studier (18 %) havde lav risiko for bias. Der blev vurderet general lav risiko for 
+bias i forhold til selektiv afrapportering af det primære udfald respons. Omvendt blev der for en 
+betragtelig del af de inkluderede studier fundet høj risiko for frafaldbias.  
+Forebyggelse af t ilbagefald efter remission besvares gennem to metaanalyser fra henholdsvis 
+2015(6) og 2003(7) som vurderer antidepressiva som én samlet lægemiddelklasse i forhold til ingen 
+farmakologisk behandling. Endvidere henvises i dette afsnit til en RCT vedrørende 
+langtidsbehandling med sertralin (8), som anvendes til at belyse effekten af antidepressiv 
+behandling på risiko for tilbagefald. Det har ikke været muligt at identificere systematiske review 
+som eksplicit adresserer SSRI-lægemiddelstoffer enkeltvis i forhold til placebo såvel som relativt 
+til hinanden i forhold til forebyggelse af tilbagefald.  
+En netværksmetaanalyse vedrørende seksuel dysfunktion blev derudover identificeret ved den 
+systematiske litteraturgennemgang(9). I de nne netværksmetaanalyse vurderes SSRI-lægemidler 
+over for hinanden og omfatter ikke placebosammenstillinger.  
+En metaanalyse baseret på 372 dobbeltblindede RCT omfattende i alt 99.231 personer belyser 
+antidepressiva og herunder SSRI -lægemiddelstoffer i relation til ”suicidalitet” defineret som et 
+sammensat mål bestående af gennemført selvmord, selvmordsforsøg, forberedende 
+selvmordsadfærd og selvmordstanker(10). Størstedelen af de inkluderede RCT havde opfølgning 
+frem til uge 8-10 af den initale akutte behandling.   
+SSRI-lægemidlers QT c-forlængende effekt gengives efter gældende produkt informationer 
+(produktresumeer og godkendelsesrapporter) og herunder gengivelse af ”The Thorough QT/QTc 
+study”c. Endvidere refereres  en metaanalyse(11).  
+Det har ikke været muligt at identificere danske eller  internationale 
+behandlingsvejledninger/guidelines som direkte kunne bidrage til besvarelse af de fokuserede 
+spørgsmål. 
+                                                      
+b Alle studier blev vurderet for risiko for bias gennem syv forskellige domæner. De enkelte studier blev klassificeret 
+som et studie med samlet set lav risiko for bias, hvis var var ingen domæner med høj risiko og højst tre domæner med 
+uklar risiko for bias. Studierne blev klassificerede som havende moderat risiko for bias hvis et domæne havde høj risiko 
+for bias eller der var flere end tre domæner hvor der var uklar risiko for bias . Øvrige studier blev klassificerede som 
+havende høj risiko for bias. 
+c Lægemidlers eventuelle QTc-forlængende effekt og potentiel fremkaldelse af ventrikulær arytmi (fx torsade de 
+pointes) og i værste tilfælde hjertedød, kan være udfordrende at afdække og ikke mindst grundet en generel lav 
+forekomst. Hertil kommer at specifikke risikofaktorer kan fremme en QTc-forlængende effekt knyttet til et lægemiddel. 
+”The Thorough QT/QTc study” er et regulatorisk og myndighedsangivet studiedesign som anvendes til at belyse en 
+potentiel QT-problematik ved et givent lægemiddel. I dette studiedesign gives et lægemiddel i varierende doser til raske 
+personer og vurderes over for placebo, en aktiv komparator med kendt QTc -forlængende effekt fx moxifloxacin samt 
+evt. en komparator uden QTc-forlængende effekt.  
+ 
+Side 7 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+Effekt 
+I vurderingen af respons af individuelle SSRI-lægemidler over for placebo fandt Cipriani et al. 
+2018(5) med reference til en netværksmetaanalyse at alle lægemidler var statistisk signifikant 
+bedre end placebo; citalopram (OR 1,52 [1,33;1,74]), escitalopram (OR 1,68 [1,50;1,87]),  
+fluoxetin (OR 1,52 [1,40;1,66]) , fluvoxamin (OR 1,69 [1,41;2,02]) , paroxetin (OR 1,75 
+[1,61;1,90]) samt sertralin (OR 1,67 [1,49;1,87]). 
+Baseret på en antaget placebo -respons-rate på  37,5% svarer dette til NNT -respons (angivet i 
+parentes); citalopram (10), escitalopram (8), fluoxetin (10), fluvoxamin (8), paroxetin (7) samt 
+sertralin (8),  
+Effekt udtryk t ved den kontinuerte variabel gennemsnitlig ændring/reduktion i depressive 
+symptomer fra udgangsværdi til afslutning af akutbehandling i netværksmetaanalyse viser 
+følgende i sammenstillingen mellem de enkelte lægemiddelstoffer og placebo; citalopram (SMD 
+-0,24 [ -0,31;-0,17]), escitalopram (SMD - 0,29 [ -0,35;-0,24]), fluoxetin (SMD  -0,23 [ -0,28;-
+0,19]), fluvoxamin (SMD -0,32 [-0,43;-0,22]), paroxetin (SMD -0,32 [-0,37;-0,28]) samt sertralin 
+(SMD -0,27 [-0,34;-0,21]). Alle sammenstillinger er statistisk signifikante.  
+I sammenstillingen af de enkelte SSRI-lægemidler over for hinanden vurderes respons gennem to 
+estimater – netværksmetaanalyse henholdsvis ordinær parvis metaanalyse. Derudover refereres 
+SMD fra netværksmetaanalyse af gennemsnitlig ændring/reduktion i depressive symptomer  fra 
+udgangsværdi til afslutning af akutbehandling. De tre anvendte estimater hidrører fra Cipriani et 
+al. 2018(5) og er gengivet i tabel 1.  
+ 
+Tabel 1. OR-estimater samt CrI/CI for respons samt SMD-estimater og tilhørende CrI for ændring/reduktion i depressive symptomer 
+i sammenstilling mellem individuelle SSRI-lægemidler. Figuren skal læses fra venstre mod højre. For hver sammenligning refererer 
+første estimat (OR) til netværksmetaanalyse , andet estimat (OR)  til dire kte metaanalyse, tredje estimat (SMD) refererer til 
+netværksmetaanalyse og alle estimater er gengivet efter Cipriani et al. 2018(4).  
+Gennemgang af estimaterne af respons for de enkelte sammenstillinger af lægemidlernes effekt 
+viser at 4 sammenstillinger ud af 15 sammenstillinger baseret på netværksmetaanalyse er statistisk 
+signifikante. 2 sammenstillinger vedrørende respons ud af 15 mulige baseret på metaanalyse er 
+Fluoxetin
+1,00 [0,80;1,25]
+0,97 [0,57;1,65]
+0,05 [-0,06;0,17]
+Fluvoxamin
+Paroxetin
+1,19 [1,05;1,37] 1,19 [0,96;1,49]
+1,05 [0,86;1,28] 1,14 [0,60;2,17]
+-0,11 [-0,18;-0,05] -0,06 [-0,17;0,06]
+Citalopram
+0,89 [0,72;1,09] 1,06 [0,87;1,29] 1,06 [0,82;1,39]
+1,35 [0,75;2,45] 0,97 [0,64;1,45] 1,10 [0,56;2,18]
+0,05 [-0,05;0,15] -0,06 [-0,16;0,03] -0,01 [-0,14;0,12]
+0,01 [-0,12;0,13]
+Escitalopram
+1,27 [1,03;1,54] 1,12 [0,93;1,35] 1,34 [1,11;1,61] 1,34 [1,03;1,75]
+1,35 [1,09;1,67] 1,00 [0,73;1,38] 1,13 [0,79;1,63] n/a
+-0,10 [-0,19;-0,01] -0,05 [-0,14;0,04] -0,16 [-0,25;-0,07] -0,11 [-0,24;0,02]
+1,12 [0,88;1,42]
+1,17 [0,77;1,80] 1,18 [0,74;1,89] 1,11 [0,72;1,72] 1,43 [1,08;1,89] 0,63 [0,33;1,20]Sertralin
+0,83 [0,66;1,03] 1,05 [0,85;1,32] 0,93 [0,79;1,11] 1,12 [0,95;1,32]
+0,12 [-0,01;0,22] 0,02 [-0,09;0,12] 0,07 [-0,02;0,15] -0,05 [-0,13;0,04]
+Side 8 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+statistisk signifikant e. Tre SMD -estimater baseret på netværksmetaanalyse ud af 15 
+sammenstillinger er statistisk signifikante.  
+Kun sammenstillingen mellem escitalopram og citalopram udviser  konsistent statistisk 
+signifikans henover estimaterne og kunne indikere at escitalopram effektmæssigt var bedre end 
+citalopram. Forskellene mellem de to lægemidler vurderes imidlertid små.  
+Samlet konkluderes, at der er klinisk relevant effekt af de enkelte SSRI -lægemidler vurderet i 
+forhold til i ngen farmakologisk behandling , men der er  ingen betydelig e forskelle mellem 
+lægemiddelstofferne vurderet som respons og gennemsnitlig ændring/reduktion i depressive 
+symptomer fra udgangsværdi til afslutning af akutbehandling. 
+Remission  
+I vurderingen af individuelle SSRI-lægemidler over for placebo fandt Cipriani et al. 2018(5) at alle 
+lægemidler var statistisk signifikant bedre end placebo ; citalopram (OR 1,37 [1,20;1,57]), 
+escitalopram (OR 1,64 [1,47;1,83]),  fluoxetin (OR 1,46 [1,34;1,60]), fluvoxamin (OR 1,66 
+[1,35;2,05]), paroxetin (OR 1,67 [1,53;1,82]) samt sertralin (OR 1,52 [1,34;1,73])(5).  
+I tabel 2 anføres to OR-estimater i sammenstillingen mellem SSRI -lægemidler for remission. 
+Estimaterne er fra Cipriani et al. 2018 (5) og repræsenterer netværksmetaanalyse henholdsvis en 
+metaanalyse.  
+ 
+Tabel 2. OR-estimater samt CrI/CI for remission i sammenstilling mellem individuelle SSRI -lægemidler. Figuren skal læses fra 
+venstre mod højre og ned . For hver sammenligning re fererer første estimat til netværksmetaanalyse gengivet efter Cipriani et al. 
+2018(4), andet estimat metaanalyse er gengivet efter Cipriani et al. 2018(4). 
+Med undtagelse af sammenstillingen af escitalopram og citalopram viser ingen af 
+sammenstillingerne mellem de enkelte lægemidler konsistente statistiske signifikante forskelle 
+vurderet he nover estimaterne. De fundne forskelle mellem escitalopram og citalopram kunne 
+indikere at escitalopram var favorabelt hvad angår remission. De statistisk signifikante forskelle 
+er dog små og vurderes af specialistgruppen at være ikke-klinisk relevante.  
+Samlet konkluderes, at der er klinisk relevant effekt af de respektive SSRI-lægemidler hvad angår 
+opnåelse af remission og vurderet i forhold til ingen behandling. Endvidere vurderes der ikke at 
+være klinisk relevant forskel lægemiddelstofferne imellem i forhold til opnåelse af remission.  
+Sertralin
+Escitalopram
+Citalopram
+Paroxetin
+Fluoxetin
+Fluvoxamin
+1,10 [0,89;1,36] 1,13 [0,50;2,46]
+0,93 [0,72;1,19]
+0,85 [0,47;1,15]
+1,30 [0,65;2,63] 1,06 [0,70;1,62] 1,84 [0,72;5,00]
+1,12 [0,98;1,29] 1,05 [0,81;1,35]
+1,51 [1,22;1,87] 1,04 [0,74;1,47] 1,00 [0,69;1,46] n/a
+0,83 [0,68;1,03] 0,94 [0,77;1,15] 0,87 [0,65;1,17]
+0,68 [0,34;1,36]
+1,30 [1,06;1,56] 1,08 [0,89;1,31] 1,22 [1,01;1,47] 1,13 [0,84;1,51]
+0,85 [0,69;1,06] 1,11 [0,89;1,39] 0,92 [0,78;1,11] 1,04 [0,88;1,23] 0,97 [0,74;1,26]
+1,22 [0,71;2,10] 1,06 [0,68;1,68] 0,98 [0,62;1,54] 1,17 [0,86;1,60]
+Side 9 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+Ophør med behandling uanset årsag 
+Vurderingen af de r espektive SSRI-lægemidler i forhold til placebo, viste  i Cipriani et al. 2018 
+med undtagelse af fluoxetin ingen statistisk signifikant forskel mellem aktiv 
+lægemiddelbehandling og placebobehandling. Sandsynligheden for ophør med behandling uanset 
+årsag blev estimeret til at være 12 % lavere for fluoxetin sammenholdt med placebobehandling. 
+De respektive estimater blev angivet som følger: s ertralin (OR 0,96 [0,85;1,08]), escitalopram 
+(0,90 [0,80;1,02]), citalopram (OR 0,94 [0,80;1,09]), paroxetin (OR [0,95 [0,87;1,03]), fluoxetin 
+(OR 0,88 [0,80;0,96]) samt fluvoxamin (OR 1,10 [0,91;1,33])
+(5).  
+I tabel 3 anføres OR -estimater i sammenstillingen mellem SSRI -lægemidler i forhold til ophør 
+med behandling uanset årsag. Estimaterne er fra Cipriani et al. 2018 (5) og repræsenterer 
+netværksmetaanalyse henholdsvis en metaanalyse. 
+ 
+Tabel 3. OR-estimater samt CrI/CI for ophør med behandling uanset årsag  i sammenstilling mellem individuelle SSRI-lægemidler. 
+Figuren skal læses fra venstre mod højre og ned . For hver sammenligning refererer første estimat til netværksmetaanalyse gengivet 
+efter Cipriani et al. 2018(4), andet estimat metaanalyse er gengivet efter Cipriani et al. 2018(4).  
+ 
+Gennemgang af estimaterne viser ingen statistisk signifikante konsistente forskelle henover 
+estimaterne. Samlet vurderes der ikke at være klinisk relevant forskel lægemiddelstofferne 
+imellem i hvad angår ophør med behandling uanset årsag. 
+Tilbagefald – forebyggelse af tilbagefald efter opnået remission  
+En metaanalyse publiceret i 2015 inkluderede 72 studier, hvor behandlede som opnåede remission 
+ved antidepressiv lægemiddelbehandling, efterfølgende blev randomiseret til fortsat behandling 
+med det pågældende antidepressivum eller placebo med gennemsnitlig 8 måneders opfølgning. 
+Tilbagefald blandt behandlede med antidepressiva analyseret under ét androg i gennemsnit 23 %, 
+mens tilbagefald i gennemsnit var 49 % blandt placebobehandlede. Risikoen for tilbagefald efter 
+opnået remission blev i metaanalysen angivet som  90 % højere blandt placebobehandlede (RR  
+1,90 [1,73;2,08])
+(6) 
+Metaanalysen adresserede endvidere effekten af langtidsbehandling i de 37 studier, som havde 
+opfølgning ud over et år (i gennemsnit 27 måneder). Også her var risikoen for tilbagefald blandt 
+placebobehandlede højere end risikoen for tilbagefald ved behandling med antidepressiva (RR 
+2,03 [1,80;2,28])(6).        
+0,81 [0,61;1,06]
+0,92 [0,61;1,45] 1,61 [0,97;2,68] 1,15 [0,72;1,80] 0,86 [0,61;1,16]Sertralin 1,13 [0,89;1,45] 1,03 [0,81;1,35] 0,94 [0,78;1,13] 0,99 [0,82;1,19]
+0,44 [0,17;1,05]
+Escitalopram 0,92 [0,70;1,18] 0,83 [0,67;1,03] 0,87 [0,70;1,09] 0,71 [0,53;0,96]
+0,88 [0,67;1,16] 0,86 [0,59;1,26] 0,89 [0,62;1,28] n/a
+Citalopram 0,91 [0,71;1,17] 0,96 [0,76;1,12] 0,78 [0,57;1,06]
+0,91 [0,50;1,71] 1,15 [0,77;1,74] 0,69 [0,35;1,34]
+Fluvoxamin
+Paroxetin 1,05 [0,91;1,20] 0,86 [0,67;1,11]
+1,05 [0,87;1,26] 0,74 [0,39;1,40]
+Fluoxetin 0,82 [0,64;1,04]
+0,85 [0,47;1,59]
+Side 10 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+Resultaterne fra m etaanalysen(6) er i tråd med en tidligere ofte citeret metaanalyse fra 2003 (7) 
+baseret på 31 undersøgelser, hvoraf 13 havde en varighed over et år. Et specifikt estimat for SSRI 
+versus placebo anføres ikke i denne metaanalyse, men i 10 inkluderede studier som omfatter SSRI 
+vurderet i forhold til placebo angives en tilbagefaldsrate for SSRI på 15 % (156 ud af 1.034) samt 
+en tilbagefaldsrate for placebo på 37 % (385 ud af 1.046). 
+De anførte metanalyser hviler på undersøgelser, hvor randomisering efter opnået remission enten 
+skete til videreførelse af eksisterend e behandling eller til placebo,  hvorfor resultaterne kun kan 
+overføres til patienter, der efter opnået remission på et af de undersøgte antidepressiva fortsætter 
+med det pågældende lægemiddel. Endvidere kan resultaterne ikke overføres til patienter , som 
+sættes i langtidsbehandling med et antidepressivum som ikke er forbundet med remission hos den 
+pågældende patientpopulation eller til patienter som sættes i behandling efter en periode med 
+remission, hvor der ikke er givet medicinsk behandling.  
+Imidlertid findes der en undersøgelse, som via dens design har undgået disse forbehold med 
+hensyn til generaliserbarhed af resultaterne. Undersøgelsen har som det primære formål at 
+dokumentere en forebyggende effekt af sertralin på en ny episode af depression efter opnåelse af 
+fuld remission. I denne undersøgelse inkluderedes patienter med tilbagevendende depression, som 
+i indexepisoden havde opnået remission uanset type af antidepressiv behandling fraset sertralin. 
+Efter inklusion gennemgik alle inkluderede en initial enkeltblind 2 måneders ” wash out” med 
+placebo. Patienter som fortsat var i remission  blev randomiseret til 18 måneders dobbeltblindt 
+opfølgning med enten fortsat placebo, 50 mg sertralin eller 100 mg sertralin
+(8).  
+I alt 99 patienter indgik  i placebogruppen, hvor 33 (33 %) fik en ny episode af depression. 95 
+patienter blev randomiseret til 50 mg sertralin dagligt og 16 (17  %) fik en ny episode af 
+depression. 94 patienter blev randomiseret til 100 mg sertralin dagligt og 16 (17 %) fik en ny 
+episode af de pression. Der blev ikke fundet statistisk signifikant forskel mellem 50 mg og 100 
+mg sertralin dagligt. Det anføres i undersøgelsen at den statistiske signifikante relative risiko for 
+ny episode af depression blandt sertralinbehandlede var omtrent halvdelen i forhold til 
+placebobehandlede(8).  
+Seksuelle bivirkninger 
+En netværksmetaanalyse undersøger SSRI-lægemiddelstoffer over for hinanden med hensyn til 
+seksuelle bivirkninger vurderet som ét samlet  udfald(9). Det refererede review angav ikke 
+seksuelle bivirkninger i relation til placebobehandling. 
+Der blev fundet statistisk signifikant forskel mellem escitalopram og fluoxetin således at 
+sandsynligheden for seksuelle bivirkninger er højere for escitalopram end fluoxetin (OR 2,70 
+[1,18;7,69]). Ligeledes blev der fundet statistisk signifikant højere sandsynlighed for seksuelle 
+bivirkninger for paroxetin i forhold til fluoxetin (OR 3,86 [1,44;8,40]).  
+I vurderingen af sertralin blev de r ikke fundet statistisk signifikant forskel mellem sertralin og 
+henholdsvis; escitalopram (OR 0,79 [0,39;1,54]), citalopram (OR 0,96 [0,30;2,32]), paroxetin 
+(OR 0,68 [0,30;1,35]), fluoxetin (OR 2,44 [0,94;5,26]) samt fluvoxamin (OR 2,59 [0,53;7,98]). 
+Der blev ikke fundet statistisk signifikant forskel mellem escitalopram vurderet overfor; 
+citalopram (OR 1,31 [0,41;3,15]), paroxetin (OR 0,79 [0,39;2,00 ]) og fluvoxamin (OR 2,08 
+[0,63;12,5]). Ligeledes blev der ikke fundet statistisk signifikant forskel melle m citalopram og 
+Side 11 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+fluoxetin (OR 2,17 [0,76;9,09]), mellem citalopram og paroxetin (OR 0,64 [0,24;2,44]) samt 
+mellem citalopram og fluvoxamin (OR 1,69 [0,46;12,5]).  Netværksmetaanalysen fandt endelig 
+ikke statistisk signifikant forskel mellem paroxetin og flu voxamin (OR 4,08 [0,81;12,73]) samt 
+mellem fluoxetin og fluvoxamin (OR 0,67 [0,20;4,17]). 
+Fluoxetin udkommer i enkelte sammenstillinger med mindre risiko for udvikling af seksuelle 
+bivirkninger, men overordnet vurderet er fundene ikke konsistent e i forhold  til øvrige 
+sammenstillinger og specialistgruppen er af den opfattelse at fundene bør fortolkes med 
+forbehold. Det er specialistgruppens vurdering, at fundene ikke giver anledning til at rang ordne 
+de forskellige SSRI -lægemidler som dermed opfattes som side stillede i forhold til risiko for 
+seksuelle bivirkninger.  Endvidere er det specialistgruppens vurdering og kliniske erfaring at 
+SSRI-lægemiddelstofferne giver anledning til flere seksuelle bivirkninger i forhold til ingen 
+farmakologisk behandling.   
+Suicidalitet 
+”Suicidalitet” defineret som et sammensat mål bestående af gennemført selvmord, 
+selvmordsforsøg, forberedende selvmordsadfærd og selvmordstanker belyses i en metaanalyse af 
+studier omhandlende voksne
+(10).  
+For alle antidepressiva under ét hvilket bl.a. omfattede SSRI, SNRI of TCA blev der for ”major 
+depression” og for voksne over 25 år ikke fundet sta tistisk signifikant forskel mellem 
+antidepressiva og placebo (OR 0,85 [0,67;1,07])(10).  
+For patientpopulationen af voksne over 25 år diagnosticeret inden for den uspecificerede kategori 
+”psychiatric disorders” blev der i forhold til placebo fundet følgende. Der var statistisk signifikant 
+mindre suicidalitet blandt sertralinbehandlede (OR 0,51 [0,29;0,91]). Estimatet er baseret på 18 
+tilfælde af suicidalitet ud af 6 .363 (0,3 %) behandlet med sertralin over  for 28 tilfælde  af 
+suicidalitet ud af  5.081 (0,6%) placebobehandlede. Der blev ikke fundet statistisk signifikant 
+forskel i vurderingen af escitalopram (OR 2,44 [0,90;6,63]) baseret på 10 tilfælde ud af 3.130 (0,3 
+%) escitaloprambehandlede og 5 tilfælde ud af 2 .604 (0,2 %)  placebobehandlede. Der blev 
+ligeledes ikke fundet statistisk signifikant forskel i sammenstillingen mellem citalopram (OR 2,11 
+[0,90;4,94]) og placebo. Det anførte estimat beror på 24 tilfælde i gruppen af 2.661 (0,9 %) 
+personer behandlet med citalopram og 7 tilfælde blandt 1.371  (0,5 %)  placebobehandlede. 
+Endvidere blev der for paroxetin ikke fundet statistisk signifikant forskel i forhold til placebo (OR 
+0,93 [0,62;1,42]). Blandt 9.919 behandlet med paroxetin blev der observeret 50 tilfælde (0,5 %), 
+mens der blandt 6.972 placebobehandl ede blev observeret 29 tilfælde  (0,4 %). Der blev fundet 
+statistisk signifikant mindre suicidalitet ved f luoxetin (OR 0,71 [0,52;0,99]) – 81 tilfælde af 
+suicidalitet ud af 7.180 (1,1 %) behandlet med fluoxetin overfor 67 tilfælde af suicidalitet ud af 
+4.814 (1,4 %) placebobehandlede. Der blev ikke fundet statistisk signifikant forskel i vurderingen 
+af fluvoxamin (OR 1,25 [0,66;2,39]). I denne sammenstilling blev der observeret 22 tilfælde ud 
+af 2.187 (1,0 %)  behandlet med fluvoxamin og 13 tilfælde blandt 1.828 (0,7 %)  
+placebobehandlede(10).  
+Det er specialistgruppens vurdering, at der ikke er belæg for øget risiko for suicidalitet og 
+herunder selvmordsadfærd blandt voksne brugere over 25 år som anvender SSRI-lægemidler. Det 
+har ikke været muligt at belyse sammenstillingen af lægemidlerne imellem.  Indirekte 
+sammenlignet og baseret på ovenstående estimater er det specialistgruppens vurdering, at til trods 
+Side 12 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+for, at sertralin og fluoxetin statistisk signifikant reducerede sandsynligheden er der ikke grundlag 
+for at differentiere mellem de forskellige SSRI-lægemidler.  
+QTc-forlængelse 
+Produktresume for sertralin, escitalopram og citalopram anfører at lægemiddelstofferne hver især 
+er blevet undersøgt i dobbeltbindede placebokontrollerede studier blandt raske (jævnfør fodnote 
+om ”The Thorough QT/QTc study). For alle stoffer anføres at der blev fundet dosisafhængig QTc-
+forlængelse. Produktresume for paroxetin, fluoxetin henholdsvis fluvoxamin omtaler ikke 
+systematiske studier på raske personer som afdækker eventuelle QTc-problematikker.   
+En metanalyse (11) som adresserede QTc- forlængelse ved SSRI -lægemidler fandt statistisk 
+signifikant QTc-forlængelse i forhold til placebo for sertralin på 3,00 millisekunder ([2,95;3,05]), 
+escitalopram gav anledning til forlængelse på 7,27 millisekunder ([3,78;10,83]) samt citalopram 
+10,58 millisekunder ([3,93;17,23]) – 95 % konfidensintervaller angivet i parentes. Der blev ikke 
+fundet nogen statistisk signifikant association for paroxetin, fluoxetin henholdsvis fluvoxamin og 
+QTc-forlængelse. Citalopram gav statistisk signifikant større QTc-forlængelse sammenholdt med 
+sertralin, paroxetin og fluvoxamin. Der var ikke statistisk signifikant forskel mellem citalopram 
+og escitalopram samt mellem citalopram og fluoxetin. 14 studier ligger til grund for estimaterne 
+– sertralin (1), escitalopram (3), citalopram (5), paroxetin (2), fluoxetin (2) og fluvoxamin (1). 
+Metaanalysen understøtter at sertralin, escitalopram såvel som citalopram er associeret med 
+dosisafhængig QTc-forlængelse. På baggrund af estimaterne fra metaanalysen er det  imidlertid 
+ikke muligt at rangordne de enkelte lægemiddelstoffer, da doserne i de inkluderede studier ikke 
+er sammenlignelige, såvel som at de inkluderede patientpopulationer ikke er konsistent 
+sammenlignelige.  
+Det er specialistgruppens opfattelse at potentiel QTc-forlængelse ved brug af SSRI-lægemidler i 
+almindelighed er underbelyst. Det er således specialistgruppens vurdering at QTc -forlængelse 
+ikke kan udelukkes for nogen af lægemiddelstofferne sertralin, escitalopram, citalopram, 
+paroxetin, fluoxetin og fluvoxamin. Hertil kommer, at en additiv effekt kan forekomme når SSRI 
+kombineres med lægemidler med kendt QTc- forlængende effekt. Derudover kan lægemidlerne 
+ved tilstedeværelse af risikofaktorer potentielt give anledning til QTc -forlængelse fx ved 
+hjertesygdom. Sundhedsstyrelsen anbefaler derfor , at patientens kardiale risikoprofil vurderes 
+inden start af behandling med SSRI -lægemidler samt at der foreligger et aktuelt EKG. Ved 
+mistænkt eller påvist hjertesygdom anbefales behandlingen at foregå i samråd med en speciallæge 
+i kardiologi. Denne anbefaling tager udgangspunkt i Sundhedsstyrelsens vejledning om 
+behandling af voksne med antidepressive lægemidler
+(1) og en vurdering af at alle SSRI -
+lægemidler kan medføre risiko for proarytmi. 
+Interaktioner 
+Anvendelse af SSRI-lægemidler er forbundet med interaktioner knyttet til enzymer i det hepatiske 
+cytokrom P450 (CYP) metaboliske system, hvor lægemidlerne enten er substrater for og/ eller 
+inhiberer et givent enzym. Lægemiddelstofferne inhiberer CYP-enzymerne i varierende grad og 
+har således forskelligt interaktionspotentiale. Enzymhæmning kan føre til klinisk relevant 
+interaktion med lægemidler som metaboliseres af de respektive CYP -enzymer. NICE-guideline 
+for ”recognition and management” af depression blandt voksne anfører at paroxetin, fluoxetin 
+samt fluvoxamin ved anvendelse har højere tendens til at fremkalde interaktioner end øvrige 
+Side 13 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+SSRI-lægemiddelstoffer(12). P aroxetin og fluoxetin er  potente hæmmere af CYP2D6. I 
+almindelighed gælder derfor at f orsigtighed bør udvises ved brug af paroxetin henholdsvis 
+fluoxetin og samtidig brug af lægemidler som omsættes i CYP2D6 , idet hæmning af CYP2D6 
+kan give anledning til forhøjet blodkoncentration af lægemidler som omsættes gennem CYP2D6. 
+Fluvoxamin er  en potent hæmmer af CYP1A2.  Enzympåvirkning må forventes i hele 
+behandlingsperioden. Der henvises endvidere til lægemidlernes produktresumer.  
+Relevante kontraindikationer og forsigtighedsregler 
+• For alle SSRI-lægemidler gælder at samtidig anvendelse af monoaminooxidasehæmmere 
+(MAO-hæmmere) er kontraindiceret grundet risiko for udvikling af serotonergt syndrom 
+• Der bør udvises forsigtighed ved kombinationen af tramadol og SSRI-lægemidler som 
+hæmmer CYP2D6 og dermed omsætningen af tramadol til aktiv metabolit, i det 
+uomdannet tramadol øger risikoen for serotonergt syndrom  
+• QTc; 
+o Citalopram og escitalopram er kontraindiceret hos patienter med kendt QT-
+intervalforlængelse eller medfødt langt QT-syndrom 
+o Sertralin, paroxetin, fluoxetin og fluvoxamin bør ikke anvendes hos patienter med 
+kendt QT-intervalforlængelse eller medfødt langt QT-syndrom 
+o Citalopram og escitalopram er kontraindiceret i kombination med lægemidler som 
+er kendt for at forlænge QT-intervallet idet risikoen for QT-forlængelse forhøjes 
+o Sertralin, paroxetin, fluoxetin og fluvoxamin bør ikke kombineres med samtidig 
+anvendelse af lægemidler, der er kendt for at forlænge QT-intervallet idet risikoen 
+for QT-forlængelse forhøjes 
+• Opmærksomheden henledes på risikoen for hyponatriæmi blandt ældre og ikke mindst i 
+forbindelse med behandling med diuretika 
+Sammenfatning og rekommandationer 
+På det foreliggende grundlag vurderer specialistgruppen at der er klinisk relevant effekt , i den 
+akutte behandling af unipolar depression hos voksne  over 25 år, af de i Danmark markedsførte 
+SSRI-lægemiddelstoffer. NNT for de 6 lægemiddelstoffer opgjort som akutre spons ligger i 
+intervallet 7-10 og med en antaget placeboresponsrate på 37,5%. 
+SSRI-lægemidler har tilbagefaldsforebyggende effekt . Der findes ingen indbyrdes klinisk e 
+relevante forskelle mellem de enk elte lægemiddelstoffer i forhold til respons, remission og 
+tilbagefaldsforebyggende effekt. 
+Alle 6 vurderede SSRI-lægemidler har kliniske r elevante seksuelle bivirkninger . Der vurderes 
+ikke at være forskelle mellem de enkelte lægemidler i forhold til risiko for udvikling af seksuelle 
+bivirkninger.  
+På det foreliggende grundlag, er der ikke vist øget risiko for suicidalitet ved behandling med SSRI 
+og herunder risiko for fuldbyrdet selvmord samt selvmordsadfærd hos voksne patienter over 25 
+år.  
+Det er specialistgruppens vurdering at QTc- forlængelse ikke kan udelukkes for nog le af SSRI-
+lægemiddelstofferne. På det foreliggende grund lag er det ikke er muligt at rangordne de 
+respektive SSRI-lægemiddelstoffer i forhold til risik o for QTc -forlængelse. Specialistgruppen 
+Side 14 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+vurderer samtidig, at risikoen for forlænget QT-interval potentielt stiger ved øgning af dosis samt 
+ved tilstedeværelse af risikofaktorer som hjertesygdom og samtidig brug af lægemidler med kendt 
+QTc-forlængende effekt.  
+Det er specialistgruppens vurdering i tråd med guideline fra NICE(12) at sertralin, escitalopram og 
+citalopram i klinisk praksis giver anledning til færre interaktioner end paroxetin, flu oxetin 
+henholdsvis fluvoxamin.  
+ 
+SSRI 
+Lægemiddel Sædvanlig daglig 
+begyndelsesdosis og i 
+parentes sædvanligt 
+dosisinterval 
+Kommentarer 
+Rekommanderet 
+Sertralin 50 mg (50 mg – 100 mg) NNT for sertralin er estimeret til 8. 
+Opmærksomhed henledes på risiko for 
+dosisafhængig forlængelse af QT-interval  
+Escitalopram 10 mg (10 mg – 20 mg) NNT for escitalopram er estimeret til 8. 
+Opmærksomhed henledes på risiko for 
+dosisafhængig forlængelse af QT-interval 
+Citalopram 20 mg (20 mg – 40 mg) NNT for citalopram er estimeret til 10. 
+Opmærksomhed henledes på risiko for 
+dosisafhængig forlængelse af QT-interval 
+Rekommanderet i særlige tilfælde 
+Fluoxetin 20 mg (20 mg – 40 mg) NNT for fluoxetin er estimeret til 10. Patienter 
+som ikke responderer tilfredsstillende på 
+rekommanderede lægemidler kan forsøges 
+behandlet med fluoxetin  
+ 
+Opmærksomhed henledes på potentielle 
+interaktioner samt risiko for dosisafhængig 
+forlængelse af QT-interval 
+Paroxetin 20 mg (20 mg – 40 mg) NNT for paroxetin er estimeret til 7. Patienter 
+som ikke responderer tilfredsstillende på 
+rekommanderede lægemidler kan forsøges 
+behandlet med paroxetin 
+ 
+Opmærksomhed henledes på potentielle 
+interaktioner samt risiko for dosisafhængig 
+forlængelse af QT-interval 
+Fluvoxamin 100 mg (100 mg – 200 mg) NNT for fluvoxamin er estimeret til 8. 
+Patienter som ikke responderer 
+tilfredsstillende på rekommanderede 
+lægemidler kan forsøges behandlet med 
+fluvoxamin 
+ 
+Side 15 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+Opmærksomhed henledes på potentielle 
+interaktioner samt risiko for dosisafhængig 
+forlængelse af QT-interval  
+ 
+ 
+Serotonin-noradrenalin-genoptagelseshæmmere 
+(SNRI) 
+ 
+Skema over vurderede lægemidler 
+Lægemiddel  Sædvanlig daglig begyndelsesdosis og i parentes 
+sædvanligt dosisinterval 
+Venlafaxin 
+(depotkapsler/tabletter) 
+75 mg (75 mg-300 mg) 
+Duloxetin (enterokapsler) 60 mg (60 mg-120 mg) 
+ 
+Virkningsmekanisme 
+SNRI-lægemidler virker gennem en dual -aktion-mekanisme. SNRI virker  ved at hæmme 
+genoptagelsen af serotonin samt noradrenalin fra den synaptiske spalte og ind i det præsynaptiske 
+neuron gennem inhibering af serotonintransportøren henholdsvis noradrenalintransportøren.  
+Evidensgennemgang  
+Netværksmetaanalysen publiceret 2018 af Cipriani et al. (5) anvendes til vurdering af respons, 
+remission og frafald uden angivet årsag for venlafaxin og duloxetin imellem såvel som de to 
+lægemiddelstoffer i forhold til placebo. 
+Tilbagefald besvares gennem en metaanalyse fra 2015(6) som vurderer tilb agefald af 
+antidepressiva under ét og/eller som gruppe  efter opnået  remission i forhold til ingen 
+farmakologisk behandling. Der henvises endvidere til gennemgang under SSRI. Det har ikke 
+været muligt at identificere systematiske review som eksplicit adresserer venlafaxin henholdsvis 
+duloxetin enkeltvis i forhold til placebo såvel som relativt til hinanden i forhold til forebyggelse 
+af tilbagefald.  
+Det har ikke været muligt at identificere systematiske review som kunne belyse effekten af SNRI-
+lægemidler vurderet som hvert enkelt  stof på suicidalitet – og sammenholdt med placebo. En 
+metaanalyse belyser effekten af antidepressiva og heru nder SNRI -lægemiddelstoffer på 
+suicidalitet defineret som et sammensat mål bestående af gennemført selvmord, selvmordsforsøg, 
+forberedende selvmordsadfærd og selvmordstanker
+(10). 
+Et systematisk review og netværksmetaanalyse vedrørende seksuel dysfunktion blev derudover 
+identificeret ved den systematiske litteraturgennemgang(9). 
+Side 16 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+SNRI-lægemidlers QT c-forlængende effekt gengives efter gældende produktinformationer 
+(produktresumeer og godkendelsesrapporter) . Det har ikke været muligt, at identificere 
+metaanalyser som anfører estimater for potentielt QTc-forlængelse ved anvendelse af venlafaxin 
+henholdsvis duloxetin.  
+Effekt 
+Cipriani et al. 2018 finder at venlafaxin og duloxetin begge er statistisk signifikant bedre end 
+placebo; venlafaxin (OR 1,78 [1,61;1,96] og duloxetin (OR 1,85 [1,66;2,07] )(5). Baseret på en 
+antaget placebo-respons-rate på 37,5% svarer dette til NNT 7 for begge lægemidler.  SMD for 
+venlafaxin blev vurderet til -0,33 [-0,39;-0,28] og duloxetin -0,37 [-0,44;-0,31].  
+I sammenligningen mellem venlafaxin og duloxetin i forhold til respons blev der ikke fundet 
+statistisk signifikant forskel (OR 1,04 [0,82;1,30]) (5). Den statistisk ikke signifikante SMD i 
+sammenstillingen mellem venlafaxin og duloxetin blev estimeret til 0,04 [-0,04;0,12]. 
+Specialistgruppen vurderer at der ikke er klinisk relevant forskel i effekt mellem de to 
+lægemiddelstoffer i forhold til ingen farmakologisk behandling.  
+Remission 
+Cipriani et al. 2018 finder at venlafaxin og duloxetin hver især er statistisk signifikant bedre end 
+placebo i forhold til opnåelse af remission; venlafaxin (OR  1,70 [1,54;1,89] og duloxetin (OR 
+1,78 [1,59;1,99])(5). 
+Der blev ikke fundet statistisk signifikant forskel  i forhold til remission  mellem venlafaxin og 
+duloxetin (OR 0,97 [0,76;1,25])(5). 
+Ophør med behandling uanset årsag 
+Cipriani et al. 2018 finder ingen statistisk signifikant forskel for venlafaxin såvel som duloxetin 
+vurderet over for placebo i forhold til ophør med behandling uanset årsag. De respektive anførte 
+estimater er; venlafaxin (OR 1,04 [0,93;1,15]) henholdsvis duloxetin (OR 1,09 [0,96;1,23])(5).  
+I sammenstillingen mellem de to lægemiddelstoffer blev der ikke fundet statistisk signifikant 
+forskel mellem venlafaxin og duloxetin (OR 0,95 [0,82;1,11])(5). 
+Tilbagefald – forebyggelse af tilbagefald efter opnået remission  
+Der henvises til gennemgang under SSRI -lægemidler, hvor tilbagefald belyses med henvisning 
+til metaanalyse som omfatter antidepressiva som ét samlet og vurderet over for placebo. Denne 
+metaanalyse inkluderede studier med SNRI om end få . Det anføres i metaanalysen at alle 
+lægemiddelgrupper omfattet af analysen og herunder at SNRI er statistik signifikant bedre end 
+placebo i forhold til forebyggelse af tilbagefald efter opnået remission(6).       
+QTc-forlængelse 
+Produktresume for venlafaxin anfører, at QT -forlængelse knytter sig til anvendelsen af 
+venlafaxind. Produktresume for duloxetin anfører ingen QT-forlængelse knyttet til duloxetin.  
+                                                      
+d Der henvises til Sundhedsstyrelsens vejledning om behandling af voksne med antidepressive lægemidler med hensyn til QTc-
+forlængelse 
+Side 17 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+Seksuelle bivirkninger 
+Et systematisk review med netværksmetaanalyse fandt ingen statistisk signifikant forskel mellem 
+venlafaxin og duloxetin (OR 0,65 [0,22;1,51]) (9). Det er specialistgruppens erfaring at begge 
+lægemiddelstoffer er forbundet med seksuelle bivirkninger.  
+Det refererede review angav ikke seksuelle bivirkninger i relation til placebobehandling. 
+Suicidalitet 
+”Suicidalitet” defineret som et sammensat mål bestående af gennemført selvmord, 
+selvmordsforsøg, forberedende selvmordsadfærd og selvmordstanker belyses i en metaanalyse af 
+studier omhandlende voksne(10).  
+For alle antidepressiva hvilket bl.a. omfattede SSRI, SNRI of TCA blev der for ”major 
+depression” ikke fundet statistisk signifikant forskel mellem antidepressiva og placebo (OR 0,85 
+[0,67;1,07])
+(10).  
+For den samlede uspecificerede population ”psychiatric disorders” blev der ikke fundet statistisk 
+signifikant forskel mellem venlafaxin og placebo (OR 0,71 [0,44;1,16]) henholdsvis duloxetin og 
+placebo (OR 0,88 [0,47;1,63])(10). Estimatet for venlafaxin er baseret på 29 (0,5 %) tilfælde ud af 
+5.593 behandlet med venlafaxin samt 30 (0,8 %) ud af 3.904 placebobehandlede. Estimatet 
+vedrørende duloxetin er baseret på 25 (1,1 %) tilfælde blandt 2.327 duloxetinbehandlede samt 18 
+(1,2 %) tilfælde blandt 1.460 placebobehandlede.     
+På baggrund af den forhåndenværende evidens er det specialistgruppens vurdering, at der ikke er 
+belæg for øget risiko for suicidalitet og herunder selvmordsadfærd blandt voksne brugere over 25 
+år som anvender SNRI-lægemidlerne venlafaxin henholdsvis duloxetin. 
+Interaktioner 
+Anvendelse af SNRI-lægemidler kan være forbundet med interaktioner knyttet til enzymer i det 
+hepatiske cytokrom P450 (CYP) metaboliske system, hvor lægemidlerne enten er substrater for 
+og/eller inhiberer et givent enzym. Duloxetin hæmmer CYP2D6 og metaboliseres  bl.a. af 
+CYP1A2. Venlafaxin metaboliseres af CYP2D6 til aktive metabolitter  og venlafaxin 
+metaboliseres endvidere af CYP3A4. 
+Relevante kontraindikationer og forsigtighedsregler 
+• For venlafaxin såvel duloxetin gælder at samtidig anvendelse af 
+monoaminooxidasehæmmere (MAO -hæmmere) er kontraindiceret grundet risiko for 
+udvikling af serotonergt syndrom  
+• Der bør udvises forsigtighed ved kombinationen af duloxetin og tramadol i det 
+uomdannet tramadol som følge af duloxetins hæmming af CYP2D6 øger risikoen for 
+serotonergt syndrom 
+• Samtidig brug af lægemidler med kendt QT -forlængende effekt bør undgås ved brug af 
+venlafaxin.  
+• For venlafaxin og duloxetin gælder at forsigtighed skal udvises ved nedsat lever - såvel 
+som nyrefunktion – med eventuel dosisjustering 
+Side 18 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+• Venlafaxin henholdsviss duloxetin må ikke opstartes i patienter med ukontrolleret 
+hypertension 
+• Opmærksomheden henledes på risikoen for hyponatriæmi blandt ældre og ikke mindst i 
+forbindelse med behandling med diuretika 
+Sammenfatning og rekommandationer 
+På det foreliggende grundlag vurderer specialistgruppen, at der er klinisk relevant effekt af 
+venlafaxin såvel som duloxetin i behandling af unipolar depression hos voksne over 25 år i den 
+akutte fase. Begge lægemidler har endvidere tilbagefaldsforebyggende effekt og der findes ingen 
+klinisk relevant forskel mellem de to lægemiddelstoffer. QTc-forlængelse er knyttet til venlafaxin 
+og anvendelsen af venlafaxin skal ske under hensyntagen til eventuel kardio -vaskulær 
+problematik og øvrig lægemiddelanvendelse. Duloxetin hæmmer CYP2D6 og kan potentielt give 
+anledning til væsentlige interaktioner.  Begge lægemidler skal anvendes med forsigtighed ved 
+nedsat lever- og eller nyrefunktion. 
+ 
+SNRI 
+Lægemiddel Sædvanlig daglig 
+begyndelsesdosis og i 
+parentes sædvanligt 
+dosisinterval 
+Kommentarer 
+Rekommanderet 
+Venlafaxin 75 mg (75 mg – 300 mg) NNT for venlafaxin er estimeret til 7. 
+Opmærksomheden henledes til  potentiel 
+QTc-forlængelse samt forsigtighed ved 
+nedsat lever- og/eller nyrefunktion 
+Duloxetin 60 mg (60 mg – 120 mg) NNT for duloxetin er estimeret til 7. 
+Opmærksomheden henledes til potentielle  
+interaktioner samt forsigtighed ved nedsat 
+lever- og/eller nyrefunktion 
+ 
+ 
+Noradrenalin og specifikke serotonin-antidepressiva 
+(NaSSA) 
+Skema over vurderede lægemidler 
+Lægemiddel  Sædvanlig daglig begyndelsesdosis og i parentes 
+sædvanligt dosisinterval 
+Mirtazapin (tablet, 
+smeltetablet) 
+15 mg (15 mg – 45 mg) 
+Mianserin (tablet) 30 mg (30 mg – 90 mg) 
+Side 19 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+Virkningsmekanisme 
+Mirtazapin såvel som mianserin virker præ - og post synaptisk ved at blokerer α2-receptorer, 
+serotoninreceptorerne 5-HT2 og 5-HT3 samt histaminreceptoren H1. Mianserin blokerer endvidere 
+α1-receptorer. Dermed stimuleres syntese og frigørelse af noradrenalin og serotonin.  
+Evidensgennemgang  
+Cipriani et al. 2018(5) vurderer mirtazapin versus placebo i forhold til respons, remission og ophør 
+med behandling uanset årsag. Det har ikke været muligt at identificere systematiske review som 
+belyser sammenstillingen af mirtazapin og mianserin i forhold til de udvalgte outcomes, endsige 
+mianserin i forhold til placebo. For suicidalitet gælder at e n metaanalyse belyser effekten af 
+antidepressiva og herunder mirtazapin og mianserin på suicida litet defineret som et sammensat 
+mål bestående af gennemført selvmord, selvmordsforsøg, forberedende selvmordsadfærd og 
+selvmordstanker
+(10). 
+Effekt 
+Mirtazapin blev i Cipriani et al. 2018 fundet statistisk signifikant bedre end placebo og 
+sandsynligheden for respons blev vurderet til at være 89 % højere (OR 1,89 [1,64;2,20])
+(5). Baseret 
+på en antaget placebo -respons-rate på 37,5% svarer dette til NNT 6 for mirtazapin. SMD for 
+mirtazapin blev estimeret til -0,37 [-0,45;-0,28]. 
+Remission 
+Mirtazapin blev i Cipriani et al. 2018 fundet statistisk signifikant bedre end placebo og 
+sandsynligheden for remission blev vurderet til at være 66 % højere (OR 1,66 [1,41;1,95])(5). 
+Ophør med behandling uanset årsag 
+Cipriani et al. 2018 anfører ingen statistisk signifikant forskel mellem mirtazapin og placebo i 
+forhold til ophør uanset årsag (OR 0,99 [0,85;1,15])(5). 
+Tilbagefald – forebyggelse af tilbagefald efter opnået remission  
+Det har ikke været muligt at identificere systematiske review som belyser forebyggelse af 
+tilbagefald ved mirtazapin henholdsvis mianserin.  
+QTc-forlængelse 
+Ved litteratursøgning har ikke været muligt, at identificere fx metaanalyser som belyser potentielt 
+QTc-forlængelse ved anvendelse af mirtazapin  samt mianserin . Produktresumer for begge 
+lægemidler anfører ingen information om potentiel QT-problematik.  
+Seksuelle bivirkninger 
+Det har ikke været muligt at identificere systematiske review som belyser seksuelle bivirkninger 
+ved mirtazapin henholdsvis mianserin. Det er imidlertid specialistgruppens erfaring, at begge 
+lægemidler generelt er forbundet med få seksuelle bivirkninger.  
+Side 20 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+Suicidalitet 
+”Suicidalitet” defineret som et sammensat mål bestående af gennemført selvmord, 
+selvmordsforsøg, forberedende selvmordsadfærd og selvmordstanker belyses i en metaanalyse af 
+studier omhandlende voksne(10).  
+For alle antidepressiva hvilket bl.a. omfattede SSRI, SNRI of TCA blev der for ”major 
+depression” ikke fundet statistisk signifikant forskel mellem antidepressiva og placebo (OR 0,85 
+[0,67;1,07])
+(10).  
+For den samlede uspecificerede population ”psychiatric disorders” blev der ikke fundet statistisk 
+signifikant forskel mellem mirtazapin og placebo (OR 0,91 [0,34;2,78]) henholdsvis mianserin 
+og placebo (OR 1,00 [0,06;16,8])
+(10). Estimatet for mirtazapin hidrører fra 8 (0,8 %) tilfælde ud 
+af 1.016 behandlet med mirtazapin samt  6 (0,9 %) tilfælde blandt 644 som har modtaget 
+placebobehandling. Estimatet for mianserin baserer sig på 1 (3,5 %) tilfælde blandt 28 
+mianserinbehandlede og 1 (3,5 %) tilfælde blandt 28 behandlet med placebo. 
+På baggrund af den forhåndenværende evidens er det specialistgruppens vurdering, at der ikke er 
+belæg for øget risiko for suicidalitet og herunder selvmordsadfærd blandt voksne brugere over 25 
+år som anvender mirtazapin henholdsvis mianserin. 
+Interaktioner 
+Anvendelse af mirtazapin henholdsvis mianserin kan være forbundet med interaktioner knyttet til 
+enzymer i det hepatiske cytokrom P450 (CYP) metaboliske system, hvor lægemidlerne enten er 
+substrater for og/eller inhiberer et givent enzym. Mirtazapin metaboliseres af CYP3A4. Mianserin 
+metaboliseres af CYP2D6.   
+Relevante kontraindikationer og forsigtighedsregler 
+• Mirtazapin såvel som mianserin er kontraindiceret ved samtidig brug af 
+monoaminooxidasehæmmere (MAO)  grundet risiko for udvikling af serotonergt 
+syndrom  
+• Mirtazapins såvel mianserins clearance kan være nedsat hos patienter med nedsat nyre- 
+og/eller leverfunktion 
+• Ortostatisk hypotension kan forekomme ved begge lægemidler især hos ældre 
+• Forsigtighed bør udvises ved samtidig brug af mirtazapin og lægemidler med virkning 
+på serotoninsystemet 
+• Mirtazapin kan øge den sederende effekt af benzodiazepiner og andre sederende 
+lægemidler 
+Sammenfatning og rekommandationer 
+På bagrund af den foreliggende evidens er det er specialistgruppens vurdering, at mirtazapin kan 
+anvendes i behandling af unipolar depression hos voksne over 25 år. Det har ikke været muligt at 
+belyse mianserin i forhold til de fokuserede spørgsmål – undtaget QTc-forlængelse og suicidalitet. 
+Det er specialistgruppens vurdering, at anvendelsen  af mianserin i praksis medfører flere 
+bivirkninger og potentielle interaktioner sammenholdt med mirtazapin og specialistgruppen 
+anbefaler kun mianserin i særlige tilfælde som monoterapi i behandlingen af unipolar depression 
+hos voksne over 25 år. 
+Side 21 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+ 
+NaSSA 
+Lægemiddel Sædvanlig daglig 
+begyndelsesdosis og i 
+parentes sædvanligt 
+dosisinterval 
+Kommentarer 
+Rekommanderet  
+Mirtazapin 15 mg (15 mg – 45 mg) NNT for mirtazapin er estimeret til 6. 
+Rekommanderet i særlige tilfælde 
+Mianserin 30 mg (30 mg – 90 mg) Det har ikke været muligt at estimere NNT for 
+mianserin. Det er har ikke været muligt at belyse 
+alle fokuserede spørgsmål vedrørende mianserin, 
+og herunder respons af mianserin i forhold til 
+ingen farmakologisk behandling. Mianserin kan 
+forsøges anvendt i  de tilfælde, hvor mirtazapin 
+ikke kan anvendes  eller ikke har givet 
+tilfredsstillende effekt 
+ 
+ 
+Noradrenalin-genoptagelseshæmmere (NaRI) 
+Skema over vurderede lægemidler 
+Lægemiddel  Sædvanlig daglig begyndelsesdosis og i parentes sædvanligt 
+dosisinterval 
+Reboxetin 
+(tablet) 
+8 mg (8 mg – 12 mg) 
+ 
+Virkningsmekanisme 
+Reboxetin virker ved at hæmme genoptagelsen af noradrenalin fra den synaptiske spalte og ind i 
+det presynaptiske neuron gennem inhibering af noradrenalingenoptagelsen.  
+Evidensgennemgang  
+Reboxetin er omfattet af det systematiske review og dertilhørende netværksmetaanalyse gengivet 
+i Cipriani et al. 2018 (5). Respons, remission og ophør med behandling uanset årsag belyses med 
+henvisning hertil. 
+Effekt 
+Der blev fundet statistisk signifikant fors kel mellem reboxetin og placebo  i forhold til respons 
+(OR 1,37 [1,16;1,63] )(5). Baseret på en antaget placebo -respons-rate på 37,5 % svarer dette til 
+NNT lig 13. SMD blev estimeret til -0,17[-0,26;-0,08]. 
+Side 22 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+Remission  
+Der blev fundet statistisk signifikant forskel mellem reboxetin og placebo (OR 1,23 
+[1,03;1,46])(5). 
+Ophør med behandling uanset årsag 
+Der blev ikke fundet statistisk signifikant forskel mellem reboxetin og placebobehandling (OR 
+1,16 [0,96;1,40])(5).  
+Tilbagefald – forebyggelse af tilbagefald efter opnået remission  
+Det har ikke været muligt at identificere systematiske review som belyser forebyggelse af 
+tilbagefald ved reboxetin.  
+QTc-forlængelse 
+Ved litteratursøgning har ikke været muligt, at identificere fx metaanalyser som belyser potentielt 
+QTc-forlængelse ved anvendelse af reboxetin. Produktresume for reboxetin anfører ingen 
+information om potentiel QT-problematik.  
+Seksuelle bivirkninger 
+Det har ikke været muligt at identificere systematiske review som belyser seksuelle bivirkninger 
+ved reboxetin. 
+Suicidalitet  
+Det har ikke været muligt at identificere systematiske review som belyser suicidalitet ved 
+reboxetin. 
+Interaktioner 
+Reboxetin metaboliseres via CYP3A4 og samtidig brug af lægemidler som inhiberer/inducerer 
+CYP3A4 kan ændre koncentrationen af reboxetin.    
+Relevante kontraindikationer og forsigtighedsregler 
+• Reboxetin bør anvendes med særlig forsigtighed ved samtidig brug af lægemidler med 
+blodtryksnedsættende effekt 
+Sammenfatning og rekommandationer 
+Der er klinisk relevant effekt af reboxetin i behandling af unipolar depression hos voksne over 25 
+år vurderet på behandlingsrespons. Med en beregnet NNT på 13 vurderes behandlingseffekten 
+imidlertid at være beskeden.  Flere outcome (udfald) kunne ikke belyses i f orbindelse med den 
+foreliggende evidensgennemgang. Ikke mindst vurderes det, at sikkerheden og patientrelevante 
+bivirkninger ved reboxetin ikke er tilstrækkeligt belyst. 
+ 
+ 
+ 
+Side 23 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+NaRI 
+Lægemiddel Sædvanlig daglig 
+begyndelsesdosis og i 
+parentes sædvanligt 
+dosisinterval 
+Kommentarer 
+Rekommanderet i særlige tilfælde 
+Reboxetin 
+(tablet) 
+8 mg (8 mg – 12 mg) NNT for reboxetin er estimeret til 13. Reboxetin 
+har klinisk relevant effekt, men effekten er 
+beskeden. Sikkerheden og patientrelevante 
+bivirkninger ved reboxetin ikke er tilstrækkeligt 
+belyst. Reboxetin kan forsøges anvendt i de 
+tilfælde, hvor det ikke har været muligt at opnå 
+tilfredsstillende effekt m ed et rekommanderet 
+lægemiddel 
+ 
+ 
+Melatoninagonister 
+Skema over vurderede lægemidler 
+Lægemiddel  Sædvanlig daglig begyndelsesdosis og i parentes sædvanligt 
+dosisinterval 
+Agomelatin 
+(tablet) 
+25 mg (25 mg – 50 mg) 
+ 
+Virkningsmekanisme 
+Agomelatin udøver sin effekt gennem blokering af serotoninreceptorer (5HT2c) samt gennem 
+stimulation af melatoninreceptorerne M1 og M2. 
+Evidensgennemgang  
+Agomelatin er omfattet af det systemati ske review og dertilhørende netværks metaanalyse af  
+Cipriani et al. 2018 (5). Respons, remission og ophør med behandling uanset årsag belyses med 
+henvisning hertil. Forebyggelse af tilbagefald efter opnået remission besvares med henvisning til 
+den europæiske vurderingsrapport udarbejdet i forbindelse med de europæiske 
+lægemiddelmyndigheders godkendelse af agomelatin (EPAR) som også refereres i forbindelse 
+med seksuelle bivirkninger, suicidalitet og QT-forlængelse(13). Seksuel dysfunktion/bivirkninger 
+knyttet til agomelatin omtales endvidere i et review som refereres(14). 
+Effekt 
+Der blev fundet statistisk signifikant forskel i respons mellem agomelatin og placebo  (OR 1,65 
+[1,44;1,88])(5). Baseret på en antaget placebo -respons-rate på 37,5 % s varer dette til NNT lig  8. 
+SMD blev estimeret til -0,26 [-0,33;-0,19]. 
+Side 24 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+Remission 
+Der blev  fundet statistisk signifikant forskel i remission mellem agomelatin og placebo . 
+Sandsynligheden for at opnå remission med agomelatin var  således 43 % højere sammenholdt 
+med sandsynligheden for at opnå remission med placebobehandling (OR 1,43 [1,24;1,65])(5).  
+Ophør med behandling uanset årsag 
+Der blev fundet statistisk signifikant forskel mellem agomelatin og  placebo i forhold t il ophør 
+med behandling uanset årsag således at færre patienter i behandling med agomelatin stoppede 
+behandling sammenlignet med patienter som fik placebobehandling . Sandsynlighe den for at 
+stoppe agomelatinbehandling uanset årsag blev estimeret til at være 16 % lavere end 
+placebobehandling (OR 0,84 [0,72;0,97])(5).  
+Tilbagefald – forebyggelse af tilbagefald efter opnået remission  
+I forbindelse med godkendelsen af agomelatin blev der gennemført et RCT, hvor tilbagefald blev 
+undersøgt med henholdsvis 25 mg og 50 mg  agomelatin. Efter en indledende ”open- label” 
+behandlingsperiode på 8-10 uger blev patienter som havde opnået en score 10 eller mindre på en 
+Hamilton-17 depressionsskala eller Global Clinical Impression (GCI)  på 2 eller mindre 
+randomiseret til et 6 måneders dobbeltblindt placebokontrolleret forsøg. Efter 6 må neder havde 
+39 (24 %) ud af 165 behandlet med agomelatin oplevet tilbagefald, mens 83 (48 %) ud af 174 
+behandlet med placebo havde oplevet tilbagefald. Agomelatin var således statistisk signifikant 
+bedre end placebo i forhold til forebyggelse af tilbagefald – (HR 0,46 [0,31;0,69])(13). 
+Seksuelle bivirkninger 
+Et review som blandt andet omhandler seksuelle bivirkninger knyttet til antidepressive 
+lægemidler kategoriserer agomelatin som et lægemiddelstof uden væsentlig effekt/indflydelse på 
+seksualitet(14). EPAR for agomelatin anfører ligeledes at agomelatin er forbundet med lav risiko 
+for seksuelle bivirkninger(13). 
+Suicidalitet  
+Det har ikk e været muligt at finde systematiske review som belyser suicidalitet knyttet til 
+agomelatin. EPAR for agomela tin anfører med reference til studierne som lig ger til grund for 
+godkendelsen af agomelatin, at 4 selvmord blev observeret ud af 3.956 behandlet med agomelatin. 
+Blandt 826 placebobehandlede blev der observeret ét selvmord(13). 
+QTc-forlængelse 
+EPAR for agomelatin anfører et gennemført studie i forbindelse med godkendelse af agomelatin, 
+hvor 28 mænd og 28 kvinder blev inkluderet og blev eksponeret for en enkelt dosis af henholdsvis 
+50 mg og 400 mg agomelatin. Resultaterne fra studierne opf yldte EMA/CHMP -krav og 
+agomelatin forbindes ikke med QTc-forlængelse.  
+Interaktioner 
+Agomelatin metaboliseres primært gennem CYP1A2.  
+Side 25 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+kontraindikationer og forsigtighedsregler 
+• Agomelatin er kontraindiceret hos patienter med nedsat leverfunktion – (levercirrose 
+eller aktiv leversygdom)  
+• Leverfunktion bør kontrolleres ved opstart og jævnligt derefter 
+• Forsigtighed ved nedsat nyrefunktion 
+Sammenfatning og rekommandationer 
+På det foreliggende grundlag vurderer specialistgruppen, at der er klinisk relevant effekt af 
+agomelatin i denne akutte behandling. Det er endvidere relevant at anvende agomelatin i den 
+fortsatte behandling efter opnået remission, hvorfor agomelatin kan anvendes som monoterapi til 
+behandling af unipolar depression blandt voksne. E ndvidere er det specialistgruppens kliniske 
+erfaring, at agomelatin er forbundet med få seksuelle bivirkninger og i almindelighed oplever 
+patienter i behandling med agomelatin få forbigående bivirkninger. Leverfunktion bør 
+kontrolleres ved opstart af alle  patienter og herefter løbende og forsigtighed bør udvises ved 
+nedsat nyrefunktion. 
+Melatoninagonister 
+Lægemiddel Sædvanlig daglig 
+begyndelsesdosis og i 
+parentes sædvanligt 
+dosisinterval 
+Kommentarer 
+Rekommanderet  
+Agomelatin 
+(tablet) 
+25 mg (25 mg – 50 mg) NNT for agomelatin er estimeret til 8. 
+Agomelatin er kontraindiceret hos patienter 
+med nedsat leverfunktion og forsigtighed skal 
+udvises ved patienter med nedsat 
+nyrefunktion. Leverfunktion bør kontrolleres 
+ved opstart og jævnligt derefter 
+ 
+ 
+Andre antidepressiva med modulerende virkning på 
+serotoninsystemet  
+Skema over vurderede lægemidler 
+Lægemiddel  Sædvanlig daglig begyndelsesdosis og i parentes sædvanligt 
+dosisinterval 
+Vortioxetin 
+(tablet) 
+10 mg (5 mg – 20 mg) 
+ 
+Side 26 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+Virkningsmekanisme 
+Mekanismen bag den antidepressive effekt at vortioxeti n er ikke fuldt kendt, men d et vides at 
+vortioxetin virker antagonistisk overfor  5HT3, 5HT7 og HT1D, partiel agonist af 5HT 1B, 5HT1A-
+agonist såvel som at vortioxetin har en inhiberende effekt på genoptagelsen af serotonin. 
+Evidensgennemgang  
+Vortioxetin er omfattet af det systematiske review og dertilhørende netværksmetaanalyse 
+gengivet i Cipriani et al. 2018 (5). Respons, remission og ophør med behandling uanset årsa g 
+belyses med henvisning hertil. Desuden anvendes EPAR(15) knyttet til vortioxetins godkendelse. 
+Endvidere refereres review omhandlende bl.a. seksuel dysfunktion knyttet til antidepressiva (14). 
+Et review belyser sikkerheden ved vortioxetin på baggrund af kl iniske studier  og refereres i 
+forbindelse med suicidalitet.  
+Effekt - akutbehandling 
+Vortioxetin blev fundet statistisk signifikant bedre end placebo således at sandsynligheden for 
+opnåelse af respons var 66 % højere end den tilsvarenden sandsynlighed for placebo (OR 1,66 
+[1,45;1,92])(5). Baseret på en antaget placebo -respons-rate på 37,5 % svarer dette til NNT lig 8. 
+SMD blev estimeret til -0, 28 [-0,36;-0,20]. 
+Remission 
+Vortioxetin blev fundet statistisk signifikant bedre end placebo således at sandsynligheden for 
+opnåelse af remission var 49 % højere end den tilsvarende  sandsynlighed for placebo (OR 1,49 
+[1,29;1,72])(5). 
+Ophør med behandling uden angivet årsag  
+Der blev ikke fundet statistisk signif ikant forskel hvad angår ophør med behandling  uden 
+specificeret årsag mellem vortioxetin og placebo (OR 1,01 [0,86;1,19])(5).  
+Tilbagefald – forebyggelse af tilbagefald efter opnået remission  
+I forbindelse med godkendelsen af vortioxetin er i EPAR (15) anført et ra ndomiseret studie som 
+undersøgte tilbagefald efter opnået remission. P atienter som havde opnået remission efter 12 
+ugers behandling i et open -label-design blev randomiseret til enten vortioxetin eller placebo. 
+Tilbagefald inden for 24 uger efter randomisering blandt placebobehandlede i forhold 
+vortioxetinbehandlede blev opgjort til at være 101 % højere (HR 2,01 [1,26;3,21] , hvorfor 
+vortioxetin blev fundet statistisk signifikant bedre end placebo til forebyggelse af tilbagefald efter 
+opnået remission. Estimatet er baseret på 204 behandlet med vortioxetin, hvor 27 (13 %) oplevede 
+tilbagefald samt 192 placebobehandlede, hvor 50 (26 %) fik tilbagefald.  
+Seksuelle bivirkninger 
+EPAR(15) knyttet til godkendelsen af vortioxetin angiver at forekomsten af seksuelle bivirkninger 
+(dysfunktion) andrager 1,6 %, mens placeboraten er 0,9 %. Et review som blandt andet omhandler 
+seksuelle bivirkninger knyttet til antidepressive lægemidler kategoriserer vortioxetin som et 
+lægemiddelstof uden væsentlig effekt/indflydelse på seksualitet(14). 
+Side 27 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+Suicidalitet  
+Vortioxetin er blevet undersøgt i en række korttidsundersøgelser, hvori indgik 1.817 
+placebobehandlede og 3.018 behandlet med vortioxetin (5-20 mg/dagligt). ”Selvmordsrelaterede 
+events” refererede i disse studier til et sammensat mål af ”suicidaltanker, bevidst overdosering, 
+bevidst selvskade, selvskadeadfærd og selvmordsforsøg”. Der blev rapporteret 11 (0,4 %) tilfælde 
+blandt patienter behandlet med vortioxetin og 6 (0,3 %)  tilfælde blandt placebobehandlede , 
+hvilket vurderes uden klinisk relevans(16).  
+I en sammenstilling -  hvor inkluderede personer hverken i vortioxetingruppen (1.464 personer) 
+eller placebogruppen  (836 personer) tidligere havde haft selvmordstanker eller udvist 
+selvmordsadfærd frem til studiestart/baseline - viste, at 34 (4,1 %) patienter i placebogruppen fik 
+selvmordstanker, mens 39 patienter (2,7 %) behandlet med vortioxetin fik selvmordstanker og 2 
+patienter i samme gruppe udviste selvmordsadfærd
+(16).  
+QT-forlængelse 
+I forbindelse med den europæiske godkendelse af vortioxetin er vortioxetin blevet evalueret for 
+potentiel QTc-forlængende effekt i henhold til EMA/CHMP-krav(15). Vortioxetin blev undersøgt 
+gennem administration i 14 dage af henholdsvis 10 mg og 40 mg dagligt til raske mænd og med 
+placebokontrol samt med moxifloxacin som positiv kontrol. D er blev ikke fundet statistisk 
+signifikant eller klinisk relevant effekt i forhold til placebo.  
+Interaktioner 
+Vortioxetin metaboliseres af hovedsageligt af CYP2D6  og inhibering af dette en zym kan give 
+anledning forhøjet koncentration af vortioxetin. Vortioxetin metaboliseres i mindre omfang af 
+CYP3A4/5 samt CYP2C9. Vortioxetin hverken inducerer eller inhiberer CYP-enzymer. 
+Relevante kontraindikationer og forsigtighedsregler 
+• Kombination med MAO -hæmmere kan medføre alvorlige bivirkninger og er 
+kontraindiceret 
+• Stærke hæmmere af CYP2D6 kan medføre øget koncentration af vortioxetin og 
+dosisjustering kan være nødvendigt 
+• Forsigtighed ved patienter med nedsat CYP2D6- aktivitet og samtidig brug af potente 
+hæmmere af CYP3A4 eller hæmmere af CYP2C9 idet øget koncentration af vortioxetin 
+kan forekomme 
+• Samtidig brug af andre s erotonerge midler som fx tramadol, fentanyl og triptaner 
+(migrænebehandling) kan øge risikoen for serotonergt syndrom  
+• Forsigtighed ved stærkt nedsat nyre- og/eller leverfunktion 
+Sammenfatning og rekommandationer 
+På det foreliggende grundlag vurderer specialistgruppen, at der er klinisk relevant effekt af 
+vortioxetin i behandling i den akutte fase.  Derudover har vortioxetin tilbagefaldsforebyggende 
+effekt. Det er endvidere specialistgruppens kliniske erfaring og v urdering, at vortioxetin er 
+forbundet med få seksuelle bivirkninger og i almindelighed oplever patienter i behandling med 
+vortioxetin få bivirkninger. Det er specialistgruppens samlede vurdering, at vortioxetin kan 
+anvendes som monoterapi til behandling af unipolar depression.  
+Side 28 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+Andre antidepressiva med modulerende virkning på serotoninsystemet 
+Lægemiddel Sædvanlig daglig begyndelsesdosis og i 
+parentes sædvanligt dosisinterval 
+Kommentarer 
+Rekommanderet 
+Vortioxetin 10 mg (5 mg – 20 mg) NNT for vortioxetin er 
+estimeret til 8. 
+ 
+Side 29 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+Relevante danske behandlingsvejledninger 
+… 
+Ændringslog 
+Dato Version Kommentar 
+[24. 07 2018] Høringsversion 3-4 ugers offentlig høring 
+[xx. xx 201x] Version 1.0 Publicering 
+Tilrettet ud fra indkomne høringssvar  
+[xx. xx 201x] Version 1.1 Evt. beskrivelse af ændring 
+ 
+Specialistgruppe 
+Udarbejdet af IRF med deltagelse af følgende eksterne specialister:  
+Anne Katrine Pagsberg, Dansk Børne- og Ungdomspsykiatrisk Selskab – BUP-DK (udtrådt af 
+specialistgruppen november 2018) 
+Klaus Per Juul Martiny, Dansk Psykiatrisk Selskab – DPS 
+Anders F. Jensen, Dansk Psykiatrisk Selskab – DPS (udtrådt af specialistgruppen november 
+2018) 
+Rasmus W. Licht, Dansk Psykiatrisk Selskab – DPS 
+Annette Sofie Davidsen, Dansk Selskab for Almen Medicin – DSAM 
+Nina Åslund, Dansk Selskab for Almen Medicin – DSAM 
+Gesche Jürgens, Dansk Selskab for Klinisk Farmakologi - DSKF 
+Habilitetserklæringer kan findes her. (link til habilitetsgruppe på sst.dk, eksempelvis: 
+https://www.sst.dk/da/om-os/maal-og-opgaver/habilitet/soeg-
+habilitetserklaering?action=post&query=&company=-&name=-
+&council=IRF's%20Nationale%20Rekommandationsliste%20-
+%20Specialistgruppe%20for%20hud&filterVisible=true&dateYear=-&dateMonth=-  
+Juridiske forhold 
+Den Nationale Rekommandationsliste (NRL), udarbejdet af IRF i Sundhedsstyrelsen, kan 
+bruges af fagpersoner, når de skal træffe beslutninger om præparatvalg inden for en 
+velafgrænset lægemiddelgruppe i specifikke kliniske situationer. NRL klassificeres som faglig 
+rådgivning, hvilket indebærer, at relevante fagpersoner anbefales at følge anbefalingerne. NRL 
+er ikke juridisk bindende, og det vil altid være det faglige skøn i den konkrete kliniske situation, 
+der er afgørende for lægemiddelvalg. I visse tilfælde kan et lægemiddel, som enten er 
+”rekommanderet i særlige tilfælde” eller ”ikke rekommanderet” være at foretrække, fordi det 
+passer bedre til patientens situation. 
+Side 30 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+Referencer 
+(1) Sundhedsstyrelsen. Vejledning om behandling af voksne med antidepressive lægemidler. 
+2014;VEJ nr 9899 af 11/11/2014. 
+(2) Rådet for Anvendelse af Dyr Sygehusmedicin (RADS). Baggrundsnotat - Medicinsk 
+behandling af unipolar depression hos voksne2015 (Version: 1.0 - Dok.nr: 178478). 
+(3) Sundhedsstyrelsen. National klinisk retningslinje for non-farmakologisk behandling af 
+unipolar depression2016 (978-87-7104-771-4). 
+(4) Furukawa TA, Cipriani A, Atkinson LZ, Leucht S, Ogawa Y, Takeshima N, et al. Placebo 
+response rates in antidepressant trials: a systematic review of published and unpublished 
+double-blind randomised controlled studies. Lancet Psychiatry 2016;3(11):1059-1066. 
+(5) Cipriani A, Furukawa TA, Salanti G, Chaimani A, Atkinson LZ, Ogawa Y, et al. 
+Comparative efficacy and acceptability of 21 antidepressant drugs for the acute treatment of 
+adults with major depressive disorder: a systematic review and network meta-analysis. Lancet 
+2018. 
+(6) Sim K, Lau WK, Sim J, Sum MY, Baldessarini RJ. Prevention of Relapse and Recurrence in 
+Adults with Major Depressive Disorder: Systematic Review and Meta-Analyses of Controlled 
+Trials. Int J Neuropsychopharmacol 2015;19(2):10.1093/ijnp/pyv076. 
+(7) Geddes JR, Carney SM, Davies C, Furukawa TA, Kupfer DJ, Frank E, et al. Relapse 
+prevention with antidepressant drug treatment in depressive disorders: a systematic review. 
+Lancet 2003;361(9358):653-661. 
+(8) Lepine JP, Caillard V, Bisserbe JC, Troy S, Hotton JM, Boyer P. A randomized, placebo-
+controlled trial of sertraline for prophylactic treatment of highly recurrent major depressive 
+disorder. Am J Psychiatry 2004;161(5):836-842. 
+(9) Reichenpfader U, Gartlehner G, Morgan LC, Greenblatt A, Nussbaumer B, Hansen RA, et 
+al. Sexual dysfunction associated with second-generation antidepressants in patients with major 
+depressive disorder: results from a systematic review with network meta-analysis. Drug Saf 
+2014;37(1):19-31. 
+(10) Stone M, Laughren T, Jones ML, Levenson M, Holland PC, Hughes A, et al. Risk of 
+suicidality in clinical trials of antidepressants in adults: analysis of proprietary data submitted to 
+US Food and Drug Administration. BMJ 2009;339:b2880. 
+(11) Beach SR, Kostis WJ, Celano CM, Januzzi JL, Ruskin JN, Noseworthy PA, et al. Meta-
+analysis of selective serotonin reuptake inhibitor-associated QTc prolongation. J Clin Psychiatry 
+2014;75(5):e441-9. 
+(12) NICE - National Institute for Health and Care Excellence. Depression in adults: recognition 
+and management (CG90) - updated 2016. NICE, 2009. 
+(13) Commitee for Medicinal Products for Human Use (CHMP). Agomelatine - Assessment 
+report for initial marketing authorisation application - EMEA/H/C/000916. 
+(14) Chokka PR, Hankey JR. Assessment and management of sexual dysfunction in the context 
+of depression. Ther Adv Psychopharmacol 2018;8(1):13-23. 
+Side 31 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+(15) Committee for Medicinal Products for Human Use (CHMP). Vortioxetine - Assessment 
+report for an initial marketing authorisation application - EMA/699150/20132013. 
+(16) Baldwin DS, Chrones L, Florea I, Nielsen R, Nomikos GG, Palo W, et al. The safety and 
+tolerability of vortioxetine: Analysis of data from randomized placebo-controlled trials and 
+open-label extension studies. J Psychopharmacol 2016;30(3):242-252. 
+  
+ 
+Ordliste 
+ 
+Respons: ≥ 50 % reduktion i totalsymptomscore fra start af behandling  målt på standardiseret 
+skala fx Hamiltons depressionsskala (HDRS) eller Montgomery-Åsberg Depression Rating Skala 
+(MADRS). Hvor Global Clinical Impression (GCI) anvendes svarer respons til en score 1 eller 2.  
+ 
+Remission: totalscore ≤ 7 på HDRS 17 eller totalscore ≤ 8 på øvrige længere versioner af HDRS 
+eller totalscore ≤ 10 på MADRS 
+ 
+Tilbagefald – forebyggelse af tilbagefald efter opnået remission : patienter som efter opnået  
+remission får tilbagefald til et niveau af totalsymptomscore under 50 % af totalsymptomscore fra 
+start af behandling målt på standardiseret skala fx Hamiltons depressionsskala (HDRS ) eller 
+Montgomery-Åsberg Depression Rating Skala (MADRS)  
+ 
+Ophør med behandling uanset  årsag: patienter medvirkende i et randomiseret klinisk forsøg 
+stopper behandling uden specificeret begrundelse 
+ 
+QTc-forlængelse: QTc-forlængelse er et surrogatmål for lægemidlers proarytmiske effekt.  
+ 
+Suicidalitet: hvor ikke andet anført et sammensat mål bestående af gennemført selvmord, 
+selvmordsforsøg, forberedende selvmordsadfærd og selvmordstanker  
+ 
+Number needed to treat (NNT): det antal patienter som i gennemsnit skal behandles med det 
+aktive stof for at yderligere 1 person opnår effekt sammenlignet med kontrolgruppe 
+ 
+Bilag 1: Fokuserede spørgsmål  
+Hvad er et fokuseret spørgsmål? 
+IRF og specialistgruppen identificerer for hvert baggrundsnotat samtlige lægemidler med 
+indikation for sygdommen, og hvor behandlingen med lægemidlet forventes at kunne 
+iværksættes i almen praksis. Lægemidlerne opdeles i grupper efter deres virkningsmekanisme. 
+ATC-klassifikationssystemet kan understøtte denne gruppering. IRF og specialistgruppen 
+formulerer ét fokuseret spørgsmål per lægemiddelgruppe.  
+De fokuserede spørgsmål beskriver patientgruppen og lægemiddelgruppen og formuleres i en 
+sætning fx ”Er langtidsvirkende opioider rekommanderede og ligeværdige ved behandling af 
+patienter med kroniske nociceptive smerter?”. Til hvert fokuseret spørgsmål angives hvilke 
+lægemidler og hvilken dosis, der ønskes vurderet. Efterfølgende vælges de outcomes, som skal 
+Side 32 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+danne grundlag for rekommandationerne. De valgte outcomes er valgt med henblik på relevans 
+for klinikeren såvel som for patienten og omfatter både effekt og bivirkninger. For hvert 
+outcome fastlægges ved hvilke tidspunkter eller tidsintervaller, det valgte outcome ønskes 
+vurderet. IRF udfører en litteratursøgning og udvælgelse af evidensgrundlaget for hvert 
+fokuseret spørgsmål. 
+Rekommandationerne gives med udgangspunkt i en sammenfatning og vurdering af følgende 
+domæner for hvert enkelt fokuserede spørgsmål: effekt og bivirkninger, kontraindikationer, 
+interaktioner, og patientværdier.  
+Læs mere om metoden for den Nationale Rekommandationsliste på irf.dk. 
+ 
+Selektive serotonin-genoptagelseshæmmere (SSRI) 
+Er SSRI rekommanderede og ligeværdige til behandling af unipolar depression hos voksne? 
+Lægemiddel  Sædvanlig daglig begyndelsesdosis og i 
+parentes sædvanligt dosisinterval  
+Sertralin (tablet) 50 mg (50 mg -100 mg) 
+Escitalopram (tablet, smeltetablet, orale 
+dråber) 
+10 mg (10 mg - 20 mg) 
+Citalopram (tablet) 20 mg (20 mg - 40 mg) 
+Paroxetin (tablet) 20 mg (20 mg – 40 mg) 
+Fluoxetin (tablet, kapsel, 
+opløselig/dispergibel tablet) 
+20 mg (20 mg – 40 mg) 
+Fluvoxamin (tablet) 100 mg (100 mg - 200mg) 
+Outcomes: Tidspunkt Mindste kliniske relevante 
+forskel 
+Respons Akutte fase  
+Remission   
+Ophør med behandling uanset årsag Længste 
+opfølgning  
+ 
+Tilbagefald – forebyggelse af tilbagefald 
+efter opnået remission 
+Længste 
+opfølgning  
+ 
+Seksuelle bivirkninger Længste 
+opfølgning  
+ 
+Suicidalitet –  
+Subsidiært - selvmordstanker 
+Længste 
+opfølgning  
+ 
+QTc-forlængelse Længste 
+opfølgning  
+ 
+ 
+Side 33 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+Serotonin-noradrenalin-genoptagelseshæmmere (SNRI) 
+Er SNRI rekommanderede og ligeværdige til behandling af unipolar depression hos voksne? 
+Lægemiddel  Sædvanlig daglig begyndelsesdosis og i 
+parentes sædvanligt dosisinterval 
+Venlafaxin (depotkapsler/tabletter) 75 mg (75 mg-300 mg) 
+Duloxetin (enterokapsler) 60 mg (60 mg-120 mg) 
+Outcomes: Tidspunkt Mindste kliniske relevante 
+forskel 
+Respons Akutte fase  
+Remission   
+Ophør med behandling uanset årsag Længste 
+opfølgning  
+ 
+Tilbagefald – forebyggelse af tilbagefald 
+efter opnået remission 
+Længste 
+opfølgning  
+ 
+Seksuelle bivirkninger Længste 
+opfølgning  
+ 
+Suicidalitet –  
+Subsidiært - selvmordstanker 
+Længste 
+opfølgning  
+ 
+QTc-forlængelse Længste 
+opfølgning  
+ 
+ 
+ Noradrenalin og specifik serotonin-antidepressiva (NaSSA) 
+Er NaSSA rekommanderede og ligeværdige til behandling af unipolar depression hos voksne? 
+Lægemiddel  Sædvanlig daglig begyndelsesdosis og i 
+parentes sædvanligt dosisinterval 
+Mirtazapin (tablet, smeltetablet) 15 mg (15 mg – 45 mg) 
+Mianserin (tablet) 30 mg (30 mg – 90 mg) 
+Outcomes: Tidspunkt Mindste kliniske relevante 
+forskel 
+Respons Akutte fase  
+Remission   
+Ophør med behandling uanset årsag Længste 
+opfølgning  
+ 
+Side 34 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+Tilbagefald – forebyggelse af 
+tilbagefald efter opnået remission 
+Længste 
+opfølgning  
+ 
+Seksuelle bivirkninger Længste 
+opfølgning  
+ 
+Suicidalitet –  
+Subsidiært - selvmordstanker 
+Længste 
+opfølgning  
+ 
+QTc-forlængelse Længste 
+opfølgning  
+ 
+ 
+ Noradrenalin-genoptagelseshæmmere (NaRI) 
+Er NARI rekommanderet til behandling af unipolar depression hos voksne? 
+ 
+Lægemiddel  Sædvanlig daglig begyndelsesdosis og i 
+parentes sædvanligt dosisinterval 
+Reboxetin (tablet) 8 mg (8 mg – 12 mg) 
+Outcomes: Tidspunkt Mindste kliniske relevante 
+forskel 
+Respons Akutte fase  
+Remission   
+Ophør med behandling uanset årsag Længste 
+opfølgning  
+ 
+Tilbagefald – forebyggelse af 
+tilbagefald efter opnået remission 
+Længste 
+opfølgning  
+ 
+Seksuelle bivirkninger Længste 
+opfølgning  
+ 
+Suicidalitet –  
+Subsidiært - selvmordstanker 
+Længste 
+opfølgning  
+ 
+QTc-forlængelse Længste 
+opfølgning  
+ 
+ 
+ Melatoninagonist(er) 
+Er melatoninagonist(er) rekommanderet til behandling af unipolar depression hos voksne? 
+Lægemiddel  Sædvanlig daglig begyndelsesdosis og i 
+parentes sædvanligt dosisinterval 
+Agomelatin (tablet) 25 mg (25 mg – 50 mg) 
+Side 35 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+Outcomes: Tidspunkt Mindste kliniske relevante 
+forskel 
+Respons Akutte fase  
+Remission   
+Ophør med behandling uanset årsag Længste 
+opfølgning  
+ 
+Tilbagefald – forebyggelse af 
+tilbagefald efter opnået remission 
+Længste 
+opfølgning  
+ 
+Seksuelle bivirkninger Længste 
+opfølgning  
+ 
+Suicidalitet –  
+Subsidiært - selvmordstanker 
+Længste 
+opfølgning  
+ 
+QTc-forlængelse Længste 
+opfølgning  
+ 
+ 
+Antidepressiva med modulerende virkning på serotoninsystemet  
+Er ”stoffer med modulerende virkning på serotoninsystemet” rekommanderet til behandling af 
+unipolar depression hos voksne? 
+Lægemiddel  Sædvanlig daglig begyndelsesdosis og i 
+parentes sædvanligt dosisinterval 
+Vortioxetin (tablet) 10 mg (5 mg – 20 mg) 
+Outcomes: Tidspunkt Mindste kliniske relevante 
+forskel 
+Respons Akutte fase  
+Remission   
+Ophør med behandling uanset årsag Længste 
+opfølgning  
+ 
+Tilbagefald – forebyggelse af 
+tilbagefald efter opnået remission 
+Længste 
+opfølgning  
+ 
+Seksuelle bivirkninger Længste 
+opfølgning  
+ 
+Suicidalitet –  
+Subsidiært - selvmordstanker 
+Længste 
+opfølgning  
+ 
+QTc-forlængelse Længste 
+opfølgning  
+ 
+Side 36 af 36 
+ 
+25. APRIL 2019  ANTIDEPRESSIVA TIL UNIPOLAR DEPRESSION  
+Bilag 2: Litteratursøgning og udvælgelse af 
+evidensgrundlag 
+Guidelines 
+Ingen relevante guidelines blev identificeret med henblik på direkte besvarelse af fokuserede 
+spørgsmål og herunder specifikke udfald/outcomes. 
+Litteratursøgning 
+1. september 2017 
+depressi* 
+SSRI[Title/Abstract] OR ” selectiv* seroton * re*uptake inhibitor*” [Title/Abstract] OR 
+sertralin*[Title/Abstract] OR citalopram[Title/Abstract] OR escitalopram[Title/Abstract] OR 
+paroxetin*[Title/Abstract] OR fluoxetin*[Title/Abstract] OR fluvoxamin*[Title/Abstract] OR 
+SNRI[Title/Abstract] OR “seroton* noradren* re*uptake inhibitor*” [Title/Abstract] OR 
+venlafaxin*[Title/Abstract] OR duloxetin*[Title/Abstract] OR NaSSA[Title/Abs tract] OR 
+Mirtazapin*[Title/Abstract] OR mianserin*[Title/Abstract]  OR NaRI[Title/Abstract] OR 
+reboxetin*[Title/Abstract] OR agomelatin*[Title/Abstract] OR vortioxetin*[Title/Abstract] OR 
+anti*depress*[Title/Abstract] 
+Cochrane[Title/Abstract] OR CENTRAL[Ti tle/Abstract] OR MEDLINE[Title/Abstract] OR 
+EMBASE[Title/Abstract] OR pubmed[Title/Abstract] OR search*[Title/Abstract] OR 
+“systematic review”[Title/Abstract] OR “systematic overview”[Title/Abstract] OR meta-
+analy*[Title/Abstract] OR metaanaly*[Title/Abstr act] OR “Comparative 
+effectiveness”[Title/Abstract] OR “Indirect comparison”[Title/Abstract] OR “mixed treatment 
+comparison”[Title/Abstract] OR guideline*[Title/Abstract] 
+<5 years 
+2046 referencer blev identificeret i den systematiske litteratursøgning. 48 blev udvalgt til 
+fuldtekstlæsning. 10 review/metaanalyser blev endelig udvalgt. Derudover er anvendt referencer 
+identificeret ved gennemgang af de udvalgte review/metaanalyser. Endelig har specialistgruppen 
+bidraget med specifikke forslag til litteratur.  
+ 
+Februar 2018 udkom det hidtil største systematiske review omhandlende antidepressiva. Dette 
+review belyser samtlige antidepressive lægemiddelstoffer overfattet af dette baggrundsnotat. 
+Dette review er konsekvent blevet anvendt til besvarelse af fokuserede spørgsmål vedrørende 
+følgende outcome: respons, remission og frafald uanset angivet årsag. Som konsekvens herfra 
+udgik et Cochrane-review omhandlende vortioxetin.  
+ 
+ 
+ 
+ 
+

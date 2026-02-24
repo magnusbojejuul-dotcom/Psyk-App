@@ -202,6 +202,14 @@ function MDI() {
         return "text-emerald-700 bg-emerald-100 border-emerald-200";
     };
 
+    const getScoreInterpretation = () => {
+        if (totalScore === 0 && Object.keys(scores).length === 0) return "Afventer...";
+        if (totalScore >= 30) return "Svær depression";
+        if (totalScore >= 25) return "Moderat depression";
+        if (totalScore >= 20) return "Let depression";
+        return "Ikke depressiv";
+    };
+
     return (
         <div className="w-full max-w-3xl mx-auto space-y-8 pb-32 animate-fade-in-up">
 
@@ -275,7 +283,9 @@ function MDI() {
                             <Brain className="w-5 h-5" />
                         </div>
                         <div>
-                            <p className="text-sm font-semibold opacity-80">Total Score</p>
+                            <p className="text-sm font-semibold opacity-80">
+                                Resultat: {getScoreInterpretation()}
+                            </p>
                             <p className="text-xs opacity-70">
                                 Seneste 2 uger
                             </p>

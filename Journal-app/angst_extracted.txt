@@ -1,0 +1,1917 @@
+
+
+--- START OF Gode instrukser + Edoks/farmakologisk-behandling-i-almen-praksis-af-angsttilstande_2020.pdf ---
+Side 1 af 50
+DEN NATIONALE REKOMMANDATIONSLISTE
+Farmakologisk behandling af
+angsttilstande
+IRF
+2020
+Side 2 af 50
+Indhold
+Indledning 3
+Lægemidler til medicinsk behandlingskrævende angsttilstande som initieres i almen praksis 4
+Læsevejledning 5
+Generaliseret angst 7
+Socialfobi 18
+Panikangst med eller uden agorafobi 23
+Andre/uspecificerede angsttilstande 30
+Referencer 39
+Relevante danske behandlingsvejledninger 41
+Ændringslog 41
+Forfattere 41
+Juridiske forhold 41
+Bilag 1: Fokuserede spørgsmål 41
+Bilag 2: Litteratursøgning og udvælgelse af evidensgrundlag 49
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 3 af 50
+Indledning
+Den Nationale Rekommandationsliste (NRL) udarbejdes af Indsatser for Rationel
+Farmakoterapi (IRF) i Sundhedsstyrelsen i samarbejde med en specialistgruppe under
+rådgivning af et eksternt Rådgivende Udvalg. NRL er beslutningsstøtte til valg eller fravalg
+af lægemidler inden for en defineret lægemiddelgruppe eller til en specifik patientgruppe
+og skal ses i sammenhæng med relevante behandlingsvejledninger.
+Dette baggrundsnotat omhandler lægemiddelbehandling, som varetages i almen praksis i
+behandling af medicinsk behandlingskrævende generaliseret angsta, socialfobib, panikangst
+(m/u agorafobi)c samt andre/uspecificerede angsttilstanded hos voksne på 18 år eller
+derover.
+Baggrundsnotatet omhandler selektive serotonin-genoptagelseshæmmere (SSRI),
+serotonin-noradrenalin-genoptagelseshæmmere (SNRI), buspiron, antihistaminet
+hydroxyzin, gabapentinoidet pregabalin samt benzodiazepiner (BZD).
+Udarbejdelsen af NRL er baseret på fokuserede spørgsmål (bilag 1), en dokumenteret
+systematisk litteratursøgning (bilag 2) og gennemgang af evidens for lægemidlernes med
+reference til fokuserede spørgsmål - effekt og udvalgte bivirkninger, kontraindikationer,
+interaktioner og med inddragelse af specialistgruppens kliniske erfaringer samt eventuelle
+andre forhold af betydning.
+Rekommanderede lægemidler inden for den enkelte lægemiddelgruppe, i de anførte doser,
+betragtes som ligeværdige, og det vil her være muligt at foretage en prissammenligninge. Et
+rekommanderet lægemiddel i én lægemiddelgruppe er ikke nødvendigvis ligeværdigt med
+et rekommanderet lægemiddel i en anden lægemiddelgruppe. Inden for de enkelte
+lægemiddelgrupper er lægemidler, som rekommanderes i særlige tilfælde eller ikke-
+rekommanderes ikke nødvendigvis ligeværdige valg.
+Anbefalingerne fra NRL bør indgå i behandlingsvejledninger rettet mod almen praksis, såvel
+som i regionernes arbejde med basislister. Baggrundsnotatet vil blive opdateret løbende i
+takt med, at der kommer ny relevant viden om de omfattede lægemidler, eller der bliver
+markedsført nye lægemidler relevant for baggrundsnotatet. Den anvendte metode følger
+IRFs model for udarbejdelse af NRL.
+a F41.1 i ICD-10
+b F40.1 i ICD-10
+c I ICD-10 refereres panikangst og agorafobi som selvstændige lidelser F41.0 henholdsvis F40.0. Den identificerede
+litteratur omfatter metaanalyse som inkluderer primærstudier om panikangst med og uden agorafobi
+d Fx akutte tilpasningsreaktioner, enkeltfobier, angst som ledsagefænomen, angst som led i anden psykisk lidelse,
+herunder depression, bipolar lidelse og primære psykotiske tilstande
+e Der er i udarbejdelsen af anbefalingerne ikke taget hensyn til pris eller tilskudsstatus
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 4 af 50
+Lægemidler til medicinsk behandlingskrævende
+angsttilstande som initieres i almen praksis
+Lægemidler som omtales i dette baggrundsnotat er godkendt til og fundet relevante til
+behandling af angsttilstande i almen praksis og omfatter selektive serotonin-
+genoptagelseshæmmere (SSRI), serotonin-noradrenalin-genoptagelseshæmmere (SNRI),
+buspiron, antihistaminet hydroxyzin, gabapentinoidet pregabalin samt benzodiazepiner
+(BZD).
+Blandt SSRI er sertralin, escitalopram, citalopram og paroxetin omfattet af dette
+baggrundsnotat i forbindelse med behandling af de primære angstlidelser generaliseret
+angst, socialfobi samt panikangst med og uden agorafobi. SNRI-lægemidlerne duloxetin og
+venlafaxin anvendes ligeledes i behandlingen af primære angstlidelser. Anvendelsen af SSRI
+og SNRI følger Sundhedsstyrelsens ”Vejledning om behandling af voksne med
+antidepressive lægemidler”(1).
+Buspiron er godkendt til behandling af ”angst og urotilstande”, og buspiron vil blive
+gennemgået under afsnit om andre/uspecificerede angsttilstande.
+Hydroxyzin har indikation ”symptomatisk behandling af angst hos voksne, hvis der ikke er
+indikation for anden medicin” og det anbefales, at hydroxyzin anvendes kortvarigtf.
+Hydroxyzin vil blive gennemgået under afsnit om andre/uspecificerede angsttilstande.
+Pregabalin er godkendt til behandlingen af generaliseret angst(2).
+Baggrundsnotatet omfatter kortvarig behandling af angsttilstande med BZD, som forventes
+at kunne iværksættes i almen praksis og i henhold til Sundhedsstyrelsens ”Vejledning om
+ordination af afhængighedsskabende lægemidler. Kortvarig behandling med BZD kunne fx
+omfatte akutte tilpasningsreaktioner, enkeltfobier, angst som led i anden psykisk lidelse -
+herunder depression - og som supplement i opstartsfasen af behandling af primære
+angsttilstande med antidepressiva”(3). BZD vil blive gennemgået under afsnit om
+andre/uspecificerede angsttilstande og omhandler lægemidlerne alprazolam,
+bromazepam, clobazam, diazepam, lorazepam og oxazepam. Det er specialistgruppens
+vurdering, at chlordiazepoxid i Danmark hovedsageligt anvendes til abstinensbehandling
+ved alkoholmisbrug, og chlordiazepoxin er samtidig ikke klinisk relevant til kortvarig
+behandling af angsttilstande i almen praksis.
+Behandling med BZD over 4 uger er ikke omfattet af baggrundsnotatet for farmakologisk
+behandling af angsttilstande i almen praksis. Til nogle patienter med primære angstlidelser,
+hvor det ikke har været muligt at opnå tilfredsstillende effekt med øvrige anxiolytiske
+lægemidler kan behandling med BZD evt. iværksættes/videreføres efter samråd med
+speciallæge i psykiatri. Forud for langtidsbehandling med BZD skal det sikres, at
+angstlidelsen ikke kan behandles på anden måde, herunder non-farmakologisk(3).
+f Hydroxyzin bør anvendes i lavest mulig dosis, og i kortest mulig tid. Der henvises til produktresume for
+doseringsvejledning
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 5 af 50
+Valgte doser knyttet til de enkelte lægemidler betragter specialistgruppen, som relevante
+vedligeholdelsesdoser. Der er for de enkelte stoffer desuden angivet det dosisinterval, som
+størstedelen af patienter i almen praksis med den pågældende angstlidelse vil kunne
+behandles med under hensyn til patientsikkerhed.
+Lægemidler som omtales i baggrundsnotatet, lægemidlernes indikationer, sædvanlig daglig
+vedligeholdelsesdosis (mg) samt dosisinterval (mg) inden for hvilket behandlingen bør ske,
+er angivet i tabel 1.
+Tabel 1. Lægemidler omfattet af baggrundsnotatet, lægemidlernes indikation, sædvanlig daglig vedligeholdelsesdosis (mg)
+samt dosisinterval (mg)
+Panikangst Andre/uspecificerede
+Lægemiddel/Indikation Generaliseret angst Socialfobi
+(m/u agorafobi) angsttilstande
+SSRI
+Citalopram 20 (20-40)
+Escitalopram 10 (10-20) 10 (5-20) 10 (10-20)
+Paroxetin 20 (20-50) 20 (20-50) 40 (40-60)
+Sertralin 50 (50-150) 50 (50-150)
+SNRI
+Duloxetin 60 (30-60)
+Venlafaxin 75 (75-225) 75* 75 (75-225)
+Azapironer
+Buspiron 30 (20-60)
+Antihistaminer
+Hydroxyzin 10 (10-50)
+Gabapentinoider
+Pregabalin 300 (150-600)
+Benzodiazepiner
+Alprazolam 0,5-2
+Bromazepam 1,5-9
+Clobazam 10-30
+Diazepam 5-15
+Lorazepam 1-3
+Oxazepam 15-45
+*Jævnfør produktresume for venlafaxin, da er der ikke evidens for, at højere doser medfører en yderligere fordel. Til enkelte
+patienter, som ikke responderer på initialdosen på 75 mg daglig, kan det dog overvejes at øge dosis op til en maksimal dosis
+på 225 mg/dag. Dosis kan øges med et interval på 2 uger eller mere.
+Læsevejledning
+Baggrundsnotatet gennemgår generaliseret angst, socialfobi, panikangst (m/u agorafobi)
+samt andre/uspecificerede angsttilstande hver for sig.
+For hver angstlidelse gennemgås evidens for de lægemidler, som er godkendt til behandling
+heraf. For hvert lægemiddel gennemgås evidens i henhold til opstillede fokuserede
+spørgsmål:
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 6 af 50
+ Effekt udtrykt ved fx respons/ikke-respons (fx reduktion i angstsymptomer til 1
+eller 2 på Clinical Global Impressions Scale (CGI) og/eller gennemsnitlig
+ændring/reduktion i angstsymptomer fra udgangsværdi til afslutning af
+akutbehandling fx på Hamiltons angstskala (HAM-A)
+ Remission (fald til under en bestemt grænsesværhedsgrad som svarer til et
+minimum af angst)
+ Ophør med behandling uanset årsag (accept)
+ Tilbagefald (forebyggelse af tilbagefald efter opnået remission)
+ Seksuelle bivirkninger
+ QTc-forlængelseg
+ Farmakokinetiske forhold og herunder interaktioner
+ Relevante kontraindikationer, forsigtighedsregler – fx ophør samt eventuelt øvrige
+patientrelevante forhold
+For hver lægemiddelgruppe afsluttes evidensgennemgangen med en sammenfatning og
+rekommandationer.
+Estimater af dikotome behandlingsudfald – fx respons (ja/nej) – i sammenligning mellem
+lægemiddel og placebo eller to lægemidler over for hinanden udtrykkes ved odds ratio (OR)
+eller relativ risiko (RR). En statistisk signifikant OR eller RR > 1 er således ensbetydende
+med en højere forekomst og dermed højere sandsynlighed af et givent udfald knyttet til det
+førstnævnte lægemiddel i en sammenstilling mellem to lægemidler eller
+placebosammenstilling. En statistisk signifikant forskel er ikke nødvendigvis en klinisk
+relevant forskel. Hvor muligt omregnes OR, RR henholdsvis absolutte
+risikoforskel/differens/reduktion til NNT.
+Den kontinuerte effektvariabel gennemsnitlig ændring i fx angstsymptomer fra
+udgangsværdi til afslutning af den akutte fase, rapporteres i dette baggrundsnotat som
+”standardized mean difference (SMD)” eller ”mean difference”. SMD anvendes når
+afrapportering af et outcome/udfald sker ved brug af forskellige skalaer i de studier, som
+inkluderes i en metaanalyse. En negativ værdi af SMD eller mean difference indikerer, at det
+førstnævnte lægemiddel i en sammenligning med et andet lægemiddel eller ingen
+farmakologisk behandling vurderes at have større effekt end sidstnævnte.
+En statistisk signifikant SMD for den kontinuerte effektvariabel fortolkes således, at den
+numeriske værdi SMD ≥ 0,20 og < 0,50 svarer til en lille effekt og SMD ≥ 0,50 og mindre en
+0,8 svarer til en moderat effekt. SMD ≥ 0,8 svarer til en stor effekt(4).
+gLægemidlers eventuelle QTc-forlængende effekt og potentielle fremkaldelse af ventrikulær arytmi (fx torsade de
+pointes) og i værste tilfælde hjertedød, kan være udfordrende at afdække ikke mindst grundet en generel lav
+forekomst. Hertil kommer at specifikke risikofaktorer kan fremme en QTc-forlængende effekt knyttet til et
+lægemiddel. ”The Thorough QT/QTc study” er et regulatorisk og myndighedsangivet studiedesign som anvendes til
+at belyse en potentiel QT-problematik ved et givent lægemiddel. I dette studiedesign gives et lægemiddel i varierende
+doser til raske personer og vurderes over for placebo, en aktiv komparator med kendt QTc-forlængende effekt fx
+moxifloxacin samt evt. en komparator uden QTc-forlængende effekt.
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 7 af 50
+Mean difference fortolkes således, at statistisk signifikante numeriske forskelle på ≥2 på
+HAM-A betragtes som klinisk relevante(5)h.
+Estimater ekstraheres fra netværksmetaanalyser med angivelse af
+sandsynlighedsintervallet (credibility intervals) (CrI) samt fra metaanalyser med angivelse
+af konfidensintervaller (CI). Begge typer af intervaller kan læses som 95 % -
+sikkerhedsintervaller.
+I gennemgangen af de enkelte lægemidler refereres visse lægemidler som ”trafikfarlig
+medicin” og symboliseret ved △i.
+Ved evidensgennemgang af SSRI/SNRI i behandling af de primære angstlidelser vil evidens
+vedrørende seksuelle bivirkninger, QT-forlængelse, ”farmakokinetiske forhold og herunder
+interaktioner” samt ”relevante kontraindikationer, forsigtighedsregler samt eventuelt
+øvrige patientrelevante forhold” blive præsenteret i fuld længde i afsnittet om generaliseret
+angst. I afsnit om socialfobi og panikangst refereres til gennemgangen under generaliseret
+angst hvad angår seksuelle bivirkninger, QT-forlængelse, ”farmakokinetiske forhold og
+herunder interaktioner” samt ”relevante kontraindikationer, forsigtighedsregler samt
+eventuelt øvrige patientrelevante forhold”.
+Generaliseret angst
+SSRI i behandling af generaliseret angst
+Skema over vurderede lægemidler
+Lægemiddel Sædvanlig daglig vedligeholdelsesdosis og
+dosisinterval
+Escitalopram (tablet, smeltetablet, 10 mg (10 mg - 20 mg)
+orale dråber)
+Paroxetin (tablet) 20 mg (20 mg – 40 mg)
+Virkningsmekanisme
+SSRI-lægemidler virker ved at hæmme genoptagelsen af serotonin fra den synaptiske spalte
+og ind i det præsynaptiske neuron gennem inhibering af serotonintransportøren.
+Evidensgennemgang
+Januar 2019(6) blev der publiceret et systematisk review samt netværksmetaanalyse, som
+omfatter SSRI-lægemidler til behandling af generaliseret angst. Netværksmetaanalysen
+omfatter escitalopram og paroxetin. Netværksmetaanalysen anvendes til besvarelse af
+fokuserede spørgsmål omhandlende effekt samt ophør med behandling uanset årsag
+(accept).
+Et systematisk review og netmetaanalyse fra 2011 anvendes til at belyse remission knyttet
+til escitalopram og paroxetin i behandlingen af generaliseret angst(7).
+h En approksimation baseret på specifikke kriterier og forudsætninger præciseret i (5)
+i https://laegemiddelstyrelsen.dk/da/special/trafikfarlig-medicin
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 8 af 50
+Det har ikke været muligt at identificere systematiske review, som belyser forebyggelse af
+tilbagefald ved generaliseret angst af escitalopram henholdsvis paroxetin. En metaanalyse
+baseret på studier med beriget forsøgsdesign refereres i relation til forebyggelse af
+tilbagefald ved angstlidelser, hvor SSRI, SNRI og andre antidepressiva vurderes som samlet
+klasse(8).
+En netværksmetaanalyse vedrørende seksuel dysfunktion anvendes til besvarelse af det
+fokuserede spørgsmål om seksuelle bivirkninger, som et sammensat udfald. I denne
+netværksmetaanalyse vurderes SSRI-lægemidler over for hinanden og omfatter ikke
+placebosammenstillinger(9)j. Endvidere refereres lægemidlernes produktresumeer.
+SSRI-lægemidlers QTc-forlængende effekt gengives efter gældende produktinformationer
+(produktresumeer og godkendelsesrapporter) og herunder gengivelse af ”The Thorough
+QT/QTc study”. Endvidere refereres en metaanalyse(10).
+Afsnit om ”Farmakokinetiske forhold og herunder interaktioner” samt ”Relevante
+kontraindikationer og forsigtighedsregler samt eventuelt øvrige patientrelevante forhold”
+baserer sig på lægemiddelstoffernes produktresumer suppleret med specialistgruppens
+kliniske erfaringer.
+Effekt
+I netværksmetaanalysen fra 2019(6) blev effekt opgjort som gennemsnitlig forskel i ændring
+fra baseline og opgjort på Hamiltons angstskala (HAM-A). Baseret på 13 studier og i alt
+1.581 personer blev der fundet statistisk og klinisk relevant signifikant forskel mellem
+escitalopram og placebobehandling (mean difference -2,45 [-3,27;-1,63]). Hvad angår
+paroxetin blev der ligeledes fundet statistisk og klinisk signifikant forskel i forhold til
+placebo (mean difference -2,29 [-3,11;-1,47]). Estimatet beror på 17 studier med i alt 1.862
+personer. I sammenstillingen mellem escitalopram og paroxetin blev der ikke fundet
+statistisk endsige klinisk signifikant forskel (mean difference – 0,16 [-1,21;0,87])(6).
+Remission
+I en netværksmetaanalyse fra 2011(7) belyses remission defineret som en endelig HAM-A-
+score mindre end eller lig 7. Escitalopram såvel som paroxetin blev fundet statistisk
+signifikant bedre end placebo. De respektive estimater er; escitalopram (OR 2,94
+[1,75;5,00]) og paroxetin (OR 2,22 [1,59;3,03]). Det er specialistgruppens vurdering samt
+kliniske erfaring, at både escitalopram og paroxetin er kliniske relevante lægemiddelstoffer
+i forhold til at opnå remission. I sammenstillingen mellem escitalopram og paroxetin blev
+der ikke fundet statistisk signifikant forskel (OR 1,38 [0,59;3,3])(7).
+Forebyggelse af tilbagefald
+Evidensgennemgangen af ”forebyggelse af tilbagefald” beror på en metaanalyse(8), hvor
+inkluderede studier er gennemført efter et beriget studiedesign (relapse prevention trials).
+Fællestræk ved denne type design er, at patienter initialt behandles med et antidepressivum
+i et åbent design. Patienter som opnår respons (i den akutte fase) randomiseres til placebo
+eller fortsat aktiv behandling i op til et år og tilbagefald i de to grupper sammenlignes.
+Resultaterne herfra kan således kun overføres til patienter, som initialt har responderet.
+j Evidensgrundlaget i denne analyse er studier som omhandler unipolar depression
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 9 af 50
+Endvidere har der været fremført kritik mod designet idet placebogruppen kan udtrappes
+af den igangværende aktive behandling uden hensyntagen til interindividuel variation i
+form af seponeringssymptomer (for hurtig udtrapning/ eventuelt abrupt), som fejlagtigt
+kan tolkes som tilbagefald (og dermed en højere tilbagefaldsrate i placebogruppen).
+I den omtalte metaanalyse(8) indgår en metaanalyse baseret på 28 studier med i alt 5.233
+inkluderede personer. 6 studier omhandler generaliseret angst, 4 socialfobi, 6 panikangst,
+7 obsessiv-kompulsiv tvangslidelse (OCD) og 4 posttraumatisk stresslidelse (PTSD) og med
+en opfølgningstid på op til et år. Uden skelen til type af angst samt behandling med
+antidepressivt lægemiddel (SSRI, SNRI og andre), blev der fundet statistisk signifikant
+forskel mellem lægemiddelbehandling og placebo i forhold til at forebygge tilbagefald (OR
+3,11 [2,48;3,89])(8). I metaanalysen anføres, at tilbagefaldsraten for placebobehandlede
+samlet estimeres til 36,4% for alle angstlidelser. Dette svarer til NNT 5 i forhold til
+forebyggelse af tilbagefald blandt de patienter, som initialt har responderet uden
+specificering af angstlidelse og uanset type af antidepressivum. Det er specialistgruppens
+vurdering, at de to SSRI-lægemiddelstoffer begge kan have klinisk relevant forebyggende
+effekt på tilbagefald af generaliseret angst på de personer, som initialt responderer på
+behandlingen. Den anførte NNT skal tolkes med forbehold og i relation til den
+studiepopulation, som resultaterne beror på.
+Ophør med behandling uanset årsag (accept)
+I netværksmetaanalysen fra 2019(6) blev ”ophør med behandling uanset årsag” opgjort som
+antal personer, som ikke gennemførte(frafaldt) det enkelte studie. Der blev ikke fundet
+forskel mellem escitalopram og placebo (OR 0,96 [0,79;1,16]). Derimod blev der fundet
+statistisk signifikant forskel mellem paroxetin og placebo, således at flere personer i
+behandling med paroxetin frafaldt behandlingen sammenholdt med de personer som
+modtog placebobehandling (OR 1,24 [1,03;1,50]). I sammenstillingen mellem escitalopram
+og paroxetin var der statistisk signifikant flere, som frafaldt behandling med escitalopram
+end paroxetin (OR 1,30 [1,00;1,67] (1 ikke inkluderet)).
+Seksuelle bivirkningerk
+Produktresumer for escitalopram, citalopram, sertralin henholdsvis paroxetin anfører at
+seksuelle bivirkninger forekommer ved alle lægemidler.
+En netværksmetaanalyse undersøger SSRI-lægemiddelstoffer over for hinanden med
+hensyn til seksuelle bivirkninger vurderet som ét samlet udfald(9). Det refererede review
+angav ikke seksuelle bivirkninger i relation til placebobehandling. I vurderingen af sertralin
+blev der ikke fundet statistisk signifikant forskel mellem sertralin og henholdsvis;
+escitalopram (OR 0,79 [0,39;1,54]), citalopram (OR 0,96 [0,30;2,32]) og paroxetin (OR 0,68
+[0,30;1,35]). Der blev ikke fundet statistisk signifikant forskel mellem escitalopram
+vurderet overfor citalopram (OR 1,31 [0,41;3,15]) henholdsvis paroxetin (OR 0,79
+[0,39;2,00]). Ligeledes blev der ikke fundet statistisk signifikant forskel mellem citalopram
+og paroxetin (OR 0,64 [0,24;2,44]). Det er specialistgruppens vurdering, at fundene ikke
+k Dette afsnit om seksuelle bivirkninger omfatter SSRI-lægemidler godkendt til behandling af primære angstlidelser
+og dækker dermed generaliseret angst, socialfobi samt panikangst med og uden agorafobi. I afsnit om socialfobi
+samt panikangst med og uden agorafobi vil der blive refereret til dette afsnit.
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 10 af 50
+giver anledning til at rangordne de forskellige SSRI-lægemidler, som dermed opfattes som
+sidestillede i forhold til risiko for seksuelle bivirkninger.
+QTc-forlængelsel
+Produktresume for sertralin, escitalopram og citalopram anfører, at lægemidlerne hver især
+er blevet undersøgt i dobbeltblindede placebokontrollerede studier blandt raske (jævnfør
+fodnote ”g” om ”The Thorough QT/QTc study”). For alle stoffer anføres, at der blev fundet
+dosisafhængig QTc-forlængelse. Produktresume for paroxetin omtaler ikke systematiske
+studier på raske personer som afdækker eventuelle QTc-problematikker.
+En metaanalyse(10) som adresserede QTc-forlængelse ved SSRI-lægemidler understøtter, at
+sertralin, escitalopram såvel som citalopram er associeret med dosisafhængig QTc-
+forlængelse. På grund af forskelle i dosering og studiedesign er det imidlertid ikke muligt at
+rangordne de enkelte lægemiddelstoffer.
+Det er specialistgruppens opfattelse, at risikoen for QTc-forlængelse ved brug af SSRI-
+lægemidler ikke er tilstrækkeligt belyst. Hertil kommer en mulig additiv effekt ved
+kombination af SSRI med andre lægemidler med QTc-forlængende effekt eller ved
+tilstedeværelse af risikofaktorer fx ved hjertesygdom. Det er specialistgruppens vurdering,
+at citalopram, escitalopram, sertralin såvel som paroxetin er associeret med QTc-
+forlængende effekt.
+Farmakokinetiske forhold og herunder interaktioner
+Anvendelse af SSRI-lægemidler er forbundet med interaktioner knyttet til enzymer i det
+hepatiske cytokrom P450 (CYP) metaboliske system, hvor lægemidlerne enten er
+substrater for og/eller inhiberer et givent enzym. Paroxetin er en potent hæmmer af
+CYP2D6 og forsigtighed bør udvises ved brug af paroxetin og samtidig brug af lægemidler
+som omsættes i CYP2D6, idet hæmning af CYP2D6 kan give anledning til forhøjet
+plasmakoncentration af lægemidler, som omsættes gennem CYP2D6. Der henvises
+endvidere til lægemidlernes produktresumer.
+Relevante kontraindikationer, forsigtighedsregler samt eventuelt øvrige
+patientrelevante forhold
+ For alle SSRI-lægemidler gælder at samtidig anvendelse af
+monoaminooxidasehæmmere (MAO-hæmmere) er kontraindiceret grundet risiko
+for udvikling af serotonergt syndrom
+ Forsigtighed bør udvises ved kombinationen af tramadol og SSRI-lægemidler, som
+hæmmer CYP2D6 og dermed omsætningen af tramadol til aktiv metabolit, i det
+uomdannede tramadol øger risikoen for serotonergt syndrom
+ QTc;
+o citalopram og escitalopram er kontraindiceret hos patienter med kendt QT-
+intervalforlængelse eller medfødt langt QT-syndrom
+o sertralin og paroxetin; forsigtighed bør udvises ved anvendelse hos patienter
+med kendt QT-intervalforlængelse eller medfødt langt QT-syndrom
+l Dette afsnit om QT-forlængelse omhandler SSRI-lægemidler godkendt til behandling af primære angstlidelser og
+dækker dermed generaliseret angst, socialfobi samt panikangst med og uden agorafobi. I afsnit om socialfobi samt
+panikangst med og uden agorafobi vil der blive refereret til dette afsnit.
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 11 af 50
+o citalopram og escitalopram er kontraindiceret i kombination med lægemidler
+som er kendt for at forlænge QT-intervallet idet risikoen for QT-forlængelse
+forhøjes
+o sertralin og paroxetin; forsigtighed bør udvises ved samtidig anvendelse af
+lægemidler, der er kendt for at forlænge QT-intervallet idet risikoen for QT-
+forlængelse forhøjes
+ Der er risiko for hyponatriæmi blandt ældre og ikke mindst i forbindelse med
+samtidig behandling med diuretika
+ Opmærksomheden henledes på risiko for seponeringssymptomer
+Sammenfatning og rekommandationer vedrørende SSRI i behandling af
+generaliseret angst
+Specialistgruppen vurderer på det foreliggende grundlag, at der er klinisk relevant effekt i
+behandlingen af generaliseret angst med escitalopram såvel som med paroxetin –
+primæreffekt såvel som remission. Begge lægemidler vurderes at have
+tilbagefaldsforebyggende effekt, blandt de patienter som initialt responderer på
+behandlingen. Anvendelse af begge lægemidler er forbundet med risiko for seksuelle
+bivirkninger, og specialistgruppen vurderer, at begge lægemidler kan være associeret med
+QTc-forlængelse. Specialistgruppen vurderer samtidig, at risikoen for forlænget QT-interval
+potentielt stiger ved øgning af dosis samt ved tilstedeværelse af risikofaktorer som
+hjertesygdom og samtidig brug af lægemidler med kendt QTc-forlængende effekt.
+Sundhedsstyrelsen anbefaler, at patientens kardiale risikoprofil vurderes inden start af
+behandling med SSRI-lægemidler samt at der foreligger et aktuelt EKG. Ved mistænkt eller
+påvist hjertesygdom anbefales behandlingen at foregå i samråd med en speciallæge i
+kardiologi. Denne anbefaling tager udgangspunkt i Sundhedsstyrelsens vejledning om
+behandling af voksne med antidepressive lægemidler(1) og en vurdering af, at alle SSRI-
+lægemidler kan medføre risiko for proarytmi. Det er specialistgruppens vurdering, at
+paroxetin i klinisk praksis giver anledning til flere interaktioner end escitalopram. Det er
+specialistgruppens samlede vurdering, at i behandlingen af generaliseret angst med
+godkendte SSRI, vil escitalopram være at foretrække fremfor paroxetin grundet færre
+interaktioner. Paroxetin bør forbeholdes de patienter, hvor behandling med escitalopram
+ikke er egnet.
+SSRI
+Lægemiddel Sædvanlig daglig Kommentarer
+vedligeholdelsesdosis og
+dosisinterval
+Rekommanderet
+Escitalopram 10 mg (10 mg – 20 mg) Risiko for dosisafhængig forlængelse
+af QT-interval
+Rekommanderet i særlige tilfælde
+Paroxetin 20 mg (20 mg – 40 mg) Potentielle interaktioner samt risiko
+for dosisafhængig forlængelse af QT-
+interval
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 12 af 50
+SNRI i behandling af generaliseret angst
+Skema over vurderede lægemidler
+Lægemiddel Sædvanlig daglig vedligeholdelsesdosis og dosisinterval
+Duloxetin 60 mg (30 mg – 60 mg)
+Venlafaxin 75 mg (75 mg – 225 mg)
+Virkningsmekanisme
+SNRI-lægemidler virker gennem en dual-aktion-mekanisme. SNRI virker ved at hæmme
+genoptagelsen af serotonin samt noradrenalin fra den synaptiske spalte og ind i det
+præsynaptiske neuron gennem inhibering af serotonintransportøren henholdsvis
+noradrenalintransportøren.
+Evidensgennemgang
+En netværksmetaanalyse publiceret januar 2019(6) omfatter duloxetin og venlafaxin til
+behandling af generaliseret angst. Netværksmetaanalysen anvendes til besvarelse af
+fokuserede spørgsmål omhandlende effekt samt ophør med behandling uanset årsag
+(accept).
+Et systematisk review og metaanalyse fra 2011 anvendes til at belyse remission(7).
+Det har ikke været muligt at identificere litteratur, som belyser forebyggelse af tilbagefald
+ved generaliseret angst af duloxetin henholdsvis venlafaxin som enkeltstoffer. En
+metaanalyse refereres i relation til forebyggelse af tilbagefald ved angstlidelser, hvor SSRI,
+SNRI og andre antidepressiva vurderes som samlet klasse. (8).
+Et systematisk review og netværksmetaanalyse vedrørende seksuel dysfunktion blev
+derudover identificeret ved den systematiske litteraturgennemgang(9) (jævnfør fodnote
+”k”). Endvidere refereres lægemidlernes produktresumeer.
+SNRI-lægemidlers QTc-forlængende effekt gengives efter gældende produktinformationer
+(produktresumeer og godkendelsesrapporter). Det har ikke været muligt at identificere
+metaanalyser, som anfører estimater for potentielt QTc-forlængelse ved anvendelse af
+venlafaxin henholdsvis duloxetin.
+Afsnit om ”Farmakokinetiske forhold og herunder interaktioner” samt ”Relevante
+kontraindikationer og forsigtighedsregler samt eventuelt øvrige patientrelevante forhold”
+baserer sig på lægemiddelstoffernes produktresumer og suppleret med specialistgruppens
+kliniske erfaringer.
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 13 af 50
+Effekt
+I netværksmetaanalysen fra 2019(6) blev effekt opgjort som gennemsnitlig forskel i ændring
+fra baseline og opgjort på Hamiltons angstskala (HAM-A). Baseret på 8 studier og 1.355
+personer blev der fundet statistisk signifikant og klinisk relevant forskel mellem duloxetin
+og placebo – (mean difference -3,13 [-4,13; -2,13]). Der blev ligeledes fundet statistisk
+signifikant og klinisk relevant effekt mellem venlafaxin og placebobehandling. Baseret på
+14 studier og 2.275 personer blev effektestimatet (mean difference) opgjort til -2,69 [-3,50;-
+1,89]. Der blev ikke fundet statistisk signifikant forskel i sammenligningen mellem
+duloxetin og venlafaxin (mean difference -0,44 [-1,64;0,76]).
+Remission
+I en metaanalyse fra 2011(7) belyses remission defineret som en endelig HAM-A-score
+mindre end eller lig 7. Analyserne til at belyse remission tager afsæt i
+netværksmetaanalyser. Duloxetin såvel som venlafaxin blev fundet statistisk signifikant
+bedre end placebo. De respektive estimater er; duloxetin (OR 1,89 [1,54;2,13]) og venlafaxin
+(OR 2,22 [1,81;2,70]). I sammenstillingen mellem duloxetin og venlafaxin blev der ikke
+fundet statistisk signifikant forskel (OR 0,83 [0,64;1,08])(7). På det foreliggende grundlag
+samt med henvisning til specialistgruppens kliniske erfaring er det specialistgruppens
+vurdering at behandling med duloxetin såvel som venlafaxin kan føre til remission.
+Forebyggelse af tilbagefald
+Det har ikke været muligt at identificere litteratur, som belyser den forebyggende effekt af
+de enkelte lægemiddelstoffer duloxetin henholdsvis venlafaxin.
+Evidensgennemgangen af ”forebyggelse af tilbagefald” beror på en metaanalyse(8), hvor
+inkluderede studier er gennemført efter et beriget studiedesign (relapse prevention trials).
+Fællestræk ved denne type design er, at patienter initialt behandles med et antidepressivum
+i et åbent design. Patienter som opnår respons (i den akutte fase) randomiseres til placebo
+eller fortsat aktiv behandling i op til et år og tilbagefald i de to grupper sammenlignes.
+Resultaterne herfra kan således kun overføres til patienter, som initialt har responderet.
+Endvidere har der været fremført kritik mod designet idet placebogruppen kan udtrappes
+af den igangværende aktive behandling uden hensyntagen til interindividuel variation i
+form af seponeringssymptomer (for hurtig udtrapning/ eventuelt abrupt), som fejlagtigt
+kan tolkes som tilbagefald (og dermed en højere tilbagefaldsrate i placebogruppen).
+I den omtalte metaanalyse(8) indgår en metaanalyse baseret på 28 studier med i alt 5.233
+inkluderede personer. 6 studier omhandler generaliseret angst, 4 socialfobi, 6 panikangst,
+7 obsessiv-kompulsiv tvangslidelse (OCD) og 4 posttraumatisk stresslidelse (PTSD) og med
+en opfølgningstid på op til et år. Uden skelen til type af angst samt behandling med
+antidepressivt lægemiddel (SSRI, SNRI og andre), blev der fundet statistisk signifikant
+forskel mellem lægemiddelbehandling og placebo i forhold til at forebygge tilbagefald (OR
+3,11 [2,48;3,89])(8). I metaanalysen anføres at tilbagefaldsraten for placebobehandlede
+samlet estimeres til 36,4% for alle angstlidelser. Dette svarer til NNT 5 i forhold til
+forebyggelse blandt de patienter, som initialt har responderet uden specificering af
+angstlidelse og uanset type af antidepressivum. Det er specialistgruppens vurdering, at
+duloxetin såvel som venlafaxin kan have klinisk relevant forebyggende effekt på tilbagefald
+af generaliseret angst på de personer som initialt responderer på behandlingen. Den anførte
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 14 af 50
+NNT skal tolkes med forbehold og i henhold til den studiepopulation, som resultaterne
+beror på.
+Ophør med behandling uanset årsag (accept)
+I netværksmetaanalysen fra 2019(6) blev ”ophør med behandling uanset årsag” opgjort som
+antal personer, som ikke gennemførte(frafaldt) de enkelte studier og udtrykt ved OR. Der
+blev ikke fundet statistisk signifikant forskel i forhold til placebobehandling for hverken
+duloxetin (OR 1,09 [0,89;1,32]) eller venlafaxin (OR 0,98 [0,83;1,16]). I sammenstillingen
+mellem duloxetin og venlafaxin blev der ligeledes ikke fundet statistisk signifikant forskel
+(OR 0,90 [0,68;1,15]).
+Seksuelle bivirkninger
+Produktresumer for duloxetin henholdsvis venlafaxin anfører at seksuelle bivirkninger
+forekommer ved begge lægemidler. Et systematisk review med netværksmetaanalyse fandt
+ingen statistisk signifikant forskel mellem venlafaxin og duloxetin (OR 0,65 [0,22;1,51])(9).
+Det refererede review angav ikke seksuelle bivirkninger i relation til placebobehandling.
+QTc-forlængelse
+Produktresume for venlafaxin anfører, at QT-forlængelse knytter sig til anvendelsen af
+venlafaxinm, idet QT-forlængelse står anført som sjælden forekommende bivirkning
+rapporteret efter markedsføring. Produktresume for duloxetin anfører ikke QT-forlængelse
+som bivirkning endsige opmærksomhedspunkt.
+Farmakokinetiske forhold og herunder interaktioner
+Anvendelse af SNRI-lægemidler kan være forbundet med interaktioner knyttet til enzymer
+i det hepatiske cytokrom P450 (CYP) metaboliske system, hvor lægemidlerne enten er
+substrater for og/eller inhiberer et givent enzym. Duloxetin hæmmer CYP2D6 og
+metaboliseres bl.a. af CYP1A2. Venlafaxin metaboliseres af CYP2D6 til aktive metabolitter
+og venlafaxin metaboliseres endvidere af CYP3A4.
+Relevante kontraindikationer og forsigtighedsregler
+ For duloxetin såvel som venlafaxin gælder. at samtidig anvendelse af
+monoaminooxidasehæmmere (MAO-hæmmere) er kontraindiceret grundet risiko
+for udvikling af serotonergt syndrom
+ Forsigtighed ved kombinationen af duloxetin og tramadol i det uomdannet tramadol
+som følge af duloxetins hæmming af CYP2D6 øger risikoen for serotonergt syndrom
+ Samtidig brug af lægemidler med kendt QT-forlængende effekt bør undgås ved brug
+af venlafaxin
+ For duloxetin gælder, at dosis skal reduceres ved eGFR<30 og duloxetin er
+kontraindiceret ved nedsat leverfunktion
+ Forvenlafaxin gælder, at dosis skal reduceres ved let nedsat nyrefunktion og
+forsigtighed skal udvises ved nedsat leverfunktion og med dosisreduktion
+ Duloxetin henholdsvis venlafaxin må ikke opstartes i patienter med ukontrolleret
+hypertension
+m Der henvises til Sundhedsstyrelsens vejledning om behandling af voksne med antidepressive lægemidler med
+hensyn til QTc-forlængelse
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 15 af 50
+ Risikoen for hyponatriæmi blandt ældre og ikke mindst i forbindelse med samtidig
+behandling med diuretika
+ Opmærksomheden henledes på risiko for seponeringssymptomern
+Sammenfatning og rekommandationer vedrørende SNRI i behandling af
+generaliseret angst
+Specialistgruppen vurderer på det foreliggende grundlag, at der er klinisk relevant effekt af
+duloxetin såvel som venlafaxin i behandling af generaliseret angst hos voksne. Begge
+lægemidler vurderes endvidere at have tilbagefaldsforebyggende effekt blandt de patienter,
+som initialt responderer på behandlingen. Begge lægemiddelstoffer er forbundet med
+seksuelle bivirkninger. QTc-forlængelse er knyttet til venlafaxin og anvendelsen af
+venlafaxin skal ske under hensyntagen til eventuel kardiovaskulær problematik og øvrig
+lægemiddelanvendelse. Sundhedsstyrelsen anbefaler, at patientens kardiale risikoprofil
+vurderes inden start af behandling med venlafaxin samt at der foreligger et aktuelt EKG. Ved
+mistænkt eller påvist hjertesygdom anbefales behandlingen at foregå i samråd med en
+speciallæge i kardiologi. Denne anbefaling tager udgangspunkt i Sundhedsstyrelsens
+vejledning om behandling af voksne med antidepressive lægemidler(1) og en vurdering af,
+at venlafaxin kan medføre risiko for proarytmi. Begge lægemidler skal anvendes med
+forsigtighed ved nedsat lever- og/eller nyrefunktion – med eventuel dosisjustering.
+Duloxetin hæmmer CYP2D6 og kan potentielt give anledning til væsentlige interaktioner.
+Idet duloxetin imidlertid har færre seponeringssymptomer end venlafaxin er det dog
+specialistgruppens vurdering, at begge lægemidler bør være rekommanderede. Det er
+specialistgruppens samlede vurdering, at i behandlingen af generaliseret angst med
+godkendte SNRI er duloxetin og venlafaxin ligeværdige valg.
+SNRI
+Lægemiddel Sædvanlig daglig Kommentarer
+vedligeholdelsesdosis og
+dosisinterval
+Rekommanderet
+Duloxetin 60 mg (30 mg – 60 mg) Potentielle interaktioner samt
+forsigtighed ved nedsat nyrefunktion.
+Kontraindiceret ved nedsat leverfunktion
+Venlafaxin 75 mg (75 mg – 225 mg) Potentiel QTc-forlængelse samt
+forsigtighed og dosisreduktion ved
+nedsat lever- og/eller nyrefunktion
+n I produktresume for duloxetin såvel som venlafaxin står anført, at i kliniske studier, blev der for begge
+lægemiddelstoffer fundet højere forekomst af bivirkninger ved behandlingsophør blandt behandlede med aktivt
+lægemiddelstof sammenholdt med de patienter, som modtog placebobehandling
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 16 af 50
+Gabapentinoider i behandling af generaliseret angst
+Skema over vurderet lægemiddel
+Lægemiddel Sædvanlig daglig vedligeholdelsesdosis og dosisinterval
+Pregabalin 300 mg (150 mg - 600 mg)
+Virkningsmekanisme
+Pregabalin udøver sin anxiolytiske virkning gennem binding til α2δ-subunits på Ca2+-
+kanaler i centralnervesystemet, hvorved frigivelse af glutamat, noradrenalin og henholdsvis
+substans-P hæmmes.
+Evidensgennemgang
+Netværksmetaanalysen fra januar 2019(6) omfatter pregabalin til behandling af
+generaliseret angst. Netværksmetaanalysen anvendes til besvarelse af fokuserede
+spørgsmål omhandlende effekt samt ophør med behandling uanset årsag (accept).
+Det har ikke været muligt gennem den systematiske litteratursøgning at identificere
+litteratur/systematiske review, som belyser remission, seksuelle bivirkninger samt QTc-
+forlængelse ved behandling af generaliseret med pregabalin.
+I evidensgennemgangen refereres produktresume for pregabalin i forbindelse med
+”Forebyggelse af tilbagefald”, ”Seksuelle bivirkninger”, ”Farmakokinetiske forhold og
+herunder interaktioner” og ”Relevante kontraindikationer og forsigtighedsregler samt
+eventuelt øvrige patientrelevante forhold”. I gennemgangen af forebyggelse af tilbagefald
+refereres et firmasponsoreret studie(11).
+Effekt
+I netværksmetaanalysen fra 2019(6) blev effekt opgjort som gennemsnitlig forskel i ændring
+fra baseline og opgjort på Hamiltons angstskala (HAM-A). Baseret på 11 studier og 1.957
+inkluderede personer blev pregabalin fundet statistisk signifikant samt klinisk relevant
+bedre sammenholdt overfor placebo (mean difference -2,79 [-3,69;-1,91]).
+Remission
+Det har ikke været muligt at identificere litteratur, som belyser remission ved pregabalin i
+behandling af generaliseret angst.
+Forebyggelse af tilbagefald
+Produktresume for pregabalin anfører, at pregabalin er blevet undersøgt med henblik på at
+vurdere den forebyggende effekt af pregabalin på tilbagefald. I et firmasponsoreret open-
+label-studie blev patienter med generaliseret angst i mere end ét år behandlet med
+pregabalin 450 mg dagligt. Efter 8 ugers behandling blev respondere randomiseret til enten
+fortsat behandling med pregabalin (168 personer) eller placebobehandling (170 personer)
+i 24 uger. Der blev fundet statistisk signifikant forskel mellem de to grupper således at 42%
+af patienter behandlet med pregabalin efter 24 uger havde oplevet tilbagefald, mens 65%
+af placebobehandlede havde oplevet tilbagefald(11).
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 17 af 50
+Ophør af behandling uanset årsag (accept)
+I netværksmetaanalysen fra 2019(6) blev ”ophør med behandling uanset årsag” opgjort som
+antal personer som ikke gennemførte(frafaldt) det enkelte studie. Der blev fundet statistisk
+signifikant forskel mellem pregabalin og placebo således at færre behandlet med pregabalin
+faldt fra sammenholdt med placebo – OR 0,80 [0,66;0,98]. Estimatet er baseret på 11 studier
+og 1.957 inkluderede patienter.
+Seksuelle bivirkninger
+Det har ikke været muligt at identificere litteratur, som belyser seksuelle bivirkninger ved
+pregabalin. Produktresume anfører nedsat libido som almindelig bivirkning.
+QTc-forlængelse
+Det har ikke været muligt at identificere litteratur, som belyser QTc-forlængelse ved
+pregabalin. Produktresume anfører QT-forlængelse, som en sjældent forekommende
+bivirkning.
+Farmakokinetiske forhold og herunder interaktioner
+Pregabalin udskilles i henhold til produktresume hovedsageligt uomdannet via urin. Det
+anses for usandsynligt at pregabalin vil forårsage farmakokinetiske interaktioner.
+Relevante kontraindikationer og forsigtighedsregler samt eventuelt øvrige
+patientrelevante forhold
+ Der er risiko for seponeringssymptomer
+ Opmærksomheden henledes på dosering ved nedsat nyrefunktion (se
+produktresume)
+ Pregabalin er forbundet med et misbrugspotentiale, som dog synes størst blandt
+patienter med eksisterende misbrugsproblematikker
+ Forsigtighed tilrådes ved bilkørsel og maskinbetjening (△)
+Sammenfatning og rekommandationer vedrørende pregabalin i behandling af
+generaliseret angst
+Specialistgruppen vurderer på det foreliggende grundlag, at pregabalin har en klinisk
+relevant effekt i behandling af generaliseret angst blandt voksne. Pregabalin vurderes at
+have forebyggende effekt på tilbagefald blandt patienter, som initialt har responderet på
+behandlingen, og færre i behandling med pregabalin stopper behandlingen vurderet i
+forhold til patienter i placebobehandling. Opmærksomheden skal henledes på risikoen for
+sedation, hvorfor der skal udvises forsigtighed ved bilkørsel og maskinbetjening.
+Sundhedsstyrelsen anbefaler endvidere, at lægen er opmærksom på risikoen for
+uhensigtsmæssig anvendelse hos visse patienter og konkret vurderer, om der i den enkelte
+behandlingssituation er behov for særlig opfølgning. Det er specialistgruppens samlede
+vurdering, at prebagalin rekommanderes til behandling af generaliseret angst.
+Gabapentinoider
+Lægemiddel Sædvanlig daglig Kommentarer
+vedligeholdelsesdosis og
+dosisinterval
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 18 af 50
+Rekommanderet
+Pregabalin 300 mg (150 mg - 600 mg) Forsigtighed tilrådes ved bilkørsel
+og maskinbetjening
+Dosisreduktion ved nedsat
+nyrefunktion
+Socialfobi
+SSRI i behandling af socialfobi
+Skema over vurderede lægemidler
+Lægemiddel Sædvanlig daglig vedligeholdelsesdosis og
+dosisinterval
+Escitalopram (tablet, smeltetablet, 10 mg (5 mg - 20 mg)
+orale dråber)
+Paroxetin (tablet) 20 mg (20 mg – 50 mg)
+Sertralin (tablet) 50 mg (50 mg -150 mg)
+Virkningsmekanisme
+SSRI-lægemidler virker bl.a. ved at hæmme genoptagelsen af serotonin fra den synaptiske
+spalte og ind i det præsynaptiske neuron gennem inhibering af serotonintransportøren.
+Evidensgennemgang
+Ved den systematiske litteratursøgning blev der identificeret et Cochrane-review fra
+2017(12) omhandlende farmakologisk behandling af socialfobi og vurderet i forhold til ingen
+farmakologisk behandling. Denne metaanalyse undersøger effekten af SSRI-lægemidler på
+klasseniveau og i forhold til ingen farmakologisk behandling. Metaanalyser fra dette review
+benyttes til besvarelse af SSRI som klasse i forhold til respons i den akutte fase (uge 16 med),
+ophør med behandling uanset årsag samt tilbagefald (forebyggelse af tilbagefald efter
+opnået remission).
+Endvidere blev der identificeret et review og netværksmetaanalyse fra 2014(13), som
+omhandler psykologiske såvel som farmakologiske interventioner i forhold til behandling
+af socialfobi. I dette review gennemføres netværksmetaanalyse af klasseeffekter samt effekt
+af specifikke SSRI opgjort på et kontinuert effektmål og vurderet i forhold til ventelisteo som
+fælles reference.
+Der blev ved den systematiske litteratursøgning ikke fundet litteratur som belyser
+remission.
+For øvrige outcome henvises til afsnit om generaliseret angst.
+o Patienter som er inkluderet i et studie som kontrolgruppe, men som ikke modtager nogen form for intervention
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 19 af 50
+Effekt
+I Cochrane-review fra 2017(12) omhandlende farmakologisk behandling af socialfobi
+undersøges SSRI som klasse for respons i den akutte fase gennem Clinical Global
+Impressions-Improvement (CGI-I) eller på en tilsvarende skala. Som klasse blev SSRI
+vurderet at være statistisk signifikant bedre end placebo (RR 1,65 [1,48;1,85]). Estimatet er
+baseret på 24 studier, hvor 1.489 ud af 2.767 behandlet med SSRI responderede (54%),
+mens 2.217 blev behandlet med placebo, hvoraf 703 responderede (32%). Med en antaget
+placeboresponsrate på 32% estimeret på baggrund af de inkluderede studier - (703/2.217)
+svarer dette til NNT 5. I omtalte Cochrane-review sammenholdes de enkelte SSRI-
+lægemidler ikke over for hinanden, og lægemidlerne hver især vurderes ikke over for
+placebo.
+I netværksmetaanalysen fra 2014(13) blev sertralin, escitalopram og paroxetin alle fundet
+statistisk signifikant bedre end venteliste som reference for analyserne. De inkluderede
+studier i metaanalysen anvendte forskellige redskaber til effektvurdering, hvorfor
+effektestimater i netværksanalyserne blev omregnet til SMD. De fundne SMD-estimater er;
+sertralin -0,92 [-1,32;-0,61], og estimatet er baseret på tre inkluderede studier med 535
+personer; escitalopram -0,88 [-1,20;-0,56], hvor 2 studier med 675 danner udgangspunkt
+for estimatet; paroxetin -0,99 [-1,26;-0,73] og dette estimat hidrører fra 12 studier med
+1.449 inkluderede personer. I netværksmetaanalysen anføres, at lægemiddelstofferne har
+sammenlignelige effekter.
+Remission
+Der blev ikke fundet litteratur som belyser remission af SSRI i behandling af socialfobi.
+Ophør med behandling uanset årsag (accept)
+Baseret på 26 inkluderede studier blev der ikke fundet statistisk signifikant forskel mellem
+SSRI som klasse og placebo i forhold til frafald uden angivet årsag i den akutte fase(12) – RR
+1,01 [0,90;1,14]p.
+Der blev ikke fundet litteratur, som belyste frafald uden angivet årsag blandt individuelle
+SSRI-lægemidler.
+Forebyggelse af tilbagefald
+Tilbagefald belyses i Cochrane-review(12) omhandlende farmakologisk behandling af
+socialfobi. 3 studier omhandlende sertralin er inkluderet i metaanalysen og to studier
+omhandlende paroxetin. Som klasse blev SSRI vurderet statistisk signifikant bedre end
+placebo i forhold til forebyggelse af tilbagefald. Risikoen for tilbagefald blev således
+reduceret med 66 % ved fortsat behandling med SSRI i forhold til placebo – (RR 0,34
+[0,22;0,50]). Estimatet er baseret på 195 patienter som blev behandlet med SSRI, hvoraf 25
+(13%) oplevede tilbagefald. Tilsvarende oplevede 77 (40%) placebobehandlede tilbagefald
+ud af 194 som modtog placebo. Der blev ikke fundet litteratur som belyste forebyggelse af
+tilbagefald blandt individuelle SSRI-lægemidler.
+p 2.915 personer modtog SSRI-behandling og 684 frafaldt, mens 2.293 modtog placebobehandling, hvoraf 565 faldt fra uden
+specificering af årsag
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 20 af 50
+Seksuelle bivirkninger
+Der henvises til afsnit om ”seksuelle bivirkninger” under evidensgennemgangen for SSRI i
+behandlingen af generaliseret angst.
+QTc-forlængelse
+Der henvises til afsnit om ”QTc-forlængelse” under evidensgennemgangen for SSRI i
+behandlingen af generaliseret angst.
+Farmakokinetiske forhold og herunder interaktioner
+Der henvises til afsnit om ”farmako-kinetiske forhold og herunder interaktioner” under
+evidensgennemgangen for SSRI i behandlingen af generaliseret angst.
+Relevante kontraindikationer og forsigtighedsregler samt eventuelt øvrige
+patientrelevante forhold
+Der henvises til afsnit om ”relevante kontraindikationer og forsigtighedsregler samt
+eventuelt øvrige patientrelevante forhold” under evidensgennemgangen for SSRI i
+behandlingen af generaliseret angst.
+Sammenfatning og rekommandationer vedrørende SSRI-behandling af socialfobi
+Escitalopram, sertralin og paroxetin vurderes alle at have klinisk relevant effekt i
+behandlingen af socialfobi. Vurderet som klasse har de tre lægemiddelstoffer forebyggende
+effekt på tilbagefald. Anvendelse af alle lægemidler er forbundet med risiko for seksuelle
+bivirkninger. Specialistgruppen vurderer samtidig, at risikoen for forlænget QT-interval
+potentielt stiger ved øgning af dosis samt ved tilstedeværelse af risikofaktorer som
+hjertesygdom og samtidig brug af lægemidler med kendt QTc-forlængende effekt.
+Sundhedsstyrelsen anbefaler derfor, at patientens kardiale risikoprofil vurderes inden start
+af behandling med SSRI-lægemidler samt at der foreligger et aktuelt EKG. Ved mistænkt
+eller påvist hjertesygdom anbefales behandlingen at foregå i samråd med en speciallæge i
+kardiologi. Denne anbefaling tager udgangspunkt i Sundhedsstyrelsens vejledning om
+behandling af voksne med antidepressive lægemidler(1) og en vurdering af, at alle SSRI-
+lægemidler kan medføre risiko for proarytmi. Det er specialistgruppens vurdering, at
+paroxetin i klinisk praksis giver anledning til flere interaktioner end escitalopram
+henholdsvis sertralin, hvorfor paroxetin kun anbefales i særlige tilfælde.
+SSRI
+Lægemiddel Sædvanlig daglig Kommentarer
+vedligeholdelsesdosis og
+dosisinterval
+Rekommanderet
+Escitalopram 10 mg (5 mg – 20 mg) Risiko for dosisafhængig forlængelse
+af QT-interval
+Sertralin 50 mg (50 mg – 150 mg) Risiko for dosisafhængig forlængelse
+af QT-interval
+Rekommanderet i særlige tilfælde
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 21 af 50
+Paroxetin 20 mg (20 mg – 50 mg) Potentielle interaktioner samt risiko for
+dosisafhængig forlængelse af QT-
+interval
+SNRI i behandling af socialfobi
+Skema over vurderet lægemidler
+Lægemiddel Sædvanlig daglig vedligeholdelsesdosis og
+dosisinterval
+Venlafaxin (tablet/kapsel, depot 75 mg*
+tablet/kapsel)
+* Jævnfør produktresume for venlafaxin, da er der ikke evidens for, at højere doser medfører en yderligere fordel. Til enkelte
+patienter, som ikke responderer på initialdosen på 75 mg daglig, kan det dog overvejes at øge dosis op til en maksimal dosis
+på 225 mg/dag. Dosis kan forøges med et interval på 2 uger eller mere.
+Virkningsmekanisme
+SNRI-lægemidler virker gennem en dual-aktion-mekanisme. SNRI hæmmer genoptagelsen
+af serotonin samt noradrenalin fra den synaptiske spalte og ind i det præsynaptiske neuron
+gennem inhibering af serotonintransportøren henholdsvis noradrenalintransportøren.
+Evidensgennemgang
+Evidensgrundlaget for gennemgang af venlafaxin baserer sig på Cochrane-review fra
+2017(12) hvad angår effektvurdering i den akutte behandlingsfase samt ophør med
+behandling uanset årsag. Der blev i den systematiske litteratursøgning ikke fundet litteratur
+som belyser remission knyttet til anvendelsen af venlafaxin.
+Det har ikke været muligt at identificere systematiske review som belyser forebyggelse af
+tilbagefald ved socialfobi med behandling med SNRI. En metaanalyse baseret på studier
+med beriget forsøgsdesign refereres i relation til forebyggelse af tilbagefald ved
+angstlidelser, hvor SSRI, SNRI og andre antidepressiva vurderes som samlet klasse(8).
+For øvrige outcome henvises til afsnit om generaliseret angst.
+Effekt
+I Cochrane-review fra 2017(12) omhandlende farmakologisk af social angst undersøges
+venlafaxin for respons i den akutte fase gennem Clinical Global Impressions-Improvement
+(CGI-I) eller på en tilsvarende skalaq. Baseret på 4 inkluderede studier blev der fundet
+statistisk signifikant forskel mellem venlafaxin og placebo (RR 1,59 [1,38;1,83]). Blandt 639
+som modtog venlafaxin responderede 343 (54%), mens 178 (33%) responderede ud af 534
+i placebobehandling. Dette svarer til NNT 5.
+Remission
+Der blev ikke fundet litteratur som belyser remission ved SNRI i behandling af socialfobi.
+q Ved inspektion af forest-plot blev en mulig fejl identificeret i ét af de 4 inkluderede studier. Ved konsultation af det primære
+studie blev fejlen bekræftet. Det angive estimat er beregnet - Cochrane Review Manager 5,3, M-H-Random, 95%
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 22 af 50
+Ophør med behandling uanset årsag (accept)
+Baseret på 4 inkluderede studier blev der ikke fundet statistisk signifikant forskel mellem
+venlafaxin og ingen farmakologisk behandling i forhold til frafald uden angivet årsag i den
+akutte fase(12) – RR 0,90 [0,76;1,07].
+Forebyggelse af tilbagefald
+Det har ikke været muligt at identificere litteratur som belyser den forebyggende effekt af
+venlafaxin.
+Evidensgennemgangen af ”forebyggelse af tilbagefald” beror på en metaanalyse(8), hvor
+inkluderede studier er gennemført efter et beriget studiedesign (relapse prevention trials).
+Fællestræk ved denne type design er, at patienter initialt behandles med et antidepressivum
+i et åbent design. Patienter som opnår respons (i den akutte fase) randomiseres til placebo
+eller fortsat aktiv behandling i op til et år og tilbagefald i de to grupper sammenlignes.
+Resultaterne herfra kan således kun overføres til patienter, som initialt har responderet.
+Der været fremført kritik mod designet idet placebogruppen kan udtrappes af den
+igangværende aktive behandling uden hensyntagen til interindividuel variation i form af
+seponeringssymptomer (for hurtig udtrapning/ eventuelt abrupt), som fejlagtigt kan tolkes
+som tilbagefald (og dermed en højere tilbagefaldsrate i placebogruppen).
+I den omtalte metaanalyse(8) indgår en metaanalyse baseret på 28 studier med i alt 5.233
+inkluderede personer. 6 studier omhandler generaliseret angst, 4 socialfobi, 6 panikangst,
+7 obsessiv-kompulsiv tvangslidelse (OCD) og 4 posttraumatisk stresslidelse (PTSD) og med
+en opfølgningstid på op til et år. Uden skelen til type af angst samt behandling med
+antidepressivt lægemiddel (SSRI, SNRI og andre), blev der fundet statistisk signifikant
+forskel mellem lægemiddelbehandling og placebo i forhold til at forebygge tilbagefald (OR
+3,11 [2,48;3,89])(8). I metaanalysen anføres at tilbagefaldsraten for placebobehandlede
+samlet estimeres til 36,4% for alle angstlidelser. Dette svarer til NNT 5 i forhold til
+forebyggelse blandt de patienter som initialt har responderet uden specificering af
+angstlidelse og uanset type af antidepressivum. Det er specialistgruppens vurdering, at
+venlafaxin kan have klinisk relevant forebyggende effekt på tilbagefald af socialfobi på de
+personer som initialt responderer på behandlingen. Den anførte NNT skal tolkes med
+forbehold og i henhold til den studiepopulation, som resultaterne beror på.
+Seksuelle bivirkninger
+Der henvises til afsnit om ”seksuelle bivirkninger” under evidensgennemgangen for SNRI i
+behandlingen af generaliseret angst.
+QTc-forlængelse
+Der henvises til afsnit om ”QTc-forlængelse” under evidensgennemgangen for SNRI i
+behandlingen af generaliseret angst.
+Farmakokinetiske forhold og herunder interaktioner
+Der henvises til afsnit om ”farmakokinetiske forhold og herunder interaktioner” under
+evidensgennemgangen for SNRI i behandlingen af generaliseret angst.
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 23 af 50
+Relevante kontraindikationer og forsigtighedsregler samt eventuelt øvrige
+patientrelevante forhold
+Der henvises til afsnit om ”relevante kontraindikationer og forsigtighedsregler samt
+eventuelt øvrige patientrelevante forhold” under evidensgennemgangen for SNRI i
+behandlingen af generaliseret angst.
+Sammenfatning og rekommandationer vedrørende SNRI-behandling af socialfobi
+Specialistgruppen vurderer på det foreliggende grundlag, at der er klinisk relevant effekt af
+venlafaxin i behandling af socialfobi hos voksne. Venlafaxin vurderes endvidere at have
+tilbagefaldsforebyggende effekt. Venlafaxin er forbundet med seksuelle bivirkninger. QTc-
+forlængelse er knyttet til venlafaxin og anvendelsen af venlafaxin skal ske under
+hensyntagen til eventuel kardiovaskulær problematik og øvrig lægemiddelanvendelse. Før
+opstart af behandling med venlafaxin anbefales det således, at patientens kardiale risikoprofil
+afklares ved optagelse af EKG, og der henvises til Sundhedsstyrelsen vejledning om behandling
+af voksne med antidepressive lægemidler(1). Venlafaxin skal anvendes med forsigtighed ved
+nedsat lever- og/eller nyrefunktion – med eventuel dosisjustering.
+SNRI
+Lægemiddel Sædvanlig daglig Kommentarer
+vedligeholdelsesdosis og
+dosisinterval
+Rekommanderet
+Venlafaxin 75 mg Potentiel QTc-forlængelse samt
+forsigtighed ved nedsat lever- og/eller
+nyrefunktion
+* Jævnfør produktresume for venlafaxin, da er der ikke evidens for, at højere doser medfører en yderligere fordel. Til enkelte
+patienter, som ikke responderer på initialdosen på 75 mg daglig, kan det dog overvejes at øge dosis op til en maksimal dosis
+på 225 mg/dag. Dosis kan forøges med et interval på 2 uger eller mere.
+Panikangst med eller uden agorafobi
+SSRI i behandling af panikangst med eller uden agorafobi
+Skema over vurderede lægemidler
+Lægemiddel Sædvanlig daglig vedligeholdelsesdosis og
+dosisinterval
+Citalopram (tablet) 20 mg (20 mg – 40 mg)
+Escitalopram (tablet, smeltetablet, 10 mg (10 mg - 20 mg)
+orale dråber)
+Paroxetin (tablet) 40 mg (40 mg – 60 mg)
+Sertralin (tablet) 50 mg (50 mg -100 mg)
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 24 af 50
+Virkningsmekanisme
+SSRI-lægemidler virker ved at hæmme genoptagelsen af serotonin fra den synaptiske spalte
+og ind i det præsynaptiske neuron gennem inhibering af serotonintransportøren.
+Evidensgennemgang
+I den systematiske litteratursøgning blev der identificeret et Cochrane-review fra 2018
+omhandlende behandling af panikangst hos voksne med antidepressiva og herunder
+SSRI(14). Dette review anvendes til besvarelse af fokuserede spørgsmål vedrørende effekt
+(respons/ikke-respons), remission samt ophør med behandling uanset årsag (accept).
+Det har ikke været muligt at identificere systematiske review som belyser forebyggelse af
+tilbagefald ved panikangst af citalopram, escitalopram, paroxetin henholdsvis sertralin. En
+metaanalyse baseret på studier med beriget forsøgsdesign refereres i relation til
+forebyggelse af tilbagefald ved angstlidelser, hvor SSRI, SNRI og andre antidepressiva
+vurderes som samlet klasse(8).
+For øvrige outcome henvises til afsnit om generaliseret angst.
+Effekt
+I Cochrane-metaanalyse(14) blev sertralin, citalopram, escitalopram og paroxetin undersøgt
+som klasse såvel som hver for sig i forhold til placebo og opgjort som ikke-respons. Ikke-
+respons blev defineret i henhold til de studier, som blev inkluderet i metaanalysen.
+I det følgende præsenteres evidens for SSRI som klasse såvel som for de respektive SSRI.
+Der præsenteres evidens for ikke-respons i henhold til Cochrane-metaanalysen(14). Hvor
+relevant udregnes efterfølgende NNT for responsr.
+Vurderet som klasse blev der på baggrund af 21 studier med samlet 4.000 inkluderede
+personer, og hvor kvaliteten af evidensen blev vurderet lav, fundet statistisk signifikant
+forskel mellem SSRI og placebo (RR 0,75 [0,67;0,84]). Blandt 2.432 behandlet med SSRI
+responderede 997 (41%) ikke, mens 854 (54%) placebobehandlede ikke responderede ud
+af 1.568, som modtog placebobehandling. NNT angives at være 8.
+Baseret på et enkelt studie blev der fundet statistisk signifikant forskel mellem escitalopram
+og placebo (RR 0,84 [0,73;0,96]). 129 blev behandlet med escitalopram, hvoraf 90 (70%)
+var ikke-respondere og blandt 125 placebobehandlede, responderede 104 (83%) ikke. Den
+absolutte risikodifferens mellem escitalopram og placebo er således – 13% (70%-83%),
+hvilket svarer til NNT 8 for respons for escitalopram.
+2 studier (ét signifikant og ét ikke-signifikant) blev inkluderet i analysen af citalopram og
+der blev ikke fundet statistisk signifikant forskel mellem citalopram og placebo (RR 0,82
+[0,65;1,04]) i forhold til ikke-respons. 407 indgik i gruppen af citaloprambehandlede og 221
+indgik i placebogruppen.
+r Dette sker ud fra den antagelse, at antal respondere er lig det total antal personer som indgår i en given metaanalyse (fx total
+antal som modtager aktiv behandling) fratrukket antal ikke-respondere. For statistisk signifikante ikke-responsestimater beregnes
+en absolut risikodifferens, hvis numeriske værdi udlægges som den absolutte difference i responsrate i sammenstillingen mellem
+lægemiddelbehandling og placebobehandling. På denne baggrund beregnes NNT referende til respons, som den reciprokke værdi
+af den numeriske værdi af den absolutte risikodifferens for ikke-respons.
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 25 af 50
+9 studier ligger til grund for analysen af paroxetin i forhold til placebo, hvor der blev fundet
+statistisk signifikant forskel i paroxetins favør (RR 0,70 [0,60;0,82]) i forhold til ikke-
+respons. 419 (32%) personer responderede ikke ud af 1.328 behandlet med paroxetin,
+mens 540 (47%) placebobehandlede ud af 1.141 ikke responderede. Den absolutte
+risikodifferens mellem paroxetin og placebo er således –15% (32%-47%), hvilket svarer til
+NNT 7.
+I sammenstillingen mellem sertralin og placebo blev der ikke fundet statistisk signifikant
+forskel i forhold til ikke-respons. 3 ikke-signifikante studier blev inkluderet i analysen (RR
+0,87 [0,76;1,00], hvor 264 blev behandlet med sertralin og 206 modtog placebobehandling.
+Der blev ikke fundet sammenstillinger lægemiddelstofferne imellem.
+Remission
+Remission blev i Cochrane-metaanalyse(14) opgjort som ”ikke-opnåelse af remission”, og
+defineret i henhold til de studier som blev inkluderet i metaanalysen.
+Et enkelt inkluderet studie i sammenstillingen mellem escitalopram og placebo fandt ingen
+statistisk signifikant forskel. Ligeledes blev der ikke fundet statistisk signifikant forskel
+mellem citalopram og placebo vurderet på et enkelt studie. Baseret på to inkluderede
+studier blev der fundet statistisk signifikant forskel mellem sertralin og placebo (RR 0,76
+[0,61;0,95]). Blandt 220 behandlet med sertralin opnåede 95 (43%) ikke remission, mens
+74 (57 %) placebobehandlede ud af 133 ikke opnåede remission. 6 studier indgik i
+vurderingen af paroxetin i forhold til placebo, hvor der blev fundet statistisk signifikant
+forskel (RR 0,82 [0,75;0,90]). 577 (49 %) ud af 1.180 behandlet med paroxetin opnåede ikke
+remission, mens 611 (59 %) placebobehandlede ud af 1.034 ikke opnåede remission.
+Forebyggelse af tilbagefald
+Det har ikke været muligt at identificere litteratur som belyser den forebyggende effekt af
+de enkelte lægemiddelstoffer escitalopram, citalopram, sertralin henholdsvis paroxetin.
+Evidensgennemgangen af ”forebyggelse af tilbagefald” beror på en metaanalyse(8), hvor
+inkluderede studier er gennemført efter et beriget studiedesign (relapse prevention trials).
+Fællestræk ved denne type design er, at patienter initialt behandles med et antidepressivum
+i et åbent design. Patienter som opnår respons (i den akutte fase) randomiseres til placebo
+eller fortsat aktiv behandling i op til et år og tilbagefald i de to grupper sammenlignes.
+Resultaterne herfra kan således kun overføres til patienter som initialt har responderet. Der
+har været fremført kritik mod designet, idet placebogruppen kan udtrappes af den
+igangværende aktive behandling uden hensyntagen til interindividuel variation i form af
+seponeringssymptomer (for hurtig udtrapning/ eventuelt abrupt), som fejlagtigt kan tolkes
+som tilbagefald (og dermed en højere tilbagefaldsrate i placebogruppen).
+I den omtalte metaanalyse(8) indgår en metaanalyse baseret på 28 studier med i alt 5.233
+inkluderede personer. 6 studier omhandler generaliseret angst, 4 socialfobi, 6 panikangst,
+7 obsessiv-kompulsiv tvangslidelse (OCD) og 4 posttraumatisk stresslidelse (PTSD) og med
+en opfølgningstid på op til et år. Uden skelen til type af angst samt behandling med
+antidepressivt lægemiddel (SSRI, SNRI og andre), blev der fundet statistisk signifikant
+forskel mellem lægemiddelbehandling og placebo i forhold til at forebygge tilbagefald (OR
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 26 af 50
+3,11 [2,48;3,89])(8). I metaanalysen anføres at tilbagefaldsraten for placebobehandlede
+samlet estimeres til 36,4% for alle angstlidelser. Omregnet til NNT svarer dette til NNT 5 i
+forhold til forebyggelse blandt de patienter som initialt har responderet uden specificering
+af angstlidelse og uanset type af antidepressivum. Det er specialistgruppens kliniske
+erfaring og vurdering, at citalopram, escitalopram, paroxetin henholdsvis sertralin kan have
+klinisk relevant forebyggende effekt på tilbagefald af panikangst på de personer som initialt
+responderer på behandlingen. Den anførte NNT skal tolkes med forbehold og i henhold til
+den studiepopulation, som resultaterne beror på.
+Ophør med behandling uanset årsag (accept)
+Baseret på et enkelt studie inkluderet i Cochrane-review fra 2018(14) blev der fundet
+statistisk signifikant forskel mellem escitalopram og placebo i forhold til ophør med
+behandling uanset årsag. Blandt 129 behandlet med escitalopram faldt 31 (24 %) fra, mens
+47 (38 %) ud af 125 placebobehandlede faldt fra (RR 0,64 [0,44;0,94]). Der blev ikke fundet
+statistisk signifikant forskel mellem placebo og citalopram (2 inkluderede studier), sertralin
+(4 inkluderede studier) henholdsvis paroxetin (9 inkluderede studier).
+Seksuelle bivirkninger
+Der henvises til afsnit om ”seksuelle bivirkninger” under evidensgennemgangen for SSRI i
+behandlingen af generaliseret angst.
+QTc-forlængelse
+Der henvises til afsnit om ”QTc-forlængelse” under evidensgennemgangen for SSRI i
+behandlingen af generaliseret angst.
+Farmakokinetiske forhold og herunder interaktioner
+Der henvises til afsnit om ”farmakokinetiske forhold og herunder interaktioner” under
+evidensgennemgangen for SSRI i behandlingen af generaliseret angst.
+Relevante kontraindikationer og forsigtighedsregler samt eventuelt øvrige
+patientrelevante forhold
+Der henvises til afsnit om ”relevante kontraindikationer og forsigtighedsregler samt
+eventuelt øvrige patientrelevante forhold” under evidensgennemgangen for SSRI i
+behandlingen af generaliseret angst.
+Sammenfatning og rekommandationer vedrørende SSRI i behandlingen af
+panikangst m/u agorafobi
+Vurderet som klasse har SSRI en gavnlig effekt i behandlingen af panikangst med eller uden
+agorafobi blandt voksne vurderet som respons. Evidensgrundlaget for citalopram,
+escitalopram og sertralin er begrænset grundet få studier og med få inkluderede patienter,
+og der blev ikke fundet statistisk signifikant forskel mellem citalopram henholdsvis
+sertralin i forhold til placebo opgjort som respons. Der blev fundet statistisk signifikant
+forskel mellem escitalopram henholdsvis paroxetin over for placebo i forhold til opnåelse
+af respons. Der blev ikke fundet sammenligninger lægemiddelstofferne imellem, hvorfor det
+ikke er muligt på baggrund af tilgængelig evidens at vurdere om der er klinisk relevant
+forskel mellem de enkelte lægemiddelstoffer i relation til respons. Det er imidlertid
+specialistgruppens kliniske erfaring, at lægemiddelstofferne udviser klasseeffekt, hvorfor
+escitalopram, citalopram, sertralin og paroxetin alle vurderes at have en klinisk relevant
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 27 af 50
+effekt i behandling af panikangst med eller uden agorafobi blandt voksne i forhold til
+opnåelse af respons. Evidensgrundlaget i forhold til vurdering af remission er begrænset
+grundet få studier. Der blev fundet statistisk signifikant forskel mellem sertralin
+henholdsvis paroxetin og placebo. Det er specialistgruppens kliniske erfaring, at alle
+lægemiddelstofferne kan føre til remission. Lægemiddelstofferne vurderes endvidere alle
+at have forebyggende effekt i forhold til tilbagefald blandt de patienter, som forud har
+opnået remission. Ophør med behandling uanset årsag er dårligt belyst grundet et
+begrænset evidensgrundlag. Der blev fundet statistisk signifikant forskel mellem
+escitalopram således at færre i behandling med escitalopram ophørte med behandlingen i
+forhold til placebobehandlede. Der blev ikke fundet forskel mellem citalopram, sertralin og
+paroxetin sammenholdt med placebo. Det er specialistgruppen kliniske erfaring, at de fire
+lægemiddelstoffer har gavnlige effekter, som overstiger uønskede virkninger vurderet i
+forhold til ophør med behandling. Anvendelse af alle lægemidlerne er forbundet med risiko
+for seksuelle bivirkninger, og specialistgruppen vurderer, at lægemidlerne kan være
+associeret med QTc-forlængelse. Specialistgruppen vurderer samtidig, at risikoen for
+forlænget QT-interval potentielt stiger ved øgning af dosis samt ved tilstedeværelse af
+risikofaktorer som hjertesygdom og samtidig brug af lægemidler med kendt QTc-
+forlængende effekt. Sundhedsstyrelsen anbefaler derfor, at patientens kardiale risikoprofil
+vurderes inden start af behandling med SSRI-lægemidler samt at der foreligger et aktuelt
+EKG. Ved mistænkt eller påvist hjertesygdom anbefales behandlingen at foregå i samråd
+med en speciallæge i kardiologi. Denne anbefaling tager udgangspunkt i
+Sundhedsstyrelsens vejledning om behandling af voksne med antidepressive lægemidler(1)
+og en vurdering af, at alle SSRI-lægemidler kan medføre risiko for proarytmi. Det er
+specialistgruppens vurdering, at paroxetin i klinisk praksis giver anledning til flere
+interaktioner end escitalopram, citalopram henholdsvis sertralin.
+SSRI
+Lægemiddel Sædvanlig daglig Kommentarer
+vedligeholdelsesdosis og
+dosisinterval
+Rekommanderet
+Citalopram 20 mg (20 mg – 40 mg) Risiko for dosisafhængig forlængelse
+af QT-interval
+Escitalopram 10 mg (10 mg – 20 mg) Risiko for dosisafhængig forlængelse
+af QT-interval
+Sertralin 50 mg (50 mg – 100 mg) Risiko for dosisafhængig forlængelse
+af QT-interval
+Rekommanderet i særlige tilfælde
+Paroxetin 40 mg (40 mg – 60 mg) Potentielle interaktioner samt risiko for
+dosisafhængig forlængelse af QT-
+interval
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 28 af 50
+SNRI i behandling af panikangst med eller uden agorafobi
+Skema over vurderet lægemiddel
+Lægemiddel Sædvanlig daglig vedligeholdelsesdosis og dosisinterval
+Venlafaxin 75 mg (75 mg-225 mg)
+Virkningsmekanisme
+SNRI-lægemidler virker gennem en dual-aktion-mekanisme. SNRI virker ved at hæmme
+genoptagelsen af serotonin samt noradrenalin fra den synaptiske spalte og ind i det
+præsynaptiske neuron gennem inhibering af serotonintransportøren henholdsvis
+noradrenalintransportøren.
+Evidensgennemgang
+I den systematiske litteratursøgning blev der identificeret et Cochrane-review fra 2018
+omhandlende behandling af panikangst hos voksne med antidepressiva og herunder
+SNRI(14). Dette review anvendes til besvarelse af fokuserede spørgsmål vedrørende effekt
+(respons/ikke-respons), remission, ophør med behandling uanset årsag (accept).
+Det har ikke været muligt at identificere systematiske review som belyser forebyggelse af
+tilbagefald ved panikangst med behandling med SNRI. En metaanalyse baseret på studier
+med beriget forsøgsdesign refereres i relation til forebyggelse af tilbagefald ved
+angstlidelser, hvor SSRI, SNRI og andre antidepressiva vurderes som samlet klasse(8).
+For øvrige outcome henvises til afsnit om generaliseret angst.
+Effekt
+I en Cochrane-metaanalyse(14) blev venlafaxin undersøgt i forhold til placebo og opgjort som
+ikke-respondere som primært effektmål. Ikke-respons blev defineret i henhold til de studier
+som blev inkluderet i metaanalysen og opgjort gennem forskellige responsskaler. Der blev
+fundet forskel mellem venlafaxin og placebo således at statistisk signifikant flere personer
+ikke responderede i placebobehandling sammenholdt med velafaxinbehandlede (RR 0,66
+[0,51;0,86]). Estimatet er baseret på 4 studier og 1.693 personer, hvor 1.020 modtog
+behandling med venlafaxin og 297 (29%) responderede ikke. 673 blev behandlet med
+placebo og 312 (46%) responderede ikke herpå, jævnfør evidensgennemgang for SSRI, da
+beregnes NNT til 6.
+Remission
+Opgjort som ”ikke-opnåelse af remission” blev der fundet forskel mellem venlafaxin og
+placebo. Baseret på 4 studier og 1.693 personer, blev venlafaxin fundet statistisk signifikant
+bedre end placebo (RR 0,84 0,74;0,94])(14).
+Forebyggelse af tilbagefald
+Det har ikke været muligt at identificere litteratur som belyser den forebyggende effekt af
+venlafaxin i behandlingen af panikangst.
+Evidensgennemgangen af ”forebyggelse af tilbagefald” beror på en metaanalyse(8), hvor
+inkluderede studier er gennemført efter et beriget studiedesign (relapse prevention trials).
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 29 af 50
+Fællestræk ved denne type design er, at patienter initialt behandles med et antidepressivum
+i et åbent design. Patienter som opnår respons (i den akutte fase) randomiseres til placebo
+eller fortsat aktiv behandling i op til et år og tilbagefald i de to grupper sammenlignes.
+Resultaterne herfra kan således kun overføres til den population som initialt har
+responderet, hvilket vil være en subpopulation af den oprindelige inkluderede population.
+Der har været fremført kritik mod designet, idet placebogruppen kan udtrappes af den
+aktive behandling uden hensyntagen til interindividuel variation i form af
+seponeringssymptomer (for hurtig udtrapning/ eventuelt abrupt), som fejlagtigt kan tolkes
+som tilbagefald (og dermed en højere tilbagefaldsrate i placebogruppen).
+I den omtalte metaanalyse(8) indgår en metaanalyse baseret på 28 studier med i alt 5.233
+inkluderede personer. 6 studier omhandler generaliseret angst, 4 socialfobi, 6 panikangst,
+7 obsessiv-kompulsiv tvangslidelse (OCD) og 4 posttraumatisk stresslidelse (PTSD) og med
+en opfølgningstid på op til et år. Uden skelen til type af angst samt behandling med
+antidepressivt lægemiddel (SSRI, SNRI og andre), blev der fundet statistisk signifikant
+forskel mellem lægemiddelbehandling og placebo i forhold til at forebygge tilbagefald (OR
+3,11 [2,48;3,89])(8). I metaanalysen anføres at tilbagefaldsraten for placebobehandlede
+samlet estimeres til 36,4% for alle angstlidelser. Dette svarer til NNT 5 i forhold til
+forebyggelse af tilbagefald for alle angstlidelser uden specificering og uanset type af
+antidepressivum. Det er specialistgruppens vurdering, at venlafaxin kan have klinisk
+relevant forebyggende effekt på tilbagefald af panikangst på de personer som initialt
+responderer på behandlingen. Den anførte NNT skal tolkes med forbehold og i henhold til
+den studiepopulation, som resultaterne beror på.
+Ophør med behandling uanset årsag (accept)
+Baseret på 4 studier og 1.693 personer, blev der ikke fundet forskel mellem venlafaxin og
+placebo i forhold til ophør med behandling uanset årsag (accept af behandling) – (RR 0,91
+[0,66;1,24])(14).
+Seksuelle bivirkninger
+Der henvises til afsnit om ”seksuelle bivirkninger” under evidensgennemgangen for SNRI i
+behandlingen af generaliseret angst.
+QTc-forlængelse
+Der henvises til afsnit om ”QTc-forlængelse” under evidensgennemgangen for SNRI i
+behandlingen af generaliseret angst.
+Farmakokinetiske forhold og herunder interaktioner
+Der henvises til afsnit om ”farmako-kinetiske forhold og herunder interaktioner” under
+evidensgennemgangen for SNRI i behandlingen af generaliseret angst.
+Relevante kontraindikationer og forsigtighedsregler samt eventuelt øvrige
+patientrelevante forhold
+Der henvises til afsnit om ”relevante kontraindikationer og forsigtighedsregler samt
+eventuelt patientrelevante forhold” under evidensgennemgangen for SNRI i behandlingen
+af generaliseret angst.
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 30 af 50
+Sammenfatning og rekommandationer vedrørende SNRI-behandling af panikangst
+m/u agorafobi
+På det foreliggende grundlag vurderer specialistgruppen, at der er klinisk relevant effekt af
+venlafaxin i behandling af panikangst med eller uden agorafobi blandt, såvel som at
+remission kan opnås med behandling med venlafaxin. Venlafaxin vurderes at have
+tilbagefaldsforebyggende effekt. Venlafaxin er forbundet med seksuelle bivirkninger. QTc-
+forlængelse er knyttet til venlafaxin og anvendelsen af venlafaxin skal ske under
+hensyntagen til eventuel kardiovaskulær problematik og øvrig lægemiddelanvendelse. Før
+opstart af behandling med venlafaxin anbefales det således, at patientens kardiale risikoprofil
+afklares ved optagelse af EKG. Venlafaxin skal anvendes med forsigtighed ved nedsat lever-
+og/eller nyrefunktion – med eventuel dosisjustering.
+SNRI
+Lægemiddel Sædvanlig daglig Kommentarer
+vedligeholdelsesdosis og
+dosisinterval
+Rekommanderet
+Venlafaxin 75 mg (75 mg – 225 mg) Potentiel QTc-forlængelse samt
+forsigtighed ved nedsat lever- og/eller
+nyrefunktion
+Andre/uspecificerede angsttilstande
+Azapironer i behandling af andre/uspecificerede angsttilstande
+Skema over vurderet lægemiddel
+Lægemiddel Sædvanlig daglig vedligeholdelsesdosis og dosisinterval
+Buspiron 30 mg (20 mg – 60 mg)
+Virkningsmekanisme
+Buspiron binder sig præsynaptisk som en fuld agonist til 5HT -receptorer og som en
+1A
+partiel agonist til 5HT -receptorer postsynaptisk, hvilket øger syntesen og frigørelsen af
+1A
+serotonin.
+Evidensgennemgang
+Det har ikke været muligt at identificere litteratur, som specifikt adresserer anvendelse af
+buspiron til voksne i henhold til afgrænsningen ”andre/uspecificerede angsttilstande”.
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 31 af 50
+I litteratursøgningen blev en netværksmetaanalyse fra januar 2019(6) omfattende buspiron
+til behandling af generaliseret angst identificeret. Der vil blive ekstrapoleret fra
+netværksmetaanalysen, som anvendes til besvarelse af fokuserede spørgsmål omhandlende
+effekt samt ophør med behandling uanset årsag (accept).
+Det har i den systematiske litteratursøgning ikke været muligt at identificere systematiske
+review som belyser remission, forebyggelse af tilbagefald, seksuelle bivirkninger samt QTc-
+forlængelse.
+I gennemgangen af buspiron refereres produktresume for buspiron i relation til
+”Farmakokinetiske forhold og herunder interaktioner” samt ”Relevante kontraindikationer,
+forsigtighedsregler samt eventuelt patientrelevante forhold”.
+Effekt
+I netværksmetaanalysen fra 2019(6) blev effekt opgjort som gennemsnitlig forskel i ændring
+fra baseline og opgjort på Hamiltons angstskala (HAM-A). Baseret på 6 inkluderede studier
+og 311 inkluderede personer blev der i netværksmetaanalysen fra januar 2019(6) fundet
+statistisk signifikant og klinisk relevant forskel mellem buspiron og placebo – mean
+difference -2,37 [-3,83;-0,91].
+Remission
+Der blev ikke fundet litteratur/systematiske review som belyser remission ved buspiron,
+og produktresume omtaler ikke remission.
+Forebyggelse af tilbagefald
+Der blev ikke fundet litteratur/systematiske review, som belyser forebyggelse af
+tilbagefald ved buspiron, og produktresume omtaler ikke forebyggelse af tilbagefald.
+Ophør af behandling uanset årsag (accept)
+I netværksmetaanalysen fra 2019(6) blev ”ophør med behandling uanset årsag” opgjort som
+antal personer som ikke gennemførte(frafaldt) det enkelte studie. I netværksmetaanalysen
+fra januar 2019(6) blev der ikke fundet statistisk signifikant forskel mellem buspiron og
+placebo – OR 0,76 [0,47;1,25].
+Seksuelle bivirkninger
+Der blev ikke fundet litteratur/systematisk review, som belyser eventuelle seksuelle
+bivirkninger ved buspiron, og produktresume anfører ikke seksuelle bivirkninger knyttet
+til anvendelsen af buspiron.
+QTc-forlængelse
+Der blev ikke fundet litteratur/systematiske review, som belyser QT-problematikker ved
+buspiron, og produktresume omtaler ikke QTc-forlængelse knyttet til buspiron.
+Farma-kokinetiske forhold og herunder interaktioner
+Buspiron metaboliseres gennem CYP3A4. Buspiron har ingen inhiberende endsige
+inducererede effekt på CYP-enzymer.
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 32 af 50
+Relevante kontraindikationer og forsigtighedsregler samt eventuelt
+patientrelevante forhold
+ Buspiron er kontraindiceret ved kraftig nedsat nyre-og/eller leverfunktion, og
+forsigtighed skal udvises ved nedsat nyre-og/eller leverfunktion, og eventuelt skal
+dosis reduceres
+ Den anxiolytiske effekt af buspiron er langsomt indsættende
+Sammenfatning og rekommandationer vedrørende buspiron i behandling af
+andre/uspecificerede angsttilstande
+Baseret på den foreliggende evidens, vurderer specialistgruppen, at buspiron har klinisk
+relevant effekt i behandlingen af andre/uspecificerede angsttilstande blandt voksne, og
+sammenholdt med placebobehandling blev der ikke fundet forskel i forhold til ophør med
+behandling uanset årsag. Det foreliggende evidensgrundlag for vurdering af buspiron er
+imidlertid yderst begrænset, - kun 311 personer indgik i studier om effekt - og flere af de
+fremsatte ”outcome” kunne ikke besvares. Det er specialistgruppens samlede vurdering, at
+det er usikkert, hvorledes den kliniske effekt af buspiron står i forhold til de øvrige
+undersøgte ”outcome”. Det er således usikkert, om den kliniske relevante effekt står mål
+med eventuelle uønskede virkninger i behandlingen af patienter med andre/uspecificerede
+angsttilstande.
+Azapironer
+Lægemiddel Sædvanlig daglig Kommentarer
+vedligeholdelsesdosis og
+dosisinterval
+Rekommanderet i særlige tilfælde
+Buspiron 30 mg (20 mg – 60 mg) Evidensgrundlaget er begrænset. Den
+anxiolytiske effekt af buspiron er
+langsomt indsættende.
+Antihistaminer behandling af andre/uspecificerede angsttilstande
+Skema over vurderet lægemiddel
+Lægemiddel Sædvanlig daglig vedligeholdelsesdosis og dosisinterval
+Hydroxyzin 10 mg (10-50 mg)* – 100 mg
+*Hydroxyzin bør anvendes i lavest mulig dosis, og i kortest mulig tid. Der henvises til produktresume for
+doseringsvejledning
+Virkningsmekanisme
+Hydroxyzin er en H -receptor antagonist med anxiolytisk effekt.
+1
+Evidensgennemgang
+Det har ikke været muligt at identificere litteratur, som specifikt adresserer anvendelse af
+hydroxyzin til voksne i henhold til afgrænsningen ”andre/uspecificerede angsttilstande”.
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 33 af 50
+I den systematiske litteratursøgning blev den tidligere omtalte netværksmetaanalyse fra
+januar 2019(6) identificeret og denne omfatter hydroxyzin til behandling af generaliseret
+angst, og hvor to studier indgår. I evidensgennemgangen vil der blive ekstrapoleret fra
+denne netværksmetaanalyse, som anvendes til besvarelse af fokuserede spørgsmål
+omhandlende effekt samt ophør med behandling uanset årsag (accept).
+Det har i den systematiske litteratursøgning ikke været muligt at identificere
+litteratur/systematiske review, som belyser remission, forebyggelse af tilbagefald samt
+seksuelle bivirkninger.
+QTc-forlængelse koblet til hydroxyzin belyses med henvisning til produktresume for
+hydroxyzin.
+I gennemgangen af hydroxyzin refereres endvidere produktresume for hydroxyzin i
+relation til ”Farmakokinetiske forhold og herunder interaktioner” samt ”Relevante
+kontraindikationer og forsigtighedsregler samt eventuelt patientrelevante forhold”.
+Effekt
+I netværksmetaanalysen fra 2019(6) blev effekt opgjort som gennemsnitlig forskel i ændring
+fra baseline og opgjort på Hamiltons angstskala (HAM-A). Basereret på 2 studier og 187
+inkluderede personer blev der fundet statistisk signifikant og klinisk relevant forskel
+mellem hydroxyzin og placebo – mean difference -3,00 [-5,03; -0,96].
+Remission
+Der blev ikke fundet litteratur som belyser remission ved hydroxyzin og produktresume
+omtaler ikke remission.
+Forebyggelse af tilbagefald
+Der blev ikke fundet litteratur som belyser forebyggelse af tilbagefald ved hydroxyzin og
+produktresume omtaler ikke forebyggelse af tilbagefald.
+Ophør af behandling uanset årsag (accept)
+I netværksmetaanalysen fra 2019(6) blev ”ophør med behandling uanset årsag” opgjort som
+antal personer, som ikke gennemførte(frafaldt) det enkelte studie. I netværksmetaanalysen
+fra januar 2019(6) blev der ikke fundet statistisk signifikant forskel mellem hydroxyzin og
+placebo – OR 0,97 [0,55;1,68].
+Seksuelle bivirkninger
+Der blev ikke fundet litteratur som belyser eventuelle seksuelle bivirkninger ved
+hydroxyzin og produktresume anfører ikke seksuelle bivirkninger knyttet til anvendelsen
+af hydroxyzin.
+QTc-forlængelse
+Produktresume for hydroxyzin anfører, at hydroxyzin er associeret med forlænget QT-
+interval baseret på rapporter efter markedsføring. I henhold til produktresume for
+hydroxyzin, er hydroxyzin kontraindiceret under visse forhold – se afsnit om ”Relevante
+kontraindikationer og forsigtighedsregler samt eventuelt øvrige patientrelevante forhold”.
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 34 af 50
+Sundhedsstyrelsen anbefaler at den kardiale risikoprofil afklares ved optagelse af aktuelt EKG
+forud for opstart af hydroxyzin.
+Farmakokinetiske forhold og herunder interaktioner
+Hydroxyzin hæmmer CYP2D6 og kan i høje doser forårsage interaktioner med CYP2D6-
+substrater. Den kliniske relevans heraf er imidlertid uklar.
+Relevante kontraindikationer og forsigtighedsregler samt eventuelt øvrige
+patientrelevante forhold
+ Hydroxyzin er kontraindiceret ved;
+o samtidig brug af lægemidler som forlænger QT-intervallet og/eller
+inducerer torsades de pointes
+o kendt QT-intervalforlængelse, medfødt langt QT-syndrom, kendt
+hjertesygdom samt risikofaktorer/disponering for hjertearytmi
+ Forsigtighed bør udvises ved nedsat nyre- og/eller leverfunktion
+ Hydroxyzin har kraftig antikolinerg effekt
+ Hydroxyzin anbefales ikke til ældre
+ Forsigtighed tilrådes ved bilkørsel og maskinbetjening (△)
+Sammenfatning og rekommandationer vedrørende hydroxyzin i behandling af
+generaliseret angst
+Specialistgruppen vurderer, at hydroxyzin har klinisk relevant effekt i behandling af
+andre/uspecificerede angsttilstande blandt voksne. Det foreliggende evidensgrundlag for
+vurdering af hydroxyzin er dog stærkt begrænset, idet grundlaget udgøres af metanalyse af
+2 inkluderede studier med i alt 187 patienter. Flere af de opstillede ”outcome” kan ikke
+besvares. Hydroxyzin kan forårsage interaktioner med lægemidler, som metaboliseres af
+CYP2D6, er associeret med QTc-forlængelse og er kontraindiceret ved visse specifikke
+risikoforhold. Hydroxyzin har kraftig antikolinerg effekt og hydroxyzin har sederende effekt.
+Før opstart af behandling med hydroxyzin anbefales det, at patientens kardiale risikoprofil
+afklares ved optagelse af aktuelt EKG, med henvisning til den mulige QTc-forlængende effekt -
+jævnfør afsnit om QTc. Det er specialistgruppens samlede vurdering, at det er usikkert,
+hvorledes den kliniske effekt af hydroxyzin står i forhold til de øvrige undersøgte
+”outcome”. Det er således usikkert, om den kliniske relevante effekt står mål med eventuelle
+uønskede virkninger i behandlingen af patienter med andre/uspecificerede angsttilstande,
+hvorfor anvendelsen af hydroxyzin bør forbeholdes særlige tilfælde.
+Antihistaminer
+Lægemiddel Sædvanlig daglig Kommentarer
+vedligeholdelsesdosis og
+dosisinterval
+Rekommanderet i særlige tilfælde
+Hydroxyzin 10 mg (10-50 mg) – 100 mg I henhold til produktresume bør hydroxyzin
+anvendes i lavest mulig dosis, og i kortest
+mulig tid. Opmærksomheden henledes på
+potentiel QTc-forlængelse. Der henvises til
+produktresume for doseringsvejledning
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 35 af 50
+Benzodiazepiner til kortvarig behandling af andre/uspecificerede angsttilstande
+Vurderede lægemidler
+Lægemiddel Sædvanlig daglig dosis(3)
+Alprazolam 0,5 mg – 2 mg fordelt på op til 4 daglige doser
+Bromazepam 1,5 mg – 9 mg fordelt på op til 3 daglige doser
+Clobazam 10 mg – 30 mg fordelt på op til 3 daglige doser
+Diazepam 5 mg – 15 mg fordelt på op til 3 daglige doser
+Lorazepam 1 mg – 3 mg fordelt på flere daglige doser
+Oxazepam 15 mg – 45 mg fordelt på op til 3 daglige doser
+Virkningsmekanisme
+BZD udøver deres virkning gennem binding til specifikke benzodiazepinreceptorer i
+hjernen lokaliseret til GABA-A-receptorer.
+Evidensgennemgang
+Det har ikke været muligt at identificere litteratur, som specifikt adresserer kortvarig
+anvendelse af BZD til voksne i henhold til afgrænsningen ”andre/uspecificerede
+angsttilstande”. Ekstrapolering fra identificerede studier i relation til generaliseret angst(6),
+produktresumeer samt udbredt klinisk erfaring vil udgøre rekommandationsgrundlaget.
+Effekt
+Alle BZD udøver deres effekt ved at potensere det GABA´erge system. For alle BZD gælder,
+at en klinisk relevant virkning indsætter kort efter indtagelse, dog med variation mellem de
+enkelte stoffer. De enkelte benzodiazepinpræparater adskiller sig fra hinanden ved
+forskellige farmakokinetiske forhold med betydning for valg af lægemiddel. Der er forskelle
+i fedtopløselighed og metabolisme og herunder halveringstid (T ), hvilket afspejler sig i
+1/2
+klinisk relevante forskelle vedrørende tid til effekt, virkningsvarighed og
+afhængighedspotentiale – jævnfør afsnit om ”Farmakokinetiske forhold og herunder
+interaktioner”.
+I en netværksmetaanalyse fra 2019(6) blev effekt af BZD som klasse i relation til
+generaliseret angst opgjort som gennemsnitlig forskel i ændring fra baseline og opgjort på
+Hamiltons angstskala (HAM-A). Basereret på 15 studier og 1.019 inkluderede personer blev
+der fundet statistisk signifikant forskel mellem BZD og placebo – mean difference -2,29 [-
+3,19; -1,39].
+Remission
+Ikke belyst
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 36 af 50
+Forebyggelse af tilbagefald
+Ikke belyst
+Ophør med behandling uanset årsag (accept)
+I netværksmetaanalysen fra 2019(6) blev ”ophør med behandling uanset årsag” opgjort som
+antal personer, som ikke gennemførte(frafaldt) det enkelte studie. I netværksmetaanalysen
+blev der fundet statistisk signifikant forskel mellem BZD som klasse og placebo, således at
+flere i behandling med BZD ophørte med behandling end placebobehandlede – OR 1,43
+[1,12;1,86].
+Seksuelle bivirkninger
+Produktresume for alprazolam anfører øget eller nedsat libido som almindelig
+forekommende bivirkning. Produktresume for bromazepam anfører ændring af libido som
+sjælden forekommende bivirkning. Produktresume for chlordiazepoxid anfører nedsat
+libido og impotens som ikke-almindelige forekommende bivirkninger. Produktresume for
+clobazam anfører nedsat libido som almindelig forekommende bivirkning. Produktresume
+for diazepam anfører at, øget eller nedsat libido kan forekomme. Produktresume for
+lorazapam anfører, at seksuelle bivirkninger ikke forekommer i almindelighed.
+Produktresume for oxazepam anfører øget eller nedsat libido som ikke-almindelig
+forekommende bivirkning.
+QTc-forlængelse
+Produktresume for alprazolam, bromazapam, chlordiazepoxid, clobazam, diazepam,
+lorazepam henholdsvis oxazepam omtaler ikke QTc-forlængelse.
+Farmakokinetiske forhold og herunder interaktioner(15)
+Lægemiddel Ækvipotent Tid til maksimal Tid til effekt Halveringstid
+dosisinterval plasmakoncentration T i timer
+1/2
+(Indsættende
+(mg) T i timer efter inklusiv
+max
+virkning)
+oral indgift eventuelle
+aktive
+metabolitter
+Alprazolam 0,5-2 1,5 Hurtig 12
+Bromazepam 1,5-9 1,5 Hurtig 15
+Clobazam 10-30 2 Hurtig 40
+Diazepam 5-15 1 Hurtig 72
+Lorazepam (- 1-3 2 Hurtig 12
+OH)
+Oxazepam (- 15-45 2 Intermediær 10
+OH)
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 37 af 50
+Relevante kontraindikationer og forsigtighedsregler samt eventuelt
+patientrelevante forhold
+ Risikoen for afhængighed, som øges ved længerevarende brug og ved anvendelse
+af høje doser
+ Tolerans og afhængighed kan udvikles efter 3-4 ugers behandling, dog med
+betydelig interindividuel variation
+ Risiko for sedation og følger heraf (△)
+ Behandling med alprazolam, bromazepam, chlordiazepoxid, clobazam, diazepam
+og lorazepam er i udgangspunktet uforenelig med kørsel(16)
+ Bromazepam, clobazam og diazepam er kontraindiceret ved svært nedsat
+leverfunktion, og forsigtighed og dosisreduktion ved nedsat leverfunktion
+gældende for alprazolam, clobazam, lorazepam og oxazepam
+ Forsigtighed og dosisreduktion ved behandling af ældre
+ Forsigtighed og dosisreduktion ved nedsat nyrefunktion gældende for alprazolam,
+, clobazam, lorazepam, oxazepam
+ Forsigtighed ved samtidig anvendelse af opioider grundet øget risiko for sedation
+og respirationsdepression
+ Alkohol bør undgås
+ Seponering bør ske ved gradvis nedtrapning for at undgå abstinenssymptomer
+Sammenfatning og rekommandationer vedrørende kortvarig behandling af
+andre/uspecificerede angsttilstande med BZD.
+Specialistgruppen vurderer, at de 7 BZD alprazolam, bromazepam, clobazam, diazepam,
+lorazepam og oxazepam alle har klinisk relevant anxiolytisk effekt vurderet som respons -
+jævnfør den refererede netværksmetaanalyse omhandlende BZD i behandlingen af
+generaliseret angst. Den anxiolytiske effekt indsætter erfaringsmæssigt hurtigt efter
+indtagelse af terapeutisk dosis. Flere patienter i behandling med BZD frafaldt behandlingen
+sammenholdt med placebobehandlede. Produktresumeer for de respektive
+lægemiddelstoffer omtaler ikke QTc-forlængelse. Der er risiko for sedation, afhængighed og
+tolerans ved anvendelse af BZD. Med undtagelse af oxazepam er lægemiddelstofferne ikke
+forenelig med kørsel. Seponering af BZD kan vanskeliggøres af ophørssymptomer.
+Oxazepam har langsommere indsættende virkning end alprazolam, bromazepam,
+clobazam, diazepam og lorazepam, som har hurtigindsættende virkning med dertil større
+risiko for afhængighed. Ud fra et forsigtighedsprincip er det specialistgruppens vurdering,
+at der i almen praksis i almindelighed ikke er behov for at iværksætte behandling med
+hurtigvirkende BZD.
+Med henvisning til risikoen for sedation, afhængighed og tolerans ved anvendelse af BZD
+rekommanderes oxazepam i særlige tilfælde og alprazolam, bromazepam, clobazam,
+diazepam og lorazepam rekommanderes ikke. I valg af lægemiddel i det konkrete tilfælde
+gælder, at de enkelte BZD adskiller sig fra hinanden, hvorfor særegenskaber ved det enkelte
+lægemiddelstof vil være afgørende herunder hensyntagen til halveringstid.
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 38 af 50
+Benzodiazepiner til kortvarig behandling af andre/uspecificerede angsttilstande(3)
+Lægemiddel Sædvanlig daglig dosis Kommentarer
+Rekommanderet i særlige tilfælde
+Oxazepam 15 mg – 45 mg fordelt på 1-3  Langsommere/intermediær
+daglige indsættende effekt
+ Kort halveringstid
+Ikke rekommanderet
+Alprazolam 0,5 mg – 2 mg fordelt på 3 daglige  Hurtig indsættende effekt
+doser  Kort halveringstid
+ Ikke forenelig med kørsel
+ Større risiko for afhængighed i
+forhold til rekommanderet i
+særlige tilfælde
+Bromazepam 1,5 mg – 9 mg fordelt på op til 3  Hurtig indsættende effekt
+daglige doser  Kort halveringstid
+ Ikke forenelig med kørsel
+ Større risiko for afhængighed i
+forhold til rekommanderet i
+særlige tilfælde
+Clobazam 10 mg – 30 mg fordelt på op til 3  Hurtig indsættende effekt
+daglige doser  Intermediær halveringstid
+ Ikke forenelig med kørsel
+ Større risiko for afhængighed i
+forhold til rekommanderet i
+særlige tilfælde
+Diazepam 5 mg – 15 mg fordelt på 3 daglige  Hurtig indsættende effekt
+doser  Lang halveringstid
+ Ophobning/akkumulation
+ Ikke forenelig med kørsel
+ Større risiko for afhængighed i
+forhold til rekommanderet i
+særlige tilfælde
+Lorazepam 1 mg – 3 mg fordelt på flere daglige  Hurtig indsættende effekt
+doser  Kort halveringstid
+ Ikke forenelig med kørsel
+ Større risiko for afhængighed i
+forhold til rekommanderet i
+særlige tilfælde
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 39 af 50
+Referencer
+(1) Sundhedsstyrelsen. Vejledning om behandling af voksne med antidepressive lægemidler.
+2014;VEJ nr 9899 af 11/11/2014.
+(2) Baldwin DS., Anderson IM., Nutt DJ., Allgulander C., Bandelow B., den BJ, et al.
+Evidence-based pharmacological treatment of anxiety disorders, post-traumatic stress disorder
+and obsessive-compulsive disorder: a revision of the 2005 guidelines from the British
+Association for Psychopharmacology. J Psychopharmacol 2014;28(5):403-39.
+(3) Sundhedsstyrelsen. Vejledning om ordination af afhængighedsskabende lægemidler.
+2018;VEJ nr 9166 af 19/03.
+(4) Higgins JPT, Green S (editors). Cochrane Handbook for Systematic Reviews of
+Interventions Version 5.1.0 [updated March 2011].The Cochrane Collaboration, 2011.
+Available from www.handbook.cochrane.org.
+(5) Nutt D, Allgulander C, Lecrubier Y, Peters T, Wittchen HU. Establishing non-inferiority in
+treatment trials in psychiatry - guidelines from an Expert Consensus Meeting. J
+Psychopharmacol 2008;22(4):409-416.
+(6) Slee A, Nazareth I, Bondaronek P, Liu Y, Cheng Z, Freemantle N. Pharmacological
+treatments for generalised anxiety disorder: a systematic review and network meta-analysis.
+Lancet. 2019 Feb 23;393(10173):768-777 2019(1474-547).
+(7) Baldwin D, Woods R, Lawson R, Taylor D. Efficacy of drug treatments for generalised
+anxiety disorder: systematic review and meta-analysis. BMJ 2011;342:d1199.
+(8) Batelaan NM., Bosman RC., Muntingh A., Scholten WD., Huijbregts KM., van BA. Risk of
+relapse after antidepressant discontinuation in anxiety disorders, obsessive-compulsive disorder,
+and post-traumatic stress disorder: systematic review and meta-analysis of relapse prevention
+trials. BMJ (Clinical research ed ) 2017;358:j3927.
+(9) Reichenpfader U, Gartlehner G, Morgan LC, Greenblatt A, Nussbaumer B, Hansen RA, et
+al. Sexual dysfunction associated with second-generation antidepressants in patients with major
+depressive disorder: results from a systematic review with network meta-analysis. Drug Saf
+2014;37(1):19-31.
+(10) Beach SR, Kostis WJ, Celano CM, Januzzi JL, Ruskin JN, Noseworthy PA, et al. Meta-
+analysis of selective serotonin reuptake inhibitor-associated QTc prolongation. J Clin Psychiatry
+2014;75(5):e441-9.
+(11) Feltner D, Wittchen HU, Kavoussi R, Brock J, Baldinetti F, Pande AC. Long-term efficacy
+of pregabalin in generalized anxiety disorder. Int Clin Psychopharmacol 2008;23(1):18-28.
+(12) Williams T., Hattingh CJ., Kariuki CM., Tromp SA., van BA, Ipser JC., et al.
+Pharmacotherapy for social anxiety disorder (SAnD). The Cochrane database of systematic
+reviews 2017;10:CD001206.
+(13) Mayo-Wilson E., Dias S., Mavranezouli I., Kew K., Clark DM., Ades AE., et al.
+Psychological and pharmacological interventions for social anxiety disorder in adults: a
+systematic review and network meta-analysis. The lancet Psychiatry 2014;1(5):368-76.
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 40 af 50
+(14) Bighelli I., Castellazzi M., Cipriani A., Girlanda F., Guaiana G., Koesters M., et al.
+Antidepressants versus placebo for panic disorder in adults. The Cochrane database of
+systematic reviews 2018;4:CD010676.
+(15) Altamura AC, Moliterno D, Paletta S, Maffini M, Mauri MC, Bareggi S. Understanding the
+pharmacokinetics of anxiolytic drugs. Expert Opin Drug Metab Toxicol 2013;9(4):423-40.
+(16) Styrelsen for Patientsikkerhed. Vejledning om helbredskrav til kørekort. 2017(VEJ nr 9693
+af 31/07/2017).
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 41 af 50
+Relevante danske behandlingsvejledninger
+Ændringslog
+Dato Version Kommentar
+[14. 07 2020] Høringsversion 3-4 ugers offentlig høring
+[30. 09 2020] Version 1.0 Publicering
+Tilrettet ud fra indkomne høringssvar
+[xx. xx 201x] Version 1.1 Evt. beskrivelse af ændring
+Forfattere
+Udarbejdet af IRF med deltagelse af følgende eksterne specialister:
+• Lone Baandrup, Dansk Psykiatrisk Selskab
+• Martin Balslev Jørgensen, Dansk Psykiatrisk Selskab
+• Rasmus W. Licht, Dansk Psykiatrisk Selskab (udtrådt september 2019)
+• Gesche Jürgens, Dansk Selskab for Klinisk Farmakologi
+• Annette Sofie Davidsen, Dansk Selskab for Almen Medicin (udtrådt september
+2019)
+• Nina Åslund, Dansk Selskab for Almen Medicin
+Habilitetserklæringer kan findes her.
+Juridiske forhold
+Den Nationale Rekommandationsliste (NRL), udarbejdet af IRF i Sundhedsstyrelsen, kan
+bruges af fagpersoner, når de skal træffe beslutninger om præparatvalg inden for en
+velafgrænset lægemiddelgruppe i specifikke kliniske situationer. NRL klassificeres som faglig
+rådgivning, hvilket indebærer, at relevante fagpersoner anbefales at følge anbefalingerne. NRL
+er ikke juridisk bindende, og det vil altid være det faglige skøn i den konkrete kliniske situation,
+der er afgørende for lægemiddelvalg. I visse tilfælde kan et lægemiddel, som enten er
+”rekommanderet i særlige tilfælde” eller ”ikke rekommanderet” være at foretrække, fordi det
+passer bedre til patientens situation.
+Bilag 1: Fokuserede spørgsmål
+Hvad er et fokuseret spørgsmål?
+IRF og specialistgruppen identificerer for hvert baggrundsnotat samtlige lægemidler med
+indikation for sygdommen, og hvor behandlingen med lægemidlet forventes at kunne
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 42 af 50
+iværksættes i almen praksis. Lægemidlerne opdeles i grupper efter deres virkningsmekanisme.
+ATC-klassifikationssystemet kan understøtte denne gruppering. IRF og specialistgruppen
+formulerer ét fokuseret spørgsmål per lægemiddelgruppe.
+De fokuserede spørgsmål beskriver patientgruppen og lægemiddelgruppen og formuleres i en
+sætning fx ”Er langtidsvirkende opioider rekommanderede og ligeværdige ved behandling af
+patienter med kroniske nociceptive smerter?”. Til hvert fokuseret spørgsmål angives hvilke
+lægemidler og hvilken dosis, der ønskes vurderet. Efterfølgende vælges de outcomes, som skal
+danne grundlag for rekommandationerne. De valgte outcomes er valgt med henblik på relevans
+for klinikeren såvel som for patienten og omfatter både effekt og bivirkninger. For hvert
+outcome fastlægges ved hvilke tidspunkter eller tidsintervaller, det valgte outcome ønskes
+vurderet. IRF udfører en litteratursøgning og udvælgelse af evidensgrundlaget for hvert
+fokuseret spørgsmål.
+Rekommandationerne gives med udgangspunkt i en sammenfatning og vurdering af følgende
+domæner for hvert enkelt fokuserede spørgsmål: effekt og bivirkninger, kontraindikationer,
+interaktioner, og patientværdier.
+Læs mere om metoden for den Nationale Rekommandationsliste på irf.dk.
+Generaliseret angst
+Selektive serotonin-genoptagelseshæmmere (SSRI): Hvis SSRI-behandling er indiceret ved
+behandlingskrævende generaliseret angst blandt voksne på 18 år og derover, hvilke lægemider
+er rekommanderet? I skemaet nedenfor er de to lægemidler i denne gruppe anført samt vurderet
+administrationsform sædvanlig daglig vedligeholdelsesdosis og i parentes sædvanligt
+dosisinterval og anbefalet. De to lægemider er vurderet mod hinanden samt ingen farmakologisk
+behandling.
+Lægemiddel Administrationsform Sædvanlig daglig vedligeholdelsesdosis
+og i parentes sædvanligt dosisinterval
+Tablet,
+smeltetabletter,
+Escitalopram orale dråber 10 mg (10-20)
+Paroxetin Tablet 20 mg (20-50)
+Outcomes Tidspunkt Mindste kliniske relevante forskel
+Respons: Inden for 3 måneder
+Ham-Angst alternativt
+anden skala (specifik)
+Remission:
+Ham-Angst alternativt
+anden skala (specifik) 6 måneder
+Accept Længste opfølgning
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 43 af 50
+Tilbagefald – forebyggelse Længste opfølgning
+Seksuelle bivirkninger Længste opfølgning
+QTc-forlængelse Længste opfølgning
+Interaktioner/farmakokinetik & -dynamik Længste opfølgning
+Relevante kontraindikationer,
+forsigtighedsregler – fx ophør - samt
+eventuelt øvrige patientrelevante forhold
+Serotonin-noradrenalin-genoptagelseshæmmere (SNRI): Hvis SNRI-behandling er indiceret ved
+medicinsk behandlingskrævende generaliseret angst blandt voksne på 18 år og derover, hvilke
+lægemider er rekommanderet? I skemaet nedenfor er de to lægemidler i denne gruppe anført
+samt vurderet administrationsform og sædvanlig daglig vedligeholdelsesdosis og i parentes
+sædvanligt dosisinterval. De to lægemider er vurderet mod hinanden samt ingen farmakologisk
+behandling.
+Lægemiddel Administrationsform Sædvanlig daglig vedligeholdelsesdosis
+og i parentes sædvanligt dosisinterval
+Venlafaxin Depotkapsler/tabletter 75 mg (75-275)
+Duloxetin Enterokapsel 30 mg (30-60)
+Outcomes Tidspunkt Mindste kliniske relevante forskel
+Respons: Inden for 3 måneder
+Ham-Angst alternativt
+anden skala (specifik)
+Remission:
+Ham-Angst alternativt
+anden skala (specifik) 6 måneder
+Accept Længste opfølgning
+Tilbagefald – forebyggelse Længste opfølgning
+Seksuelle bivirkninger Længste opfølgning
+QTc-forlængelse Længste opfølgning
+Interaktioner/farmakokinetik &
+-dynamik Længste opfølgning
+Relevante kontraindikationer,
+forsigtighedsregler – fx ophør -
+samt eventuelt øvrige
+patientrelevante forhold
+Gabapentinoider i behandling af generaliseret angst: Hvis gabapentionidbehandling er indiceret
+ved medicinsk behandlingskrævende generaliseret angst blandt voksne på 18 år og derover, er
+gabapentin rekommanderet? I skemaet nedenfor er gabapentin som er det eneste lægemiddel i
+gruppen anført samt vurderet administrationsform og anbefalet sædvanlig daglig
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 44 af 50
+vedligeholdelsesdosis og i parentes sædvanligt dosisinterval. Gabapentin er vurderet mod ingen
+farmakologisk behandling.
+Lægemiddel Administrationsform Sædvanlig daglig
+vedligeholdelsesdosis og i parentes
+sædvanligt dosisinterval
+Gabapentin Depotkapsler/tabletter 300 mg (150-600)
+Outcomes Tidspunkt Mindste kliniske relevante forskel
+Respons: Inden for 3 måneder
+Ham-Angst alternativt
+anden skala (specifik)
+Remission:
+Ham-Angst alternativt
+anden skala (specifik) 6 måneder
+Accept Længste opfølgning
+Tilbagefald – forebyggelse Længste opfølgning
+Seksuelle bivirkninger Længste opfølgning
+QTc-forlængelse Længste opfølgning
+Interaktioner/farmakokinetik & -dynamik Længste opfølgning
+Relevante kontraindikationer,
+forsigtighedsregler – fx ophør - samt
+eventuelt øvrige patientrelevante forhold
+Socialfobi
+Selektive serotonin-genoptagelseshæmmere (SSRI): Hvis SSRI-behandling er indiceret ved
+medicinsk behandlingskrævende socialfobi blandt voksne på 18 år og derover, hvilke lægemider
+er rekommanderet? I skemaet nedenfor er lægemidler i denne gruppe anført samt vurderet
+administrationsform og sædvanlig daglig vedligeholdelsesdosis og i parentes.
+Lægemiddel Administrationsform Sædvanlig daglig vedligeholdelsesdosis
+og i parentes sædvanligt dosisinterval
+Sertralin Tablet 50 mg (50-100)
+Tablet, smeltetabletter,
+Escitalopram orale dråber 10 mg (5-20)
+Paroxetin Tablet 20 mg (20-50)
+Outcomes Tidspunkt Mindste kliniske relevante forskel
+Respons: Inden for 3 måneder
+Ham-Angst alternativt
+anden skala (specifik)
+Remission:
+Ham-Angst alternativt
+anden skala (specifik) 6 måneder
+Accept Længste opfølgning
+Tilbagefald – forebyggelse Længste opfølgning
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 45 af 50
+Seksuelle bivirkninger Længste opfølgning
+QTc-forlængelse Længste opfølgning
+Interaktioner/farmakokinetik & -
+dynamik Længste opfølgning
+Relevante kontraindikationer,
+forsigtighedsregler – fx ophør -
+samt eventuelt øvrige
+patientrelevante forhold
+Serotonin-noradrenalin-genoptagelseshæmmere (SNRI): Hvis SNRI-behandling er indiceret ved
+medicinsk behandlingskrævende socialfobi blandt voksne på 18 år og derover, er venlafaxin
+rekommanderet? I skemaet nedenfor er venlafaxin som er det eneste lægemiddel i gruppen anført
+samt vurderet administrationsform og anbefalet sædvanlig daglig vedligeholdelsesdosis og i
+parentes sædvanligt dosisinterval. Venlafaxin er vurderet mod ingen farmakologisk behandling.
+Lægemiddel Administrationsform Sædvanlig daglig
+vedligeholdelsesdosis og i parentes
+sædvanligt dosisinterval
+Venlafaxin Depotkapsler/tabletter 75 mg
+Outcomes Tidspunkt Mindste kliniske relevante forskel
+Respons: Inden for 3 måneder
+Ham-Angst alternativt
+anden skala (specifik)
+Remission:
+Ham-Angst alternativt
+anden skala (specifik) 6 måneder
+Accept Længste opfølgning
+Tilbagefald – forebyggelse Længste opfølgning
+Seksuelle bivirkninger Længste opfølgning
+QTc-forlængelse Længste opfølgning
+Interaktioner/farmakokinetik & -dynamik Længste opfølgning
+Relevante kontraindikationer,
+forsigtighedsregler – fx ophør - samt
+eventuelt øvrige patientrelevante forhold
+Panikangst m/u agorafobi
+Selektive serotonin-genoptagelseshæmmere (SSRI): Hvis SSRI-behandling er indiceret ved
+medicinsk behandlingskrævende panikangst m/u agorafobi blandt voksne på 18 år og derover,
+hvilke lægemider er rekommanderet? I skemaet nedenfor er lægemidler i denne gruppe anført
+samt vurderet administrationsform og anbefalet sædvanlig daglig vedligeholdelsesdosis og i
+parentes sædvanligt dosisinterval. De enkelte lægemider er vurderet mod hinanden samt ingen
+farmakologisk behandling.
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 46 af 50
+Lægemiddel Administrationsform Sædvanlig daglig vedligeholdelsesdosis
+og i parentes sædvanligt dosisinterval
+Sertralin Tablet 50 mg (50-100)
+Tablet, smeltetabletter,
+Escitalopram orale dråber 10 mg (10-20)
+Citalopram Tablet 20 mg (20-40)
+Paroxetin Tablet 40 mg (40-60)
+Outcomes Tidspunkt Mindste kliniske relevante forskel
+Respons:
+Ham-Angst alternativt
+anden skala (specifik) Inden for 3 måneder
+Remission:
+Ham-Angst alternativt
+anden skala (specifik) 6 måneder
+Accept Længste opfølgning
+Tilbagefald – forebyggelse Længste opfølgning
+Seksuelle bivirkninger Længste opfølgning
+QTc-forlængelse Længste opfølgning
+Interaktioner/farmakokinetik & -
+dynamik Længste opfølgning
+Relevante kontraindikationer,
+forsigtighedsregler – fx ophør -
+samt eventuelt øvrige
+patientrelevante forhold
+Serotonin-noradrenalin-genoptagelseshæmmere (SNRI): Hvis SNRI-behandling er indiceret ved
+medicinsk behandlingskrævende panikangst m/u agorafobi blandt voksne på 18 år og derover, er
+venlafaxin rekommanderet? I skemaet nedenfor er venlafaxin som er det eneste lægemiddel i
+gruppen anført samt vurderet administrationsform og anbefalet sædvanlig daglig
+vedligeholdelsesdosis og i parentes sædvanligt dosisinterval. Venlafaxin er vurderet mod ingen
+farmakologisk behandling.
+Lægemiddel Administrationsform Sædvanlig daglig vedligeholdelsesdosis
+og i parentes sædvanligt dosisinterval
+Venlafaxin Depotkapsler/tabletter 75 mg (75-225)
+Outcomes Tidspunkt Mindste kliniske relevante forskel
+Respons:
+Ham-Angst
+Anden skala (specifik) Inden for 3 måneder
+Remission:
+Ham-Angst
+Anden skala (specifik) 6 måneder
+Accept Længste opfølgning
+Tilbagefald – forebyggelse Længste opfølgning
+Seksuelle bivirkninger Længste opfølgning
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 47 af 50
+QTc-forlængelse Længste opfølgning
+Interaktioner/farmakokinetik
+& -dynamik Længste opfølgning
+Relevante
+kontraindikationer,
+forsigtighedsregler – fx
+ophør - samt eventuelt
+øvrige patientrelevante
+forhold
+Andre/uspecificerede angsttilstande
+Azapironer i behandling af andre/uspecificerede angsttilstande: Hvis behandling med azapironer
+er indiceret ved medicinsk behandlingskrævende andre/uspecificerede angsttilstande blandt
+voksne på 18 år og derover, er buspiron rekommanderet? I skemaet nedenfor er buspiron som er
+det eneste lægemiddel i gruppen anført samt vurderet administrationsform og anbefalet sædvanlig
+daglig vedligeholdelsesdosis og i parentes sædvanligt dosisinterval. Buspiron er vurderet mod
+ingen farmakologisk behandling.
+Lægemiddel Administrationsform Sædvanlig daglig
+vedligeholdelsesdosis og i parentes
+sædvanligt dosisinterval
+Buspiron Depotkapsler/tabletter 30 mg (20 mg – 60 mg)
+Outcomes Tidspunkt Mindste kliniske relevante forskel
+Respons: Inden for 3 måneder
+Ham-Angst alternativt
+anden skala (specifik)
+Remission:
+Ham-Angst alternativt
+anden skala (specifik) 6 måneder
+Accept Længste opfølgning
+Tilbagefald – forebyggelse Længste opfølgning
+Seksuelle bivirkninger Længste opfølgning
+QTc-forlængelse Længste opfølgning
+Interaktioner/farmakokinetik & -dynamik Længste opfølgning
+Relevante kontraindikationer,
+forsigtighedsregler – fx ophør - samt
+eventuelt øvrige patientrelevante forhold
+Antihistaminer i behandling af andre/uspecificerede angsttilstande: Hvis antihistaminbehandling
+er indiceret ved medicinsk behandlingskrævende andre/uspecificerede angsttilstande blandt
+voksne på 18 år og derover, er hydroxyzin rekommanderet? I skemaet nedenfor er hydroxyzin
+som er det eneste lægemiddel i gruppen anført samt vurderet administrationsform og anbefalet
+sædvanlig daglig vedligeholdelsesdosis og i parentes sædvanligt dosisinterval. Hydroxyzin er
+vurderet mod ingen farmakologisk behandling.
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 48 af 50
+Lægemiddel Administrationsform Sædvanlig daglig
+vedligeholdelsesdosis og i parentes
+sædvanligt dosisinterval
+Hydroxyzin Depotkapsler/tabletter 75 mg
+Outcomes Tidspunkt Mindste kliniske relevante forskel
+Respons: Inden for 3 måneder
+Ham-Angst alternativt
+anden skala (specifik)
+Remission:
+Ham-Angst alternativt
+anden skala (specifik) 6 måneder
+Accept Længste opfølgning
+Tilbagefald – forebyggelse Længste opfølgning
+Seksuelle bivirkninger Længste opfølgning
+QTc-forlængelse Længste opfølgning
+Interaktioner/farmakokinetik & -dynamik Længste opfølgning
+Relevante kontraindikationer,
+forsigtighedsregler – fx ophør - samt
+eventuelt øvrige patientrelevante forhold
+Hvis behandling med benzodiazepin er indiceret ved andre/uspecificerede angsttilstande blandt
+voksne på 18 år og derover, hvilke lægemider er rekommanderet? I skemaet nedenfor er
+lægemidler i denne gruppe anført samt vurderet administrationsform samt anbefalet sædvanlig
+daglig vedligeholdelsesdosis og i parentes sædvanligt dosisinterval. De enkelte lægemidler er
+vurderet mod hinanden samt ingen farmakologisk behandling.
+Lægemiddel Administrationsform Startdosis og dosisinterval
+Alprazolam Tabletter 0,5-2 mg op til højst 4 uger
+Bromazepam Tabletter 1,5-9 mg op til højst 4 uger
+Clobazam Tabletter 10-30 mg op til højst 4 uger
+Diazepam Tabletter 5-15 mg op til højst 4 uger
+Lorazepam (OH) Tabletter 1-3 mg op til højst 4 uger
+Oxazepam (OH) Tabletter 15-45 mg op til højst 4 uger
+Outcomes Tidspunkt
+Respons:
+Ham-Angst alternativt
+anden skala (specifik) Inden for 7 dage
+Remission: Inden for 4 uger
+Ham-Angst alternativt
+anden skala (specifik)
+Accept Længste opfølgning
+Tilbagefald – forebyggelse Længste opfølgning
+Seksuelle bivirkninger Længste opfølgning
+QTc-forlængelse Længste opfølgning
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 49 af 50
+Interaktioner/farmakokinetik Længste opfølgning
+& -dynamik
+Relevante
+kontraindikationer,
+forsigtighedsregler – fx
+ophør - samt eventuelt
+øvrige patientrelevante
+forhold
+Bilag 2: Litteratursøgning og udvælgelse af
+evidensgrundlag
+Guidelines
+Ingen relevante guidelines blev identificeret med henblik på direkte besvarelse af fokuserede
+spørgsmål og herunder specifikke udfald/outcomes.
+Litteratursøgning
+Gennemført 1. august 2018
+(antidepress*[Title/Abstract] OR anti-depress*[Title/Abstract] OR “serotonin* reuptake
+inhibitor*” OR “serotonin* re-uptake inhibitor*” OR SSRI[Title/Abstract] OR
+sertralin*[Title/Abstract] OR citalopram[Title/Abstract] OR escitalopram[Title/Abstract] OR
+paroxetin*[Title/Abstract] OR “norepinephrin* reuptake inhibitor*” OR “norepinephrin* re-
+uptake inhibitor*” OR “noradrenalin* reuptake inhibitor*” OR “noradrenalin* re-uptake
+inhibitor*” OR SNRI[Title/Abstract] OR venlafaxin*[Title/Abstract] OR
+duloxetin*[Title/Abstract] OR benzodiazepine*[Title/Abstract] OR diazepam[Title/Abstract] OR
+chlordiazepoxide[Title/Abstract] OR oxazepam[Title/Abstract] OR lorazepam[Title/Abstract]
+OR bromazepam[Title/Abstract] OR clobazam[Title/Abstract] OR alprazolam[Title/Abstract])
+AND (Cochrane[Title/Abstract] OR CENTRAL[Title/Abstract] OR MEDLINE[Title/Abstract]
+OR EMBASE[Title/Abstract] OR pubmed[Title/Abstract] OR search*[Title/Abstract] OR
+“systematic review”[Title/Abstract] OR “systematic overview”[Title/Abstract] OR meta-
+analy*[Title/Abstract] OR metaanaly*[Title/Abstract] OR “Comparative
+effectiveness”[Title/Abstract] OR “Indirect comparison”[Title/Abstract] OR “mixed treatment
+comparison”[Title/Abstract] OR guideline*[Title/Abstract])) AND (“anxiety disorders”[Mesh]
+OR Agoraphobia OR panic OR phobia OR anxiety)
+Total=3040 (uden tidsafgrænsning)
+2018-2013 = 784 (13 bøger) + 2 dubletter
+2008-2013 = 618 (8 bøger)
+Abstract fra referencer fra 2008-2018 blev gennemlæst. 7 review/ blev endelig udvalgt.
+Derudover er anvendt referencer identificeret ved gennemgang af de udvalgte
+review/metaanalyser. Endelig har specialistgruppen bidraget med specifikke forslag til litteratur.
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+Side 50 af 50
+Januar 2019 udkom det hidtil største systematiske review omhandlende lægemiddelbehandling af
+generaliseret angst. Dette review belyser SSRI, SNRI, buspiron, hydroxyzin, pregabalin omfattet
+af dette baggrundsnotat. Dette review refereres gennemgående i relation til generaliseret angst.
+FARMAKOLOGISK BEHANDLING I ALMEN PRAKSIS AF ANGSTTILSTANDE
+
+--- END OF Gode instrukser + Edoks/farmakologisk-behandling-i-almen-praksis-af-angsttilstande_2020.pdf ---
+
