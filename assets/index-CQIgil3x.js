@@ -453,7 +453,7 @@ Seponering / Pauser:
 • Hos unge voksne (ca. 25 år) er hjernen ofte modnet færdig, og uddannelse typisk overstået, hvilket gør dette til et optimalt udtrapningsvindue for at teste fortsat medicinbehov (en måneds pause).`}]},qp={title:"Angsttilstande i Almen Praksis",subtitle:"National Rekommandationsliste for farmakologisk behandling",pdfs:[{title:"NKR Angsttilstande 2020",url:"/Psyk-App/pdf/farmakologisk-behandling-i-almen-praksis-af-angsttilstande_2020.pdf"}],intro:"Vejledningen beskriver farmakologisk behandling i almen praksis af medicinsk behandlingskrævende generaliseret angst, socialfobi, panikangst og andre angsttilstande for voksne over 18 år.",algorithm:[{title:"Generaliseret Angst",summary:"SSRI, SNRI og Gabapentinoider anbefales.",details:`• SSRI: Escitalopram er anbefalet fremfor Paroxetin grundet færre interaktioner (Paroxetin kun i særlige tilfælde).
 • SNRI: Duloxetin og Venlafaxin er begge ligeværdige og anbefales.
 • Gabapentinoider: Pregabalin anbefales generelt (obs. bilkørsel og misbrugspotentiale).
-• Bivirkninger: Opstarts-kvalme, QT-forlængelse (især ved SSRI/Venlafaxin), seksuelle bivirkninger og seponeringssymptomer skal monitoreres.`},{title:"Socialfobi",details:`Lægemidler til medicinsk behandling:
+• Bivirkninger: Opstarts-kvalme, QT-forlængelse (især ved SSRI/Venlafaxin), seksuelle bivirkninger og seponeringssymptomer skal monitoreres.`},{title:"Socialfobi",summary:"Sertralin og Escitalopram er førstevalg. Venlafaxin kan benyttes.",details:`Lægemidler til medicinsk behandling:
 
 SSRI:
 • Escitalopram: 10 mg (5-20 mg) - Rekommanderet. QTc-opmærksomhed.
