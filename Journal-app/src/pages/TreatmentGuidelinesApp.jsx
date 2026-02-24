@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronRight, FileText, AlertTriangle, AlertCircle, Info, Stethoscope, Users, User, ShieldAlert, Download, Activity, Brain } from '../components/Icons';
+import { ChevronRight, AlertTriangle, Info, Users, User, ShieldAlert, Download, Activity, Brain } from '../components/Icons';
 import { GUIDELINE_ADVARSLER, VOKSNE_UDEN_PSYKOTISKE_SYMPTOMER, VOKSNE_MED_PSYKOTISKE_SYMPTOMER, IV_BEHANDLING_VOKSNE, DEMENS_BEHANDLING } from '../data/guidelinesAkutBeroligende';
 import { DEPRESSION_GUIDELINE } from '../data/guidelinesDepression';
 import { BIPOLAR_GUIDELINE } from '../data/guidelinesBipolar';

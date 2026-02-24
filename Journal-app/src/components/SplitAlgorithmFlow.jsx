@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronRight, Info } from './Icons';
+import { Info } from './Icons';
 
 export function SplitAlgorithmFlow({ data }) {
     const [hoveredNode, setHoveredNode] = useState(null);

@@ -13,6 +13,7 @@ export const ANGST_GUIDELINE = {
         },
         {
             title: 'Socialfobi',
+            summary: 'Sertralin og Escitalopram er førstevalg. Venlafaxin kan benyttes.',
             details: `Lægemidler til medicinsk behandling:\n\nSSRI:\n• Escitalopram: 10 mg (5-20 mg) - Rekommanderet. QTc-opmærksomhed.\n• Sertralin: 50 mg (50-150 mg) - Rekommanderet. QTc-opmærksomhed.\n• Paroxetin: 20 mg (20-50 mg) - KUN i særlige tilfælde.\n\nSNRI:\n• Venlafaxin: 75 mg (oftest sufficient, evt. op til 225 mg v. manglende respons).`
         },
         {
