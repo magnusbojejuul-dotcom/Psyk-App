@@ -3,6 +3,7 @@ import JournalApp from './pages/JournalApp';
 import LandingPage from './pages/LandingPage';
 import GuidelinesApp from './pages/GuidelinesApp';
 import TreatmentGuidelinesApp from './pages/TreatmentGuidelinesApp';
+import ScoringToolsApp from './pages/ScoringToolsApp';
 
 class ErrorBoundary extends React.Component {
     constructor(props) {
@@ -43,6 +44,7 @@ function App() {
                 {currentView === 'journal' && <JournalApp onNavigate={handleNavigate} />}
                 {currentView === 'guidelines' && <GuidelinesApp onNavigate={handleNavigate} />}
                 {currentView === 'treatment' && <TreatmentGuidelinesApp onNavigate={handleNavigate} />}
+                {currentView === 'scoring' && <ScoringToolsApp onNavigate={handleNavigate} />}
             </div>
         </ErrorBoundary>
     );

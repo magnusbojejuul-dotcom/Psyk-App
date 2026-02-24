@@ -103,24 +103,29 @@ function LandingPage({ onNavigate }) {
                         </div>
                     </button>
 
-                    {/* Tile 4: Placeholder (Inactive) */}
-                    <div className="group relative flex flex-col items-start p-8 rounded-[2rem] bg-white/40 backdrop-blur-sm border border-white/50 shadow-sm transition-all duration-500 ease-out overflow-hidden isolate opacity-60 grayscale-[20%]">
-                        <div className="w-14 h-14 rounded-2xl bg-[#FAF9F6] flex items-center justify-center mb-6 shadow-sm border border-white">
-                            <Stethoscope className="w-7 h-7 text-[#839788]/60" />
+                    {/* Tile 4: Kliniske Beregnere & Skalaer (Active) */}
+                    <button
+                        onClick={() => onNavigate('scoring')}
+                        className="group relative flex flex-col items-start p-8 rounded-[2rem] bg-white/70 backdrop-blur-md border border-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500 ease-out cursor-pointer overflow-hidden isolate"
+                    >
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#E2E8DF]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+
+                        <div className="w-14 h-14 rounded-2xl bg-[#F2F6F3] flex items-center justify-center mb-6 shadow-sm border border-white group-hover:bg-[#839788] transition-colors duration-500">
+                            <Stethoscope className="w-7 h-7 text-[#839788] group-hover:text-white transition-colors duration-500" />
                         </div>
 
-                        <h2 className="text-2xl font-bold text-[#3A4A40] mb-3 text-left leading-tight">
-                            Scoringsværktøjer og<br />Vurderingsskalaer
+                        <h2 className="text-2xl font-bold text-[#3A4A40] mb-3 text-left leading-tight group-hover:text-[#2C3F34] transition-colors">
+                            Kliniske Beregnere<br />& Skalaer
                         </h2>
 
                         <p className="text-left text-[#839788] text-sm mb-8 leading-relaxed">
-                            Forskellige scoringsværktøjer og skalaer.
+                            Interaktive kliniske scoringsværktøjer og vurderingsskalaer (f.eks. Barthel ADL).
                         </p>
 
-                        <div className="mt-auto flex items-center gap-2 text-[#839788]/60 text-sm font-bold bg-[#E8E4D9]/30 px-3 py-1.5 rounded-lg">
-                            Kommer snart
+                        <div className="mt-auto flex items-center gap-2 text-[#839788] text-sm font-bold group-hover:text-[#3A4A40] transition-colors">
+                            Åbn værktøj <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </div>
-                    </div>
+                    </button>
 
                 </div>
             </main>
