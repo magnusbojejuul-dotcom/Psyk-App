@@ -1,7 +1,7 @@
 export const DEPRESSION_GUIDELINE = {
     title: 'Medicinsk Behandling af Unipolar Depression',
     subtitle: 'RADS-vejledning (National Konsensus)',
-    pdfUrl: '/pdf/unipolar-depression-beh-og-rek-april-2015-193678.pdf',
+    pdfUrl: `${import.meta.env.BASE_URL}pdf/unipolar-depression-beh-og-rek-april-2015-193678.pdf`,
     intro: 'Vejledningen sikrer national konsensus om kriterier for opstart, opfølgning, varighed og seponering af behandling med antidepressiva hos voksne med unipolar depression eller dystymi.',
     algorithm: [
         {

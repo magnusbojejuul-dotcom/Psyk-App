@@ -13,14 +13,14 @@ function GuidelinesApp({ onNavigate }) {
                         <h2 className="text-2xl md:text-3xl font-bold text-[#3A4A40] mb-2">Behandlingsplan for Anoreksi</h2>
                         <p className="text-[#839788]">Direkte afspejling af standard behandlingsplan skabelon for Anorexia Nervosa.</p>
                     </div>
-                    <a href="/pdf/Eksempel%20på%20behandlingsplan%20Anoreksi.pdf" download className="flex items-center gap-2 bg-[#839788] text-white px-4 py-2 rounded-xl hover:bg-[#6A7A6E] transition-colors shadow-sm font-medium text-sm">
+                    <a href={`${import.meta.env.BASE_URL}pdf/Eksempel%20på%20behandlingsplan%20Anoreksi.pdf`} download className="flex items-center gap-2 bg-[#839788] text-white px-4 py-2 rounded-xl hover:bg-[#6A7A6E] transition-colors shadow-sm font-medium text-sm">
                         <Download className="w-4 h-4" /> Download Original PDF
                     </a>
                 </div>
 
                 <div className="glass-panel p-4 rounded-2xl shadow-sm flex-1 flex flex-col min-h-[600px]">
                     <iframe
-                        src="/pdf/Eksempel%20på%20behandlingsplan%20Anoreksi.pdf"
+                        src={`${import.meta.env.BASE_URL}pdf/Eksempel%20på%20behandlingsplan%20Anoreksi.pdf`}
                         className="w-full flex-1 rounded-xl border border-[#E8E4D9] bg-white min-h-[500px]"
                         title="Anoreksi Behandlingsplan Document"
                     />
@@ -37,14 +37,14 @@ function GuidelinesApp({ onNavigate }) {
                         <h2 className="text-2xl md:text-3xl font-bold text-[#3A4A40] mb-2">Generel Behandlingsplan (Eksempel)</h2>
                         <p className="text-[#839788]">Direkte afspejling af eksempel på behandlingsplan.</p>
                     </div>
-                    <a href="/pdf/Eksempel%20på%20behandlingsplan.pdf" download className="flex items-center gap-2 bg-[#839788] text-white px-4 py-2 rounded-xl hover:bg-[#6A7A6E] transition-colors shadow-sm font-medium text-sm">
+                    <a href={`${import.meta.env.BASE_URL}pdf/Eksempel%20på%20behandlingsplan.pdf`} download className="flex items-center gap-2 bg-[#839788] text-white px-4 py-2 rounded-xl hover:bg-[#6A7A6E] transition-colors shadow-sm font-medium text-sm">
                         <Download className="w-4 h-4" /> Download Original PDF
                     </a>
                 </div>
 
                 <div className="glass-panel p-4 rounded-2xl shadow-sm flex-1 flex flex-col min-h-[600px]">
                     <iframe
-                        src="/pdf/Eksempel%20på%20behandlingsplan.pdf"
+                        src={`${import.meta.env.BASE_URL}pdf/Eksempel%20på%20behandlingsplan.pdf`}
                         className="w-full flex-1 rounded-xl border border-[#E8E4D9] bg-white min-h-[500px]"
                         title="Generel Behandlingsplan Document"
                     />
@@ -61,7 +61,7 @@ function GuidelinesApp({ onNavigate }) {
                         <h2 className="text-2xl md:text-3xl font-bold text-[#3A4A40] mb-2">Gennemgang af Instruks</h2>
                         <p className="text-[#839788]">Visning af det originale "Gennemgang.pdf" dokument.</p>
                     </div>
-                    <a href="/pdf/Gennemgang.pdf" download className="flex items-center gap-2 bg-[#839788] text-white px-4 py-2 rounded-xl hover:bg-[#6A7A6E] transition-colors shadow-sm font-medium text-sm">
+                    <a href={`${import.meta.env.BASE_URL}pdf/Gennemgang.pdf`} download className="flex items-center gap-2 bg-[#839788] text-white px-4 py-2 rounded-xl hover:bg-[#6A7A6E] transition-colors shadow-sm font-medium text-sm">
                         <Download className="w-4 h-4" /> Download Original PDF
                     </a>
                 </div>
@@ -72,7 +72,7 @@ function GuidelinesApp({ onNavigate }) {
                         <p>Dette dokument er indlejret direkte fra et visuelt PDF-format. Brug knappen øverst til højre hvis du ønsker at downloade filen på din computer.</p>
                     </div>
                     <iframe
-                        src="/pdf/Gennemgang.pdf"
+                        src={`${import.meta.env.BASE_URL}pdf/Gennemgang.pdf`}
                         className="w-full flex-1 rounded-xl border border-[#E8E4D9] bg-white min-h-[500px]"
                         title="Gennemgang.pdf Document"
                     />

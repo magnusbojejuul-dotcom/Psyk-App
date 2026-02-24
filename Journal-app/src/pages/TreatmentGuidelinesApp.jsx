@@ -50,7 +50,7 @@ function TreatmentGuidelinesApp({ onNavigate }) {
                         <h2 className="text-2xl md:text-3xl font-bold text-[#3A4A40] mb-2">Akut Beroligende Medicin</h2>
                         <p className="text-[#839788]">Uddrag fra Regional Retningslinje, Fælles Psykiatri Region Midt.</p>
                     </div>
-                    <a href="/pdf/Akut_Beroligende_Medicin.pdf" download className="flex items-center gap-2 bg-[#839788] text-white px-4 py-2 rounded-xl hover:bg-[#6A7A6E] transition-colors shadow-sm font-medium text-sm hover:-translate-y-0.5">
+                    <a href={`${import.meta.env.BASE_URL}pdf/Akut_Beroligende_Medicin.pdf`} download className="flex items-center gap-2 bg-[#839788] text-white px-4 py-2 rounded-xl hover:bg-[#6A7A6E] transition-colors shadow-sm font-medium text-sm hover:-translate-y-0.5">
                         <Download className="w-4 h-4" /> Download PDF
                     </a>
                 </div>

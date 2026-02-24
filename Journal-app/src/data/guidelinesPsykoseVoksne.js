@@ -2,8 +2,8 @@ export const PSYKOSE_VOKSNE_GUIDELINE = {
     title: 'Medicinsk Behandling af Psykotiske Tilstande (Voksne)',
     subtitle: 'Fælles retningslinje (RM) & Medicinrådets Anbefalinger (2020)',
     pdfs: [
-        { title: 'Print Vejledning', url: '/pdf/beh-jan-2016-psykotiske-tilstande-hos-voksne.pdf' },
-        { title: 'Print Forholdsregler', url: '/pdf/forholdsregler_antipsykotika_voksne.pdf' }
+        { title: 'Print Vejledning', url: `${import.meta.env.BASE_URL}pdf/beh-jan-2016-psykotiske-tilstande-hos-voksne.pdf` },
+        { title: 'Print Forholdsregler', url: `${import.meta.env.BASE_URL}pdf/forholdsregler_antipsykotika_voksne.pdf` }
     ],
     intro: 'Vejledningen sikrer national konsensus og regionale forsigtighedsregler. Den præciserer, at der før ordination og under behandling tages systematisk højde for forprøver, monitorering og individuelle risikofaktorer for voksne.',
     algorithm: [

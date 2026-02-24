@@ -1,7 +1,7 @@
 export const PSYKOSE_BOERN_GUIDELINE = {
     title: 'Medicinsk Behandling af Psykotiske Tilstande (Børn og Unge)',
     subtitle: 'RADS-vejledning for skizofreni-spektret (F20-F29)',
-    pdfUrl: '/pdf/psykotiske-tilstande-boern-behandlingsvejledning.pdf',
+    pdfUrl: `${import.meta.env.BASE_URL}pdf/psykotiske-tilstande-boern-behandlingsvejledning.pdf`,
     intro: 'Vejledningen sikrer national konsensus om behandling med antipsykotika til børn og unge (< 18 år) med lidelser inden for det skizofreniforme spektrum. Behandlingen varetages altid af speciallæger i børne- og ungdomspsykiatri.',
     algorithm: [
         {
