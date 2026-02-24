@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Home, Stethoscope } from '../components/Icons';
+import { ChevronRight, Stethoscope } from '../components/Icons';
 import BarthelADL from '../components/scoring/BarthelADL';
 
 // Ny-oprettede komponenter
@@ -41,9 +41,18 @@ function ScoringToolsApp({ onNavigate }) {
     const renderSecondarySidebar = () => (
         <div className="w-80 bg-white/60 backdrop-blur-xl border-r border-[#E2E8DF]/50 h-screen overflow-y-auto flex flex-col shadow-[4px_0_24px_-12px_rgba(0,0,0,0.1)] z-10 custom-scrollbar">
             <div className="p-6 pb-2">
-                <div className="flex items-center gap-2 mb-6 text-[#3A4A40]">
-                    <Stethoscope className="w-6 h-6" />
-                    <h2 className="font-bold text-lg">Kliniske Beregnere</h2>
+                <div className="flex items-center gap-3 mb-6 text-[#3A4A40]">
+                    <button
+                        onClick={() => onNavigate('home')}
+                        className="p-1.5 hover:bg-white rounded-xl transition-colors text-[#839788] hover:text-[#3A4A40] shadow-sm border border-transparent hover:border-[#E2E8DF] mr-1"
+                        title="Tilbage til forsiden"
+                    >
+                        <ChevronRight className="h-5 w-5 rotate-180" />
+                    </button>
+                    <div className="bg-[#839788] p-1.5 rounded-lg">
+                        <Stethoscope className="text-white w-5 h-5" />
+                    </div>
+                    <h2 className="font-bold text-lg leading-none">Kliniske Beregnere</h2>
                 </div>
 
                 <div className="space-y-6">
@@ -58,8 +67,8 @@ function ScoringToolsApp({ onNavigate }) {
                                         key={tool.id}
                                         onClick={() => setActiveTool(tool.id)}
                                         className={`w-full text-left px-4 py-2.5 rounded-xl transition-all duration-300 flex items-center gap-3 ${activeTool === tool.id
-                                                ? 'bg-[#839788] text-white shadow-md shadow-[#839788]/20 scale-[1.02]'
-                                                : 'text-[#3A4A40] hover:bg-[#F2F6F3] hover:text-[#28362E]'
+                                            ? 'bg-[#839788] text-white shadow-md shadow-[#839788]/20 scale-[1.02]'
+                                            : 'text-[#3A4A40] hover:bg-[#F2F6F3] hover:text-[#28362E]'
                                             }`}
                                     >
                                         <span className="font-medium text-sm">{tool.name}</span>
@@ -71,18 +80,6 @@ function ScoringToolsApp({ onNavigate }) {
                 </div>
             </div>
 
-            {/* Navigation back to home */}
-            <div className="mt-auto p-6 border-t border-[#E2E8DF]/50">
-                <button
-                    onClick={() => onNavigate('home')}
-                    className="flex items-center gap-3 w-full px-4 py-3 text-[#3A4A40] hover:bg-white rounded-xl transition-all duration-300 shadow-sm border border-transparent hover:border-[#E2E8DF]"
-                >
-                    <div className="bg-[#F2F6F3] p-1.5 rounded-lg">
-                        <Home className="w-4 h-4 text-[#839788]" />
-                    </div>
-                    <span className="font-medium text-sm">Tilbage til forside</span>
-                </button>
-            </div>
         </div>
     );
 

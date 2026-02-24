@@ -12,12 +12,12 @@ function LandingPage({ onNavigate }) {
                 <div className="absolute top-[20%] left-[60%] w-[30%] h-[30%] rounded-full bg-[#D9E1DA]/40 blur-[80px]"></div>
             </div>
 
-            <header className="absolute top-0 w-full p-8 flex justify-between items-center z-20">
-                <div className="flex items-center gap-3">
-                    <div className="bg-[#839788] p-2 rounded-xl shadow-sm">
+            <header className="absolute top-0 w-full p-6 md:p-8 flex justify-between items-start md:items-center z-20">
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-3">
+                    <div className="bg-[#839788] p-2 rounded-xl shadow-sm shrink-0">
                         <Activity className="text-white h-5 w-5" />
                     </div>
-                    <span className="font-bold text-xl tracking-wide text-[#3A4A40]">MedPortal</span>
+                    <span className="font-bold text-base md:text-lg lg:text-xl tracking-wide text-[#3A4A40] leading-tight">Psykiatrisk Værktøjskasse<br className="hidden md:block" /><span className="text-sm md:text-base font-medium text-[#839788] md:ml-2">udviklet af læge Magnus Juul</span></span>
                 </div>
             </header>
 
@@ -46,7 +46,7 @@ function LandingPage({ onNavigate }) {
                         </h2>
 
                         <p className="text-left text-[#839788] text-sm mb-8 leading-relaxed">
-                            Struktureret MSE og anamnese-værktøj med auto-generering af journalnotater.
+                            Struktureret anamnese og objektivt psykisk-værktøj med auto-generering af journalnotater.
                         </p>
 
                         <div className="mt-auto flex items-center gap-2 text-[#839788] text-sm font-bold group-hover:text-[#3A4A40] transition-colors">
@@ -71,7 +71,7 @@ function LandingPage({ onNavigate }) {
                         </h2>
 
                         <p className="text-left text-[#839788] text-sm mb-8 leading-relaxed">
-                            Hurtigt og systematisk opslagsværk for gode dokumenter og behandlingsplaner.
+                            Samling af standardiserede behandlingsplaner og skabeloner til hurtigt og systematisk opslag.
                         </p>
 
                         <div className="mt-auto flex items-center gap-2 text-[#839788] text-sm font-bold group-hover:text-[#3A4A40] transition-colors">
@@ -95,7 +95,7 @@ function LandingPage({ onNavigate }) {
                         </h2>
 
                         <p className="text-left text-[#839788] text-sm mb-8 leading-relaxed">
-                            Interaktive kliniske guidelines med behandlingsalgoritmer og dosisforslag.
+                            Interaktive retningslinjer for medicinsk behandling af depression, psykose, ADHD m.fl.
                         </p>
 
                         <div className="mt-auto flex items-center gap-2 text-[#839788] text-sm font-bold group-hover:text-[#3A4A40] transition-colors">
@@ -119,7 +119,7 @@ function LandingPage({ onNavigate }) {
                         </h2>
 
                         <p className="text-left text-[#839788] text-sm mb-8 leading-relaxed">
-                            Interaktive kliniske scoringsværktøjer og vurderingsskalaer (f.eks. Barthel ADL).
+                            Interaktive scoringsværktøjer til bl.a. psykiatri (eks. HAM-D), geriatri (eks. MMS) og misbrug.
                         </p>
 
                         <div className="mt-auto flex items-center gap-2 text-[#839788] text-sm font-bold group-hover:text-[#3A4A40] transition-colors">
