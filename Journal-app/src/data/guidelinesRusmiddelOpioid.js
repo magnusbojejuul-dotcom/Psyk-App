@@ -29,12 +29,16 @@ export const RUSMIDDEL_OPIOID = {
             details: `• Anvend et anerkendt scoringssystem (fx COWS - Clinical Opiate Withdrawal Scale).\n• Opstart aldrig substitutionsbehandling hvis patienten er påvirket. Patienten SKAL opleve synlige tegn på abstinenser før Buprenorphin startes.`
         },
         {
-            title: 'Substitutionsbehandling',
-            details: `• To primære stoffer: Buprenorphin (Suboxone/Subutex) og Metadon.\n• Buprenorphin (partiel agonist) vælges typisk som 1. valg grundet bedre sikkerhedsprofil og lavere overdosis-risiko.\n• Buprenorphin displacerer fulde agonister (fx heroin) fra receptorerne. Gives det for tidligt udløses et AKUT ABSTINENS-syndrom (precipitated withdrawal). Derfor skal patienten have målbare abstinenser ved opstart.\n• Metadon (fuld agonist) bruges til patienter, der ikke responderer på buprenorphin eller som har langvarig historik med svær afhængighed.`
+            title: 'Substitutionsbehandling: Buprenorphin (1. Valg)',
+            details: `• Buprenorphin (Suboxone/Subutex) er partiel agonist og er hyppigt et førstevalg pga. højere sikkerhed for overdosis.\n• VIGTIGT: Buprenorphin displacerer fulde agonister fra receptorerne. Gives det for tidligt udløses et AKUT ABSTINENS-syndrom (precipitated withdrawal). Derfor KRAV at patienten har objektive abstinenser ved opstart.\n• Start fx med 2-4 mg sublingualt overvåget, vurder derefter effekt.`
         },
         {
-            title: 'Symptomatisk Lindring under Abstinens',
-            details: `• Uden substitution: Truxal / Quetiapin kan mildne rastløshed/søvnløshed.\n• Loperamid (Imodium) mod diarre, antiemetika (Ondansetron) mod kvalme.\n• NSAID/Paracetamol mod led/muskelsmerter.`
+            title: 'Substitutionsbehandling: Metadon',
+            details: `• Metadon er fuld agonist og anvendes ved utilstrækkelig effekt af Buprenorphin, eller til personer med mangeårigt tungt misbrug og høj tolerance.\n• Risiko for akkumulering og QT-FORLÆNGELSE. EKG anbefales ved doser >100 mg/dag eller ift. anden risikomedicin.\n• Initialdosis oftest 20-30 mg (afhængigt af opbygget tolerancens). OBS: Metadon-steady state opnås først efter flere dage, så øg langsomt for at undgå utilsigtet overdosis efter 3-4 dage.`
+        },
+        {
+            title: 'Symptomatisk Lindring under Abstinens (Uden Substitution)',
+            details: `• Smerte/Rastløshed: Undgå primært BZD uden speciallæge; Truxal (Quetiapin off-label) for søvn.\n• NSAID / Paracetamol for knoglesmerter.\n• Loperamid for diarre og evt. Ondansetron for kvalme og opkast.`
         }
     ]
 };

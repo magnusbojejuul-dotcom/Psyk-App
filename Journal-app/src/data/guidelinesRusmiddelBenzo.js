@@ -23,19 +23,19 @@ export const RUSMIDDEL_BENZO = {
     algorithm: [
         {
             title: 'Symptomer på Benzodiazepinabstinenser',
-            details: `• Symptomer spejler grundlæggende kroppens baseline uden den dæmpende effekt: Udtalt angst, uro, takykardi, sved, søvnbesvær, paræstesier og følsomhed over for lys/lyd.\n• Alvorlige konsekvenser: Abstinenskramper og Delir.\n• Opstår efter pludseligt seponering, ofte med 1-3 dages forsinkelse afhængig af stoffets halveringstid.`
+            details: `Abstinenstilstanden inddeles i 3 sværhedsgrader efter pludseligt seponering (typisk 1-3 dages forsinkelse).\n\n• Milde: Angst, insomni, svimmelhed, hovedpine, manglende appetit, irritabilitet.\n• Moderate: Agitation, panik, nedsat koncentration, tremor, svedeture, palpitationer, muskelsmerter, mave-tarm forstyrrelser.\n• Svære: Hypertermi, muskelfascikulationer, kramper, delirium, psykoser.\n\nBehandling skal sikre, at der ikke indtræder forværring (kramper/delir). Indlæggelse til observation er indiceret ved moderate og svære abstinenser.`
         },
         {
-            title: 'Akut Abstinensbehandling',
-            details: `• Pludselig seponering frarådes altid ved langvarigt forbrug.\n• Hvis patienten præsenterer med svære abstinenser (og bekræftet BZD-misbrug): Giv BZD (ofte Diazepam pga. lang halveringstid) for at slå abstinenserne ned, og start derefter kontrolleret udtrapning.\n• Målrettet medicninsk dæmpning prioriteres for at forebygge kramper.`
+            title: 'Akut Abstinensbehandling & Indlæggelse',
+            details: `• Pludselig seponering frarådes altid ved langvarigt forbrug.\n• Hvis patienten præsenterer med svære abstinenser: Giv BZD for at slå abstinenserne ned (se lokal instruks), og start derefter kontrolleret udtrapning.\n• Målrettet medicninsk dæmpning prioriteres for at forebygge kramper. Benyt evt. BAS abstinensscorer-skema.`
+        },
+        {
+            title: 'Omlægning til Langtidsvirkende BZD',
+            details: `• Første led i omlægningen af behandlingen er, at benzodiazepin seponeres. Startdosis af fast Clonazepam (Rivotril) eller Klopoxid (Chlordiazepoxid/Risolid) ordineres fordelt på 3-4 doser dagligt.\n• Begyndelsesdosis skal være den omregnede dosis, der er ækvipotent med den observerede døgndosis.\n• VIGTIGT: Døgndosis bør IKKE overstige 12 mg Clonazepam eller 150-200 mg Klopoxid.`
         },
         {
             title: 'Langvarig Nedtrapning (Planlagt)',
-            details: `• Konverter først alle hurtigt- eller kortvirkende benzodizepiner og "z-medicin" (Zonoct, Imovane) til langtidsvirkende Diazepam (Stesolid/Apozepam) for at undgå svinginger i serumkoncentration.\n• Omregningsfaktor: fx svara 10 mg Oxazepam eller 0,5 mg Alprazolam groft til 5 mg Diazepam (konsulter altid omregningstabel).\n• Nedtrapning er typisk langvarig. En tommelfingerregel er at reducere dosis med 10-25% hver 1-2 uge over måneder.`
-        },
-        {
-            title: 'Støttende Behandling',
-            details: `• Nedtrapning kan give "rebound-angst". Kognitiv adfærdsterapi eller basal angsthåndtering (åndedrætsøvelser, grounding) bør ledsage den farmakologiske udtrapning.\n• Antidepressiva (SSRI/SNRI) kan startes op, hvis svær ledsagende angst lidelse er til stede.`
+            details: `• Efter 1 uges behandling på begyndelsesdosis, nedtrappes langsomt over 3 uger til halv dosis (halvdelen af dosis dag 1).\n• Herefter skal der ske en udtrapning over 10 uger af den resterende dosis til 0 mg.\n• Advarsel: Er patienten i substitutionsbehandling for opioidafhængighed udvis stor forsigtighed, da kombinationen har alvorlig additiv dæmpende effekt på respiration.`
         }
     ]
 };

@@ -1,17 +1,21 @@
 const fs = require('fs');
+const pdf = require('pdf-parse');
+
 (async () => {
-  const pdf = (await import('pdf-parse')).default;
   const files = [
-    'Gode instrukser + Edoks/Eksempel på behandlingsplan Anoreksi.pdf',
-    'Gode instrukser + Edoks/Eksempel på behandlingsplan.pdf',
-    'Gode instrukser + Edoks/Gennemgang.pdf'
+    'rusmiddelbehandling/Benzodiazepinnedtrapning.pdf',
+    'rusmiddelbehandling/nkr-alkoholbehandling.pdf',
+    'rusmiddelbehandling/vejledning-laegelig-substitutionsbehandling-opioidafhaengighed.pdf'
   ];
 
   for (const file of files) {
-    const dataBuffer = fs.readFileSync(file);
-    const data = await pdf(dataBuffer);
-    const textOutput = `\n\n--- START OF ${file} ---\n${data.text}\n--- END OF ${file} ---\n\n`;
-    fs.appendFileSync('pdf_texts.txt', textOutput);
-    console.log(`Extracted: ${file}`);
+    try {
+      const dataBuffer = fs.readFileSync(file);
+      const data = await pdf(dataBuffer);
+      fs.writeFileSync(file + '.txt', data.text);
+      console.log(`Extracted: ${file}`);
+    } catch (e) {
+      console.error('Error on ' + file, e.message);
+    }
   }
 })().catch(console.error);
