@@ -193,7 +193,9 @@ function TreatmentGuidelinesApp({ onNavigate }) {
                 )}
 
                 <div className="mt-4">
-                    <h3 className="text-lg font-bold text-[#3A4A40] mb-6 uppercase tracking-widest text-center">Behandlingsalgoritme</h3>
+                    <h3 className="text-lg font-bold text-[#3A4A40] mb-6 uppercase tracking-widest text-center">
+                        {guideline.algorithmTitle || 'Behandlingsalgoritme'}
+                    </h3>
                     {guideline.splitAlgorithm ? (
                         <SplitAlgorithmFlow data={guideline.splitAlgorithm} />
                     ) : (

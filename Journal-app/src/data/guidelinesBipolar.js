@@ -7,6 +7,7 @@ export const BIPOLAR_GUIDELINE = {
         { title: 'NKR Farmakologisk Behandling', url: `${import.meta.env.BASE_URL}pdf/nkr-for-farmakologisk-behandling-af-bipolar-lidelse.pdf` }
     ],
     intro: 'Vejledningen sikrer national konsensus om kriterier for opstart, opfølgning, varighed og seponering af medicinsk behandling for voksne med bipolar lidelse. Den bygger på internationale guidelines (WFSBP, CANMAT, NICE, BAP).',
+    algorithmTitle: 'Trinvise Anbefalinger',
     algorithm: [
         {
             title: 'Sygdomskarakteristika (Type I vs. Type II)',

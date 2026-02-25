@@ -5,26 +5,23 @@ export const OCD_GUIDELINE = {
         { title: 'NKR OCD', url: `${import.meta.env.BASE_URL}pdf/national-klinisk-retningslinje-behandling-af-obsessiv-kompultiv-tilstand.pdf` }
     ],
     intro: 'Anbefalinger for behandling af børn, unge og voksne med OCD, med hovedvægt på Kognitiv Adfærdsterapi (KAT) og retningslinjer for farmakologisk tillæg.',
+    algorithmTitle: 'Klinisk Vejledning',
     algorithm: [
         {
             title: 'Mild OCD',
-            summary: 'Kognitiv Adfærdsterapi (KAT) foreslås.',
-            details: `• Det er god praksis at tilbyde kognitiv adfærdsterapi til børn, unge og voksne med mild OCD.\n• Overvej også internetbaseret eller biblioterapi afhængig af motivation og ressourcer.`
+            details: `• Det er "god praksis" at tilbyde kognitiv adfærdsterapi (KAT) til børn, unge og voksne med mild OCD.\n• Motivationsafklaring er vigtig inden opstart, især hos børn/unge hvor motivationen oftere ligger hos forældrene frem for barnet selv.\n• Afhængig af motivation og ressourcer kan selvhjælpsbehandlinger i form af biblioterapi, selvhjælpsgrupper eller internetbaseret KAT overvejes.`
         },
         {
             title: 'Moderat til Svær OCD (Børn og Unge)',
-            summary: 'Familiebaseret eller standard KAT; SSRI frarådes som førstevalg.',
-            details: `• Manualiseret familiebaseret KAT og standard KAT er ligestillede som førstevalg.\n• Stærk anbefaling IMOD at anvende SSRI som tillæg til KAT som førstevalg. SSRI kan dog overvejes, hvis KAT ikke har tilstrækkelig effekt, men kræver tæt monitorering (risiko for selvmordstanker).`
+            details: `• Manualiseret familiebaseret KAT og standard KAT betragtes som ligestillede tilbud.\n• Vær generelt tilbageholdende med at tilbyde KAT i grupper til børn/unge.\n• STÆRK ANBEFALING MOD: Anvend ikke SSRI som tillæg til KAT som førstevalg (ingen dokumenteret merværdi og medfører kendte bivirkninger).\n• SSRI kan evt. overvejes, hvis KAT ikke har tilstrækkelig effekt (fx pga. komorbiditet), dog med tæt monitorering grundet risikoen for at fremkalde selvmordstanker.`
         },
         {
             title: 'Moderat til Svær OCD (Voksne)',
-            summary: 'Individuel eller gruppe-KAT; tilbageholdenhed med SSRI og antipsykotika.',
-            details: `• Tilbyd KAT enten individuelt eller i gruppe.\n• Svag anbefaling mod SSRI som førstevalg. Brug kun SSRI-tillæg, hvis KAT alene ikke har effekt.\n• Tredjebølge KAT (fx ACT) bør kun anvendes efter nøje overvejelse frem for standard KAT.\n• Atypisk antipsykotikum: Anvend kun efter nøje overvejelse som absolut tillægsbehandling for voksne med meget svær OCD, der ikke har haft effekt af både KAT og SSRI. Genovervej altid diagnosen først.`
+            details: `• KAT kan tilbydes individuelt eller i gruppe. Individuelle forløb kan foretrækkes ved følsomme/intime symptomer.\n• SVAG ANBEFALING MOD SSRI som førstevalg. Tillægsbehandling bør først forsøges, hvis KAT fejler.\n• SVAG ANBEFALING MOD Tredjebølge KAT (fx ACT og Mindfulness) i stedet for standard KAT, idet effekten er uvis. Bør kun anvendes ved stærkt patientønske og *kun* hvis eksponering stadig indgår.\n• SVAG ANBEFALING MOD atypisk antipsykotikum: Anvend kun off-label og efter nøje overvejelse hos voksne med svær OCD, der ikke har haft effekt af KAT og SSRI. Vær opmærksom på langsom optrapning og genovervej altid diagnosen først.`
         },
         {
             title: 'Opfølgning & Medicinseponering',
-            summary: 'Tidlig seponering kan forsøges.',
-            details: `• Hvis en patient ikke responderer på et KAT forløb (ofte 10-14 sessioner), bør yderligere et forløb overvejes (evt. individuelt frem for gruppe).\n• For patienter i antidepressiv behandling: Overvej at forsøge seponering (langsom aftrapning) allerede 6 måneder efter stabilisering af symptombilledet, frem for at vente 12 måneder.`
+            details: `• Revurder altid terapi-formatet, hvis en patient fortsat har moderat/svær OCD efter opstartsforløbet i KAT; der kan med fordel overvejes yderligere et KAT-forløb i et andet format (fx fra gruppe til individuel).\n• For patienter i antidepressiv behandling bør man overveje at seponere behandlingen allerede 6 mdr. efter stabilisering af symptombilledet i stedet for 12 mdr.\n• Seponeringen bør ske med langsom nedtrapning udbredt over minimum to måneder pga. seponeringssymptomer.`
         }
     ]
 };

@@ -18,22 +18,22 @@ export function AlgorithmFlow({ steps }) {
                         onMouseLeave={() => setHoveredStep(null)}
                     >
                         {/* Number Indicator */}
-                        <div className="shrink-0 w-16 h-16 rounded-2xl bg-white shadow-sm border border-[#E8E4D9] flex flex-col items-center justify-center text-[#839788] font-bold group-hover:bg-[#839788] group-hover:text-white transition-all duration-300 group-hover:shadow-md z-10 relative">
-                            <span className="text-xs uppercase tracking-widest opacity-70">Trin</span>
-                            <span className="text-xl">{index + 1}</span>
+                        <div className="shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br from-white to-[#F9F8F6] shadow-sm border border-[#E8E4D9] flex flex-col items-center justify-center text-[#839788] font-bold group-hover:from-[#839788] group-hover:to-[#6A7A6E] group-hover:text-white transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 z-10 relative isolate overflow-hidden">
+                            <span className="text-[10px] uppercase tracking-widest opacity-70 mb-0.5">Trin</span>
+                            <span className="text-2xl leading-none">{index + 1}</span>
                         </div>
 
                         {/* Content Card */}
-                        <div className="flex-1 bg-white/80 backdrop-blur-sm border border-[#E8E4D9] rounded-2xl p-6 shadow-sm group-hover:shadow-md group-hover:border-[#D9E1DA] transition-all duration-300 relative overflow-hidden isolate">
+                        <div className="flex-1 bg-white/80 backdrop-blur-sm border border-[#E8E4D9] rounded-2xl p-6 shadow-sm group-hover:shadow-xl group-hover:border-[#839788]/50 group-hover:-translate-y-1 transition-all duration-300 relative overflow-hidden isolate">
                             {/* Inner glow on hover */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-[#F2F6F3]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+                            <div className="absolute inset-0 bg-gradient-to-br from-[#F2F6F3]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
 
                             <h3 className="text-xl font-bold text-[#3A4A40] mb-2">{step.title}</h3>
                             <p className="text-[#5C6B61] leading-relaxed mb-4">{step.summary}</p>
 
                             {/* Detailed Info Button (Mobile) or Hover Indicator (Desktop) */}
                             {step.details && (
-                                <div className="inline-flex items-center gap-2 text-xs font-bold text-[#839788] bg-[#F2F6F3] px-3 py-1.5 rounded-lg group-hover:bg-[#839788] group-hover:text-white transition-colors">
+                                <div className="inline-flex items-center gap-1.5 text-[11px] font-bold text-[#5C6B61] bg-gradient-to-r from-[#F2F6F3] to-white border border-[#E8E4D9] px-3.5 py-1.5 rounded-full group-hover:from-[#839788] group-hover:to-[#6A7A6E] group-hover:text-white group-hover:border-transparent group-hover:shadow-md transition-all duration-300 w-fit">
                                     <Info className="w-4 h-4" /> Hold musen over for originaltekst
                                 </div>
                             )}
