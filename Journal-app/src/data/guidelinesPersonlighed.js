@@ -6,6 +6,7 @@ export const BORDERLINE_GUIDELINE = {
     ],
     intro: 'Vejledningen til emotionel ustabil personlighedsstruktur (Borderline, BPF) fokuserer på systematisk diagnostik, psykoterapeutiske indsatser og kriseplaner, mens farmakologisk behandling generelt frarådes for selve lidelsen.',
     algorithmTitle: 'Klinisk Vejledning',
+    isStepBased: false,
     algorithm: [
         {
             title: 'Diagnostik',

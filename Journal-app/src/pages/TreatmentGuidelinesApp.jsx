@@ -199,7 +199,7 @@ function TreatmentGuidelinesApp({ onNavigate }) {
                     {guideline.splitAlgorithm ? (
                         <SplitAlgorithmFlow data={guideline.splitAlgorithm} />
                     ) : (
-                        <AlgorithmFlow steps={guideline.algorithm} />
+                        <AlgorithmFlow steps={guideline.algorithm} isStepBased={guideline.isStepBased !== false} />
                     )}
                 </div>
             </div>
@@ -207,18 +207,18 @@ function TreatmentGuidelinesApp({ onNavigate }) {
     };
 
     const navItems = [
-        { id: 'akut_beroligende', label: 'Akut Beroligende Medicin', icon: Activity },
-        { id: 'psykose_voksne', label: 'Psykotiske Tilstande (Voksne)', icon: Brain },
-        { id: 'psykose_boern', label: 'Psykotiske Tilstande (Børn/Unge)', icon: User },
-        { id: 'bipolar', label: 'Bipolar Lidelse', icon: Activity },
-        { id: 'depression', label: 'Unipolar Depression', icon: Brain },
-        { id: 'adhd', label: 'ADHD / ADD (Voksne)', icon: Activity },
-        { id: 'angst', label: 'Angsttilstande', icon: Activity },
-        { id: 'ocd', label: 'Obsessiv-kompulsiv Tilstand (OCD)', icon: Activity },
-        { id: 'autisme', label: 'Autisme (Børn/Unge)', icon: User },
-        { id: 'spiseforstyrrelser', label: 'Spiseforstyrrelser', icon: Activity },
-        { id: 'borderline', label: 'Emotionel Ustabil Personlighedsstruktur', icon: Brain },
-        { id: 'alkohol', label: 'Alkoholafhængighed', icon: Activity },
+        { id: 'akut_beroligende', label: 'Akut Beroligende Medicin', icd: '', icon: Activity },
+        { id: 'alkohol', label: 'Alkoholafhængighed', icd: 'F10', icon: Activity },
+        { id: 'psykose_voksne', label: 'Psykotiske Tilstande (Voksne)', icd: 'F20-29', icon: Brain },
+        { id: 'psykose_boern', label: 'Psykotiske Tilstande (Børn/Unge)', icd: 'F20-29', icon: User },
+        { id: 'bipolar', label: 'Bipolar Lidelse', icd: 'F31', icon: Activity },
+        { id: 'depression', label: 'Unipolar Depression', icd: 'F32-33', icon: Brain },
+        { id: 'angst', label: 'Angsttilstande', icd: 'F40-41', icon: Activity },
+        { id: 'ocd', label: 'Obsessiv-kompulsiv Tilstand (OCD)', icd: 'F42', icon: Activity },
+        { id: 'spiseforstyrrelser', label: 'Spiseforstyrrelser', icd: 'F50', icon: Activity },
+        { id: 'borderline', label: 'Emotionel Ustabil Personlighedsstruktur', icd: 'F60.3', icon: Brain },
+        { id: 'autisme', label: 'Autisme (Børn/Unge)', icd: 'F84', icon: User },
+        { id: 'adhd', label: 'ADHD / ADD (Voksne)', icd: 'F90', icon: Activity },
     ];
 
     return (
@@ -266,9 +266,12 @@ function TreatmentGuidelinesApp({ onNavigate }) {
                                     <div className="absolute inset-0 bg-gradient-to-r from-[#F2F6F3] to-transparent -z-10"></div>
                                 )}
                                 <item.icon className={`h-5 w-5 shrink-0 transition-colors duration-300 ${activeGuideline === item.id ? 'text-[#839788]' : 'opacity-50'}`} />
-                                <span className="text-sm leading-tight">{item.label}</span>
+                                <span className="text-sm leading-tight flex-1">{item.label}</span>
+                                {item.icd && (
+                                    <span className="text-[10px] font-mono font-medium text-[#839788]/70 px-1.5 py-0.5 rounded-md bg-[#839788]/10 whitespace-nowrap">{item.icd}</span>
+                                )}
                                 {activeGuideline === item.id && (
-                                    <ChevronRight className="w-4 h-4 ml-auto text-[#839788]/50" />
+                                    <ChevronRight className="w-4 h-4 ml-auto text-[#839788]/50 shrink-0" />
                                 )}
                             </button>
                         ))}

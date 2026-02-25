@@ -1,5 +1,5 @@
 export const PSYKOSE_VOKSNE_GUIDELINE = {
-    title: 'Psykotiske Tilstande hos Voksne',
+    title: 'Psykotiske Tilstande (inkl. Skizofreni) hos Voksne',
     subtitle: 'NKR og RADS-vejledning for voksne',
     pdfs: [
         { title: 'RADS Psykotiske Tilstande (2016)', url: `${import.meta.env.BASE_URL}pdf/beh-jan-2016-psykotiske-tilstande-hos-voksne.pdf` },

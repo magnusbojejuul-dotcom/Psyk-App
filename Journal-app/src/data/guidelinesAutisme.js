@@ -6,6 +6,7 @@ export const AUTISME_GUIDELINE = {
     ],
     intro: 'Vejledninger anbefaler primært helhedsorienterede, pædagogiske og forældremedierede indsatser for børn og unge med autisme. Farmakologisk behandling er yderst restriktivt.',
     algorithmTitle: 'Klinisk Vejledning',
+    isStepBased: false,
     algorithm: [
         {
             title: 'Ikke-Farmakologiske (Pædagogisk/Psykologisk)',

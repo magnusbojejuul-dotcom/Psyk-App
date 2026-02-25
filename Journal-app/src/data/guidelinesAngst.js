@@ -6,6 +6,7 @@ export const ANGST_GUIDELINE = {
     ],
     intro: 'Vejledningen beskriver farmakologisk behandling i almen praksis af medicinsk behandlingskrævende generaliseret angst, socialfobi, panikangst og andre angsttilstande for voksne over 18 år.',
     algorithmTitle: 'Klinisk Vejledning',
+    isStepBased: false,
     algorithm: [
         {
             title: 'Generaliseret Angst',

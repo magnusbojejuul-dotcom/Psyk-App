@@ -4,6 +4,7 @@ export const PSYKOSE_BOERN_GUIDELINE = {
     pdfUrl: `${import.meta.env.BASE_URL}pdf/psykotiske-tilstande-boern-behandlingsvejledning.pdf`,
     intro: 'Vejledningen sikrer national konsensus om behandling med antipsykotika til børn og unge (< 18 år) med lidelser inden for det skizofreniforme spektrum. Behandlingen varetages altid af speciallæger i børne- og ungdomspsykiatri.',
     algorithmTitle: 'Klinisk Vejledning',
+    isStepBased: false,
     algorithm: [
         {
             title: 'Børn under 13 år',

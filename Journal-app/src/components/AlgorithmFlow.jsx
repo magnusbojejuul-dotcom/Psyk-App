@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { Info } from './Icons';
 
-export function AlgorithmFlow({ steps }) {
+export function AlgorithmFlow({ steps, isStepBased = true }) {
     const [hoveredStep, setHoveredStep] = useState(null);
 
     return (
         <div className="relative max-w-3xl mx-auto py-8">
             {/* Main vertical line */}
-            <div className="absolute left-8 top-12 bottom-12 w-0.5 bg-gradient-to-b from-[#839788] via-[#839788]/50 to-transparent z-0 hidden md:block"></div>
+            {isStepBased && (
+                <div className="absolute left-8 top-12 bottom-12 w-0.5 bg-gradient-to-b from-[#839788] via-[#839788]/50 to-transparent z-0 hidden md:block"></div>
+            )}
 
             <div className="space-y-6 relative z-10">
                 {steps.map((step, index) => (
@@ -17,11 +19,17 @@ export function AlgorithmFlow({ steps }) {
                         onMouseEnter={() => setHoveredStep(index)}
                         onMouseLeave={() => setHoveredStep(null)}
                     >
-                        {/* Number Indicator */}
-                        <div className="shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br from-white to-[#F9F8F6] shadow-sm border border-[#E8E4D9] flex flex-col items-center justify-center text-[#839788] font-bold group-hover:from-[#839788] group-hover:to-[#6A7A6E] group-hover:text-white transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 z-10 relative isolate overflow-hidden">
-                            <span className="text-[10px] uppercase tracking-widest opacity-70 mb-0.5">Trin</span>
-                            <span className="text-2xl leading-none">{index + 1}</span>
-                        </div>
+                        {/* Indicator */}
+                        {isStepBased ? (
+                            <div className="shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br from-white to-[#F9F8F6] shadow-sm border border-[#E8E4D9] flex flex-col items-center justify-center text-[#839788] font-bold group-hover:from-[#839788] group-hover:to-[#6A7A6E] group-hover:text-white transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 z-10 relative isolate overflow-hidden">
+                                <span className="text-[10px] uppercase tracking-widest opacity-70 mb-0.5">Trin</span>
+                                <span className="text-2xl leading-none">{index + 1}</span>
+                            </div>
+                        ) : (
+                            <div className="shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br from-white to-[#F9F8F6] shadow-sm border border-[#E8E4D9] flex items-center justify-center text-[#839788] group-hover:from-[#839788] group-hover:to-[#6A7A6E] group-hover:text-white transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 z-10 relative isolate overflow-hidden">
+                                <div className="w-3 h-3 md:w-4 md:h-4 rounded-full bg-[#839788]/40 border-2 border-[#839788]/60 group-hover:bg-white group-hover:border-white/90 shadow-sm transition-all duration-300"></div>
+                            </div>
+                        )}
 
                         {/* Content Card */}
                         <div className="flex-1 bg-white/80 backdrop-blur-sm border border-[#E8E4D9] rounded-2xl p-6 shadow-sm group-hover:shadow-xl group-hover:border-[#839788]/50 group-hover:-translate-y-1 transition-all duration-300 relative overflow-hidden isolate">

@@ -7,6 +7,7 @@ export const SPISEFORSTYRRELSER_GUIDELINE = {
     ],
     intro: 'Vejledninger for udredning og behandling af Anorexia Nervosa og Bulimia Nervosa, baseret på Sundhedsstyrelsens NKR.',
     algorithmTitle: 'Klinisk Vejledning',
+    isStepBased: false,
     algorithm: [
         {
             title: 'Generelle Principper',

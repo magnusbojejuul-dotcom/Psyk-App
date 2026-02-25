@@ -6,6 +6,7 @@ export const OCD_GUIDELINE = {
     ],
     intro: 'Anbefalinger for behandling af børn, unge og voksne med OCD, med hovedvægt på Kognitiv Adfærdsterapi (KAT) og retningslinjer for farmakologisk tillæg.',
     algorithmTitle: 'Klinisk Vejledning',
+    isStepBased: false,
     algorithm: [
         {
             title: 'Mild OCD',

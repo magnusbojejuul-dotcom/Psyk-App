@@ -8,6 +8,7 @@ export const ADHD_GUIDELINE = {
     ],
     intro: 'Vejledningen sikrer national konsensus for diagnostik, behandling og rammerne for kontrol af ADHD hos voksne.',
     algorithmTitle: 'Klinisk Vejledning',
+    isStepBased: false,
     algorithm: [
         {
             title: 'Udredning (Diagnostik)',

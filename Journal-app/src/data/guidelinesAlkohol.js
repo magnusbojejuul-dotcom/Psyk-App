@@ -6,6 +6,7 @@ export const ALKOHOL_GUIDELINE = {
     ],
     intro: 'NKR omhandler udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse (fx personlighedsforstyrrelser, affektive lidelser, angstlidelser, psykotiske lidelser og ADHD).',
     algorithmTitle: 'Klinisk Vejledning',
+    isStepBased: false,
     algorithm: [
         {
             title: 'Identifikation og Udredning',
