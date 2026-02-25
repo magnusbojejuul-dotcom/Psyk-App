@@ -11,6 +11,7 @@ import TUG from '../components/scoring/TUG';
 import Rusmiddeltestning from '../components/scoring/Rusmiddeltestning';
 import Audit from '../components/scoring/Audit';
 import Dudit from '../components/scoring/Dudit';
+import Cows from '../components/scoring/Cows';
 
 function ScoringToolsApp({ onNavigate }) {
     const [activeTool, setActiveTool] = useState('barthel-adl');
@@ -37,6 +38,7 @@ function ScoringToolsApp({ onNavigate }) {
             tools: [
                 { id: 'audit', name: 'AUDIT (Alkohol)' },
                 { id: 'dudit', name: 'DUDIT (Stoffer)' },
+                { id: 'cows', name: 'COWS (Opiatabstinenser)' },
                 { id: 'rusmiddel', name: 'Rusmiddeltestning' },
             ]
         }
@@ -108,6 +110,7 @@ function ScoringToolsApp({ onNavigate }) {
                     {activeTool === 'tug' && <TUG />}
                     {activeTool === 'audit' && <Audit />}
                     {activeTool === 'dudit' && <Dudit />}
+                    {activeTool === 'cows' && <Cows />}
                     {activeTool === 'rusmiddel' && <Rusmiddeltestning />}
                 </div>
             </main>
