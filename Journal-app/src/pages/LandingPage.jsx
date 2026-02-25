@@ -3,7 +3,7 @@ import { Brain, Activity, Cookie, FileText, ChevronRight, Stethoscope, Pill } fr
 
 function LandingPage({ onNavigate }) {
     return (
-        <div className="min-h-screen w-full relative overflow-hidden flex flex-col items-center justify-center bg-[#F9F8F6] text-[#3A4A40] font-sans selection:bg-[#E2E8DF] selection:text-slate-900">
+        <div className="min-h-screen w-full relative flex flex-col bg-[#F9F8F6] text-[#3A4A40] font-sans selection:bg-[#E2E8DF] selection:text-slate-900">
 
             {/* Background ambient glowing shapes */}
             <div className="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
@@ -12,7 +12,7 @@ function LandingPage({ onNavigate }) {
                 <div className="absolute top-[20%] left-[60%] w-[30%] h-[30%] rounded-full bg-[#D9E1DA]/40 blur-[80px]"></div>
             </div>
 
-            <header className="absolute top-0 w-full p-6 md:p-8 flex justify-between items-start md:items-center z-20">
+            <header className="w-full p-6 md:p-8 flex justify-between items-start md:items-center z-20 shrink-0">
                 <div className="flex flex-col md:flex-row items-start md:items-center gap-3">
                     <div className="bg-[#839788] p-2 rounded-xl shadow-sm shrink-0">
                         <Activity className="text-white h-5 w-5" />
@@ -21,7 +21,7 @@ function LandingPage({ onNavigate }) {
                 </div>
             </header>
 
-            <main className="z-10 w-full max-w-5xl px-6 flex flex-col items-center justify-center text-center -mt-10">
+            <main className="z-10 w-full max-w-5xl mx-auto px-6 flex-1 flex flex-col items-center justify-center text-center py-12">
                 <h1 className="text-4xl md:text-5xl font-bold text-[#3A4A40] mb-4 tracking-tight">Velkommen tilbage</h1>
                 <p className="text-lg text-[#839788] mb-12 max-w-2xl">
                     Vælg et klinisk værktøj nedenfor for at starte din dokumentationsproces.
@@ -154,7 +154,7 @@ function LandingPage({ onNavigate }) {
                 </div>
             </main>
 
-            <footer className="absolute bottom-6 text-center w-full z-20">
+            <footer className="py-6 text-center w-full z-20 shrink-0">
                 <p className="text-[#839788]/60 text-xs font-medium">Klinisk Redskabssystem v1.0 &copy; 2026</p>
             </footer>
         </div>
