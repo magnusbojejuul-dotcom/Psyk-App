@@ -9,6 +9,8 @@ import MDI from '../components/scoring/MDI';
 import MMS from '../components/scoring/MMS';
 import TUG from '../components/scoring/TUG';
 import Rusmiddeltestning from '../components/scoring/Rusmiddeltestning';
+import Audit from '../components/scoring/Audit';
+import Dudit from '../components/scoring/Dudit';
 
 function ScoringToolsApp({ onNavigate }) {
     const [activeTool, setActiveTool] = useState('barthel-adl');
@@ -33,6 +35,8 @@ function ScoringToolsApp({ onNavigate }) {
         {
             name: 'Misbrug & Afhængighed',
             tools: [
+                { id: 'audit', name: 'AUDIT (Alkohol)' },
+                { id: 'dudit', name: 'DUDIT (Stoffer)' },
                 { id: 'rusmiddel', name: 'Rusmiddeltestning' },
             ]
         }
@@ -102,6 +106,8 @@ function ScoringToolsApp({ onNavigate }) {
                     {activeTool === 'mdi' && <MDI />}
                     {activeTool === 'mms' && <MMS />}
                     {activeTool === 'tug' && <TUG />}
+                    {activeTool === 'audit' && <Audit />}
+                    {activeTool === 'dudit' && <Dudit />}
                     {activeTool === 'rusmiddel' && <Rusmiddeltestning />}
                 </div>
             </main>
