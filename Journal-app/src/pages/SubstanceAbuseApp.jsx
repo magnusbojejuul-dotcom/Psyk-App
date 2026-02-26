@@ -4,6 +4,7 @@ import { RUSMIDDEL_ALKOHOL } from '../data/guidelinesRusmiddelAlkohol';
 import { RUSMIDDEL_BENZO } from '../data/guidelinesRusmiddelBenzo';
 import { RUSMIDDEL_OPIOID } from '../data/guidelinesRusmiddelOpioid';
 import { AlgorithmFlow } from '../components/AlgorithmFlow';
+import { renderWithDrugLinks } from '../utils/linkifyDrugs';
 
 function SubstanceAbuseApp({ onNavigate }) {
     const [activeGuideline, setActiveGuideline] = useState('alkohol');
@@ -51,8 +52,8 @@ function SubstanceAbuseApp({ onNavigate }) {
                                     {getIconComponent(symp.icon)}
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-[#3A4A40] text-sm leading-tight mb-1">{symp.name}</h4>
-                                    <p className="text-xs text-[#5C6D63] leading-relaxed">{symp.desc}</p>
+                                    <h4 className="font-bold text-[#3A4A40] text-sm leading-tight mb-1">{renderWithDrugLinks(symp.name, onNavigate)}</h4>
+                                    <p className="text-xs text-[#5C6D63] leading-relaxed">{renderWithDrugLinks(symp.desc, onNavigate)}</p>
                                 </div>
                             </div>
                         ))}
@@ -62,7 +63,7 @@ function SubstanceAbuseApp({ onNavigate }) {
                         <Stethoscope className="w-6 h-6 text-red-700 shrink-0 mt-1" />
                         <div>
                             <h4 className="font-bold text-red-900 text-sm mb-1 uppercase tracking-wide">Behandling & Sikkerhed</h4>
-                            <p className="text-sm font-medium text-red-800/90 leading-relaxed">{toxData.management}</p>
+                            <p className="text-sm font-medium text-red-800/90 leading-relaxed">{renderWithDrugLinks(toxData.management, onNavigate)}</p>
                         </div>
                     </div>
                 </div>
@@ -102,7 +103,7 @@ function SubstanceAbuseApp({ onNavigate }) {
                         {guideline.algorithmTitle || 'Abstinensbehandling & Protokol'}
                         <Activity className="w-5 h-5 text-[#839788]" />
                     </h3>
-                    <AlgorithmFlow steps={guideline.algorithm} isStepBased={guideline.isStepBased !== false} />
+                    <AlgorithmFlow steps={guideline.algorithm} isStepBased={guideline.isStepBased !== false} onNavigate={onNavigate} />
                 </div>
             </div>
         );

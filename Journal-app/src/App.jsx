@@ -5,6 +5,7 @@ import GuidelinesApp from './pages/GuidelinesApp';
 import TreatmentGuidelinesApp from './pages/TreatmentGuidelinesApp';
 import ScoringToolsApp from './pages/ScoringToolsApp';
 import SubstanceAbuseApp from './pages/SubstanceAbuseApp';
+import PsykofarmakaApp from './pages/PsykofarmakaApp';
 
 class ErrorBoundary extends React.Component {
     constructor(props) {
@@ -33,9 +34,12 @@ class ErrorBoundary extends React.Component {
 
 function App() {
     const [currentView, setCurrentView] = useState('home');
+    const [navArgs, setNavArgs] = useState(null);
 
-    const handleNavigate = (view) => {
+    const handleNavigate = (view, args = null) => {
         setCurrentView(view);
+        setNavArgs(args);
+        window.scrollTo(0, 0);
     };
 
     return (
@@ -47,6 +51,7 @@ function App() {
                 {currentView === 'treatment' && <TreatmentGuidelinesApp onNavigate={handleNavigate} />}
                 {currentView === 'scoring' && <ScoringToolsApp onNavigate={handleNavigate} />}
                 {currentView === 'substance' && <SubstanceAbuseApp onNavigate={handleNavigate} />}
+                {currentView === 'psykofarmaka' && <PsykofarmakaApp onNavigate={handleNavigate} initialDrug={navArgs} />}
             </div>
         </ErrorBoundary>
     );

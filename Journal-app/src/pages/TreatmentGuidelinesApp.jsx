@@ -14,6 +14,7 @@ import { AUTISME_GUIDELINE } from '../data/guidelinesAutisme';
 import { BORDERLINE_GUIDELINE } from '../data/guidelinesPersonlighed';
 import { AlgorithmFlow } from '../components/AlgorithmFlow';
 import { SplitAlgorithmFlow } from '../components/SplitAlgorithmFlow';
+import { renderWithDrugLinks } from '../utils/linkifyDrugs';
 
 function TreatmentGuidelinesApp({ onNavigate }) {
     const [activeGuideline, setActiveGuideline] = useState('akut_beroligende');
@@ -26,8 +27,8 @@ function TreatmentGuidelinesApp({ onNavigate }) {
                     {item.valg}
                 </div>
                 <div>
-                    <h4 className="font-bold text-[#3A4A40] whitespace-pre-line">{item.praeparat}</h4>
-                    <p className="text-sm text-slate-600 mt-1 leading-relaxed">{item.bemaerkning}</p>
+                    <h4 className="font-bold text-[#3A4A40] whitespace-pre-line">{renderWithDrugLinks(item.praeparat, onNavigate)}</h4>
+                    <p className="text-sm text-slate-600 mt-1 leading-relaxed">{renderWithDrugLinks(item.bemaerkning, onNavigate)}</p>
                 </div>
             </div>
         </div>
@@ -197,9 +198,9 @@ function TreatmentGuidelinesApp({ onNavigate }) {
                         {guideline.algorithmTitle || 'Behandlingsalgoritme'}
                     </h3>
                     {guideline.splitAlgorithm ? (
-                        <SplitAlgorithmFlow data={guideline.splitAlgorithm} />
+                        <SplitAlgorithmFlow data={guideline.splitAlgorithm} onNavigate={onNavigate} />
                     ) : (
-                        <AlgorithmFlow steps={guideline.algorithm} isStepBased={guideline.isStepBased !== false} />
+                        <AlgorithmFlow steps={guideline.algorithm} isStepBased={guideline.isStepBased !== false} onNavigate={onNavigate} />
                     )}
                 </div>
             </div>

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Info } from './Icons';
+import { renderWithDrugLinks } from '../utils/linkifyDrugs';
 
-export function AlgorithmFlow({ steps, isStepBased = true }) {
+export function AlgorithmFlow({ steps, isStepBased = true, onNavigate }) {
     const [hoveredStep, setHoveredStep] = useState(null);
 
     return (
@@ -36,8 +37,8 @@ export function AlgorithmFlow({ steps, isStepBased = true }) {
                             {/* Inner glow on hover */}
                             <div className="absolute inset-0 bg-gradient-to-br from-[#F2F6F3]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
 
-                            <h3 className="text-xl font-bold text-[#3A4A40] mb-2">{step.title}</h3>
-                            <p className="text-[#5C6B61] leading-relaxed mb-4">{step.summary}</p>
+                            <h3 className="text-xl font-bold text-[#3A4A40] mb-2">{renderWithDrugLinks(step.title, onNavigate)}</h3>
+                            <p className="text-[#5C6B61] leading-relaxed mb-4">{renderWithDrugLinks(step.summary, onNavigate)}</p>
 
                             {/* Detailed Info Button (Mobile) or Hover Indicator (Desktop) */}
                             {step.details && (
@@ -52,7 +53,7 @@ export function AlgorithmFlow({ steps, isStepBased = true }) {
                                     <div className="pt-4 border-t border-[#E8E4D9]/60 mt-2">
                                         <h4 className="text-xs font-black uppercase tracking-widest text-[#839788] mb-3">Uddrag fra originalt dokument:</h4>
                                         <div className="bg-[#FAF9F6] p-4 rounded-xl border border-[#E8E4D9]/50 text-sm text-[#4A5A50] whitespace-pre-line leading-relaxed shadow-inner">
-                                            {step.details}
+                                            {renderWithDrugLinks(step.details, onNavigate)}
                                         </div>
                                     </div>
                                 </div>

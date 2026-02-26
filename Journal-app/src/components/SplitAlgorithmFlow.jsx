@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Info } from './Icons';
+import { renderWithDrugLinks } from '../utils/linkifyDrugs';
 
-export function SplitAlgorithmFlow({ data }) {
+export function SplitAlgorithmFlow({ data, onNavigate }) {
     const [hoveredNode, setHoveredNode] = useState(null);
 
     // Render a single node block
@@ -24,8 +25,8 @@ export function SplitAlgorithmFlow({ data }) {
                     {/* Inner glow on hover */}
                     <div className="absolute inset-0 bg-gradient-to-br from-[#F2F6F3]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
 
-                    <h3 className="text-lg font-bold text-[#3A4A40] mb-2 text-center whitespace-pre-line">{node.title}</h3>
-                    {node.summary && <p className="text-[#5C6B61] text-sm leading-relaxed mb-3 text-center whitespace-pre-line">{node.summary}</p>}
+                    <h3 className="text-lg font-bold text-[#3A4A40] mb-2 text-center whitespace-pre-line">{renderWithDrugLinks(node.title, onNavigate)}</h3>
+                    {node.summary && <p className="text-[#5C6B61] text-sm leading-relaxed mb-3 text-center whitespace-pre-line">{renderWithDrugLinks(node.summary, onNavigate)}</p>}
 
                     {/* Detailed Info Indicator */}
                     {node.details && (
@@ -43,7 +44,7 @@ export function SplitAlgorithmFlow({ data }) {
                                 <div className="pt-4 border-t border-[#E8E4D9]/60 mt-1">
                                     <h4 className="text-[10px] font-black uppercase tracking-widest text-[#839788] mb-2">Uddybende:</h4>
                                     <div className="bg-[#FAF9F6] p-3.5 rounded-xl border border-[#E8E4D9]/50 text-xs text-[#4A5A50] whitespace-pre-line leading-relaxed shadow-inner">
-                                        {node.details}
+                                        {renderWithDrugLinks(node.details, onNavigate)}
                                     </div>
                                 </div>
                             </div>
