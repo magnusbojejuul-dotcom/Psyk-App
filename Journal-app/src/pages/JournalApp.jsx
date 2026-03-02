@@ -393,10 +393,6 @@ function JournalApp({ onNavigate }) {
         }
         setSelectedIds(newSelection);
 
-        if (manualEditMode) {
-            setNotification({ message: 'Valg gemt. Tekst opdateres ikke i manuel tilstand.', type: 'error' });
-            setTimeout(() => setNotification(null), 2500);
-        }
     };
 
     const setNormalStatus = () => {
