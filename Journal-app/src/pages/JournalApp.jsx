@@ -220,7 +220,8 @@ function JournalApp({ onNavigate }) {
 
                     if (hasAbnormality && selectedOptions.length > 0) {
                         const text = processCategoryOptions(sec.options, cat, ids, details);
-                        obsLines.push(`${cat}: ${text}`);
+                        const formattedCat = cat.toLowerCase().replace(/&/g, 'og');
+                        obsLines.push(`Ad ${formattedCat}:\n${text}\n`);
                         movedCategories.add(cat);
                     }
                 });
@@ -240,10 +241,10 @@ function JournalApp({ onNavigate }) {
 
             if (sec.id === 'psych_actual') {
                 if (contactReason.trim()) {
-                    sectionLines.push(`Kontaktårsag: ${contactReason.trim()}`);
+                    sectionLines.push(`Ad kontaktårsag:\n${contactReason.trim()}\n`);
                 }
                 if (timeline.trim()) {
-                    sectionLines.push(`Sygdomsdebut & Udløsende faktorer: ${timeline.trim()}`);
+                    sectionLines.push(`Ad sygdomsdebut og udløsende faktorer:\n${timeline.trim()}\n`);
                 }
             }
 
@@ -251,7 +252,7 @@ function JournalApp({ onNavigate }) {
                 if (uniform) {
                     const day = diets[0];
                     if (day) {
-                        sectionLines.push("Kostanamnese: Patienten angiver at spise det samme hver dag. Nedenstående er repræsentativt for det daglige indtag:");
+                        sectionLines.push("Ad kostanamnese:\nPatienten angiver at spise det samme hver dag. Nedenstående er repræsentativt for det daglige indtag:");
                         if (day.meals.morgen) sectionLines.push(`- Morgen: ${day.meals.morgen}`);
                         if (day.meals.formiddag) sectionLines.push(`- Før frokost: ${day.meals.formiddag}`);
                         if (day.meals.frokost) sectionLines.push(`- Frokost: ${day.meals.frokost}`);
@@ -259,9 +260,10 @@ function JournalApp({ onNavigate }) {
                         if (day.meals.aften) sectionLines.push(`- Aften: ${day.meals.aften}`);
                         if (day.meals.sen_aften) sectionLines.push(`- Efter aften: ${day.meals.sen_aften}`);
                         if (day.meals.vaeske) sectionLines.push(`- Væske: ${day.meals.vaeske}`);
+                        sectionLines.push("");
                     }
                 } else {
-                    sectionLines.push("Kostanamnese (eksempler fra sidste 14 dage):");
+                    sectionLines.push("Ad kostanamnese:\nEksempler fra sidste 14 dage:");
                     diets.forEach(day => {
                         sectionLines.push(`${day.label || 'Uden navn'}:`);
                         if (day.meals.morgen) sectionLines.push(`- Morgen: ${day.meals.morgen}`);
@@ -285,7 +287,10 @@ function JournalApp({ onNavigate }) {
 
                 if (selectedInCat.length > 0) {
                     const text = processCategoryOptions(categoryOptions, cat, ids, details);
-                    if (text) sectionLines.push(`${cat}: ${text}`);
+                    if (text) {
+                        const formattedCat = cat.toLowerCase().replace(/&/g, 'og');
+                        sectionLines.push(`Ad ${formattedCat}:\n${text}\n`);
+                    }
                 }
             });
 
