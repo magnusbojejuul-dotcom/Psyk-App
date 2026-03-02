@@ -38,9 +38,10 @@ export const SOMATIC_ACT_OPTIONS = [
     { id: 'act_appetite_ok', label: 'Appetit normal', category: 'Appetit/Vægt', text: 'Normal appetit og stabil vægt.', isDefault: true, exclude: ['act_appetite_low', 'act_appetite_high', 'act_weight_loss'] },
     { id: 'act_appetite_low', label: 'Nedsat appetit', category: 'Appetit/Vægt', text: 'Nedsat lyst til mad.', exclude: ['act_appetite_ok'], smartMerge: { prefix: 'Angiver ', item: 'nedsat appetit', suffix: '.' } },
     { id: 'act_weight_loss', label: 'Vægttab', category: 'Appetit/Vægt', text: 'Angiver utilsigtet vægttab.', exclude: ['act_appetite_ok'], smartMerge: { prefix: 'Angiver ', item: 'vægttab', suffix: '.' } },
-    { id: 'act_cave_ok', label: 'Ingen CAVE', category: 'CAVE (Allergier)', text: 'Adspurgt benægter patienten at have kendte allergier (CAVE).', isDefault: true, exclude: ['act_cave_yes', 'act_cave_not_asked'] },
-    { id: 'act_cave_yes', label: 'Har Allergi (CAVE)', category: 'CAVE (Allergier)', text: 'Spurgt ind til allergier og patienten angiver følgende (CAVE):', hasInput: true, detailInParens: false, inputPlaceholder: 'Beskriv allergier her...', exclude: ['act_cave_ok', 'act_cave_not_asked'] },
-    { id: 'act_cave_not_asked', label: 'Ikke spurgt til CAVE', category: 'CAVE (Allergier)', text: 'Der er ikke aktuelt spurgt ind til allergier (CAVE).', exclude: ['act_cave_ok', 'act_cave_yes'] },
+    { id: 'act_cave_ok', label: 'Ingen CAVE', category: 'CAVE (Allergier)', text: 'Adspurgt benægter patienten at have kendte allergier (CAVE).', isDefault: true, exclude: ['act_cave_yes', 'act_cave_not_asked', 'act_cave_no_new'] },
+    { id: 'act_cave_yes', label: 'Har Allergi (CAVE)', category: 'CAVE (Allergier)', text: 'Spurgt ind til allergier og patienten angiver følgende (CAVE):', hasInput: true, detailInParens: false, inputPlaceholder: 'Beskriv allergier her...', exclude: ['act_cave_ok', 'act_cave_not_asked', 'act_cave_no_new'] },
+    { id: 'act_cave_not_asked', label: 'Ikke spurgt til CAVE', category: 'CAVE (Allergier)', text: 'Der er ikke aktuelt spurgt ind til allergier (CAVE).', exclude: ['act_cave_ok', 'act_cave_yes', 'act_cave_no_new'] },
+    { id: 'act_cave_no_new', label: 'Ingen nytilkomne', category: 'CAVE (Allergier)', text: 'Adspurgt til CAVE. Ingen nytilkomne.', exclude: ['act_cave_ok', 'act_cave_yes', 'act_cave_not_asked'] },
 ];
 
 export const SOMATIC_OBJ_OPTIONS = [
