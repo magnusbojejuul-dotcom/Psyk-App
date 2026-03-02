@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
+import DiffMatchPatch from 'diff-match-patch';
 import GdprBanner from '../GdprBanner';
 import { ANOREXIA_OPTIONS } from '../data/anorexiaOptions';
 import Input from '../components/Input';
@@ -26,6 +27,11 @@ function JournalApp({ onNavigate }) {
     const [isUniformDiet, setIsUniformDiet] = useState(false);
 
     const [manualEditMode, setManualEditMode] = useState(false);
+
+    // Auto-merge refs
+    const lastAutoTextRef = useRef('');
+    const lastUserTextRef = useRef('');
+    const dmp = useMemo(() => new DiffMatchPatch(), []);
 
     // Custom Modal State
     const [confirmDialog, setConfirmDialog] = useState({ isOpen: false, action: null });
@@ -295,10 +301,59 @@ function JournalApp({ onNavigate }) {
         return lines.join('\n');
     };
 
+
+
     useEffect(() => {
+        const autoText = generateTextContent(activeSection, selectedIds, optionDetails, contactReasonText, timelineText, dietDays, isUniformDiet, showSummary);
+
         if (!manualEditMode) {
-            const text = generateTextContent(activeSection, selectedIds, optionDetails, contactReasonText, timelineText, dietDays, isUniformDiet, showSummary);
-            setGeneratedText(text);
+            setGeneratedText(autoText);
+            lastAutoTextRef.current = autoText;
+            lastUserTextRef.current = autoText;
+        } else {
+            // Manuel redigering slået til
+            // Beregn linje-kalkuleret diff for at undgå at ny tekst skubber manuel tekst ned
+            const a = dmp.diff_linesToChars_(lastAutoTextRef.current, autoText);
+            const lineText1 = a.chars1;
+            const lineText2 = a.chars2;
+            const lineArray = a.lineArray;
+
+            const diffs = dmp.diff_main(lineText1, lineText2, false);
+            dmp.diff_charsToLines_(diffs, lineArray);
+
+            let newText = generatedText;
+            let appendText = '';
+
+            diffs.forEach(([op, text]) => {
+                const isOnlyWhitespace = !text.trim();
+
+                if (op === -1 && !isOnlyWhitespace) {
+                    // Fjern slettet auto-tekst fra vores current tekst
+                    if (newText.includes(text)) {
+                        newText = newText.replace(text, '');
+                    } else {
+                        // Hvis brugeren mangler linjeskiftet, søg uden
+                        const trimmed = text.trim();
+                        if (newText.includes(trimmed)) {
+                            newText = newText.replace(trimmed, '');
+                        }
+                    }
+                } else if (op === 1 && !isOnlyWhitespace) {
+                    // Nye linjer tilføjes i bunden
+                    appendText += text;
+                }
+            });
+
+            if (appendText.trim()) {
+                newText = newText.trimEnd() + '\n\n' + appendText.trim() + '\n';
+            }
+
+            // Oprydning hvis der opstod for mange tomme linjer
+            newText = newText.replace(/\n{3,}/g, '\n\n');
+
+            setGeneratedText(newText);
+            lastAutoTextRef.current = autoText;
+            lastUserTextRef.current = newText;
         }
     }, [selectedIds, activeSection, showSummary, optionDetails, contactReasonText, timelineText, dietDays, isUniformDiet, manualEditMode]);
 
@@ -308,8 +363,17 @@ function JournalApp({ onNavigate }) {
     };
 
     const handleManualTextChange = (e) => {
-        setGeneratedText(e.target.value);
-        setManualEditMode(true);
+        const newValue = e.target.value;
+        setGeneratedText(newValue);
+        lastUserTextRef.current = newValue;
+
+        // Auto-gendan hvis teksten matcher den auto-genererede tekst
+        const autoText = generateTextContent(activeSection, selectedIds, optionDetails, contactReasonText, timelineText, dietDays, isUniformDiet, showSummary);
+        if (newValue === autoText) {
+            setManualEditMode(false);
+        } else {
+            setManualEditMode(true);
+        }
     };
 
     const toggleOption = (option) => {
@@ -353,11 +417,7 @@ function JournalApp({ onNavigate }) {
 
         setSelectedIds(newSet);
 
-        if (manualEditMode) {
-            setNotification({ message: 'Normalstatus sat. Tekst opdateres ikke i manuel tilstand.', type: 'error' });
-        } else {
-            setNotification({ message: 'Normalstatus indsat', type: 'success' });
-        }
+        setNotification({ message: 'Normalstatus indsat', type: 'success' });
         setTimeout(() => setNotification(null), 3000);
     };
 
@@ -549,7 +609,7 @@ function JournalApp({ onNavigate }) {
     const renderCardGrid = (dataSet) => {
         const categories = Array.from(new Set(dataSet.map(o => o.category)));
         return (
-            <div className={`pb-20 transition-all duration-300 ${manualEditMode ? 'opacity-50 pointer-events-none grayscale-[30%]' : ''}`}>
+            <div className={`pb-20 transition-all duration-300`}>
                 {activeSection === 'psych_actual' && (
                     <div className="mb-6 glass-panel rounded-2xl overflow-hidden">
                         <div className="bg-[#FAF9F6]/50 px-5 py-4 border-b border-[#E8E4D9]/50 flex items-center gap-2">
@@ -740,7 +800,7 @@ function JournalApp({ onNavigate }) {
                                                     {isSelected && (isPathology ? <AlertCircle className="w-4 h-4 text-[#D9A8A8] flex-shrink-0" /> : <CheckCircle2 className="w-4 h-4 text-[#9EAF9F] flex-shrink-0" />)}
                                                 </div>
                                             </button>
-                                            {isSelected && (isPathology || option.hasInput) && (
+                                            {isSelected && (
                                                 <div className="mt-2 mb-2 ml-2 pl-3 border-l-2 border-[#839788]/30">
                                                     <input
                                                         type="text"
@@ -892,16 +952,16 @@ function JournalApp({ onNavigate }) {
                         </div>
 
                         {manualEditMode && activeSection !== 'full_note' && (
-                            <div className="mb-6 w-full glass-panel border border-amber-200/50 rounded-2xl p-4 flex items-center justify-between shadow-sm animate-in fade-in slide-in-from-top-2">
+                            <div className="mb-6 w-full glass-panel border border-emerald-200/50 rounded-2xl p-4 flex items-center justify-between shadow-sm animate-in fade-in slide-in-from-top-2">
                                 <div className="flex items-center gap-3">
-                                    <AlertCircle className="w-6 h-6 text-amber-500" />
+                                    <AlertCircle className="w-6 h-6 text-emerald-600" />
                                     <div>
-                                        <h4 className="font-bold text-amber-900 text-sm">Fri redigering er aktiv</h4>
-                                        <p className="text-amber-800/80 text-xs mt-0.5">Formularen er frosset for at beskytte dine manuelle indtastninger i højre side. Gendan synkronisering for at bruge formularen igen.</p>
+                                        <h4 className="font-bold text-[#3A4A40] text-sm">Fri redigering aktiv</h4>
+                                        <p className="text-[#3A4A40]/80 text-xs mt-0.5">Dine valgte ændringer flettes automatisk ind, mens din manuelle tekst bevares.</p>
                                     </div>
                                 </div>
                                 <button onClick={openSyncConfirm} className="px-4 py-2 bg-white/90 text-[#3A4A40] border border-[#E8E4D9] rounded-xl shadow-sm text-sm font-bold hover:bg-white transition-colors whitespace-nowrap cursor-pointer">
-                                    Gendan Synkronisering
+                                    Overskriv med standard-valg
                                 </button>
                             </div>
                         )}
@@ -944,8 +1004,8 @@ function JournalApp({ onNavigate }) {
                         </button>
                     </div>
                 </aside>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 }
 
