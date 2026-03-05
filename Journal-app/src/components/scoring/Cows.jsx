@@ -200,12 +200,34 @@ function Cows() {
             {/* Introductory Info Box */}
             <div className="bg-amber-50/50 border border-amber-200/60 rounded-2xl p-5 mb-8 text-sm text-[#5C6D63] shadow-sm flex items-start gap-4">
                 <Info className="w-6 h-6 text-amber-600 mt-1 shrink-0" />
-                <div className="space-y-2">
-                    <p>
-                        <strong className="text-amber-900 block mb-1">Bruges til vurdering af opioid-abstinenser</strong>
-                        For hver parameter vurderes udelukkende patientens direkte observationer eller svar ud fra de foreliggende opgørelser. Scoringssystemet bruges dels diagnostisk til at fastlægge graden af abstinenser, og dels terapeutisk (fx ved indstilling af Buprenorphin/Suboxon-dosis).
+                <div className="space-y-4">
+                    <p className="leading-relaxed">
+                        <strong className="text-amber-900 block mb-1.5 text-base">Klinisk vurdering af opioid-abstinenser</strong>
+                        COWS-skalaen (Clinical Opiate Withdrawal Scale) anvendes til at vurdere sværhedsgraden af opioid-abstinenser. Hvert parameter scores ud fra en kombination af klinikerens objektive observationer under samtalen og patientens egne angivelser. Skalaen bruges både diagnostisk til at monitorere abstinensforløbet over tid, og som et vigtigt terapeutisk redskab — typisk som pejlemærke for en rettidig og sikker opstart af buprenorphin-behandling.
                     </p>
-                    <p>Patienten <strong className="text-amber-900">IKKE</strong> have indtaget buprenorphin op til samtalen, da buprenorphin uden tilstedeværelse af tilstrækkeligt mange abstinenssymptomer på en fuld agonist (heroin, metadon, doltard) kan udløse meget pludselige og udtalte (præcipiterede) abstinenser.</p>
+                    <div className="bg-amber-100/60 rounded-xl p-4 border border-amber-200/80">
+                        <strong className="text-amber-900 flex items-center gap-2 mb-2">
+                            <span className="w-2 h-2 rounded-full bg-red-500 block shadow-sm"></span>
+                            Advarsel: Risiko for præcipiterede abstinenser ved opstart af buprenorphin
+                        </strong>
+                        <p className="text-amber-900/90 leading-relaxed text-sm">
+                            Patienten må <strong className="font-bold underline">IKKE</strong> have indtaget buprenorphin forud for vurderingen, hvis der planlægges opstart af buprenorphin-behandling. Buprenorphin er en partiel agonist med ekstremt høj receptoraffinitet. Indtages buprenorphin før patienten fremstår med tydelige og tilstrækkeligt svære abstinenser fra en fuld agonist (fx heroin, metadon eller morfin), vil præparatet fortrænge den fulde agonist og i stedet udløse akutte, voldsomme og meget pinefulde <em>præcipiterede (fremprovokerede) abstinenser</em>.
+                        </p>
+                    </div>
+                    <div className="pt-2 mt-2 border-t border-amber-200/50">
+                        <p className="text-xs text-amber-900/60 flex items-center gap-1">
+                            <span className="font-semibold italic">Kilde:</span>
+                            <a
+                                href="https://www.retsinformation.dk/eli/retsinfo/2016/10377"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-amber-700 hover:underline transition-colors block md:inline"
+                            >
+                                Sundhedsstyrelsens "Vejledning om lægelig behandling af stofmisbrug"
+                            </a>
+                            <span className="italic hidden md:inline"> (oprindeligt udviklet af Wesson & Ling, 2003)</span>
+                        </p>
+                    </div>
                 </div>
             </div>
 

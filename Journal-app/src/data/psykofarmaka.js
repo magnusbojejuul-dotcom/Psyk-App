@@ -1,4 +1,23 @@
 export const PSYKOFARMAKA_DATA = [
+    // Skift og Udtrapning (Switchtabel)
+    {
+        id: 'switchtabel_antidepressiva',
+        name: 'Medicinskift (Switchtabel)',
+        group: 'Antidepressiva',
+        subgroup: 'Krydstiltrædelse & Seponering',
+        effect: 'Ved skift mellem forskellige antidepressiva (fx SSRI til SNRI eller NaSSA) er det afgørende at følge korrekte retningslinjer for overlappende dosering, udtrapning og wash-out perioder. Dette gøres for at forhindre farlige interaktioner ned til receptorniveau og for at minimere patientens seponeringssymptomer.',
+        normalDose: 'Brug altid den interaktive hollandske "Switchtabel" til at slå det specifikke skift op (fra lægemiddel A til lægemiddel B). Tabellen viser præcis hvornår man går ned, holder pause, og starter det nye.',
+        featuredLink: {
+            title: 'Åbn Switchtabel.nl',
+            description: 'Slå direkte op mellem to præparater for at se korrekt overlappende dosering.',
+            url: 'https://www.psychiatrienet.nl/switchtabel'
+        },
+        sideEffects: [
+            { symptom: 'Serotonergt Syndrom', description: 'Livstruende tilstand med kognitive (konfusion), autonome (feber, sved) og somatiske (rigiditet, hyperrefleksi, klonus) symptomer. Udløses af overskud af serotonin – klassisk ved skift uden tilstrækkelig udvaskning.', treatment: 'Seponér omgående alle serotonerge midler! Kræver akut indlæggelse til støttende/kølende behandling og evt. benzodiazepin/cyproheptadin.' },
+            { symptom: 'Seponeringssyndrom', description: 'Fysisk abstinenslignende tilstand (influenzasymptomer, svimmelhed, elektriske stød "brain-zaps" i hovedet) udløst ved for brat reduktion.', treatment: 'Langsommere udtrapning. Kan især være kritisk ved stoffer med kort halveringstid som Venlafaxin og Paroxetin.' }
+        ],
+        sources: [{ title: 'Psychiatrienet.nl (Switchtabel)', url: 'https://www.psychiatrienet.nl/switchtabel' }]
+    },
     // Antidepressiva (SSRI)
     {
         id: 'sertralin',

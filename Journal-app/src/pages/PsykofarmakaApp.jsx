@@ -328,6 +328,29 @@ function PsykofarmakaApp({ onNavigate, initialDrug = null }) {
                                         {renderDetailCard('Normal Dosering', activeDrug.normalDose, 'default')}
                                     </div>
 
+                                    {/* Featured / Highlighted Link (e.g. Switchtabel) */}
+                                    {activeDrug.featuredLink && (
+                                        <div className="mt-6 mb-8 animate-in fade-in zoom-in-95 duration-500 delay-150">
+                                            <a
+                                                href={activeDrug.featuredLink.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 bg-gradient-to-br from-indigo-500 to-purple-600 p-6 rounded-3xl shadow-lg shadow-indigo-500/20 hover:shadow-xl hover:shadow-indigo-500/30 transition-all hover:-translate-y-1 group border border-indigo-400"
+                                            >
+                                                <div className="bg-white/20 p-4 rounded-2xl shrink-0 group-hover:scale-110 group-hover:bg-white/30 transition-all shadow-inner">
+                                                    <LinkIcon className="w-8 h-8 text-white" />
+                                                </div>
+                                                <div className="text-center sm:text-left">
+                                                    <h3 className="font-black text-white text-xl tracking-tight mb-1">{activeDrug.featuredLink.title}</h3>
+                                                    <p className="text-indigo-50 text-[15px] font-medium leading-snug">{activeDrug.featuredLink.description}</p>
+                                                </div>
+                                                <div className="hidden sm:flex ml-auto bg-white/10 p-3 rounded-full group-hover:bg-white/20 transition-colors">
+                                                    <ChevronRight className="w-6 h-6 text-white" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                    )}
+
                                     {/* Side Effects Section */}
                                     {activeDrug.sideEffects && activeDrug.sideEffects.length > 0 && (
                                         <div className="mt-10">
