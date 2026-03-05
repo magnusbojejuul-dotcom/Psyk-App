@@ -130,6 +130,26 @@ export const PSYKOFARMAKA_DATA = [
         sideEffects: [],
         sources: []
     },
+    {
+        id: 'arytmi_info_antipsykotika',
+        name: 'Arytmi og Antipsykotika (Info)',
+        group: 'Antipsykotika',
+        subgroup: 'Kardiovaskulær Sikkerhed',
+        isArytmiComponent: true,
+        effect: 'DCS, DPS og DSKF vejledning (2023) om arytmi-risiko ved anvendelse af psykofarmaka. Opdeler præparater i en tredelt farvekodning: Grønne (ikke QTc-forlængende), Gule (let QTc-forlængende eller under visse betingelser) og Røde (markant QTc-forlængelse og dokumenteret arytmi-risiko). Algoritmen anbefaler risikovurdering inkl. EKG før behandlingsstart ved gule og røde præparater.',
+        normalDose: `Vurdér primære kardiologiske risikofaktorer inden opstart:\n• Alder\n• Hjertesygdom (Hjertesvigt, AMI, præeksisterende QTc > 480 ms)\n• Familieanamnese m. arytmi/pludselig død\n• Hjertesymptomer (synkoper, palpitationer, dyspnø, brystsmerter)\n• Bradykardi\n• Elektrolytforstyrrelser (K < 3,5 mM)\n• Polyfarmaci med anden QTc-forlængende medicin\n\nHjertekontrol: Nyt EKG og vurdering af arytmi-symptomer skal foretages 1-2 uger efter indledning samt ved dosisøgning > 50% for gule og røde præparater.`,
+        featuredLink: {
+            title: 'Åbn Arytmi og Antipsykotika (PDF)',
+            description: 'Læs den fulde kliniske vejledning om vurdering af kardial risiko ved antipsykotika.',
+            url: `${import.meta.env.BASE_URL}pdf/arytmi_og_antipsykotika.pdf`
+        },
+        sideEffects: [
+            { symptom: 'Røde præparater (Høj Risiko)', description: 'Potentiel livstruende proarytmisk risiko forlænger QTc (Torsades de Pointes). Inkluderer stort set alle typiske FGA (Haloperidol, Chlorprotixen, Levomepromazin) samt bl.a. SGA som Clozapin, Quetiapin, Ziprasidon, Sertindol, Citalopram, Escitalopram, Lithium, Metadon m.m.', treatment: 'Baseline EKG er som udgangspunkt obligatorisk før opstart. Seponér og skift hvis EKG fastslår QTc > 500 ms, eller > 60 ms stigning fra baseline. Konferér med kardiolog ved QTc > 480 ms forud for opstart, eller ved QTc > 550 ms under behandling ang. telemetribehov.' },
+            { symptom: 'Gule præparater (OBS Risiko)', description: 'Risiko for let QTc-forlængelse (< 10 ms). Inkluderer bl.a. FGA (Zuclopenthixol, Flupenthixol), SGA (Risperidon, Paliperidon, Amisulprid) og visse antidepressiva (Mirtazapin, Sertralin).', treatment: 'Baseline EKG anbefales, men kan evt. udskydes/fraviges for _enkelte_ præparater i fravær af de klassiske kardielle pro-arytmiske TdP-risikofaktorer iflg. vejledningen.' },
+            { symptom: 'Grønne præparater (Lav Risiko)', description: 'Psykofarmaka som ikke associeres med proarytmisk/QTc-påvirkning. For SGA er dette udelukkende Olanzapin og Aripiprazol. Dækker bl.a. også over benzodiazepiner, visse antidepressiva (fx Duloxetin, Paroxetin, Agomelatin) og antiepileptika (Valproat, Lamotrigin).', treatment: 'EKG kan trygt undlades før opstart jf. den kardiologiske algoritme medmindre patienten har kendt komorbid svær hjerte-kar indikation.' }
+        ],
+        sources: [{ title: 'DCS, DPS m.fl.: Arytmi-risiko ved anvendelse af psykofarmaka (Version 2, 2023)', url: `${import.meta.env.BASE_URL}pdf/arytmi_og_antipsykotika.pdf` }]
+    },
     // Antipsykotika (SGA)
     {
         id: 'quetiapin',

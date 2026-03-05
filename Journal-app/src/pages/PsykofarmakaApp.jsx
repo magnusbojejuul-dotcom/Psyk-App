@@ -216,6 +216,151 @@ function PsykofarmakaApp({ onNavigate, initialDrug = null }) {
                                     </div>
                                     <p className="text-xs text-[#839788] mt-8 italic text-center px-4">* Det enkelte antipsykotiske lægemiddels specifikke affinitet (binding) til ovenstående receptorer afgør medicinens samlede kliniske profil.</p>
                                 </div>
+                            ) : activeDrug.isArytmiComponent ? (
+                                <div className="animate-in fade-in duration-500">
+                                    <div className="mb-8">
+                                        <p className="text-[#4A5A50] text-[16px] leading-relaxed bg-white/70 p-6 rounded-3xl border border-[#E8E4D9] shadow-sm font-medium">
+                                            {activeDrug.effect}
+                                        </p>
+                                    </div>
+
+                                    {/* Detailed Images Section */}
+                                    <div className="space-y-12 mb-10">
+                                        <div className="bg-white p-6 rounded-3xl border border-[#D9E1DA] shadow-sm">
+                                            <h3 className="text-xl font-black text-[#3A4A40] mb-6 flex items-center gap-2.5 tracking-tight">
+                                                <Activity className="w-6 h-6 text-indigo-500" />
+                                                Vurderingsværktøjer & Oversigt
+                                            </h3>
+                                            <div className="grid grid-cols-1 gap-8">
+                                                <div>
+                                                    <h4 className="text-sm font-bold uppercase text-[#5C6B61] mb-3 tracking-wider">Algoritme for QTc Risikovurdering</h4>
+                                                    <img src={`${import.meta.env.BASE_URL}img/arytmi/render_page_13.png`} alt="Algoritme for vurdering" className="w-full h-auto rounded-2xl border border-[#E8E4D9]" />
+                                                </div>
+                                                <div>
+                                                    <h4 className="text-sm font-bold uppercase text-[#5C6B61] mb-3 tracking-wider">Gennemsnitlig QTc Forlængelse for Præparater</h4>
+                                                    <img src={`${import.meta.env.BASE_URL}img/arytmi/render_page_9.png`} alt="QTc forlængelse for udvalgte psykofarmaka" className="w-full h-auto rounded-2xl border border-[#E8E4D9]" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="bg-rose-50/50 p-6 rounded-3xl border border-rose-200/60 shadow-sm">
+                                            <h3 className="text-xl font-black text-rose-950 mb-4 flex items-center gap-2.5 tracking-tight">
+                                                <Activity className="w-6 h-6 text-rose-600" />
+                                                Klinisk Billede: Torsades de Pointes (TdP-VT)
+                                            </h3>
+                                            <p className="text-rose-900/80 text-[15px] leading-relaxed mb-6 font-medium">
+                                                Pludselig død pga. psykofarmaka-induceret arytmi skyldes først og fremmest TdP-VT, som kan degenerere til ventrikelflimren. Arytmien viser sig typisk ved selvterminerende, korterevarende episoder med ventrikulær ekstrasystoli. Symptomerne kan være fraværende, men optræder ofte som <strong>palpitationer, svimmelhed, besvimelse (synkope)</strong> eller pludselig død.<br /><br />
+                                                Ved manifest TdP-VT skal patienten straks overflyttes til telemetri/kardiologisk observation! Behandlingen består akut af seponering af de udløsende lægemidler, magnesiuminfusion samt korrektion af hypokaliæmi.
+                                            </p>
+                                            <div className="bg-white p-3 rounded-2xl border border-rose-100 shadow-sm">
+                                                <img src={`${import.meta.env.BASE_URL}img/arytmi/render_page_10.png`} alt="EKG med Torsades de Pointes" className="w-full h-auto rounded-xl filter contrast-125" />
+                                                <p className="text-[11px] text-center text-rose-800/60 font-medium mt-3 px-2">
+                                                    EKG-udsnit (Telemetri): Sinusrytme afbrydes af hyppige ventrikulære ekstrasystoler. Under forudgående sinusrytme ses det forlængede QT-interval samt skiftende T-taksmorfologi. Episoden her er selvlimiterende.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div className="bg-slate-50 p-6 rounded-3xl border border-slate-200 shadow-sm">
+                                            <h3 className="text-xl font-black text-slate-800 mb-6 flex items-center gap-2.5 tracking-tight">
+                                                <Activity className="w-6 h-6 text-slate-500" />
+                                                Udfordringer ved EKG-aflæsning af QT-interval
+                                            </h3>
+                                            <p className="text-slate-600 text-[14px] leading-relaxed mb-6">
+                                                Når T-takken har et afvigende udseende – særligt ved lægemiddelpåvirket repolarisering – kan måling af QT-intervallet være en særlig udfordring. Herunder ses typiske eksempler fra vejledningen.
+                                            </p>
+                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                                {/* Figur 6 / Tangent */}
+                                                <div className="bg-white p-4 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                                                    <div>
+                                                        <h4 className="text-sm font-bold uppercase text-slate-700 mb-2 tracking-wider">Tangentmetoden (Fig. 6)</h4>
+                                                        <p className="text-xs text-slate-500 mb-4 leading-relaxed">Når T-takkens afslutning er uklar, forlænges det stejleste stykke af det nedadgående ben, til det skærer grundlinjen.</p>
+                                                    </div>
+                                                    <img src={`${import.meta.env.BASE_URL}img/arytmi/page21_img1.png`} alt="Tangentmetoden" className="w-full h-auto rounded-xl mt-auto object-contain bg-slate-50 p-2" />
+                                                </div>
+
+                                                {/* Figur 8 & 9 / Flade T-takker */}
+                                                <div className="bg-white p-4 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                                                    <div>
+                                                        <h4 className="text-sm font-bold uppercase text-slate-700 mb-2 tracking-wider">Flade T-takker (Fig. 8/9)</h4>
+                                                        <p className="text-xs text-slate-500 mb-4 leading-relaxed">Under behandling med f.eks. antipsykotika kan T-takkerne fremstå mærkbart flade, hvorved QT-intervallet er vanskeligt at afgrænse.</p>
+                                                    </div>
+                                                    <img src={`${import.meta.env.BASE_URL}img/arytmi/page22_img1.jpeg`} alt="Flade T-takker" className="w-full h-auto rounded-xl mt-auto object-contain bg-slate-50" />
+                                                </div>
+
+                                                {/* Figur 10 / U-tak */}
+                                                <div className="bg-white p-4 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between md:col-span-2">
+                                                    <div>
+                                                        <h4 className="text-sm font-bold uppercase text-slate-700 mb-2 tracking-wider">U-takker (Fig. 10)</h4>
+                                                        <p className="text-xs text-slate-500 mb-4 leading-relaxed">Et EKG kan indeholde en såkaldt U-tak efter afslutningen af T-takken. Såfremt U-takkens amplitude svarer til T-takkens eller er større, bør den inkluderes i selve "QT-intervallet".</p>
+                                                    </div>
+                                                    <img src={`${import.meta.env.BASE_URL}img/arytmi/page23_img1.png`} alt="U-tak" className="w-full h-48 rounded-xl object-contain bg-slate-50 p-2" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Core Info Cards */}
+                                    <div className="space-y-4">
+                                        {renderDetailCard('Normal Dosering & Kontrol', activeDrug.normalDose, 'default')}
+                                    </div>
+
+                                    {/* Side Effects Section */}
+                                    {activeDrug.sideEffects && activeDrug.sideEffects.length > 0 && (
+                                        <div className="mt-10">
+                                            <h3 className="text-xl font-black text-[#3A4A40] mb-5 flex items-center gap-2.5 tracking-tight">
+                                                <AlertTriangle className="w-6 h-6 text-amber-500" />
+                                                Risikogrupper & Håndtering
+                                            </h3>
+                                            <div className="grid gap-4">
+                                                {activeDrug.sideEffects.map((se, idx) => {
+                                                    let boxColor = "bg-white/80 border-[#E8E4D9]";
+                                                    if (se.symptom.includes('Røde')) boxColor = "bg-red-50/50 border-red-200";
+                                                    if (se.symptom.includes('Gule')) boxColor = "bg-amber-50/50 border-amber-200";
+                                                    if (se.symptom.includes('Grønne')) boxColor = "bg-emerald-50/50 border-emerald-200";
+
+                                                    return (
+                                                        <div key={idx} className={`${boxColor} border rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow`}>
+                                                            <h4 className="font-extrabold text-[#3A4A40] text-[16px] mb-2.5">{se.symptom}</h4>
+                                                            <p className="text-[#5C6B61] text-[15px] leading-relaxed mb-4">
+                                                                {se.description}
+                                                            </p>
+                                                            <div className="bg-white/80 border border-black/5 rounded-2xl p-4 text-[14px] text-[#4A5A50] flex gap-3.5 shadow-sm">
+                                                                <div className="bg-black/5 p-1 rounded-full shadow-sm shrink-0 h-fit mt-0.5">
+                                                                    <Info className="w-4 h-4 text-[#3A4A40]" />
+                                                                </div>
+                                                                <span className="leading-relaxed"><strong className="text-[#3A4A40]">Håndtering:</strong> {se.treatment}</span>
+                                                            </div>
+                                                        </div>
+                                                    );
+                                                })}
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {/* Featured / Highlighted Link (e.g. Switchtabel) */}
+                                    {activeDrug.featuredLink && (
+                                        <div className="mt-10 mb-8 animate-in fade-in zoom-in-95 duration-500 delay-150">
+                                            <a
+                                                href={activeDrug.featuredLink.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 bg-gradient-to-br from-indigo-500 to-purple-600 p-6 rounded-3xl shadow-lg shadow-indigo-500/20 hover:shadow-xl hover:shadow-indigo-500/30 transition-all hover:-translate-y-1 group border border-indigo-400"
+                                            >
+                                                <div className="bg-white/20 p-4 rounded-2xl shrink-0 group-hover:scale-110 group-hover:bg-white/30 transition-all shadow-inner">
+                                                    <LinkIcon className="w-8 h-8 text-white" />
+                                                </div>
+                                                <div className="text-center sm:text-left">
+                                                    <h3 className="font-black text-white text-xl tracking-tight mb-1">{activeDrug.featuredLink.title}</h3>
+                                                    <p className="text-indigo-50 text-[15px] font-medium leading-snug">{activeDrug.featuredLink.description}</p>
+                                                </div>
+                                                <div className="hidden sm:flex ml-auto bg-white/10 p-3 rounded-full group-hover:bg-white/20 transition-colors">
+                                                    <ChevronRight className="w-6 h-6 text-white" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                    )}
+
+                                </div>
                             ) : (
                                 <>
                                     {/* Individual Drug Receptor Illustration */}
