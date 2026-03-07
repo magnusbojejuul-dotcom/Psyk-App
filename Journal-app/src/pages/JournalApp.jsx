@@ -316,49 +316,13 @@ function JournalApp({ onNavigate }) {
             lastAutoTextRef.current = autoText;
             lastUserTextRef.current = autoText;
         } else {
-            // Manuel redigering slået til
-            // Beregn linje-kalkuleret diff for at undgå at ny tekst skubber manuel tekst ned
-            const a = dmp.diff_linesToChars_(lastAutoTextRef.current, autoText);
-            const lineText1 = a.chars1;
-            const lineText2 = a.chars2;
-            const lineArray = a.lineArray;
+            // Manuel redigering slået til - Brug diff-match-patch patch-logik til at flette (3-way merge)
+            const patches = dmp.patch_make(lastAutoTextRef.current, autoText);
+            const [newTextArr, results] = dmp.patch_apply(patches, generatedText);
 
-            const diffs = dmp.diff_main(lineText1, lineText2, false);
-            dmp.diff_charsToLines_(diffs, lineArray);
-
-            let newText = generatedText;
-            let appendText = '';
-
-            diffs.forEach(([op, text]) => {
-                const isOnlyWhitespace = !text.trim();
-
-                if (op === -1 && !isOnlyWhitespace) {
-                    // Fjern slettet auto-tekst fra vores current tekst
-                    if (newText.includes(text)) {
-                        newText = newText.replace(text, '');
-                    } else {
-                        // Hvis brugeren mangler linjeskiftet, søg uden
-                        const trimmed = text.trim();
-                        if (newText.includes(trimmed)) {
-                            newText = newText.replace(trimmed, '');
-                        }
-                    }
-                } else if (op === 1 && !isOnlyWhitespace) {
-                    // Nye linjer tilføjes i bunden
-                    appendText += text;
-                }
-            });
-
-            if (appendText.trim()) {
-                newText = newText.trimEnd() + '\n\n' + appendText.trim() + '\n';
-            }
-
-            // Oprydning hvis der opstod for mange tomme linjer
-            newText = newText.replace(/\n{3,}/g, '\n\n');
-
-            setGeneratedText(newText);
+            setGeneratedText(newTextArr);
             lastAutoTextRef.current = autoText;
-            lastUserTextRef.current = newText;
+            lastUserTextRef.current = newTextArr;
         }
     }, [selectedIds, activeSection, showSummary, optionDetails, contactReasonText, timelineText, dietDays, isUniformDiet, manualEditMode]);
 
