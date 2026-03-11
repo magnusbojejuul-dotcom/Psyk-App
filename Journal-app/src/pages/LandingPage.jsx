@@ -21,181 +21,181 @@ function LandingPage({ onNavigate }) {
                 </div>
             </header>
 
-            <main className="z-10 w-full max-w-5xl mx-auto px-6 flex-1 flex flex-col items-center justify-center text-center py-12">
-                <h1 className="text-4xl md:text-5xl font-bold text-[#3A4A40] mb-4 tracking-tight">Velkommen tilbage</h1>
-                <p className="text-lg text-[#839788] mb-12 max-w-2xl">
+            <main className="z-10 w-full max-w-[1200px] mx-auto px-6 flex-1 flex flex-col items-center justify-center text-center py-8">
+                <h1 className="text-3xl md:text-4xl font-bold text-[#3A4A40] mb-3 tracking-tight">Velkommen tilbage</h1>
+                <p className="text-base text-[#839788] mb-8 max-w-2xl">
                     Vælg et klinisk værktøj nedenfor for at starte din dokumentationsproces.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full">
 
                     {/* Tile 1: Psykiatrisk Journalværktøj (Active) */}
                     <button
                         onClick={() => onNavigate('journal')}
-                        className="group relative flex flex-col items-start p-8 rounded-[2rem] bg-white/70 backdrop-blur-md border border-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500 ease-out cursor-pointer overflow-hidden isolate"
+                        className="group relative flex flex-col items-start p-5 rounded-3xl bg-white/70 backdrop-blur-md border border-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer overflow-hidden isolate"
                     >
                         {/* Subtle inner background glow on hover */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-[#E2E8DF]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#E2E8DF]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
 
-                        <div className="w-14 h-14 rounded-2xl bg-[#F2F6F3] flex items-center justify-center mb-6 shadow-sm border border-white group-hover:bg-[#839788] transition-colors duration-500">
-                            <Brain className="w-7 h-7 text-[#839788] group-hover:text-white transition-colors duration-500" />
+                        <div className="w-12 h-12 rounded-xl bg-[#F2F6F3] flex items-center justify-center mb-4 shadow-sm border border-white group-hover:bg-[#839788] transition-colors duration-300">
+                            <Brain className="w-6 h-6 text-[#839788] group-hover:text-white transition-colors duration-300" />
                         </div>
 
-                        <h2 className="text-2xl font-bold text-[#3A4A40] mb-3 text-left leading-tight group-hover:text-[#2C3F34] transition-colors">
-                            Psykiatrisk<br />Journalværktøj
+                        <h2 className="text-lg font-bold text-[#3A4A40] mb-2 text-left leading-tight group-hover:text-[#2C3F34] transition-colors">
+                            Psykiatrisk Journalværktøj
                         </h2>
 
-                        <p className="text-left text-[#839788] text-sm mb-8 leading-relaxed">
+                        <p className="text-left text-[#839788] text-xs mb-5 leading-relaxed">
                             Struktureret anamnese og objektivt psykisk-værktøj med auto-generering af journalnotater.
                         </p>
 
-                        <div className="mt-auto flex items-center gap-2 text-[#839788] text-sm font-bold group-hover:text-[#3A4A40] transition-colors">
-                            Åbn værktøj <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        <div className="mt-auto flex items-center gap-1.5 text-[#839788] text-xs font-bold uppercase tracking-wide group-hover:text-[#3A4A40] transition-colors">
+                            Åbn værktøj <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                         </div>
                     </button>
 
                     {/* Tile 2: Kliniske Instrukser (Active) */}
                     <button
                         onClick={() => onNavigate('guidelines')}
-                        className="group relative flex flex-col items-start p-8 rounded-[2rem] bg-white/70 backdrop-blur-md border border-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500 ease-out cursor-pointer overflow-hidden isolate"
+                        className="group relative flex flex-col items-start p-5 rounded-3xl bg-white/70 backdrop-blur-md border border-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer overflow-hidden isolate"
                     >
                         {/* Subtle inner background glow on hover */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-[#E2E8DF]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#E2E8DF]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
 
-                        <div className="w-14 h-14 rounded-2xl bg-[#F2F6F3] flex items-center justify-center mb-6 shadow-sm border border-white group-hover:bg-[#839788] transition-colors duration-500">
-                            <FileText className="w-7 h-7 text-[#839788] group-hover:text-white transition-colors duration-500" />
+                        <div className="w-12 h-12 rounded-xl bg-[#F2F6F3] flex items-center justify-center mb-4 shadow-sm border border-white group-hover:bg-[#839788] transition-colors duration-300">
+                            <FileText className="w-6 h-6 text-[#839788] group-hover:text-white transition-colors duration-300" />
                         </div>
 
-                        <h2 className="text-2xl font-bold text-[#3A4A40] mb-3 text-left leading-tight group-hover:text-[#2C3F34] transition-colors">
-                            Gode<br />Dokumenter
+                        <h2 className="text-lg font-bold text-[#3A4A40] mb-2 text-left leading-tight group-hover:text-[#2C3F34] transition-colors">
+                            Gode Dokumenter
                         </h2>
 
-                        <p className="text-left text-[#839788] text-sm mb-8 leading-relaxed">
+                        <p className="text-left text-[#839788] text-xs mb-5 leading-relaxed">
                             Samling af standardiserede behandlingsplaner og skabeloner til hurtigt og systematisk opslag.
                         </p>
 
-                        <div className="mt-auto flex items-center gap-2 text-[#839788] text-sm font-bold group-hover:text-[#3A4A40] transition-colors">
-                            Åbn værktøj <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        <div className="mt-auto flex items-center gap-1.5 text-[#839788] text-xs font-bold uppercase tracking-wide group-hover:text-[#3A4A40] transition-colors">
+                            Åbn værktøj <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                         </div>
                     </button>
 
                     {/* Tile 3: Behandlingsvejledninger (Active) */}
                     <button
                         onClick={() => onNavigate('treatment')}
-                        className="group relative flex flex-col items-start p-8 rounded-[2rem] bg-white/70 backdrop-blur-md border border-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500 ease-out cursor-pointer overflow-hidden isolate"
+                        className="group relative flex flex-col items-start p-5 rounded-3xl bg-white/70 backdrop-blur-md border border-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer overflow-hidden isolate"
                     >
-                        <div className="absolute inset-0 bg-gradient-to-br from-[#E2E8DF]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#E2E8DF]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
 
-                        <div className="w-14 h-14 rounded-2xl bg-[#F2F6F3] flex items-center justify-center mb-6 shadow-sm border border-white group-hover:bg-[#839788] transition-colors duration-500">
-                            <Activity className="w-7 h-7 text-[#839788] group-hover:text-white transition-colors duration-500" />
+                        <div className="w-12 h-12 rounded-xl bg-[#F2F6F3] flex items-center justify-center mb-4 shadow-sm border border-white group-hover:bg-[#839788] transition-colors duration-300">
+                            <Activity className="w-6 h-6 text-[#839788] group-hover:text-white transition-colors duration-300" />
                         </div>
 
-                        <h2 className="text-2xl font-bold text-[#3A4A40] mb-3 text-left leading-tight group-hover:text-[#2C3F34] transition-colors">
-                            Behandlings-<br />vejledninger
+                        <h2 className="text-lg font-bold text-[#3A4A40] mb-2 text-left leading-tight group-hover:text-[#2C3F34] transition-colors">
+                            Behandlingsvejledninger
                         </h2>
 
-                        <p className="text-left text-[#839788] text-sm mb-8 leading-relaxed">
+                        <p className="text-left text-[#839788] text-xs mb-5 leading-relaxed">
                             Interaktive retningslinjer for medicinsk behandling af depression, psykose, ADHD m.fl.
                         </p>
 
-                        <div className="mt-auto flex items-center gap-2 text-[#839788] text-sm font-bold group-hover:text-[#3A4A40] transition-colors">
-                            Åbn værktøj <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        <div className="mt-auto flex items-center gap-1.5 text-[#839788] text-xs font-bold uppercase tracking-wide group-hover:text-[#3A4A40] transition-colors">
+                            Åbn værktøj <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                         </div>
                     </button>
 
                     {/* Tile 4: Kliniske Beregnere & Skalaer (Active) */}
                     <button
                         onClick={() => onNavigate('scoring')}
-                        className="group relative flex flex-col items-start p-8 rounded-[2rem] bg-white/70 backdrop-blur-md border border-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500 ease-out cursor-pointer overflow-hidden isolate"
+                        className="group relative flex flex-col items-start p-5 rounded-3xl bg-white/70 backdrop-blur-md border border-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer overflow-hidden isolate"
                     >
-                        <div className="absolute inset-0 bg-gradient-to-br from-[#E2E8DF]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#E2E8DF]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
 
-                        <div className="w-14 h-14 rounded-2xl bg-[#F2F6F3] flex items-center justify-center mb-6 shadow-sm border border-white group-hover:bg-[#839788] transition-colors duration-500">
-                            <Stethoscope className="w-7 h-7 text-[#839788] group-hover:text-white transition-colors duration-500" />
+                        <div className="w-12 h-12 rounded-xl bg-[#F2F6F3] flex items-center justify-center mb-4 shadow-sm border border-white group-hover:bg-[#839788] transition-colors duration-300">
+                            <Stethoscope className="w-6 h-6 text-[#839788] group-hover:text-white transition-colors duration-300" />
                         </div>
 
-                        <h2 className="text-2xl font-bold text-[#3A4A40] mb-3 text-left leading-tight group-hover:text-[#2C3F34] transition-colors">
-                            Kliniske Beregnere<br />& Skalaer
+                        <h2 className="text-lg font-bold text-[#3A4A40] mb-2 text-left leading-tight group-hover:text-[#2C3F34] transition-colors">
+                            Kliniske Beregnere & Skalaer
                         </h2>
 
-                        <p className="text-left text-[#839788] text-sm mb-8 leading-relaxed">
+                        <p className="text-left text-[#839788] text-xs mb-5 leading-relaxed">
                             Interaktive scoringsværktøjer til bl.a. psykiatri (eks. HAM-D), geriatri (eks. MMS) og misbrug.
                         </p>
 
-                        <div className="mt-auto flex items-center gap-2 text-[#839788] text-sm font-bold group-hover:text-[#3A4A40] transition-colors">
-                            Åbn værktøj <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        <div className="mt-auto flex items-center gap-1.5 text-[#839788] text-xs font-bold uppercase tracking-wide group-hover:text-[#3A4A40] transition-colors">
+                            Åbn værktøj <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                         </div>
                     </button>
 
                     {/* Tile 5: Rusmidler & Abstinenser (NEW) */}
                     <button
                         onClick={() => onNavigate('substance')}
-                        className="group relative flex flex-col items-start p-8 rounded-[2rem] bg-white/70 backdrop-blur-md border border-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500 ease-out cursor-pointer overflow-hidden isolate md:col-span-2 lg:col-span-1"
+                        className="group relative flex flex-col items-start p-5 rounded-3xl bg-white/70 backdrop-blur-md border border-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer overflow-hidden isolate"
                     >
-                        <div className="absolute inset-0 bg-gradient-to-br from-red-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-red-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
 
-                        <div className="w-14 h-14 rounded-2xl bg-[#F2F6F3] flex items-center justify-center mb-6 shadow-sm border border-white group-hover:bg-red-800 transition-colors duration-500">
-                            <Pill className="w-7 h-7 text-red-800 group-hover:text-white transition-colors duration-500" />
+                        <div className="w-12 h-12 rounded-xl bg-[#F2F6F3] flex items-center justify-center mb-4 shadow-sm border border-white group-hover:bg-red-800 transition-colors duration-300">
+                            <Pill className="w-6 h-6 text-red-800 group-hover:text-white transition-colors duration-300" />
                         </div>
 
-                        <h2 className="text-2xl font-bold text-[#3A4A40] mb-3 text-left leading-tight group-hover:text-red-900 transition-colors">
-                            Rusmidler &<br />Abstinenser
+                        <h2 className="text-lg font-bold text-[#3A4A40] mb-2 text-left leading-tight group-hover:text-red-900 transition-colors">
+                            Rusmidler & Abstinenser
                         </h2>
 
-                        <p className="text-left text-[#839788] text-sm mb-8 leading-relaxed">
+                        <p className="text-left text-[#839788] text-xs mb-5 leading-relaxed">
                             Retningslinjer for overdosering, forgiftning (Toxication) og abstinensbehandling for de primære rusmidler.
                         </p>
 
-                        <div className="mt-auto flex items-center gap-2 text-[#839788] text-sm font-bold group-hover:text-red-900 transition-colors">
-                            Åbn værktøj <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        <div className="mt-auto flex items-center gap-1.5 text-[#839788] text-xs font-bold uppercase tracking-wide group-hover:text-red-900 transition-colors">
+                            Åbn værktøj <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                         </div>
                     </button>
 
                     {/* Tile 6: Psykofarmaka (NEW) */}
                     <button
                         onClick={() => onNavigate('psykofarmaka')}
-                        className="group relative flex flex-col items-start p-8 rounded-[2rem] bg-white/70 backdrop-blur-md border border-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500 ease-out cursor-pointer overflow-hidden isolate md:col-span-2 lg:col-span-1"
+                        className="group relative flex flex-col items-start p-5 rounded-3xl bg-white/70 backdrop-blur-md border border-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer overflow-hidden isolate"
                     >
-                        <div className="absolute inset-0 bg-gradient-to-br from-[#E2E8DF]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#E2E8DF]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
 
-                        <div className="w-14 h-14 rounded-2xl bg-[#F2F6F3] flex items-center justify-center mb-6 shadow-sm border border-white group-hover:bg-blue-800 transition-colors duration-500">
-                            <Pill className="w-7 h-7 text-blue-800 group-hover:text-white transition-colors duration-500" />
+                        <div className="w-12 h-12 rounded-xl bg-[#F2F6F3] flex items-center justify-center mb-4 shadow-sm border border-white group-hover:bg-blue-800 transition-colors duration-300">
+                            <Pill className="w-6 h-6 text-blue-800 group-hover:text-white transition-colors duration-300" />
                         </div>
 
-                        <h2 className="text-2xl font-bold text-[#3A4A40] mb-3 text-left leading-tight group-hover:text-blue-900 transition-colors">
+                        <h2 className="text-lg font-bold text-[#3A4A40] mb-2 text-left leading-tight group-hover:text-blue-900 transition-colors">
                             Psykofarmaka
                         </h2>
 
-                        <p className="text-left text-[#839788] text-sm mb-8 leading-relaxed">
+                        <p className="text-left text-[#839788] text-xs mb-5 leading-relaxed">
                             Lægemiddelkatalog med fokus på effekt, doseringer, bivirkninger og praktisk håndtering.
                         </p>
 
-                        <div className="mt-auto flex items-center gap-2 text-[#839788] text-sm font-bold group-hover:text-blue-900 transition-colors">
-                            Åbn værktøj <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        <div className="mt-auto flex items-center gap-1.5 text-[#839788] text-xs font-bold uppercase tracking-wide group-hover:text-blue-900 transition-colors">
+                            Åbn værktøj <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                         </div>
                     </button>
 
                     {/* Tile 7: ECT-Henvisning (NEW) */}
                     <button
                         onClick={() => onNavigate('ect')}
-                        className="group relative flex flex-col items-start p-8 rounded-[2rem] bg-white/70 backdrop-blur-md border border-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500 ease-out cursor-pointer overflow-hidden isolate md:col-span-2 lg:col-span-1"
+                        className="group relative flex flex-col items-start p-5 rounded-3xl bg-white/70 backdrop-blur-md border border-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer overflow-hidden isolate"
                     >
-                        <div className="absolute inset-0 bg-gradient-to-br from-amber-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-amber-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
 
-                        <div className="w-14 h-14 rounded-2xl bg-[#F2F6F3] flex items-center justify-center mb-6 shadow-sm border border-white group-hover:bg-amber-600 transition-colors duration-500">
-                            <Activity className="w-7 h-7 text-amber-600 group-hover:text-white transition-colors duration-500" />
+                        <div className="w-12 h-12 rounded-xl bg-[#F2F6F3] flex items-center justify-center mb-4 shadow-sm border border-white group-hover:bg-amber-600 transition-colors duration-300">
+                            <Activity className="w-6 h-6 text-amber-600 group-hover:text-white transition-colors duration-300" />
                         </div>
 
-                        <h2 className="text-2xl font-bold text-[#3A4A40] mb-3 text-left leading-tight group-hover:text-amber-900 transition-colors">
+                        <h2 className="text-lg font-bold text-[#3A4A40] mb-2 text-left leading-tight group-hover:text-amber-900 transition-colors">
                             ECT-Henvisning
                         </h2>
 
-                        <p className="text-left text-[#839788] text-sm mb-8 leading-relaxed">
+                        <p className="text-left text-[#839788] text-xs mb-5 leading-relaxed">
                             Interaktiv tjekliste og vejledning for læger vedrørende henvisning og booking af ECT.
                         </p>
 
-                        <div className="mt-auto flex items-center gap-2 text-[#839788] text-sm font-bold group-hover:text-amber-900 transition-colors">
-                            Åbn værktøj <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        <div className="mt-auto flex items-center gap-1.5 text-[#839788] text-xs font-bold uppercase tracking-wide group-hover:text-amber-900 transition-colors">
+                            Åbn værktøj <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                         </div>
                     </button>
 
