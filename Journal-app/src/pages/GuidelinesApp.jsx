@@ -81,6 +81,54 @@ function GuidelinesApp({ onNavigate }) {
         );
     }
 
+    const renderBlodproever = () => {
+        return (
+            <div className="max-w-4xl mx-auto h-full flex flex-col">
+                <div className="mb-8 flex justify-between items-start shrink-0">
+                    <div>
+                        <h2 className="text-2xl md:text-3xl font-bold text-[#3A4A40] mb-2">Blodprøver (Spiseforstyrrelse)</h2>
+                        <p className="text-[#839788]">Vejledende beskrivelse og behandling ved spiseforstyrrelse.</p>
+                    </div>
+                    <a href={`${import.meta.env.BASE_URL}pdf/Blodproever_Spiseforstyrrelse.pdf`} download className="flex items-center gap-2 bg-[#839788] text-white px-4 py-2 rounded-xl hover:bg-[#6A7A6E] transition-colors shadow-sm font-medium text-sm">
+                        <Download className="w-4 h-4" /> Download Original PDF
+                    </a>
+                </div>
+
+                <div className="glass-panel p-4 rounded-2xl shadow-sm flex-1 flex flex-col min-h-[600px]">
+                    <iframe
+                        src={`${import.meta.env.BASE_URL}pdf/Blodproever_Spiseforstyrrelse.pdf`}
+                        className="w-full flex-1 rounded-xl border border-[#E8E4D9] bg-white min-h-[500px]"
+                        title="Blodprøver Document"
+                    />
+                </div>
+            </div>
+        );
+    }
+
+    const renderJournaloptagAN = () => {
+        return (
+            <div className="max-w-4xl mx-auto h-full flex flex-col">
+                <div className="mb-8 flex justify-between items-start shrink-0">
+                    <div>
+                        <h2 className="text-2xl md:text-3xl font-bold text-[#3A4A40] mb-2">Journaloptagelse (AN)</h2>
+                        <p className="text-[#839788]">Direkte afspejling af standard skabelon for journaloptagelse.</p>
+                    </div>
+                    <a href={`${import.meta.env.BASE_URL}pdf/Journaloptag_AN.pdf`} download className="flex items-center gap-2 bg-[#839788] text-white px-4 py-2 rounded-xl hover:bg-[#6A7A6E] transition-colors shadow-sm font-medium text-sm">
+                        <Download className="w-4 h-4" /> Download Original PDF
+                    </a>
+                </div>
+
+                <div className="glass-panel p-4 rounded-2xl shadow-sm flex-1 flex flex-col min-h-[600px]">
+                    <iframe
+                        src={`${import.meta.env.BASE_URL}pdf/Journaloptag_AN.pdf`}
+                        className="w-full flex-1 rounded-xl border border-[#E8E4D9] bg-white min-h-[500px]"
+                        title="Journaloptagelse AN Document"
+                    />
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className="flex flex-col h-screen bg-[#F9F8F6] font-sans selection:bg-[#E2E8DF] selection:text-slate-900">
 
@@ -143,6 +191,28 @@ function GuidelinesApp({ onNavigate }) {
                             <span className="text-sm">Gennemgang</span>
                         </button>
 
+                        <button
+                            onClick={() => setActiveInstruks('blodproever')}
+                            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left transition-all ${activeInstruks === 'blodproever'
+                                ? 'bg-white text-[#3A4A40] shadow ring-1 ring-[#E8E4D9] font-medium'
+                                : 'text-[#839788] hover:bg-white/50 hover:text-[#3A4A40]'
+                                }`}
+                        >
+                            <Stethoscope className={`h-5 w-5 ${activeInstruks === 'blodproever' ? 'text-[#839788]' : 'opacity-60'}`} />
+                            <span className="text-sm">Blodprøver (Spiseforst..)</span>
+                        </button>
+
+                        <button
+                            onClick={() => setActiveInstruks('journaloptag_an')}
+                            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left transition-all ${activeInstruks === 'journaloptag_an'
+                                ? 'bg-white text-[#3A4A40] shadow ring-1 ring-[#E8E4D9] font-medium'
+                                : 'text-[#839788] hover:bg-white/50 hover:text-[#3A4A40]'
+                                }`}
+                        >
+                            <User className={`h-5 w-5 ${activeInstruks === 'journaloptag_an' ? 'text-[#839788]' : 'opacity-60'}`} />
+                            <span className="text-sm">Journaloptagelse (AN)</span>
+                        </button>
+
                     </div>
                 </aside>
 
@@ -151,6 +221,8 @@ function GuidelinesApp({ onNavigate }) {
                     {activeInstruks === 'plan_anoreksi' && renderAnoreksiPlan()}
                     {activeInstruks === 'plan_generel' && renderGenerelPlan()}
                     {activeInstruks === 'gennemgang' && renderGennemgang()}
+                    {activeInstruks === 'blodproever' && renderBlodproever()}
+                    {activeInstruks === 'journaloptag_an' && renderJournaloptagAN()}
                 </main>
             </div>
         </div>
