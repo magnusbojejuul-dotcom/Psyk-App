@@ -3,7 +3,7 @@ import DiffMatchPatch from 'diff-match-patch';
 import GdprBanner from '../GdprBanner';
 import { ANOREXIA_OPTIONS } from '../data/anorexiaOptions';
 import Input from '../components/Input';
-import { Activity, Brain, Stethoscope, FileText, RotateCcw, Clipboard, Copy, Maximize, Minimize, CheckCircle2, AlertCircle, XCircle, ToggleLeft, ToggleRight, MessageSquare, Layers, Trash2, Star, PenLine, Cookie, Plus, ChevronRight, Layout, Repeat, AlertTriangle } from '../components/Icons';
+import { Activity, Brain, Stethoscope, FileText, RotateCcw, Clipboard, Copy, Maximize, Minimize, CheckCircle2, AlertCircle, XCircle, ToggleLeft, ToggleRight, MessageSquare, Layers, Trash2, Star, PenLine, Cookie, Plus, ChevronRight, Layout, Repeat, AlertTriangle, AlignLeft } from '../components/Icons';
 import { ACTUAL_PSYCH_OPTIONS, DEP_CORE_IDS, DEP_ACC_IDS } from '../data/actualPsychOptions';
 import { PSYCH_OPTIONS, PSYCH_NORMAL_IDS } from '../data/psychOptions';
 import { SOMATIC_ACT_OPTIONS, SOMATIC_OBJ_OPTIONS, SOMATIC_NORMAL_IDS, SOMATIC_ACT_NORMAL_IDS } from '../data/somaticOptions';
@@ -556,6 +556,45 @@ function JournalApp({ onNavigate }) {
         setTimeout(() => setNotification(null), 3000);
     };
 
+    const generateFluentDescription = () => {
+        if (!generatedText) return;
+
+        const separator = '\n\n---\nSAMLET FLYDENDE BESKRIVELSE:\n';
+
+        let originalText = generatedText;
+        if (originalText.includes('SAMLET FLYDENDE BESKRIVELSE:')) {
+            originalText = originalText.split(separator)[0].trimEnd();
+        }
+
+        const lines = originalText.split('\n');
+        const fluentParts = [];
+
+        for (let line of lines) {
+            const trimmed = line.trim();
+            if (!trimmed) continue;
+            if (trimmed === 'OBJEKTIVT PSYKISK (MSE)' || trimmed === 'OBSERVATIONER' || trimmed === '---') continue;
+            if (trimmed.toLowerCase().startsWith('ad ') && trimmed.endsWith(':')) continue;
+
+            fluentParts.push(trimmed);
+        }
+
+        if (fluentParts.length === 0) {
+            setNotification({ message: 'Ingen tekst at samle', type: 'error' });
+            setTimeout(() => setNotification(null), 3000);
+            return;
+        }
+
+        const fluentText = fluentParts.join(' ');
+        const newText = originalText + separator + fluentText;
+
+        setGeneratedText(newText);
+        lastUserTextRef.current = newText;
+        setManualEditMode(true);
+
+        setNotification({ message: 'Tekst samlet til flydende beskrivelse', type: 'success' });
+        setTimeout(() => setNotification(null), 3000);
+    };
+
     const toggleFullscreen = () => {
         if (!document.fullscreenElement) {
             document.documentElement.requestFullscreen().catch((err) => {
@@ -963,7 +1002,12 @@ function JournalApp({ onNavigate }) {
                             <div className="flex items-center gap-1.5 text-amber-700 font-medium"><PenLine className="w-3.5 h-3.5" /><span>Fri redigering aktiv.</span></div>
                         </div>
                     )}
-                    <div className="p-5 bg-[#F9F8F6]/50 border-t border-[#E8E4D9]/50">
+                    <div className="p-5 bg-[#F9F8F6]/50 border-t border-[#E8E4D9]/50 flex flex-col gap-3">
+                        {activeSection === 'psych' && (
+                            <button onClick={generateFluentDescription} className="w-full flex justify-center items-center gap-2 bg-white text-[#839788] border border-[#E8E4D9] hover:bg-[#F9F8F6] px-4 py-2.5 rounded-xl font-bold transition-all shadow-sm">
+                                <AlignLeft className="h-4 w-4" /> Saml til flydende tekst
+                            </button>
+                        )}
                         <button onClick={copyToClipboard} className="w-full flex justify-center items-center gap-2 bg-[#839788] hover:bg-[#6B8070] text-white px-4 py-3.5 rounded-xl font-bold transition-all shadow-md hover:shadow-lg active:transform active:scale-[0.98]">
                             <Clipboard className="h-4 w-4" /> {activeSection === 'full_note' ? 'Kopier HELE notatet' : 'Kopier SEKTION'}
                         </button>
