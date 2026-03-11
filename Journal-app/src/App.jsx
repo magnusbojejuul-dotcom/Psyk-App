@@ -6,6 +6,7 @@ import TreatmentGuidelinesApp from './pages/TreatmentGuidelinesApp';
 import ScoringToolsApp from './pages/ScoringToolsApp';
 import SubstanceAbuseApp from './pages/SubstanceAbuseApp';
 import PsykofarmakaApp from './pages/PsykofarmakaApp';
+import EctApp from './pages/EctApp';
 
 class ErrorBoundary extends React.Component {
     constructor(props) {
@@ -52,6 +53,7 @@ function App() {
                 {currentView === 'scoring' && <ScoringToolsApp onNavigate={handleNavigate} />}
                 {currentView === 'substance' && <SubstanceAbuseApp onNavigate={handleNavigate} />}
                 {currentView === 'psykofarmaka' && <PsykofarmakaApp onNavigate={handleNavigate} initialDrug={navArgs} />}
+                {currentView === 'ect' && <EctApp onNavigate={handleNavigate} />}
             </div>
         </ErrorBoundary>
     );
