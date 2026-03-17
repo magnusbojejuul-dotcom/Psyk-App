@@ -74,7 +74,7 @@ export const PSYCH_OPTIONS = [
     { id: 'appear_unkept', label: 'Usoigneret', category: 'Fremtoning & Kontakt', text: 'Usoigneret.', exclude: ['appear_normal'], smartMerge: { prefix: 'Fremtræden er ', item: 'usoigneret', suffix: '.' } },
     
     { id: 'att_coop', label: 'Samarbejdsvillig', category: 'Fremtoning & Kontakt', text: 'Venlig og samarbejdsvillig i kontakten.', isDefault: true, exclude: ['att_guard', 'att_hostile'] },
-    { id: 'att_guard', label: 'Afvisende/Guarded', category: 'Fremtoning & Kontakt', text: 'Guarded og afvisende.', exclude: ['att_coop'], smartMerge: { prefix: 'Holdningen er ', item: 'guarded og afvisende', suffix: '.' } },
+    { id: 'att_guard', label: 'Afvisende/forbeholden', category: 'Fremtoning & Kontakt', text: 'Forbeholden og afvisende.', exclude: ['att_coop'], smartMerge: { prefix: 'Holdningen er ', item: 'forbeholden og afvisende', suffix: '.' } },
     { id: 'att_hostile', label: 'Fjendtlig', category: 'Fremtoning & Kontakt', text: 'Fjendtlig.', exclude: ['att_coop'], smartMerge: { prefix: 'Holdningen er ', item: 'fjendtlig', suffix: '.' } },
     
     { id: 'contact_eye_norm', label: 'Naturlig øjenkontakt', category: 'Fremtoning & Kontakt', text: 'Øjenkontakten er naturlig.', isDefault: true, exclude: ['contact_eye_avoid', 'contact_eye_stare'] },

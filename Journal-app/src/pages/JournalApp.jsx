@@ -212,7 +212,7 @@ function JournalApp({ onNavigate }) {
                 }
             }
         }
-        return lines.join(' ');
+        return lines.join(' ').trim();
     };
 
     const generateTextContent = (section, ids, details, contactReason, timeline, diets, uniform, summaryMode) => {
@@ -591,25 +591,88 @@ function JournalApp({ onNavigate }) {
         }
 
         const lines = originalText.split('\n');
-        const fluentParts = [];
+        const capturedSentences = [];
 
         for (let line of lines) {
             const trimmed = line.trim();
             if (!trimmed) continue;
-            if (trimmed === 'OBJEKTIVT PSYKISK (MSE)' || trimmed === 'OBSERVATIONER' || trimmed === '---') continue;
+            // Skip headers and section lines
+            if (trimmed === 'OBJEKTIVT PSYKISK (MSE)' || 
+                trimmed === 'OBSERVATIONER' || 
+                trimmed === '---' ||
+                trimmed === 'AKTUELT PSYKISK (ANAMNESE)' ||
+                trimmed === 'AKTUELT SOMATISK' ||
+                trimmed === 'SOMATISK VURDERING') continue;
+            
+            // Skip "Ad category:" lines
             if (trimmed.toLowerCase().startsWith('ad ') && trimmed.endsWith(':')) continue;
 
-            fluentParts.push(trimmed);
+            // Split into sentences (simple splitting by dot)
+            const splitSentences = trimmed.split(/\. /);
+            splitSentences.forEach((s, idx) => {
+                let cleanS = s.trim();
+                if (!cleanS) return;
+                if (!cleanS.endsWith('.') && idx === splitSentences.length - 1) {
+                    cleanS += '.';
+                } else if (!cleanS.endsWith('.')) {
+                    cleanS += '.';
+                }
+                capturedSentences.push(cleanS);
+            });
         }
 
-        if (fluentParts.length === 0) {
+        if (capturedSentences.length === 0) {
             setNotification({ message: 'Ingen tekst at samle', type: 'error' });
             setTimeout(() => setNotification(null), 3000);
             return;
         }
 
-        const fluentText = fluentParts.join(' ');
-        const newText = originalText + separator + fluentText;
+        // IMPROVED JOINING LOGIC
+        let fluidText = "";
+        let lastSubject = "";
+        
+        const subjectsToMerge = [
+            { text: "Patienten ", replacement: "vedkommende " },
+            { text: "Patienten er ", replacement: "er desuden " },
+            { text: "Holdningen er ", replacement: "fremstår " },
+            { text: "Kontaktformen er ", replacement: "samtidig " },
+            { text: "Emotionel kontakt er ", replacement: "mens den emotionelle kontakt er " }
+        ];
+
+        capturedSentences.forEach((sentence, index) => {
+            let processedSentence = sentence;
+
+            // Merge logic: If multiple sentences start with the same subject, try to vary it
+            if (index > 0) {
+                const prev = capturedSentences[index - 1];
+                
+                // Example: "Patienten... Patienten..." -> "Patienten... Desuden..."
+                if (sentence.startsWith("Patienten ") && prev.startsWith("Patienten ")) {
+                    const randomTransition = ["Desuden ", "Herudover ", "Vedkommende ", "Patienten ses ligeledes "];
+                    const transition = randomTransition[index % randomTransition.length];
+                    processedSentence = sentence.replace("Patienten ", transition);
+                }
+                
+                // Add varied conjunctions between certain categories of sentences
+                const conjunctions = [" samt ", " og ", ". Desuden ", ". Herudover "];
+                const conj = conjunctions[index % conjunctions.length];
+
+                // If short sentences, try to join them with "og" or "samt"
+                if (processedSentence.length < 50 && index % 3 === 1) {
+                    fluidText = fluidText.trim().replace(/\.$/, "");
+                    processedSentence = (index % 2 === 0 ? " og " : " samt ") + processedSentence.charAt(0).toLowerCase() + processedSentence.slice(1);
+                } else {
+                    fluidText += " ";
+                }
+            }
+
+            fluidText += processedSentence;
+        });
+
+        // Cleanup: Fix double spaces, double dots, etc.
+        fluidText = fluidText.replace(/\s+/g, ' ').replace(/\.\./g, '.').trim();
+
+        const newText = originalText + separator + fluidText;
 
         setGeneratedText(newText);
         lastUserTextRef.current = newText;
