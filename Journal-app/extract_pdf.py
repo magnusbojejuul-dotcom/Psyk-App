@@ -1,23 +1,16 @@
-import pdfplumber
 import sys
+import PyPDF2
 
-# Extract text from the new Angst PDF to provide accurate data for the app
-pdf_path = "C:/Users/magnu/Desktop/Apps/Psyk App/Journal-app/public/pdf/national-klinisk-retningslinje-for-behandling-af-moderat-og-svaer-bulimi.pdf"
-output_txt_path = "C:/Users/magnu/Desktop/Apps/Psyk App/Journal-app/bulimi_extracted.txt"
-
-def extract_text(pdf_path, output_path):
-    print(f"Extracting text from {pdf_path}...")
-    try:
-        with pdfplumber.open(pdf_path) as pdf:
-            with open(output_path, "w", encoding="utf-8") as out_file:
-                out_file.write(f"--- START OF {pdf_path} ---\n")
-                for page in pdf.pages:
-                    text = page.extract_text()
-                    if text:
-                        out_file.write(text + "\n")
-        print(f"Extraction complete. Text saved to {output_path}")
-    except Exception as e:
-        print(f"Error extracting text: {e}", file=sys.stderr)
+def extract_text(pdf_path, txt_path):
+    with open(pdf_path, 'rb') as file:
+        reader = PyPDF2.PdfReader(file)
+        text = ""
+        for page_num in range(len(reader.pages)):
+            page = reader.pages[page_num]
+            text += page.extract_text()
+            
+    with open(txt_path, 'w', encoding='utf-8') as out_file:
+        out_file.write(text)
 
 if __name__ == "__main__":
-    extract_text(pdf_path, output_txt_path)
+    extract_text(sys.argv[1], sys.argv[2])

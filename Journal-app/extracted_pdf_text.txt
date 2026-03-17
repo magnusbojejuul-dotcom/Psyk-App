@@ -1,0 +1,221 @@
+ 
+Aarhus Universitetshospital Psykiatrien  
+1 
+ Henvisning og booking ECT  
+Lægernes arbejdsgang ifm. henvisning til ECT  
+ 
+1. Informeret samtykke:  
+• Forud for behandling skal den henvisende læge orientere patienten og de pårørende om 
+behandlingens formål, teknik, effekt og bivirkninger.    
+• Patienten skal også have udleveret den fællespsykiatriske patientvejledning  "Behandling 
+med ECT”.  
+ 
+2. Forundersøgelser:  
+• Somatisk undersøgelse, inklusiv hjerte -lungestetoskopi  
+• Blodprøve (ECT -blodprøvepakke jf.  Blodprøveprofiler i Psykiatrien, fællespsykiatrisk 
+retningslinje ). Andre blodprøver kan være relevante i forbindelse med  somatisk 
+sygdom f.eks. INR (se ECT-vejledning - afsnit 5) (Opstart af ECT -serie: maks . 1 uge 
+gammel; v -ECT: hver 3.mdr)  
+• EKG (Opstart af ECT -serie: maks . 1 uge gammel; v -ECT: hver 3.mdr)  
+• Røntgen af thorax – hos patienter med kardiopulmonale lidelser, hypertension eller 
+med en alder over 70 år. Må være op til 6 måneder gamle, såfremt patienten ikke har 
+nye symptomer  
+• Puls, blodtryk, vægt og BMI  
+• Tandstatus og evt. tandlægetilsyn  
+• Allergi (husk at opdatere CAVE)  
+ 
+3. Risikovurdering, kontraindikationer og risikofaktorer : 
+• Ved komplicerende somatiske lidelser (ECT-vejledning -afsnit 2.5)  skal det være sikret, 
+at patienten er optimalt behandlet ved at benytte relevante tilsyn (kardiolog, neurolog 
+osv.), og dernæst anæstesilæge ( ECT-vejledning - afsnit 4.1.2)  
+• Ikke-akutte anæstesitilsyn skal bestilles via mail AUHIntensiv -ECTforesporgsel@rm.dk. 
+Svartid er inden for to hverdage. Er der brug for akut anæstesitilsyn, skal vagthavende 
+anæstesilæge på Intensiv Nord kontaktes på 7846 4803.  
+• OBS:  Se ECT-vejledning - afsnit 2.1 for Arbejdsgang ved forhåndstilkendegivelse af 
+fravalg til genoplivning  
+ 
+4. Igangværende medicinsk behandling  som skal pauseres/justeres inden 
+opstart af ECT -behandling  (ECT-vejledning - afsnit 5)  
+ 
+5. Øvrige ordinationer og opmærksomhedspunkter:  
+• Måling af TOKS forud for hver ECT -behandling (dagen før ECT og morgen på ECT -
+dagen kl. 6)   
+- Hvis BT >160/100mmHg:   tilkaldes lægen mhp. behandling af det forhøjede blodtryk, før 
+patienten køres til ECT.  
+- Ved vedvarende forhøjet BT>160/100mmHg  på trods af relevant medicinsk behandling, bør 
+ECT udskydes, medmindre der foreligger en lægefaglige vurdering om at ECT skal udføres (f.eks. i 
+tilfælde af livstruende tilstande). I dette tilfælde skal ECT -anæstesiteam kontaktes, og informeres om 
+problems tilling   
+• Hydrering: min. 1000ml væske dagen før ECT  (særlig vigtigt hvis lithium behandling ) 
+• Diabetes: ordiner måling blodsukker (BS) på ECT -dagene fra kl. 7 og 1x/time, indtil pt. 
+bliver kørt til ECT (se bilag 3)  
+ 
+6. Opret standardplanen ”Henvisning til ECT ” og udfyld samtlige SFIer:  
+• Indikation ved unilateral og bilateral ECT (ECT-vejledning - afsnit 6 ). 
+• Kun speciallæger i psykiatri kan ordinere yderligere behandlinger samt ordinere skift fra 
+unilateral til bilateral, hvis der er manglende klinisk effekt.   
+Aarhus Universitetshospital Psykiatrien  
+2 
+ • Ordination af yderligere behandlinger eller ændringer af ordinationsform ordineres 
+ligeledes i ”Henvisning til ECT”.  
+• Såfremt den ordinerende speciallæge ikke ønsker at patienten skiftes til bilateral 
+behandling, noteres det under kommentar i standardplanen ”Henvisning til ECT”.  
+ 
+7. Booking  – indlagte patienter : 
+• Indlagte patienter bliver booket af sengesekretariatet  
+• Som udgangspunkt får indlagte patienter tre ECT -behandlinger om ugen, fortrinsvis 
+mandag, onsdag og fredag.  
+• Når en indlagt patient  er henvist til ECT -serie, skal patienten tilføjes på en af de 
+nedenstående lister i EPJ afhængigt af, hvilken prioritet patienten skal have : 
+o Akutliste: ECT akut -liste – ADA Klinik for Depression – AUH 
+o Elektivliste: ECT elektiv liste – ADA Klinik for Depression – AUH 
+o Se nedenfor i forhold til kriterier for akut og elektiv  ECT-behandling.  
+ 
+ 
+ 
+• Der skal anføres i kommentarfeltet på patientlisten, om ordinationen er : 1. Opstart af 
+ECT-serie 2. Fortsættelse af ECT -serie 
+ 
+• Det skal altid noteres på ECT-listen hvis patienten har diabetes eller i behandling med 
+Lithium , for at sikre, at patienten får en tid til ECT -behandling så tidligt som muligt på 
+dagen.  
+ 
+• En patient kan tilføjes ECT -listerne, når henvisningen er gyldig. Henvisninger der ligger 
+som kladder bliver derfor ikke booket.  
+ 
+• Alle patienter starter op med ECT -behandling på det tidspunkt, de er booket på 
+bookinglisten. I særlige tilfælde, hvis der f.eks. er for mange patienter på bookinglisten, 
+vil akutte patienter dog blive prioriteret over elektive patienter. Status på ECT kan  ses i 
+Klinisk Logistik. 2.  
+• Der bliver automatisk booket 12 behandlinger i starten af ECT -forløb, selvom der bliver 
+ordineret færre behandlinger. Det er derfor vigtigt at huske at:  
+o Forny ordinationen, hvis patienten skal mere end de første ordinerede (f.eks . hvis 
+der blev ordineret 6 behandlinger i starten, skal der laves ny ordination efter de 
+første 6 behandlinger, selvom tiderne allerede er bookede)  
+o Informere sengesekretariatet via patientlisten, hvis patienten ikke skal have flere 
+behandlinger og de resterende behandlinger, ud af de 12, skal aflyses  
+ 
+Kontakt til ADA sengesekretariatet : 
+• Alle ændringer i patientens ECT -forløb skal kommunikeres via patientlisterne (akut - og 
+elektivlisten) i EPJ, f.eks. ændring af interval mellem ECT -behandling, ophør af ECT -
+behandling (så de resterende behandlinger aflyses), m.m.  
+• Ved akutte ændringer kontaktes sengesekretariatet på telefon 78472100.  
+• Funktionspostkassen: ps.sekretariat.sengeafsnit@rm.dk  
+ 
+Aarhus Universitetshospital Psykiatrien  
+3 
+ 7.1 Kriterier for elektivliste og akutliste : 
+Akutlisten bliver brugt, hvis/når der er en klar indikation for hurtigt at iværksætte ECT -
+behandling pga. svær forpinthed, livsfare samt akut stor selvmordsrisiko. Det kan f.eks. være:  
+• Svær depression med akut øget selvmordsrisiko  
+• Svær depression med psykotiske symptomer med udtalt forpinthed, hvor der er behov 
+for en hurtig indsats.  
+• Stupor og katatoni.  
+• Delirium hvor anden behandling ikke virker.  
+• Maniske tilstande/blandingstilstande med begyndende delir eller med psykotiske 
+symptomer, hvor medicinsk behandling ikke har virket, eller hvor der er behov for en 
+hurtig indsats.  
+• Skizofreni med udtalte psykotiske symptomer og forpinthed eller agitation, hvor 
+farmakoterapi ikke kan optimeres, eller hvor der er behov for en hurtig indsats.  
+• Malignt neuroleptikasyndrom.  
+ 
+Elektivlisten  bliver brugt til patienter, som ikke opfylder kriterierne for at stå på akutlisten 
+(f.eks. fordi de ikke er i livsfare), men som stadig har behov for ECT -behandling. Det kan f.eks. 
+være:  
+• Patienter med svær depression uden eller evt. med diskrete psykotiske symptomer.  
+• Patienter med moderat til svær depression hvor de medicinske behandlingsmuligheder 
+er udtømt (enten pga. manglende respons, uholdbare bivirkninger eller somatisk 
+sygdom)  
+• Patienter med moderat til svær depression, som tidligere har vist god respons på ECT.  
+• Mani/blandingstilstand, hvor intensivering af den medicinske behandling er mulig.  
+• Skizofreni, hvor intensivering af den medicinske behandling er mulig.  
+Hvis der er ventetiden op til den første ECT -behandling bør andre behandlingstiltag sættes i 
+gang og intensiveres, f.eks. medicinsk behandling og/eller TMS.  
+7.2 Særligt ift. en bloc behandling:  
+• Kriterierne for akut en bloc ECT -behandling er akutte livstruende psykiatriske tilstande 
+uanset ætiologi, det vil sige hvad enten de forårsages af somatiske eller psykiske 
+forhold.  
+• Ved en bloc ECT -behandling bliver behandlingen givet tre dage i træk , med bilateral 
+elektrodeplacering og strømdosis lige med alder.  
+• En bloc ECT -behandling skal gerne begynde mandag, tirsdag eller onsdag. Ved behov 
+for en bloc tirsdag, lørdag samt søn - og helligdage skal det aftales med cheflæge 
+Farahna Harees , idet behandlingen kræver særlig aftale med anæstesien.  
+ 
+En bloc ECT -behandling på dage, hvor der ikke er planlagt ECT : 
+Hvis der skal gives ECT tirsdag, i weekender eller helligdage, skal det godkendes af cheflæge 
+Farahna Harees (telefon 2325 8288).  Arbejdsgang:  
+1. Den ordinerende læge kontakter cheflæge Farahna Harees med henblik på at få 
+godkendelse af en bloc ECT -behandling.  
+2. Efter godkendelse fra cheflæge Farahna orienterer den læge eller plejepersonale ECT -
+klinikken om, at der er en bloc ECT -behandling. ECT -klinikken kan kontaktes på telefon 
+2013 8836 eller 2013 4929.  
+3. ECT-klinikken arrangerer behandlingstidspunktet, de orienterer sengeafsnittet og 
+koordinerer med anæstesien  
+4. En bloc ECT -behandling i weekender eller helligdage OG en bloc ECT -behandling på 
+tirsdage til patienter indlagt i BUA, RET samt somatiske afdelinger : Den ordinerende 
+læge orienterer vagtholdet om den forestående en bloc ECT -behandling. Bagvagten 
+udpeger en forvagt, som kan forestå ECT -behandlingen. En bloc ECT -behandling på  
+Aarhus Universitetshospital Psykiatrien  
+4 
+ tirsdage til patienter indlagt i ADA eller AFP : Det er den afdeling, der har patienten 
+indlagt, der sørger for en læge til at forestå ECT -behandlingen.  
+7.3 ECT til patienter med organis k delerium:  
+Cheflæge Farahna Harees konfererer med anæstesien i forhold til godkendelse af ECT 
+behandling til somatiske patienter.  
+Anæstesi til ECT hos patienter med delir på Intensiv Nord og Øst skal forestås af anæstesilæ -
+ger fra Intensiv Nord.  
+Psykiateren kontakter anæstesien på telefon 7846 4803 for planlægning af dette. Særligt for 
+Intensiv Øst patienter, så er dette et samarbejde med læger fra Intensiv Øst, men læger fra 
+Intensiv Nord forestår behandlingen.  
+ 
+Retningslinje angående, hvordan det kan vurderes, om patienten er i delir, kan ses her: 
+Delirium, identifikation, forebyggelse, behandling og pleje, regional retningslinje  
+7.4  Særligt ift. booking af ambulante patienter som indlægges  til 
+vedligeholdelses ECT 
+Hvis en patient med forløb i en ambulant klinik ikke opfylder alle kriterier for , at 
+vedligeholdelses ECT -behandlingen kan foregå ambulant (ECT -vejledningen bilag 2), skal 
+patienten indlægges forud for hver ECT -behandling.  
+ 
+I ECT -henvisning en til vedligeholdelses ECT -behandling  skal der noteres frekvens for ECT, antal 
+af ordinere de ECT-behandlinger og samlet antal af ECT -behandlinger. Hvis patienten henvises 
+til vedligeholdelses ECT -behandlingen efter en afsluttet akut ECT -serie, bør antallet af 
+behandlinger, der er modtaget under den akutte ECT -serie, ikke medregnes i SFI -en ”antal 
+behandlinger i alt i serien”.  
+    
+Når henvisningen er gyldig, tilføjes patienten til patientliste n ”Elektiv ECT -liste”. De r skal 
+noteres  frekvensen for ECT -behandlinger , og om patienten har diabetes eller er i behandling 
+med lithium.  
+ 
+Sengeafsnittet planlægger indlæggelsen med patientens primærbehandler og ADA 
+sengesekretariat et booker patienten til ECT -behandling ( ikke ECT-enhed en). 
+ 
+Ændringer til behandlinger (f.eks. ny ordination, ændringer i frekvensen af ECT -behandlinger, 
+eller stop af ECT-behandling) kommunikeres til ADA sengesekretariat et via elektivlisten.  
+7.5 Særligt ift. godkendelse af vedligeholdelsesbehandling    
+V-ECT skal godkendes af ECT -ansvarlige speciallæger ved opstart og ved ønske om 
+fortsættelse hver 3. måned. Drøftelse foregår ved at kontakte ECT -ansvarlige via 
+Funktionspostkasse ( psy.auhp.ect -tms.ansvarlige.forespoergsel@rm.dk ), hvor det skal fremgå, 
+på hvilket grundlag man ønsker at ordinere vedligeholdelsesbehandling, herunder info om 
+diagnose, kort sygehistorie og indikation for v -ECT, samt hvordan patienten tålte den akutte 
+ECT-serie. Ved godkendelse hver 3.måned, skal man skrive, om der fortsat er god effekt, og 
+om behandlingen tåles godt.    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+Aarhus Universitetshospital Psykiatrien  
+5 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

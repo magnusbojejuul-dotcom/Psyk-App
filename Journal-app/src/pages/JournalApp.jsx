@@ -123,8 +123,32 @@ function JournalApp({ onNavigate }) {
             }
         });
 
+        // Filter out parent options from ALL groups if ANY of their sub-options are currently selected
+        const selectedSubOptions = Array.from(currentSelectedIds)
+            .map(id => categoryOptions.find(o => o.id === id))
+            .filter(o => o && o.isSubOption);
+            
+        const parentIdsWithActiveSubOptions = new Set(selectedSubOptions.map(o => o.parentId));
+
+        Object.keys(plainItemsByPrefix).forEach(prefix => {
+            // Remove parent items if their sub-options are active
+            plainItemsByPrefix[prefix] = plainItemsByPrefix[prefix].filter(opt => {
+                if (opt.isParent && parentIdsWithActiveSubOptions.has(opt.id)) {
+                    return false; // Skip this parent, a sub-option is taking over
+                }
+                return true;
+            });
+            
+            // If the array is empty after filtering, delete the key
+            if (plainItemsByPrefix[prefix].length === 0) {
+                delete plainItemsByPrefix[prefix];
+            }
+        });
+
         Object.keys(plainItemsByPrefix).forEach(prefix => {
             const opts = plainItemsByPrefix[prefix];
+            if (!opts || opts.length === 0) return;
+            
             const items = opts.map(o => o.smartMerge.item);
             const suffix = opts[0].smartMerge.suffix || '.';
             const mergedItems = formatList(items);
@@ -786,9 +810,16 @@ function JournalApp({ onNavigate }) {
                             </div>
                             <div className="p-4 flex flex-col gap-2.5">
                                 {dataSet.filter(o => o.category === cat).map(option => {
+                                    if (option.isSubOption && !selectedIds.has(option.parentId)) return null;
+
                                     const isSelected = selectedIds.has(option.id);
                                     const isPathology = option.isPathology || (!option.isDefault && !option.isNormal);
                                     let btnClass = "w-full text-left px-4 py-3 text-sm rounded-xl border transition-all duration-300 flex items-center justify-between group overflow-hidden relative shadow-sm ";
+                                    
+                                    if (option.isSubOption) {
+                                        btnClass += "ml-4 w-[calc(100%-1rem)] border-l-2 border-l-[#839788]/40 mb-1 ";
+                                    }
+
                                     if (isSelected) {
                                         if (isPathology) btnClass += "bg-[#FDF8F8] border-[#D9A8A8] text-[#7A4040] font-semibold";
                                         else btnClass += "bg-[#F2F6F3] border-[#9EAF9F] text-[#2C3F34] font-semibold";
@@ -801,10 +832,15 @@ function JournalApp({ onNavigate }) {
                                             <button onClick={() => toggleOption(option)} className={btnClass}>
                                                 <div className="relative z-10 flex w-full items-center justify-between">
                                                     <span className="truncate pr-3">{option.label}</span>
-                                                    {isSelected && (isPathology ? <AlertCircle className="w-4 h-4 text-[#D9A8A8] flex-shrink-0" /> : <CheckCircle2 className="w-4 h-4 text-[#9EAF9F] flex-shrink-0" />)}
+                                                    <div className="flex items-center gap-2">
+                                                        {option.isParent && (
+                                                            isSelected ? <ChevronRight className="w-4 h-4 rotate-90 transition-transform text-[#839788]" /> : <ChevronRight className="w-4 h-4 transition-transform text-[#839788]" />
+                                                        )}
+                                                        {isSelected && (isPathology ? <AlertCircle className="w-4 h-4 text-[#D9A8A8] flex-shrink-0" /> : <CheckCircle2 className="w-4 h-4 text-[#9EAF9F] flex-shrink-0" />)}
+                                                    </div>
                                                 </div>
                                             </button>
-                                            {isSelected && (
+                                            {option.hasInput && isSelected && (
                                                 <div className="mt-2 mb-2 ml-2 pl-3 border-l-2 border-[#839788]/30">
                                                     <input
                                                         type="text"

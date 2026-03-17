@@ -1,0 +1,1112 @@
+ECT - Elektrokonvulsiv terapi, fælles psykiatri, regional retningslinje
+Udgiver Region Midtjylland
+Fagligt ansvarlig Ana Lisa Martins Carmo Version 11
+Kvalitetsansvarlig Anne Foged Christensen Gældende fra 17-02-2026
+Ledelsesansvarlig Anne Foged Christensen Næste revision 07-11-2028
+Ændringer I afsnittet 'Patientgruppe/Patientforløb/Anden målgruppe/Gyldighedsområde' er links til
+patientvejledningerne blevet opdateret pga. integration med somatik og nye hjemmesider.
+Revisionsdato uændret. Direkte ledelsesgodkendt.
+ 
+Formål
+Lokal tilføjelse for Aarhus Universitetshospital > Psykiatrien Fælles     Godkender: Mette Høllund Sloth Eriksen
+Tilføjelse til Fælles Psykiatri
+Formålet med denne retningslinje er at:
+give en kortfattet information om praktiske procedurer og information om ECT samt kort beskrivelse af
+baggrunden for behandling, bivirkninger m.v.
+sikre, der er en klar ansvars- og opgavefordeling ved ECT
+sikre, at vurdering af patienter forud for ECT sker på et ensartet og fagligt forsvarligt grundlag
+sikre, at patienter efter ECT observeres og behandles på et ensartet og fagligt forsvarligt grundlag
+Tilbage til top
+Patientgruppe/Patientforløb/Anden målgruppe/Gyldighedsområde
+ECT-vejledningen er rettet mod fagpersoner. Informationsmateriale til patienter og deres pårørende findes på
+følgende hjemmesider:
+Psykiatriske afdelinger på AUH: Psykiatri AUH - Patientvejledning ECT
+Psykiatri på Regionshospitalet Gødstrup: Regionshospitalet Gødstrup - Patientvejledning ECT
+Psykiatri på Regionshospitalet Horsens: Regionshospitalet Horsens - Patientvejledning ECT
+Psykiatri på Regionshospitalet Randers: Regionshospitalet Randers - Patientvejledning ECT
+Psykiatri i Hospitalsenhed Midt: Hospitalsenhed Midt - Patientvejledning ECT
+Tilbage til top
+Definition af begreber
+ECT: Elektrokonvulsiv terapi
+v-ECT: Vedligeholdelses ECT
+DPS: Dansk Psykiatrisk Selskab 
+CAVE: CAVE er latinsk for ”Vogt dig” eller ”Undgå” og anvendes i patientjournalen ved både allergi og intolerans
+MAO-hæmmer: Monoaminooxidasehæmmere 
+ASA-klassifikation: K lassifikation af patientens almene tilstand
+GI-drop: Glukose-insulin drop
+INR: International Normaliseret Ratio
+AK-behandling: Antikoagulationsbehandling
+​​​​​Tilbage til top
+Fremgangsmåde
+Lokal tilføjelse for Aarhus Universitetshospital > Psykiatrien Fælles     Godkender: Marianne Sigrid Bovard
+I AUH Psykiatrien er der følgende bilag med lokale arbejdsgange: 
+ECT - Elektrokonvulsiv terapi, fælles..., version 11.
+Udskrevet: 11-03-2026 af Magnus Boje Juul 1 af 252. Ordination og booking af ECT - Henvisning og booking af ECT: 
+ AUHP - Henvisning og booking ECT
+2. Den behandlingsansvarlige speciallæges arbejdsgang ved ECT : 
+Den behandlingsansvarlige
+speciallæges arbejdsgang ved ECT
+2.3.2. Ambulant ECT - Kriterier og arbejdsgange ved ambulant ECT:  AUHP - Ambulant ECT
+2.5. Særligt for patienter med diabetes:  
+AUHP - Patienter med diabetes
+4.2. Forberedelse af patienten til ECT  - Sygeplejehandlinger ved ECT (sengeafsnit): 
+ AUHP – Tjekliste,
+sygeplejehandlinger ved ECT
+7. Praktiske procedure og arbejdsgange under ECT - 
+AUHP - Arbejdsgange ved ECT-behandling  og 
+AUHP - Praktiske procedurer ved anæstesi
+ 
+I AUH Psykiatrien gælder følgende arbejdsgang for røntgen af thorax under punkt 4.1 Forberedelse af
+patienten til ECT: 
+At røntgen af thorax skal foreligge hos patienter med kardiopulmonale lidelser, hypertension eller med en
+alder over 70 år. Røntgenbilleder må være op til seks måneder gamle, såfremt patienten ikke har nye
+symptomer. Fremgår af bilag 1.
+ 
+Fasteregler for patienter der skal modtage ECT-behandling:
+Patienterne må ikke spise fra kl. 00 før ECT-behandlingen. I fasteperioden må patienterne heller ikke
+indtage pastiller, bolsjer eller tyggegummi.
+Senest kl. 6.00 må patienterne få klare væsker (vand, saftevand og juice uden frugtkød, præoperative
+kulhydratholdige drikke, kaffe/te, gerne med sukker, men ikke mælk/fløde og heller ikke alkohol) og tage
+den ordinerede morgenmedicin (obs. Undtagelser - se afsnit 5 i ECT-retningslinjen)
+Patienterne skal opfordres til at undgå rygning under fasten, men rygning hindrer ikke ECT-behandlingen.
+Patienten observeres og skærmes ved behov ved tvivl om overholdelse af fasteregler. Er der tvivl om
+patienten reelt faster, kan ECT-behandlingen ikke gennemføres den dag
+ 
+Information omkring behandling med ECT til patienter og pårørende :  Behandling med ECT | Psykiatrien i
+Region Midtjylland - Aarhus Universitetshospital
+Ved spørgsmål vedr. booking af ECT-behandling kan ADA Sengesekretariatet kontaktes på telefon 7847 2100
+eller psy.sekretariat.sengeafsnit@rm.dk
+1. Indledning og virkning af ECT
+Formålet med denne retningslinje er at give en kortfattet information om praktiske procedurer og information om ECT.
+Vejledningen omfatter, ud over det rent proceduremæssige, en kort beskrivelse af baggrunden for behandlingen,
+bivirkningerne m.v. ECT-retningslinjen er rettet mod fagpersoner.
+Hvad er ECT
+ECT er en forkortelse for ElectroConvulsive Therapy, og er en veldokumenteret behandlingsform rettet mod svære
+psykiske lidelser, hvor der induceres et generaliseret tonisk-klonisk anfald ved stimulation af hjernen med kortvarige
+strømimpulser. Behandlingen foregår under anæstesi og muskelrelaksans, hvorved de muskulære
+krampefænomener, der er uden betydning for den terapeutiske effekt, mindskes. På denne måde dæmpes de
+muskulære trækninger, hvilket minimerer en eventuel risiko for frakturer o.l. Desuden bliver musklernes iltforbrug
+nedsat, hvilket sammen med ventilation med 100% ilt forhindrer cerebral hypoxi og myokardieiskæmi under
+behandlingen. De muskulære kramper er i sig selv betydningsløse for behandlingen, men de muliggør en klinisk
+registrering af krampeanfaldets tilstedeværelse, udbredelse og varighed.
+Adskillige kontrollerede undersøgelser har vist, at ECT er meget effektivt ved depression, og i nogle opgørelser bliver
+der nævnt responsrater helt op til 80-90% specielt for psykotiske depressioner. Samtidig er bedringen hurtigere
+indsættende end ved medicinsk antidepressiv behandling, og det er af vital betydning ved overhængende livsfare.
+Der er, på trods af omfattende videnskabelige undersøgelser, ikke konstateret cerebrale skader selv efter mange
+ECT.
+Virkning af ECT
+Den præcise virkningsmekanisme af ECT er endnu ikke fuldt forstået. Der er flere teorier, om hvorfor ECT virker, som
+hviler på gode videnskabelige undersøgelser og udelukker ikke gensidigt hinanden. Forskning tyder på, at de
+generaliserede anfald induceret af ECT fører til et stort antal biokemiske, fysiologiske og strukturelle forandringer i
+hjernen. Til trods for en omfattende forskningsindsats kan man endnu ikke udpege, hvilke enkeltkomponenter eller
+ECT - Elektrokonvulsiv terapi, fælles..., version 11.
+Udskrevet: 11-03-2026 af Magnus Boje Juul 2 af 25hvilken kombination af ændringer, der har betydning for den gunstige effekt. Forskning peger også på, at de
+generaliserede kramper påvirker diencephale strukturer, og at cellenydannelse og øget synaptogenese i
+hippocampus spiller en væsentlig rolle.
+For nærmere information om den teoretiske baggrund og virkningsmekanismer ved ECT se Dansk Psykiatrisk
+Selskabs ECT-vejledning ECT-vejledning 2020 .
+1.1 Organisation
+1.1.1 Aarhus Universitetshospital, Psykiatrisk afdeling
+Enhed for ECT og TMS
+Enhed for ECT og TMS er en del af Klinik for Depression (KD) i Afdeling for Depression og Angst (ADA). 
+Kontaktinformation:
+Afdeling for Depression og Angst
+Klinik for Depression og Mani
+Palle Juul Jensens Boulevard 175, Indgang K
+8200 Aarhus N
+Mail: PSY.AUHKDECT@rm.dk
+Tlf.: 2013 4929 eller 2013 8836 (spørgsmål vedr. praktiske forhold)
+Mandag - torsdag kl. 7.30-15.30; fredag kl. 7.30-15.
+Alle "ikke-akutte" faglige forespørgsler vedr. ECT sendes til ECT-ansvarlige speciallæger (Ana Lisa Carmo og Estela
+Salagre) til følgende funktionspostkasse: "PSY AUHP ECT-TMS ansvarlige forespørgsel" psy.auhp.ect-
+tms.ansvarlige.forespoergsel@rm.dk . Svartid inden for to hverdage.
+Er henvendelsen akut, med behov for drøftelse samme dag, kan ECT-ansvarlig overlæge Ana Lisa Carmo kontaktes
+på telefon 6115 5056. Ved behov for akut drøftelse uden for almindelige arbejdstimer kan cheflæge Farahna Harees
+kontaktes (23258288).
+Bestilling af anæstesitilsyn 
+Ikke-akutte tilsyn skal bestilles via mail AUHIntensiv-ECTforesporgsel@rm.dk . Svartid inden for to hverdage.
+Er der brug for et akut anæstesitilsyn, skal den vagthavende anæstesilæge på Intensiv Nord kontaktes på 7846
+4803.
+1.1.2 Regionspsykiatrien Horsens
+Sengeafsnit O1
+Kontaktinformation
+Regionspsykiatrien Horsens
+Strandpromenaden 35K
+8700 Horsens
+Mail: Horsens.post@ps.rm.dk
+Tlf: 78475209
+Hverdage 8.00-11.00 (spørgsmål vedr. praktiske forhold), 78475050 (sekretær) hverdage 11.00-14.00
+ECT-ansvarlig overlæge og cheflæge:
+Lene Høgh
+Tlf: 24812577, mail: leehoe@rm.dk
+1.1.3  Regionspsykiatrien Midt
+Klinik for ECT og TMS
+Klinik for ECT og TMS er en del af Affektiv afdeling. 
+Kontaktinformation RP Midt:
+Regionspsykiatrien Midt
+Søndersøparken 1, indgang A
+8800 Viborg
+Mail: psy.st.viborg@rm.dk
+Tlf: 2139 4408
+ECT - Elektrokonvulsiv terapi, fælles..., version 11.
+Udskrevet: 11-03-2026 af Magnus Boje Juul 3 af 25Tlf: 2139 4408
+Klinikken er åben mandag til fredag i tidsrummet 8-15.
+ECT-ansvarlig overlæge: 
+Erik Feldbæk Nielsen (spørgsmål vedr. behandling og forskning)
+Tlf.: 20468492, mail: erniel@rm.dk 
+1.1.4 Regionspsykiatrien Gødstrup
+Enhed for ECT og TMS, en del af Sengeafsnit 3, affektive lidelser.
+Kontaktinformation:
+Regionspsykiatrien Gødstrup  
+Enhed for ECT og TMS, Sengeafsnit 3
+Hospitalsparken 15 
+7400 Herning 
+Mail: rv-doegnpost@psykiatrien.rm.dk
+Tlf.: 7847 4500
+Alle hverdage fra 08.00-10.00
+Derudover:
+Mandag til onsdag: 12.30-15.30
+Torsdag: 12.30-17.00
+Fredag: 12.30-14.30
+Lokal: 2222 8997 
+ECT-kontaktperson:
+Egidijus Vosylius
+Tlf: +45 3052 1258 mail: EGIVOS@rm.dk
+ECT-ansvarlig overlæge: Her refereres midlertidigt til Skejby via funktionspostkasse: psy.auhp.ect-
+tms.ansvarlige.forespoergsel@rm.dk  
+Bestilling af anæstesitilsyn:
+Generel booking af Anæstesi-tilsyn: Booking af anæstesitilsyn, vejledning - OPI RHG  
+1.1.5 Regionspsykiatrien Randers
+Sengeafsnit S1
+Kontaktinformation RP Randers:
+Regionspsykiatrien Randers
+Dronningborg boulevard 15,
+8930 Randers NØ
+ECT-kontaktperson:
+Martin Andreas Jarl
+Mail: marjar@rm.dk
+ECT-ansvarlig overlæge: Her refereres midlertidigt til Skejby via funktionspostkasse: psy.auhp.ect-
+tms.ansvarlige.forespoergsel@rm.dk   
+2. Ordination og booking af ECT
+Kun speciallæger i psykiatri og børne- og ungdomspsykiatri kan henvise patienter til ECT.
+Før ordination af ECT:
+Følgende handlinger skal foretages før lægen kan henvise til ECT:
+Der skal være indikation for ECT (se afsnit 2.2)
+Der skal foreligge informeret samtykke til ECT eller tvangsprotokol ved tvangsbehandling (se afsnit 2.7 og 2.8)
+Ordination af ECT:
+Opret standardplanen ”Henvisning til ECT” og udfyld samtlige SFI'er.  SFI'erne indeholder oplysninger om:
+Indikationer
+ECT - Elektrokonvulsiv terapi, fælles..., version 11.
+Udskrevet: 11-03-2026 af Magnus Boje Juul 4 af 25Relative kontraindikationer
+Somatiske sygdomme
+Forundersøgelser (se afsnit 4.1)
+Risikovurdering
+Informeret samtykke
+Tandstatus
+Højde/vægt/BMI
+Blodtryk/puls
+Antal ordinerede behandlinger og hyppighed, herunder om:
+Behandlingen skal gives uni- eller bilateral (se afsnit 6.)
+Behandlingen gives som tvangsbehandling
+Herudover skal EPJ være opdateret med følgende:
+Anamnestiske oplysninger om tidligere anæstesiforløb
+Stillingtagen til igangværende medicinsk behandling som skal pauseres/justeres inden opstart af ECT, og
+opdatering af medicinordinationer i EPJ (se afsnit 5)
+Allergi (husk at opdatere CAVE)
+Komorbiditet og eventuelle kardiopulmonale problemer eller andre relative kontraindikationer/risikofaktorer (se
+afsnit 2.4.)
+Information om patientens somatiske lidelser der er relevante ift. ECT (diagnoser samt om disse er
+velbehandlede).
+Strømdosis ved første behandling
+Den henvisende læge skal altid, under ”somatiske sygdomme” i henvisningen, skrive uddybende information om
+patientens somatiske lidelser der er relevante ift. ECT (diagnoser samt om disse er velbehandlede).  
+Ordination af yderligere behandlinger eller ændringer af ordinationsform ordineres ligeledes i ”Henvisning til ECT”.
+Kun speciallæger i psykiatri kan ordinere yderligere behandlinger samt ordinere skift fra unilateral til bilateral, hvis der
+er manglende klinisk effekt.
+Såfremt den ordinerende speciallæge ikke ønsker, at patienten skiftes til bilateral behandling, noteres det under
+kommentar i standardplanen ”Henvisning til ECT”.
+Henvisning og booking af ECT:
+Se bilag for afdelingsspecifikke arbejdsgange i lokal tilføjelse. 
+2.1 Arbejdsgang ved forhåndstilkendegivelse af fravalg til genoplivning
+Såfremt det af EPJ fremgår, at patienten har fravalgt genoplivning ved hjertestop med aktivering af
+SKAL henvisende læge informere patienten om risiko for hjertestop i forbindelse med ECT og drøfte med patienten
+hvorvidt patientens fravalg af genoplivning ved hjertestop fortsat er gældende, eller om der skal være en midlertidig
+ophævelse af fravalget under ECT behandlingsserie.
+Ved midlertidig ophævelse af fravalg af genoplivning deaktiverer henvisende læge ikonet i EPJ. Henvisende læge har
+pligt til at genaktivere fravalg af hjertestop efter endt ECT-serie og reetablere aktivering af ikonet, såfremt dette
+fortsat er i overensstemmelse med patientens ønske. Begrundelse for midlertidig ophævelse af fravalg noteres under
+SFI ”Journalnotat”.
+Se retningslinjen Beslutninger om fravalg af livsforlængende behandling og genoplivning, regional retningslinje .
+2.2 Indikationsområder
+ECT kan anvendes ved behandling af:
+Depression
+Mani
+Blandingstilstand
+ECT - Elektrokonvulsiv terapi, fælles..., version 11.
+Udskrevet: 11-03-2026 af Magnus Boje Juul 5 af 25Katatoni/stupor
+Skizofreni eller psykoser (se herunder DMPG retningslinje ”Elektrokonvulsiv terapi hos patienter med
+behandlingsresistent skizofreni”)
+Skizoaffektive lidelser
+Delirium acutum
+Malignt neuroleptikasyndrom
+ECT bør være førstevalgsbehandling til svært psykisk syge patienter på ovennævnte indikationer, hvis:
+Der er brug for hurtig og effektiv behandling (f.eks. ved selvmordsfare, svær psykose med agitation eller
+drikke- og spisevægring).
+Andre behandlinger er mere risikable (f.eks. ved ældre patienter).
+Patienten tidligere har responderet tilfredsstillende på ECT og foretrækker det som behandling.
+​​​​​​Ved ECT hos børn og unge se yderligere information i afsnit 2.6.
+I kapitel 6 i ECT-vejledning 2020 ​​​​ fra Dansk Psykiatrisk Selskab findes mere information om specifikke og komplekse
+indikationsområder.
+2.3 ECT-serie
+ECT gives som en serie af behandlinger. Antallet er individuelt for den enkelte patient og baserer sig på en klinisk
+vurdering. En tommelfingerregel vil være 9-12 behandlinger for en svær depression. Patienten skal behandles, indtil
+ét af følgende terapeutiske endpoints er opnået:
+1. Remission
+2. Et plateau i forbedring er nået, og der er ikke set yderligere gevinster efter de sidste to behandlinger.
+Når patienten har opnået remission eller når et plateau i forbedring er nået, gives 2 yderligere stabiliserende ECT.
+2.3.1 En bloc ECT
+Ved en bloc ECT gives behandling op til tre dage i træk, herefter overgang til vanlig frekvens. Behandlingen gives
+altid bilateralt med strømdosis lig med alder.
+Kriterierne for en bloc ECT er akutte livstruende psykiatriske tilstande uanset ætiologi, det vil sige hvad enten de
+forårsages af somatiske eller psykiske forhold.
+Såfremt muligt påbegyndes en bloc ECT mandag, tirsdag eller onsdag. Se afsnit 2 for lokale arbejdsgange ift.
+henvisning og booking af ECT.
+2.3.2 Ambulant ECT
+Ambulant ECT kan gives som ambulant ECT-serie eller som vedligeholdelsesbehandling (se afsnit 2.3.3). Den
+behandlingsansvarlige speciallæge har ansvaret for at vurdere om kriterierne for at tilbyde patienten ambulant ECT er
+opfyldt, og at dokumentere dette i ECT-henvisningen.
+Kriterier og arbejdsgange ved ambulant ECT:
+Se bilag for afdelingsspecifikke arbejdsgange i lokal tilføjelse. ​​​​​​
+2.3.3 Vedligeholdelsesbehandling
+Vedligeholdelses-ECT (v-ECT) er en evidensbaseret behandlingsstrategi, der sigter mod at opretholde
+respons/remission og forebygge tilbagefald hos patienter, der har haft klinisk effekt af akut ECT.
+v-ECT kan komme på tale i følgende situationer hos patienter:
+der har haft dokumenteret robust respons på ECT under akutte ECT-serier, og som
+ikke kan tåle farmakologisk behandling, eller
+er helt eller delvist resistente over for farmakologisk behandling.
+Anvendelse af v-ECT er ikke begrænset til specifikke diagnostiske grupper. De hyppigste diagnoser er svær unipolar
+depression, bipolar lidelse, skizoaffektiv psykose eller skizofreni, svarende til de grupper, der behandles med akut
+ECT. Andre tilstande, fx kroniske katatone tilstande i forbindelse med autisme eller organiske lidelse, kan også
+komme på tale.
+Efter godkendelse af vedligeholdelsesbehandling (se afsnit 2) skal den henvisende læge lave ECT-henvisning med
+ordination af antal af v-ECT og hyppighed, samt dokumentere at det er godkendt ECT-ansvarlig. Der må kun
+ordineres 3 måneder ad gangen, medmindre andet er aftalt. Der skal også foreligge nye blodprøver, EKG og fornyet
+ECT - Elektrokonvulsiv terapi, fælles..., version 11.
+Udskrevet: 11-03-2026 af Magnus Boje Juul 6 af 25risikovurdering i SFI-henvisningen. Se afsnit 4.1.
+Selve behandlingsproceduren følger de almindelige retningslinjer for ECT, og kan foregå såvel ambulant som under
+indlæggelse. Man stiler efter en frekvens, der netop er høj nok til, at symptomerne holdes i ave og med minimale
+bivirkninger. Reduktion i strømdosis skal ske langsomt og på baggrund af individuel klinisk vurdering. Se Thymatron
+manual  for yderligere information omkring om stimulationsparametre.
+Der skal være løbende monitorering af effekt og bivirkninger. Se afsnit 9 og 11.
+En typisk plan kunne se således ud:
+Først sikres, at patienten er kommet i remission efter ECT-serien. Derefter gives én behandling ugentligt i 4 uger. Får
+patienten ikke recidiv, gives én behandling hver 14. dag i 2 måneder. Efterfølgende gives én behandling hver 3. uge
+og så fremdeles. Enkelte patienter kan undgå recidiv ved én behandling hver 5. til 6. uge. 
+2.3.4 Procedure ved utilstrækkelig effekt af ECT
+Hvis en patient får unilateral stimulation, og ikke har tegn på eller minimale tegn på bedring efter 6 behandlinger med
+sufficient krampekvalitet (score 3, se afsnit 8.3), bør det overvejes at øge stimulusintensiteten, eller skifte bilateral
+elektrodeplacering (Lapidus, 2011) (se afsnit 6). Det er vigtigt at sikre, at patienten ikke er i behandling med
+præparater der kan øge patientens krampetærsklen (se afsnit 5).
+Hvis der ikke er tegn på bedring efter 9 bilaterale behandlinger med sufficient krampekvalitet (score 3, se afsnit 8.3),
+bør det overvejes at revurdere diagnose og tage stilling til om der er indikation for at fortsætte med ECT.
+Ordination af flere end i alt 18 ECT skal godkendes af den ECT-ansvarlige eller stedfortræder.
+2.4 Risikovurdering, kontraindikationer og komplicerede tilstande
+2.4.1 Risikovurdering
+Der skal foretages og dokumenteres en risikovurdering af både psykiater og anæstesilæge. Såfremt psykiateren og
+anæstesilægen er uenige om risikovurderingen, skal de drøfte patienten og nå til enighed. Der skal foretages fornyet
+risikovurdering ved nytilkomne somatiske symptomer eller lidelser, samt hvis patienten får usædvanlig svære
+bivirkninger eller komplikationer.
+2.4.2 Kontraindikationer
+Der findes ingen absolutte kontraindikationer  for ECT, forudsat at der tages de nødvendige forholdsregler i
+forbindelse med behandlingen.
+Der findes en række relative kontraindikationer og risikofaktorer hvor ECT kan overvejes såfremt:
+den psykiatriske tilstands sværhedsgrad taler for denne behandlingsmodalitet og
+ECT skønnes at være den mest sikre og skånsomme behandlingsform.
+ECT af sådanne patienter bør foregå på en anæstesiafdeling, som besidder den nødvendige ekspertise.
+ECT medfører umiddelbart efter tilførslen af den elektriske strøm en relativ voldsom og hurtig stigning i såvel det
+systemiske som det intracerebrale blodtryk. Desuden øges puls samt den cerebrale blodgennemstrømning.
+Herudover stiger plasmakoncentration af adrenalin og noradrenalin. Der bør derfor udvises stor forsigtighed, når ECT
+skønnes indiceret hos patienter med samtidig tilstedeværelse af en af de nedenfor nævnte relative kontraindikationer
+og risikofaktorer.
+Der skal udbedes tilsyn fra det relevante speciale, således at tilstanden er optimalt udredt og behandlet (hvis muligt).
+Dernæst skal sagen drøftes med Anæstesiafdelingen , som træffer den endelige afgørelse vedrørende risikoen ved
+behandlingen.
+2.4.3 Relative kontraindikationer
+Nedenstående fysiologiske forandringer medfører øget risiko for komplikationer i forbindelse med ECT, og må derfor
+betragtes som værende relative kontraindikationer, hvor ECT kun bør komme på tale, hvis patienten befinder sig i en
+livstruende tilstand.
+Kendt cerebralt eller aortaaneurisme (risiko for ruptur)
+Tilstande som forårsager forhøjet intrakranielt tryk (inkarceration)
+Rumopfyldende processer, med eller uden forhøjet intrakranielt tryk
+Anamnese med intracerebral blødning/apopleksi:
+Man skal være specielt tilbageholdende med ECT i de første uger til måneder efter en
+ECT - Elektrokonvulsiv terapi, fælles..., version 11.
+Udskrevet: 11-03-2026 af Magnus Boje Juul 7 af 25apopleksi/intracerebral blødning. Nøje styring af blodtrykket under behandlingen er her essentielt.
+Anamnese med nyligt myokardieinfarkt:
+Generelt anbefales mindst fire uger, men mindre myokardieinfarkter udgør ikke en absolut
+kontraindikation mod ECT. Man må nøje overveje situationen fra tilfælde til tilfælde, idet de mest
+potente antidepressiva har uønskede kardiovaskulære virkninger og dertil har en langsomt indsættende
+virkning. Under alle omstændigheder bør ECT hos patienter med et nyligt (mindre end fire uger) infarkt
+varetages på intensivafdeling med omhyggelig længere varende monitorering af hjertekredsløbs-
+funktioner.
+Anamnese med kardiale arytmier
+Feocromocytom
+2.4.4 Risikofaktorer
+Nedenstående risikofaktorer kræver øget forsigtighed samt tværdisciplinært samarbejde i forbindelse med
+behandlingen:
+Kardiologiske sygdomme:
+Angina pectoris, hypertension o.l. betyder, som ved enhver anden anæstesi, øget risiko. Hvis patienten
+er velbehandlet, kan man gennemføre ECT. En sympatikusblokade kan nedsætte den ledsagende
+blodtryksstigning, og det kan dermed mindske risikoen for komplikationer (aneurismeruptur, blødning og
+infarkt).
+Pacemaker eller automatisk defibrillatorimplantat er som udgangspunkt ikke en kontraindikation, men
+kræver drøftelse med kardiologi og anæstesi forud for henvisningen ift. om der er behov for særlig
+kontrol/forholdsregler under/efter ECT.
+Kroniske hjertelidelser med dekompensation og bør dog kun behandles med ECT i afdelinger, hvor der
+er mulighed for kardiologisk og anæstesiologisk ekspertise.
+Pulmonale sygdomme:
+Patienter med astma eller kronisk obstruktiv lungelidelse (KOL)- Det tyder på, at behandlingen kan
+gives sikkert til disse grupper, men der skal konfereres med relevante speciale.
+Patienterne skal indtage eventuelt ordinerede bronkodilatatorer før ECT.
+Der er øget risiko for larynx- og bronkospasmer, når man anvender barbiturat til astmapatienter.
+Øjensygdomme:
+Glaucom skal være behandlet inden ECT. Hvis patienten er velbehandlet, er der ikke en øget risiko.
+Anæstesien bør ikke anvende Atropin.
+Endvidere skal man konferere tilstande som retinaløsning og excessiv myopi med en øjenlæge forud for
+ECT.
+Graviditet:
+Evidensen peger på, at gravide kvinder kan behandles med ECT. Ultralydsundersøgelser samt
+kardiotokografi har ikke afsløret nogen ændringer i fostrets hjerterytme, fosterbevægelser eller uterin
+tonus under ECT. Man skal dog CTG-monitorere risikograviditeter.
+Man kan gennemføre ECT i alle trimestre. Man skal altid konferere med obstetriker.
+I princippet medfører ECT en øget frigørelse af oxytocin, som er vestimulerende, så enkelte forfattere
+anbefaler, at man har tokolytisk medicin i beredskab. Risiko for karkompression under behandlingen
+kan man afhjælpe med kile.
+Den øgede risiko for aspiration gør, at nogle anæstesiologer vælger at intubere eller give antacida før
+behandlingen.
+Elektrolytforstyrrelser, herunder kalium
+Nedsat nyrefunktion
+Tidligere malign hypertermi
+Frakturer af nyere dato eller svær osteoporose.
+Svær overvægt med BMI over 35
+Cochlear implantat
+Diabetes (se afsnit 2.5)
+2.5 Særligt for patienter med diabetes
+Se bilag for afdelingsspecifikke arbejdsgange i lokal tilføjelse. 
+2.6 ECT til børn og unge 
+ECT kan anvendes til børn og unge. Indikationerne og kontraindikationer/risikofaktorer er principielt de samme som
+hos voksne (se afsnit 2.2 og 2.4), men patienten skal vurderes af en børne- og ungdomspsykiater.
+ECT til børn og unge anses for at være en højt specialiseret funktion, jf. specialeplanen. Børn og unge har øget risiko
+for forlængede kramper (kramper der varer længere end 180 sekunder) og har desuden en mulig øget risiko for
+tardive kramper, dvs. kramper der opstår efter patientens ECT-udløste kramper allerede er stoppet og patienten er
+ved bevidsthed. Dette gælder i særlig grad, hvis patienten er i behandling med medicin, der sænker krampetærsklen.
+Det anbefales, at monitorering af børn og unge i den akutte fase af ECT foregår under indlæggelse.
+Patientens pårørende kan være til stede i ECT-lokalet, indtil patienten falder i søvn. De pårørende skal følges ud af
+ECT-lokalet af personalet fra BUA lige efter patienten er faldet i søvn, da de ikke må være til stede, mens patienten
+ECT - Elektrokonvulsiv terapi, fælles..., version 11.
+Udskrevet: 11-03-2026 af Magnus Boje Juul 8 af 25får ECT. Efter aftale med personalet kan de pårørende også være med i opvågningsrummet.
+Se afsnit 7.1 for strømdosis ved ECT hos børn og unge.
+2.7 Samtykke ved ECT
+Der skal foreligge dokumenteret samtykke til ECT fra patienten. Se evt. retningslinje Informeret samtykke, regional
+retningslinje .
+I livstruende tilfælde kan behandling under tvang være indiceret i henhold til psykiatriloven.
+Samtykke hos børn og unge
+Unge i alderen 15 – 17 år giver selv informeret samtykke til behandling. Forældremyndighedsindehaverne skal tillige
+have information og inddrages i den mindreåriges stillingtagen.
+Børn under 15 år, som er indlagt på psykiatrisk afdeling, giver selv informeret samtykke til behandling.
+Forældremyndighedsindehaverne skal også give informeret samtykke til behandlingen. Hvis barnet ikke giver sit
+informerede samtykke, er der tale om tvang, uanset om forældremyndighedsindehaveren har givet samtykke.
+Børn under 15 år, som behandles ambulant, kan ikke give samtykke til behandling.
+Forældremyndighedsindehaverene skal give informeret samtykke til behandlingen.
+I livstruende tilfælde kan behandling under tvang være indiceret i henhold til psykiatriloven.
+2.8 ECT med tvang
+Det følger af §12, stk. 3 i Psykiatriloven, at en patient kan behandles med ECT mod sin vilje, såfremt de almindelige
+betingelser for tvangsbehandling er opfyldt, og patienten befinder sig i en aktuel eller potentiel livstruende tilstand. En
+klage til det lokale Patientklagenævn over forestående tvangsbehandling med ECT har opsættende virkning,
+medmindre omgående gennemførelse af behandling er nødvendig for ikke at udsætte patientens liv eller helbred for
+alvorlig fare.
+I praksis betyder det, at man kan tvangsbehandle en patient med ECT, hvis vedkommende er psykotisk og i livsfare.
+Som eksempel kan der nævnes situationer, hvor patienten er meget stærkt eller akut selvmordstruet, eller i en så
+apatisk tilstand at der er en risiko for livsvigtige funktioner, fordi patienten ikke vil drikke eller spise. Man kan også
+overveje tvangsbehandling med ECT ved tegn på delirium akutum, i de tilfælde hvor det akutte delir er præget af
+hallucinationer, søvnløshed og bevægelsesuro, og hvor der i løbet af kort tid kan komme stigende puls, blodtryk og
+kropstemperatur. Typisk vil det kun være nødvendigt at give nogle få behandlinger med tvang, fordi patienten ret
+hurtigt vil få det væsentligt bedre og derefter accepterer at modtage behandlingen frivilligt.
+Det påhviler overlægen at sørge for, at tvangsanvendelsen af ECT ikke bliver anvendt i videre omfang end
+nødvendigt. Når en patient skal have ECT med tvang, skal der, som udgangspunkt, være en læge fra det afsnit, hvor
+patienten er indlagt, til stede. Denne læge kender patienten og baggrunden for beslutningen om at give ECT med
+tvang. Det er også vigtigt, at plejepersonalet, som ledsager patienten og skal medvirke til tvangsbehandlingen, har et
+indgående kendskab til patienten, så behandlingen kan blive så skånsom som muligt for patienten.
+Selve beslutningen om tvangsbehandling ligger hos overlægen. I hans/hendes fravær kan beslutningen træffes af en
+anden læge, hvorefter overlægen efterfølgende snarest skal tage stilling til beslutningen. Beslutningen bør dog som
+minimum være konfereret med en speciallæge. Patienten skal underrettes om den påtænkte tvang, dens indhold og
+baggrund og formål, ligesom patienten skal vejledes om adgangen til at klage over indgrebet.
+3. Behandlingsansvar 
+Det behandlingsmæssige ansvar for ECT-forløbet ligger hos den speciallæge, som har ordineret behandlingen. Når
+patienten bliver udskrevet og fortsætter med ambulant ECT, overtager en speciallæge i den ambulante klinik
+ansvaret for ECT.
+Den ordinerende læge, eller dennes stedfortræder, har ansvaret for ECT-forløbet, herunder ansvaret for opfølgning
+og fortløbende monitorering af ECT-forløbet kvalitet, effekt og bivirkninger.
+4. Forundersøgelse og forberedelse af patienten forud for ECT
+Forud for behandling skal den henvisende læge orientere patienten og de pårørende om behandlingens formål,
+teknik, effekt og bivirkninger. Patienten skal også have udleveret den fællespsykiatriske
+patientvejledning "Behandling med ECT”.  
+ECT - Elektrokonvulsiv terapi, fælles..., version 11.
+Udskrevet: 11-03-2026 af Magnus Boje Juul 9 af 254.1 Forundersøgelse af patienten
+Før ECT skal der foretages følgende forundersøgelse af patienten:
+Risikovurdering
+Risikovurdering skal foretages af såvel psykiater som anæstesilæge, og dette skal dokumenteres i EPJ.
+For den anæstesiologiske afdeling er der krav om risikoklassifikation i overensstemmelse med ASA-
+klassifikationen, samt plan for anæstesi (metode), jf. lokale anæstesiologiske retningslinjer.
+Somatisk undersøgelse, inklusiv hjerte-lungestetoskopi
+Parakliniske undersøgelser jf. lokale anæstesiologiske retningslinjer, herunder:
+Blodprøve (se ECT-blodprøvepakke jf. Blodprøveprofiler i Psykiatrien, fællespsykiatrisk retningslinje )
+Blodprøvesvar må maks. være 1 uge gammel  når behandlingen påbegyndes (ved v-ECT foretages
+blodprøver hver 3. måned eller oftere hvis den kliniske tilstand tilsiger det)
+Andre blodprøver kan være relevante ifbm. somatisk sygdom f.eks. INR (se afsnit 5.)
+EKG (EKG må maks. være 1 uge gammel når behandlingen påbegyndes. Patienter i v-ECT skal have
+foretaget nyt EKG hver 3. måned)
+Vedrørende røntgen af thorax henvises til eventuelle lokale tilføjelser
+Puls, blodtryk, vægt og BMI
+Tandstatus og evt. tandlægetilsyn
+Somatisk komorbiditet
+Ved somatisk komorbiditet skal nødvendige medicinske og anæstesiologiske tilsyn foreligge. Abnorme resultater af
+disse undersøgelser vil sjældent være kontraindikation for påbegyndelse af behandlingen, men derimod gøre den
+behandlende læge og anæstesien opmærksom på de eventuelle somatiske problemer, som kan drøftes med den
+relevante medicinske afdeling inden iværksættelse af ECT.
+4.1.1 Tilsyn ved komplicerede somatiske lidelser 
+Ved patienter uden komplicerende somatiske lidelser foretages anæstesitilsyn umiddelbart før første ECT i ECT-
+klinikken. Her vurderer anæstesilægen, om patienten kan få anæstesi som planlagt og dette dokumenteres.
+Anæstesilægen udfører også risikovurderingen, og vurderer patienten ud fra de prøveresultater, der foreligger.
+Ved komplicerende somatiske lidelser, som er beskrevet i afsnit 2.4, skal det være sikret, at patienten er optimalt
+behandlet ved at benytte relevante tilsyn (kardiolog, neurolog osv.), og dernæst anæstesilæge (se nedenfor).
+Behandling af højrisikopatienter, for eksempel patienter med BMI >35, pulmonale lidelser eller hjertesygdom, skal
+aftales i tæt dialog med anæstesilægen. Er man i tvivl om risikoen ved behandling, drøfter den henvisende psykiater
+problematikken med anæstesilægen.
+4.1.2 Bestilling af udvidet anæstesitilsyn 
+Aarhus Universitetshospital Psykiatrien 
+Ikke-akutte tilsyn skal bestilles via mail AUHIntensiv-ECTforesporgsel@rm.dk. Svartid er inden for to hverdage. Er
+der brug for akut anæstesitilsyn, skal vagthavende anæstesilæge på Intensiv Nord kontaktes på 7846 4803. Ved
+risikopatienter bliver der gået personligt tilsyn på ECT-klinikken.
+Regionspsykiatrien Horsens 
+Patienter med særlige problemstillinger skal meldes af den ordinerende psykiater til anæstesikoordinatoren senest
+dagen før behandlingen. Her tages stilling til eventuelle risici ved anæstesien.
+Anæstesi lægekoordinator tlf: 25416 (08.00-18.00 på hverdage).
+Regionspsykiatrien Midt
+Ved almindelig anæstesi tilsyn kontakt sekretær/ECT sygeplejerske i ECT klinikken for bestilling. 
+Ved patienter med særlige problemstillinger kontakter henvisende læge anæstesi floater på tlf. 45230 (dagvagt fra 7-
+15)
+Regionspsykiatrien Gødstrup 
+Henvisende læge (alternativt døgnsekretær) booker tid hos anæstesien til udvidet tilsyn, når dette vurderes relevant.
+Patienter skal altid meldes til anæstesilæge både dag- og vagttid  
+Teamleder ANlæge GUK (gyn, uro,kir) 31263 
+Teamleder ANlæge ORT + ØNH 31264 
+Øvrige (ikke kirurgiske afdelinger) melder pt. til Akut Anæstesivagt på 31003 (hele døgnet) 
+Alle akutte patienter skal have foretaget anæstesiologisk tilsyn før anæstesi. Hvor det fysisk foretages aftales med
+ECT - Elektrokonvulsiv terapi, fælles..., version 11.
+Udskrevet: 11-03-2026 af Magnus Boje Juul 10 af 25ansvarlig anæstesilæge. Se vejledning for booking af anæstesitilsyn:  
+Booking af anæstesitilsyn, vejledning - OPI RHG  
+Patientens situation/tilstand kan betyde, at anæstesitilsynet skal udføres i stamafdelingen, i akutafdelingen eller på
+operationsgangen. (se nedenstående afsnit "Sengeliggende patienter eller tilkoblet udstyr") 
+Regionspsykiatrien Randers
+Ved patienter med komplicerende somatiske lidelser eller ved akutte blokbehandlinger kontaktes anæstesilægen
+direkte af sekretær eller vagthavende læge. Ved ukomplicerede forløb foretages anæstesitilsyn umiddelbart før første
+ECT i ECT-klinikken.
+4.2 Forberedelse af patienten til ECT
+Se afdelingsspecifik tjekliste ”Sygeplejehandlinger ved ECT (sengeafsnit)"  i lokal tilføjelse. 
+Tjeklisten indeholder samtlige områder, som sygeplejersken har ansvar for at kontrollere før, under og efter ECT.
+Tjeklisten er ikke et dokumentationsredskab og indgår ikke i patientjournalen, men er en huskeliste.
+4.2.1 Fasteregler før behandling 
+Overholdelse af fasteregler er meget vigtigt for patientsikkerheden. Derfor skal patienten observeres og skærmes ved
+behov. Er der tvivl om patienten reelt faster, kan ECT ikke gennemføres den dag.
+Patienterne skal opfordres til at undgå rygning under fasten, men rygning hindrer ikke ECT.
+Se afdelingsspecifikke fasteregler i lokal tilføjelse.
+4.2.2 Klargøring af patienten
+Det er afdelingernes ansvar, at patientens blære er tømt umiddelbart inden ECT, idet der ellers er risiko for afgang af
+urin (eller i værste fald blæreruptur), i forbindelse med behandlingen. Afdelingerne har ligeledes ansvar for, at det er
+muligt med sikker patientidentifikation. Patienten skal derfor bære patientidentifikationsarmbånd.
+Patienten må ikke bære følgende:
+Smykker
+Hårnåle og hårspænder
+Ansigtspiercinger
+Neglelak
+Make-up og creme
+Kontaktlinser (evt. briller tages af inden patienten bedøves)
+Høreapparat
+Såfremt patienten ankommer i seng, skal det være en somatisk seng (seng monteret med sengeheste).
+5. Medicinsk behandling ifbm. ECT
+Igangværende medicinsk behandling, såvel for evt. somatisk som psykiatrisk lidelse, bør gennemgås grundigt inden
+påbegyndelse af ECT, og drøftes med relevante somatiske afdelinger, herunder anæstesiafdelingen, ved behov for
+pausering/optimering af den somatiske medicin. Generelt kan man sige, at samtlige lægemidler, der øger
+komplikationsrisikoen eller formindsker effektiviteten af ECT, bør seponeres eller nedsættes i dosis.
+Præparater der skal seponeres under hele ECT-forløb:
+Reserpin:  risiko for hypotension og død.  
+Lidokain og beslægtede præparater: kraftig antikonvulsiv effekt. 
+Theophylin:  prokonvulsiv effekt (drøfte anden astmamedicin med medicinsk afdeling).
+Præparater, der ikke må gives efter kl. 17 dagen før ECT (må først gives efter ECT): 
+Benzodiazepiner  (se yderligere forklaring i afsnit 5.1)
+Lithium  (se yderligere forklaring i afsnit 5.2)
+Antiepileptika (se yderligere forklaring i afsnit 5.3)
+Præparater, der ikke må gives om morgenen på ECT dagen (må først gives efter ECT): 
+Diuretika:  øget risiko for inkontinens; blæreruptur pga. fuld blærer.
+Diabetes medicin: kan gives først efter patienten har spist, efter ECT (undtagelse: insulinpumpe og
+langtidsvirkende insulin kan gives før ECT).
+ECT - Elektrokonvulsiv terapi, fælles..., version 11.
+Udskrevet: 11-03-2026 af Magnus Boje Juul 11 af 25Som udgangspunkt gives den ordinerede morgenmedicin (somatisk og psykiatrisk) senest kl. 6.00
+(undtagen de præparater beskrevet ovenfor, som først må gives efter ECT).   
+Det er især vigtigt, at patienten tager sin: 
+Antihypertensiv medicin (dog ikke diuretika!) og øvrige hjertemedicin (dog ikke Lidocain!) 
+Antianginøs medicin (transdermale nitritter kan man give mindst 30 min før ECT) 
+Astmamedicin (dog ikke theophylin!) 
+Antiacida/antirefluksmidler/syrepumpehæmmer 
+Insulinpumpe og langtidsvirkende insulin 
+5.1 Anxiolytica og babiturater
+Benzodiazepiner hæver krampetærsklen. De bør derfor, i videst mulige omfang, ikke gives til patienten de sidste
+dage op til og under behandlingen.
+Som hypnotika og sedativa kan man i stedet anvende quetiapin eller eventuelt zolpidem. Zolpidem foretrækkes
+fremfor zopiclon pga. kortere halveringstid. Patienter med rivotril- og benzodiazepinafhængighed skal, i videst muligt
+omfang, trappes ud, før de påbegynder ECT. Hvis en patient af den ene eller anden grund har fået benzodiazepiner
+forud for ECT og ikke kan trappe ned, kan man overveje at bruge antidoten flumazenil. Men det er anæstesien, som
+tager stilling til dette.
+Dosering af barbitursyre skal være så lav som mulig ved anæstesien, for at man ikke øger krampetærsklen mere end
+højst nødvendigt.
+Hvis man ikke kan undgå at give patienten benzodiazepiner, kan man anvende benzodiazepiner med kort
+halveringstid (≤12 timer), f.eks Oxazepam eller lorazepam, som man dog ikke bør give senere end kl. 17 dagen før
+ECT.
+5.2 Lithiumbehandling
+Der er ikke indikation for seponering af lithium ved en igangværende behandling, men det vigtigt at være opmærksom
+på lithiumniveauet. Det er en klinisk vurdering om dosis og administrationstidspunkt skal justeres forud for ECT.
+Serum-lithium skal kontrolleres inden første ECT. Ved høj serumværdi (>0,8mmol/L) tilrådes det at nedsætte fast
+dosis til laveste forsvarlige niveau alternativt overveje at flytte administrationstidspunktet til før kl. 17 dagen før ECT.
+Patienter i vedligeholdelses-ECT bør pausere lithium aftenen før ECT og genoptage behandlingen næste morgen
+efter fuld restitution.
+Serum-lithium skal monitoreres hyppigt under ECT-serien, herunder én gang ugentlig i akutte forløb og hver tredje
+måned ved vedligeholdelses-ECT (vECT). Serum-lithium måles hyppigere i følgende tilfælde:
+Dosis af lithium ændres.
+Der sker ændringer i nyrefunktionen.
+Patienten bliver syg – især ved dehydrering eller infektioner.
+Patienten påbegynder eller stopper behandling med lægemidler, der interagerer med lithium (f.eks. NSAID,
+diuretika, ACE-hæmmere).
+Der er tegn på lithiumforgiftning eller utilstrækkelig behandlingseffekt.
+Denne arbejdsgang gælder for alle patienter, uanset alder, om det er indlagte eller ambulante patienter, eller om det
+drejer sig om akut serie eller vedligeholdelses-behandlinger. Man skal udvise forsigtighed ved ældre patienter, da
+konfusion og uro kan forekomme her.
+ECT-klinikken forsøger at behandle patienter i lithiumbehandling så tidligt som muligt på dagen for at undgå
+lithiumintoksikation i forbindelse med, at patienten skal faste. ECT-klinikken skal derfor orienteres om, at patienten er
+i lithiumbehandling.
+5.3 Antikonvulsiv behandling
+Hvis indikationen er epilepsi, laves ingen forandringer eller stillingtagen til, om der er behov for at drøfte med
+neurolog om dosis kan reduceres eller om aftendosis før ECT (samt morgen dosis på ECT-dagen) kan undlades.
+Hvis behandlingen gives som stemningsstabiliserende er udgangspunktet pausering. Lamotrigin reduceres dog til 50
+mg. pga. den langvarige optrapningsperiode.
+Behandling med pregabalin skal nedsættes før ECT til lavest mulig dosis, da pregabalin hæver krampetærsklen.
+5.4 Antidepressiv behandling
+Igangværende behandling med antidepressiva skal videreføres. Man skal være opmærksom på de tricykliske
+ECT - Elektrokonvulsiv terapi, fælles..., version 11.
+Udskrevet: 11-03-2026 af Magnus Boje Juul 12 af 25antidepressivas påvirkning af hjertet i forbindelse med narkosen. Vanligvis er eventuelle arytmier godartede og
+selvlimiterende.
+Er patienten samtidig i behandling med irreversible MAO-hæmmere (Marplan), så må bedøvelse ske efter konference
+med anæstesiafdelingen, da der kan opstå kardiovaskulære bivirkninger. Det må ikke gives samtidig med
+sympatomimetika eller Atropin, men der er ingen kontraindikation, hvis blot man vælger egnet anæstesi. Det skal dog
+konfereres med en anæstesiolog forud for ECT (husk beredskab i form af Phentolamin injektionsvæske). Generelt
+bør Marplan seponeres 14 dage før ECT.
+5.5 Antipsykotisk medicin
+Igangværende behandling videreføres. Bemærk, at en synergisme består mellem ECT og højdosis neuroleptika, idet
+sidstnævnte stoffer sænker krampetærsklen. De kan også give anledning til hypotensive episoder. Adskillige
+rapporter peger på, at kombinationen af atypiske antipsykotika i terapeutiske doser (incl. Leponex) og ECT ikke
+volder problemer.
+5.6 AK-behandling
+INR kontrolleres nogle dage før ECT, så man kan nå at korrigere behandlingen (herunder Warfarin og
+Phenprocoumon). Der stiles efter INR i terapeutisk niveau for at undgå embolier. Justering af behandling bør drøftes
+med medicinsk/kardiologisk afdeling, herunder hvis patienten er kendt med sygdomme der øger risiko for
+intrakranielblødning.
+5.7 Diuretika
+Behandling med diuretika, især hurtigvirkende, øger risiko for blæreruptur, og derfor skal man ikke give behandling
+med Diuretika før ECT.
+5.8 Antidiabetika
+Se afsnit 2.5
+6. Indikation ved unilateral og bilateral elektrodeplacering
+Det fremgår af henvisningen, om behandlingen skal være uni- eller bilateral. Den unilaterale elektrodeplacering er
+mere skånsom i forhold til kognitive bivirkninger, mens den bilaterale elektrodeplacering virker hurtigere. Se bilag 4 i
+afsnit 7 for placering af elektroder.
+Unilateral elektrodeplacering (RUL)
+Unilateral elektrodeplacering bør særligt overvejes i følgende situationer, forudsat at personalet der udfører
+behandlingen er veltrænede heri:
+1. Hos klart depressive, men ikke psykotiske og ikke spise-eller drikkevægrende patienter med veldefineret og
+moderat til svær depression
+2. Hos ældre patienter, hvor der er grund til at frygte sværere kognitive bivirkninger, som kan kompromittere det
+samlede behandlingsforløb
+3. Hvor der foreligger anamnese om udtalte kognitive bivirkninger under tidligere bilateral ECT, og der ikke er tale
+om livstruende tilstande
+Bilateral elektrodeplacering (bitemporal)
+Bilateral elektrodeplacering skal altid være første valg ved behov for hurtigt indsættende effekt, f.eks. hos patienter
+med svær depression med psykotiske og vegetative symptomer (spise og drikkevægring), akut øget selvmordsrisiko,
+agitation, svær mani eller psykose, katatoni eller delir. Denne elektrodeplacering anvendes derfor altid ved ECT
+under tvang og ved en bloc behandling
+7. Praktiske procedure og arbejdsgange under ECT
+Høj kvalitet og sikkerhed ved ECT bliver sikret ved et velfungerende teamsamarbejde mellem psykiater,
+anæstesilæge, anæstesisygeplejerske og ECT-plejepersonale.
+ECT bør som udgangspunkt udføres af en læge dels af uddannelsesmæssige grunde, og dels mhp. at sikre lægelig
+kompetence i ECT-rummet til at sammenholde krampeanfald med klinisk respons, bivirkninger osv. Udførelsen af
+ECT kan dog uddelegeres til specialuddannede sygeplejersker. Dette anses for forsvarligt, i det omfang at der sikres
+let adgang til at konferere med en ECT-kyndig læge.
+I ECT-rummet skal patienten identificeres af to personer, jf. Sundhedsstyrelsens retningslinje og Patientidentifikation,
+regional retningslinje . Identifikationen skal ske ved en ansat fra den psykiatriske afdeling og en ansat fra
+ECT - Elektrokonvulsiv terapi, fælles..., version 11.
+Udskrevet: 11-03-2026 af Magnus Boje Juul 13 af 25anæstesiafdelingen. Voksne habile patienter oplyser selv navn og personnummer, og lægen sikrer sig, at der er
+overensstemmelse med oplysninger på patientens identitetsarmbånd. Hos patienter, som er inhabile, kan identiteten
+blive fastslået ud fra identitetsarmbånd og at medfølgende personale bekræfter patientens identitet. Den psykiatriske
+læge besvarer eventuelle spørgsmål fra patienten.
+Herudover skal det sikres at patienten er fastende jf. afsnit 4.2.1.
+Se bilag for afdelingsspecifikke arbejdsgange ved ECT samt praktiske procedure ved anæstesi ifbm. ECT i lokal
+tilføjelse. 
+7.1 Strømdosis ved første ECT
+Ved unilateral elektrodeplacering 
+Hvis ikke der er indikation for andet, skal "energy"-vælgeren indstilles ved første unilaterale behandling på det antal
+procent, som svarer til patientens alder. Det vil sige, at vælgeren skal indstilles på 50 % for en 52-årig patient, og på
+30% for en 27-årig patient.
+Ved bilateral elektrodeplacering 
+Hvis ikke der er indikation for andet, skal "energy"-vælgeren indstilles ved første bilateral behandling på det antal
+procent, som svarer til halvdelen af patientens alder. Ved en blok ECT gives dog det antal procent, som svarer til
+patientens alder.
+Strømdosis hos børn og unge
+Dosering følger vanlige principper dvs.: halv alder ved bilateral elektrodeplacering og alder ved unilateral
+elektrodeplacering, der således tager den lavere krampetærskel hos børn i betragtning. For de fleste børn vil det ved
+bilateral elektrodeplacering være rimeligt at anvende en startdosis på 5%, svarende til 25,2 millicoulomb.
+8. Vurdering af iktalt EEG og justering af strømdosis 
+ Følgende bøger anbefales at have i afdelingen:
+Pragmatic guidance for EEG interpretation  af David Semple
+Handbook of ECT – A Guide to Electroconvulsive Therapy for Practitioners af Charles H.Kellner
+8.1 Krampetærsklen 
+For at være effektiv skal ECT gives i en dosis, der er højere end patientens krampetærsklen.
+Krampetærsklen kan variere meget fra patient til patient. Mænd har generelt en højere krampetærskel end kvinder.
+Ændringer i anfaldstærsklen kan påvirke kvaliteten af ​​anfaldet under en ECT-serie.
+Krampetærsklen øges:
+Med alderen
+Hos den enkelte patient i løbet af en ECT-serie
+Når man anvender visse typer anæstesimidler, herunder propofol og thiomebumal
+Hvis patienten behandles med antiepileptika eller benzodiazepiner
+Af umiddelbart forudgående anfald, det vil sige ved evt. restimulation
+Krampetærsklen sænkes:
+Af hypocapni, hvilket man opnår ved hyperventilation før man giver elstimulationen
+Af visse medikamenter (teofyllamin, koffein, typiske antipsykotika, Leponex og TCA)​​
+8.2 Vurdering af iktalt EEG
+Den behandlende læge observerer og vurderer kvalitet og varighed af krampeanfaldet både på EEG og klinisk. Den
+bedste vurdering får man ved at studere EEG-optagelsen. Se bilag 7: 
+ Bilag 7 - Sådan finder du de digitale EEG-
+strimler efter ECT-behandling .
+I tilfælde af tekniske problemer ved EEG-målingen må krampetiden blive vurderet alene ud fra den kliniske
+krampeaktivitet. Den kliniske vurdering skal sikre, at patienten ikke har for voldsomme muskelkramper. Ved for
+kraftige muskelkramper skal Suxadosis øges ved den næste behandling.
+OBS! Ved non-konvulsiv status ser man krampemønster på EEG uden motorisk krampeaktivitet. Også non-konvulsiv
+status kan blive brudt med Midazolam.
+8.2.1 Typiske iktale og postiktale faser af ECT
+ECT - Elektrokonvulsiv terapi, fælles..., version 11.
+Udskrevet: 11-03-2026 af Magnus Boje Juul 14 af 25Typiske iktale og postiktale faser af ECT (se figur):
+Fase 1: Opbygning (rekruttering)
+Fase 2: Hypersynkrone polyspikes (toniske del af anfaldet)
+Fase 3: Polyspikes og slow wave (kloniske del)
+Fase 4: Afslutning efterfulgt af supression (electrical silence) – Postiktal supression
+Maletzky (1978) foreslog 20–25 sekunder som værende den mindste varighed af det motoriske anfald; Dette blev
+hurtigt accepteret som en af målestokkene for et adækvat anfald. Den prædiktive værdi af krampetiden, hvad angår
+den antidepressive effekt, er imidlertid begrænset, og krampetiden som eneste parameter til vurdering af
+krampeanfaldets terapeutiske kvalitet er næppe sufficient (Nobler et al. 1993, Sackeim et al. 2000). Dette parameter
+er således hverken præcist eller med tilfredsstillende videnskabeligt belæg, men i mangel af bedre er denne
+minimumvarighed af krampeanfaldet fortsat bredt anvendt – 25 sekunder fra startfase 1 til slutningen af fase 4
+("electrical silence/postiktal supression")
+Pga. de ovenfor nævnte problemer forbundet med krampeanfaldets varighed som en målestok for et adækvat anfald,
+har opmærksomheden været rettet mod det iktale og umiddelbart post-iktale EEG-mønster.
+Følgende karakteristika forudsiger sufficient anfald og effekt:
+1. Hurtigt indsættende høj amplitude slow wave-aktivitet
+ECT - Elektrokonvulsiv terapi, fælles..., version 11.
+Udskrevet: 11-03-2026 af Magnus Boje Juul 15 af 25 
+2. Iktalt EEG-mønster med høj amplitude af lavfrekvent aktivitet (delta og theta) som er synkront i de to
+hemisfærer (koherens)
+ 
+3. Mere regelmæssigt iktalt slow wave-mønster
+4. Høj grad af postiktal suppression
+Disse EEG-karakteristika formodes at være udtryk for en udtalt grad af generalisering og synkronisering af
+krampeanfaldet. Den parameter, som mest robust har vist sammenhæng med antidepressiv effekt, er den postiktale
+suppression af EEG’et. Jo fladere det postiktale EEG er umiddelbart efter krampeanfaldets ophør, des bedre
+terapeutisk effekt (Krystal et al. 1999, Nobler et al. 1993).
+8.2.2 Tærskelanfald
+Et tærskelanfald bliver defineret ved et uregelmæssigt og atypisk EEG-mønster. Det er et anfald af paroksystisk
+aktivitet med lav amplitude, ingen klare faser, ingen klar opbygning, uregelmæssige mønstre, ikke abrupt afslutning,
+og som kan være meget langt. Denne type anfald tyder på, at stimulus har været omkring krampetærsklen.
+Tærskelanfald er terapeutisk ineffektive (ECT-vejledning 2020, Dansk Psykiatrisk Selskab).
+8.2.3 Thymatron System IV målestok for et adækvat anfald
+ECT - Elektrokonvulsiv terapi, fælles..., version 11.
+Udskrevet: 11-03-2026 af Magnus Boje Juul 16 af 25Thymatron System IV indeholder en række data og målinger, som automatisk beregnes, når anfaldet er afsluttet.
+Der bør gives tilstrækkelig tid efter, at anfaldets afslutning er blevet fastlagt, for at maskinen nøjagtigt og konsekvent
+kan beregne disse stimulusparametre. Konsistensen i genereringen af disse parametre kan variere mellem de
+forskelige ECT-apparater, hvilket gør deres anvendelighed i klinisk praksis tvivlsom.
+Erfaring tyder på, at et adækvat anfald vil have følgende karakteristika (Weiss A.):
+Average seizure energy index
+Integrates the total ictal EEG power across the entire seizure and divides the result
+by the total seizure duration  ​​​​> 3500 microvolts
+Maximum sustained power 
+The mean value of a 10-second EEG segment with the highest average power
+recorded during the seizure> 6000 microvolts
+Time to peak power 
+​​​​​​The time elapsed from stimulus termination to the point of maximum EEG power< 20 seconds
+Time to peak coherence 
+The time elapsed from stimulus termination to the point of maximum EEG coherence< 20 seconds
+Maximum sustained coherence 
+The mean values of a five-second EEG segment with the highest average
+coherence recorded during the seizure> 90%
+Postictal suppression index 
+Measure of the EEG amplitude fall or flattening at the end of the seizure > 70%
+8.2.4 Støj og artefakter
+En vigtig fejlkilde er såkaldt støj, det vil sige tekniske problemer, som medfører, at EEG-kurven er fejlbehæftet og
+uanvendelig.
+De hyppigste årsager til støj er:
+Defekte/knækkede elektrodekabler
+Dårlig kontakt mellem hud og elektroder
+Manglende eller fejlagtig registrering af baseline EEG.
+Hvis der er identisk støj på begge kurver, så er det ”ground”-elektroden (den grønne placeret midt i panden), som
+ikke sidder korrekt/er defekt.
+Hvis der kun er støj på en af kurverne, så er det en af de lateralt placerede elektroder, som ikke fungerer.
+Støj kan for eksempel se således ud:
+ECT - Elektrokonvulsiv terapi, fælles..., version 11.
+Udskrevet: 11-03-2026 af Magnus Boje Juul 17 af 25Støj på EEG-registreringen kan af og til blive forvekslet med krampeaktivitet, og derfor fejlfortolkes som status
+epileptikus. Hvis der ikke er synlige og udtalte motoriske kramper efter 2 til 3 minutter, så har patienten ikke
+konvulsiv status epileptikus. Efter 2 til 3 minutter er suxavirkningen ophørt.
+8.3 Scoring af krampekvalitet 
+Krampeanfaldskvalitet skal dokumenteres ved hver enkelt ECT i EPJ. Der kan scores 1, 2 eller 3. Se bilag 8: 
+ Bilag
+8 - ECT-graf, vejledning til læsning og indhold .
+3=Sufficient anfald
+Sufficient krampekvalitet, også kaldet "A-anfald", defineres som et krampeanfald på 25 sekunder eller længere (fra
+start til postiktal supression), og med god kvalitet. Alle faser er klart til stede, hurtigt indsættende, regelmæssigt iktalt
+slow-wave-mønster, af høj amplitude, og symmetrisk, samt høj grad af postiktalt supression. Er krampeanfaldet
+sufficient, giver man samme strømdosis ved efterfølgende ECT.
+Ved krampeaktivitet >120 sekunder skal man give Midazolam 1 til 2 mg. i. v. samt konferere med ECT-ansvarlig
+læge.
+Ved supratærskelanfald (s-anfald) er der ikke nogen gradvis opbygning af anfaldet, der er maksimalt fra starten af.
+Man bør forsøge at give mindre dosis næste gang for at minimere risikoen for bivirkninger.
+2 = Tvivlsomt sufficient anfald 
+ECT - Elektrokonvulsiv terapi, fælles..., version 11.
+Udskrevet: 11-03-2026 af Magnus Boje Juul 18 af 25Tvivlsom sufficient krampeanfald bliver defineret som et kortvarigt "A"-lignende anfald, mellem 15 og 24 sekunder.
+Anfaldet kan være tvivlsomt sufficient på grund af meget ringe kvalitet, på trods af en varighed på 25 sek. eller
+derover. Ved et tvivlsomt sufficient anfald skal der tages stilling til planen for næste ECT (f.eks. optimering af
+patientens medicinske behandling, f.eks. antiepileptika eller benzodiazepiner, øgning af strømdosis til 1,5 x
+strømstyrken, skift til bilateral, optimering af anæstesi)).
+Ved tærskelanfald (T-anfald) anbefales det at øge strømdosis ved efterfølgende behandling med 1,5 x strømstyrken,
+hvilket ofte resulterer i et kortere men effektivt anfald.
+1 = Insufficient krampeanfald 
+Insufficient krampekvalitet bliver defineret som:
+Ingen krampeanfald: Uændret EEG-mønster efter stimulation
+Krampeanfald <15 sekunder
+Hvis EEG krampeaktivitet <15 sekunder skal patienten restimuleres i samme behandlingsseance. Ved restimulation,
+hyperventileres patienten igen, gentages impedanskontrol og derefter gives 2 x strømstyrken (fx. fra 30% til 60%
+charge/energi), ca. 45 sek. efter den første stimulation (eller maksimal strømstyrke, hvis ikke muligt at øge 2 x
+strømstyrken). Restimuler kun 1 gang på samme dag.
+Ved næste behandling skal man give 1,5 x strømstyrken af den første stimulation (f.eks. fra 30% til 45%)
+8.3.1 Procedure ved insufficient eller tvivlsom sufficient krampeanfald
+Når krampeanfald er insufficient eller tvivlsom sufficient, bør man altid undersøge, om patienten får medicin, som
+øger krampetærsklen, fx antiepileptika eller benzodiazepiner. Denne type præparater bør i tilfælde af suboptimale
+behandlinger så vidt muligt pauseres eller helt seponeres, mens ECT pågår. Samtidig bør man i samarbejde med
+anæstesilægen også overveje, om patienten kan reduceres i anæstesidosis, da det også kan mindske
+krampevarigheden.  
+Som udgangspunkt har et adækvat anfald mindst 25 sekunder varighed på EEG. Det er dog vigtigt at understrege, at
+hverken krampetiden eller andre EEG-parametre har stærk isoleret sammenhæng med behandlingseffekten, men
+primært tjener til at monitorere, om den administrerede dosis nærmer sig patientens krampetærskel. Således kan
+korte A-anfald godt være klinisk virksomme, især hos ældre.
+Et EEG som vi scorer ”2 – tvivlsom sufficient” er, som navnet indikerer, ”tvivlsom sufficient”, og ikke nødvendigvis
+insufficient. En score ”2” bør derfor ikke medføre direkte til dosisøgning, idet der er andre vigtige faktorer der også
+skal tages i betragtning, herunder den kliniske effekt, bivirkninger, kvalitet af forrige EEGer og sværhedsgrad af
+patientens tilstand. Desuden bør det først forsøges at optimere anæstesien, hvis muligt.
+Nedenfor er en beskrivelse af de lokale arbejdsgange.
+Afdeling for Depression og Angst
+ECT - Elektrokonvulsiv terapi, fælles..., version 11.
+Udskrevet: 11-03-2026 af Magnus Boje Juul 19 af 25Når krampeanfald scores som ”2” (tvivlsomt sufficient), skal der ikke pr. automatik skrues op for strømstyrken,
+og den videre plan skal først drøftes med ECT-ansvarlige. Efter ECT-programmet er færdig tages kontakt til
+ECT-ansvarlige via følgende funktionspostkasse: "psy.auhp.ect-tms.ansvarlige.forespoergsel@rm.dk", med
+navne på de patienter der scorede ”1” eller ”2”. I ECT-notatet skrives, at den videre plan drøftes med ECT-
+ansvarlige.
+ECT-ansvarlige tager derefter stilling til planen til næste behandling, vurderer behovet for at inddrage det
+henvisende team i beslutningen, og noterer i journalen, hvad planen skal være, så den er klar forud for næste
+behandling.
+Regionspsykiatrien Horsens
+Ved gentagne ECT, hvor der ikke kan frembringes sufficient krampeaktivitet trods max energi = 200 %,
+bilateral stimulation og justering af anæstesien kontaktes ordinerende speciallæge via mail eller EPJ-opgave.
+Speciallægen skal ud fra EEG-kurve vurdere om der er klinisk effekt trods ikke-sufficiente anfald. Ved tvivlsom
+eller ingen klinisk effekt skal ECT naturligvis seponeres. Det er vigtigt, at speciallægen tydeligt dokumenterer i
+ordinationen om behandlingen skal fortsætte eller seponeres.
+Dagens ECT-læge skal lave notat i bemærkningsfeltet om, hvilken speciallæge der er kontaktet og er blevet
+bedt om at notere i henvisningen, hvis ECT skal gives trods ringe EEG kurver.
+Regionspsykiatrien Gødstrup
+Efter ECT-programmet er færdig konferer ECT sygeplejerske med ECT- læge. Når krampeanfald scores som
+”2” (tvivlsomt sufficient), konfererer ECT-lægen den videre plan med ECT-ansvarlig overlæge. I ECT-notatet
+skrives, at den videre plan drøftes med ECT-ansvarlig. ECT-ansvarlig overlæge tager derefter stilling til planen
+til næste behandling, vurderer behovet for at inddrage det henvisende team i beslutningen, og noterer i
+journalen, hvad planen skal være, så den er klar forud for næste behandling
+Regionspsykiatrien Midt  
+Se 
+ Bilag 9 - Oversigt , ECT-behandling  ift. justering efter retningslinje for RP Midt. Ved behov kan der
+konfereres med ECT-ansvarlig overlæge/henvisende psykiater.
+Regionspsykiatrien Randers 
+​Hvis krampeanfaldet vurderes som insufficient/tvivlsomt sufficient:
+Yngre læge konfererer med speciallæge på behandlingsansvarlig sengeafsnit/klinik.
+Ved fravær af speciallæge kontaktes Martin Andreas Jarl via opgave i EPJ.
+9. Monitorering af effekt 
+For at monitorere effekten af behandlingen skal der foretages klinisk monitorering med rating-skalaer. For alle
+patienter anbefales, at der foretages en vurdering med Clinical Global Compression (CGI-S ved baseline og
+efterfølgende CGI-I), samt (afhængigt af sygdommen):
+Hamilton Rating Scale for Depression (HAM-D17): patienter med depression
+Positive and Negative Syndrome Scale-6 (PANSS-6): patienter med skizofreni
+Modificeret Bech-Rafaelsen Maniskala (MAS-M): patienter med mani
+Scoren skal dokumenteres i patientens journal.
+I akutte ECT-forløb skal ratingskalaer skal foretages:
+før ECT påbegyndes (baseline)
+efter 6. behandling og dernæst efter hver 3. tredje behandling (efter 9, 12, 15 behandling osv.)
+ved afslutningen af ECT-forløbet.
+For vedligeholdelses-ECT gælder, at der skal foretages ratingskaler efter hver tredje behandling.
+Ved ambulant ECT er det ambulatoriets ansvar at foretage ratings, ved indlagte patienter er det sengeafsnittets
+opgave at foretage ratings.
+Herudover skal der spørges ind til svært udtalte kognitive funktioner og autobiografisk hukommelse før hver
+behandling.
+10. Opvågning og observation efter ECT
+10.1 Fremgangsmåde ved transport til opvågningsenhed
+Før en ECT-patient kan flyttes til en eventuel opvågningsenhed, skal det sikres:
+at anæstesilægengodkender, at patienten kan overflyttes
+at patienten ledsages af en sundhedsperson under hele overflytningen.
+ECT - Elektrokonvulsiv terapi, fælles..., version 11.
+Udskrevet: 11-03-2026 af Magnus Boje Juul 20 af 25at ved overflytning til anden institution med ambulance overholdes eventuelle retningslinjer for
+"Patienttransport med sundhedsfaglig ledsager" (se også Interhospital patienttransport med præhospital
+ledsager, regional retningslinje )
+10.2 Fremgangsmåde for ophold i opvågningsenhed
+Ved patientens ankomst til og ophold i opvågningsenheden sikres:
+at medarbejderen, der ledsager patienten til opvågningsenheden, giver besked om egne observationer og
+handlinger
+at opdateret journal er tilgængelig for opvågningspersonalet, og at det er den rette patient, der modtages, jf.
+Patientidentifikation, regional retningslinje
+at patienten modtager sygepleje, herunder:
+at der skabes ro omkring patienten
+at patienten orienteres om, at behandlingen er overstået, og hvordan det er gået
+at patienten observeres og der ageres på eventuelle afvigelser jf. nedenstående ”Opvågningspersonale
+har ansvar for at observere og reagere på evt. afvigelser”.
+at plejepersonalet i opvågningsenheden har adgang til anæstesilæge ved eventuelle komplikationer
+at patienten vurderes som vågen med stabile værdier (jf. nedenstående ”Opvågningspersonale har ansvar for
+at observere og reagere på evt. afvigelser”) før overflytning fra opvågningsenheden besluttes
+10.3 Observation af afvigelser
+Opvågningspersonalet har ansvar for at observere og reagere på evt. afvigelser:
+Bevidsthedsniveau
+Under opvågningsfasen skal patientens bevidsthedsniveau være stigende. Hvis patienten bliver
+bevidsthedsplumret, kontaktes anæstesilægen. Efter 1 time er patienten udenfor komplikationer
+forårsaget af anæstesien
+Vejrtrækning
+Patienten skal have frie luftveje; dette er optimalt i sideleje eller evt. rygleje med eleveret hovedgærde.
+Vejrtrækningsfrekvensen skal være mellem 10-20/minut
+Hudtemperatur og -farve:
+Ved insufficient vejrtrækning opstår blålig misfarvning af huden, specielt læberne
+Kredsløb:
+Min. puls, saturation og evt. blodtryk registreres mindst 2 gange under opvågningsfasen.
+Smerter
+Kvalme
+Vandladning
+For indlagte patienter foretages observationerne af det medfølgende personale eller ECT-personalet, som skal være
+introduceret til opgaven i opvågningen forinden. Ambulante patienter observeres af ECT-klinikkens eget
+opvågningspersonale.
+Ved problemer under observation i opvågningen, tages straks kontakt til anæstesilægen.
+10.4 Udskrivning fra opvågningsstuen
+Patienten kan udskrives fra opvågningsstuen, når samtlige af nedenstående kriterier er opfyldt:
+1. Bevidsthedsniveau: Vågen og klar samt svarer relevant eller sovende vækkes med verbalt stimuli
+2. Respirationsfrekvens over 10-20, eventuelt snorkende respiration
+3. Iltsaturation over 94
+4. Puls over 50 og under 100
+*Patienten udskrives i henhold til DASAIM 's Rekommandation for udskrivningskriterier ( DASAIM’S rekommandation
+for udskrivningskriterier fra anæstesiologisk observationsafsnit ).
+10.5 Fremgangsmåde for transport fra opvågningsenhed
+Ved transport af en indlagt patient fra opvågningsenhed skal patienten ledsages af en sundhedsperson. Ambulante
+patienter skal sikres forsvarlig transport, og de må hverken køre bil, cykel eller lignende samme dag.
+11. Bivirkninger ved ECT
+Bivirkninger til ECT er relateret til mængden af den afsatte elektriske energi, som derfor skal tilpasses til at fremkalde
+et generaliseret epileptisk anfald af sufficient varighed. Der er ingen holdepunkter for, at ECT forårsager irreversible,
+funktionelle, biokemiske eller morfologiske cerebrale skader, selv ikke efter gentagne ECT-serier.
+Man kan skelne mellem de bivirkninger, der opstår umiddelbart efter en behandling, og de bivirkninger, der optræder
+senere i forløbet.
+ECT - Elektrokonvulsiv terapi, fælles..., version 11.
+Udskrevet: 11-03-2026 af Magnus Boje Juul 21 af 2511.1 Bivirkninger ifbm. opvågning efter ECT
+I forbindelse med opvågningen kan patienterne være forkvalmede, formentlig som følge af anæstesien. Nogle
+patienter klager over hovedpine eller muskelsmerter umiddelbart efter behandlingen, og det kan behandles med
+paracetamol.
+Postiktal konfusion:
+Patienten kan efter ECT få postiktal konfusion, som er en relativ hyppig tilstand i forbindelse med opvågning fra ECT.
+Den varer normalt nogle minutter. Hvis tilstanden strækker sig over længere tid eller er meget voldsom, så taler man
+om postiktalt (emergens) delir, som kan brydes med i.v. Diazepam 5 til 10 mg eller Midazolam 1-2 mg.
+Man ser sjældent konfusionelle tilstande i tiden mellem eller efter behandlingerne. Opdager man dem, skal man
+mistænke nonkonvulsivt status epilepticus (NKSE). Tilstanden skal brydes med for eksempel Diazepam 5-10 mg i.v.
+NKSE er en sjælden komplikation til ECT, som karakteriseres ved længerevarende (> 10 min) ændring af
+bevidsthedsniveau samtidig med kontinuerlig epileptiform EEG-aktivitet. Diagnosen kan mistænkes klinisk, men kan
+ikke stilles uden EEG. Generelt kan tilstanden forsøges brudt med fx diazepam 5 mg i.v., men udredning og
+behandling for NKSE bør drøftes med neurolog.
+Kardiovaskulært:
+Efter ECT kan der være moderat sinustakykardi og blodtryksstigning (250/120 mmHg, evt. højere), som ofte varer få
+minutter. Der kan også være eventuelle ekstrasystoler. Dette er uden klinisk betydning. Man kan også se
+bradykardiepisoder, som kan indikere et behov for Atropin i forbindelse med den næste ECT.
+I få tilfælde kan man se alvorligere kardiale arytmier og intrakraniel blødning, men det er yderst sjældent, hvis man
+følger behandlingsregimet, der er beskrevet her og tager hensyn til ovennævnte kontraindikationer.
+Legemlige bivirkninger:
+Krampeanfaldet kan trods dæmpning med suxamethonium medføre tandskader, hvis patientens tandstatus er meget
+dårlig. Det kan i visse tilfælde blive aktuelt med individuelt tilpasset tandbeskytter.
+Ved dårlig kontakt mellem patientens hud og stimulationselektroderne kan der opstå forbrændinger af huden, idet
+ECT-apparatet ved høj impedans vil øge spændingen så den fastsatte strømstyrke nås (jf. Ohms lov). Dette
+forebygges ved at sikre god kontakt og ved at måle statisk impedans før stimulering.
+11.2 Bivirkninger under og efter en behandlingsserie 
+Anterograd og retrograd amnesi:
+Anterograd amnesi, det vil sige svigtende hukommelse for begivenheder umiddelbart efter en behandlingssession,
+forekommer ret hyppigt. Den retrograde amnesi kan være mere ubehageligt for patienterne, altså en delvis amnesi
+for begivenheder op til behandlingen. Patienterne bør på forhånd informeres om, at der kan optræde en vis
+svækkelse af hukommelsen for begivenheder der er sket før behandlingens start. Ofte vil patienternes hukommelse
+imidlertid være så påvirket af selve depressionen, at amnesien ikke bliver bemærket som noget særskilt problem.
+Almindeligvis vil amnesien desuden forsvinde gradvist igen.
+Indprentningssvækkelse:
+Ud over ovennævnte hukommelsesproblemer får patienter under ECT-serier i større eller mindre grad såkaldt
+indprentningssvækkelse. Det vil sige, at patienten under en ECT-serie får dårligere indlæringsevne for begivenheder,
+der indtræffer under behandlingsserien og i nogle uger før og efter. Patienten oplever det som
+hukommelsesproblemer, selv om der er tale om problemer med at indlære og lagre i hukommelsen. De
+begivenheder, der ikke er "indlært" og lagret i hukommelsen, kommer patienten ikke til at kunne huske.
+Varighed af kognitive bivirkninger:
+Kognitive bivirkninger er studeret indgående ved hjælp af neuropsykologiske undersøgelser, og det har vist sig, at
+kognitive ECT-bivirkninger som regel kun varer nogle uger efter endt behandling. Patienternes kognitive funktion en
+måned efter sidste behandling i en serie er, hos langt de fleste patienter, bedre end før de begyndte ECT.
+Enkelte patienter rapporterer om forringelse af autobiografisk hukommelse lang tid før ECT blev påbegyndt. Om det
+skyldes ECT eller den psykiske lidelse er uafklaret.
+Det er vigtigt at notere, at der ved flere prospektive CT- og MR-undersøgelser, såvel som ved neuropatologiske
+studier på mennesker og dyr, ikke er fundet holdepunkter for, at ECT medfører strukturelle hjernelæsioner. Det
+skyldes formentlig dels den meget lave energi, der bliver afsat i hjernen, anfaldets korte varighed, og at patienten på
+intet tidspunkt bliver udsat for hypoxi.
+Mulige tiltag ved svære kognitive bivirkninger :
+ECT - Elektrokonvulsiv terapi, fælles..., version 11.
+Udskrevet: 11-03-2026 af Magnus Boje Juul 22 af 25Hvis patienten oplever svære kognitive bivirkninger, kan man evt. drøfte ændringer i behandlingsstrategi med den
+ECT-ansvarlige læge. Mulige tiltag kan være:
+1. Gennemgå somatiske årsager samt medicin
+2. Reducere stimulusdosis
+3. Reducere behandlingshyppighed (fra 3 gange til 2 gange om ugen)
+4. Skift fra bilateral til unilateral elektrodeplacering
+12. Bilkørsel efter ECT
+Patienter må ikke køre bil, knallert, cykel mv., når de er i gang med en ECT-serie. Patienterne vil som regel være
+kognitivt påvirkede af såvel deres psykiske lidelse som selve behandlingen. Efter en ECT-serie skal den
+behandlingsansvarlige læge vurdere, om bilkørsel er forsvarligt. Ved denne vurdering skal både patientens kliniske
+tilstand, medicinering samt kognitive funktioner tages i betragtning.
+Kørselsforbud og ophævelse heraf skal altid fremgå af journalen og behandlingsplanen. Patienter i
+vedligeholdelsesbehandling må ikke køre bil eller køre på cykel de dage, de har fået ECT.
+13. Kvalitetssikring
+13.1 Krav til uddannelses- og introduktionsprogram for uddannelseslæger ​​​​​​
+Enhver nyansat læge skal gennemgå en formaliseret introduktion til ECT. Lægen kan godkendes til at give ECT, efter
+at vedkommende har gennemgået nedenstående tre uddannelseselementer med tilfredsstillende kvalitet.
+1. Gennemlæsning af dokumenter
+2. Teoretisk og praktisk undervisning i ECT
+3. Praktisk oplæring ved erfaren kollega (lægen forestår ECT superviseret af erfaren kollega):
+Da ECT kræver rutine i selve behandlingen, arbejdsgangen samt samarbejdet med sygeplejersker og
+anæstesi, skal lægen, før der gives tilladelse til selvstændig behandling, have overvåget behandlingerne og
+udført et antal behandlinger under direkte supervision af en erfaren kollega. Det vurderes, at minimum 6
+behandlinger under supervision giver tilstrækkelig rutine til, at behandlingen kan udføres selvstændigt.
+I følgende drejebog præciseres indholdselementerne i uddannelses- og introduktionsprogrammet 
+ Bilag 10 -
+Drejebog for uddannelse i ECT for nye læger/andet sundhedsfaglig personal e. Forslag til undervisningslides til den
+teoretiske undervisning findes i vedhæftede bilag 
+ Bilag 11 - Fælles undervisningsmateriale ECT .
+Som dokumentation for, at lægen har gennemført uddannelseselementerne med tilfredsstillende kvalitet, udfyldes
+følgende attestation: 
+ Bilag 12 - Attestation læg e. Attestationen skal godkendes af ECT-ansvarlig speciallæge eller
+afdelingsledelse og opbevares i personalesagen i delforløbet ”1. uddannelse/kurser”. Hvis medarbejderen flytter
+afdeling, skal HR kontaktes mhb. at flytte attestationen over i den nye personalesag.  
+Løbende videreudvikling for ECT-ansvarlig læge
+Den ECT-ansvarlige speciallæge deltager i Dansk Psykiatrisk Selskabs årlige ECT-kursus og andre relevante
+kurser/konferencer, som kan sikre en løbende opdatering af viden og videreudvikling af kompetence
+13.2 Krav til uddannelses- og introduktionsprogram for andet sundhedsfaglig
+personale  
+Nyansat sundhedsfagligt personale, der skal udføre ECT-opgaver, skal gennemgå en formaliseret introduktion til
+ECT. Sundhedsfagligt personale kan godkendes til at udføre ECT-opgaver, efter at nedenstående
+tre uddannelseselementer er gennemgået med tilfredsstillende kvalitet:
+1. Gennemlæsning af dokumenter
+2. Teoretisk og praktisk undervisning i ECT
+3. Praktisk oplæring ved erfaren kollega i de specifikke funktioner, som vedkommende skal udføre: Da ECT
+kræver rutine i selve behandlingen, arbejdsgangen samt samarbejdet med ECT-læge, anæstesiteam og øvrige
+sunedshedsfagligpersonale, skal personale have overvåget behandlingerne og udført et antal behandlinger
+under direkte supervision af erfaren kollega. Det vurderes, at minimum 6 behandlinger under supervision giver
+tilstrækkelig rutine, men antal af nødvendige behandlinger kan være højere, afhængig af hvilke specifikke
+funktioner personalet skal have
+I følgende drejebog præciseres indholdselementerne i uddannelses- og introduktionsprogrammet 
+ Bilag 10 -
+Drejebog for uddannelse i ECT for nye læger/andet sundhedsfaglig personale . Forslag til undervisningslides til den
+teoretiske undervisning findes i vedhæftede bilag 
+ Bilag 11 - Fælles undervisningsmateriale ECT . 
+Som dokumentation for, at andet sundhedsfaglig personale har gennemført uddannelseselementerne med
+tilfredsstillende kvalitet udfyldes følgende attestation 
+ Bilag 13 - Attestation andet sundhedsfaglig
+ECT - Elektrokonvulsiv terapi, fælles..., version 11.
+Udskrevet: 11-03-2026 af Magnus Boje Juul 23 af 25personale . Attestationen skal godkendes af ECT-ansvarlig speciallæge eller afdelingsledelse og opbevares i
+personalesagen i delforløbet ”1. uddannelse/kurser”. Hvis medarbejderen flytter afdeling, skal HR kontaktes mhb. at
+flytte attestationen over i den nye personalesag. 
+13.3 Lokal kvalitetssikring ift. behandling
+Aarhus Universitetshospital Psykiatrien 
+Behandlingsgivende ECT-læge skal efter dagens ECT konferere de ikke-optimale EEG-strimler med ECT-ansvarlig
+speciallæge.
+Hver måned bliver der gennemført fælles rating EEG-strimler ved ECT-ansvarlige speciallæger og ECT-teamet. Der
+bliver desuden afholdt ECT-konferencer på Afdeling for Depression og Angst hver 2. onsdag, og på Afdeling for
+Psykoser hver 4. onsdag.
+Regionspsykiatrien Horsens 
+Behandlingsgivende ECT-læge har på dagen for ECT mulighed for at konferere EEG-strimler med erfaren yngre
+læge.
+Hver 2. torsdag afholdes ECT-konference, hvor en yngre læge medbringer 1 EEG strimmel som har givet tvivl om
+tolkning og 1 EEG strimmel, som vurderes sufficient og yngre læge beskriver hvorfor den er sufficient ud fra vurdering
+af rekruttering, midtiktalt mønster, postiktal suppression og varighed. Øvrige læger på konferencen validerer.
+Regionspsykiatrien Midt
+ECT-givende læge har mulighed for at konferere dagens tvivlsomme EEG’er med ECT ansvarlige
+overlæge/speciallæge.
+Regionspsykiatrien Gødstrup 
+Efter sidste patient er behandlet, skal ECT-behandler deltage i næste ECT-konference med henblik på drøftelse af
+EEG-strimler ved ECT-ansvarlig læge.  
+ECT-behandler har ansvar for, at eventuelle beslutninger ved ECT-konference bliver journalførte. Opgaven kan
+delegeres til anden ECT-behandler som undtagelse og ved behov.  
+Regionspsykiatrien Randers
+Behandlingsgivende læge konferer – hvis muligt – med den behandlingsansvarlige overlæge/speciallæge på det sted,
+hvor patienten er i behandling (især for indlagte patienter). I dennes fravær, kan handlingsgivende ECT-læge efter
+behandling konferere tvivlsomme EEG-strimler med ECT-ansvarlig overlæge/speciallæge, som har det overordnet
+ansvar for spørgsmål vedrørende ECT behandling.
+Tilbage til top
+Dokumentation
+Se afsnit 2.
+Tilbage til top
+Ansvar
+Afdelingsledelsen har ansvaret for at dette dokument er kendt af ECT-behandlere, læger samt øvrig behandlere i de
+henvisende teams. 
+Behandlingsansvaret ligger hos den behandlingsansvarlige speciallæge.
+Tilbage til top
+Referencer
+1. Abrams R. Electroconvulsive Therapy. Ed 4. New York: Oxford University Press, 2002.
+2. Dansk Psykiatrisk Selskab ECT vejledning 2020
+3. Dubovsky SL. Electroconvulsive therapy. In: Kaplan HI, Sadock BJ (eds): Comprehensive
+4. Espinoza R, Kellner C. Electroconvulsive Therapy. N Engl J Med. 2022; 386(7): 667-672.
+5. Ferrier, I., & Waite, J. (Eds.). (2019). The ECT Handbook (4th ed.).
+6. Kellner C, Obbels J, Sienaert P. When to consider electroconvulsive therapy. Acta Psychiatr Scand 2020: 141:
+304–315.
+7. Krystal AD, Weiner RD. EEG correlates of the response to ECT: a possible antidepressant role of brain-
+derived neurotrophic factor. J ECT 1999;15(1): 27-38.
+8. Lapidus KA, Kellner CH. When to switch from unilateral to bilateral electroconvulsive therapy. J ECT. 2011
+ECT - Elektrokonvulsiv terapi, fælles..., version 11.
+Udskrevet: 11-03-2026 af Magnus Boje Juul 24 af 25Sep;27(3):244-6.
+9. Maletzky BM. Seizure duration and clinical effect in electroconvulsive therapy. Compr Psychiatry 1978; 19:
+541-550.
+10. NICE Guidance on the use of electroconvulsive therapy. Technology appraisal guidance [TA59]
+11. Published date: 26 April 2003 Last updated: 01 October 2009.
+12. Nobler MS, Sackeim HA, Solomou M, et al. EEG manifestations during ECT: effects of electrode placement
+and stimulus intensity. Biol Psychiatry 34:321-330, 1993.
+13. Sackeim HA, Prudic J, Devanand DP et al. A prospective, randomized, double-blind comparison of bilateral
+and right unilateral electroconvulsive therapy at different stimulus intensities. Arch Gen Psychiatry.
+2000;57:425-434.
+14. Semple, D. Pragmatic Guidance for EEG Interpretation.2nd Edition, 2017.
+15. Sundhedsstyrelsen. Electroconvulsiv terapi (ECT) og dødsfald – en udredning. 2010.
+16. User manual, Thymatron System IV, Somatics LLC System_IV_Instruction_Manual_Rev22.pdf
+17. Videbech P, Hjerrild S, Jørgensen A, Jørgensen M. Dansk Psykiatrisk Selskab ECT-vejledning. 2020.
+18. Weiss A .The ElectroconvulsiveTherapyWorkbook: Clinical Applications.Taylor and Francis,Oxon & NewYork.
+201
+19. Williams and Wilkins: Textblook of Psychiatry. Ed 6. Baltimore, 1995, p 2129.ECT-vejledning.
+20. § 6 i Sundhedsloven
+Tilbage til top
+ 
+ECT - Elektrokonvulsiv terapi, fælles..., version 11.
+Udskrevet: 11-03-2026 af Magnus Boje Juul 25 af 25
