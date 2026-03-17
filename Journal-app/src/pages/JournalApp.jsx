@@ -607,7 +607,7 @@ function JournalApp({ onNavigate }) {
             // Skip "Ad category:" lines
             if (trimmed.toLowerCase().startsWith('ad ') && trimmed.endsWith(':')) continue;
 
-            // Split into sentences (simple splitting by dot)
+            // Split into sentences (simple splitting by dot and space)
             const splitSentences = trimmed.split(/\. /);
             splitSentences.forEach((s, idx) => {
                 let cleanS = s.trim();
@@ -629,40 +629,33 @@ function JournalApp({ onNavigate }) {
 
         // IMPROVED JOINING LOGIC
         let fluidText = "";
-        let lastSubject = "";
-        
-        const subjectsToMerge = [
-            { text: "Patienten ", replacement: "vedkommende " },
-            { text: "Patienten er ", replacement: "er desuden " },
-            { text: "Holdningen er ", replacement: "fremstår " },
-            { text: "Kontaktformen er ", replacement: "samtidig " },
-            { text: "Emotionel kontakt er ", replacement: "mens den emotionelle kontakt er " }
-        ];
+        let justJoined = false;
+        let patientCount = 0;
 
         capturedSentences.forEach((sentence, index) => {
             let processedSentence = sentence;
 
-            // Merge logic: If multiple sentences start with the same subject, try to vary it
+            // Subject variation: Avoid repeating "Patienten"
+            if (processedSentence.startsWith("Patienten ")) {
+                if (patientCount % 2 === 1) {
+                    processedSentence = processedSentence.replace("Patienten ", "Vedkommende ");
+                }
+                patientCount++;
+            }
+
             if (index > 0) {
                 const prev = capturedSentences[index - 1];
                 
-                // Example: "Patienten... Patienten..." -> "Patienten... Desuden..."
-                if (sentence.startsWith("Patienten ") && prev.startsWith("Patienten ")) {
-                    const randomTransition = ["Desuden ", "Herudover ", "Vedkommende ", "Patienten ses ligeledes "];
-                    const transition = randomTransition[index % randomTransition.length];
-                    processedSentence = sentence.replace("Patienten ", transition);
-                }
-                
-                // Add varied conjunctions between certain categories of sentences
-                const conjunctions = [" samt ", " og ", ". Desuden ", ". Herudover "];
-                const conj = conjunctions[index % conjunctions.length];
-
-                // If short sentences, try to join them with "og" or "samt"
-                if (processedSentence.length < 50 && index % 3 === 1) {
+                // Smart joining of short sentences
+                if (!justJoined && processedSentence.length < 50 && prev.length < 50) {
+                    // Remove trailing dot to join
                     fluidText = fluidText.trim().replace(/\.$/, "");
-                    processedSentence = (index % 2 === 0 ? " og " : " samt ") + processedSentence.charAt(0).toLowerCase() + processedSentence.slice(1);
+                    const joiner = (index % 2 === 0) ? ", samt " : ", og ";
+                    processedSentence = joiner + processedSentence.charAt(0).toLowerCase() + processedSentence.slice(1);
+                    justJoined = true;
                 } else {
                     fluidText += " ";
+                    justJoined = false;
                 }
             }
 
