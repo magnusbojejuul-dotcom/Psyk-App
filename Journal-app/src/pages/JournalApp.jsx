@@ -341,8 +341,8 @@ function JournalApp({ onNavigate }) {
             lastUserTextRef.current = autoText;
         } else {
             // Manuel redigering slået til - Brug diff-match-patch patch-logik til at flette (3-way merge)
-            const patches = dmp.patch_make(lastAutoTextRef.current, autoText);
-            const [newTextArr, results] = dmp.patch_apply(patches, generatedText);
+            const patches = dmp.patch_make(lastAutoTextRef.current, lastUserTextRef.current);
+            const [newTextArr, results] = dmp.patch_apply(patches, autoText);
 
             setGeneratedText(newTextArr);
             lastAutoTextRef.current = autoText;
@@ -896,7 +896,7 @@ function JournalApp({ onNavigate }) {
                                                     </div>
                                                 </div>
                                             </button>
-                                            {option.hasInput && isSelected && (
+                                            {isSelected && (
                                                 <div className="mt-2 mb-2 ml-2 pl-3 border-l-2 border-[#839788]/30">
                                                     <input
                                                         type="text"
