@@ -675,6 +675,21 @@ function JournalApp({ onNavigate }) {
         setTimeout(() => setNotification(null), 3000);
     };
 
+    const formatCompactLayout = () => {
+        if (!generatedText) return;
+
+        let newText = generatedText;
+        newText = newText.replace(/(Ad .*?:)\n(.*)/g, '$1 $2');
+        newText = newText.replace(/\n\nAd /g, '\nAd ');
+
+        setGeneratedText(newText);
+        lastUserTextRef.current = newText;
+        setManualEditMode(true);
+
+        setNotification({ message: 'Kompakt layout genereret', type: 'success' });
+        setTimeout(() => setNotification(null), 3000);
+    };
+
     const toggleFullscreen = () => {
         if (!document.fullscreenElement) {
             document.documentElement.requestFullscreen().catch((err) => {
@@ -1094,15 +1109,27 @@ function JournalApp({ onNavigate }) {
                             <div className="flex items-center gap-1.5 text-amber-700 font-medium"><PenLine className="w-3.5 h-3.5" /><span>Fri redigering aktiv.</span></div>
                         </div>
                     )}
-                    <div className="p-5 bg-[#F9F8F6]/50 border-t border-[#E8E4D9]/50 flex flex-col gap-3">
-                        {activeSection === 'psych' && (
-                            <button onClick={generateFluentDescription} className="w-full flex justify-center items-center gap-2 bg-white text-[#839788] border border-[#E8E4D9] hover:bg-[#F9F8F6] px-4 py-2.5 rounded-xl font-bold transition-all shadow-sm">
+                    <div className="p-5 bg-[#F9F8F6]/50 border-t border-[#E8E4D9] flex flex-col gap-3">
+                        <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                            <button
+                                onClick={generateFluentDescription}
+                                className="flex-1 flex items-center justify-center gap-2 px-5 py-3.5 bg-white border border-[#E8E4D9] text-[#839788] rounded-xl hover:bg-[#FAF9F6] hover:text-[#3A4A40] hover:border-[#839788]/30 transition-all shadow-sm font-medium"
+                            >
                                 <AlignLeft className="h-4 w-4" /> Saml til flydende tekst
                             </button>
-                        )}
-                        <button onClick={copyToClipboard} className="w-full flex justify-center items-center gap-2 bg-[#839788] hover:bg-[#6B8070] text-white px-4 py-3.5 rounded-xl font-bold transition-all shadow-md hover:shadow-lg active:transform active:scale-[0.98]">
-                            <Clipboard className="h-4 w-4" /> {activeSection === 'full_note' ? 'Kopier HELE notatet' : 'Kopier SEKTION'}
-                        </button>
+                            <button
+                                onClick={formatCompactLayout}
+                                className="flex-1 flex items-center justify-center gap-2 px-5 py-3.5 bg-white border border-[#E8E4D9] text-[#839788] rounded-xl hover:bg-[#FAF9F6] hover:text-[#3A4A40] hover:border-[#839788]/30 transition-all shadow-sm font-medium"
+                            >
+                                <Layers className="h-4 w-4" /> Kompakt layout
+                            </button>
+                            <button
+                                onClick={copyToClipboard}
+                                className="flex-1 flex items-center justify-center gap-2 px-5 py-3.5 bg-[#839788] text-white rounded-xl hover:bg-[#6B8070] transition-all shadow-md shadow-[#839788]/20 font-bold tracking-wide"
+                            >
+                                <Clipboard className="h-4 w-4" /> {activeSection === 'full_note' ? 'Kopier HELE notatet' : 'Kopier SEKTION'}
+                            </button>
+                        </div>
                     </div>
                 </aside>
             </div >
