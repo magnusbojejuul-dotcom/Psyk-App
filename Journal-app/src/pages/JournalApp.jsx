@@ -319,9 +319,6 @@ function JournalApp({ onNavigate }) {
             });
 
             if (sectionLines.length > 0) {
-                if (sec.id !== 'diagnosis_anorexia') {
-                    lines.push(sec.title);
-                }
                 lines.push(...sectionLines);
                 lines.push("");
             }

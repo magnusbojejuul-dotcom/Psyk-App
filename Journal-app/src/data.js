@@ -138,7 +138,7 @@ export const SOMATIC_OBJ_OPTIONS = [
     { id: 'cn_normal', label: 'Kranienerver normal', category: 'Neurologisk', text: 'Intet abnormt påvist. Pupiller egale med normal lysrefleks.', isDefault: true, exclude: ['cn_pupil'] },
     { id: 'cn_pupil', label: 'Pupilforhold afviger', category: 'Neurologisk', text: 'Afvigende pupilforhold:', hasInput: true, exclude: ['cn_normal'] },
     
-    { id: 'motor_sys_normal', label: 'Motorik/Kraft normal', category: 'Neurologisk', text: 'Strakt arm- og bentest uden nedsynkning.', isDefault: true, exclude: ['motor_weak_oe'] },
+    { id: 'motor_sys_normal', label: 'Motorik/Kraft normal', category: 'Neurologisk', text: 'Strakt armtest uden nedsynkning.', isDefault: true, exclude: ['motor_weak_oe'] },
     { id: 'motor_weak_oe', label: 'Kraftnedsættelse', category: 'Neurologisk', text: 'Nedsat kraft.', exclude: ['motor_sys_normal'] },
     
     { id: 'eps_none', label: 'Ingen EPS', category: 'Neurologisk (EPS)', text: 'Ingen bradykinesi, rigiditet eller ufrivillige bevægelser.', isDefault: true, exclude: ['eps_rigid', 'eps_tremor'] },
