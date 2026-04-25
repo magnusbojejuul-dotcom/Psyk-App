@@ -1109,27 +1109,27 @@ function JournalApp({ onNavigate }) {
                             <div className="flex items-center gap-1.5 text-amber-700 font-medium"><PenLine className="w-3.5 h-3.5" /><span>Fri redigering aktiv.</span></div>
                         </div>
                     )}
-                    <div className="p-5 bg-[#F9F8F6]/50 border-t border-[#E8E4D9] flex flex-col gap-3">
-                        <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                    <div className="p-5 bg-[#F9F8F6]/50 border-t border-[#E8E4D9]/50 flex flex-col gap-3">
+                        <div className="grid grid-cols-2 gap-2">
                             <button
                                 onClick={generateFluentDescription}
-                                className="flex-1 flex items-center justify-center gap-2 px-5 py-3.5 bg-white border border-[#E8E4D9] text-[#839788] rounded-xl hover:bg-[#FAF9F6] hover:text-[#3A4A40] hover:border-[#839788]/30 transition-all shadow-sm font-medium"
+                                className="w-full flex flex-col sm:flex-row justify-center items-center gap-2 bg-white text-[#839788] border border-[#E8E4D9] hover:bg-[#F9F8F6] px-3 py-2.5 rounded-xl font-bold transition-all shadow-sm text-sm"
                             >
-                                <AlignLeft className="h-4 w-4" /> Saml til flydende tekst
+                                <AlignLeft className="h-4 w-4 shrink-0" /> <span className="truncate">Flydende tekst</span>
                             </button>
                             <button
                                 onClick={formatCompactLayout}
-                                className="flex-1 flex items-center justify-center gap-2 px-5 py-3.5 bg-white border border-[#E8E4D9] text-[#839788] rounded-xl hover:bg-[#FAF9F6] hover:text-[#3A4A40] hover:border-[#839788]/30 transition-all shadow-sm font-medium"
+                                className="w-full flex flex-col sm:flex-row justify-center items-center gap-2 bg-white text-[#839788] border border-[#E8E4D9] hover:bg-[#F9F8F6] px-3 py-2.5 rounded-xl font-bold transition-all shadow-sm text-sm"
                             >
-                                <Layers className="h-4 w-4" /> Kompakt layout
-                            </button>
-                            <button
-                                onClick={copyToClipboard}
-                                className="flex-1 flex items-center justify-center gap-2 px-5 py-3.5 bg-[#839788] text-white rounded-xl hover:bg-[#6B8070] transition-all shadow-md shadow-[#839788]/20 font-bold tracking-wide"
-                            >
-                                <Clipboard className="h-4 w-4" /> {activeSection === 'full_note' ? 'Kopier HELE notatet' : 'Kopier SEKTION'}
+                                <Layers className="h-4 w-4 shrink-0" /> <span className="truncate">Kompakt layout</span>
                             </button>
                         </div>
+                        <button
+                            onClick={copyToClipboard}
+                            className="w-full flex justify-center items-center gap-2 bg-[#839788] hover:bg-[#6B8070] text-white px-4 py-3.5 rounded-xl font-bold transition-all shadow-md hover:shadow-lg active:transform active:scale-[0.98]"
+                        >
+                            <Clipboard className="h-4 w-4" /> {activeSection === 'full_note' ? 'Kopier HELE notatet' : 'Kopier SEKTION'}
+                        </button>
                     </div>
                 </aside>
             </div >
