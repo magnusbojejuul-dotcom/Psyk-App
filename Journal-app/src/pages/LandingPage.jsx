@@ -22,9 +22,9 @@ function LandingPage({ onNavigate }) {
             </header>
 
             <main className="z-10 w-full max-w-[1200px] mx-auto px-6 flex-1 flex flex-col items-center justify-center text-center py-8">
-                <h1 className="text-3xl md:text-4xl font-bold text-[#3A4A40] mb-3 tracking-tight">Klinisk Værktøjskasse</h1>
+                <h1 className="text-3xl md:text-4xl font-bold text-[#3A4A40] mb-3 tracking-tight">Velkommen</h1>
                 <p className="text-base text-[#839788] mb-8 max-w-2xl">
-                    Vælg et redskab nedenfor for at få adgang til kliniske vejledninger, visitationsstøtte og interaktive værktøjer.
+                    Vælg et redskab nedenfor for at få adgang til kliniske vejledninger, visitationsstøtte og interaktive værktøjer. Al anvendelse er på eget ansvar.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full">
