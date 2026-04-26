@@ -199,6 +199,30 @@ function LandingPage({ onNavigate }) {
                         </div>
                     </button>
 
+                    {/* Tile 8: Målgruppebeskrivelser og Visitation (NEW) */}
+                    <button
+                        onClick={() => onNavigate('target_groups')}
+                        className="group relative flex flex-col items-start p-5 rounded-3xl bg-white/70 backdrop-blur-md border border-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer overflow-hidden isolate"
+                    >
+                        <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+
+                        <div className="w-12 h-12 rounded-xl bg-[#F2F6F3] flex items-center justify-center mb-4 shadow-sm border border-white group-hover:bg-indigo-600 transition-colors duration-300">
+                            <Brain className="w-6 h-6 text-indigo-600 group-hover:text-white transition-colors duration-300" />
+                        </div>
+
+                        <h2 className="text-lg font-bold text-[#3A4A40] mb-2 text-left leading-tight group-hover:text-indigo-900 transition-colors">
+                            Målgruppebeskrivelser og Visitation
+                        </h2>
+
+                        <p className="text-left text-[#839788] text-xs mb-5 leading-relaxed">
+                            Gennemgang af sværhedsgrader og anbefalet visitation for psykiatriske diagnoser.
+                        </p>
+
+                        <div className="mt-auto flex items-center gap-1.5 text-[#839788] text-xs font-bold uppercase tracking-wide group-hover:text-indigo-900 transition-colors">
+                            Åbn værktøj <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                        </div>
+                    </button>
+
                 </div>
             </main>
 
