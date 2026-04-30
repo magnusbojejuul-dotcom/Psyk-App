@@ -101,27 +101,9 @@ function JournalApp({ onNavigate }) {
         const prefixUsage = new Set();
 
         const plainItemsByPrefix = {};
-        const detailedOptions = [];
+        const detailedOptionsByPrefix = {};
         const standaloneOptions = [];
-
-        categoryOptions.forEach(opt => {
-            if (!currentSelectedIds.has(opt.id)) return;
-
-            const detail = currentDetails[opt.id];
-            const hasDetail = detail && detail.trim() !== '';
-
-            if (opt.smartMerge && !opt.isDefault) {
-                const prefix = opt.smartMerge.prefix || '';
-                if (!hasDetail) {
-                    if (!plainItemsByPrefix[prefix]) plainItemsByPrefix[prefix] = [];
-                    plainItemsByPrefix[prefix].push(opt);
-                } else {
-                    detailedOptions.push({ opt, detail });
-                }
-            } else {
-                standaloneOptions.push({ opt, detail });
-            }
-        });
+        const orderedPrefixes = [];
 
         // Filter out parent options from ALL groups if ANY of their sub-options are currently selected
         const selectedSubOptions = Array.from(currentSelectedIds)
@@ -130,71 +112,85 @@ function JournalApp({ onNavigate }) {
             
         const parentIdsWithActiveSubOptions = new Set(selectedSubOptions.map(o => o.parentId));
 
-        Object.keys(plainItemsByPrefix).forEach(prefix => {
-            // Remove parent items if their sub-options are active
-            plainItemsByPrefix[prefix] = plainItemsByPrefix[prefix].filter(opt => {
-                if (opt.isParent && parentIdsWithActiveSubOptions.has(opt.id)) {
-                    return false; // Skip this parent, a sub-option is taking over
+        categoryOptions.forEach(opt => {
+            if (!currentSelectedIds.has(opt.id)) return;
+            
+            // Skip parent if it has active sub-options
+            if (opt.isParent && parentIdsWithActiveSubOptions.has(opt.id)) return;
+
+            const detail = currentDetails[opt.id];
+            const hasDetail = detail && detail.trim() !== '';
+
+            if (opt.smartMerge && !opt.isDefault) {
+                const prefix = opt.smartMerge.prefix || '';
+                if (!orderedPrefixes.includes(prefix)) {
+                    orderedPrefixes.push(prefix);
                 }
-                return true;
-            });
-            
-            // If the array is empty after filtering, delete the key
-            if (plainItemsByPrefix[prefix].length === 0) {
-                delete plainItemsByPrefix[prefix];
-            }
-        });
 
-        Object.keys(plainItemsByPrefix).forEach(prefix => {
-            const opts = plainItemsByPrefix[prefix];
-            if (!opts || opts.length === 0) return;
-            
-            const items = opts.map(o => o.smartMerge.item);
-            const suffix = opts[0].smartMerge.suffix || '.';
-            const mergedItems = formatList(items);
-
-            let safeSuffix = suffix.trim();
-            if (safeSuffix === ':' || safeSuffix.endsWith(':')) safeSuffix = safeSuffix.replace(/:$/, '.');
-
-            lines.push(capitalize(`${prefix}${mergedItems}${safeSuffix}`));
-            prefixUsage.add(prefix.trim());
-        });
-
-        detailedOptions.forEach(({ opt, detail }) => {
-            const prefix = opt.smartMerge.prefix || '';
-            const item = opt.smartMerge.item;
-            const suffix = opt.smartMerge.suffix || '.';
-            const cleanedDetail = detail ? detail.trim() : '';
-
-            let finalSentence = "";
-            const cleanPrefix = prefix.trim();
-
-            const shouldDropPrefix = cleanPrefix.length > 7 && prefixUsage.has(cleanPrefix);
-
-            let effectivePrefix = shouldDropPrefix ? "" : prefix;
-            let formattedItem = shouldDropPrefix ? capitalize(item) : item;
-
-            if (cleanedDetail === '') {
-                let fallbackS = suffix.trim();
-                if (fallbackS === ':' || fallbackS.endsWith(':')) fallbackS = fallbackS.replace(/:$/, '.');
-                if (!fallbackS.endsWith('.')) fallbackS += '.';
-                finalSentence = capitalize(`${effectivePrefix}${formattedItem}${fallbackS}`);
-            } else {
-                if (opt.detailInParens) {
-                    finalSentence = capitalize(`${effectivePrefix}${formattedItem} (${cleanedDetail})${suffix}`);
+                if (!hasDetail) {
+                    if (!plainItemsByPrefix[prefix]) plainItemsByPrefix[prefix] = [];
+                    plainItemsByPrefix[prefix].push(opt);
                 } else {
-                    let cleanS = suffix.trim();
-                    if (cleanS === ':' || cleanS.endsWith(':')) {
-                        finalSentence = capitalize(`${effectivePrefix}${formattedItem}${cleanS} ${capitalize(cleanedDetail)}.`);
-                    } else {
-                        if (!cleanS.endsWith('.')) cleanS += '.';
-                        finalSentence = capitalize(`${effectivePrefix}${formattedItem}${cleanS} ${capitalize(cleanedDetail)}.`);
-                    }
+                    if (!detailedOptionsByPrefix[prefix]) detailedOptionsByPrefix[prefix] = [];
+                    detailedOptionsByPrefix[prefix].push({ opt, detail });
                 }
+            } else {
+                standaloneOptions.push({ opt, detail });
+            }
+        });
+
+        orderedPrefixes.forEach(prefix => {
+            const opts = plainItemsByPrefix[prefix];
+            if (opts && opts.length > 0) {
+                const items = opts.map(o => o.smartMerge.item);
+                const suffix = opts[0].smartMerge.suffix || '.';
+                const mergedItems = formatList(items);
+
+                let safeSuffix = suffix.trim();
+                if (safeSuffix === ':' || safeSuffix.endsWith(':')) safeSuffix = safeSuffix.replace(/:$/, '.');
+
+                lines.push(capitalize(`${prefix}${mergedItems}${safeSuffix}`));
+                prefixUsage.add(prefix.trim());
             }
 
-            lines.push(finalSentence);
-            if (cleanPrefix.length > 0) prefixUsage.add(cleanPrefix);
+            const detailedOpts = detailedOptionsByPrefix[prefix];
+            if (detailedOpts && detailedOpts.length > 0) {
+                detailedOpts.forEach(({ opt, detail }) => {
+                    const item = opt.smartMerge.item;
+                    const suffix = opt.smartMerge.suffix || '.';
+                    const cleanedDetail = detail ? detail.trim() : '';
+
+                    let finalSentence = "";
+                    const cleanPrefix = prefix.trim();
+
+                    const shouldDropPrefix = cleanPrefix.length > 7 && prefixUsage.has(cleanPrefix);
+
+                    let effectivePrefix = shouldDropPrefix ? "" : prefix;
+                    let formattedItem = shouldDropPrefix ? capitalize(item) : item;
+
+                    if (cleanedDetail === '') {
+                        let fallbackS = suffix.trim();
+                        if (fallbackS === ':' || fallbackS.endsWith(':')) fallbackS = fallbackS.replace(/:$/, '.');
+                        if (!fallbackS.endsWith('.')) fallbackS += '.';
+                        finalSentence = capitalize(`${effectivePrefix}${formattedItem}${fallbackS}`);
+                    } else {
+                        if (opt.detailInParens) {
+                            finalSentence = capitalize(`${effectivePrefix}${formattedItem} (${cleanedDetail})${suffix}`);
+                        } else {
+                            let cleanS = suffix.trim();
+                            if (cleanS === ':' || cleanS.endsWith(':')) {
+                                finalSentence = capitalize(`${effectivePrefix}${formattedItem}${cleanS} ${capitalize(cleanedDetail)}.`);
+                            } else {
+                                if (!cleanS.endsWith('.')) cleanS += '.';
+                                finalSentence = capitalize(`${effectivePrefix}${formattedItem}${cleanS} ${capitalize(cleanedDetail)}.`);
+                            }
+                        }
+                    }
+
+                    lines.push(finalSentence);
+                    if (cleanPrefix.length > 0) prefixUsage.add(cleanPrefix);
+                });
+            }
         });
 
         standaloneOptions.forEach(({ opt, detail }) => {
