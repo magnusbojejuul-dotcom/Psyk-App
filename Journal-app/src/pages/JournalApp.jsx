@@ -97,12 +97,10 @@ function JournalApp({ onNavigate }) {
     };
 
     const processCategoryOptions = (categoryOptions, categoryName, currentSelectedIds, currentDetails) => {
-        const lines = [];
-        const prefixUsage = new Set();
-
-        const plainItemsByPrefix = {};
-        const detailedOptionsByPrefix = {};
-        const standaloneOptions = [];
+        const summaryLines = [];
+        const elaborationLines = [];
+        const standaloneLines = [];
+        const itemsByPrefix = {};
         const orderedPrefixes = [];
 
         // Filter out parent options from ALL groups if ANY of their sub-options are currently selected
@@ -114,8 +112,6 @@ function JournalApp({ onNavigate }) {
 
         categoryOptions.forEach(opt => {
             if (!currentSelectedIds.has(opt.id)) return;
-            
-            // Skip parent if it has active sub-options
             if (opt.isParent && parentIdsWithActiveSubOptions.has(opt.id)) return;
 
             const detail = currentDetails[opt.id];
@@ -126,21 +122,20 @@ function JournalApp({ onNavigate }) {
                 if (!orderedPrefixes.includes(prefix)) {
                     orderedPrefixes.push(prefix);
                 }
+                if (!itemsByPrefix[prefix]) itemsByPrefix[prefix] = [];
+                itemsByPrefix[prefix].push(opt);
 
-                if (!hasDetail) {
-                    if (!plainItemsByPrefix[prefix]) plainItemsByPrefix[prefix] = [];
-                    plainItemsByPrefix[prefix].push(opt);
-                } else {
-                    if (!detailedOptionsByPrefix[prefix]) detailedOptionsByPrefix[prefix] = [];
-                    detailedOptionsByPrefix[prefix].push({ opt, detail });
+                if (hasDetail) {
+                    const itemName = opt.smartMerge.item || opt.label;
+                    elaborationLines.push(`Ad ${itemName.toLowerCase()}: ${detail.trim()}`);
                 }
             } else {
-                standaloneOptions.push({ opt, detail });
+                standaloneLines.push(formatWithDetail(opt, detail));
             }
         });
 
         orderedPrefixes.forEach(prefix => {
-            const opts = plainItemsByPrefix[prefix];
+            const opts = itemsByPrefix[prefix];
             if (opts && opts.length > 0) {
                 const items = opts.map(o => o.smartMerge.item);
                 const suffix = opts[0].smartMerge.suffix || '.';
@@ -149,66 +144,29 @@ function JournalApp({ onNavigate }) {
                 let safeSuffix = suffix.trim();
                 if (safeSuffix === ':' || safeSuffix.endsWith(':')) safeSuffix = safeSuffix.replace(/:$/, '.');
 
-                lines.push(capitalize(`${prefix}${mergedItems}${safeSuffix}`));
-                prefixUsage.add(prefix.trim());
-            }
-
-            const detailedOpts = detailedOptionsByPrefix[prefix];
-            if (detailedOpts && detailedOpts.length > 0) {
-                detailedOpts.forEach(({ opt, detail }) => {
-                    const item = opt.smartMerge.item;
-                    const suffix = opt.smartMerge.suffix || '.';
-                    const cleanedDetail = detail ? detail.trim() : '';
-
-                    let finalSentence = "";
-                    const cleanPrefix = prefix.trim();
-
-                    const shouldDropPrefix = cleanPrefix.length > 7 && prefixUsage.has(cleanPrefix);
-
-                    let effectivePrefix = shouldDropPrefix ? "" : prefix;
-                    let formattedItem = shouldDropPrefix ? capitalize(item) : item;
-
-                    if (cleanedDetail === '') {
-                        let fallbackS = suffix.trim();
-                        if (fallbackS === ':' || fallbackS.endsWith(':')) fallbackS = fallbackS.replace(/:$/, '.');
-                        if (!fallbackS.endsWith('.')) fallbackS += '.';
-                        finalSentence = capitalize(`${effectivePrefix}${formattedItem}${fallbackS}`);
-                    } else {
-                        if (opt.detailInParens) {
-                            finalSentence = capitalize(`${effectivePrefix}${formattedItem} (${cleanedDetail})${suffix}`);
-                        } else {
-                            let cleanS = suffix.trim();
-                            if (cleanS === ':' || cleanS.endsWith(':')) {
-                                finalSentence = capitalize(`${effectivePrefix}${formattedItem}${cleanS} ${capitalize(cleanedDetail)}.`);
-                            } else {
-                                if (!cleanS.endsWith('.')) cleanS += '.';
-                                finalSentence = capitalize(`${effectivePrefix}${formattedItem}${cleanS} ${capitalize(cleanedDetail)}.`);
-                            }
-                        }
-                    }
-
-                    lines.push(finalSentence);
-                    if (cleanPrefix.length > 0) prefixUsage.add(cleanPrefix);
-                });
+                summaryLines.push(capitalize(`${prefix}${mergedItems}${safeSuffix}`));
             }
         });
 
-        standaloneOptions.forEach(({ opt, detail }) => {
-            lines.push(formatWithDetail(opt, detail));
-        });
+        let mainText = [...summaryLines, ...standaloneLines].join(' ').trim();
 
         if (categoryName === 'Depression (ICD-10 Screening)') {
             const severity = calculateDepressionSeverity(currentSelectedIds);
             if (severity) {
-                lines.push(`Opfylder dermed ICD-10 kriterierne for en depression i ${severity} grad.`);
+                mainText += ` Opfylder dermed ICD-10 kriterierne for en depression i ${severity} grad.`;
             } else {
                 const hasAnySymptoms = [...DEP_CORE_IDS, ...DEP_ACC_IDS].some(id => currentSelectedIds.has(id));
                 if (hasAnySymptoms) {
-                    lines.push('Opfylder ikke de fulde ICD-10 kriterier for en depressiv episode.');
+                    mainText += ' Opfylder ikke de fulde ICD-10 kriterier for en depressiv episode.';
                 }
             }
         }
-        return lines.join(' ').trim();
+
+        if (elaborationLines.length > 0) {
+            return `${mainText}\n\nUddybning:\n${elaborationLines.join('\n')}`;
+        }
+        
+        return mainText;
     };
 
     const generateTextContent = (section, ids, details, contactReason, timeline, diets, uniform, summaryMode) => {
