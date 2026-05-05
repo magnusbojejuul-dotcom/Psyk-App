@@ -102,6 +102,10 @@ function JournalApp({ onNavigate }) {
         const standaloneLines = [];
         const itemsByPrefix = {};
         const orderedPrefixes = [];
+        const detailedOptionsByPrefix = {};
+        const prefixUsage = new Set();
+        
+        const isDepressionCategory = categoryName === 'Depression (ICD-10 Screening)';
 
         // Filter out parent options from ALL groups if ANY of their sub-options are currently selected
         const selectedSubOptions = Array.from(currentSelectedIds)
@@ -112,6 +116,8 @@ function JournalApp({ onNavigate }) {
 
         categoryOptions.forEach(opt => {
             if (!currentSelectedIds.has(opt.id)) return;
+            
+            // Skip parent if it has active sub-options
             if (opt.isParent && parentIdsWithActiveSubOptions.has(opt.id)) return;
 
             const detail = currentDetails[opt.id];
@@ -122,12 +128,23 @@ function JournalApp({ onNavigate }) {
                 if (!orderedPrefixes.includes(prefix)) {
                     orderedPrefixes.push(prefix);
                 }
-                if (!itemsByPrefix[prefix]) itemsByPrefix[prefix] = [];
-                itemsByPrefix[prefix].push(opt);
+                
+                if (isDepressionCategory) {
+                    if (!itemsByPrefix[prefix]) itemsByPrefix[prefix] = [];
+                    itemsByPrefix[prefix].push(opt);
 
-                if (hasDetail) {
-                    const itemName = opt.smartMerge.item || opt.label;
-                    elaborationLines.push(`Ad ${itemName.toLowerCase()}: ${detail.trim()}`);
+                    if (hasDetail) {
+                        const itemName = opt.smartMerge.item || opt.label;
+                        elaborationLines.push(`Ad ${itemName.toLowerCase()}: ${detail.trim()}`);
+                    }
+                } else {
+                    if (!hasDetail) {
+                        if (!itemsByPrefix[prefix]) itemsByPrefix[prefix] = [];
+                        itemsByPrefix[prefix].push(opt);
+                    } else {
+                        if (!detailedOptionsByPrefix[prefix]) detailedOptionsByPrefix[prefix] = [];
+                        detailedOptionsByPrefix[prefix].push({ opt, detail });
+                    }
                 }
             } else {
                 standaloneLines.push(formatWithDetail(opt, detail));
@@ -145,12 +162,54 @@ function JournalApp({ onNavigate }) {
                 if (safeSuffix === ':' || safeSuffix.endsWith(':')) safeSuffix = safeSuffix.replace(/:$/, '.');
 
                 summaryLines.push(capitalize(`${prefix}${mergedItems}${safeSuffix}`));
+                prefixUsage.add(prefix.trim());
+            }
+
+            if (!isDepressionCategory) {
+                const detailedOpts = detailedOptionsByPrefix[prefix];
+                if (detailedOpts && detailedOpts.length > 0) {
+                    detailedOpts.forEach(({ opt, detail }) => {
+                        const item = opt.smartMerge.item;
+                        const suffix = opt.smartMerge.suffix || '.';
+                        const cleanedDetail = detail ? detail.trim() : '';
+
+                        let finalSentence = "";
+                        const cleanPrefix = prefix.trim();
+
+                        const shouldDropPrefix = cleanPrefix.length > 7 && prefixUsage.has(cleanPrefix);
+
+                        let effectivePrefix = shouldDropPrefix ? "" : prefix;
+                        let formattedItem = shouldDropPrefix ? capitalize(item) : item;
+
+                        if (cleanedDetail === '') {
+                            let fallbackS = suffix.trim();
+                            if (fallbackS === ':' || fallbackS.endsWith(':')) fallbackS = fallbackS.replace(/:$/, '.');
+                            if (!fallbackS.endsWith('.')) fallbackS += '.';
+                            finalSentence = capitalize(`${effectivePrefix}${formattedItem}${fallbackS}`);
+                        } else {
+                            if (opt.detailInParens) {
+                                finalSentence = capitalize(`${effectivePrefix}${formattedItem} (${cleanedDetail})${suffix}`);
+                            } else {
+                                let cleanS = suffix.trim();
+                                if (cleanS === ':' || cleanS.endsWith(':')) {
+                                    finalSentence = capitalize(`${effectivePrefix}${formattedItem}${cleanS} ${capitalize(cleanedDetail)}.`);
+                                } else {
+                                    if (!cleanS.endsWith('.')) cleanS += '.';
+                                    finalSentence = capitalize(`${effectivePrefix}${formattedItem}${cleanS} ${capitalize(cleanedDetail)}.`);
+                                }
+                            }
+                        }
+
+                        summaryLines.push(finalSentence);
+                        if (cleanPrefix.length > 0) prefixUsage.add(cleanPrefix);
+                    });
+                }
             }
         });
 
         let mainText = [...summaryLines, ...standaloneLines].join(' ').trim();
 
-        if (categoryName === 'Depression (ICD-10 Screening)') {
+        if (isDepressionCategory) {
             const severity = calculateDepressionSeverity(currentSelectedIds);
             if (severity) {
                 mainText += ` Opfylder dermed ICD-10 kriterierne for en depression i ${severity} grad.`;
@@ -162,7 +221,7 @@ function JournalApp({ onNavigate }) {
             }
         }
 
-        if (elaborationLines.length > 0) {
+        if (isDepressionCategory && elaborationLines.length > 0) {
             return `${mainText}\n\nUddybning:\n${elaborationLines.join('\n')}`;
         }
         
