@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronRight, AlertTriangle, Info, Users, User, ShieldAlert, Download, Activity, Brain } from '../components/Icons';
+import { ChevronRight, AlertTriangle, Info, Users, User, ShieldAlert, Download, Activity, Brain, FileText } from '../components/Icons';
 import { GUIDELINE_ADVARSLER, VOKSNE_UDEN_PSYKOTISKE_SYMPTOMER, VOKSNE_MED_PSYKOTISKE_SYMPTOMER, IV_BEHANDLING_VOKSNE, DEMENS_BEHANDLING } from '../data/guidelinesAkutBeroligende';
 import { DEPRESSION_GUIDELINE } from '../data/guidelinesDepression';
 import { BIPOLAR_GUIDELINE } from '../data/guidelinesBipolar';
@@ -58,8 +58,8 @@ function TreatmentGuidelinesApp({ onNavigate }) {
                         <h2 className="text-2xl md:text-3xl font-bold text-[#3A4A40] mb-2">Akut Beroligende Medicin</h2>
                         <p className="text-[#839788]">Uddrag fra Regional Retningslinje, Fælles Psykiatri Region Midt.</p>
                     </div>
-                    <a href={`${import.meta.env.BASE_URL}pdf/Akut_Beroligende_Medicin.pdf`} download className="flex items-center gap-2 bg-[#839788] text-white px-4 py-2 rounded-xl hover:bg-[#6A7A6E] transition-colors shadow-sm font-medium text-sm hover:-translate-y-0.5">
-                        <Download className="w-4 h-4" /> Download PDF
+                    <a href={`${import.meta.env.BASE_URL}pdf/Akut_Beroligende_Medicin.pdf`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-[#839788] text-white px-4 py-2 rounded-xl hover:bg-[#6A7A6E] transition-colors shadow-sm font-medium text-sm hover:-translate-y-0.5" title="Åbn original PDF i ny fane">
+                        <FileText className="w-4 h-4" /> Åbn Original PDF
                     </a>
                 </div>
 
@@ -173,14 +173,14 @@ function TreatmentGuidelinesApp({ onNavigate }) {
                     <div className="flex flex-wrap gap-2 justify-start md:justify-end shrink-0 max-w-full md:max-w-sm lg:max-w-md mt-4 md:mt-0">
                         {guideline.pdfs ? (
                             guideline.pdfs.map((pdf, idx) => (
-                                <a key={idx} href={pdf.url} download className="flex items-center gap-2 bg-[#839788] text-white px-4 py-2 rounded-xl hover:bg-[#6A7A6E] transition-colors shadow-sm font-bold text-sm hover:-translate-y-0.5">
-                                    <Download className="w-4 h-4" /> {pdf.title}
+                                <a key={idx} href={pdf.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-[#839788] text-white px-4 py-2 rounded-xl hover:bg-[#6A7A6E] transition-colors shadow-sm font-bold text-sm hover:-translate-y-0.5" title="Åbn original PDF i ny fane">
+                                    <FileText className="w-4 h-4" /> {pdf.title}
                                 </a>
                             ))
                         ) : (
                             guideline.pdfUrl && (
-                                <a href={guideline.pdfUrl} download className="flex items-center gap-2 bg-[#839788] text-white px-5 py-2.5 rounded-xl hover:bg-[#6A7A6E] transition-colors shadow-sm font-bold text-sm hover:-translate-y-0.5">
-                                    <Download className="w-4 h-4" /> Print PDF
+                                <a href={guideline.pdfUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-[#839788] text-white px-5 py-2.5 rounded-xl hover:bg-[#6A7A6E] transition-colors shadow-sm font-bold text-sm hover:-translate-y-0.5" title="Åbn original PDF i ny fane">
+                                    <FileText className="w-4 h-4" /> Åbn Original PDF
                                 </a>
                             )
                         )}

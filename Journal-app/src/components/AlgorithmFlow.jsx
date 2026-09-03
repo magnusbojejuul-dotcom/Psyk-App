@@ -16,7 +16,8 @@ export function AlgorithmFlow({ steps, isStepBased = true, onNavigate }) {
                 {steps.map((step, index) => (
                     <div
                         key={index}
-                        className="group relative flex flex-col md:flex-row items-start gap-4 md:gap-6"
+                        className="group relative flex flex-col md:flex-row items-start gap-4 md:gap-6 cursor-pointer"
+                        onClick={() => setHoveredStep(prev => prev === index ? null : index)}
                         onMouseEnter={() => setHoveredStep(index)}
                         onMouseLeave={() => setHoveredStep(null)}
                     >
@@ -43,7 +44,7 @@ export function AlgorithmFlow({ steps, isStepBased = true, onNavigate }) {
                             {/* Detailed Info Button (Mobile) or Hover Indicator (Desktop) */}
                             {step.details && (
                                 <div className="inline-flex items-center gap-1.5 text-[11px] font-bold text-[#5C6B61] bg-gradient-to-r from-[#F2F6F3] to-white border border-[#E8E4D9] px-3.5 py-1.5 rounded-full group-hover:from-[#839788] group-hover:to-[#6A7A6E] group-hover:text-white group-hover:border-transparent group-hover:shadow-md transition-all duration-300 w-fit">
-                                    <Info className="w-4 h-4" /> Hold musen over for originaltekst
+                                    <Info className="w-4 h-4" /> {hoveredStep === index ? 'Luk detaljer' : 'Klik eller hold musen over for kliniske detaljer'}
                                 </div>
                             )}
 
