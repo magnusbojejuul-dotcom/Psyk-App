@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Activity, Cookie, FileText, ChevronRight, Stethoscope, Pill } from '../components/Icons';
+import { Brain, Activity, Cookie, FileText, ChevronRight, Stethoscope, Pill, Heart } from '../components/Icons';
 
 function LandingPage({ onNavigate }) {
     return (
@@ -219,6 +219,35 @@ function LandingPage({ onNavigate }) {
                         </p>
 
                         <div className="mt-auto flex items-center gap-1.5 text-[#839788] text-xs font-bold uppercase tracking-wide group-hover:text-indigo-900 transition-colors">
+                            Åbn værktøj <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                        </div>
+                    </button>
+
+                    {/* Tile 9: EKG-Værktøj & Hjertemodel (NEW) */}
+                    <button
+                        onClick={() => onNavigate('ekg')}
+                        className="group relative flex flex-col items-start p-5 rounded-3xl bg-white/70 backdrop-blur-md border border-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer overflow-hidden isolate"
+                    >
+                        <div className="absolute inset-0 bg-gradient-to-br from-rose-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+
+                        <div className="w-12 h-12 rounded-xl bg-[#F2F6F3] flex items-center justify-center mb-4 shadow-sm border border-white group-hover:bg-rose-700 transition-colors duration-300">
+                            <Heart className="w-6 h-6 text-rose-700 group-hover:text-white transition-colors duration-300" />
+                        </div>
+
+                        <div className="flex items-center gap-2 mb-2">
+                            <h2 className="text-lg font-bold text-[#3A4A40] text-left leading-tight group-hover:text-rose-950 transition-colors">
+                                EKG-Værktøj & Hjertemodel
+                            </h2>
+                            <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-rose-100 text-rose-800 border border-rose-200 uppercase">
+                                NY
+                            </span>
+                        </div>
+
+                        <p className="text-left text-[#839788] text-xs mb-5 leading-relaxed">
+                            Interaktiv 12-aflednings hjertemodel, systematisk tolkning og træningscases baseret på John R. Hamptons principper samt QTc-beregner.
+                        </p>
+
+                        <div className="mt-auto flex items-center gap-1.5 text-[#839788] text-xs font-bold uppercase tracking-wide group-hover:text-rose-900 transition-colors">
                             Åbn værktøj <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                         </div>
                     </button>
