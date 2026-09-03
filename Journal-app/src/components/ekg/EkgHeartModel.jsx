@@ -5,29 +5,36 @@ import { LEAD_DETAILS, EKG_CASES } from '../../data/ekgCases';
 /**
  * Autentisk Cabrera Hexaksial Hjertemodel (The Physiological Society standard)
  * 
- * Geometrisk & Fysiologisk Præcision:
- * - Hjertet er modelleret i et harmonisk anatomisk koordinatsystem og roteret med nøjagtig
- *   vinkel (-30° fra vertikal = præcist +60° i polarvinkel), så apeks cordis peger direkte
- *   langs Afledning II-vektoren uden nogen skævhed eller forvridning.
- * - Højre hjertehalvdel er anatomisk blå/cyan (venøst blod).
- * - Venstre hjertehalvdel er anatomisk rød/karmin (arterielt blod).
- * - Central Cabrera-cirkel med 6 tydelige sorte vektor-pile (I, II, aVF, III, aVR, aVL) og mini-EKG kurver.
- * - Standardhastighed er droslet ned til ultra-roligt tempo (0.1x = ca. 8 sekunder per cyklus)
- *   eller pauseret til præcis inspektion med fase-knapper.
+ * Nøgletræk verificeret mod The Physiological Society ("Trigonometry of the ECG"):
+ * 1. Central 4-kammer anatomisk model:
+ *    - Højre side (RA & RV): Lyst lysende venøs blå/cyan.
+ *    - Venstre side (LA & LV): Lyst lysende arteriel rød/pink.
+ *    - Gylden/ravfarvet myokardievæg med apeks peget præcist mod +60° (Afledning II).
+ *    - Aortabuen superiort med 3 hovedafgange og Vena Cava / Pulmonalis i blå.
+ * 2. Cabrera hexaksial cirkel med 12 radiale eger (hver 30°).
+ * 3. 6 markante sorte vektor-pile med nøjagtige vinkler:
+ *    - I (0°), II (+60°), aVF (+90°), III (+120°), aVR (-150°), aVL (-30°).
+ *    - Tydelige vinkelangivelser placeret frit og læseligt inden for cirklen.
+ *    - Røde mini-EKG kurver ved hver pilespids uden for cirklen.
+ * 4. Pauseret som standard:
+ *    - Brugeren mødes af et knivskarpt, roligt og stabilt overblik.
+ *    - Afspilning sker i ultra-roligt tempo (0.1x = ~8 sekunder per cyklus).
+ *    - Faseknapper (P, PR, Q, R, S, T, Diastole) tillader trinvis inspektion.
  */
 export default function EkgHeartModel({ selectedLead = 'II', onSelectLead, caseData, activeCase: propActiveCase }) {
     const activeCase = propActiveCase || caseData || EKG_CASES[0];
     const [viewMode, setViewMode] = useState(() => {
         return LEAD_DETAILS[selectedLead]?.plane || 'frontal';
     });
-    // Standard: Start roligt (eller pauseret) så brugeren ikke overvældes
-    const [isPlaying, setIsPlaying] = useState(true);
-    const [playbackSpeed, setPlaybackSpeed] = useState(0.1); // Ultra-roligt undervisningstempo (8.0s per hjertecyklus)
-    const [cycleTime, setCycleTime] = useState(230); // Starter pædagogisk ved R-takken (hovedsystolen)
+
+    // PAUSERET VED START for ro og overblik (brugeren starter selv når ønsket)
+    const [isPlaying, setIsPlaying] = useState(false);
+    const [playbackSpeed, setPlaybackSpeed] = useState(0.1); // Roligt undervisningstempo (8.0s per hjertecyklus)
+    const [cycleTime, setCycleTime] = useState(230); // Starter stabilt ved R-takken (hovedsystolen)
     const [showCoronary, setShowCoronary] = useState(true);
     const [showConduction, setShowConduction] = useState(true);
     const [showVector, setShowVector] = useState(true);
-    const [showAxisSectors, setShowAxisSectors] = useState(true);
+    const [showAxisSectors, setShowAxisSectors] = useState(false);
     const [showAnatomyLabels, setShowAnatomyLabels] = useState(false);
 
     const animationRef = useRef(null);
@@ -205,91 +212,96 @@ export default function EkgHeartModel({ selectedLead = 'II', onSelectLead, caseD
     const projectedVoltage = activeVector.magnitude * Math.cos(vectorAngleRad - leadAngleRad);
 
     const handleScrub = (e) => {
+        setIsPlaying(false);
         setCycleTime(parseFloat(e.target.value));
     };
 
-    // De 6 ekstremitetsafledninger i Cabrera systemet med deres matematiske vinkler
+    // De 6 Cabrera ekstremitetsafledninger direkte fra The Physiological Society
     const CABRERA_LEADS = [
         {
             name: 'I',
             angle: 0,
             degLabel: '0°',
-            labelX: 195,
-            labelY: -10,
-            tipX: 190,
+            degX: 135,
+            degY: -9,
+            tipX: 165,
             tipY: 0,
-            badgeX: 218,
-            badgeY: 0,
-            miniPath: 'M 0 0 L 3 0 L 4 1.5 L 5 -8 L 6.5 3 L 7.5 0 L 12 0'
+            labelX: 200,
+            labelY: 5,
+            labelAnchor: 'start',
+            miniPath: 'M 168 0 L 173 0 L 174 2 L 176 -9 L 178 3 L 180 0 L 186 0'
         },
         {
             name: 'II',
             angle: 60,
             degLabel: '60°',
-            labelX: 85,
-            labelY: 155,
-            tipX: 95,
-            tipY: 164.5,
-            badgeX: 115,
-            badgeY: 195,
-            miniPath: 'M 0 0 L 3 0 L 4 2 L 5 -15 L 7 4 L 8 0 L 12 0'
+            degX: 82,
+            degY: 118,
+            tipX: 82.5,
+            tipY: 142.9,
+            labelX: 110,
+            labelY: 185,
+            labelAnchor: 'middle',
+            miniPath: 'M 76 150 L 80 150 L 82 153 L 85 133 L 88 155 L 90 150 L 98 150'
         },
         {
             name: 'aVF',
             angle: 90,
             degLabel: '90°',
-            labelX: 16,
-            labelY: 175,
+            degX: 18,
+            degY: 145,
             tipX: 0,
-            tipY: 190,
-            badgeX: 0,
-            badgeY: 220,
-            miniPath: 'M 0 0 L 3 0 L 4 1.5 L 5 -10 L 6.5 3 L 7.5 0 L 12 0'
+            tipY: 165,
+            labelX: 0,
+            labelY: 202,
+            labelAnchor: 'middle',
+            miniPath: 'M -12 172 L -6 172 L -4 174 L -2 161 L 0 176 L 2 172 L 10 172'
         },
         {
             name: 'III',
             angle: 120,
             degLabel: '120°',
-            labelX: -85,
-            labelY: 155,
-            tipX: -95,
-            tipY: 164.5,
-            badgeX: -115,
-            badgeY: 195,
-            miniPath: 'M 0 0 L 3 0 L 4 -2 L 5 8 L 6.5 -3 L 7.5 0 L 12 0'
+            degX: -52,
+            degY: 132,
+            tipX: -82.5,
+            tipY: 142.9,
+            labelX: -110,
+            labelY: 185,
+            labelAnchor: 'middle',
+            miniPath: 'M -98 152 L -93 152 L -91 150 L -89 158 L -87 149 L -85 152 L -78 152'
         },
         {
             name: 'aVR',
             angle: -150,
             degLabel: '-150°',
-            labelX: -155,
-            labelY: -75,
-            tipX: -164.5,
-            tipY: -95,
-            badgeX: -195,
-            badgeY: -115,
-            miniPath: 'M 0 0 L 3 0 L 4 -2 L 5 12 L 6.5 -3 L 7.5 0 L 12 0'
+            degX: -105,
+            degY: -60,
+            tipX: -142.9,
+            tipY: -82.5,
+            labelX: -185,
+            labelY: -95,
+            labelAnchor: 'end',
+            miniPath: 'M -168 -82 L -163 -82 L -161 -80 L -159 -68 L -157 -83 L -155 -82 L -148 -82'
         },
         {
             name: 'aVL',
             angle: -30,
             degLabel: '-30°',
-            labelX: 155,
-            labelY: -75,
-            tipX: 164.5,
-            tipY: -95,
-            badgeX: 195,
-            badgeY: -115,
-            miniPath: 'M 0 0 L 3 0 L 4 1 L 5 -5 L 6.5 2 L 7.5 0 L 12 0'
+            degX: 105,
+            degY: -60,
+            tipX: 142.9,
+            tipY: -82.5,
+            labelX: 185,
+            labelY: -95,
+            labelAnchor: 'start',
+            miniPath: 'M 148 -82 L 153 -82 L 154 -80 L 156 -88 L 158 -81 L 160 -82 L 168 -82'
         }
     ];
-
-    const SPOKE_ANGLES = [30, 150, 180, 240, 270, 300];
 
     return (
         <div className="flex flex-col lg:flex-row gap-6 w-full max-w-[1400px] mx-auto">
             {/* VENSTRE SØJLE: DEN AUTENTISKE CABRERA HJERTEMODEL CANVAS */}
-            <div className="flex-1 glass-panel rounded-3xl p-5 md:p-6 border border-[#E8E4D9] flex flex-col shadow-sm bg-white/90">
+            <div className="flex-1 glass-panel rounded-3xl p-5 md:p-6 border border-[#E8E4D9] flex flex-col shadow-sm bg-white/95">
                 {/* Topbar: Visningsvalg & Visningsplan */}
                 <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-[#E8E4D9]">
                     <div className="flex items-center gap-2.5">
@@ -320,61 +332,57 @@ export default function EkgHeartModel({ selectedLead = 'II', onSelectLead, caseD
                 </div>
 
                 {/* DET CENTRALE MODELOMRÅDE (SVG CIRKEL & HJERTE) */}
-                <div className="relative w-full h-[430px] sm:h-[490px] my-3 flex items-center justify-center bg-gradient-to-b from-[#FAFAF9] to-[#F1F5F9] rounded-3xl overflow-hidden border-2 border-[#E2E8F0] shadow-inner">
+                <div className="relative w-full h-[440px] sm:h-[500px] my-3 flex items-center justify-center bg-gradient-to-b from-[#FAFAF9] to-[#F1F5F9] rounded-3xl overflow-hidden border-2 border-[#E2E8F0] shadow-inner">
                     {viewMode === 'frontal' ? (
-                        /* FRONTALPLAN SVG: AUTENTISK CABRERA CIRKEL MED HARMONISK 4-KAMMER HJERTE */
-                        <svg viewBox="-260 -260 520 520" className="w-full h-full max-h-[490px] select-none">
+                        /* FRONTALPLAN SVG: AUTENTISK CABRERA CIRKEL IDENTISK MED THE PHYSIOLOGICAL SOCIETY */
+                        <svg viewBox="-260 -260 520 520" className="w-full h-full max-h-[500px] select-none">
                             <defs>
-                                <marker id="cabreraArrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0F172A" />
+                                <marker id="cabreraArrow" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse">
+                                    <path d="M 1 2 L 11 6 L 1 10 z" fill="#000000" />
                                 </marker>
-                                <marker id="selectedArrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-                                    <path d="M 0 1 L 9 5 L 0 9 z" fill="#DC2626" />
+                                <marker id="selectedArrow" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="8.5" markerHeight="8.5" orient="auto-start-reverse">
+                                    <path d="M 1 2 L 11 6 L 1 10 z" fill="#DC2626" />
                                 </marker>
                                 <marker id="vectorArrowHead" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
                                     <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill={currentPhase.vector.color} />
                                 </marker>
 
-                                {/* Gylden/ravfarvet myokardievæg (Myocardium) */}
-                                <radialGradient id="myoWallGrad" cx="50%" cy="40%" r="65%">
-                                    <stop offset="0%" stopColor="#FBBF24" />
-                                    <stop offset="35%" stopColor="#F59E0B" />
-                                    <stop offset="75%" stopColor="#D97706" />
-                                    <stop offset="100%" stopColor="#92400E" />
+                                {/* Gylden/ravfarvet myokardievæg */}
+                                <radialGradient id="wallGrad" cx="45%" cy="45%" r="65%">
+                                    <stop offset="0%" stopColor="#FCD34D" />
+                                    <stop offset="40%" stopColor="#F59E0B" />
+                                    <stop offset="85%" stopColor="#D97706" />
+                                    <stop offset="100%" stopColor="#B45309" />
                                 </radialGradient>
 
-                                {/* Højre Hjertekamre (Venøst blod: Kongeblå / Cyan glød) */}
-                                <radialGradient id="rightHeartGrad" cx="40%" cy="40%" r="65%">
-                                    <stop offset="0%" stopColor="#60A5FA" />
-                                    <stop offset="40%" stopColor="#2563EB" />
-                                    <stop offset="85%" stopColor="#1D4ED8" />
-                                    <stop offset="100%" stopColor="#1E3A8A" />
+                                {/* Højre Hjertekamre (Venøst blod: Lysende cyan/blå) */}
+                                <radialGradient id="rightHeartGrad" cx="35%" cy="35%" r="65%">
+                                    <stop offset="0%" stopColor="#7DD3FC" />
+                                    <stop offset="45%" stopColor="#0284C7" />
+                                    <stop offset="100%" stopColor="#0369A1" />
                                 </radialGradient>
 
-                                {/* Venstre Hjertekamre (Arterielt blod: Karminrød / Magenta glød) */}
-                                <radialGradient id="leftHeartGrad" cx="50%" cy="40%" r="65%">
-                                    <stop offset="0%" stopColor="#FB7185" />
-                                    <stop offset="40%" stopColor="#E11D48" />
-                                    <stop offset="85%" stopColor="#BE123C" />
-                                    <stop offset="100%" stopColor="#881337" />
+                                {/* Venstre Hjertekamre (Arterielt blod: Lysende rød/pink) */}
+                                <radialGradient id="leftHeartGrad" cx="45%" cy="35%" r="65%">
+                                    <stop offset="0%" stopColor="#FDA4AF" />
+                                    <stop offset="45%" stopColor="#E11D48" />
+                                    <stop offset="100%" stopColor="#9F1239" />
                                 </radialGradient>
 
-                                {/* Aorta Ascendens & Arcus (Arteriel rød gradient) */}
-                                <linearGradient id="aortaArchGrad" x1="0%" y1="100%" x2="0%" y2="0%">
-                                    <stop offset="0%" stopColor="#BE123C" />
-                                    <stop offset="50%" stopColor="#DC2626" />
-                                    <stop offset="100%" stopColor="#991B1B" />
+                                {/* Aorta Ascendens & Arcus */}
+                                <linearGradient id="aortaGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+                                    <stop offset="0%" stopColor="#E11D48" />
+                                    <stop offset="100%" stopColor="#BE123C" />
                                 </linearGradient>
 
-                                {/* Truncus Pulmonalis (Venøs blå gradient) */}
-                                <linearGradient id="pulmTrunkGrad" x1="0%" y1="100%" x2="0%" y2="0%">
-                                    <stop offset="0%" stopColor="#1D4ED8" />
-                                    <stop offset="60%" stopColor="#2563EB" />
-                                    <stop offset="100%" stopColor="#1E3A8A" />
+                                {/* Vena Cava / Pulmonalarterie */}
+                                <linearGradient id="venaCavaGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+                                    <stop offset="0%" stopColor="#0284C7" />
+                                    <stop offset="100%" stopColor="#0369A1" />
                                 </linearGradient>
 
-                                <filter id="heartDropShadow" x="-20%" y="-20%" width="140%" height="140%">
-                                    <feDropShadow dx="1" dy="5" stdDeviation="5" floodColor="#0F172A" floodOpacity="0.22" />
+                                <filter id="heartShadow" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feDropShadow dx="1" dy="5" stdDeviation="5" floodColor="#0F172A" floodOpacity="0.18" />
                                 </filter>
                                 <filter id="vectorGlow" x="-30%" y="-30%" width="160%" height="160%">
                                     <feGaussianBlur stdDeviation="3" result="blur" />
@@ -382,166 +390,101 @@ export default function EkgHeartModel({ selectedLead = 'II', onSelectLead, caseD
                                 </filter>
                             </defs>
 
-                            {/* 1. GRUNDLÆGGENDE CABRERA KREDS (R = 190 PX) */}
-                            <circle cx="0" cy="0" r="190" fill="#F8FAFC" stroke="#CBD5E1" strokeWidth="1.5" />
-                            <circle cx="0" cy="0" r="130" fill="none" stroke="#E2E8F0" strokeWidth="1" strokeDasharray="3 3" />
-                            <circle cx="0" cy="0" r="65" fill="none" stroke="#E2E8F0" strokeWidth="1" strokeDasharray="2 2" />
+                            {/* 1. CABRERA CIRKEL (R = 175 PX) */}
+                            <circle cx="0" cy="0" r="175" fill="#F8FAFC" stroke="#E2E8F0" strokeWidth="1.5" />
+                            <circle cx="0" cy="0" r="120" fill="none" stroke="#E2E8F0" strokeWidth="1" strokeDasharray="3 3" />
+                            <circle cx="0" cy="0" r="60" fill="none" stroke="#E2E8F0" strokeWidth="1" strokeDasharray="2 2" />
 
-                            {/* 2. AKSEKVADRANTER (SOM VIST I IMAGE 2) */}
+                            {/* 2. DE 4 AKSEKVADRANTER (SOM VIST I IMAGE 2) */}
                             {showAxisSectors && (
-                                <g id="axisSectors" opacity="0.6">
-                                    {/* Normal Akse: -30° til +90° (Lys pink/rød sektor) */}
-                                    <path d="M 0 0 L 164.5 -95 A 190 190 0 0 1 0 190 Z" fill="#FCE7F3" stroke="#F43F5E" strokeWidth="0.5" />
-                                    {/* Venstresidig Akseafvigelse (LAD): -30° til -90° (Lysegrøn sektor) */}
-                                    <path d="M 0 0 L 164.5 -95 A 190 190 0 0 0 0 -190 Z" fill="#DCFCE7" stroke="#22C55E" strokeWidth="0.5" />
-                                    {/* Højresidig Akseafvigelse (RAD): +90° til +180° (Lyseblå sektor) */}
-                                    <path d="M 0 0 L 0 190 A 190 190 0 0 1 -190 0 Z" fill="#E0F2FE" stroke="#0284C7" strokeWidth="0.5" />
-                                    {/* Ekstrem Akseafvigelse (Nordvest): -90° til -180° (Lysegul sektor) */}
-                                    <path d="M 0 0 L -190 0 A 190 190 0 0 1 0 -190 Z" fill="#FEF9C3" stroke="#EAB308" strokeWidth="0.5" />
+                                <g id="axisSectors" opacity="0.5">
+                                    {/* Normal Akse: -30° til +90° (Pink sektor) */}
+                                    <path d="M 0 0 L 151.5 -87.5 A 175 175 0 0 1 0 175 Z" fill="#FCE7F3" stroke="#F43F5E" strokeWidth="0.5" />
+                                    {/* LAD: -30° til -90° (Grøn sektor) */}
+                                    <path d="M 0 0 L 151.5 -87.5 A 175 175 0 0 0 0 -175 Z" fill="#DCFCE7" stroke="#22C55E" strokeWidth="0.5" />
+                                    {/* RAD: +90° til +180° (Blå sektor) */}
+                                    <path d="M 0 0 L 0 175 A 175 175 0 0 1 -175 0 Z" fill="#E0F2FE" stroke="#0284C7" strokeWidth="0.5" />
+                                    {/* Ekstrem Akseafvigelse: -90° til -180° (Gul sektor) */}
+                                    <path d="M 0 0 L -175 0 A 175 175 0 0 1 0 -175 Z" fill="#FEF9C3" stroke="#EAB308" strokeWidth="0.5" />
                                 </g>
                             )}
 
-                            {/* 3. RADIALE EGER HVER 30 GRADER */}
-                            {SPOKE_ANGLES.map(deg => {
-                                const rad = (deg * Math.PI) / 180;
-                                const sx = Math.cos(rad) * 190;
-                                const sy = Math.sin(rad) * 190;
-                                return (
-                                    <line
-                                        key={deg}
-                                        x1="0"
-                                        y1="0"
-                                        x2={sx}
-                                        y2={sy}
-                                        stroke="#94A3B8"
-                                        strokeWidth="1.2"
-                                        strokeDasharray="4 3"
-                                    />
-                                );
-                            })}
+                            {/* 3. ALLE 12 RADIALE EGER HVER 30 GRADER */}
+                            <line x1="-175" y1="0" x2="175" y2="0" stroke="#94A3B8" strokeWidth="1.2" />
+                            <line x1="0" y1="-175" x2="0" y2="175" stroke="#94A3B8" strokeWidth="1.2" />
+                            <line x1="-151.5" y1="-87.5" x2="151.5" y2="87.5" stroke="#94A3B8" strokeWidth="1.2" />
+                            <line x1="-87.5" y1="-151.5" x2="87.5" y2="151.5" stroke="#94A3B8" strokeWidth="1.2" />
+                            <line x1="-151.5" y1="87.5" x2="151.5" y2="-87.5" stroke="#94A3B8" strokeWidth="1.2" />
+                            <line x1="-87.5" y1="151.5" x2="87.5" y2="-151.5" stroke="#94A3B8" strokeWidth="1.2" />
 
-                            {/* 4. ANATOMISK HARMONISK 4-KAMMER HJERTE ROTERET -30° (SÅ APEKS PEGER NØJAGTIGT MOD +60° LEAD II) */}
-                            <g id="anatomicalHeartGroup" transform="rotate(-30)" filter="url(#heartDropShadow)">
-                                {/* STORE KAR SUPERIORT (AORTA & PULMONALIS) */}
-                                <g id="greatVessels">
-                                    {/* Aorta Ascendens & Arcus med de 3 hovedkar */}
-                                    <path
-                                        d="M 5 -10 C 6 -35, 12 -65, 0 -80 C -12 -92, -28 -85, -28 -60 L -14 -60 C -14 -72, -6 -76, 0 -68 C 5 -60, 2 -35, -2 -10 Z"
-                                        fill="url(#aortaArchGrad)"
-                                        stroke="#7F1D1D"
-                                        strokeWidth="1.5"
-                                    />
-                                    {/* 3 Aortabue kar */}
-                                    <path d="M -8 -80 L -12 -96 L -5 -96 L -3 -82 Z" fill="url(#aortaArchGrad)" stroke="#7F1D1D" strokeWidth="0.8" />
-                                    <path d="M 1 -78 L 1 -97 L 7 -97 L 6 -78 Z" fill="url(#aortaArchGrad)" stroke="#7F1D1D" strokeWidth="0.8" />
-                                    <path d="M 12 -73 L 15 -92 L 20 -92 L 16 -70 Z" fill="url(#aortaArchGrad)" stroke="#7F1D1D" strokeWidth="0.8" />
+                            {/* 4. DET CENTRALE ANATOMISKE 4-KAMMER HJERTE (THE PHYSIOLOGICAL SOCIETY) */}
+                            <g id="centralAnatomy" filter="url(#heartShadow)">
+                                {/* STORE KAR SUPERIORT */}
+                                {/* Vena Cava Superior (Blå) */}
+                                <path d="M -34 -45 L -34 -100 C -34 -106, -18 -106, -18 -100 L -18 -45 Z" fill="url(#venaCavaGrad)" stroke="#0284C7" strokeWidth="1.5" />
+                                <ellipse cx="-26" cy="-100" rx="8" ry="3" fill="#38BDF8" />
 
-                                    {/* Truncus Pulmonalis (krydser foran aorta) */}
-                                    <path
-                                        d="M -12 -8 C -14 -28, -8 -45, 6 -52 C 18 -55, 22 -42, 16 -32 C 8 -22, 2 -12, 0 0 Z"
-                                        fill="url(#pulmTrunkGrad)"
-                                        stroke="#1E3A8A"
-                                        strokeWidth="1.5"
-                                    />
-                                    {/* Vena Cava Superior */}
-                                    <rect x="-38" y="-55" width="14" height="30" rx="4" fill="url(#pulmTrunkGrad)" stroke="#1E3A8A" strokeWidth="1.2" />
-                                </g>
+                                {/* Aorta Ascendens & Arcus (Rød) med 3 grene */}
+                                <path d="M -14 -40 C -14 -85, -10 -130, 8 -130 C 26 -130, 30 -95, 30 -40 L 16 -40 C 16 -80, 12 -114, 8 -114 C 2 -114, 0 -80, 0 -40 Z"
+                                      fill="url(#aortaGrad)" stroke="#9F1239" strokeWidth="1.5" />
+                                <path d="M -5 -127 L -8 -144 L -1 -144 L 0 -129 Z" fill="url(#aortaGrad)" stroke="#9F1239" strokeWidth="1" />
+                                <path d="M 5 -130 L 5 -146 L 11 -146 L 10 -130 Z" fill="url(#aortaGrad)" stroke="#9F1239" strokeWidth="1" />
+                                <path d="M 16 -126 L 20 -142 L 26 -142 L 21 -124 Z" fill="url(#aortaGrad)" stroke="#9F1239" strokeWidth="1" />
 
-                                {/* YDRE MYOKARDIEKONTUR (HARMONISK HJERTEFORM MOD APEKS VED Y = 112) */}
-                                <path
-                                    d="M -44 -5 C -65 25, -60 75, -16 104 C -8 110, -3 113, 0 113 C 3 113, 8 110, 16 104 C 60 75, 65 25, 44 -5 Z"
-                                    fill="url(#myoWallGrad)"
-                                    stroke="#78350F"
-                                    strokeWidth="2.5"
-                                />
+                                {/* Truncus Pulmonalis (Krydser foran aorta) */}
+                                <path d="M -22 -35 C -25 -58, -16 -75, 2 -80 C 18 -82, 22 -68, 14 -56 C 6 -45, -2 -30, -4 -15 Z" fill="url(#venaCavaGrad)" stroke="#0284C7" strokeWidth="1.2" />
 
-                                {/* INTERVENTRIKULÆRT SEPTUM (GÅR RET NED FRA ORIGIN 0,0 MOD APEKS) */}
-                                <rect
-                                    x="-6"
-                                    y="0"
-                                    width="12"
-                                    height="100"
-                                    rx="5"
-                                    fill="#B45309"
-                                    stroke="#78350F"
-                                    strokeWidth="1"
-                                />
+                                {/* YDRE MYOKARDIEKONTUR (GYLDEN/RAVFARVET MUSKELVÆG, APEKS MOD +60°) */}
+                                <path d="M -52 -35 C -84 -18, -90 32, -65 74 C -45 106, 12 135, 62 118 C 76 112, 85 96, 85 70 C 85 24, 76 -14, 48 -30 C 30 -42, -22 -44, -52 -35 Z"
+                                      fill="url(#wallGrad)" stroke="#B45309" strokeWidth="2.5" />
 
-                                {/* INDRE HJERTEKAMRE (ANATOMISK KORONALT TVÆRSNIT) */}
-                                {/* 1. HØJRE ATRIE (RA) - BLÅ */}
-                                <path
-                                    d="M -42 -35 C -55 -25, -55 -5, -42 0 C -25 0, -10 -5, -8 -25 C -8 -35, -25 -38, -42 -35 Z"
-                                    fill="url(#rightHeartGrad)"
-                                    stroke="#1E3A8A"
-                                    strokeWidth="1.2"
-                                />
+                                {/* INTERVENTRIKULÆRT SEPTUM (Går fra (0,0) mod apeks ved +60°) */}
+                                <path d="M -4 -8 C -4 20, 12 60, 48 108 L 58 102 C 24 56, 14 18, 8 -8 Z" fill="#D97706" stroke="#B45309" strokeWidth="1.2" />
 
-                                {/* 2. HØJRE VENTRIKEL (RV) - BLÅ (C-FORMET OMKRING SEPTUM) */}
-                                <path
-                                    d="M -6 6 C -6 40, -8 72, -4 90 C -12 85, -24 70, -42 45 C -48 25, -46 12, -40 6 Z"
-                                    fill="url(#rightHeartGrad)"
-                                    stroke="#1E3A8A"
-                                    strokeWidth="1.5"
-                                />
+                                {/* 4 INDRE HJERTEKAMRE MED LYSE FARVER */}
+                                {/* Højre Atrie (RA) - Blå */}
+                                <path d="M -45 -26 C -66 -16, -68 5, -52 18 C -38 22, -26 16, -20 4 C -16 -8, -26 -22, -45 -26 Z"
+                                      fill="url(#rightHeartGrad)" stroke="#38BDF8" strokeWidth="2" />
 
-                                {/* 3. VENSTRE ATRIE (LA) - RØD */}
-                                <path
-                                    d="M 8 -25 C 10 -5, 25 0, 42 0 C 55 -5, 55 -25, 42 -35 C 25 -38, 8 -35, 8 -25 Z"
-                                    fill="url(#leftHeartGrad)"
-                                    stroke="#881337"
-                                    strokeWidth="1.2"
-                                />
+                                {/* Højre Ventrikel (RV) - Blå */}
+                                <path d="M -46 25 C -62 55, -36 82, 18 104 C 4 72, -2 45, -8 24 C -20 20, -34 18, -46 25 Z"
+                                      fill="url(#rightHeartGrad)" stroke="#38BDF8" strokeWidth="2" />
 
-                                {/* 4. VENSTRE VENTRIKEL (LV) - RØD (KRAFTIG KAVITET MED TYK MUSKELVÆG) */}
-                                <path
-                                    d="M 6 6 C 6 40, 8 72, 4 92 C 12 88, 25 72, 42 45 C 48 25, 46 12, 40 6 Z"
-                                    fill="url(#leftHeartGrad)"
-                                    stroke="#881337"
-                                    strokeWidth="1.5"
-                                />
+                                {/* Venstre Atrie (LA) - Rød */}
+                                <path d="M 18 -20 C 22 -28, 48 -24, 52 -8 C 56 6, 44 14, 28 12 C 22 8, 19 -4, 18 -20 Z"
+                                      fill="url(#leftHeartGrad)" stroke="#FB7185" strokeWidth="2" />
 
-                                {/* LEDNINGSSYSTEM (SA-KNUDE, AV-KNUDE, HISSK BUNDT, TAWARA GRENE) */}
+                                {/* Venstre Ventrikel (LV) - Rød (Tyk muskelvæg, apeks mod +60°) */}
+                                <path d="M 18 14 C 18 48, 28 80, 48 102 C 64 80, 72 48, 56 18 C 45 8, 28 8, 18 14 Z"
+                                      fill="url(#leftHeartGrad)" stroke="#FB7185" strokeWidth="2" />
+
+                                {/* LEDNINGSSYSTEM */}
                                 {showConduction && (
                                     <g id="conductionSystem">
-                                        {/* SA-knude i højre atrie */}
-                                        <circle cx="-32" cy="-22" r="4.5" fill="#EF4444" stroke="#FFFFFF" strokeWidth="1.2" />
-                                        {currentPhase.activeNodes.includes('sa_node') && (
-                                            <circle cx="-32" cy="-22" r="8" fill="none" stroke="#FDE047" strokeWidth="1.8" opacity="0.85" />
-                                        )}
-
-                                        {/* Internodale baner mod AV-knuden */}
-                                        <path d="M -30 -18 Q -15 -8, 0 0" fill="none" stroke="#F59E0B" strokeWidth="1.8" strokeDasharray="2 2" />
-
-                                        {/* AV-knude præcist i center (0, 0) */}
-                                        <circle cx="0" cy="0" r="5" fill="#F59E0B" stroke="#FFFFFF" strokeWidth="1.5" />
-
-                                        {/* Hissk bundt & Tawara grene langs septum */}
-                                        <line x1="0" y1="0" x2="0" y2="20" stroke="#F59E0B" strokeWidth="2.5" />
-                                        <path d="M 0 20 Q 3 55, 3 95" fill="none" stroke="#F59E0B" strokeWidth="2" />
-                                        <path d="M 0 20 Q -3 55, -3 90" fill="none" stroke="#F59E0B" strokeWidth="1.8" strokeDasharray="3 2" />
+                                        <circle cx="0" cy="0" r="5.5" fill="#F59E0B" stroke="#FFFFFF" strokeWidth="2" />
+                                        <circle cx="-40" cy="-12" r="4.5" fill="#EF4444" stroke="#FFFFFF" strokeWidth="1.5" />
+                                        <path d="M -38 -10 Q -20 -2, 0 0" fill="none" stroke="#F59E0B" strokeWidth="2" strokeDasharray="3 2" />
+                                        <path d="M 0 0 L 4 15 Q 16 52, 45 100" fill="none" stroke="#F59E0B" strokeWidth="2.2" />
                                     </g>
                                 )}
 
                                 {/* KORONARARTERIER */}
                                 {showCoronary && (
                                     <g id="coronaries" opacity="0.85">
-                                        {/* LAD lige ned langs den forreste fure mod apeks */}
-                                        <path d="M 0 0 L 0 102" fill="none" stroke="#DC2626" strokeWidth="2.8" strokeLinecap="round" />
-                                        {/* RCA i højre sulcus */}
-                                        <path d="M -20 0 C -38 10, -48 30, -36 55" fill="none" stroke="#F97316" strokeWidth="2.4" strokeLinecap="round" />
-                                        {/* LCx i venstre sulcus */}
-                                        <path d="M 20 0 C 38 10, 48 30, 36 55" fill="none" stroke="#2563EB" strokeWidth="2.2" strokeLinecap="round" />
+                                        <path d="M 0 0 Q 18 52, 48 102" fill="none" stroke="#DC2626" strokeWidth="2.6" strokeLinecap="round" />
+                                        <path d="M -22 -10 C -42 0, -56 25, -45 55" fill="none" stroke="#F97316" strokeWidth="2.2" strokeLinecap="round" />
+                                        <path d="M 22 -10 C 44 0, 58 25, 48 55" fill="none" stroke="#2563EB" strokeWidth="2.0" strokeLinecap="round" />
                                     </g>
                                 )}
 
                                 {/* ANATOMISKE MÆRKATER */}
                                 {showAnatomyLabels && (
-                                    <g id="anatomyLabels" className="font-sans text-[8px] font-bold select-none pointer-events-none">
-                                        <text x="-52" y="-10" fill="#1E3A8A">RA</text>
-                                        <text x="-42" y="55" fill="#1E3A8A">RV</text>
-                                        <text x="38" y="-10" fill="#881337">LA</text>
-                                        <text x="32" y="55" fill="#881337">LV</text>
-                                        <text x="0" y="125" fill="#78350F" textAnchor="middle">Apeks</text>
+                                    <g id="anatomyLabels" className="font-sans text-[8.5px] font-bold select-none pointer-events-none">
+                                        <text x="-52" y="-5" fill="#0369A1">RA</text>
+                                        <text x="-52" y="60" fill="#0369A1">RV</text>
+                                        <text x="36" y="-5" fill="#9F1239">LA</text>
+                                        <text x="38" y="60" fill="#9F1239">LV</text>
+                                        <text x="75" y="125" fill="#B45309" textAnchor="middle">Apeks (+60°)</text>
                                     </g>
                                 )}
                             </g>
@@ -563,58 +506,47 @@ export default function EkgHeartModel({ selectedLead = 'II', onSelectLead, caseD
                                             y1="0"
                                             x2={lead.tipX}
                                             y2={lead.tipY}
-                                            stroke={isSel ? '#DC2626' : '#0F172A'}
-                                            strokeWidth={isSel ? 3.5 : 2.5}
+                                            stroke={isSel ? '#DC2626' : '#000000'}
+                                            strokeWidth={isSel ? 3.5 : 2.6}
                                             markerEnd={isSel ? 'url(#selectedArrow)' : 'url(#cabreraArrow)'}
                                         />
 
-                                        {/* Vinkel-tekst (0°, 60°, 90°, 120°, -150°, -30°) */}
+                                        {/* Vinkel-tekst inden for cirklen (0°, 60°, 90°, 120°, -150°, -30°) */}
                                         <text
-                                            x={lead.labelX}
-                                            y={lead.labelY}
+                                            x={lead.degX}
+                                            y={lead.degY}
                                             textAnchor="middle"
-                                            fontSize="11"
+                                            fontSize="12"
                                             fontFamily="sans-serif"
                                             fontWeight="bold"
-                                            fill={isSel ? '#DC2626' : '#0F172A'}
+                                            fill={isSel ? '#DC2626' : '#000000'}
                                         >
                                             {lead.degLabel}
                                         </text>
 
-                                        {/* Afledningsnavn Cirkel/Badge ved pilespidsen */}
-                                        <g transform={`translate(${lead.badgeX}, ${lead.badgeY})`}>
-                                            <circle
-                                                cx="0"
-                                                cy="0"
-                                                r={isSel ? 16 : 13}
-                                                fill={isSel ? '#DC2626' : isAffected ? '#FEF3C7' : '#FFFFFF'}
-                                                stroke={isSel ? '#991B1B' : isAffected ? '#D97706' : '#0F172A'}
-                                                strokeWidth="2"
-                                                className="shadow-md transition-all"
-                                            />
-                                            <text
-                                                x="0"
-                                                y="4"
-                                                textAnchor="middle"
-                                                fontSize={isSel ? '12' : '10'}
-                                                fontWeight="bold"
-                                                fill={isSel ? '#FFFFFF' : isAffected ? '#92400E' : '#0F172A'}
-                                            >
-                                                {lead.name}
-                                            </text>
+                                        {/* Afledningsnavn uden for cirklen (I, II, aVF, III, aVR, aVL) */}
+                                        <text
+                                            x={lead.labelX}
+                                            y={lead.labelY}
+                                            textAnchor={lead.labelAnchor}
+                                            fontSize={isSel ? '18' : '16'}
+                                            fontFamily="sans-serif"
+                                            fontWeight="900"
+                                            fill={isSel ? '#DC2626' : isAffected ? '#D97706' : '#000000'}
+                                            className="transition-all"
+                                        >
+                                            {lead.name}
+                                        </text>
 
-                                            {/* MINI-EKG KURVE VED SIDEN AF AFLEDNINGEN */}
-                                            <g transform="translate(16, -5)">
-                                                <path
-                                                    d={lead.miniPath}
-                                                    fill="none"
-                                                    stroke={isSel ? '#DC2626' : '#EF4444'}
-                                                    strokeWidth="1.6"
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                />
-                                            </g>
-                                        </g>
+                                        {/* Rød mini-EKG kurve ved pilespidsen (Image 2 standard) */}
+                                        <path
+                                            d={lead.miniPath}
+                                            fill="none"
+                                            stroke={isSel ? '#DC2626' : '#EF4444'}
+                                            strokeWidth="1.8"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        />
                                     </g>
                                 );
                             })}
@@ -668,7 +600,7 @@ export default function EkgHeartModel({ selectedLead = 'II', onSelectLead, caseD
                         </svg>
                     ) : (
                         /* HORISONTALPLAN SVG: ANATOMISK TVÆRSNIT AF BRYSTKASSEN MED V1–V6 (T8 NIVEAU) */
-                        <svg viewBox="-240 -240 480 480" className="w-full h-full max-h-[490px] select-none">
+                        <svg viewBox="-240 -240 480 480" className="w-full h-full max-h-[500px] select-none">
                             <defs>
                                 <radialGradient id="lungGrad2" cx="50%" cy="50%" r="50%">
                                     <stop offset="0%" stopColor="#E0F2FE" />
@@ -825,7 +757,7 @@ export default function EkgHeartModel({ selectedLead = 'II', onSelectLead, caseD
                             <span className="text-[11px] font-bold text-[#839788] mr-1 hidden sm:inline">Tempo:</span>
                             <div className="flex gap-1 bg-[#F2F6F3] p-1 rounded-xl border border-[#E8E4D9] text-xs">
                                 {[
-                                    { speed: 0.05, label: '0.05x (Super-slow)' },
+                                    { speed: 0.05, label: '0.05x' },
                                     { speed: 0.1, label: '0.1x (Rolig)' },
                                     { speed: 0.25, label: '0.25x' },
                                     { speed: 1.0, label: '1x' }
