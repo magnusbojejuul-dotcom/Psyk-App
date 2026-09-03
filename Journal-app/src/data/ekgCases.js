@@ -1135,6 +1135,290 @@ export const EKG_CASES = [
                 explanation: 'Venstre Ventrikelhypertrofi (LVH).'
             }
         ]
+    },
+    {
+        id: 'av_block_2_mobitz2',
+        title: 'AV-blok 2. grad Mobitz Type II',
+        subtitle: 'Konstant PR-interval med pludseligt uvarslet udfald af QRS-komplekser',
+        category: 'Ledningsforstyrrelser',
+        badge: 'Akut AV-blok',
+        description: '71-årig mand med gentagne tilfælde af pludselig nærsynkope og svimmelhed under let gang. EKG viser intermitterende manglende ventrikeloverledning.',
+        heartRate: 50,
+        rhythm: 'Regelmæssigt uregelmæssig (3:2 eller 2:1 AV-blok)',
+        axis: 'Venstredrejet akse (-30°)',
+        prInterval: 'Konstant 170 ms (intet Wenckebach fænomen)',
+        qrsDuration: '125 ms (ofte infranodalt grenblok)',
+        qtc: '420 ms',
+        territory: 'His-bundt / infranodalt ledningssystem',
+        affectedLeads: ['II, V1'],
+        reciprocalLeads: [],
+        anatomicalEffect: 'Blokeringen sidder under selve AV-knuden i His-bundtet eller grenbundterne (oftest ledsaget af grenblok). Ledningen er "alt-eller-intet": PR-intervallet er fuldstændig konstant i de overledte slag, men pludselig blokeres en P-tak totalt.',
+        hamptonPearls: 'Hampton understreger kraftigt: "Mobitz type II er langt farligere end type I (Wenckebach)! Mens type I oftest er fysiologisk og godartet i AV-knuden, sidder type II infranodalt med overhængende risiko for pludselig progression til totalt AV-blok og Adams-Stokes anfald (asystoli). Kræver altid indlæggelse til telemetri og visitation til permanent pacemaker (PPM)!"',
+        leads: {
+            'I': { p: 0.1, pr: 170, q: 0, r: 0.8, s: -0.3, st: 0, t: 0.25, mobitz2: true },
+            'II': { p: 0.16, pr: 170, q: -0.05, r: 1.1, s: -0.2, st: 0, t: 0.4, mobitz2: true },
+            'III': { p: 0.06, pr: 170, q: 0, r: 0.4, s: -0.4, st: 0, t: 0.15, mobitz2: true },
+            'aVR': { p: -0.12, pr: 170, q: 0, r: 0.15, s: -0.7, st: 0, t: -0.25, mobitz2: true },
+            'aVL': { p: 0.08, pr: 170, q: 0, r: 0.6, s: -0.2, st: 0, t: 0.2, mobitz2: true },
+            'aVF': { p: 0.12, pr: 170, q: -0.05, r: 0.7, s: -0.25, st: 0, t: 0.25, mobitz2: true },
+            'V1': { p: 0.08, pr: 170, q: 0, r: 0.3, s: -0.9, st: 0, t: 0.15, mobitz2: true },
+            'V2': { p: 0.1, pr: 170, q: 0, r: 0.5, s: -1.1, st: 0, t: 0.35, mobitz2: true },
+            'V3': { p: 0.12, pr: 170, q: 0, r: 0.8, s: -0.6, st: 0, t: 0.4, mobitz2: true },
+            'V4': { p: 0.14, pr: 170, q: -0.05, r: 1.2, s: -0.25, st: 0, t: 0.45, mobitz2: true },
+            'V5': { p: 0.12, pr: 170, q: -0.08, r: 1.1, s: -0.2, st: 0, t: 0.35, mobitz2: true },
+            'V6': { p: 0.1, pr: 170, q: -0.06, r: 0.9, s: -0.15, st: 0, t: 0.3, mobitz2: true }
+        },
+        quiz: [
+            {
+                step: 'PR-interval adfærd',
+                question: 'Hvad sker der med PR-intervallet i de overledte slag umiddelbart forud for det tabte hjerteslag?',
+                options: [
+                    'PR-intervallet forbliver helt konstant uden forudgående forlængelse',
+                    'PR-intervallet forlænges gradvist (Wenckebach)',
+                    'PR-intervallet bliver progressivt kortere',
+                    'Der er slet ingen P-takker'
+                ],
+                correctIndex: 0,
+                explanation: 'Ved Mobitz type II er PR-intervallet fuldkommen konstant i alle overledte slag, hvorefter et QRS pludseligt og uvarslet falder ud.'
+            },
+            {
+                step: 'Klinisk Prognose & Handling',
+                question: 'Hvorfor er det afgørende at adskille Mobitz II fra Mobitz I (Wenckebach)?',
+                options: [
+                    'Mobitz II har høj risiko for pludselig progression til totalt AV-blok og asystoli og kræver permanent pacemaker (PPM)',
+                    'Mobitz II er en harmløs fysiologisk variant hos atleter',
+                    'Mobitz II kan kureres med antibiotika',
+                    'Der er ingen klinisk forskel på de to typer'
+                ],
+                correctIndex: 0,
+                explanation: 'Mobitz II skyldes infranodal sygdom i His-Purkinje systemet og har en dårlig prognose med stor risiko for pludselig hjertedød eller synkoper uden pacemaker.'
+            },
+            {
+                step: 'Diagnose',
+                question: 'Hvad er diagnosen?',
+                options: [
+                    'AV-blok 2. grad Mobitz type II',
+                    'AV-blok 2. grad Mobitz type I (Wenckebach)',
+                    'AV-blok 1. grad',
+                    'Ventrikulær ekstrasystoli'
+                ],
+                correctIndex: 0,
+                explanation: 'AV-blok 2. grad Mobitz type II.'
+            }
+        ]
+    },
+    {
+        id: 'posterior_stemi',
+        title: 'Akut Posteriort Infarkt (Bagvægsinfarkt)',
+        subtitle: 'Spejlbillede i V1–V3: ST-depression, høj R-tak (R/S > 1) og positiv T-tak',
+        category: 'Iskæmi & Infarkt',
+        badge: 'Akut STEMI',
+        description: '63-årig kvinde med 1 times voldsomme trykkende brystsmerter med udstråling til ryggen mellem skulderbladene og koldsved.',
+        heartRate: 78,
+        rhythm: 'Sinusrytme',
+        axis: 'Normal akse (+65°)',
+        prInterval: '160 ms',
+        qrsDuration: '90 ms',
+        qtc: '430 ms',
+        territory: 'RCA / LCx (Hjertets posterobasale væg)',
+        affectedLeads: ['V1', 'V2', 'V3'],
+        reciprocalLeads: ['V7', 'V8', 'V9 (posteriore afledninger)'],
+        anatomicalEffect: 'Okklusion af posteriore grene fra RCA eller circumflexa (LCx). Da der ikke sidder standardelektroder på ryggen, observeres infarktet som et direkte spejlbillede gennem hjertet i de anteriore afledninger V1–V3.',
+        hamptonPearls: 'Hampton understreger den klassiske kardiologiske faldgrube: "Posteriort infarkt forveksles ofte fejlagtigt med almindelig forvægsiskæmi! Men læg mærke til triaden i V1–V3: 1) Horisontal ST-depression $\ge 0.5\text{ mm}$, 2) Høj og bred R-tak med R/S ratio > 1, og 3) Opretstående, symmetrisk T-tak. Vend EKG-strimlen på hovedet og hold den mod lyset – så ser du et klokkeklart STEMI med Q-tak og ST-elevation!"',
+        leads: {
+            'I': { p: 0.1, pr: 160, q: 0, r: 0.7, s: -0.1, st: 0, t: 0.25 },
+            'II': { p: 0.12, pr: 160, q: 0, r: 0.9, s: -0.15, st: 0.08, t: 0.35 },
+            'III': { p: 0.06, pr: 160, q: 0, r: 0.5, s: -0.1, st: 0.1, t: 0.25 },
+            'aVR': { p: -0.1, pr: 160, q: 0, r: 0.15, s: -0.8, st: 0, t: -0.25 },
+            'aVL': { p: 0.08, pr: 160, q: 0, r: 0.5, s: -0.1, st: 0, t: 0.2 },
+            'aVF': { p: 0.1, pr: 160, q: 0, r: 0.7, s: -0.15, st: 0.08, t: 0.3 },
+            'V1': { p: 0.08, pr: 160, q: 0, r: 0.85, s: -0.2, st: -0.25, t: 0.35, tallR: true },
+            'V2': { p: 0.1, pr: 160, q: 0, r: 1.4, s: -0.25, st: -0.35, t: 0.5, tallR: true },
+            'V3': { p: 0.12, pr: 160, q: 0, r: 1.5, s: -0.2, st: -0.28, t: 0.45, tallR: true },
+            'V4': { p: 0.12, pr: 160, q: -0.05, r: 1.3, s: -0.2, st: 0, t: 0.35 },
+            'V5': { p: 0.12, pr: 160, q: -0.06, r: 1.1, s: -0.15, st: 0.05, t: 0.3 },
+            'V6': { p: 0.1, pr: 160, q: -0.05, r: 0.9, s: -0.1, st: 0.05, t: 0.25 }
+        },
+        quiz: [
+            {
+                step: 'Spejlbillede Morfologi',
+                question: 'Hvad ses i de anteriore afledninger V1–V3?',
+                options: [
+                    'Høje R-takker (R/S > 1) og markante horisontale ST-depressioner med opretstående T-takker',
+                    'Dyb QS-tak med ST-elevation',
+                    'Bredt grenblok med kaninører',
+                    'Helt normal R-progression'
+                ],
+                correctIndex: 0,
+                explanation: 'Dette er det klassiske reciprokke spejlbillede af et transmuralt infarkt på bagvæggen. Den posteriore ST-elevation ses fortil som ST-depression, og den posteriore Q-tak ses fortil som en høj R-tak.'
+            },
+            {
+                step: 'Supplerende EKG-Optagelse',
+                question: 'Hvilke ekstra afledninger bør optages for direkte at dokumentere ST-elevationerne på ryggen?',
+                options: [
+                    'V7, V8 og V9 på patientens venstre rygflade',
+                    'V3R og V4R på højre thoraxvæg',
+                    'Ekstremitetsafledningerne med byttede elektroder',
+                    'Kun en ny rytmestrimmel af afledning II'
+                ],
+                correctIndex: 0,
+                explanation: 'Afledninger V7 (bageste aksillærlinje), V8 (under scapulaspidsen) og V9 (venstre paravertebrale linje) kigger direkte på bagvæggen og vil afsløre ST-elevation $\ge 0.5\text{ mm}$.'
+            },
+            {
+                step: 'Diagnose & Behandling',
+                question: 'Hvad er diagnosen?',
+                options: [
+                    'Akut Posteriort STEMI (Bagvægsinfarkt) - Akut PCI',
+                    'Subendokardial forvægsiskæmi',
+                    'Højresidigt grenblok',
+                    'Perikarditis'
+                ],
+                correctIndex: 0,
+                explanation: 'Akut Posteriort STEMI. Skal visiteres omgående til akut primær PCI på linje med øvrige STEMI-tilfælde.'
+            }
+        ]
+    },
+    {
+        id: 'pulmonary_embolism',
+        title: 'Akut Lungeemboli (Cor Pulmonale)',
+        subtitle: 'Sinustakykardi, S1Q3T3-mønster og præcordiale T-inversioner i V1–V4',
+        category: 'Iskæmi & Infarkt',
+        badge: 'Akut Belastning',
+        description: '42-årig kvinde i behandling med p-piller, pludselig åndenød, stikkende respirationssynkrone brystsmerter og takykardi efter en 10-timers flyvetur.',
+        heartRate: 112,
+        rhythm: 'Sinustakykardi',
+        axis: 'Højredrejet akse (+105°)',
+        prInterval: '140 ms',
+        qrsDuration: '95 ms (inkomplet RBBB-mønster)',
+        qtc: '435 ms',
+        territory: 'Højre ventrikel / lungekredsløb',
+        affectedLeads: ['I', 'III', 'V1', 'V2', 'V3', 'V4'],
+        reciprocalLeads: [],
+        anatomicalEffect: 'Akut mekanisk obstruktion i lungearterierne øger modstanden i lungekredsløbet dramatisk. Højre ventrikel overbelastes akut og dilaterer (akut cor pulmonale), hvilket forskyder hjertets akse mod højre og skaber iskæmisk belastning i højre ventrikelvæg.',
+        hamptonPearls: 'Hampton understreger: "Sinustakykardi er det hyppigste og mest konstante EKG-tegn ved lungeemboli! Det klassiske McGinn-White mønster S1Q3T3 (dyb S i I, patologisk Q i III og inverteret T i III) ses ved ca. 15-20% med massiv emboli. Læg dertil T-taks inversioner i V1–V4 som tegn på akut højresidig overbelastning."',
+        leads: {
+            'I': { p: 0.1, pr: 140, q: 0, r: 0.5, s: -0.6, st: 0, t: 0.25, peS1: true },
+            'II': { p: 0.15, pr: 140, q: 0, r: 0.8, s: -0.15, st: 0, t: 0.25 },
+            'III': { p: 0.08, pr: 140, q: -0.25, r: 0.6, s: 0, st: 0, t: -0.3, peQ3T3: true },
+            'aVR': { p: -0.1, pr: 140, q: 0, r: 0.35, s: -0.5, st: 0.05, t: -0.2 },
+            'aVL': { p: 0.06, pr: 140, q: 0, r: 0.4, s: -0.4, st: 0, t: 0.15 },
+            'aVF': { p: 0.12, pr: 140, q: -0.08, r: 0.75, s: -0.1, st: 0, t: 0.2 },
+            'V1': { p: 0.08, pr: 140, q: 0, r: 0.35, s: -0.5, rPrime: 0.3, st: 0, t: -0.35, peTInv: true },
+            'V2': { p: 0.1, pr: 140, q: 0, r: 0.5, s: -0.9, st: 0, t: -0.4, peTInv: true },
+            'V3': { p: 0.12, pr: 140, q: 0, r: 0.7, s: -0.6, st: 0, t: -0.35, peTInv: true },
+            'V4': { p: 0.14, pr: 140, q: -0.05, r: 1.1, s: -0.3, st: 0, t: -0.2, peTInv: true },
+            'V5': { p: 0.12, pr: 140, q: -0.06, r: 1.2, s: -0.2, st: 0, t: 0.25 },
+            'V6': { p: 0.1, pr: 140, q: -0.05, r: 1.0, s: -0.15, st: 0, t: 0.25 }
+        },
+        quiz: [
+            {
+                step: 'Klassisk EKG-Kombination',
+                question: 'Hvilken kombination af forandringer i afledning I og III udgør det klassiske McGinn-White mønster?',
+                options: [
+                    'S1Q3T3 (Dyb S-tak i afledning I, patologisk Q-tak i afledning III og inverteret T-tak i afledning III)',
+                    'ST-elevation i I og III',
+                    'WiLLiaM MaRRoW grenbloksmønster',
+                    'U-takker i alle afledninger'
+                ],
+                correctIndex: 0,
+                explanation: 'S1Q3T3 er det klassiske tegn på akut højresidig hjertebelastning (cor pulmonale) udløst af massiv lungeemboli.'
+            },
+            {
+                step: 'Prækordiale T-takker',
+                question: 'Hvad afspejler de symmetrisk inverterede T-takker i afledning V1 til V4?',
+                options: [
+                    'Akut tryk- og volumenbelastning af højre ventrikel',
+                    'Gammelt gennemgået forvægsinfarkt',
+                    'Medicinforgiftning med citalopram',
+                    'Normalvariant hos ældre'
+                ],
+                correctIndex: 0,
+                explanation: 'T-taks inversioner i de højresidige brystafledninger (V1–V4) afspejler akut iskæmi og overbelastning i højre ventrikels muskelvæg.'
+            },
+            {
+                step: 'Diagnose',
+                question: 'Hvad er den mest sandsynlige diagnose?',
+                options: [
+                    'Akut Lungeemboli (Cor Pulmonale)',
+                    'Akut Forvægsinfarkt',
+                    'Perikarditis',
+                    'Normal sinusrytme'
+                ],
+                correctIndex: 0,
+                explanation: 'Akut Lungeemboli med sinustakykardi, S1Q3T3 mønster og højre ventrikelbelastning.'
+            }
+        ]
+    },
+    {
+        id: 'hypokalemia',
+        title: 'Hypokaliæmi',
+        subtitle: 'Affladede T-takker, ST-depression og prominente U-takker (simuleret "langt QT")',
+        category: 'Elektrolytter & Medicin',
+        badge: 'Elektrolytforstyrrelse',
+        description: '54-årig kvinde i behandling med thiaziddiuretika og escitalopram, indlagt med muskelsvaghed, kramper og udtalt hjertebanken. S-kalium måles til 2.3 mmol/L.',
+        heartRate: 72,
+        rhythm: 'Sinusrytme med hyppige SVES/VES',
+        axis: 'Normal akse (+50°)',
+        prInterval: '180 ms',
+        qrsDuration: '85 ms',
+        qtc: 'Tilsyneladende > 560 ms (faktisk forlænget QU-interval)',
+        territory: 'Diffus myokardiel repolariseringsforstyrrelse',
+        affectedLeads: ['Alle, mest udtalt i V2–V4'],
+        reciprocalLeads: [],
+        anatomicalEffect: 'Lav ekstracellulær kaliumkoncentration hyperpolariserer membranpotentialet og forsinker fase 3 repolariseringen dramatisk. M-cellerne i mid-myokardiet repolariserer ekstra langsomt, hvilket genererer den prominente U-tak.',
+        hamptonPearls: 'Hampton advarer: "Hypokaliæmi er den helt store fælde ved QTc-måling! T-takken bliver flad eller inverteret, og umiddelbart efter følger en kæmpestor U-tak. Hvis man måler til slutningen af U-takken, tror man fejlagtigt, at QTc er 600 ms! Hypokaliæmi er samtidig den hyppigste udløsende årsag til fatal Torsades de Pointes hos patienter i psykofarmakologisk behandling."',
+        leads: {
+            'I': { p: 0.1, pr: 180, q: 0, r: 0.7, s: -0.1, st: -0.05, t: 0.1, u: 0.25, hypokalemia: true },
+            'II': { p: 0.15, pr: 180, q: -0.05, r: 0.95, s: -0.15, st: -0.08, t: 0.12, u: 0.35, hypokalemia: true },
+            'III': { p: 0.06, pr: 180, q: 0, r: 0.4, s: -0.1, st: -0.04, t: 0.08, u: 0.18, hypokalemia: true },
+            'aVR': { p: -0.12, pr: 180, q: 0, r: 0.15, s: -0.75, st: 0.05, t: -0.08, u: -0.2, hypokalemia: true },
+            'aVL': { p: 0.06, pr: 180, q: 0, r: 0.45, s: -0.1, st: -0.04, t: 0.08, u: 0.15, hypokalemia: true },
+            'aVF': { p: 0.1, pr: 180, q: -0.05, r: 0.7, s: -0.1, st: -0.06, t: 0.1, u: 0.25, hypokalemia: true },
+            'V1': { p: 0.06, pr: 180, q: 0, r: 0.2, s: -0.7, st: -0.05, t: 0.05, u: 0.2, hypokalemia: true },
+            'V2': { p: 0.08, pr: 180, q: 0, r: 0.4, s: -0.9, st: -0.1, t: 0.08, u: 0.45, hypokalemia: true },
+            'V3': { p: 0.1, pr: 180, q: 0, r: 0.7, s: -0.5, st: -0.1, t: 0.1, u: 0.5, hypokalemia: true },
+            'V4': { p: 0.12, pr: 180, q: -0.05, r: 1.1, s: -0.2, st: -0.08, t: 0.12, u: 0.4, hypokalemia: true },
+            'V5': { p: 0.12, pr: 180, q: -0.06, r: 1.1, s: -0.15, st: -0.05, t: 0.1, u: 0.3, hypokalemia: true },
+            'V6': { p: 0.1, pr: 180, q: -0.05, r: 0.9, s: -0.1, st: -0.04, t: 0.08, u: 0.22, hypokalemia: true }
+        },
+        quiz: [
+            {
+                step: 'Repolarisationsbølge',
+                question: 'Hvilken abnorm bølge ses umiddelbart efter den affladede T-tak i V2–V4?',
+                options: [
+                    'En fremtrædende positiv U-tak',
+                    'En patologisk delta-bølge',
+                    'En høj spids P-pulmonale tak',
+                    'Et nyt QRS-kompleks'
+                ],
+                correctIndex: 0,
+                explanation: 'Prominente U-takker, der følger umiddelbart efter en affladet T-tak, er det klassiske elektrokardiografiske kendetegn ved moderat til svær hypokaliæmi.'
+            },
+            {
+                step: 'Faldgrube ved QTc-Måling',
+                question: 'Hvad er den kliniske faldgrube, når man måler QT-intervallet ved hypokaliæmi?',
+                options: [
+                    'Man inkluderer fejlagtigt U-takken i målingen, så intervallet fremstår som et enormt forlænget QU-interval',
+                    'Man måler fra R-takken i stedet for Q-takken',
+                    'QT-intervallet er altid kortere end 200 ms',
+                    'Der er ingen faldgruber'
+                ],
+                correctIndex: 0,
+                explanation: 'Når T- og U-takken smelter sammen, overvurderer automatiske computermålinger ofte QT-intervallet massivt. Ved hypokaliæmi skal kalium korrigeres før EKG gentages.'
+            },
+            {
+                step: 'Diagnose',
+                question: 'Hvad er diagnosen?',
+                options: [
+                    'Hypokaliæmi',
+                    'Hyperkaliæmi',
+                    'Akut forvægsinfarkt',
+                    'Normal sinusrytme'
+                ],
+                correctIndex: 0,
+                explanation: 'Hypokaliæmi med affladede T-takker, let ST-depression og fremtrædende U-takker.'
+            }
+        ]
     }
 ];
 
@@ -1238,8 +1522,11 @@ export function generateLeadWaveform(caseData, leadName, numBeats = 3, sampleRat
             voltage += lead.prDep;
         }
 
-        // QRS-kompleks
-        if (beatTime >= qrsStart && beatTime <= qrsEnd) {
+        // Hvis Mobitz Type II udfald (f.eks. 3:2 AV-blok, hvor 3. slag ikke overledes)
+        const isDroppedMobitz2 = caseData.id === 'av_block_2_mobitz2' && (beatIndex % 3 === 2);
+
+        // QRS-kompleks (springes over hvis slaget er blokeret)
+        if (!isDroppedMobitz2 && beatTime >= qrsStart && beatTime <= qrsEnd) {
             const qrsProg = (beatTime - qrsStart) / qrsWidthSec;
 
             if (lead.notch) {
@@ -1271,23 +1558,31 @@ export function generateLeadWaveform(caseData, leadName, numBeats = 3, sampleRat
             }
         }
 
-        // ST-segment og T-tak
-        if (beatTime > qrsEnd && beatTime < tStart) {
-            voltage += stElev;
-        } else if (beatTime >= tStart && beatTime <= tEnd) {
-            const tProg = (beatTime - tStart) / tDuration;
-            let tWave = 0;
+        // ST-segment og T-tak (kun hvis slaget overledes)
+        if (!isDroppedMobitz2) {
+            if (beatTime > qrsEnd && beatTime < tStart) {
+                voltage += stElev;
+            } else if (beatTime >= tStart && beatTime <= tEnd) {
+                const tProg = (beatTime - tStart) / tDuration;
+                let tWave = 0;
 
-            if (lead.peakedT) {
-                tWave = Math.pow(Math.sin(tProg * Math.PI), 1.6) * tAmp;
-            } else if (lead.stShape === 'coved') {
-                tWave = stElev * (1 - tProg * 0.5) + Math.sin(tProg * Math.PI) * tAmp;
-            } else if (lead.stShape === 'tombstone') {
-                tWave = stElev * Math.cos(tProg * (Math.PI / 2)) + Math.sin(tProg * Math.PI) * tAmp * 0.6;
-            } else {
-                tWave = Math.sin(tProg * Math.PI) * tAmp + stElev * (1 - tProg);
+                if (lead.peakedT) {
+                    tWave = Math.pow(Math.sin(tProg * Math.PI), 1.6) * tAmp;
+                } else if (lead.stShape === 'coved') {
+                    tWave = stElev * (1 - tProg * 0.5) + Math.sin(tProg * Math.PI) * tAmp;
+                } else if (lead.stShape === 'tombstone') {
+                    tWave = stElev * Math.cos(tProg * (Math.PI / 2)) + Math.sin(tProg * Math.PI) * tAmp * 0.6;
+                } else {
+                    tWave = Math.sin(tProg * Math.PI) * tAmp + stElev * (1 - tProg);
+                }
+                voltage += tWave;
             }
-            voltage += tWave;
+
+            // U-tak ved hypokaliæmi
+            if (lead.u && beatTime > tEnd && beatTime <= tEnd + 0.16) {
+                const uProg = (beatTime - tEnd) / 0.16;
+                voltage += Math.sin(uProg * Math.PI) * lead.u;
+            }
         }
 
         voltage += afibNoise + flutterWave;

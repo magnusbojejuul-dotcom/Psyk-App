@@ -9,7 +9,8 @@ import {
     Crosshair,
     Sliders,
     Sparkles,
-    Download
+    Download,
+    FileText
 } from '../components/Icons';
 import { EKG_CASES } from '../data/ekgCases';
 import EkgHeartModel from '../components/ekg/EkgHeartModel';
@@ -17,6 +18,7 @@ import EkgViewer from '../components/ekg/EkgViewer';
 import EkgQuizTrainer from '../components/ekg/EkgQuizTrainer';
 import EkgSystematicGuide from '../components/ekg/EkgSystematicGuide';
 import EkgQTCertCalc from '../components/ekg/EkgQTCertCalc';
+import EkgClinicalNoteGenerator from '../components/ekg/EkgClinicalNoteGenerator';
 
 export default function EkgApp({ onNavigate }) {
     const [activeTab, setActiveTab] = useState('model'); // 'model' | 'viewer' | 'quiz' | 'guide' | 'qtc'
@@ -45,7 +47,8 @@ export default function EkgApp({ onNavigate }) {
         { id: 'viewer', label: '12-Aflednings EKG & Skydelære', icon: Crosshair },
         { id: 'quiz', label: 'Træningsquiz & Cases', icon: Award },
         { id: 'guide', label: 'Hamptons 7-Trins Guide', icon: BookOpen },
-        { id: 'qtc', label: 'QTc & Psykofarmaka', icon: Pill }
+        { id: 'qtc', label: 'QTc & Psykofarmaka', icon: Pill },
+        { id: 'note', label: 'Klinisk Journalnotat & DCS Tjekliste', icon: FileText }
     ];
 
     return (
@@ -127,6 +130,7 @@ export default function EkgApp({ onNavigate }) {
                     <EkgHeartModel
                         selectedLead={selectedLead}
                         onSelectLead={setSelectedLead}
+                        activeCase={currentCase}
                     />
                 )}
 
@@ -149,11 +153,18 @@ export default function EkgApp({ onNavigate }) {
                 )}
 
                 {activeTab === 'guide' && (
-                    <EkgSystematicGuide />
+                    <EkgSystematicGuide onNavigateTab={(tab) => setActiveTab(tab)} />
                 )}
 
                 {activeTab === 'qtc' && (
                     <EkgQTCertCalc />
+                )}
+
+                {activeTab === 'note' && (
+                    <EkgClinicalNoteGenerator
+                        activeCase={currentCase}
+                        onNavigateTab={(tab) => setActiveTab(tab)}
+                    />
                 )}
             </main>
 

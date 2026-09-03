@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BookOpen, CheckCircle2, ChevronRight, AlertTriangle, Compass, Activity, Sparkles, Info } from '../Icons';
 
-export default function EkgSystematicGuide() {
+export default function EkgSystematicGuide({ onNavigateTab }) {
     const [activeStep, setActiveStep] = useState(1);
 
     const steps = [
@@ -10,6 +10,8 @@ export default function EkgSystematicGuide() {
             title: '1. Rytme',
             subtitle: 'Regelmæssig eller uregelmæssig? Sinusrytme eller arytmi?',
             badge: 'Trin 1',
+            targetTab: 'viewer',
+            tabLabel: 'Afprøv på 12-aflednings EKG',
             content: (
                 <div className="space-y-4 text-xs leading-relaxed text-[#3A4A40]">
                     <p>
@@ -51,6 +53,8 @@ export default function EkgSystematicGuide() {
             title: '2. Frekvens',
             subtitle: '300-reglen, 10-sekunders strimmelen og frekvensberegner',
             badge: 'Trin 2',
+            targetTab: 'viewer',
+            tabLabel: 'Mål frekvens med digital skydelære',
             content: (
                 <div className="space-y-4 text-xs leading-relaxed text-[#3A4A40]">
                     <p>
@@ -104,6 +108,8 @@ export default function EkgSystematicGuide() {
             title: '3. Hjerteakse',
             subtitle: 'Kvadrantmetoden i I og II samt Cabrera-cirklen',
             badge: 'Trin 3',
+            targetTab: 'model',
+            tabLabel: 'Se akse & Cabrera i Hjertemodellen',
             content: (
                 <div className="space-y-4 text-xs leading-relaxed text-[#3A4A40]">
                     <p>
@@ -148,6 +154,8 @@ export default function EkgSystematicGuide() {
             title: '4. P-tak & PR-interval',
             subtitle: 'Atriedepolarisering og ledningsforsinkelse i AV-knuden',
             badge: 'Trin 4',
+            targetTab: 'model',
+            tabLabel: 'Se SA- og AV-ledning i Hjertemodel',
             content: (
                 <div className="space-y-4 text-xs leading-relaxed text-[#3A4A40]">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -179,6 +187,8 @@ export default function EkgSystematicGuide() {
             title: '5. QRS-kompleks',
             subtitle: 'Bredde, patologiske Q-takker, grenblok og hypertrofi',
             badge: 'Trin 5',
+            targetTab: 'viewer',
+            tabLabel: 'Inspicer QRS i V1–V6',
             content: (
                 <div className="space-y-4 text-xs leading-relaxed text-[#3A4A40]">
                     <div className="p-4 bg-white rounded-2xl border border-[#E8E4D9]">
@@ -201,11 +211,39 @@ export default function EkgSystematicGuide() {
                             </div>
                         </div>
 
-                        <div className="p-3 bg-red-50 rounded-xl border border-red-200 text-red-900">
+                        <div className="p-3 bg-red-50 rounded-xl border border-red-200 text-red-900 mb-3">
                             <strong className="block font-bold mb-1">Patologisk Q-tak:</strong>
                             <p className="text-red-800">
                                 En Q-tak er patologisk, hvis den er &gt; 40 ms bred (&gt; 1 lille tern) og/eller dybere end 25% af den efterfølgende R-tak. Dette er det blivende elektrokardiografiske ar efter et transmuralt infarkt.
                             </p>
+                        </div>
+
+                        {/* LVH Kriterier */}
+                        <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-slate-800 mb-3">
+                            <strong className="text-slate-900 block font-bold mb-1">Venstre Ventrikelhypertrofi (LVH):</strong>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] mt-1">
+                                <div className="p-2 bg-white rounded border border-slate-200">
+                                    <strong className="text-[#3A4A40] block">Sokolow-Lyon Kriterium:</strong>
+                                    <span>S i V1 + R i V5/V6 &gt; 35 mm (voksne &gt; 35 år).</span>
+                                </div>
+                                <div className="p-2 bg-white rounded border border-slate-200">
+                                    <strong className="text-[#3A4A40] block">Cornell Kriterium:</strong>
+                                    <span>R i aVL + S i V3 &gt; 28 mm (mænd) / &gt; 20 mm (kvinder).</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Sgarbossa ved LBBB */}
+                        <div className="p-3 bg-blue-50 rounded-xl border border-blue-200 text-blue-950">
+                            <strong className="block font-bold mb-1 text-blue-900">STEMI ved Grenblok (Sgarbossa-kriterier):</strong>
+                            <p className="text-[11px] text-blue-900 mb-1">
+                                Normalt skaber LBBB sekundære ST-depressioner og modsat rettede T-takker. Mistænk akut transmuralt infarkt (STEMI) ved:
+                            </p>
+                            <ul className="list-disc list-inside space-y-0.5 text-[11px] text-blue-900">
+                                <li><strong>Konkordant ST-elevation &ge; 1 mm</strong> i en afledning med positivt QRS (meget specifik).</li>
+                                <li><strong>Konkordant ST-depression &ge; 1 mm</strong> i V1, V2 eller V3.</li>
+                                <li><strong>Udtalt diskordant ST-elevation &ge; 5 mm</strong> eller ST/S ratio &le; -0.25 (modificeret Sgarbossa).</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -216,27 +254,57 @@ export default function EkgSystematicGuide() {
             title: '6. ST-segment & T-tak',
             subtitle: 'Iskæmi, infarkt, reciprokke ændringer og perikarditis',
             badge: 'Trin 6',
+            targetTab: 'viewer',
+            tabLabel: 'Undersøg ST-elevationer',
             content: (
                 <div className="space-y-4 text-xs leading-relaxed text-[#3A4A40]">
+                    {/* ESC / DCS 4th Universal Definition Table */}
+                    <div className="p-4 bg-white rounded-2xl border border-[#E8E4D9]">
+                        <div className="flex items-center justify-between mb-2">
+                            <strong className="text-sm font-bold text-red-900">ESC/DCS STEMI Kriterier (Målt ved J-punktet i &ge; 2 naboafledninger):</strong>
+                            <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-red-100 text-red-800">4th Universal Def</span>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 mb-3 text-[11px]">
+                            <div className="p-2.5 bg-red-50 rounded-xl border border-red-200">
+                                <strong className="block text-red-900 font-bold">V2–V3 Mænd &lt; 40 år:</strong>
+                                <span className="font-mono font-bold text-red-800 text-xs">&ge; 2.5 mm (0.25 mV)</span>
+                                <p className="text-[10px] text-[#839788] mt-0.5">Højere tærskel grundet fysiologisk repolarisering hos unge.</p>
+                            </div>
+                            <div className="p-2.5 bg-red-50 rounded-xl border border-red-200">
+                                <strong className="block text-red-900 font-bold">V2–V3 Mænd &ge; 40 år:</strong>
+                                <span className="font-mono font-bold text-red-800 text-xs">&ge; 2.0 mm (0.20 mV)</span>
+                                <p className="text-[10px] text-[#839788] mt-0.5">Klassisk tærskel for voksne mænd.</p>
+                            </div>
+                            <div className="p-2.5 bg-red-50 rounded-xl border border-red-200">
+                                <strong className="block text-red-900 font-bold">V2–V3 Kvinder (alle aldre):</strong>
+                                <span className="font-mono font-bold text-red-800 text-xs">&ge; 1.5 mm (0.15 mV)</span>
+                                <p className="text-[10px] text-[#839788] mt-0.5">Lavere tærskel grundet mindre myokardiemasse.</p>
+                            </div>
+                        </div>
+                        <div className="p-2 bg-[#F9F8F6] rounded-xl border border-[#E8E4D9] text-[11px] text-[#3A4A40]">
+                            <strong>Øvrige afledninger (V1, V4–V6, I, II, III, aVL, aVF):</strong> &ge; 1.0 mm (0.10 mV) for alle patienter.
+                        </div>
+                    </div>
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="p-4 bg-red-50 rounded-2xl border border-red-200 text-red-950">
-                            <strong className="block font-bold mb-2 text-sm text-red-900">ST-Elevationer (STEMI):</strong>
-                            <p className="mb-2">Konveks opadvendt elevering i mindst to anatomisk naboafledninger:</p>
-                            <ul className="list-disc list-inside space-y-1 text-red-900">
+                            <strong className="block font-bold mb-2 text-sm text-red-900">Anatomisk Infarktlokalisering:</strong>
+                            <ul className="list-disc list-inside space-y-1 text-red-900 text-[11px]">
                                 <li><strong>V1–V4:</strong> Forvægsinfarkt (Anterior STEMI / LAD).</li>
-                                <li><strong>II, III, aVF:</strong> Inferiort infarkt (RCA).</li>
+                                <li><strong>II, III, aVF:</strong> Inferiort infarkt (RCA - husk reciprok depression i aVL!).</li>
                                 <li><strong>I, aVL, V5, V6:</strong> Lateralt infarkt (LCx / Diagonal).</li>
-                                <li><strong>Reciprokke depressioner:</strong> Se altid efter spejlbilledet i modstående afledninger!</li>
+                                <li><strong>Posteriort infarkt (Bagvæg):</strong> Spejlbillede i V1–V3 med horisontal ST-depression &ge; 0.5 mm, høj R (R/S &gt; 1) og positiv T-tak. Optag V7–V9!</li>
                             </ul>
                         </div>
 
                         <div className="p-4 bg-amber-50 rounded-2xl border border-amber-200 text-amber-950">
                             <strong className="block font-bold mb-2 text-sm text-amber-900">ST-Depressioner & T-Inversion:</strong>
-                            <ul className="list-disc list-inside space-y-1 text-amber-900">
+                            <ul className="list-disc list-inside space-y-1 text-amber-900 text-[11px]">
                                 <li><strong>Iskæmi / NSTEMI:</strong> Horisontal eller descenderende ST-depression &ge; 0.5–1 mm.</li>
                                 <li><strong>Ventrikelbelastning ("Strain"):</strong> Asymmetrisk T-inversion i afledninger med høje R-takker.</li>
-                                <li><strong>Digoxin-effekt:</strong> Karakteristisk skeformet ("Salvador Dalí bart") ST-depression.</li>
-                                <li><strong>Hyperakutte T-takker:</strong> Meget tidlig STEMI eller Hyperkaliæmi (spidse teltede).</li>
+                                <li><strong>Perikarditis:</strong> Diffus konkav ("hængekøje") ST-elevation og PR-depression i næsten alle afledninger.</li>
+                                <li><strong>Hyperkaliæmi:</strong> Høje, spidse, symmetriske "teltede" T-takker.</li>
+                                <li><strong>Hypokaliæmi:</strong> Affladet T-tak og kæmpe U-tak (simulerer forlenget QT).</li>
                             </ul>
                         </div>
                     </div>
@@ -248,6 +316,8 @@ export default function EkgSystematicGuide() {
             title: '7. QT/QTc-interval',
             subtitle: 'Måling, Bazetts korrektion og psykofarmaka risikovurdering',
             badge: 'Trin 7',
+            targetTab: 'qtc',
+            tabLabel: 'Åbn Klinisk QTc-Beregner',
             content: (
                 <div className="space-y-4 text-xs leading-relaxed text-[#3A4A40]">
                     <p>
@@ -280,10 +350,31 @@ export default function EkgSystematicGuide() {
         }
     ];
 
+    const currentStepObj = steps.find(s => s.id === activeStep) || steps[0];
+
     return (
         <div className="w-full flex flex-col md:flex-row gap-6 max-w-[1400px] mx-auto">
-            {/* Sidebar Navigation: Vælg trin */}
-            <div className="w-full md:w-72 glass-panel rounded-3xl p-5 border border-[#E8E4D9] bg-white/80 shadow-sm shrink-0 flex flex-col gap-2">
+            {/* Responsiv horisontal stepper på mobil / tablet */}
+            <div className="flex md:hidden overflow-x-auto gap-2 p-1.5 bg-[#F2F6F3] rounded-2xl border border-[#E8E4D9] pb-2">
+                {steps.map(s => {
+                    const isActive = activeStep === s.id;
+                    return (
+                        <button
+                            key={s.id}
+                            onClick={() => setActiveStep(s.id)}
+                            className={`px-3 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all flex items-center gap-1.5 border ${isActive
+                                ? 'bg-[#839788] text-white border-[#6A7A6E] shadow-sm'
+                                : 'bg-white/80 text-[#3A4A40] border-[#E8E4D9]'
+                                }`}
+                        >
+                            <span>Trin {s.id}</span>
+                        </button>
+                    );
+                })}
+            </div>
+
+            {/* Sidebar Navigation: Vælg trin (synlig på desktop) */}
+            <div className="hidden md:flex w-72 glass-panel rounded-3xl p-5 border border-[#E8E4D9] bg-white/80 shadow-sm shrink-0 flex-col gap-2">
                 <div className="flex items-center gap-2 pb-3 mb-2 border-b border-[#E8E4D9]">
                     <BookOpen className="w-5 h-5 text-[#839788]" />
                     <h3 className="font-bold text-sm text-[#3A4A40]">Hamptons 7 Trin</h3>
@@ -317,21 +408,31 @@ export default function EkgSystematicGuide() {
             {/* Indholdsområde for det valgte trin */}
             <div className="flex-1 glass-panel rounded-3xl p-6 md:p-8 border border-[#E8E4D9] bg-white/90 shadow-sm flex flex-col justify-between">
                 <div>
-                    <div className="flex items-center justify-between pb-4 mb-6 border-b border-[#E8E4D9]">
+                    <div className="flex flex-wrap items-center justify-between gap-3 pb-4 mb-6 border-b border-[#E8E4D9]">
                         <div>
                             <span className="text-xs font-bold uppercase tracking-wider text-[#839788]">
-                                {steps.find(s => s.id === activeStep)?.badge}
+                                {currentStepObj.badge}
                             </span>
                             <h2 className="text-2xl font-bold text-[#3A4A40]">
-                                {steps.find(s => s.id === activeStep)?.title}
+                                {currentStepObj.title}
                             </h2>
                             <p className="text-xs text-[#839788] mt-1">
-                                {steps.find(s => s.id === activeStep)?.subtitle}
+                                {currentStepObj.subtitle}
                             </p>
                         </div>
+
+                        {onNavigateTab && currentStepObj.targetTab && (
+                            <button
+                                onClick={() => onNavigateTab(currentStepObj.targetTab)}
+                                className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-[#F2F6F3] text-[#3A4A40] border border-[#E8E4D9] hover:bg-[#E2E8DF] transition-colors shadow-2xs"
+                            >
+                                <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+                                {currentStepObj.tabLabel}
+                            </button>
+                        )}
                     </div>
 
-                    {steps.find(s => s.id === activeStep)?.content}
+                    {currentStepObj.content}
                 </div>
 
                 {/* Trin Frem / Tilbage Knapper */}

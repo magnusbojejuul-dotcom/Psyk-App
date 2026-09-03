@@ -1,26 +1,44 @@
 import React, { useState } from 'react';
-import { Award, CheckCircle2, XCircle, ChevronRight, RotateCcw, Sparkles, HelpCircle, Eye, EyeOff, Activity, BookOpen } from '../Icons';
+import { Award, CheckCircle2, XCircle, ChevronRight, RotateCcw, Sparkles, HelpCircle, Eye, EyeOff, Activity, BookOpen, Layers } from '../Icons';
 import EkgViewer from './EkgViewer';
 
 export default function EkgQuizTrainer({
-    cases,
+    cases = [],
     currentCase,
     onSelectCase,
     onShowOnHeart
 }) {
     const [isBlinded, setIsBlinded] = useState(false);
+    const [selectedLead, setSelectedLead] = useState('II');
+    const [feedbackMode, setFeedbackMode] = useState('immediate'); // 'immediate' | 'exam'
+    const [selectedCategory, setSelectedCategory] = useState('Alle');
     const [selectedAnswers, setSelectedAnswers] = useState({});
     const [showResults, setShowResults] = useState(false);
     const [score, setScore] = useState(0);
 
     const quizQuestions = currentCase?.quiz || [];
 
+    const categories = ['Alle', 'Normal', 'Iskæmi & Infarkt', 'Arytmi', 'Ledningsblok', 'Elektrolyt & QTc'];
+    const filteredCases = selectedCategory === 'Alle'
+        ? cases
+        : cases.filter(c => c.category === selectedCategory);
+
     const handleSelectOption = (qIdx, optIdx) => {
-        if (showResults) return; // Låst efter evaluering
-        setSelectedAnswers(prev => ({
-            ...prev,
+        if (showResults && feedbackMode === 'exam') return; // Låst efter evaluering i eksamenstilstand
+        const updated = {
+            ...selectedAnswers,
             [qIdx]: optIdx
-        }));
+        };
+        setSelectedAnswers(updated);
+
+        // Opdater score dynamisk
+        let correctCount = 0;
+        quizQuestions.forEach((q, idx) => {
+            if (updated[idx] === q.correctIndex) {
+                correctCount++;
+            }
+        });
+        setScore(correctCount);
     };
 
     const handleEvaluate = () => {
@@ -40,9 +58,20 @@ export default function EkgQuizTrainer({
         setScore(0);
     };
 
+    const handleRevealSolution = () => {
+        const sol = {};
+        quizQuestions.forEach((q, idx) => {
+            sol[idx] = q.correctIndex;
+        });
+        setSelectedAnswers(sol);
+        setScore(quizQuestions.length);
+        setShowResults(true);
+    };
+
     const handleNextRandomCase = () => {
-        const otherCases = cases.filter(c => c.id !== currentCase.id);
-        const randomCase = otherCases[Math.floor(Math.random() * otherCases.length)];
+        const pool = filteredCases.length > 1 ? filteredCases : cases;
+        const otherCases = pool.filter(c => c.id !== currentCase.id);
+        const randomCase = otherCases[Math.floor(Math.random() * otherCases.length)] || pool[0];
         if (randomCase) {
             onSelectCase(randomCase);
             handleResetQuiz();
@@ -50,6 +79,7 @@ export default function EkgQuizTrainer({
     };
 
     const isAllAnswered = quizQuestions.length > 0 && quizQuestions.every((_, idx) => selectedAnswers[idx] !== undefined);
+    const answeredCount = Object.keys(selectedAnswers).length;
 
     // Skjul metadata i blindet tilstand
     const displayCase = isBlinded && !showResults ? {
@@ -62,38 +92,105 @@ export default function EkgQuizTrainer({
     return (
         <div className="w-full flex flex-col gap-6">
             {/* Værktøjslinje for Træningsmodul */}
-            <div className="glass-panel rounded-3xl p-5 border border-[#E8E4D9] bg-white/80 shadow-sm flex flex-wrap items-center justify-between gap-4">
-                <div className="flex items-center gap-3">
-                    <div className="bg-[#839788] p-2.5 rounded-2xl text-white shadow-xs">
-                        <Award className="w-5 h-5" />
+            <div className="glass-panel rounded-3xl p-5 border border-[#E8E4D9] bg-white/80 shadow-sm flex flex-col gap-4">
+                <div className="flex flex-wrap items-center justify-between gap-4">
+                    <div className="flex items-center gap-3">
+                        <div className="bg-[#839788] p-2.5 rounded-2xl text-white shadow-xs">
+                            <Award className="w-5 h-5" />
+                        </div>
+                        <div>
+                            <h2 className="text-xl font-bold text-[#3A4A40] leading-tight">EKG Træningssimulator & Quiz</h2>
+                            <p className="text-xs text-[#839788]">Lær at aflæse 12-aflednings EKGr systematisk efter Hampton-metoden</p>
+                        </div>
                     </div>
-                    <div>
-                        <h2 className="text-xl font-bold text-[#3A4A40] leading-tight">EKG Træningssimulator & Quiz</h2>
-                        <p className="text-xs text-[#839788]">Lær at aflæse 12-aflednings EKGr systematisk efter Hampton-metoden</p>
+
+                    <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+                        {/* Feedback-tilstand vælger */}
+                        <div className="flex bg-[#F2F6F3] p-1 rounded-2xl border border-[#E8E4D9] text-xs">
+                            <button
+                                onClick={() => setFeedbackMode('immediate')}
+                                className={`px-3 py-1.5 rounded-xl font-bold transition-all ${feedbackMode === 'immediate'
+                                    ? 'bg-white text-[#3A4A40] shadow-sm'
+                                    : 'text-[#839788] hover:text-[#3A4A40]'
+                                    }`}
+                                title="Få feedback med forklaring for hvert trin med det samme"
+                            >
+                                Øjeblikkelig Feedback
+                            </button>
+                            <button
+                                onClick={() => setFeedbackMode('exam')}
+                                className={`px-3 py-1.5 rounded-xl font-bold transition-all ${feedbackMode === 'exam'
+                                    ? 'bg-white text-[#3A4A40] shadow-sm'
+                                    : 'text-[#839788] hover:text-[#3A4A40]'
+                                    }`}
+                                title="Testtilstand: besvar alle trin før facit"
+                            >
+                                Testtilstand
+                            </button>
+                        </div>
+
+                        {/* Blindet tilstand knap */}
+                        <button
+                            onClick={() => setIsBlinded(!isBlinded)}
+                            className={`flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-bold transition-all border ${isBlinded
+                                ? 'bg-amber-600 text-white border-amber-700 shadow-sm'
+                                : 'bg-[#F2F6F3] text-[#3A4A40] border-[#E8E4D9] hover:bg-[#E2E8DF]'
+                                }`}
+                            title="Skjul diagnosenavnet på EKG-papiret for realistisk tolkning"
+                        >
+                            {isBlinded ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                            <span>{isBlinded ? 'Blindet Aktiv' : 'Slå Blindet Til'}</span>
+                        </button>
+
+                        {/* Vælg tilfældig case */}
+                        <button
+                            onClick={handleNextRandomCase}
+                            className="flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold bg-[#839788] text-white hover:bg-[#6A7A6E] transition-colors shadow-sm"
+                        >
+                            <Sparkles className="w-4 h-4 text-amber-300" />
+                            Tilfældig Case
+                        </button>
                     </div>
                 </div>
 
-                <div className="flex flex-wrap items-center gap-3">
-                    {/* Blindet tilstand knap */}
-                    <button
-                        onClick={() => setIsBlinded(!isBlinded)}
-                        className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold transition-all border ${isBlinded
-                            ? 'bg-amber-600 text-white border-amber-700 shadow-sm'
-                            : 'bg-[#F2F6F3] text-[#3A4A40] border-[#E8E4D9] hover:bg-[#E2E8DF]'
-                            }`}
-                    >
-                        {isBlinded ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-                        {isBlinded ? 'Blindet Tilstand Aktiv' : 'Slå Blindet Tilstand Til'}
-                    </button>
+                {/* Hurtigvælger for Case og Kategori */}
+                <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-[#E8E4D9]/70">
+                    <div className="flex items-center gap-1.5 overflow-x-auto text-xs py-0.5">
+                        <span className="text-[11px] font-bold text-[#839788] mr-1">Filter:</span>
+                        {categories.map(cat => (
+                            <button
+                                key={cat}
+                                onClick={() => setSelectedCategory(cat)}
+                                className={`px-2.5 py-1 rounded-xl text-xs font-medium whitespace-nowrap transition-colors border ${selectedCategory === cat
+                                    ? 'bg-[#3A4A40] text-white border-[#2C3F34] font-bold shadow-xs'
+                                    : 'bg-[#F2F6F3] text-[#839788] border-[#E8E4D9] hover:bg-[#E2E8DF]'
+                                    }`}
+                            >
+                                {cat}
+                            </button>
+                        ))}
+                    </div>
 
-                    {/* Vælg tilfældig case */}
-                    <button
-                        onClick={handleNextRandomCase}
-                        className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-[#839788] text-white hover:bg-[#6A7A6E] transition-colors shadow-sm"
-                    >
-                        <Sparkles className="w-4 h-4 text-amber-300" />
-                        Træk Tilfældig Case
-                    </button>
+                    <div className="flex items-center gap-2">
+                        <span className="text-xs font-bold text-[#839788]">Vælg Case:</span>
+                        <select
+                            value={currentCase.id}
+                            onChange={(e) => {
+                                const found = cases.find(c => c.id === e.target.value);
+                                if (found) {
+                                    onSelectCase(found);
+                                    handleResetQuiz();
+                                }
+                            }}
+                            className="bg-[#F2F6F3] border border-[#E8E4D9] rounded-xl px-3 py-1.5 text-xs font-bold text-[#3A4A40] focus:outline-none cursor-pointer max-w-[240px] truncate"
+                        >
+                            {filteredCases.map(c => (
+                                <option key={c.id} value={c.id}>
+                                    {c.title}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
                 </div>
             </div>
 
@@ -106,11 +203,11 @@ export default function EkgQuizTrainer({
                 </div>
             </div>
 
-            {/* EKG Strimmel Fremviser */}
+            {/* EKG Strimmel Fremviser med aktiv afledningsvalg */}
             <EkgViewer
                 caseData={displayCase}
-                selectedLead="II"
-                onSelectLead={() => { }}
+                selectedLead={selectedLead}
+                onSelectLead={setSelectedLead}
                 onShowOnHeart={onShowOnHeart}
             />
 
@@ -127,12 +224,17 @@ export default function EkgQuizTrainer({
                         </div>
                     </div>
 
-                    {showResults && (
-                        <div className="flex items-center gap-2 px-4 py-1.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 font-bold text-sm">
-                            <Award className="w-4 h-4 text-emerald-600" />
-                            Score: {score} af {quizQuestions.length} rigtige!
-                        </div>
-                    )}
+                    <div className="flex items-center gap-3">
+                        <span className="text-xs text-[#839788] font-medium">
+                            Besvaret: <strong className="text-[#3A4A40]">{answeredCount}</strong> / {quizQuestions.length}
+                        </span>
+                        {(showResults || (feedbackMode === 'immediate' && answeredCount > 0)) && (
+                            <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 font-bold text-xs">
+                                <Award className="w-4 h-4 text-emerald-600" />
+                                Rigtige: {score} af {answeredCount} besvarede
+                            </div>
+                        )}
+                    </div>
                 </div>
 
                 {/* Spørgsmålskort */}
@@ -140,11 +242,12 @@ export default function EkgQuizTrainer({
                     {quizQuestions.map((q, qIdx) => {
                         const isAnswered = selectedAnswers[qIdx] !== undefined;
                         const isCorrect = isAnswered && selectedAnswers[qIdx] === q.correctIndex;
+                        const showFeedbackForCard = showResults || (feedbackMode === 'immediate' && isAnswered);
 
                         return (
                             <div
                                 key={qIdx}
-                                className={`rounded-2xl p-5 border flex flex-col justify-between transition-all ${showResults
+                                className={`rounded-2xl p-5 border flex flex-col justify-between transition-all ${showFeedbackForCard
                                     ? isCorrect
                                         ? 'bg-emerald-50/70 border-emerald-300'
                                         : 'bg-red-50/70 border-red-300'
@@ -158,11 +261,17 @@ export default function EkgQuizTrainer({
                                         <span className="text-[11px] font-bold uppercase tracking-wider text-[#839788]">
                                             Trin {qIdx + 1}: {q.step}
                                         </span>
-                                        {showResults && (
+                                        {showFeedbackForCard && (
                                             isCorrect ? (
-                                                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                                                <div className="flex items-center gap-1 text-emerald-700 text-xs font-bold">
+                                                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                                                    <span>Korrekt</span>
+                                                </div>
                                             ) : (
-                                                <XCircle className="w-4 h-4 text-red-600 shrink-0" />
+                                                <div className="flex items-center gap-1 text-red-700 text-xs font-bold">
+                                                    <XCircle className="w-4 h-4 text-red-600 shrink-0" />
+                                                    <span>Forkert</span>
+                                                </div>
                                             )
                                         )}
                                     </div>
@@ -179,7 +288,7 @@ export default function EkgQuizTrainer({
 
                                             let btnClass = "bg-white border-[#E8E4D9] text-[#3A4A40] hover:bg-[#F2F6F3]";
 
-                                            if (showResults) {
+                                            if (showFeedbackForCard) {
                                                 if (isThisCorrect) {
                                                     btnClass = "bg-emerald-600 text-white border-emerald-700 font-bold shadow-xs";
                                                 } else if (isSelected) {
@@ -194,7 +303,7 @@ export default function EkgQuizTrainer({
                                             return (
                                                 <button
                                                     key={optIdx}
-                                                    disabled={showResults}
+                                                    disabled={showResults && feedbackMode === 'exam'}
                                                     onClick={() => handleSelectOption(qIdx, optIdx)}
                                                     className={`w-full text-left text-xs p-3 rounded-xl border transition-all flex items-start gap-2.5 ${btnClass}`}
                                                 >
@@ -209,8 +318,8 @@ export default function EkgQuizTrainer({
                                 </div>
 
                                 {/* Forklaring når resultaterne vises */}
-                                {showResults && (
-                                    <div className="pt-3 mt-2 border-t border-[#E8E4D9]/80 text-xs text-[#3A4A40] leading-relaxed bg-white/60 p-3 rounded-xl">
+                                {showFeedbackForCard && (
+                                    <div className="pt-3 mt-2 border-t border-[#E8E4D9]/80 text-xs text-[#3A4A40] leading-relaxed bg-white/70 p-3 rounded-xl">
                                         <strong className="block text-[#2C3F34] font-bold mb-1">Pædagogisk Forklaring:</strong>
                                         <p className="text-[#3A4A40]">{q.explanation}</p>
                                     </div>
@@ -222,39 +331,46 @@ export default function EkgQuizTrainer({
 
                 {/* Handlingsknapper i bunden af quizzen */}
                 <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-[#E8E4D9]">
-                    <div className="flex items-center gap-2">
-                        {!showResults ? (
+                    <div className="flex flex-wrap items-center gap-2.5">
+                        {feedbackMode === 'exam' && !showResults && (
                             <button
                                 disabled={!isAllAnswered}
                                 onClick={handleEvaluate}
-                                className={`px-6 py-3 rounded-2xl font-bold text-xs transition-all shadow-sm ${isAllAnswered
+                                className={`px-6 py-2.5 rounded-2xl font-bold text-xs transition-all shadow-sm ${isAllAnswered
                                     ? 'bg-[#3A4A40] text-white hover:bg-[#2C3F34]'
                                     : 'bg-[#E2E8DF] text-[#839788] cursor-not-allowed'
                                     }`}
                             >
                                 Evaluer Mine Svar
                             </button>
-                        ) : (
+                        )}
+
+                        {!showResults && (
                             <button
-                                onClick={handleResetQuiz}
-                                className="px-5 py-2.5 rounded-2xl font-bold text-xs bg-[#F2F6F3] text-[#3A4A40] border border-[#E8E4D9] hover:bg-[#E2E8DF] transition-colors flex items-center gap-2"
+                                onClick={handleRevealSolution}
+                                className="px-4 py-2.5 rounded-2xl font-bold text-xs bg-[#F2F6F3] text-[#3A4A40] border border-[#E8E4D9] hover:bg-[#E2E8DF] transition-colors"
                             >
-                                <RotateCcw className="w-4 h-4" />
-                                Prøv Igen
+                                Vis Facit & Forklaringer
                             </button>
                         )}
+
+                        <button
+                            onClick={handleResetQuiz}
+                            className="px-4 py-2.5 rounded-2xl font-bold text-xs bg-[#F2F6F3] text-[#3A4A40] border border-[#E8E4D9] hover:bg-[#E2E8DF] transition-colors flex items-center gap-1.5"
+                        >
+                            <RotateCcw className="w-3.5 h-3.5" />
+                            Nulstil Svar
+                        </button>
                     </div>
 
-                    {showResults && (
-                        <div className="flex items-center gap-3">
-                            <button
-                                onClick={handleNextRandomCase}
-                                className="flex items-center gap-2 px-5 py-2.5 rounded-2xl text-xs font-bold bg-[#839788] text-white hover:bg-[#6A7A6E] transition-colors shadow-sm"
-                            >
-                                Næste Tilfældige Case <ChevronRight className="w-4 h-4" />
-                            </button>
-                        </div>
-                    )}
+                    <div className="flex items-center gap-3">
+                        <button
+                            onClick={handleNextRandomCase}
+                            className="flex items-center gap-2 px-5 py-2.5 rounded-2xl text-xs font-bold bg-[#839788] text-white hover:bg-[#6A7A6E] transition-colors shadow-sm"
+                        >
+                            Næste Træningscase <ChevronRight className="w-4 h-4" />
+                        </button>
+                    </div>
                 </div>
 
                 {/* HAMPTOMS KLINISKE PERLER SEKTION (Afsløres efter evaluering eller ved ønske) */}
