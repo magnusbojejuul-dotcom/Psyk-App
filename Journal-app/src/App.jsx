@@ -36,14 +36,29 @@ class ErrorBoundary extends React.Component {
 }
 
 function App() {
-    const [currentView, setCurrentView] = useState('home');
+    const [currentView, setCurrentView] = useState(() => {
+        const hash = window.location.hash.replace('#', '');
+        return hash || 'home';
+    });
     const [navArgs, setNavArgs] = useState(null);
 
     const handleNavigate = (view, args = null) => {
+        window.location.hash = view;
         setCurrentView(view);
         setNavArgs(args);
         window.scrollTo(0, 0);
     };
+
+    React.useEffect(() => {
+        const onHashChange = () => {
+            const hash = window.location.hash.replace('#', '');
+            if (hash && hash !== currentView) {
+                setCurrentView(hash);
+            }
+        };
+        window.addEventListener('hashchange', onHashChange);
+        return () => window.removeEventListener('hashchange', onHashChange);
+    }, [currentView]);
 
     return (
         <ErrorBoundary>
@@ -57,7 +72,7 @@ function App() {
                 {currentView === 'psykofarmaka' && <PsykofarmakaApp onNavigate={handleNavigate} initialDrug={navArgs} />}
                 {currentView === 'ect' && <EctApp onNavigate={handleNavigate} />}
                 {currentView === 'target_groups' && <TargetGroupsApp onNavigate={handleNavigate} />}
-                {currentView === 'ekg' && <EkgApp onNavigate={handleNavigate} />}
+                {(currentView === 'ekg' || currentView.startsWith('ekg')) && <EkgApp onNavigate={handleNavigate} />}
             </div>
         </ErrorBoundary>
     );

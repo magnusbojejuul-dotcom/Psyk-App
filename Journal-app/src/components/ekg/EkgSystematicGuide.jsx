@@ -54,7 +54,7 @@ export default function EkgSystematicGuide({ onNavigateTab }) {
             subtitle: '300-reglen, 10-sekunders strimmelen og frekvensberegner',
             badge: 'Trin 2',
             targetTab: 'viewer',
-            tabLabel: 'Mål frekvens med digital skydelære',
+            tabLabel: 'Gå til 12-aflednings EKG',
             content: (
                 <div className="space-y-4 text-xs leading-relaxed text-[#3A4A40]">
                     <p>

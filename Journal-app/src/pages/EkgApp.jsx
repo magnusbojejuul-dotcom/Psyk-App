@@ -3,26 +3,28 @@ import {
     Activity,
     ChevronRight,
     Heart,
-    Award,
     BookOpen,
-    Pill,
-    Crosshair,
-    Sliders,
-    Sparkles,
-    Download,
-    FileText
+    Crosshair
 } from '../components/Icons';
 import { EKG_CASES } from '../data/ekgCases';
 import EkgHeartModel from '../components/ekg/EkgHeartModel';
 import EkgViewer from '../components/ekg/EkgViewer';
-import EkgQuizTrainer from '../components/ekg/EkgQuizTrainer';
 import EkgSystematicGuide from '../components/ekg/EkgSystematicGuide';
-import EkgQTCertCalc from '../components/ekg/EkgQTCertCalc';
-import EkgClinicalNoteGenerator from '../components/ekg/EkgClinicalNoteGenerator';
 
 export default function EkgApp({ onNavigate }) {
-    const [activeTab, setActiveTab] = useState('model'); // 'model' | 'viewer' | 'quiz' | 'guide' | 'qtc'
-    const [currentCaseId, setCurrentCaseId] = useState('normal_sinus');
+    const [activeTab, setActiveTab] = useState(() => {
+        const hash = window.location.hash.toLowerCase();
+        if (hash.includes('viewer')) return 'viewer';
+        if (hash.includes('guide')) return 'guide';
+        return 'model';
+    });
+    const [currentCaseId, setCurrentCaseId] = useState(() => {
+        const hash = window.location.hash.toLowerCase();
+        for (const c of EKG_CASES) {
+            if (hash.includes(c.id.toLowerCase())) return c.id;
+        }
+        return 'normal_sinus';
+    });
     const [selectedLead, setSelectedLead] = useState('II');
 
     const currentCase = EKG_CASES.find(c => c.id === currentCaseId) || EKG_CASES[0];
@@ -44,11 +46,8 @@ export default function EkgApp({ onNavigate }) {
 
     const tabs = [
         { id: 'model', label: 'Hjertemodel & Vektorer', icon: Heart },
-        { id: 'viewer', label: '12-Aflednings EKG & Skydelære', icon: Crosshair },
-        { id: 'quiz', label: 'Træningsquiz & Cases', icon: Award },
-        { id: 'guide', label: 'Hamptons 7-Trins Guide', icon: BookOpen },
-        { id: 'qtc', label: 'QTc & Psykofarmaka', icon: Pill },
-        { id: 'note', label: 'Klinisk Journalnotat & DCS Tjekliste', icon: FileText }
+        { id: 'viewer', label: '12-Aflednings EKG', icon: Activity },
+        { id: 'guide', label: 'Hamptons 7-Trins Tolkningsguide', icon: BookOpen }
     ];
 
     return (
@@ -76,27 +75,6 @@ export default function EkgApp({ onNavigate }) {
                         <div className="flex items-center gap-1.5 text-xs text-[#839788]">
                             <span>Interaktiv 12-aflednings trænings- og visualiseringsplatform</span>
                         </div>
-                    </div>
-                </div>
-
-                {/* Hurtigvælger for EKG Case (Aktiv i toppen på tværs af faneblade) */}
-                <div className="flex items-center gap-3 mt-2 sm:mt-0">
-                    <div className="flex items-center gap-2 bg-[#F2F6F3] px-3 py-1.5 rounded-2xl border border-[#E8E4D9]">
-                        <span className="text-xs font-bold text-[#839788]">Aktiv Case:</span>
-                        <select
-                            value={currentCaseId}
-                            onChange={(e) => {
-                                const found = EKG_CASES.find(c => c.id === e.target.value);
-                                if (found) handleSelectCase(found);
-                            }}
-                            className="bg-transparent text-xs font-bold text-[#3A4A40] focus:outline-none cursor-pointer max-w-[200px] truncate"
-                        >
-                            {EKG_CASES.map(c => (
-                                <option key={c.id} value={c.id}>
-                                    {c.title}
-                                </option>
-                            ))}
-                        </select>
                     </div>
                 </div>
             </header>
@@ -130,41 +108,22 @@ export default function EkgApp({ onNavigate }) {
                     <EkgHeartModel
                         selectedLead={selectedLead}
                         onSelectLead={setSelectedLead}
-                        activeCase={currentCase}
                     />
                 )}
 
                 {activeTab === 'viewer' && (
                     <EkgViewer
                         caseData={currentCase}
+                        allCases={EKG_CASES}
+                        onSelectCase={handleSelectCase}
                         selectedLead={selectedLead}
                         onSelectLead={setSelectedLead}
                         onShowOnHeart={handleShowOnHeart}
                     />
                 )}
 
-                {activeTab === 'quiz' && (
-                    <EkgQuizTrainer
-                        cases={EKG_CASES}
-                        currentCase={currentCase}
-                        onSelectCase={handleSelectCase}
-                        onShowOnHeart={handleShowOnHeart}
-                    />
-                )}
-
                 {activeTab === 'guide' && (
                     <EkgSystematicGuide onNavigateTab={(tab) => setActiveTab(tab)} />
-                )}
-
-                {activeTab === 'qtc' && (
-                    <EkgQTCertCalc />
-                )}
-
-                {activeTab === 'note' && (
-                    <EkgClinicalNoteGenerator
-                        activeCase={currentCase}
-                        onNavigateTab={(tab) => setActiveTab(tab)}
-                    />
                 )}
             </main>
 
