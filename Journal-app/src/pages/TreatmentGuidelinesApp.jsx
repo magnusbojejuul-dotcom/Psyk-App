@@ -15,6 +15,7 @@ import { BORDERLINE_GUIDELINE } from '../data/guidelinesPersonlighed';
 import { AlgorithmFlow } from '../components/AlgorithmFlow';
 import { SplitAlgorithmFlow } from '../components/SplitAlgorithmFlow';
 import { DepressionGuidelineView } from '../components/DepressionGuidelineView';
+import { ClinicalGuidelineView } from '../components/ClinicalGuidelineView';
 import { renderWithDrugLinks } from '../utils/linkifyDrugs';
 
 function TreatmentGuidelinesApp({ onNavigate }) {
@@ -283,17 +284,10 @@ function TreatmentGuidelinesApp({ onNavigate }) {
                 {/* Content Area */}
                 <main className="flex-1 overflow-y-auto p-4 md:p-8 lg:p-10 relative scroll-smooth">
                     {activeGuideline === 'akut_beroligende' && renderAkutBeroligende()}
-                    {activeGuideline === 'adhd' && renderAlgorithm(ADHD_GUIDELINE)}
                     {activeGuideline === 'depression' && <DepressionGuidelineView onNavigate={onNavigate} guideline={DEPRESSION_GUIDELINE} />}
-                    {activeGuideline === 'bipolar' && renderAlgorithm(BIPOLAR_GUIDELINE)}
-                    {activeGuideline === 'psykose_voksne' && renderAlgorithm(PSYKOSE_VOKSNE_GUIDELINE)}
-                    {activeGuideline === 'psykose_boern' && renderAlgorithm(PSYKOSE_BOERN_GUIDELINE)}
-                    {activeGuideline === 'angst' && renderAlgorithm(ANGST_GUIDELINE)}
-                    {activeGuideline === 'ocd' && renderAlgorithm(OCD_GUIDELINE)}
-                    {activeGuideline === 'autisme' && renderAlgorithm(AUTISME_GUIDELINE)}
-                    {activeGuideline === 'spiseforstyrrelser' && renderAlgorithm(SPISEFORSTYRRELSER_GUIDELINE)}
-                    {activeGuideline === 'borderline' && renderAlgorithm(BORDERLINE_GUIDELINE)}
-                    {activeGuideline === 'alkohol' && renderAlgorithm(ALKOHOL_GUIDELINE)}
+                    {activeGuideline !== 'akut_beroligende' && activeGuideline !== 'depression' && (
+                        <ClinicalGuidelineView guidelineKey={activeGuideline} onNavigate={onNavigate} />
+                    )}
                 </main>
             </div>
         </div>
