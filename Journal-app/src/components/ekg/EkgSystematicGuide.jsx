@@ -1,8 +1,77 @@
-import React, { useState } from 'react';
-import { BookOpen, CheckCircle2, ChevronRight, AlertTriangle, Compass, Activity, Sparkles, Info } from '../Icons';
+import React, { useState, useEffect } from 'react';
+import { 
+    BookOpen, 
+    CheckCircle2, 
+    ChevronRight, 
+    AlertTriangle, 
+    Compass, 
+    Activity, 
+    Sparkles, 
+    Info, 
+    ZoomIn, 
+    X, 
+    Eye, 
+    Maximize2, 
+    ExternalLink 
+} from '../Icons';
 
-export default function EkgSystematicGuide({ onNavigateTab }) {
-    const [activeStep, setActiveStep] = useState(1);
+// Kliniske Billedimport til de 7 trin
+// 1. Rytme
+import normalSinus1 from '../../assets/ekg_scans/normal_sinus.jpg';
+import afib1 from '../../assets/ekg_scans/afib.jpg';
+import aflutter1 from '../../assets/ekg_scans/aflutter_1.jpg';
+
+// 2. Frekvens
+import normalSinus4 from '../../assets/ekg_scans/normal_sinus_4.jpg';
+import standard12Lead from '../../assets/ekg_scans/standard_12_lead.jpg';
+import afib2 from '../../assets/ekg_scans/afib_2.jpg';
+
+// 3. Hjerteakse
+import pulmonaryEmbolism1 from '../../assets/ekg_scans/pulmonary_embolism_1.jpg';
+import lvh1 from '../../assets/ekg_scans/lvh_1.jpg';
+import normalSinus2 from '../../assets/ekg_scans/normal_sinus_2.jpg';
+
+// 4. P-tak & PR-interval
+import avBlock1_1 from '../../assets/ekg_scans/av_block_1_1.jpg';
+import avBlock2W_1 from '../../assets/ekg_scans/av_block_2_wenckebach_1.png';
+import pericarditis1 from '../../assets/ekg_scans/pericarditis_1.jpg';
+
+// 5. QRS-kompleks
+import lbbb1 from '../../assets/ekg_scans/lbbb.jpg';
+import rbbb1 from '../../assets/ekg_scans/rbbb.jpg';
+import vt1 from '../../assets/ekg_scans/vt_1.png';
+
+// 6. ST-segment & T-tak
+import anteriorStemi1 from '../../assets/ekg_scans/anterior_stemi.jpg';
+import inferiorStemi1 from '../../assets/ekg_scans/inferior_stemi.jpg';
+import hyperkalemia1 from '../../assets/ekg_scans/hyperkalemia_1.jpg';
+
+// 7. QT/QTc-interval
+import longQtc1 from '../../assets/ekg_scans/long_qtc_1.jpg';
+import longQtc2 from '../../assets/ekg_scans/long_qtc_2.jpg';
+import vt2 from '../../assets/ekg_scans/vt_2.jpg';
+
+export default function EkgSystematicGuide({ onNavigateTab, onSelectCase }) {
+    const [activeStep, setActiveStep] = useState(() => {
+        const hash = window.location.hash.toLowerCase();
+        const match = hash.match(/step[-_]?([1-7])/);
+        if (match) return parseInt(match[1], 10);
+        return 1;
+    });
+    const [selectedModalImage, setSelectedModalImage] = useState(null);
+
+    // Luk modal ved tastetryk på Escape
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === 'Escape') {
+                setSelectedModalImage(null);
+            }
+        };
+        if (selectedModalImage) {
+            window.addEventListener('keydown', handleKeyDown);
+        }
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [selectedModalImage]);
 
     const steps = [
         {
@@ -46,7 +115,54 @@ export default function EkgSystematicGuide({ onNavigateTab }) {
                         </div>
                     </div>
                 </div>
-            )
+            ),
+            images: [
+                {
+                    id: 'step1-ns',
+                    title: 'Normal Sinusrytme (Fysiologisk Reference)',
+                    badge: 'Reference (72 bpm)',
+                    subtitle: 'Regelmæssig puls med synkrone P-takker foran hvert QRS',
+                    caption: 'Klassisk 12-aflednings EKG fra rask person. Bemærk de regelmæssige R-R intervaller og den ensartede, positive P-tak foran hvert eneste QRS-kompleks i afledning II.',
+                    keyPoints: [
+                        'Positiv P-tak i afledning II og aVF',
+                        'Ensartet afstand mellem samtlige R-takker',
+                        'Normalt fysiologisk PR-interval (160 ms)',
+                        'Slanke og smalle QRS-komplekser (85 ms)'
+                    ],
+                    src: normalSinus1,
+                    caseId: 'normal_sinus'
+                },
+                {
+                    id: 'step1-afib',
+                    title: 'Atrieflimren (Uregelmæssigt Uregelmæssig)',
+                    badge: 'Uregelmæssig Arytmi',
+                    subtitle: 'Mangel på P-takker & kaotisk flimrelinje på grundlinjen',
+                    caption: 'Typisk hospitalsoptagelse af atrieflimren. Der ses fuldstændig uregelmæssige R-R intervaller uden nogen genkendelige P-takker forud for QRS. Grundlinjen udviser fin til grov flimren.',
+                    keyPoints: [
+                        'Total mangel på koordinerede P-takker',
+                        'Uregelmæssigt uregelmæssig ventrikelaktion',
+                        'Ujævn flimrende grundlinje i II og V1',
+                        'Kræver 10-sekunders optælling til frekvensberegning'
+                    ],
+                    src: afib1,
+                    caseId: 'afib'
+                },
+                {
+                    id: 'step1-aflutter',
+                    title: 'Atrieflagren (Savtakket Flutter-Mønster)',
+                    badge: 'Regelmæssig Arytmi',
+                    subtitle: 'F-bølger ca. 300/min i de inferiore afledninger (II, III, aVF)',
+                    caption: 'Karakteristisk atrieflagren med regelmæssig AV-overledning. Læg mærke til den markante "savtakkede" grundlinje (flutter-bølger) i afledning II, III og aVF.',
+                    keyPoints: [
+                        'Regelmæssige savtakkede F-bølger (~300/min)',
+                        'Typisk 2:1 blokering med ventrikelfrekvens på 150/min',
+                        'Tydeligst i de inferiore afledninger (II, III, aVF)',
+                        'Fravær af normal flad isoelektrisk linje'
+                    ],
+                    src: aflutter1,
+                    caseId: 'aflutter'
+                }
+            ]
         },
         {
             id: 2,
@@ -97,11 +213,58 @@ export default function EkgSystematicGuide({ onNavigateTab }) {
                     <div className="p-4 bg-amber-50 rounded-2xl border border-amber-200 text-amber-900">
                         <strong className="block font-bold mb-1">10-sekunders reglen (Ved uregelmæssig rytme / Atrieflimren):</strong>
                         <p className="text-amber-800">
-                            Ved uregelmæssig puls dur 300-reglen ikke. Tæl i stedet det totale antal QRS-komplekser på hele den 10 sekunders rytmestrimmel (standardark) og gang tallet med 6. (Eks. 14 slag på 10 sek $\times 6 = 84$ slag/min).
+                            Ved uregelmæssig puls dur 300-reglen ikke. Tæl i stedet det totale antal QRS-komplekser på hele den 10 sekunders rytmestrimmel (standardark) og gang tallet med 6. (Eks. 14 slag på 10 sek &times; 6 = 84 slag/min).
                         </p>
                     </div>
                 </div>
-            )
+            ),
+            images: [
+                {
+                    id: 'step2-grid',
+                    title: 'Standard Kalibreringsark & Tern-måling',
+                    badge: '300-Reglen & Tidsmåling',
+                    subtitle: '25 mm/s papirhastighed & 10 mm/mV voltage kalibrering',
+                    caption: 'Præcisions-kalibreringsark. Ved 25 mm/s svarer 1 lille tern til 0,04 s (40 ms) og 1 stort tern (5 mm) til 0,20 s (200 ms). 300 store tern udgør 1 minut.',
+                    keyPoints: [
+                        '1 lille tern = 40 ms (0,04 s)',
+                        '1 stort tern = 200 ms (0,20 s)',
+                        '300 store tern = 1 minut (60 sekunder)',
+                        'Mnemoteknik: 300 - 150 - 100 - 75 - 60 - 50'
+                    ],
+                    src: normalSinus4,
+                    caseId: 'normal_sinus'
+                },
+                {
+                    id: 'step2-10s',
+                    title: '10-sekunders Rytmestrimmel (Nederst på Arket)',
+                    badge: '10-Sekunders Reglen',
+                    subtitle: 'Uundværlig ved uregelmæssig hjerteaktion som Atrieflimren',
+                    caption: 'Den gennemgående nederste afledning (Lead II) optager uafbrudt i 10 sekunder. Ved uregelmæssig rytme tælles samtlige QRS på denne strimmel og multipliceres med 6.',
+                    keyPoints: [
+                        'Fuld 10 sekunders kontinuerlig afledningsoptagelse',
+                        'Tæl samtlige R-takker og gang med 6',
+                        'Giver den korrekte gennemsnitsfrekvens ved flimren',
+                        'Standard hospitalsformat i Danmark og internationalt'
+                    ],
+                    src: standard12Lead,
+                    caseId: 'normal_sinus'
+                },
+                {
+                    id: 'step2-tachy',
+                    title: 'Hurtig Ventrikelaktion (Takykardi)',
+                    badge: 'Takykardi (> 120 bpm)',
+                    subtitle: 'Tætte R-R intervaller under 2-3 store tern',
+                    caption: 'Patientoptagelse med hurtig atrieflimren (takykardi). R-takkerne ligger meget tæt med en gennemsnitlig afstand på under 2,5 store tern, svarende til en hjertefrekvens omkring 130-140/min.',
+                    keyPoints: [
+                        'R-R afstand < 3 store tern indikerer puls > 100 bpm',
+                        'Hurtig ventrikelaktion øger myokardielt iltforbrug',
+                        'Behov for akut frekvensregulering (fx betablokker)',
+                        'Vurder samtidig patientens blodtryk og kredsløb'
+                    ],
+                    src: afib2,
+                    caseId: 'afib'
+                }
+            ]
         },
         {
             id: 3,
@@ -116,9 +279,10 @@ export default function EkgSystematicGuide({ onNavigateTab }) {
                         Hjerteaksen angiver nettoretningen for ventriklernes depolarisationsvektor i frontalplanet.
                     </p>
 
+                    {/* Visuel Cabrera Kompas Oversigt */}
                     <div className="p-4 bg-white rounded-2xl border border-[#E8E4D9] shadow-xs">
                         <strong className="block text-[#3A4A40] font-bold mb-2 text-sm">Den Hurtige 2-Afledningsmetode (I og II):</strong>
-                        <div className="space-y-2">
+                        <div className="space-y-2 mb-4">
                             <div className="flex items-center justify-between p-2.5 rounded-xl bg-emerald-50 border border-emerald-200">
                                 <div>
                                     <strong className="text-emerald-900 font-bold">Normal Akse (-30° til +90°):</strong>
@@ -145,9 +309,89 @@ export default function EkgSystematicGuide({ onNavigateTab }) {
                                 <span className="px-2 py-1 bg-orange-600 text-white font-bold rounded-lg text-[10px]">RAD</span>
                             </div>
                         </div>
+
+                        {/* Pædagogisk Cabrera SVG Diagram */}
+                        <div className="p-3 bg-[#F2F6F3] rounded-xl border border-[#D9E1DA] flex flex-col md:flex-row items-center gap-4">
+                            <div className="w-48 h-48 shrink-0 relative flex items-center justify-center">
+                                <svg viewBox="0 0 200 200" className="w-full h-full">
+                                    {/* Cirkel baggrund */}
+                                    <circle cx="100" cy="100" r="85" fill="#FAF9F6" stroke="#D9E1DA" strokeWidth="2" />
+                                    {/* Normal Sektor (-30° til +90°) */}
+                                    <path d="M 100 100 L 173.6 57.5 A 85 85 0 0 1 100 185 Z" fill="#E2E8DF" opacity="0.65" />
+                                    {/* Akser */}
+                                    <line x1="15" y1="100" x2="185" y2="100" stroke="#839788" strokeWidth="1.5" strokeDasharray="3 3" />
+                                    <line x1="100" y1="15" x2="100" y2="185" stroke="#839788" strokeWidth="1.5" strokeDasharray="3 3" />
+                                    {/* Lead Vektorer */}
+                                    <line x1="100" y1="100" x2="185" y2="100" stroke="#2C3F34" strokeWidth="2.5" />
+                                    <line x1="100" y1="100" x2="142.5" y2="173.6" stroke="#2C3F34" strokeWidth="2.5" />
+                                    <line x1="100" y1="100" x2="100" y2="185" stroke="#2C3F34" strokeWidth="2.5" />
+                                    <line x1="100" y1="100" x2="173.6" y2="57.5" stroke="#2C3F34" strokeWidth="1.5" />
+                                    {/* Tekster */}
+                                    <text x="175" y="95" fontSize="9" fontWeight="bold" fill="#2C3F34">I (0°)</text>
+                                    <text x="145" y="180" fontSize="9" fontWeight="bold" fill="#2C3F34">II (+60°)</text>
+                                    <text x="92" y="195" fontSize="9" fontWeight="bold" fill="#2C3F34">aVF (+90°)</text>
+                                    <text x="160" y="50" fontSize="9" fontWeight="bold" fill="#839788">aVL (-30°)</text>
+                                    <text x="100" y="125" fontSize="8" fontWeight="bold" fill="#2C3F34" textAnchor="middle">Normal Akse</text>
+                                </svg>
+                            </div>
+                            <div className="text-[11px] text-[#3A4A40] space-y-1.5">
+                                <strong className="block text-xs font-bold text-[#2C3F34]">Cabrera-Cirklen & Polaritet:</strong>
+                                <p>• <strong>Lead I (0°):</strong> Måler horisontalt mod venstre arm.</p>
+                                <p>• <strong>Lead II (+60°):</strong> Måler skråt nedad mod venstre fod (hjertets fysiologiske anatomiske længdeakse).</p>
+                                <p>• <strong>aVF (+90°):</strong> Måler lodret nedad mod fødderne.</p>
+                                <p>• Hvis både I og II er positive, <em>skal</em> aksen ligge i det grønne fysiologiske felt (-30° til +90°)!</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            )
+            ),
+            images: [
+                {
+                    id: 'step3-rad',
+                    title: 'Højredrejet Akse (RAD > +90°) ved Akut Lungeemboli',
+                    badge: 'RAD (+110°)',
+                    subtitle: 'Akut trykbelastning af højre ventrikel (S1 Q3 T3)',
+                    caption: 'Klassisk akut lungeemboli-EKG. Hjerteaksen er markant drejet mod højre (RAD): QRS er overvejende negativt i afledning I og stærkt dominerende positivt i afledning III. Ledsages af S1 Q3 T3 mønster.',
+                    keyPoints: [
+                        'Negativt QRS i afledning I (dyb S-tak)',
+                        'Højt positivt QRS i afledning III (høj R-tak)',
+                        'McGinn-White S1 Q3 T3 mønster',
+                        'Akut trykoverbelastning af pulmonalarterien'
+                    ],
+                    src: pulmonaryEmbolism1,
+                    caseId: 'pulmonary_embolism'
+                },
+                {
+                    id: 'step3-lad',
+                    title: 'Venstredrejet Akse (LAD < -30°) ved Venstre Ventrikelhypertrofi',
+                    badge: 'LAD (-45°)',
+                    subtitle: 'Venstresidig overvægt & hemiblok mønster',
+                    caption: 'Patient med langvarig arteriel hypertension og venstre ventrikelhypertrofi. QRS er overvejende positivt i afledning I, men dybt negativt i afledning II og III/aVF.',
+                    keyPoints: [
+                        'Positivt QRS i afledning I',
+                        'Dybt negativt QRS i afledning II og III',
+                        'Massiv elektrisk overvægt mod venstre opad',
+                        'Ses hyppigt sammen med høje venstresidige voltager'
+                    ],
+                    src: lvh1,
+                    caseId: 'lvh'
+                },
+                {
+                    id: 'step3-normal',
+                    title: 'Normal Fysiologisk Hjerteakse (+60°)',
+                    badge: 'Normal Akse (+60°)',
+                    subtitle: 'Positivt QRS i både afledning I og II',
+                    caption: 'Standard normal EKG-tracing. Hjerteaksen ligger i det ideelle anatomiske område (+30° til +60°). QRS er markant positivt i både afledning I og II, hvilket udelukker aksefejl.',
+                    keyPoints: [
+                        'Slanke, positive QRS-komplekser i afledning I',
+                        'Maksimal positiv R-tak i afledning II (+60°)',
+                        'Nettovektor rettet direkte mod venstre hofte',
+                        'Udelukker grenblok og fascikelblokke'
+                    ],
+                    src: normalSinus2,
+                    caseId: 'normal_sinus'
+                }
+            ]
         },
         {
             id: 4,
@@ -180,7 +424,54 @@ export default function EkgSystematicGuide({ onNavigateTab }) {
                         </div>
                     </div>
                 </div>
-            )
+            ),
+            images: [
+                {
+                    id: 'step4-av1',
+                    title: 'Førstegrads AV-blok (PR > 200 ms)',
+                    badge: 'Konstant Forlænget PR',
+                    subtitle: 'Forsinket overledning i AV-knuden uden slagudfald',
+                    caption: 'Patient med medicininduceret eller degeneration i AV-knuden. Bemærk det markant forlængede PR-interval på ca. 280 ms (> 7 små tern). Hvert enkelt P-tak følges dog trofast af et QRS.',
+                    keyPoints: [
+                        'PR-interval konstant > 200 ms (5 små tern)',
+                        'Ingen udfald af QRS-komplekser (1:1 overledning)',
+                        'Slanke QRS-komplekser med normal intakt grenledning',
+                        'Ofte forårsaget af betablokkere, diltiazem eller digoxin'
+                    ],
+                    src: avBlock1_1,
+                    caseId: 'av_block_1'
+                },
+                {
+                    id: 'step4-wenck',
+                    title: 'Andengrads AV-blok Type 1 (Wenckebach / Mobitz I)',
+                    badge: 'Progredierende PR-forlængelse',
+                    subtitle: 'Gradvis udtrætning af AV-knuden indtil udfald af QRS',
+                    caption: 'Klassisk Wenckebach-fænomen. PR-intervallet bliver gradvist længere for hvert hjerteslag, indtil en P-tak blokeres fuldstændigt i AV-knuden uden efterfølgende QRS. Derefter nulstilles cyklussen.',
+                    keyPoints: [
+                        'Gradvis forlængelse af PR over 3-5 slag',
+                        'Enkelt blokeret P-tak uden efterfølgende QRS',
+                        'Efterfølgende PR-interval er det korteste i rækken',
+                        'Godartet AV-knudebaseret fænomen (sjældent akut PM)'
+                    ],
+                    src: avBlock2W_1,
+                    caseId: 'av_block_2_wenckebach'
+                },
+                {
+                    id: 'step4-peri',
+                    title: 'PR-depression ved Akut Perikarditis',
+                    badge: 'PR-Segment Depression',
+                    subtitle: 'Subepikardiel inflammation i atrierne',
+                    caption: 'Akut perikarditis med inflammation af epikardiet. Bemærk den karakteristiske skråt nedadgående PR-depression under den isoelektriske linje i afledning II, ledsaget af reciprok PR-elevation i aVR.',
+                    keyPoints: [
+                        'PR-segment hælder nedad under den isoelektriske linje',
+                        'Reciprok PR-elevation i afledning aVR',
+                        'Tidligt og meget specifikt perikarditistegn',
+                        'Ses forud for fuld udvikling af ST-elevationer'
+                    ],
+                    src: pericarditis1,
+                    caseId: 'pericarditis'
+                }
+            ]
         },
         {
             id: 5,
@@ -247,7 +538,54 @@ export default function EkgSystematicGuide({ onNavigateTab }) {
                         </div>
                     </div>
                 </div>
-            )
+            ),
+            images: [
+                {
+                    id: 'step5-lbbb',
+                    title: 'Venstresidigt Grenblok (LBBB - WiLLiaM)',
+                    badge: 'WiLLiaM (V1=W, V6=M)',
+                    subtitle: 'Bredt QRS ≥ 120 ms & tab af septale q-takker',
+                    caption: 'WiLLiaM-reglen i praksis: V1 viser et dybt, bredt QS-kompleks ("W"-form), mens V6 viser en bred, kærvet R-tak ("M"-form). Venstre ventrikel aktiveres forsinket via myocyt-til-myocyt spredning.',
+                    keyPoints: [
+                        'QRS-varighed ≥ 120 ms (3 små tern)',
+                        'V1: Dyb bred QS/rS (ligner et W)',
+                        'V6: Kærvet M-formet R-tak uden fysiologisk q-tak',
+                        'Sekundære diskordante ST-T forandringer'
+                    ],
+                    src: lbbb1,
+                    caseId: 'lbbb'
+                },
+                {
+                    id: 'step5-rbbb',
+                    title: 'Højresidigt Grenblok (RBBB - MaRRoW)',
+                    badge: 'MaRRoW (V1=M, V6=W)',
+                    subtitle: "rsR' kaninører i V1 & bred sløret S-tak i V6",
+                    caption: "MaRRoW-reglen i praksis: V1 viser det berømte M-formede rsR'-mønster (kaninører), mens afledning I og V6 viser en bred, afrundet og slæbende S-tak (W-form).",
+                    keyPoints: [
+                        'QRS-varighed ≥ 120 ms',
+                        "V1: Klassisk rsR' (kaninører / M-form)",
+                        'I og V6: Bred, slæbende S-tak (W-form)',
+                        'Normal venstresidig depolarisering bevaret'
+                    ],
+                    src: rbbb1,
+                    caseId: 'rbbb'
+                },
+                {
+                    id: 'step5-vt',
+                    title: 'Ventrikulær Takykardi (Bredt Patologisk QRS)',
+                    badge: 'Bredkomplekset QRS (> 140 ms)',
+                    subtitle: 'Ektopisk impulsudspring fra ventrikelmyokardiet',
+                    caption: 'Akut ventrikulær takykardi. QRS-komplekserne er ekstremt brede (> 140 ms) og bizarre i formen. Der ses AV-dissociation og hjerteaktion over 160/min. Livstruende arytmi!',
+                    keyPoints: [
+                        'QRS-bredde markant > 120 ms (> 140 ms styrker VT)',
+                        'Hurtig, regelmæssig bredkomplekset rytme',
+                        'AV-dissociation med uafhængige atrier',
+                        'Bredkomplekset takykardi behandles som VT indtil modbevist'
+                    ],
+                    src: vt1,
+                    caseId: 'vt'
+                }
+            ]
         },
         {
             id: 6,
@@ -309,15 +647,77 @@ export default function EkgSystematicGuide({ onNavigateTab }) {
                         </div>
                     </div>
                 </div>
-            )
+            ),
+            images: [
+                {
+                    id: 'step6-ant-stemi',
+                    title: 'Akut Forvægsinfarkt (Anterior STEMI)',
+                    badge: 'Konveks ST-elevation',
+                    subtitle: 'Akut LAD-okklusion i forvæggen med "tombstone" mønster',
+                    caption: 'Dramatiske konvekse ("tombstone") ST-elevationer på 4-6 mm i V1-V4 forårsaget af akut transmural iskæmi i forvæggen. Samtidig ses reciprokke ST-depressioner i bunden af hjertet (II, III, aVF).',
+                    keyPoints: [
+                        'ST-elevation ≥ 2,0-2,5 mm i V1-V4',
+                        'Konveks opadbuet form ("gravstensmønster")',
+                        'Akut total LAD-trombose',
+                        'Reciprokke ST-depressioner i II, III og aVF'
+                    ],
+                    src: anteriorStemi1,
+                    caseId: 'anterior_stemi'
+                },
+                {
+                    id: 'step6-inf-stemi',
+                    title: 'Akut Undervægsinfarkt (Inferior STEMI & Reciprokke)',
+                    badge: 'Elevation + Spejlbillede',
+                    subtitle: 'RCA-okklusion med reciprokke depressioner i aVL og I',
+                    caption: 'Klassisk inferior STEMI. Tydelig ST-elevation i II, III og aVF. Bemærk det elektriske spejlbillede (reciprok ST-depression) i afledning I og aVL, hvilket definitivt bekræfter infarkt frem for perikarditis.',
+                    keyPoints: [
+                        'ST-elevation i II, III og aVF',
+                        'Reciprokke ST-depressioner i afledning I og aVL',
+                        'Højresidig koronararterie (RCA) okklusion',
+                        'Husk kontrol for højresidigt infarkt (V4R)'
+                    ],
+                    src: inferiorStemi1,
+                    caseId: 'inferior_stemi'
+                },
+                {
+                    id: 'step6-pericarditis',
+                    title: 'Akut Perikarditis (Diffus Hængekøje ST-elevation)',
+                    badge: 'Konkav ST-elevation',
+                    subtitle: 'Generel perikardial irritation uden koronar anatomisk grænse',
+                    caption: 'Patient med akutte pleuritiske brystsmerter. ST-elevationerne er diffust til stede i næsten alle afledninger, har konkav ("hængekøje") form og mangler reciprokke depressioner (undtagen aVR).',
+                    keyPoints: [
+                        'Konkav ("glad") ST-elevation',
+                        'Diffus udbredelse på tværs af koronarterritorier',
+                        'Ingen reciprokke depressioner (bortset fra aVR)',
+                        'Ledsagende PR-depression i afledning II'
+                    ],
+                    src: pericarditis1,
+                    caseId: 'pericarditis'
+                },
+                {
+                    id: 'step6-hyperk',
+                    title: 'Hyperkaliæmi (Høje Teltede T-takker)',
+                    badge: 'Spidse Telt-T-takker',
+                    subtitle: 'Accelereret repolarisering ved forhøjet kalium (> 6,5 mmol/L)',
+                    caption: 'Svær hyperkaliæmi hos nyresvigtpatient. T-takkerne er symmetriske, spidse og ekstremt høje ("teltede") med smal base i de prækordiale afledninger.',
+                    keyPoints: [
+                        'Symmetriske, spidse, teltede T-takker',
+                        'Meget smal base på T-takken',
+                        'Kan hurtigt progrediere til sinusbølge og hjertestop',
+                        'Akut behandlingskrævende medicinsk nødsituation'
+                    ],
+                    src: hyperkalemia1,
+                    caseId: 'hyperkalemia'
+                }
+            ]
         },
         {
             id: 7,
             title: '7. QT/QTc-interval',
             subtitle: 'Måling, Bazetts korrektion og psykofarmaka risikovurdering',
             badge: 'Trin 7',
-            targetTab: 'qtc',
-            tabLabel: 'Åbn Klinisk QTc-Beregner',
+            targetTab: 'viewer',
+            tabLabel: 'Afprøv i 12-Aflednings Viser',
             content: (
                 <div className="space-y-4 text-xs leading-relaxed text-[#3A4A40]">
                     <p>
@@ -346,7 +746,54 @@ export default function EkgSystematicGuide({ onNavigateTab }) {
                         </div>
                     </div>
                 </div>
-            )
+            ),
+            images: [
+                {
+                    id: 'step7-longqt1',
+                    title: 'Forlænget QTc-interval (> 500 ms)',
+                    badge: 'Kritisk Forlænget QTc',
+                    subtitle: 'Forsinket repolarisering & T-bølge forbi midtpunkt af R-R',
+                    caption: 'Patient i psykofarmakologisk behandling med citalopram og quetiapin. QTc måles til over 500 ms. Hampton tommelfingerregel: T-takken afsluttes tydeligt forbi det halve afstanden til næste R-tak.',
+                    keyPoints: [
+                        'QTc > 500 ms (højeste kardiologiske risikoklasse)',
+                        'T-tak slutter langt forbi midtpunktet af R-R intervallet',
+                        'Høj risiko for tidlige efterdepolariseringer (EAD)',
+                        'Klinisk indikation for dosisreduktion eller præparatskift'
+                    ],
+                    src: longQtc1,
+                    caseId: 'long_qtc'
+                },
+                {
+                    id: 'step7-torsades',
+                    title: 'Ventrikulær Arytmi & Torsades de Pointes Risiko',
+                    badge: 'Malign Arytmirisiko',
+                    subtitle: 'Livstruende arytmiudvikling udløst af forlænget repolarisering',
+                    caption: 'Tracing fra patient med langt QT-syndrom, som har udviklet hurtig ventrikulær takykardi. R-på-T fænomen under den sårbare repolariseringsfase kan udløse Torsades de Pointes og ventrikelflimren.',
+                    keyPoints: [
+                        'R-på-T fænomen i den forlængede repolariseringsfase',
+                        'Spindende polaritetsakse ved polymorf VT / Torsades',
+                        'Hæmodynamisk ustabilitet, nærsynkope og hjertestop',
+                        'Akut behandling med magnesiumsulfat IV og defibrillering'
+                    ],
+                    src: vt2,
+                    caseId: 'vt'
+                },
+                {
+                    id: 'step7-longqt2',
+                    title: 'Monitorering af QTc under Psykofarmakologisk Behandling',
+                    badge: 'Klinisk Telemetri',
+                    subtitle: 'Opfølgende 12-aflednings kontrol i hospitalsregi',
+                    caption: 'Kontrol-EKG hos psykiatrisk patient. Viser hvordan præcis måling af QT (fra start af Q-tak til T-takkens tilbagevenden til grundlinjen via tangens-metoden) sikrer korrekt dosering.',
+                    keyPoints: [
+                        'Tangens-metoden langs T-takkens stejleste nedadgående hældning',
+                        'Bazetts formel: QTc = QT / sqrt(RR i sekunder)',
+                        'Baseline-EKG altid påkrævet før opstart af proarytmiske stoffer',
+                        'Kontrol-EKG ved dosisøgning eller kombinationsbehandling'
+                    ],
+                    src: longQtc2,
+                    caseId: 'long_qtc'
+                }
+            ]
         }
     ];
 
@@ -432,14 +879,130 @@ export default function EkgSystematicGuide({ onNavigateTab }) {
                         )}
                     </div>
 
+                    {/* Trinets teoretiske og kliniske gennemgang */}
                     {currentStepObj.content}
+
+                    {/* DEDIKERET SEKTION: KLINISKE BILLEDEKSEMPLER FOR DETTE TRIN */}
+                    {currentStepObj.images && currentStepObj.images.length > 0 && (
+                        <div className="mt-8 pt-6 border-t-2 border-[#839788]/20 animate-fadeIn">
+                            <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+                                <div className="flex items-center gap-2.5">
+                                    <div className="bg-[#839788] p-2 rounded-xl text-white shadow-xs">
+                                        <Eye className="w-4 h-4" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-sm font-bold text-[#3A4A40] leading-tight">
+                                            Kliniske Billedeksempler for {currentStepObj.title} ({currentStepObj.images.length})
+                                        </h3>
+                                        <p className="text-xs text-[#839788]">
+                                            Autentiske hospitalsscans der illustrerer netop dette trin i tolkningen
+                                        </p>
+                                    </div>
+                                </div>
+                                <span className="text-[11px] font-bold px-3 py-1 rounded-xl bg-[#EFF3F0] text-[#3A4A40] border border-[#D9E1DA]">
+                                    🔍 Klik på et billede for at forstørre
+                                </span>
+                            </div>
+
+                            {/* Galleri over de kliniske eksempler */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                {currentStepObj.images.map((img) => (
+                                    <div 
+                                        key={img.id}
+                                        className="group bg-white rounded-2xl border border-[#E8E4D9] hover:border-[#839788]/60 overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between"
+                                    >
+                                        {/* Billede med hover zoom overlay */}
+                                        <div 
+                                            onClick={() => setSelectedModalImage(img)}
+                                            className="relative aspect-[16/10] bg-[#1a231f] cursor-pointer overflow-hidden"
+                                            title="Klik for at forstørre scan"
+                                        >
+                                            <img 
+                                                src={img.src} 
+                                                alt={img.title}
+                                                className="w-full h-full object-contain p-1.5 transition-transform duration-300 group-hover:scale-[1.04]"
+                                                loading="lazy"
+                                            />
+                                            {/* Badge */}
+                                            <div className="absolute top-2 left-2">
+                                                <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white/95 text-[#2C3F34] shadow-xs backdrop-blur-xs border border-[#E8E4D9]">
+                                                    {img.badge}
+                                                </span>
+                                            </div>
+                                            {/* Hover Zoom Prompt */}
+                                            <div className="absolute inset-0 bg-black/35 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-1.5 text-white text-xs font-bold">
+                                                <ZoomIn className="w-4 h-4 text-white" />
+                                                <span>Forstør Scan</span>
+                                            </div>
+                                        </div>
+
+                                        {/* Tekst og kliniske kendetegn */}
+                                        <div className="p-4 flex flex-col flex-1 justify-between gap-3 bg-gradient-to-b from-white to-[#FAF9F6]">
+                                            <div>
+                                                <h4 className="font-bold text-xs text-[#3A4A40] group-hover:text-[#2C3F34] leading-snug">
+                                                    {img.title}
+                                                </h4>
+                                                {img.subtitle && (
+                                                    <p className="text-[10px] font-medium text-[#839788] mt-0.5">
+                                                        {img.subtitle}
+                                                    </p>
+                                                )}
+                                                <p className="text-[11px] text-[#5C6B61] mt-2 leading-relaxed">
+                                                    {img.caption}
+                                                </p>
+                                                {img.keyPoints && img.keyPoints.length > 0 && (
+                                                    <div className="mt-2.5 pt-2 border-t border-[#E8E4D9]/60">
+                                                        <span className="text-[10px] font-bold text-[#839788] uppercase tracking-wider block mb-1">
+                                                            Hvad du skal se efter:
+                                                        </span>
+                                                        <ul className="space-y-1 text-[11px] text-[#3A4A40]">
+                                                            {img.keyPoints.map((pt, i) => (
+                                                                <li key={i} className="flex items-start gap-1.5">
+                                                                    <span className="text-emerald-700 font-bold shrink-0">✓</span>
+                                                                    <span className="leading-tight">{pt}</span>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    </div>
+                                                )}
+                                            </div>
+
+                                            {/* Handlinger i bunden af kortet */}
+                                            <div className="pt-3 border-t border-[#E8E4D9]/80 flex items-center justify-between gap-2">
+                                                <button
+                                                    onClick={() => setSelectedModalImage(img)}
+                                                    className="flex items-center gap-1.5 text-[11px] font-bold text-[#839788] hover:text-[#3A4A40] transition-colors"
+                                                >
+                                                    <ZoomIn className="w-3.5 h-3.5" />
+                                                    <span>Forstør</span>
+                                                </button>
+                                                {img.caseId && onSelectCase && (
+                                                    <button
+                                                        onClick={() => onSelectCase(img.caseId)}
+                                                        className="flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-[#EFF3F0] hover:bg-[#E2E8DF] text-[11px] font-bold text-[#2C3F34] border border-[#D9E1DA] transition-colors"
+                                                        title="Åbn denne case direkte i 12-afledningsviseren"
+                                                    >
+                                                        <span>12-Aflednings EKG</span>
+                                                        <ChevronRight className="w-3 h-3" />
+                                                    </button>
+                                                )}
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
                 </div>
 
                 {/* Trin Frem / Tilbage Knapper */}
                 <div className="flex justify-between items-center pt-6 mt-8 border-t border-[#E8E4D9]">
                     <button
                         disabled={activeStep === 1}
-                        onClick={() => setActiveStep(prev => Math.max(1, prev - 1))}
+                        onClick={() => {
+                            setActiveStep(prev => Math.max(1, prev - 1));
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}
                         className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${activeStep === 1
                             ? 'opacity-40 cursor-not-allowed text-[#839788]'
                             : 'bg-[#F2F6F3] text-[#3A4A40] border border-[#E8E4D9] hover:bg-[#E2E8DF]'
@@ -450,16 +1013,111 @@ export default function EkgSystematicGuide({ onNavigateTab }) {
 
                     <button
                         disabled={activeStep === steps.length}
-                        onClick={() => setActiveStep(prev => Math.min(steps.length, prev + 1))}
-                        className={`px-5 py-2 rounded-xl text-xs font-bold transition-all ${activeStep === steps.length
-                            ? 'opacity-40 cursor-not-allowed text-[#839788]'
+                        onClick={() => {
+                            setActiveStep(prev => Math.min(steps.length, prev + 1));
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}
+                        className={`px-5 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${activeStep === steps.length
+                            ? 'bg-emerald-100 text-emerald-800 border border-emerald-300 opacity-90'
                             : 'bg-[#839788] text-white hover:bg-[#6A7A6E] shadow-sm'
                             }`}
                     >
-                        Næste Trin ({activeStep + 1} / {steps.length})
+                        {activeStep === steps.length ? (
+                            <>
+                                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700" />
+                                <span>Alle 7 Trin Gennemgået</span>
+                            </>
+                        ) : (
+                            <span>Næste Trin ({activeStep + 1} / {steps.length})</span>
+                        )}
                     </button>
                 </div>
             </div>
+
+            {/* LIGHTBOX FORSTØRRELSES-MODAL FOR KLINISKE SCANS */}
+            {selectedModalImage && (
+                <div 
+                    className="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm flex items-center justify-center p-4 md:p-8 animate-fadeIn"
+                    onClick={() => setSelectedModalImage(null)}
+                >
+                    <div 
+                        className="bg-white rounded-3xl max-w-5xl w-full max-h-[92vh] flex flex-col overflow-hidden shadow-2xl border border-white/20"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        {/* Modal Header */}
+                        <div className="p-4 md:px-6 md:py-4 bg-[#F2F6F3] border-b border-[#E8E4D9] flex items-center justify-between gap-4 shrink-0">
+                            <div className="flex items-center gap-3">
+                                <span className="px-2.5 py-1 rounded-lg text-xs font-bold bg-white text-[#2C3F34] border border-[#D9E1DA] shadow-2xs">
+                                    {selectedModalImage.badge}
+                                </span>
+                                <div>
+                                    <h3 className="font-bold text-base text-[#3A4A40] leading-tight">
+                                        {selectedModalImage.title}
+                                    </h3>
+                                    {selectedModalImage.subtitle && (
+                                        <p className="text-xs text-[#839788]">{selectedModalImage.subtitle}</p>
+                                    )}
+                                </div>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                {selectedModalImage.caseId && onSelectCase && (
+                                    <button
+                                        onClick={() => {
+                                            const cid = selectedModalImage.caseId;
+                                            setSelectedModalImage(null);
+                                            onSelectCase(cid);
+                                        }}
+                                        className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#3A4A40] hover:bg-[#2C3F34] text-white text-xs font-bold transition-all shadow-xs"
+                                    >
+                                        <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+                                        <span>Åbn i 12-Aflednings Viser</span>
+                                    </button>
+                                )}
+                                <button
+                                    onClick={() => setSelectedModalImage(null)}
+                                    className="p-2 rounded-xl text-slate-500 hover:text-slate-800 hover:bg-white/80 transition-colors"
+                                    title="Luk (Esc)"
+                                >
+                                    <X className="w-5 h-5" />
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Modal Billede */}
+                        <div className="flex-1 bg-[#101713] p-2 md:p-4 overflow-auto flex items-center justify-center min-h-[280px]">
+                            <img 
+                                src={selectedModalImage.src} 
+                                alt={selectedModalImage.title}
+                                className="max-w-full max-h-[62vh] object-contain rounded-lg shadow-lg border border-white/10"
+                            />
+                        </div>
+
+                        {/* Modal Forklaring & Kliniske pointers */}
+                        <div className="p-4 md:p-5 bg-white border-t border-[#E8E4D9] shrink-0 text-xs text-[#3A4A40] flex flex-col md:flex-row gap-4 items-start justify-between">
+                            <div className="flex-1">
+                                <p className="text-xs text-[#3A4A40] leading-relaxed">
+                                    {selectedModalImage.caption}
+                                </p>
+                                {selectedModalImage.keyPoints && (
+                                    <div className="mt-2.5 flex flex-wrap gap-2">
+                                        {selectedModalImage.keyPoints.map((pt, i) => (
+                                            <span key={i} className="px-2.5 py-1 rounded-lg bg-[#F2F6F3] text-[#2C3F34] text-[11px] font-medium border border-[#E8E4D9]">
+                                                ✓ {pt}
+                                            </span>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+                            <button
+                                onClick={() => setSelectedModalImage(null)}
+                                className="px-4 py-2 rounded-xl text-xs font-bold bg-[#F2F6F3] text-[#3A4A40] hover:bg-[#E2E8DF] border border-[#E8E4D9] transition-colors shrink-0 self-end md:self-auto"
+                            >
+                                Luk Visning
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

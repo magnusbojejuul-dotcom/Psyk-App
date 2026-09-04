@@ -36,8 +36,8 @@ export default function EkgViewer({
     const [zoomLevel, setZoomLevel] = useState(1.0);
     const [activeLead, setActiveLead] = useState(selectedLead || 'II');
     const [displayMode, setDisplayMode] = useState(() => {
-        if (window.location.hash.toLowerCase().includes('real')) return 'real';
-        return 'simulated';
+        if (window.location.hash.toLowerCase().includes('simulated')) return 'simulated';
+        return 'real';
     });
     const [showExplanation, setShowExplanation] = useState(true);
     const [selectedImageIdx, setSelectedImageIdx] = useState(0);

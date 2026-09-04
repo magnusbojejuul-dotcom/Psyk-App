@@ -112,7 +112,7 @@ export const CASE_CLINICAL_COMPARISONS = {
         diffFromNormal: 'Dette er det fysiologiske reference-EKG. Alle tidsintervaller (PR, QRS, QTc), tak-amplituder og overledninger er inden for normale referencegrænser. Danner udgangspunkt for sammenligning med alle patologiske tilstande.',
         pathophysiology: 'Normal impulsudbredelse fra SA-knuden i højre atrium, fysiologisk forsinkelse i AV-knuden (sikrer fuld atrietømning) og lynhurtig synkron aktivering af begge ventrikler via His-Purkinje systemet fra endokardium mod epikardium.',
         sundhedDkTitle: 'Sundhed.dk: EKG-tjekliste i almen praksis',
-        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/undersoegelser/ekg-tjekliste/',
+        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-tjekliste/',
         dcsTitle: 'DCS: Nationale Vejledninger for EKG',
         dcsUrl: 'https://nbv.cardio.dk',
         realEkgImages: [
@@ -161,9 +161,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         pathophysiology: 'Akut total trombotisk okklusion af LAD (Left Anterior Descending) arterien forårsager iltmangel i hele forvæggen og septum. De iskæmiske ventrikelmyocytter mister deres hvilemembranpotentiale, hvilket skaber en permanent skadestrøm (injury current) rettet fremad mod V1–V4.',
         clinicalCriteria: 'DCS Kriterier for STEMI: ST-elevation ved J-punktet i to sammenhængende afledninger: ≥ 2.0 mm hos mænd ≥ 40 år (≥ 2.5 mm hos mænd < 40 år) eller ≥ 1.5 mm hos kvinder i V2–V3, samt ≥ 1.0 mm i øvrige afledninger.',
         sundhedDkTitle: 'Sundhed.dk: ST-elevationsmyokardieinfarkt (STEMI)',
-        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/koronarsygdom/st-elevationsmyokardieinfarkt/',
+        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/koronarsygdom/akut-koronart-syndrom/',
         dcsTitle: 'DCS Behandlingsvejledning: Akut Koronart Syndrom (AKS / STEMI)',
-        dcsUrl: 'https://nbv.cardio.dk/aks',
+        dcsUrl: 'https://nbv.cardio.dk/kapitel/aks/',
         realEkgImages: [
             {
                 id: 'as1',
@@ -203,9 +203,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         pathophysiology: 'Akut okklusion af RCA (Højre Koronararterie) eller sjældnere LCx. Da RCA forsyner AV-knuden hos ca. 90% af befolkningen, ses ofte ledsagende sinusbradykardi eller AV-blok.',
         clinicalCriteria: 'DCS Kriterier: ST-elevation ≥ 1.0 mm i mindst to af afledningerne II, III og aVF, ledsaget af reciprok depression i aVL.',
         sundhedDkTitle: 'Sundhed.dk: Akut myokardieinfarkt og koronarsygdom',
-        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/koronarsygdom/st-elevationsmyokardieinfarkt/',
+        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/koronarsygdom/akut-koronart-syndrom/',
         dcsTitle: 'DCS NBV: Revaskularisering ved akut STEMI',
-        dcsUrl: 'https://nbv.cardio.dk/aks',
+        dcsUrl: 'https://nbv.cardio.dk/kapitel/aks/',
         realEkgImages: [
             {
                 id: 'is1',
@@ -245,9 +245,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         pathophysiology: 'Blokering i venstre grenbundt tvinger aktiveringsbølgen til først at gå gennem højre ventrikel og derefter sprede sig langsomt celle-til-celle gennem myokardiet til den store venstre ventrikel. Den asynkrone kontraktion nedsætter venstre ventrikels pumpefunktion.',
         clinicalCriteria: 'DCS / Sundhed.dk Kriterier: QRS ≥ 120 ms hos voksne, bred kærvet R-tak i I, aVL, V5–V6, fravær af q i V5–V6. OBS: Nyopstået LBBB ved mistanke om akut myokardieiskæmi skal håndteres som STEMI-ækvivalent!',
         sundhedDkTitle: 'Sundhed.dk: Grenblok og fascikelblok',
-        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/arytmier/grenblok-og-fascikelblok/',
-        dcsTitle: 'DCS Retningslinjer: Ledningsforstyrrelser og LBBB',
-        dcsUrl: 'https://nbv.cardio.dk',
+        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-ledningsforstyrrelser/',
+        dcsTitle: 'DCS Vejledning: Pacemakerbehandling & Ledningsforstyrrelser',
+        dcsUrl: 'https://nbv.cardio.dk/kapitel/pacemakerbehandling/',
         realEkgImages: [
             {
                 id: 'lb1',
@@ -287,9 +287,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         pathophysiology: 'Blokering i højre grenbundt. Venstre ventrikel aktiveres normalt via venstre gren, hvorefter impulsen spreder sig langsomt over i højre ventrikel. Den sene aktivering af højre ventrikel giver en kraftig vektor rettet fremad og mod højre.',
         clinicalCriteria: 'DCS / Sundhed.dk Kriterier: QRS ≥ 120 ms, rsR\' eller bred kærvet R i V1–V2, samt bred sløret S-tak (varighed > R eller > 40 ms) i afledning I og V6. RBBB kan forekomme hos hjertesunde, men kan også signalere højresidig belastning (lungeemboli, cor pulmonale).',
         sundhedDkTitle: 'Sundhed.dk: Højresidigt grenblok',
-        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/arytmier/grenblok-og-fascikelblok/',
-        dcsTitle: 'DCS Retningslinjer: Højresidig hjertebelastning & Grenblok',
-        dcsUrl: 'https://nbv.cardio.dk',
+        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-ledningsforstyrrelser/',
+        dcsTitle: 'DCS Vejledning: Pacemakerbehandling & Ledningsforstyrrelser',
+        dcsUrl: 'https://nbv.cardio.dk/kapitel/pacemakerbehandling/',
         realEkgImages: [
             {
                 id: 'rb1',
@@ -329,9 +329,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         pathophysiology: 'Kaotisk mikro-reentry elektrisk aktivitet i atrierne med frekvens på 400-600/min. AV-knuden fungerer som fysiologisk filter og overleder kun en brøkdel af impulserne helt uregelmæssigt til ventriklerne.',
         clinicalCriteria: 'DCS Kriterier: Uregelmæssige RR-intervaller uden P-takker af mindst 30 sekunders varighed på EKG/telemetri. Vigtigste kliniske fokus: Antikoagulation (AK-behandling vurderet ud fra CHA2DS2-VASc score) for at forebygge apopleksi.',
         sundhedDkTitle: 'Sundhed.dk: Atrieflimren og atrieflagren',
-        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/arytmier/atrieflimren-og-atrieflagren/',
+        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/arytmier/atrieflimren-og-flagren/',
         dcsTitle: 'DCS Behandlingsvejledning: Atrieflimren',
-        dcsUrl: 'https://nbv.cardio.dk/afib',
+        dcsUrl: 'https://nbv.cardio.dk/kapitel/af/',
         realEkgImages: [
             {
                 id: 'af1',
@@ -364,9 +364,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         pathophysiology: 'Makro-reentry kredsløb typisk mod uret i højre atrium omkring den cavotrikuspidale isthmus (CTI). AV-knuden kan ikke nå at overlede 300 impulser i minuttet og blokerer hver anden impuls fysiologisk.',
         clinicalCriteria: 'DCS Kriterier: Regelmæssig atriefrekvens på ca. 250-350/min med typisk savtakket udseende. Kurativ behandling er ofte radiofrekvensablation (RFA) af cavotrikuspidale isthmus.',
         sundhedDkTitle: 'Sundhed.dk: Atrieflagren i almen praksis',
-        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/arytmier/atrieflimren-og-atrieflagren/',
-        dcsTitle: 'DCS NBV: Atrieflagren og ablation',
-        dcsUrl: 'https://nbv.cardio.dk',
+        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/arytmier/atrieflimren-og-flagren/',
+        dcsTitle: 'DCS Vejledning: Atrieflimren og -flagren',
+        dcsUrl: 'https://nbv.cardio.dk/kapitel/af/',
         realEkgImages: [
             {
                 id: 'afl1',
@@ -400,8 +400,8 @@ export const CASE_CLINICAL_COMPARISONS = {
         clinicalCriteria: 'DCS Kriterier: Enhver bredkomplekset takykardi hos patient med tidligere AMI eller kendt hjertesygdom skal behandles som VT indtil det modsatte er bevist! Brugada- og Vereckei-kriterier benyttes til differentialdiagnose mod SVT med grenblok.',
         sundhedDkTitle: 'Sundhed.dk: Ventrikulær takykardi (Lægehåndbogen)',
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/arytmier/ventrikulaer-takykardi/',
-        dcsTitle: 'DCS NBV: Ventrikulære arytmier og forebyggelse af pludselig hjertedød',
-        dcsUrl: 'https://nbv.cardio.dk',
+        dcsTitle: 'DCS Vejledning: Ventrikulære arytmier',
+        dcsUrl: 'https://nbv.cardio.dk/kapitel/vt/',
         realEkgImages: [
             {
                 id: 'vt1',
@@ -427,9 +427,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         pathophysiology: 'Flere samtidige kaotiske re-entry bølger i ventrikelmyokardiet. Ventriklerne sitrer mekanisk uden at pumpe blod ud i kredsløbet, hvilket medfører akut cirkulatorisk kollaps og irreversibel hjerneskade inden for få minutter uden HLR og defibrillering.',
         clinicalCriteria: 'DCS / ERC Retningslinjer: Stødbar hjertestoprytme! Omgående uafbrudt hjertelungeredning (30:2) og øjeblikkelig defibrillering med bifasisk DC-stød (150-200 J) hurtigst muligt. Adrenalin 1 mg og Amiodaron 300 mg iv jf. ALS-algoritmen.',
         sundhedDkTitle: 'Sundhed.dk: Hjertestop og genoplivning',
-        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/akutmedicin/tilstande-og-sygdomme/hjertestop/hjertestop-hos-voksne/',
-        dcsTitle: 'DCS Vejledning: Avanceret genoplivning ved hjertestop (ALS)',
-        dcsUrl: 'https://nbv.cardio.dk',
+        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/akut-og-foerstehjaelp/tilstande-og-sygdomme/foerstehjaelp/akutte-medicinske-tilstande/ventrikelflimren-og-takykardi/',
+        dcsTitle: 'DCS Vejledning: Genoplivning og Hjertestop',
+        dcsUrl: 'https://nbv.cardio.dk/kapitel/hjertestop/',
         realEkgImages: [
             {
                 id: 'vf1',
@@ -456,8 +456,8 @@ export const CASE_CLINICAL_COMPARISONS = {
         clinicalCriteria: 'DCS Kriterier for Psykofarmaka: QTc > 500 ms (eller stigning > 60 ms fra baseline) kræver omgående dosisreduktion eller seponering af udløsende lægemiddel! Korrektion af elektrolytter (hypokaliæmi, hypomagnesiæmi). Ved Torsades gives magnesiumsulfat iv.',
         sundhedDkTitle: 'Sundhed.dk: Langt QT-syndrom (LQTS)',
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/arytmier/langt-qt-syndrom/',
-        dcsTitle: 'DCS Holdningspapir: QTc-forlængelse og psykofarmaka',
-        dcsUrl: 'https://nbv.cardio.dk',
+        dcsTitle: 'DCS Vejledning: Farmakologisk påvirkning & Arytmier',
+        dcsUrl: 'https://nbv.cardio.dk/kapitel/farmaka/',
         realEkgImages: [
             {
                 id: 'lqt1',
@@ -483,7 +483,7 @@ export const CASE_CLINICAL_COMPARISONS = {
         pathophysiology: 'Forhøjet ekstracellulært kalium (K+ > 5.5-6.0 mmol/L) øger membranens kaliumpermeabilitet, hvilket drastisk accelererer fase 3 repolariseringen (høje spidse T-takker) og nedsætter ledningshastigheden i hele ledningssystemet (bredt QRS).',
         clinicalCriteria: 'Akut livstruende medicinsk nødsituation ved K+ > 6.5 mmol/L. Kræver omgående akut EKG og akut behandling med calciumchlorid/calciumgluconat til stabilisering af kardiomyocytternes tærskelpotentiale, efterfulgt af glukose-insulin infusion.',
         sundhedDkTitle: 'Sundhed.dk: Hyperkaliæmi (Lægehåndbogen)',
-        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/endokrinologi/tilstande-og-sygdomme/elektrolytforstyrrelser/hyperkaliaemi/',
+        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/generelt/tilstande-og-sygdomme/elektrolytforstyrrelser/hyperkaliaemi/',
         dcsTitle: 'DCS NBV: Elektrolytforstyrrelser og arytmi',
         dcsUrl: 'https://nbv.cardio.dk',
         realEkgImages: [
@@ -525,7 +525,7 @@ export const CASE_CLINICAL_COMPARISONS = {
         pathophysiology: 'Lavt ekstracellulært kalium (K+ < 3.5 mmol/L) forsinker ventriklernes repolarisering og hyperpolariserer membranpotentialet. Dette øger ventriklernes excitabilitet og disponerer for både supraventrikulære og ventrikulære arytmier (særligt ved samtidig digitalisbehandling).',
         clinicalCriteria: 'DCS Kriterier: S-kalium < 3.0 mmol/L betragtes som moderat/svær og kræver substitution med kaliumchlorid (oralt eller iv under telemetri). Samtidig korrektion af hypomagnesiæmi er ofte nødvendig for at genoprette kaliumbalancen.',
         sundhedDkTitle: 'Sundhed.dk: Hypokaliæmi (Lægehåndbogen)',
-        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/endokrinologi/tilstande-og-sygdomme/elektrolytforstyrrelser/hypokaliaemi/',
+        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/generelt/tilstande-og-sygdomme/elektrolytforstyrrelser/hypokaliaemi/',
         dcsTitle: 'DCS Retningslinjer: Elektrolytforstyrrelser i kardiologien',
         dcsUrl: 'https://nbv.cardio.dk',
         realEkgImages: [
@@ -553,9 +553,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         pathophysiology: 'Inflammation i det viscerale og parietale perikardium skaber en overfladisk epikardiel skadestrøm over hele hjertets overflade. Atriernes epikardium afficeres også, hvilket forårsager den karakteristiske PR-segmentsænkning.',
         clinicalCriteria: 'DCS Kriterier for Akut Perikarditis (mindst 2 af 4): 1) Pleuritiske, stillingsafhængige brystsmerter (lindres ved foroverbøjning), 2) Perikardiel gnidningslyd ved stetoskopi, 3) Typiske EKG-forandringer (udbredt konkav ST-elevation + PR-depression), 4) Perikardieekssudat på ekkokardiografi.',
         sundhedDkTitle: 'Sundhed.dk: Akut perikarditis',
-        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/inflammatoriske-hjertesygdomme/akut-perikarditis/',
+        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/oevrige-sygdomme/perikardit/',
         dcsTitle: 'DCS NBV: Perikardiesygdomme',
-        dcsUrl: 'https://nbv.cardio.dk/perikarditis',
+        dcsUrl: 'https://nbv.cardio.dk/kapitel/perikardiesygdomme/',
         realEkgImages: [
             {
                 id: 'peri1',
@@ -588,9 +588,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         pathophysiology: 'Abnorm fysiologisk eller patologisk ledningsforsinkelse i AV-knuden. Kan være et uskyldigt fund hos veltrænede unge atleter (høj vagustone), men kan også skyldes medicin (betablokkere, verapamil, digoxin) eller aldersbetinget degenerativ ledningssygdom.',
         clinicalCriteria: 'Sundhed.dk / DCS Kriterier: PR > 200 ms. Kræver som udgangspunkt ingen pacemakerbehandling alene, men medicingennemgang for AV-nodale hæmmere bør foretages.',
         sundhedDkTitle: 'Sundhed.dk: AV-blok 1. grad',
-        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/arytmier/av-blok/',
-        dcsTitle: 'DCS Retningslinjer: Pacemaker og ledningsforstyrrelser',
-        dcsUrl: 'https://nbv.cardio.dk',
+        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-ledningsforstyrrelser/',
+        dcsTitle: 'DCS Vejledning: Pacemakerbehandling & Bradykardi',
+        dcsUrl: 'https://nbv.cardio.dk/kapitel/pacemakerbehandling/',
         realEkgImages: [
             {
                 id: 'av1_1',
@@ -623,9 +623,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         pathophysiology: 'Funktionel udtrætning i selve AV-knuden. Ofte benign og reversibel (fx under søvn hos unge pga. vagustone eller under akut inferiort STEMI pga. iskæmi i RCA/AV-nodal gren).',
         clinicalCriteria: 'DCS Kriterier: Behandlingskrævende pacemaker er sjældent indiceret ved asymptomatisk Wenckebach, medmindre der er udtalt bradykardi med symptomer (svimmelhed, synkope).',
         sundhedDkTitle: 'Sundhed.dk: AV-blok 2. grad (Wenckebach)',
-        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/arytmier/av-blok/',
-        dcsTitle: 'DCS NBV: Bradykardi og ledningsblok',
-        dcsUrl: 'https://nbv.cardio.dk',
+        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-ledningsforstyrrelser/',
+        dcsTitle: 'DCS Vejledning: Pacemakerbehandling & Bradykardi',
+        dcsUrl: 'https://nbv.cardio.dk/kapitel/pacemakerbehandling/',
         realEkgImages: [
             {
                 id: 'wenck1',
@@ -644,9 +644,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         pathophysiology: 'Blokeringen sidder dybere i ledningssystemet (infranodalt i His\' bundt eller grenbundterne) pga. strukturel fibrose eller svær iskæmi. His-Purkinje cellerne arbejder efter "alt-eller-intet" princippet og fejler pludseligt.',
         clinicalCriteria: 'DCS Kriterier: Absolut klasse I indikation for permanent pacemaker! Mobitz II er ustabil og livstruende, uanset om patienten aktuelt har symptomer eller ej.',
         sundhedDkTitle: 'Sundhed.dk: AV-blok Mobitz type II',
-        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/arytmier/av-blok/',
-        dcsTitle: 'DCS NBV: Pacemakerindikationer ved Mobitz II',
-        dcsUrl: 'https://nbv.cardio.dk',
+        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-ledningsforstyrrelser/',
+        dcsTitle: 'DCS Vejledning: Pacemakerbehandling & Bradykardi',
+        dcsUrl: 'https://nbv.cardio.dk/kapitel/pacemakerbehandling/',
         realEkgImages: [
             {
                 id: 'mob2_1',
@@ -672,9 +672,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         pathophysiology: 'Total blokering i AV-knuden eller His-Purkinje systemet. Ventriklerne holdes kun i gang af en langsom, ustabil perifer erstatningsrytme, hvilket medfører svær bradykardi, hypotension og risiko for asystoli.',
         clinicalCriteria: 'DCS Kriterier: Akut livstruende tilstand! Kræver indlæggelse på kardiologisk afdeling under kontinuerlig telemetri, akut temporær pacing ved hæmodynamisk ustabilitet (eller isoprenalin/atropin som nødbehandling) og permanent pacemaker (PPM).',
         sundhedDkTitle: 'Sundhed.dk: Tredjegrads AV-blok (Totalblok)',
-        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/arytmier/av-blok/',
-        dcsTitle: 'DCS NBV: Total AV-blok og akut pacing',
-        dcsUrl: 'https://nbv.cardio.dk',
+        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-ledningsforstyrrelser/',
+        dcsTitle: 'DCS Vejledning: Pacemakerbehandling ved Totalblok',
+        dcsUrl: 'https://nbv.cardio.dk/kapitel/pacemakerbehandling/',
         realEkgImages: [
             {
                 id: 'av3_1',
@@ -700,9 +700,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         pathophysiology: 'Kronisk trykbelastning (hypertension, aortastenose) eller volumenbelastning tvinger kardiomyocytterne i venstre ventrikel til hypertrofi for at modstå vægspændingen (Laplaces lov). Den øgede muskelmasse genererer kraftigere voltager mod venstre og bagud.',
         clinicalCriteria: 'Sokolow-Lyon Kriterium: S i V1 + R i V5 eller V6 ≥ 35 mm (3.5 mV). Cornell Voltagescore: R i aVL + S i V3 > 28 mm (mænd) eller > 20 mm (kvinder). Ekkokardiografi er guldstandard til verifikation af vægtykkelse og masse.',
         sundhedDkTitle: 'Sundhed.dk: Venstre ventrikelhypertrofi (LVH)',
-        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/undersoegelser/ekg-tjekliste/',
-        dcsTitle: 'DCS Retningslinjer: Hypertension og venstre ventrikelhypertrofi',
-        dcsUrl: 'https://nbv.cardio.dk',
+        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-tjekliste/',
+        dcsTitle: 'DCS Vejledning: Arteriel Hypertension og Hjertepåvirkning',
+        dcsUrl: 'https://nbv.cardio.dk/kapitel/hypertension/',
         realEkgImages: [
             {
                 id: 'lvh1',
@@ -735,9 +735,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         pathophysiology: 'Akut okklusion af arteria circumflexa (LCx) eller en distal gren af RCA forårsager transmural iskæmi i hjertets posterobasale væg. Da der ikke sidder standardelektroder på ryggen, registreres skadestrømmen omvendt forfra.',
         clinicalCriteria: 'DCS Kriterier: ST-depression i V1–V3 hos patient med akutte brystsmerter skal ALTID give mistanke om posteriort STEMI! Kræver supplerende optagelse af bagvægsafledninger V7–V9. Ved ST-elevation ≥ 0.5 mm i V7–V9 aktiveres akut STEMI-kald til KAG/PCI.',
         sundhedDkTitle: 'Sundhed.dk: Akut koronarsygdom og atypiske infarkter',
-        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/koronarsygdom/st-elevationsmyokardieinfarkt/',
+        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/koronarsygdom/akut-koronart-syndrom/',
         dcsTitle: 'DCS NBV: Posteriort STEMI og supplerende afledninger (V7-V9)',
-        dcsUrl: 'https://nbv.cardio.dk/aks',
+        dcsUrl: 'https://nbv.cardio.dk/kapitel/aks/',
         realEkgImages: [
             {
                 id: 'post1',
@@ -756,9 +756,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         pathophysiology: 'Tromboembolisk okklusion af truncus pulmonalis eller store lungearteriegrene giver akut trykstigning i det pulmonale karsystem. Højre ventrikel overbelastes akut (cor pulmonale), hvilket medfører iskæmi i højre ventrikelvæg og rotation af hjertets elektriske akse mod højre.',
         clinicalCriteria: 'DCS / ESC Kriterier for Akut Lungeemboli: EKG er sjældent diagnostisk alene, men afspejler graden af akut højre ventrikelbelastning! S1Q3T3 ses kun hos ca. 15-20% ved større embolier. Vigtigste diagnostiske redskab er CT-pulmonal angiografi (CTPA) og D-dimer.',
         sundhedDkTitle: 'Sundhed.dk: Lungeemboli (Lægehåndbogen)',
-        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/venoes-tromboembolisme/lungeemboli/',
+        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/tromboembolisk-sygdom/lungeemboli/',
         dcsTitle: 'DCS NBV: Akut lungeemboli og højresidig overbelastning',
-        dcsUrl: 'https://nbv.cardio.dk/lungeemboli',
+        dcsUrl: 'https://nbv.cardio.dk/kapitel/lungeemboli/',
         realEkgImages: [
             {
                 id: 'pe1',

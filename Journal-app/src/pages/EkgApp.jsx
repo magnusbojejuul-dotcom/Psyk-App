@@ -123,7 +123,20 @@ export default function EkgApp({ onNavigate }) {
                 )}
 
                 {activeTab === 'guide' && (
-                    <EkgSystematicGuide onNavigateTab={(tab) => setActiveTab(tab)} />
+                    <EkgSystematicGuide
+                        onNavigateTab={(tab) => setActiveTab(tab)}
+                        onSelectCase={(caseId) => {
+                            if (caseId) {
+                                setCurrentCaseId(caseId);
+                                const found = EKG_CASES.find(c => c.id === caseId);
+                                if (found && found.affectedLeads && found.affectedLeads.length > 0) {
+                                    setSelectedLead(found.affectedLeads[0]);
+                                }
+                            }
+                            setActiveTab('viewer');
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}
+                    />
                 )}
             </main>
 
