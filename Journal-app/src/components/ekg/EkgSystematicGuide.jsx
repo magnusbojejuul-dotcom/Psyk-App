@@ -34,6 +34,8 @@ import normalSinus2 from '../../assets/ekg_scans/normal_sinus_2.jpg';
 // 4. P-tak & PR-interval
 import avBlock1_1 from '../../assets/ekg_scans/av_block_1_1.jpg';
 import avBlock2W_1 from '../../assets/ekg_scans/av_block_2_wenckebach_1.png';
+import avBlock2M_1 from '../../assets/ekg_scans/av_block_2_mobitz2_1.jpg';
+import avBlock3_1 from '../../assets/ekg_scans/av_block_3_1.jpg';
 import pericarditis1 from '../../assets/ekg_scans/pericarditis_1.jpg';
 
 // 5. QRS-kompleks
@@ -44,7 +46,10 @@ import vt1 from '../../assets/ekg_scans/vt_1.png';
 // 6. ST-segment & T-tak
 import anteriorStemi1 from '../../assets/ekg_scans/anterior_stemi.jpg';
 import inferiorStemi1 from '../../assets/ekg_scans/inferior_stemi.jpg';
+import posteriorStemi1 from '../../assets/ekg_scans/posterior_stemi_1.jpg';
+import pericarditis1_st from '../../assets/ekg_scans/pericarditis_1.jpg';
 import hyperkalemia1 from '../../assets/ekg_scans/hyperkalemia_1.jpg';
+import hypokalemia1 from '../../assets/ekg_scans/hypokalemia_1.png';
 
 // 7. QT/QTc-interval
 import longQtc1 from '../../assets/ekg_scans/long_qtc_1.jpg';
@@ -470,6 +475,36 @@ export default function EkgSystematicGuide({ onNavigateTab, onSelectCase }) {
                     ],
                     src: pericarditis1,
                     caseId: 'pericarditis'
+                },
+                {
+                    id: 'step4-mobitz2',
+                    title: 'Andengrads AV-blok Type 2 (Mobitz II)',
+                    badge: 'Uvarslet Slagudfald',
+                    subtitle: 'Konstant PR-interval med pludseligt udfald af QRS (His-Purkinje defekt)',
+                    caption: 'Kritisk ledningsforstyrrelse. PR-intervallet er helt fast og forlænges IKKE forud for udfaldet. Pludselig falder et QRS-kompleks ud. Høj risiko for Adams-Stokes anfald og akut totalblok.',
+                    keyPoints: [
+                        'Konstant PR-interval forud for udfald',
+                        'Pludseligt blokeret P-tak uden forvarsel',
+                        'Infranodal lokalisation (His-bundt / ledningsgrene)',
+                        'Klasse I indikation for permanent pacemaker (PPM)'
+                    ],
+                    src: avBlock2M_1,
+                    caseId: 'av_block_2_mobitz2'
+                },
+                {
+                    id: 'step4-totalblock',
+                    title: 'Tredjegrads AV-blok (Komplet Totalblok)',
+                    badge: 'Komplet AV-Dissociation',
+                    subtitle: 'P-takker og QRS-komplekser slår helt uafhængigt af hinanden',
+                    caption: 'Ingen overledning mellem atrier og ventrikler. P-takker marcherer igennem med egen regelmæssig frekvens (~75 bpm) og ventriklerne styres af en langsom idioventrikulær erstatningsrytme (~35 bpm).',
+                    keyPoints: [
+                        'Komplet atrioventrikulær dissociation',
+                        'P-P intervaller er regelmæssige (sinusknude)',
+                        'R-R intervaller er regelmæssige men langsomme (erstatningsrytme)',
+                        'P-takker ses vandrende oveni QRS-komplekser og T-takker'
+                    ],
+                    src: avBlock3_1,
+                    caseId: 'av_block_3'
                 }
             ]
         },
@@ -584,6 +619,21 @@ export default function EkgSystematicGuide({ onNavigateTab, onSelectCase }) {
                     ],
                     src: vt1,
                     caseId: 'vt'
+                },
+                {
+                    id: 'step5-lvh-voltage',
+                    title: 'Venstre Ventrikelhypertrofi (Høje Voltager & Sokolow-Lyon)',
+                    badge: 'Sokolow-Lyon > 35 mm',
+                    subtitle: 'Dyb S i V1 + Høj R i V5/V6 overstiger 35 mm',
+                    caption: 'Skoleeksempel på patologisk høje QRS-amplituder grundet fortykket muskelvæg i venstre ventrikel. S i V1 (20 mm) + R i V5 (26 mm) = 46 mm (langt over 35 mm grænsen). Ledsages af asymmetrisk strain-mønster.',
+                    keyPoints: [
+                        'Sokolow-Lyon: S i V1 + R i V5/V6 ≥ 35 mm',
+                        'Cornell: R i aVL + S i V3 > 28 mm (mænd) / 20 mm (kvinder)',
+                        'Sekundær repolariseringsbelastning (strain i I, aVL, V5, V6)',
+                        'Hyppigste årsag er langvarig arteriel hypertension'
+                    ],
+                    src: lvh1,
+                    caseId: 'lvh'
                 }
             ]
         },
@@ -708,6 +758,36 @@ export default function EkgSystematicGuide({ onNavigateTab, onSelectCase }) {
                     ],
                     src: hyperkalemia1,
                     caseId: 'hyperkalemia'
+                },
+                {
+                    id: 'step6-posterior-stemi',
+                    title: 'Akut Posteriort STEMI (Bagvægsinfarkt Spejlbillede)',
+                    badge: 'Spejlbilled ST-Depression',
+                    subtitle: 'Horisontal ST-depression i V1-V3 som spejlbillede af bagvæg',
+                    caption: 'Livstruende infarkt der ofte overses! De anteriore afledninger V1-V3 kigger bagfra på hjertet og viser derfor horisontal ST-depression og høje R-takker. Bekræftes med posterior optagelse (V7-V9).',
+                    keyPoints: [
+                        'Horisontal ST-depression ≥ 0,5 mm i V1-V3',
+                        'Høj, bred R-tak i V1-V2 (R/S ratio > 1)',
+                        'Positiv, opretstående T-tak i V1-V2',
+                        'Indikation for optagelse af dorsale afledninger V7-V9'
+                    ],
+                    src: posteriorStemi1,
+                    caseId: 'posterior_stemi'
+                },
+                {
+                    id: 'step6-hypokalemia',
+                    title: 'Hypokaliæmi (Affladet T-tak & Kæmpe U-takker)',
+                    badge: 'U-Tak Repolarisering',
+                    subtitle: 'Kæmpe U-bølger der simulerer forlænget QT-interval (QU-fænomen)',
+                    caption: 'Typisk optagelse ved udtalt hypokaliæmi. T-takken er flad eller let inverteret, efterfulgt af en kæmpe positiv U-tak i V2-V4. Giver øget sårbarhed for maligne ventrikulære takyarytmier.',
+                    keyPoints: [
+                        'Affladet, bifasisk eller negativ T-tak',
+                        'Prominent U-tak (> 1-2 mm) umiddelbart efter T-takken',
+                        'Pseudoforlænget QT (reelt et QU-interval)',
+                        'Høj risiko for ventrikulære ekstrasystoler og VT'
+                    ],
+                    src: hypokalemia1,
+                    caseId: 'hypokalemia'
                 }
             ]
         },

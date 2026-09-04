@@ -52,6 +52,7 @@ import aflutter3 from '../assets/ekg_scans/aflutter_3.jpg';
 // 8. Ventrikulær Takykardi (VT)
 import vt1 from '../assets/ekg_scans/vt_1.png';
 import vt2 from '../assets/ekg_scans/vt_2.jpg';
+import vt3 from '../assets/ekg_scans/vt_3.jpg';
 
 // 9. Ventrikelflimren (VF)
 import vf1 from '../assets/ekg_scans/vf_1.jpg';
@@ -60,6 +61,7 @@ import vf2 from '../assets/ekg_scans/vf_2.png';
 // 10. Forlænget QTc & Torsades
 import longQtc1 from '../assets/ekg_scans/long_qtc_1.jpg';
 import longQtc2 from '../assets/ekg_scans/long_qtc_2.jpg';
+import longQtc3 from '../assets/ekg_scans/long_qtc_3.jpg';
 
 // 11. Hyperkaliæmi
 import hyperkalemia1 from '../assets/ekg_scans/hyperkalemia_1.jpg';
@@ -70,6 +72,7 @@ import hyperkalemia4 from '../assets/ekg_scans/hyperkalemia_4.jpg';
 // 12. Hypokaliæmi
 import hypokalemia1 from '../assets/ekg_scans/hypokalemia_1.png';
 import hypokalemia2 from '../assets/ekg_scans/hypokalemia_2.jpg';
+import hypokalemia3 from '../assets/ekg_scans/hypokalemia_3.jpg';
 
 // 13. Akut Perikarditis
 import pericarditis1 from '../assets/ekg_scans/pericarditis_1.jpg';
@@ -83,6 +86,8 @@ import avBlock1_3 from '../assets/ekg_scans/av_block_1_3.jpg';
 
 // 15. AV-blok 2. grad Wenckebach (Mobitz I)
 import avBlock2W_1 from '../assets/ekg_scans/av_block_2_wenckebach_1.png';
+import avBlock2W_2 from '../assets/ekg_scans/av_block_2_wenckebach_2.png';
+import avBlock2W_3 from '../assets/ekg_scans/av_block_2_wenckebach_3.png';
 
 // 16. AV-blok 2. grad Mobitz II
 import avBlock2M_1 from '../assets/ekg_scans/av_block_2_mobitz2_1.jpg';
@@ -99,6 +104,8 @@ import lvh3 from '../assets/ekg_scans/lvh_3.jpg';
 
 // 19. Akut Posteriort STEMI (Bagvæg)
 import posteriorStemi1 from '../assets/ekg_scans/posterior_stemi_1.jpg';
+import posteriorStemi2 from '../assets/ekg_scans/posterior_stemi_2.png';
+import posteriorStemiFull from '../assets/ekg_scans/posterior_stemi_1.png';
 
 // 20. Akut Lungeemboli (Cor Pulmonale - S1Q3T3)
 import pe1 from '../assets/ekg_scans/pulmonary_embolism_1.jpg';
@@ -416,6 +423,13 @@ export const CASE_CLINICAL_COMPARISONS = {
                 badge: 'Telemetri',
                 caption: 'Rytmestrimmel af akut indsættende ventrikulær takykardi. Kræver akut vurdering for DC-konvertering eller antiarytmika.',
                 src: vt2
+            },
+            {
+                id: 'vt3',
+                title: 'Fuldt 12-Aflednings Tracing: Klassisk Ventrikeltakykardi',
+                badge: '12-Aflednings Tracing',
+                caption: 'Højopløselig 12-aflednings optagelse. Tydelig AV-dissociation, fusion beats og ekstreme breddeforandringer der bekræfter ventrikulær oprindelse.',
+                src: vt3
             }
         ]
     },
@@ -472,6 +486,13 @@ export const CASE_CLINICAL_COMPARISONS = {
                 badge: 'Subtyper & Morfologi',
                 caption: 'Sammenligning af T-taks morfologi ved forskellige ionkanal-defekter og medicinpåvirkninger.',
                 src: longQtc2
+            },
+            {
+                id: 'lqt3',
+                title: 'Klassisk LQT1 Bølgeform (Bredbaseret T-tak)',
+                badge: 'LQT1 Mønster',
+                caption: 'Skoleeksempel på type 1 langt QT-syndrom med sen og bredbaseret T-tak der optager størstedelen af hjertecyklussen.',
+                src: longQtc3
             }
         ]
     },
@@ -542,6 +563,13 @@ export const CASE_CLINICAL_COMPARISONS = {
                 badge: 'Virkelig Patient',
                 caption: '12-aflednings EKG fra patient med kaliummangel. Tydelig udbredt ST-depression og abnorme repolariseringsbølger.',
                 src: hypokalemia2
+            },
+            {
+                id: 'hypo3',
+                title: 'Svær Hypokaliæmi: Kæmpe U-takker & Arytmirisiko',
+                badge: 'U-Tak Fænomen',
+                caption: 'Svær elektrolytforstyrrelse (< 2.5 mmol/L). U-takkerne dominerer fuldstændig efter-depolariseringen og øger risikoen for Torsades de Pointes.',
+                src: hypokalemia3
             }
         ]
     },
@@ -633,6 +661,20 @@ export const CASE_CLINICAL_COMPARISONS = {
                 badge: 'Gradvis PR-forlængelse',
                 caption: 'Klassisk Wenckebach-sekvens. Bemærk hvordan PR-intervallet bliver længere for hvert hjerteslag, indtil den 5. P-tak ikke efterfølges af et QRS.',
                 src: avBlock2W_1
+            },
+            {
+                id: 'wenck2',
+                title: '5:4 Wenckebach Periode (Progressiv Ledningsforsinkelse)',
+                badge: '5:4 Overledning',
+                caption: 'Skoleeksempel på trinvis stigning i overledningstid (PR fra 160 ms til 320 ms) efterfulgt af blokeret P-tak.',
+                src: avBlock2W_2
+            },
+            {
+                id: 'wenck3',
+                title: 'Klinisk Rytmestrimmel: Mobitz I med Gruppe-slag',
+                badge: 'CardioNetworks Arkiv',
+                caption: 'Kontinuerlig hospitalsmonitorering visende karakteristisk grupperet rytme (footprints of Wenckebach) med vekslende R-R intervaller og pauser.',
+                src: avBlock2W_3
             }
         ]
     },
@@ -745,6 +787,20 @@ export const CASE_CLINICAL_COMPARISONS = {
                 badge: 'V7-V9 Bagvægsinfarkt',
                 caption: 'Klassisk spejlbilled-fænomen: De horisontale ST-depressioner og høje R-takker i V1-V3 vender her om til klassisk ST-elevation når EKG-arket betragtes bagfra mod lyset.',
                 src: posteriorStemi1
+            },
+            {
+                id: 'post2',
+                title: 'Spejltesten: Flipped V1-V3 Afslører Elevation',
+                badge: 'Spejlvendt Test',
+                caption: 'Når tracinget fra V1-V3 vendes spejlvendt på hovedet ("the mirror test"), fremstår den horisontale depression som en umiskendelig transmural ST-elevation!',
+                src: posteriorStemi2
+            },
+            {
+                id: 'post3',
+                title: 'Højopløselig Bagvægsoptagelse (V1-V6)',
+                badge: 'Hospitalsarkiv',
+                caption: 'Komplet 12-aflednings hospitalstracing af akut bagvægsinfarkt (okklusion af circumflexa). Tydelig R/S ratio > 1 i V2 og markant ST-depression.',
+                src: posteriorStemiFull
             }
         ]
     },
