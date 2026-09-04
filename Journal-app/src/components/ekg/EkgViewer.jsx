@@ -50,7 +50,7 @@ export default function EkgViewer({
         pathophysiology: caseData.anatomicalEffect || '',
         clinicalCriteria: 'Klinisk vurdering jf. Dansk Cardiologisk Selskab.',
         sundhedDkTitle: 'Sundhed.dk: Lægehåndbogen',
-        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/undersoegelser/ekg-tjekliste/',
+        sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-tjekliste/',
         dcsTitle: 'Dansk Cardiologisk Selskab (DCS)',
         dcsUrl: 'https://nbv.cardio.dk'
     };
