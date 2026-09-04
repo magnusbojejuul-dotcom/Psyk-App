@@ -28,6 +28,13 @@ export function ClinicalGuidelineView({ guidelineKey, onNavigate, fallbackGuidel
         }));
     };
 
+    const formatPdfUrl = (url) => {
+        if (!url) return '';
+        if (url.startsWith('http://') || url.startsWith('https://')) return url;
+        const cleanPath = url.startsWith('/') ? url.slice(1) : url;
+        return `${import.meta.env.BASE_URL}${cleanPath}`;
+    };
+
     const mainPdf = data.pdfs && data.pdfs.length > 0 ? data.pdfs[0] : null;
     const secondaryPdfs = data.pdfs && data.pdfs.length > 1 ? data.pdfs.slice(1) : [];
 
@@ -55,7 +62,7 @@ export function ClinicalGuidelineView({ guidelineKey, onNavigate, fallbackGuidel
                 <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row gap-2.5 shrink-0 w-full md:w-auto mt-2 md:mt-0">
                     {mainPdf && (
                         <a 
-                            href={mainPdf.url} 
+                            href={formatPdfUrl(mainPdf.url)} 
                             target="_blank" 
                             rel="noopener noreferrer" 
                             className="flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#839788] to-[#6A7A6E] text-white px-5 py-3 rounded-2xl hover:from-[#728577] hover:to-[#5B6A5F] transition-all shadow-md hover:shadow-lg font-bold text-sm hover:-translate-y-0.5 group"
@@ -71,7 +78,7 @@ export function ClinicalGuidelineView({ guidelineKey, onNavigate, fallbackGuidel
                             {secondaryPdfs.map((pdf, pIdx) => (
                                 <a 
                                     key={pIdx}
-                                    href={pdf.url} 
+                                    href={formatPdfUrl(pdf.url)} 
                                     target="_blank" 
                                     rel="noopener noreferrer" 
                                     className="flex-1 min-w-[130px] flex items-center justify-center gap-1.5 bg-white border border-[#E8E4D9] text-[#5C6B61] hover:text-[#3A4A40] hover:bg-[#FAF9F6] px-3.5 py-2.5 rounded-xl transition-all text-xs font-semibold shadow-sm"

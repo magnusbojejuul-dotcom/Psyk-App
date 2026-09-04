@@ -301,7 +301,7 @@ function TargetGroupsApp({ onNavigate }) {
                     {/* External PDF Link */}
                     {selectedGroup.originalFile && (
                         <a 
-                            href={`/målgruppebeskrivelser/${selectedGroup.originalFile}`} 
+                            href={`${import.meta.env.BASE_URL}målgruppebeskrivelser/${selectedGroup.originalFile}`} 
                             target="_blank" 
                             rel="noreferrer"
                             className="inline-flex items-center gap-2 px-3.5 py-2 bg-white border border-[#E2E8DF] text-[#3A4A40] text-xs sm:text-sm font-bold rounded-xl hover:bg-[#F2F6F3] hover:border-[#839788] transition-all shadow-sm"
