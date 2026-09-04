@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 import { 
     FileText, Download, AlertTriangle, CheckCircle, Info, ShieldAlert, 
-    Activity, Brain, Users, User, ChevronRight, ChevronDown, Pill, AlertCircle 
+    Activity, Brain, Users, User, ChevronRight, ChevronDown, ChevronUp, Pill, AlertCircle 
 } from './Icons';
 import { renderWithDrugLinks } from '../utils/linkifyDrugs';
+import { SplitAlgorithmFlow } from './SplitAlgorithmFlow';
+import { DEPRESSION_PREVIOUS_SPLIT_ALGORITHM } from '../data/guidelinesDepression';
 
 export function DepressionGuidelineView({ onNavigate, guideline }) {
     const [activeTab, setActiveTab] = useState('algoritme');
     const [selectedWeek, setSelectedWeek] = useState('uge4');
     const [drugLineFilter, setDrugLineFilter] = useState('alle');
     const [populationTab, setPopulationTab] = useState('boern');
+    const [isPreviousAlgFolded, setIsPreviousAlgFolded] = useState(false);
 
     const pdfOriginalUrl = `${import.meta.env.BASE_URL}pdf/dmpg-farmakologisk-behandling-af-unipolar-depression-2026.pdf`;
     const pdfNonFarmUrl = `${import.meta.env.BASE_URL}pdf/national-klinisk-retningslinje-non-fatmakologisk-behandling-af-unipolar-depression.pdf`;
@@ -140,11 +143,42 @@ export function DepressionGuidelineView({ onNavigate, guideline }) {
                     >
                         <AlertTriangle className="w-4 h-4" /> 4. EKG, Bivirkninger & Udtrapning
                     </button>
+                    <button
+                        onClick={() => setActiveTab('tidligere_algoritme')}
+                        className={`flex items-center gap-2 px-6 py-4 text-sm font-bold transition-all whitespace-nowrap ${
+                            activeTab === 'tidligere_algoritme' 
+                                ? 'text-[#3A4A40] border-b-2 border-[#839788] bg-white shadow-sm' 
+                                : 'text-[#839788] hover:bg-white/50'
+                        }`}
+                    >
+                        <Brain className="w-4 h-4" /> 5. Referenceprogram-Algoritme (Tidl.)
+                    </button>
                 </div>
 
                 {/* Tab 1: Behandlingsalgoritme (Figur 1) */}
                 {activeTab === 'algoritme' && (
                     <div className="p-6 md:p-8 bg-gradient-to-b from-[#FAF9F6] to-white/40 space-y-8 animate-in fade-in duration-300">
+                        {/* Quick link banner to the previous algorithm */}
+                        <div className="bg-gradient-to-r from-[#F2F6F3] via-white to-[#FAF9F6] p-4 rounded-2xl border border-[#D9E1DA] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-sm">
+                            <div className="flex items-center gap-3">
+                                <div className="p-2.5 rounded-xl bg-[#839788]/15 text-[#3A4A40] shrink-0">
+                                    <Brain className="w-5 h-5 text-[#839788]" />
+                                </div>
+                                <div>
+                                    <h4 className="text-sm font-bold text-[#3A4A40]">Tidligere Behandlingsalgoritme (SST Referenceprogram)</h4>
+                                    <p className="text-xs text-[#839788]">
+                                        Søger du den tidligere behandlingsalgoritme opdelt på ikke-hospitaliserede vs. hospitaliserede?
+                                    </p>
+                                </div>
+                            </div>
+                            <button
+                                onClick={() => setActiveTab('tidligere_algoritme')}
+                                className="px-4 py-2 rounded-xl bg-white border border-[#839788]/40 hover:border-[#839788] text-[#3A4A40] hover:text-[#2C3F34] text-xs font-bold shadow-sm hover:shadow transition-all whitespace-nowrap flex items-center gap-1.5 self-end sm:self-auto"
+                            >
+                                Se tidligere algoritme <ChevronRight className="w-3.5 h-3.5 text-[#839788]" />
+                            </button>
+                        </div>
+
                         {/* Section Header */}
                         <div>
                             <div className="flex items-center gap-2 text-xs font-black uppercase text-[#839788] tracking-wider mb-1">
@@ -864,6 +898,55 @@ export function DepressionGuidelineView({ onNavigate, guideline }) {
                                 </p>
                             </div>
                         </div>
+                    </div>
+                )}
+
+                {/* Tab 5: Tidligere Algoritme (Referenceprogram) */}
+                {activeTab === 'tidligere_algoritme' && (
+                    <div className="p-6 md:p-8 bg-gradient-to-b from-[#FAF9F6] to-white/40 space-y-6 animate-in fade-in duration-300">
+                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-[#E8E4D9]">
+                            <div>
+                                <div className="flex items-center gap-2 text-xs font-black uppercase text-[#839788] tracking-wider mb-1">
+                                    Historisk Reference • SST Referenceprogram
+                                </div>
+                                <h3 className="text-xl font-bold text-[#3A4A40]">
+                                    Tidligere Behandlingsalgoritme for Unipolar Depression
+                                </h3>
+                                <p className="text-sm text-[#5C6B61] mt-1 leading-relaxed">
+                                    Klinisk vejledning for medicinsk behandling og ECT ved unipolar depression forud for DMPG 2026. Struktureret efter indlæggelsesstatus og sværhedsgrad.
+                                </p>
+                            </div>
+                            <div className="flex items-center gap-2 shrink-0">
+                                <a 
+                                    href={pdfSstUrl} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="flex items-center gap-2 bg-[#839788] text-white px-4 py-2.5 rounded-xl hover:bg-[#6A7A6E] transition-all text-xs font-bold shadow-sm"
+                                    title="Åbn det originale SST Referenceprogram som PDF"
+                                >
+                                    <FileText className="w-4 h-4" /> Åbn SST Referenceprogram (PDF)
+                                </a>
+                                <button
+                                    onClick={() => setIsPreviousAlgFolded(!isPreviousAlgFolded)}
+                                    className="flex items-center gap-1.5 bg-white border border-[#E8E4D9] text-[#3A4A40] px-3.5 py-2.5 rounded-xl hover:bg-[#FAF9F6] transition-all text-xs font-bold shadow-sm"
+                                >
+                                    {isPreviousAlgFolded ? (
+                                        <>Fold ud <ChevronDown className="w-3.5 h-3.5" /></>
+                                    ) : (
+                                        <>Fold sammen <ChevronUp className="w-3.5 h-3.5" /></>
+                                    )}
+                                </button>
+                            </div>
+                        </div>
+
+                        {!isPreviousAlgFolded && (
+                            <div className="bg-white/60 p-4 md:p-6 rounded-3xl border border-[#E8E4D9] shadow-sm animate-in fade-in duration-300">
+                                <SplitAlgorithmFlow 
+                                    data={guideline?.splitAlgorithm || DEPRESSION_PREVIOUS_SPLIT_ALGORITHM} 
+                                    onNavigate={onNavigate} 
+                                />
+                            </div>
+                        )}
                     </div>
                 )}
             </div>
