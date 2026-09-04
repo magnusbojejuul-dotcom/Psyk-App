@@ -40,6 +40,7 @@ export default function EkgViewer({
         return 'simulated';
     });
     const [showExplanation, setShowExplanation] = useState(true);
+    const [selectedImageIdx, setSelectedImageIdx] = useState(0);
     const paperContainerRef = useRef(null);
 
     // Hent kliniske detaljer og sammenligninger for netop denne case
@@ -53,6 +54,18 @@ export default function EkgViewer({
         dcsTitle: 'Dansk Cardiologisk Selskab (DCS)',
         dcsUrl: 'https://nbv.cardio.dk'
     };
+
+    const imageList = clinicalInsight.realEkgImages || (clinicalInsight.realEkgImage ? [{
+        id: 'default',
+        title: 'Autentisk Klinisk Scan',
+        badge: 'Hospitalsarkiv',
+        caption: clinicalInsight.realEkgCaption,
+        src: clinicalInsight.realEkgImage
+    }] : []);
+
+    React.useEffect(() => {
+        setSelectedImageIdx(0);
+    }, [caseData.id]);
 
     // EKG-Papir Dimensioner i SVG Koordinater:
     // Skala: 1 mm = 5 pixels (standard kalibrering)
@@ -538,62 +551,129 @@ export default function EkgViewer({
                     </div>
                 </div>
             ) : (
-                /* 2. ÆGTE KLINISK EKG SCAN (FRA HOSPITAL / WIKIMEDIA PUBLIC DOMAIN) */
+                /* 2. ÆGTE KLINISKE EKG SCANS (MULTI-FOTO GALLERI FRA MEDICINSKE HOSPITALSKILDER) */
                 <div className="glass-panel rounded-3xl p-5 border border-[#E8E4D9] bg-white shadow-md flex flex-col gap-4">
-                    <div className="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-[#E8E4D9]">
+                    {/* Header med tæller & overblik */}
+                    <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-[#E8E4D9]">
                         <div>
-                            <h3 className="text-base font-bold text-[#3A4A40]">
-                                Autentisk Hospitalstracing: {caseData.title}
-                            </h3>
-                            <p className="text-xs text-[#839788]">
-                                Scannet klinisk 12-aflednings EKG fra medicinsk arkiv (Wikimedia Commons / Lægehåndbogen)
+                            <div className="flex items-center gap-2">
+                                <h3 className="text-base font-bold text-[#3A4A40]">
+                                    Autentiske Patientoptagelser: {caseData.title}
+                                </h3>
+                                <span className="text-xs px-2.5 py-0.5 rounded-lg bg-emerald-100 text-emerald-800 font-bold">
+                                    {imageList.length} {imageList.length === 1 ? 'ægte optagelse' : 'ægte optagelser'}
+                                </span>
+                            </div>
+                            <p className="text-xs text-[#839788] mt-0.5">
+                                Sammenlign forskellige patientcases og kliniske manifestationer af {caseData.title.toLowerCase()}
                             </p>
                         </div>
 
-                        <div className="flex items-center gap-2">
-                            <span className="text-xs px-2.5 py-1 rounded-lg bg-emerald-100 text-emerald-800 font-bold">
-                                Ægte patientoptagelse
-                            </span>
-                        </div>
+                        {/* Forrige / Næste hurtigknapper */}
+                        {imageList.length > 1 && (
+                            <div className="flex items-center gap-2">
+                                <button
+                                    onClick={() => setSelectedImageIdx(prev => (prev > 0 ? prev - 1 : imageList.length - 1))}
+                                    className="px-3 py-1.5 rounded-xl bg-[#F2F6F3] hover:bg-[#E2E8DF] text-xs font-bold text-[#3A4A40] border border-[#E8E4D9] transition-colors"
+                                    title="Vis forrige patientoptagelse"
+                                >
+                                    ← Forrige
+                                </button>
+                                <span className="text-xs font-bold text-[#839788] px-1">
+                                    {selectedImageIdx + 1} / {imageList.length}
+                                </span>
+                                <button
+                                    onClick={() => setSelectedImageIdx(prev => (prev < imageList.length - 1 ? prev + 1 : 0))}
+                                    className="px-3 py-1.5 rounded-xl bg-[#F2F6F3] hover:bg-[#E2E8DF] text-xs font-bold text-[#3A4A40] border border-[#E8E4D9] transition-colors"
+                                    title="Vis næste patientoptagelse"
+                                >
+                                    Næste →
+                                </button>
+                            </div>
+                        )}
                     </div>
+
+                    {/* Vælger-bjælke: Tabs til de forskellige fotos for netop denne case */}
+                    {imageList.length > 1 && (
+                        <div className="flex items-center gap-2 overflow-x-auto pb-1 max-w-full">
+                            <span className="text-xs font-bold text-[#839788] whitespace-nowrap mr-1">Vælg patient-case:</span>
+                            {imageList.map((imgItem, idx) => (
+                                <button
+                                    key={imgItem.id || idx}
+                                    onClick={() => setSelectedImageIdx(idx)}
+                                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs whitespace-nowrap transition-all ${
+                                        selectedImageIdx === idx
+                                            ? 'bg-[#3A4A40] text-white shadow-xs font-bold ring-2 ring-[#3A4A40]/20'
+                                            : 'bg-[#F2F6F3] text-[#4A5D4E] hover:bg-[#E2E8DF] border border-[#E8E4D9]'
+                                    }`}
+                                >
+                                    <span>Foto {idx + 1}</span>
+                                    <span className={`text-[10px] px-1.5 py-0.5 rounded-md ${
+                                        selectedImageIdx === idx ? 'bg-white/20 text-white' : 'bg-white text-[#839788]'
+                                    }`}>
+                                        {imgItem.badge}
+                                    </span>
+                                </button>
+                            ))}
+                        </div>
+                    )}
 
                     {/* Billede Container med høj opløsning */}
-                    <div className="w-full rounded-2xl border-2 border-[#CBD5E1] bg-white overflow-hidden flex items-center justify-center p-3 shadow-inner min-h-[300px]">
-                        {clinicalInsight.realEkgImage ? (
-                            <div className="relative max-w-full flex items-center justify-center">
-                                <img
-                                    src={clinicalInsight.realEkgImage}
-                                    alt={`Klinisk EKG: ${caseData.title}`}
-                                    className="max-h-[650px] w-auto max-w-full object-contain rounded-xl shadow-xs"
-                                    loading="eager"
-                                />
-                            </div>
-                        ) : (
-                            <div className="py-20 text-center text-slate-500 text-sm">
-                                Intet billede tilgængeligt for denne specifikke case. Se det simulerede 2×6 EKG.
-                            </div>
-                        )}
-                    </div>
+                    {(() => {
+                        const currentImg = imageList[selectedImageIdx] || imageList[0];
+                        if (!currentImg) {
+                            return (
+                                <div className="py-20 text-center text-slate-500 text-sm">
+                                    Intet billede tilgængeligt for denne specifikke case. Se det simulerede 2×6 EKG.
+                                </div>
+                            );
+                        }
 
-                    {/* Billedtekst, forklaring & Kilder */}
-                    <div className="p-4 rounded-2xl bg-[#F9F8F6] border border-[#E8E4D9] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
-                        <div>
-                            <strong className="text-[#3A4A40] block">{clinicalInsight.realEkgCaption || 'Autentisk klinisk 12-aflednings EKG.'}</strong>
-                            <span className="text-[#839788]">Sammenhold med det simulerede 2×6 ark for at se de eksakte takker og afledninger.</span>
-                        </div>
+                        return (
+                            <>
+                                <div className="w-full rounded-2xl border-2 border-[#CBD5E1] bg-white overflow-hidden flex items-center justify-center p-3 shadow-inner min-h-[340px]">
+                                    <div className="relative max-w-full flex items-center justify-center">
+                                        <img
+                                            key={currentImg.src}
+                                            src={currentImg.src}
+                                            alt={currentImg.title || `Klinisk EKG: ${caseData.title}`}
+                                            className="max-h-[660px] w-auto max-w-full object-contain rounded-xl shadow-xs animate-fadeIn"
+                                            loading="eager"
+                                        />
+                                    </div>
+                                </div>
 
-                        {clinicalInsight.sundhedDkUrl && (
-                            <a
-                                href={clinicalInsight.sundhedDkUrl}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="px-4 py-2 rounded-xl bg-[#839788] text-white hover:bg-[#6A7A6E] font-bold transition-colors shadow-xs flex items-center gap-1.5 whitespace-nowrap"
-                            >
-                                <span>Læs mere på Sundhed.dk</span>
-                                <ExternalLink className="w-3.5 h-3.5" />
-                            </a>
-                        )}
-                    </div>
+                                {/* Billedtekst, forklaring & Kilder for det valgte foto */}
+                                <div className="p-4 rounded-2xl bg-[#F9F8F6] border border-[#E8E4D9] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
+                                    <div className="flex-1 pr-2">
+                                        <div className="flex items-center gap-2 mb-1">
+                                            <strong className="text-[#3A4A40] text-sm font-bold">
+                                                {currentImg.title}
+                                            </strong>
+                                            <span className="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold text-[10px]">
+                                                {currentImg.badge}
+                                            </span>
+                                        </div>
+                                        <p className="text-[#4A5D4E] leading-relaxed">
+                                            {currentImg.caption}
+                                        </p>
+                                    </div>
+
+                                    {clinicalInsight.sundhedDkUrl && (
+                                        <a
+                                            href={clinicalInsight.sundhedDkUrl}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="px-4 py-2 rounded-xl bg-[#839788] text-white hover:bg-[#6A7A6E] font-bold transition-colors shadow-xs flex items-center gap-1.5 whitespace-nowrap shrink-0"
+                                        >
+                                            <span>Læs mere på Sundhed.dk</span>
+                                            <ExternalLink className="w-3.5 h-3.5" />
+                                        </a>
+                                    )}
+                                </div>
+                            </>
+                        );
+                    })()}
                 </div>
             )}
         </div>
