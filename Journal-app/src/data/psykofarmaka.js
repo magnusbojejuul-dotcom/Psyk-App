@@ -5,31 +5,32 @@ export const PSYKOFARMAKA_DATA = [
         name: 'Medicinskift (Switchtabel)',
         group: 'Antidepressiva',
         subgroup: 'Krydstiltrædelse & Seponering',
-        effect: 'Ved skift mellem forskellige antidepressiva (fx SSRI til SNRI eller NaSSA) er det afgørende at følge korrekte retningslinjer for overlappende dosering, udtrapning og wash-out perioder. Dette gøres for at forhindre farlige interaktioner ned til receptorniveau og for at minimere patientens seponeringssymptomer.',
-        normalDose: 'Brug altid den interaktive hollandske "Switchtabel" til at slå det specifikke skift op (fra lægemiddel A til lægemiddel B). Tabellen viser præcis hvornår man går ned, holder pause, og starter det nye.',
+        effect: 'Ved skift mellem forskellige antidepressiva (fx SSRI til SNRI eller NaSSA) er det afgørende at følge evidensbaserede retningslinjer for dosisreduktion, overlappende dosering (krydstitrering) og eventuelle wash-out-perioder. Dette minimerer risikoen for serotonergt syndrom og reducerer generende seponeringssymptomer.',
+        normalDose: 'Anvend den interaktive hollandske Switchtabel til at slå det konkrete præparatskift op (fra lægemiddel A til lægemiddel B). Tabellen anviser den præcise strategi: direkte skift, aftrapning med pause, eller krydstitrering.',
         featuredLink: {
             title: 'Åbn Switchtabel.nl',
-            description: 'Slå direkte op mellem to præparater for at se korrekt overlappende dosering.',
+            description: 'Slå direkte op mellem to præparater for at se korrekt fremgangsmåde ved præparatskift.',
             url: 'https://www.psychiatrienet.nl/switchtabel'
         },
         sideEffects: [
-            { symptom: 'Serotonergt Syndrom', description: 'Livstruende tilstand med kognitive (konfusion), autonome (feber, sved) og somatiske (rigiditet, hyperrefleksi, klonus) symptomer. Udløses af overskud af serotonin – klassisk ved skift uden tilstrækkelig udvaskning.', treatment: 'Seponér omgående alle serotonerge midler! Kræver akut indlæggelse til støttende/kølende behandling og evt. benzodiazepin/cyproheptadin.' },
-            { symptom: 'Seponeringssyndrom', description: 'Fysisk abstinenslignende tilstand (influenzasymptomer, svimmelhed, elektriske stød "brain-zaps" i hovedet) udløst ved for brat reduktion.', treatment: 'Langsommere udtrapning. Kan især være kritisk ved stoffer med kort halveringstid som Venlafaxin og Paroxetin.' }
+            { symptom: 'Serotonergt Syndrom', description: 'Potentielt livstruende tilstand med kognitive symptomer (agitation, konfusion), autonom ustabilitet (hypertermi, diaforese, takykardi) og neuromuskulær hyperaktivitet (myoklonus, hyperrefleksi, tremor, klonus). Udløses af udtalt serotonerg overstimulering – typisk ved kombination eller for hurtigt skift uden tilstrækkelig udvaskning.', treatment: 'Seponér omgående alle serotonerge lægemidler. Kræver akut indlæggelse til understøttende og kølende behandling samt monitorering. Ved svære symptomer kan gives benzodiazepiner og eventuelt serotoninantagonisten cyproheptadin.' },
+            { symptom: 'Seponeringssyndrom', description: 'Ubehagelige seponeringssymptomer (svimmelhed, paræstesier / elektriske stød i hovedet ("brain-zaps"), influenzalignende symptomer, angst, søvnforstyrrelser) udløst af brat dosisreduktion eller udtrapning.', treatment: 'Langsom, gradvis dosisreduktion over uger til måneder. Særlig udtalt ved præparater med kort halveringstid som Venlafaxin og Paroxetin. Ved svære symptomer kan genoptages forrige dosis eller midlertidigt skiftes til Fluoxetin.' }
         ],
         sources: [{ title: 'Psychiatrienet.nl (Switchtabel)', url: 'https://www.psychiatrienet.nl/switchtabel' }]
     },
+
     // Antidepressiva (SSRI)
     {
         id: 'sertralin',
         name: 'Sertralin',
         group: 'Antidepressiva',
         subgroup: 'SSRI',
-        effect: 'Selektiv Serotonin Reuptake Inhibitor (SSRI). Øger serotonerg neurotransmission ved at hæmme genoptagelsen i den præsynaptiske nerveterminal. Anvendes især som førstevalg til moderat/svær depression, samt bredspektret mod generaliseret angst, panikangst, socialfobi og OCD. God sikkerhedsprofil ved hjertesygdom.',
-        normalDose: 'Depression/Angst: Start dosis 25-50 mg (25 mg ved panikangst for at undgå aktiveringsangst). Øges med 50 mg hver 1-2 uge. Vedligeholdelsesdosis 50-100 mg dgl., max 200 mg. OCD: Kræver ofte højere dosering (op til 200 mg dgl). Seponeres via ugevis nedtrapning.',
+        effect: 'Selektiv serotonin-genoptagelseshæmmer (SSRI). Øger den serotonerge neurotransmission ved selektivt at hæmme genoptagelsen i præsynaptiske nerveterminaler. Førstevalg til moderat og svær unipolar depression samt veldokumenteret ved generaliseret angst, panikangst, socialfobi og OCD. God sikkerhedsprofil ved kardiovaskulær komorbiditet og hos ældre/gravide.',
+        normalDose: 'Depression og angst: Startdosis 25-50 mg dagligt (25 mg ved panikangst for at undgå initial angstforværring). Kan øges med 50 mg med 1-2 ugers interval til vedligeholdelsesdosis 50-100 mg dagligt (maks 200 mg). OCD: Kræver ofte højere doser (op til 200 mg dagligt). Seponeres ved langsom udtrapning.',
         sideEffects: [
-            { symptom: 'Gastrointestinale gener', description: 'Kvalme, diarré, reduceret appetit. Forekommer hyppigst i de første 1-2 uger.', treatment: 'Startdosis minimeres ved langsom optrapning. Information om forbigående natur ("the worst comes first"). Kan lindres ved indtagelse i forbindelse med måltid.' },
-            { symptom: 'Seksuel dysfunktion', description: 'Meget hyppig (ofte >50%). Nedsat libido, anorgasmi, forsinket ejakulation hos mænd.', treatment: 'Dosisreduktion hvis klinisk forsvarligt. Ellers overvej tillæg (Tadalafil p.n.) eller skift af/kombination med præparat uden sexologisk sløvende effekt (Mirtazapin, Vortioxetin, Bupropion, Agomelatin).' },
-            { symptom: 'Søvnforstyrrelser / Aktivering', description: 'Insomni (især tidligt), træthed eller emotionel afstumpning ("blunting").', treatment: 'Adfærd: Dosis gives morgen ved insomni, aften ved træthed.' }
+            { symptom: 'Gastrointestinale gener', description: 'Kvalme, løs afføring/diarré, nedsat appetit. Optræder hyppigst i de første 1-2 ugers behandling og aftager herefter.', treatment: 'Start i lav dosis og optrap gradvist. Indtagelse i forbindelse med et måltid mindsker kvalme. Informer patienten om symptomernes forbigående karakter.' },
+            { symptom: 'Seksuel dysfunktion', description: 'Meget almindelig bivirkning (>30-50%): Nedsat libido, anorgasmi, forsinket ejakulation hos mænd.', treatment: 'Dosisreduktion hvis klinisk forsvarligt. Alternativt skift til antidepressivum med minimal seksuel bivirkningsprofil (f.eks. Mirtazapin, Vortioxetin, Bupropion eller Agomelatin).' },
+            { symptom: 'Søvnforstyrrelser / Rastløshed', description: 'Initial insomni, livlige drømme eller let motorisk rastløshed i opstartsfasen. Hos nogle ses emotionel affladning på sigt.', treatment: 'Doseres om morgenen ved insomni, eller til natten hvis patienten oplever døsighed.' }
         ],
         sources: [{ title: 'Pro.medicin.dk (Sertralin)', url: 'https://pro.medicin.dk/Sog/Sog?query=sertralin' }]
     },
@@ -38,13 +39,13 @@ export const PSYKOFARMAKA_DATA = [
         name: 'Citalopram',
         group: 'Antidepressiva',
         subgroup: 'SSRI',
-        effect: 'SSRI. Har historisk været meget udbredt i almen praksis mod depression og panikangst. Vær dog obs på hjertesikkerhed hos ældre sammenlignet med Sertralin.',
-        normalDose: 'Startdosis 10-20 mg dgl. Vedligeholdelse 20-40 mg (max 40 mg dgl). VIGTIGT: Max 20 mg/dgl hos ældre >65 år og ved nedsat leverfunktion pga. forlænget halveringstid og dermed øget QTc-risiko.',
+        effect: 'Selektiv serotonin-genoptagelseshæmmer (SSRI). Anvendes til behandling af unipolar depression og panikangst. Vær opmærksom på dosisafhængig risiko for forlængelse af QTc-intervallet.',
+        normalDose: 'Startdosis 10-20 mg dagligt. Vedligeholdelse 20-40 mg dagligt (maks 40 mg dagligt). VIGTIGT: Maksimal dosis er 20 mg dagligt hos ældre >65 år og ved nedsat leverfunktion grundet forlænget halveringstid og øget QTc-risiko.',
         sideEffects: [
-            { symptom: 'QTc-forlængelse', description: 'Dosisafhængig risiko for forlænget QTc-interval, som kan lede til Torsades de Pointes (livstruende arytmi).', treatment: 'Mål EKG før opstart hos disponerede / ældre, og gentag ved dosisjustering. Udeluk hypokaliæmi. Undgå samtidig brug af andre overvejende QTc-forlængende stoffer (amiodaron, antipsykotika, makrolider m.fl.).' },
-            { symptom: 'Svedtendens', description: 'Øget svedtendens ses som en almen serotonerg effekt.', treatment: 'Information og reassurance. Undgå syntetisk tøj.' },
-            { symptom: 'Gastrointestinale gener', description: 'Kvalme og mavesmerter i opstartsfasen.', treatment: 'Opstart med skånsom, gradvis dosisøgning.' },
-            { symptom: 'Hyponatriæmi (SIADH)', description: 'Risiko for forstyrrelser i ADH-sekretion, især hos ældre.', treatment: 'Mål elektrolytter (P-Na) hvis patienten udvikler letargi, konfusion eller muskelkramper.' }
+            { symptom: 'QTc-forlængelse', description: 'Dosisafhængig forlængelse af QTc-intervallet med risiko for Torsades de Pointes og maligne ventrikulære arytmier.', treatment: 'Optag EKG før opstart hos ældre og disponerede patienter. Kontroller elektrolytter (P-Kalium og P-Magnesium). Undgå kombination med andre QTc-forlængende lægemidler.' },
+            { symptom: 'Svedtendens', description: 'Øget transpiration er en almindelig serotonerg bivirkning.', treatment: 'Psykoedukation, anvend let tøj i naturlige materialer.' },
+            { symptom: 'Gastrointestinale gener', description: 'Kvalme, mundtørhed og appetitændring i de første behandlingsuger.', treatment: 'Skånsom, gradvis dosisoptrapning og indtagelse sammen med mad.' },
+            { symptom: 'Hyponatriæmi (SIADH)', description: 'Risiko for uhensigtsmæssig ADH-sekretion med hyponatriæmi, særligt hos ældre og patienter i samtidig diuretikabehandling.', treatment: 'Mål P-Natrium ved konfusion, sløvhed, kramper eller faldtendens.' }
         ],
         sources: [{ title: 'Pro.medicin.dk (Citalopram)', url: 'https://pro.medicin.dk/Sog/Sog?query=citalopram' }]
     },
@@ -53,11 +54,11 @@ export const PSYKOFARMAKA_DATA = [
         name: 'Escitalopram',
         group: 'Antidepressiva',
         subgroup: 'SSRI',
-        effect: 'S-enantiomeren (den biologisk aktive form) af Citalopram, hvilket gør det til et mere specifikt og potent (kræver det halve i milligram) SSRI. Udbredt afledt præparat med færre interaktioner og muligvis hurtigere indsættende effekt hos nogle.',
-        normalDose: 'Startdosis 5-10 mg. (5 mg ved panikangst). Vedligeholdelse 10-20 mg (max 20 mg dgl). VIGTIGT: Max 10 mg/dgl hos ældre >65 år.',
+        effect: 'S-enantiomeren (den aktive form) af Citalopram. Højt selektivt SSRI med minimal affinitet for andre receptorer, hvilket giver færre farmakokinetiske interaktioner og god tolerabilitet. Anvendes ved depression, generaliseret angst, socialfobi, panikangst og OCD.',
+        normalDose: 'Startdosis: 5-10 mg dagligt (5 mg ved panikangst). Vedligeholdelsesdosis: 10-20 mg dagligt (maks 20 mg dagligt). VIGTIGT: Maksimal dosis er 10 mg dagligt hos ældre >65 år.',
         sideEffects: [
-            { symptom: 'Hjerte (QTc-interval)', description: 'Som Citalopram indebærer Escitalopram også risiko for dosisafhængig QTc-forlængelse.', treatment: 'Følg samme forsigtighedsregler for EKG før/under behandling som beskrevet for Citalopram, specielt for risikogrupper.' },
-            { symptom: 'Øvrige Serotonerge', description: 'Gastrointestinale (kvalme), seksuelle (nedsat libido), blødningsrisiko osv. Lige som øvrige SSRI.', treatment: 'Måltidsindtagelse / overvej tillæg el skift. Forsigtighed med NSAID.' }
+            { symptom: 'QTc-forlængelse', description: 'Dosisafhængig risiko for QTc-forlængelse, analogt med Citalopram (dog ved det halve milligram-niveau).', treatment: 'EKG ved baseline hos risikopatienter, og ved doser >10 mg eller kombination med andre risikolægemidler.' },
+            { symptom: 'Klassiske serotonerge bivirkninger', description: 'Kvalme, nedsat libido/forsinket orgasme, initial søvnløshed og let øget blødningstendens.', treatment: 'Indtages med mad. Forsigtighed ved samtidig brug af NSAID eller antikoagulantia.' }
         ],
         sources: [{ title: 'Pro.medicin.dk (Escitalopram)', url: 'https://pro.medicin.dk/Sog/Sog?query=escitalopram' }]
     },
@@ -66,11 +67,11 @@ export const PSYKOFARMAKA_DATA = [
         name: 'Fluoxetin',
         group: 'Antidepressiva',
         subgroup: 'SSRI',
-        effect: 'Doseringsvenligt SSRI kendetegnet ved en usædvanlig lang halveringstid (ofte præparatvalg ved uregelmæssig medicinindtagelse, non-compliance eller hos børn/unge). Godkendt specifikt til behandling af Bulimia Nervosa udover depression og TOCD.',
-        normalDose: 'Depression/Angst: Start 20 mg dgl, stigende til 20-60 mg. Bulimi: Typisk behandlet i den højere skala, ca. 60 mg dgl pga manglende affekt på de lave mg doser. Pga. de aktive metabolitter (norfluoxetin) tager det uger før steady state opnås.',
+        effect: 'Selektiv serotonin-genoptagelseshæmmer kendetegnet ved en usædvanlig lang halveringstid (2-4 døgn for modersubstansen, 7-15 døgn for den aktive metabolit norfluoxetin). ENESTE godkendte antidepressivum til børn og unge (fra 8 år) i Danmark. Specifikt godkendt til Bulimia Nervosa udover depression og OCD.',
+        normalDose: 'Depression/angst/OCD: Startdosis 20 mg dagligt (børn: 10 mg dagligt). Maks 60 mg dagligt. Bulimia Nervosa: 60 mg dagligt (højere dosis nødvendig for antibulimisk effekt). Steady-state opnås først efter flere uger.',
         sideEffects: [
-            { symptom: 'Neuropsykiatrisk aktivering', description: 'Agitation, søvnløshed (især startfase). Øger risiko evt. paradoksalt udløst angst mere udpræget end andre SSRI.', treatment: 'Doseres om morgenen! Optrap og overvåg nøje for svær angst, specielt hos unge.' },
-            { symptom: 'Anergisk effekt / Vægt', description: 'I modsætning til mange modifikationer opnås der en "aktiverende" energigivende tilstand, og til tider forårsager det vægttab.', treatment: 'Overvej dette lægemiddel positivt ved dominerende træthed/apati som depressivt symptom.' }
+            { symptom: 'Aktivering og agitation', description: 'Udtalt aktiverende profil: Rastløshed, insomni og initial forværring af angst i de første uger.', treatment: 'Doseres altid om morgenen. Tæt klinisk opfølgning på agitation og suicidalitetsrisiko, særligt hos unge.' },
+            { symptom: 'Vægttab og nedsat appetit', description: 'I modsætning til visse andre psykofarmaka medfører Fluoxetin ofte let vægttab og nedsat appetit initialt.', treatment: 'Velegnet ved depression med hypersomni og psykomotorisk hæmning.' }
         ],
         sources: [{ title: 'Pro.medicin.dk (Fluoxetin)', url: 'https://pro.medicin.dk/Sog/Sog?query=fluoxetin' }]
     },
@@ -81,11 +82,11 @@ export const PSYKOFARMAKA_DATA = [
         name: 'Venlafaxin',
         group: 'Antidepressiva',
         subgroup: 'SNRI',
-        effect: 'Serotonin- og Noradrenalin Reuptake Inhibitor (SNRI). Virkningsprofilen er dosisafhængig: Op til ca. 150 mg virker det primært serotonergt som et SSRI. Først ved højere doser (>150 mg) begynder en klinisk betydelig hæmning af noradrenalin-genoptagelsen for alvor at fremstå. Anvendes især ved svær, behandlingsresistent depression.',
-        normalDose: 'Startdosis: 75 mg dgl (depotkapsel anbefales for færre bivirkningsudsving). Vedligeholdelsesdosis: 75-225 mg (til tider op til 375 mg under specialistkontrol i fuldt udbyggede svære tilfælde).',
+        effect: 'Serotonin- og noradrenalin-genoptagelseshæmmer (SNRI). Dosisafhængig virkningsmekanisme: Ved doser under ca. 150 mg virker stoffet overvejende serotonergt (som et SSRI); ved doser ≥150 mg ses markant noradrenerg genoptagelseshæmning. Anvendes ved moderat til svær depression, generaliseret angst, socialfobi og panikangst.',
+        normalDose: 'Startdosis: 75 mg dagligt som depotkapsel (giver jævnere plasmakoncentration). Vedligeholdelse: 75-225 mg dagligt (i specialpsykiatrisk regi op til 375 mg dagligt ved svær behandlingsresistens).',
         sideEffects: [
-            { symptom: 'Kardiovaskulært', description: 'Noradrenerg effekt medfører dosisafhængig blodtryksstigning og takykardi.', treatment: 'Mål puls og BT før opstart og især jævnligt ved doser >150mg. Undgå eller seponér ved utilstrækkeligt behandlet hypertension.' },
-            { symptom: 'Ekstremt Seponeringssyndrom', description: 'På grund af dets meget korte halveringstid (selv for depot) udløser et missende døgn ofte voldsomme seponeringssymptomer i form af "brain zaps" (stød-lignende fornemmelser i hovedet), stærk svimmelhed, og influenzalignende myalgier.', treatment: 'Aftrapning skal foregå _ubeskriveligt_ langsomt, ned til meget små doser (off-label) eller ved et midlertidigt dækkende SSRI overlappende.' }
+            { symptom: 'Kardiovaskulære bivirkninger', description: 'Noradrenerg stimulation medfører dosisafhængig stigning i blodtryk og hvilepuls samt let risiko for QTc-forlængelse.', treatment: 'Mål blodtryk og puls før opstart og regelmæssigt undervejs, særligt ved doser over 150 mg dagligt. Seponér eller justér ved behandlingsrefraktær hypertension.' },
+            { symptom: 'Udtalte seponeringssymptomer', description: 'Pga. kort halveringstid medfører forglemmelse af blot en enkelt dosis eller brat seponering svære symptomer: "Brain zaps" (elektriske stødfornemmelser i hovedet), svimmelhed, kvalme og influenzalignende symptomer.', treatment: 'Udtrapning skal foregå meget langsomt og gradvist over mange uger. Ved svære seponeringsproblemer kan der skiftes midlertidigt til Fluoxetin.' }
         ],
         sources: [{ title: 'Pro.medicin.dk (Venlafaxin)', url: 'https://pro.medicin.dk/Sog/Sog?query=venlafaxin' }]
     },
@@ -94,38 +95,38 @@ export const PSYKOFARMAKA_DATA = [
         name: 'Duloxetin',
         group: 'Antidepressiva',
         subgroup: 'SNRI',
-        effect: 'SNRI med mere symmetrisk balancering af serotonin/noradrenalin effekten allerede i de lavere testværdier. Har udover psykiatrisk virkning på depression og GAD udvist særdeles god og dokumenteret effekt i forhold til smertemodulation af kroniske smertetilstande (fx diabetisk neuropati og fibromyalgi).',
-        normalDose: 'Depression/kroniske smerter: Startdosis 30-60 mg dgl. Max 120 mg. Bemærk at depotkapsler ikke må tygges/knuses da det deaktiverer beskyttelsen mod mavesyrer.',
+        effect: 'Balanceret serotonin- og noradrenalin-genoptagelseshæmmer (SNRI) med dual effekt allerede i standarddoser. Udover godkendelse til depression og generaliseret angst har Duloxetin dokumenteret effekt på diabetisk perifer neuropatisk smerte og kroniske smertetilstande.',
+        normalDose: 'Depression/smerter: Startdosis 30-60 mg dagligt. Maksimal dosis 120 mg dagligt. Kapsler må ikke tygges eller åbnes, da granulatet er syreresistent beskyttet.',
         sideEffects: [
-            { symptom: 'Kraftig initial kvalme', description: 'Kvalme er rapporteret som meget markant hos over 20% af patienter de første uger.', treatment: 'Det er ofte klogt at starte ekstremt blødt med 30 mg den første uge for at øge compliance før evt stigning.' },
-            { symptom: 'Urologisk', description: 'Urinretention - Vandladningsbesvær (grundet øget sfinkter-tonus fra noradrenalin).', treatment: 'Obs hos ældre mænd m. kendt prostatahypertrofi. Urin-retention vil oftest kræve seponering.' }
+            { symptom: 'Initial kvalme', description: 'Kvalme forekommer hos op mod 20% i starten af behandlingen.', treatment: 'Start i lav dosis (30 mg dagligt i 1 uge) og indtag sammen med et måltid for at bedre tolerabiliteten.' },
+            { symptom: 'Urinretention', description: 'Noradrenerg stimulation øger tonus i blæresfinkter, hvilket kan give vandladningsbesvær.', treatment: 'Udvis forsigtighed hos mænd med prostatahypertrofi. Seponér ved udtalt retention.' }
         ],
         sources: [{ title: 'Pro.medicin.dk (Duloxetin)', url: 'https://pro.medicin.dk/Sog/Sog?query=duloxetin' }]
     },
 
-    // Antidepressiva (NaSSA / Andre)
+    // Antidepressiva (NaSSA)
     {
         id: 'mirtazapin',
         name: 'Mirtazapin',
         group: 'Antidepressiva',
         subgroup: 'NaSSA',
-        effect: 'Noradrenergt og specifikt serotonergt antidepressivum (NaSSA). Virker primært via blokade af centrale alfa-2-receptorer, som forhindrer den negative feedback i synapsespalten (dermed fritsættes mere serotonin + noradrenalin stærkt). Antagonistisk for visse 5HT-receptorer, hvilket reducerer angst/kvalme, og besidder slet ikke de klassiske bivirkninger med manglende libido!',
-        normalDose: 'Startdosis: Typisk 15-30 mg til natten. Vedligeholdelse: 15-45 mg dgl.',
+        effect: 'Noradrenergt og specifikt serotonergt antidepressivum (NaSSA). Blokerer centrale præsynaptiske alfa-2-autoreceptorer og heteroreceptorer, hvilket øger frigivelsen af både noradrenalin og serotonin. Blokerer desuden 5-HT2- og 5-HT3-receptorer (hvilket modvirker angst, kvalme og seksuel dysfunktion) samt histamin H1-receptorer.',
+        normalDose: 'Startdosis: 15-30 mg til natten. Vedligeholdelse: 15-45 mg dagligt som enkeltdosis ved sengetid.',
         sideEffects: [
-            { symptom: 'Metabolisk', description: 'Markant og meget hyppigt (og potent underkendt) problem via især 5-HT2C-antagonisme; inducerer kulhydrat-cravings og svær vægtøgning.', treatment: 'Skærpet opmærksomhed! Hos deprimerede med lavt BMI som en start-anormalitet er Mirtazapin dog ofte gavnligt netop baseret på denne virkningsprofil.' },
-            { symptom: 'Klinisk paradoksal sedation (Antihistamin)', description: 'Mirtazapin blokkerer H1 receptorer udtalt. Dette mættes dog meget hurtigt. Den voldsomme "hang-over" sedation dagen efter ses derfor PARADOKSALT mere udtalt på de mindste doser (15 mg), hvorimod høje doser (45 mg) resulterer i formindsket træthed fordi de aktiverende noradrenerge systemer tager mere over.', treatment: 'Doseres generelt tæt ind til sengetid for at udnytte den sove-forbedrende virkning.' }
+            { symptom: 'Vægtøgning og øget appetit', description: 'Kombineret H1- og 5-HT2c-blokade medfører udtalt appetitstigning, kulhydrat-craving og vægtøgning.', treatment: 'Kostvejledning og vægtmonitorering. Kan være terapeutisk fordelagtigt hos afmagrede eller ældre deprimerede patienter med appetitløshed.' },
+            { symptom: 'Klinisk paradoksal sedation', description: 'Sedation via H1-blokade mættes ved lave doser. Den sederende virkning kan derfor paradoksalt opleves mere dominerende ved 15 mg end ved 30-45 mg, hvor den noradrenerge aktivering tiltager.', treatment: 'Indtages altid umiddelbart før sengetid for at udnytte den søvnfremmende virkning.' }
         ],
         sources: [{ title: 'Pro.medicin.dk (Mirtazapin)', url: 'https://pro.medicin.dk/Sog/Sog?query=mirtazapin' }]
     },
 
-    // Antipsykotika (Generel Info)
+    // Antipsykotika (Generel Info & Arytmi)
     {
         id: 'receptor_info_antipsykotika',
         name: 'Receptorprofiler (Info)',
         group: 'Antipsykotika',
         subgroup: 'Klasserelateret farmakologi',
         isInfoComponent: true,
-        effect: 'Dette opslag indeholder information om de generelle mekanismer for antipsykotisk medicin og hvordan blokering af forskellige receptorer hænger sammen med både klinisk effekt og bivirkninger.',
+        effect: 'Oversigt over de farmakologiske mekanismer bag antipsykotika. Viser sammenhængen mellem receptoraffinitet (D2, 5-HT2A, H1, M1, Alfa-1) og klinisk virkning samt bivirkninger (EPS, prolaktinstigning, sedation, vægtøgning og ortostatisme).',
         normalDose: '',
         sideEffects: [],
         sources: []
@@ -136,33 +137,34 @@ export const PSYKOFARMAKA_DATA = [
         group: 'Antipsykotika',
         subgroup: 'Kardiovaskulær Sikkerhed',
         isArytmiComponent: true,
-        effect: 'DCS, DPS og DSKF vejledning (2023) om arytmi-risiko ved anvendelse af psykofarmaka. Opdeler præparater i en tredelt farvekodning: Grønne (ikke QTc-forlængende), Gule (let QTc-forlængende eller under visse betingelser) og Røde (markant QTc-forlængelse og dokumenteret arytmi-risiko). Algoritmen anbefaler risikovurdering inkl. EKG før behandlingsstart ved gule og røde præparater.',
-        normalDose: `Vurdér primære kardiologiske risikofaktorer inden opstart:\n• Alder\n• Hjertesygdom (Hjertesvigt, AMI, præeksisterende QTc > 480 ms)\n• Familieanamnese m. arytmi/pludselig død\n• Hjertesymptomer (synkoper, palpitationer, dyspnø, brystsmerter)\n• Bradykardi\n• Elektrolytforstyrrelser (K < 3,5 mM)\n• Polyfarmaci med anden QTc-forlængende medicin\n\nHjertekontrol: Nyt EKG og vurdering af arytmi-symptomer skal foretages 1-2 uger efter indledning samt ved dosisøgning > 50% for gule og røde præparater.`,
+        effect: 'Klinisk vejledning fra DCS, DPS og DSKF (2023) om vurdering og håndtering af arytmirisiko ved anvendelse af psykofarmaka. Inddeler præparater i Grønne (ikke QTc-forlængende), Gule (let risiko / <10 ms) og Røde (markant QTc-forlængelse og dokumenteret TdP-risiko). Indeholder algoritme for risikovurdering og EKG-krav.',
+        normalDose: `Vurder kardiologiske risikofaktorer før opstart:\n• Høj alder (>65 år)\n• Kendt hjertesygdom (hjertesvigt, tidligere AMI, præeksisterende QTc > 480 ms)\n• Familieanamnese med arytmi eller uforklaret pludselig død\n• Symptomer: Synkoper, palpitationer, dyspnø eller brystsmerter\n• Bradykardi (<50 slag/min)\n• Elektrolytforstyrrelser (hypokaliæmi P-K < 3,5 mmol/L, hypomagnesiæmi)\n• Polyfarmaci med andre QTc-forlængende stoffer\n\nMonitorering: Kontrol-EKG anbefales 1-2 uger efter opstart samt ved dosisøgning >50% for gule og røde præparater.`,
         featuredLink: {
             title: 'Åbn Arytmi og Antipsykotika (PDF)',
-            description: 'Læs den fulde kliniske vejledning om vurdering af kardial risiko ved antipsykotika.',
+            description: 'Læs den fulde kliniske vejledning om kardial risikovurdering ved psykofarmaka.',
             url: `${import.meta.env.BASE_URL}pdf/arytmi_og_antipsykotika.pdf`
         },
         sideEffects: [
-            { symptom: 'Røde præparater (Høj Risiko)', description: 'Potentiel livstruende proarytmisk risiko forlænger QTc (Torsades de Pointes). Inkluderer stort set alle typiske FGA (Haloperidol, Chlorprotixen, Levomepromazin) samt bl.a. SGA som Clozapin, Quetiapin, Ziprasidon, Sertindol, Citalopram, Escitalopram, Lithium, Metadon m.m.', treatment: 'Baseline EKG er som udgangspunkt obligatorisk før opstart. Seponér og skift hvis EKG fastslår QTc > 500 ms, eller > 60 ms stigning fra baseline. Konferér med kardiolog ved QTc > 480 ms forud for opstart, eller ved QTc > 550 ms under behandling ang. telemetribehov.' },
-            { symptom: 'Gule præparater (OBS Risiko)', description: 'Risiko for let QTc-forlængelse (< 10 ms). Inkluderer bl.a. FGA (Zuclopenthixol, Flupenthixol), SGA (Risperidon, Paliperidon, Amisulprid) og visse antidepressiva (Mirtazapin, Sertralin).', treatment: 'Baseline EKG anbefales, men kan evt. udskydes/fraviges for _enkelte_ præparater i fravær af de klassiske kardielle pro-arytmiske TdP-risikofaktorer iflg. vejledningen.' },
-            { symptom: 'Grønne præparater (Lav Risiko)', description: 'Psykofarmaka som ikke associeres med proarytmisk/QTc-påvirkning. For SGA er dette udelukkende Olanzapin og Aripiprazol. Dækker bl.a. også over benzodiazepiner, visse antidepressiva (fx Duloxetin, Paroxetin, Agomelatin) og antiepileptika (Valproat, Lamotrigin).', treatment: 'EKG kan trygt undlades før opstart jf. den kardiologiske algoritme medmindre patienten har kendt komorbid svær hjerte-kar indikation.' }
+            { symptom: 'Røde præparater (Høj QTc-risiko)', description: 'Dokumenteret risiko for markant QTc-forlængelse og Torsades de Pointes (TdP). Omfatter bl.a. Haloperidol, Chlorprotixen, Levomepromazin, Melperon, Clozapin, Quetiapin, Ziprasidon, Sertindol, Citalopram, Escitalopram, Lithium og Metadon.', treatment: 'Baseline-EKG er obligatorisk før opstart. Konferér med kardiolog ved baseline QTc > 480 ms. Seponér eller reducer dosis hvis QTc overstiger 500 ms eller stiger > 60 ms fra baseline.' },
+            { symptom: 'Gule præparater (Moderat QTc-risiko)', description: 'Let QTc-forlængelse (< 10 ms) eller proarytmisk risiko under særlige omstændigheder. Omfatter bl.a. Zuclopenthixol, Flupenthixol, Risperidon, Paliperidon, Amisulprid, Mirtazapin og Sertralin.', treatment: 'Baseline-EKG anbefales, men kan i fravær af kardiologiske risikofaktorer udskydes for visse præparater (fx Sertralin og Mirtazapin).' },
+            { symptom: 'Grønne præparater (Lav/Ingen QTc-risiko)', description: 'Ikke associeret med klinisk betydende QTc-forlængelse. For atypiske antipsykotika omfatter dette udelukkende Aripiprazol og Olanzapin. Omfatter desuden Benzodiazepiner, visse antidepressiva (Duloxetin, Paroxetin, Agomelatin, Vortioxetin) samt Valproat og Lamotrigin.', treatment: 'EKG kan som udgangspunkt fraviges forud for opstart, medmindre der foreligger anden kardial indikation.' }
         ],
         sources: [{ title: 'DCS, DPS m.fl.: Arytmi-risiko ved anvendelse af psykofarmaka (Version 2, 2023)', url: `${import.meta.env.BASE_URL}pdf/arytmi_og_antipsykotika.pdf` }]
     },
-    // Antipsykotika (SGA)
+
+    // Antipsykotika (SGA - Anden Generation)
     {
         id: 'quetiapin',
         name: 'Quetiapin',
         group: 'Antipsykotika',
         subgroup: 'SGA (Anden generation)',
-        effect: 'Atypisk antipsykotikum (SGA). Antagonistisk primært på 5-HT2A og i mindre grad D2 receptorer (hvilket giver lav risiko for EPS). Har desuden en kraftig antihistaminerg (H1) og alfa-1-adrenerg blokerende virkning, som klinisk udnyttes flittigt til søvn/uro.',
-        normalDose: 'Skizofreni: 300-800 mg dgl (ofte depot for jævnt spejl). Bipolar/Depression (add-on): 150-300 mg. Angstdæmpende/Søvn (off-label anvendt systematisk): 25-50 mg.',
+        effect: 'Atypisk antipsykotikum (SGA). Blokerer primært 5-HT2A-receptorer og har moderat D2-receptoraffinitet med hurtig dissociation (giver meget lav risiko for ekstrapyramidale symptomer). Har kraftig antihistaminerg (H1) og alfa-1-adrenerg blokerende virkning, hvilket medfører udtalt sedation og ortostatisme. Anvendes ved skizofreni, bipolar mani/depression samt som add-on ved unipolar depression.',
+        normalDose: 'Skizofreni: 300-800 mg dagligt (depottabletter foretrækkes for jævnt plasmaniveau). Bipolar depression: 300 mg dagligt. Unipolar depression (add-on): 150-300 mg dagligt. Lavdosis til natten (25-50 mg) anvendes ofte off-label mod søvnløshed/uro.',
         receptorAffinities: { 'D2': 1, '5-HT2A': 1, 'H1': 2, 'M1': 1, 'Alfa-1': 2 },
         sideEffects: [
-            { symptom: 'Udtalt Sedation', description: 'Svært nedsat energiniveau, "hang-over" og sedation pga. potent H1-blokade.', treatment: 'Doseres overvejende aften/nat. Start altid meget lavt (fx 25 mg).' },
-            { symptom: 'Metabolisk Syndrom', description: 'Øget appetit, vægtøgning og udtalt risiko for dyslipidæmi samt diabetes type 2 udvikling.', treatment: 'Systematisk screening af metabolisk profil (vægt, lipider, HbA1c, EKG) min. årligt.' },
-            { symptom: 'Alfa-1 Antagonisme (Svimmelhed)', description: 'Kan give dosisafhængig, potent ortostatisk hypotension.', treatment: 'Langsom optrapning. Information til patienten om at skifte stilling (liggende til stående) langsomt.' }
+            { symptom: 'Udtalt sedation', description: 'Svært nedsat energiniveau, døsighed og morgen-hangover pga. potent H1-blokade.', treatment: 'Doseres til natten. Start i lav dosis (fx 25-50 mg) og optrap langsomt.' },
+            { symptom: 'Metaboliske forstyrrelser', description: 'Øget appetit, vægtøgning samt øget risiko for dyslipidæmi og type 2-diabetes.', treatment: 'Systematisk monitorering af vægt, taljemål, fasteblodsukker/HbA1c og lipider ved opstart, efter 3 måneder og årligt.' },
+            { symptom: 'Ortostatisk hypotension', description: 'Svimmelhed ved stillingsskift pga. alfa-1-adrenerg blokade.', treatment: 'Langsom optrapning. Instruer patienten i at rejse sig langsomt.' }
         ],
         sources: [{ title: 'Pro.medicin.dk (Quetiapin)', url: 'https://pro.medicin.dk/Sog/Sog?query=quetiapin' }]
     },
@@ -171,12 +173,12 @@ export const PSYKOFARMAKA_DATA = [
         name: 'Olanzapin',
         group: 'Antipsykotika',
         subgroup: 'SGA',
-        effect: 'Særdeles potent, bredspektret atypisk antipsykotikum (SGA). Førstevalg til akutte psykoser, svære maniske faser og som systemisk mani-profylaktikum grundet hurtigt indsættende dæmpende effekt.',
-        normalDose: 'Startdosis: 5-10 mg dgl (ofte fordelt over to doser i akut fasen). Vedligeholdelse: 10-20 mg dgl.',
+        effect: 'Højpotent, bredspektret atypisk antipsykotikum (SGA). Meget effektiv dæmpende og antipsykotisk virkning. Førstevalg ved akut psykose, akut manisk episode og maniprofylakse. Ingen QTc-forlængende effekt (grønt præparat), men udtalt metabolisk bivirkningsrisiko.',
+        normalDose: 'Startdosis: 5-10 mg dagligt (i akutte faser ofte 10-20 mg). Vedligeholdelse: 10-20 mg dagligt som enkeltdosis til natten.',
         receptorAffinities: { 'D2': 2, '5-HT2A': 2, 'H1': 2, 'M1': 2, 'Alfa-1': 1 },
         sideEffects: [
-            { symptom: 'Metabolisk (Sværrisiko!)', description: 'Klassens absolut "tungere" dreng ift. kardiometabolisk påvirkning. Relateret til >10% vægtøgning, induktion af insulinresistens.', treatment: 'Tæt klinisk vægt/BMI + lipid/glukose kontrol især det første halve år. Metformin profylakse kan overvejes tidligt, især hvis BMI > 27-30 under stigning. Diætishenvisning.' },
-            { symptom: 'H1 / Sedation og Anticholinerg', description: 'Kraftig sedation og mild mundtørhed/obstipation pga multireceptor påvirkning.', treatment: 'Døgndosis placeres til natten for at udnytte den søvngivende effekt profylaktisk mod insomni.' }
+            { symptom: 'Svær metabolisk påvirkning', description: 'Blandt de antipsykotika med størst risiko for markant vægtøgning (>10% af kropsvægt), insulinresistens og dyslipidæmi.', treatment: 'Tæt kontrol af vægt, BMI, HbA1c og lipider (baseline, 3 mdr. og derefter regelmæssigt). Kost- og motionsvejledning. Tidlig intervention med Metformin kan overvejes ved kraftig vægtstigning.' },
+            { symptom: 'Sedation og antikolinerge gener', description: 'Døsighed, mundtørhed og obstipation pga. multireceptor-blokade.', treatment: 'Doseres ved sengetid for at udnytte den søvnfremmende virkning.' }
         ],
         sources: [{ title: 'Pro.medicin.dk (Olanzapin)', url: 'https://pro.medicin.dk/Sog/Sog?query=olanzapin' }]
     },
@@ -185,12 +187,12 @@ export const PSYKOFARMAKA_DATA = [
         name: 'Aripiprazol',
         group: 'Antipsykotika',
         subgroup: 'SGA',
-        effect: 'Unik partiel D2-agonist (stabiliserer receptoren; blokerer ved overskud, stimulerer let ved underskud). Giver i modsætning til stort set alle andre SGA/FGA et "aktiverende/vågent" niveau med markant færre metaboliske og hæmmende bivirkninger.',
-        normalDose: 'Startdosis: 10-15 mg dgl. Max 30 mg. Giver som udgangspunkt en fænomenal negativ-symptom virkning.',
-        receptorAffinities: { 'D2': 3, '5-HT2A': 1, 'H1': 0, 'M1': 0, 'Alfa-1': 0 }, // 3 indicating partial agonist
+        effect: 'Partiel D2- og 5-HT1A-agonist samt 5-HT2A-antagonist (dopamin-system-stabilisator). Blokerer ved dopamin-overskud og stimulerer partielt ved mangel. Har en aktiverende profil med minimal metabolisk påvirkning, ingen sedation og ingen QTc-forlængelse (grønt præparat). Findes som tabletter og langtidsvirkende depotinjektion.',
+        normalDose: 'Startdosis: 10-15 mg dagligt (om morgenen). Vedligeholdelse: 10-30 mg dagligt. Unipolar depression (add-on): 2,5-10 mg dagligt.',
+        receptorAffinities: { 'D2': 3, '5-HT2A': 1, 'H1': 0, 'M1': 0, 'Alfa-1': 0 },
         sideEffects: [
-            { symptom: 'Akatisi (Myrekryb)', description: 'Ekstrem indre uro/rastløshed specielt placeret i muskulaturen/benene. Hyppig (kommer ofte tidligt inden for 1-2 uger) og bliver TRAGISK FEJLTOLKET som forværring af patientens angst eller psykose-agitation.', treatment: 'Erkend og diagnosticer korrekt (modsat agitation, er akatisi fysisk motorisk bunden). Reduktion af aktiv dosis, eller medicinsk modgift i form af b-blokker (Propranolol 10-20mg p.n.) eller kortvarigt low-dose Mirtazapin/Benzo.' },
-            { symptom: 'Aktivering / Insomni', description: 'Mangler sedationsaffekten; virker let speedende / "vågenheds-promoverende" ift trætheden associeret med skizofreni.', treatment: 'Doseres KUN morgen; skærpet opmærksomhed ved opstart hos i forvejen manieradede / overaktive pt.' }
+            { symptom: 'Akatisi (motorisk rastløshed)', description: 'Udtalt indre uro og manglende evne til at sidde stille, primært lokaliseret til benene. Optræder hyppigst inden for de første 1-2 uger og forveksles desværre ofte med psykotisk agitation eller angstforværring.', treatment: 'Korrekt klinisk differentiering fra agitation (akatisi er fysisk-motorisk betinget). Dosisreduktion, tillæg af betablokker (Propranolol 10-40 mg dagligt) eller midlertidigt lavdosis benzodiazepin/mirtazapin.' },
+            { symptom: 'Søvnløshed og aktivering', description: 'Vågenhedsfremmende effekt med risiko for indsovningsbesvær.', treatment: 'Doseres altid om morgenen. Forsigtighed ved akut mani, hvor initial sedation ofte er påkrævet.' }
         ],
         sources: [{ title: 'Pro.medicin.dk (Aripiprazol)', url: 'https://pro.medicin.dk/Sog/Sog?query=aripiprazol' }]
     },
@@ -199,12 +201,12 @@ export const PSYKOFARMAKA_DATA = [
         name: 'Risperidon',
         group: 'Antipsykotika',
         subgroup: 'SGA',
-        effect: 'Hyppigt anvendt potent D2 og 5-HT2A antagonist. "Bindeleddet" mellem 1. generation (dopamin-blokkerende EPS) og atypiske SGA. Bruges udtalt som akut beroligende v/ demens i lav-dosis og oftest første line i autisme-relateret udadreagerende adfærd hos børn.',
-        normalDose: 'Psykose: 2-6 mg dgl (kræver titrering). Børne/Demens psykiatri (aggression): ekstremt små doser 0,25 - 1,5 mg dgl.',
+        effect: 'Potent D2- og 5-HT2A-antagonist. Udbredt førstevalg ved skizofreni og psykotiske episoder, ved kortvarig behandling af vedvarende aggression ved moderat/svær Alzheimers demens (i lave doser) og ved adfærdsforstyrrelser hos børn og unge. Findes som tabletter, smeltetabletter, mikstur og depotinjektion.',
+        normalDose: 'Psykose: 2-6 mg dagligt fordelt på 1-2 doser. Ældre/demens: 0,25 - 1 mg dagligt (maks 2 mg dagligt). B&U: 0,5 - 3 mg dagligt.',
         receptorAffinities: { 'D2': 2, '5-HT2A': 2, 'H1': 0, 'M1': 0, 'Alfa-1': 1 },
         sideEffects: [
-            { symptom: 'Endokrin / Hyperprolaktinæmi', description: 'Udtalt stigning i P-prolaktin resulterende i udvikling af bryster hos mænd (gynækomasti), mælkeudskyl v/ikke-gravide, libidostab, amaneoré og knogleskørhed over sigt.', treatment: 'Screen/Mål prolaktin v/ symptomer. Oftest kræves behandlingsskifte (fx til det prolaktin-sænkende Aripiprazol) for at stoppe hormonforstyrrelsen.' },
-            { symptom: 'Ekstrapyramidale (EPS)', description: 'Oftest over 4-6 mg / dgl mister risperidon dets atypiske (SGA) EPS-beskyttende fordel via 5-HT2A og slår fuldt igennem som et klassisk FGA (tremor, stivhed).', treatment: 'Dosisreduktion. Alternativt tillæg af det centrale antikolinergikum Biperiden (Akineton 2mg 1-2x dgl) symptombehandlende.' }
+            { symptom: 'Hyperprolaktinæmi', description: 'Blokade af D2-receptorer i tuberoinfundibulære bane medfører udtalt stigning i P-Prolaktin, resulterende i galaktorré, gynækomasti hos mænd, amenorré/cyklusforstyrrelser, nedsat fertilitet og på sigt osteoporose.', treatment: 'Mål P-Prolaktin ved kliniske symptomer. Ved vedvarende hyperprolaktinæmi overvejes præparatskift (fx til Aripiprazol, som sænker prolaktin).' },
+            { symptom: 'Ekstrapyramidale bivirkninger (EPS)', description: 'Dosisafhængig EPS (tremor, rigiditet, hypokinesi). Ses særligt ved doser over 4-6 mg dagligt, hvor D2-blokaden overstiger det atypiske vindue.', treatment: 'Dosisreduktion. Ved akutte symptomer kan gives Biperiden (Akineton).' }
         ],
         sources: [{ title: 'Pro.medicin.dk (Risperidon)', url: 'https://pro.medicin.dk/Sog/Sog?query=risperidon' }]
     },
@@ -213,29 +215,30 @@ export const PSYKOFARMAKA_DATA = [
         name: 'Clozapin',
         group: 'Antipsykotika',
         subgroup: 'SGA',
-        effect: 'Guldkalven i antipsykotisk præparater. Er signifikant *overlegen* alle markedsførte andre antipsykotika (reducerer selvmordsrisikoen markant!), men reserveres til behandlingsresistent skizofreni pga et potentielt livstruende (men velkontrolleret) bivirkningsspektrum.',
-        normalDose: 'Startes stort set udelukkende under indlæggelse. Dosis optitrieres til 200-450 mg (Max 900 mg ekstremt). Kontinuerlig overvågning af spejl (S-Clozapin).',
+        effect: 'Mest potente og veldokumenterede atypiske antipsykotikum (SGA). Signifikant overlegent øvrige antipsykotika ved behandlingsresistent skizofreni og reducerer selvmordsrisikoen markant. Reserveres til behandlingsresistens (efter mindst to uvirksomme antipsykotikaforsøg af tilstrækkelig varighed og dosis) pga. potentielt livstruende bivirkninger, der kræver lovpligtig monitorering.',
+        normalDose: 'Startes altid i meget lav dosis (12,5 mg 1-2 gange første dag) og optrappes langsomt over uger til måldosis 200-450 mg dagligt (maksimalt 900 mg dagligt). Behandlingen styres af terapeutisk lægemiddelmonitorering (S-Clozapin terapeutisk interval ca. 1000-2000 nmol/L).',
         receptorAffinities: { 'D2': 1, '5-HT2A': 2, 'H1': 2, 'M1': 2, 'Alfa-1': 2 },
         sideEffects: [
-            { symptom: 'Agranulocytose', description: 'Knoglemarvshæmning/neutropeni – tab modstand ift. infektion (potentielt fatalt immundefekt syndrom).', treatment: 'OBLIGATORISK stringent ugentlig (senere månedlig) L+D / CRP differentialtælling for hvide blodlegemer jvf. Clozapin-registrerets standarder.' },
-            { symptom: 'Sialoré (Øget Mundvand) & Parasympatisk effekt', description: 'En udtalt, paradoksal hypersalivation (ofte massivt klagepunkt / voldsomt generende især under søvn) pga mistænkt agonisme på M4-receptorer, på trods af andre antikolinerge effekter.', treatment: 'Medicinsk modbehandling via antikolinergika er the go-to: Specifik M1 evt lokal Pirenzepin. Atropin-øjendråber lægges Sub-lingualt natlig under tungen (lokal effekt!). Glycopyrronium er også markedsført ofte til bedring.' },
-            { symptom: 'Kardielt / Obstipation', description: 'Myokarditis risiko (monitorér C-reaktiv prot/troponiner ved opstart), og voldsomt farlig gastroparese/obstipation opstået via anti-M1 og serotonin-H1', treatment: 'FOREBYG obstipation aggressivt med dobbelt laksantia-regime (Movicol + Laxoberal). Pt. dør af ileus, hvis stoppet underkendes.' }
+            { symptom: 'Agranulocytose og neutropeni', description: 'Knoglemarvshæmning med fald i neutrofile granulocytter og risiko for livstruende infektioner.', treatment: 'OBLIGATORISK hæmatologisk kontrol (leukocytter og differentialtælling): Hver uge i de første 18 uger, derefter hver 4. uge så længe behandlingen pågår, samt i 4 uger efter seponering. Seponeres straks ved leukocytter < 3,0 x 10^9/L eller neutrofile < 1,5 x 10^9/L.' },
+            { symptom: 'Sialoré (hypersalivation)', description: 'Udtalt natlig spytflåd og savlen (rammer op mod 50%). Skyldes formodentlig agonisme på M4-receptorer kombineret med nedsat synkerefleks under søvn.', treatment: 'Lokal antikolinerg behandling: Atropin-øjendråber (1-2 dråber sublingualt til natten) eller peroral pirenzepin / glycopyrronium.' },
+            { symptom: 'Gastrointestinal hypomotilitet (Obstipation)', description: 'Potent antikolinerg og 5-HT-blokerende virkning medfører alvorlig risiko for svær obstipation, paralytisk ileus og tarmiskæmi. Kan være fatal, hvis tilstanden overses.', treatment: 'Forebyg aggressivt med laksantia (macrogol/Movicol, evt. kombineret med peristaltikfremmende som natriumpicosulfat). Spørg aktivt til afføringsmønster ved alle kliniske kontroller.' },
+            { symptom: 'Myokarditis og kardiomyopati', description: 'Sjælden, men potentielt fatal betændelsestilstand i hjertemusklen, hyppigst inden for de første 2 måneder.', treatment: 'Monitorér troponiner og CRP ved feber, takykardi, dyspnø eller brystsmerter. Optag EKG.' }
         ],
         sources: [{ title: 'Pro.medicin.dk (Clozapin)', url: 'https://pro.medicin.dk/Sog/Sog?query=clozapin' }]
     },
 
-    // Antipsykotika (FGA)
+    // Antipsykotika (FGA - Første Generation)
     {
         id: 'haloperidol',
         name: 'Haloperidol (Serenase)',
         group: 'Antipsykotika',
         subgroup: 'FGA (Første generation)',
-        effect: 'Prototypen på højpotent første-generations antipsykotikum (FGA) med ren, kraftig (og dermed farlig bivirkningsmæssigt) blokade af Dopamin-2 specielt. Giver ro i hjernen/stop i hallucinationer.',
-        normalDose: 'Akut roterende agitation/delir (IM / IV): 2,5 - 5 mg (max 10-15 mg/døgn u. EKG-obs).',
+        effect: 'Klassisk højpotent første-generations antipsykotikum (FGA) med ren, kraftig Dopamin D2-blokade. Hurtig og effektiv dæmpning af positive psykotiske symptomer, svær agitation og delir.',
+        normalDose: 'Akut svær agitation/delir: 2,5 - 5 mg i.m. (eller p.o. 2-10 mg dagligt fordelt på 1-2 doser). Maks 20 mg dagligt. Intravenøs anvendelse kræver EKG-monitorering pga. QTc-risiko.',
         receptorAffinities: { 'D2': 2, '5-HT2A': 0, 'H1': 0, 'M1': 0, 'Alfa-1': 0 },
         sideEffects: [
-            { symptom: 'Akut Dystoni/Ekstrapyramidale Bivirkninger (EPS)', description: 'Fulminant, invaliderende motoriske EPS: Torticollis (halsvrang), okulogyre kriser (rullende øjne låst), stivhed (Parkinsonisme). Livstids risiko for TD (tardive dyskinesier som tiks i læbe/tunge/mund).', treatment: 'AKUT antidot er nødvendig: Biperiden (Akineton) 2,5 - 5 mg Intramuskulært (løser spasm-vridet efter få min!). Forebyg kronisk EPS ved at give lavere doser tidsbegrænset, eller skifte til SGA.', },
-            { symptom: 'Kardiovaskulær (Malign)', description: 'Dosisafhængig QTc-forlængelse der særligt ses klinisk relevant ved INTRAVENØS haloperidol indgivelse.', treatment: 'Telemetri og EKG hvis anvendt intravenøst; tænk elektrolytbalancen ind før givning.' }
+            { symptom: 'Akut dystoni og ekstrapyramidale symptomer (EPS)', description: 'Høj risiko for akutte dystonier (torticollis, okulogyre kriser, tunge-kæbespasmer), parkinsonisme (rigiditet, hviletremor, bradykinesi) og på sigt tardive dyskinesier.', treatment: 'Akut antidot ved dystoni: Biperiden (Akineton) 2,5 - 5 mg i.m./i.v. (kuperer krampen inden for få minutter). Vedligeholdende: Dosisreduktion eller skift til SGA.' },
+            { symptom: 'Kardiovaskulær risiko (QTc-forlængelse)', description: 'Dosisafhængig forlængelse af QTc-intervallet og risiko for Torsades de Pointes, særligt ved intravenøs administration eller hypokaliæmi.', treatment: 'Optag EKG før og under behandling, især ved i.v. administration. Korriger elektrolytter.' }
         ],
         sources: [{ title: 'Pro.medicin.dk (Haloperidol)', url: 'https://pro.medicin.dk/Sog/Sog?query=haloperidol' }]
     },
@@ -244,11 +247,11 @@ export const PSYKOFARMAKA_DATA = [
         name: 'Zuclopenthixol (Cisordinol)',
         group: 'Antipsykotika',
         subgroup: 'FGA',
-        effect: 'Midt / Lavpotent typisk (FGA) antipsykotikum. Ganske udbredt som IM depotinjektion (Cisordinol Depot) til fastholdelse af skizofrendes behandling ved compliance-svigt samt Cisordinol-Acutard medicin mod eksplosiv, voldelig psykose man ønsker nedstiret i løbet ad timer.',
-        normalDose: 'Acutard (IM Depot kortsigtet eff): Typisk 50-100 mg for en 2-3 dages dyb sedation. Peroral dgl: 10-50 mg.',
+        effect: 'Middelpotent første-generations antipsykotikum (FGA). Findes som tabletter, som korttidsvirkende depotinjektion (Cisordinol-Acutard) til akut dæmpning af voldsom psykotisk uro/agitation, og som langtidsvirkende depot (Cisordinol Depot) til vedligeholdelsesbehandling ved skizofreni.',
+        normalDose: 'Peroral: 10-50 mg dagligt fordelt på 2-3 doser. Acutard i.m.: 50-100 mg (maksimalt 400 mg pr. behandlingsforløb, virker i 2-3 døgn). Depot i.m.: 200-400 mg hver 2.-4. uge.',
         receptorAffinities: { 'D2': 2, '5-HT2A': 1, 'H1': 1, 'M1': 0, 'Alfa-1': 1 },
         sideEffects: [
-            { symptom: 'Blytung Motorisk Sedition', description: 'Både klassisk parkinsonisme (EPS stivhed), men pga Alpha-1/H1-blokaden i høj grad en ekstrem form for sløvhed. Forringer negativ-symptomer udtalt ("Zombified").', treatment: 'Cisordinol er et fantastisk "Bremse-lægemiddel" akut som "kemisk spændetrøje", men langtidsterapi bør ideelt stiftes for et mildere SGA lægemiddel når tilstanden stabiliseres for at værne om den kognitive funktion og livskvalitet. Tillæg evt Biperiden ved slem rigiditet.' }
+            { symptom: 'Sedation og ekstrapyramidale symptomer', description: 'Udtalt sedation pga. histamin-H1 og alfa-1-blokade kombineret med ekstrapyramidale symptomer (parkinsonisme, rigiditet).', treatment: 'Acutard anvendes kun til kortvarig akut stabilisering (maks. 4 injektioner over 1-2 uger). Ved langtidsbehandling bør der stiles mod skift til et 2. generations antipsykotikum (SGA) for at bevare kognitiv funktion og reducere EPS-byrden. Biperiden kan gives ved akutte EPS.' }
         ],
         sources: [{ title: 'Pro.medicin.dk (Zuclopenthixol)', url: 'https://pro.medicin.dk/Sog/Sog?query=zuclopenthixol' }]
     },
@@ -259,12 +262,12 @@ export const PSYKOFARMAKA_DATA = [
         name: 'Lithium',
         group: 'Stemningsstabiliserende',
         subgroup: 'Lithium',
-        effect: 'Førstevalg og veldokumenteret "Golden Standard" ved forebyggelse og behandling af Bipolar Lidelse, samt unikt selvmordsforebyggende. Modulerer second-messenger systemer (bl.a. inositoltrifosfat). Har et uhyre smalt terapeutisk indeks.',
-        normalDose: 'Oftest 600-1200 mg (fordelt på 1-2 doser). VIGTIGT: Doseringen styres KUN ud fra blodprøvespejl (P-Lithium) fremfor mg. Mål er 0,6 - 0,8 mmol/L.',
+        effect: 'Guldstandard ved stemningsstabiliserende behandling og profylakse af bipolar lidelse samt unikt dokumenteret selvmordsforebyggende effekt. Modulerer intracellulære second-messenger-kaskader (bl.a. inositoltrifosfat og GSK-3). Har et snævert terapeutisk indeks og kræver obligatorisk terapeutisk lægemiddelmonitorering (TDM).',
+        normalDose: 'Doseringen styres udelukkende efter 12-timers dalværdi i serum (P-Lithium måles præcis 12 timer efter aftendosis). Typisk målniveau: Vedligeholdelse 0,5 - 0,8 mmol/L (hos ældre ofte 0,4 - 0,6 mmol/L). Akut mani: 0,8 - 1,2 mmol/L.',
         sideEffects: [
-            { symptom: 'Intoxikation (Livsfare)', description: 'Symptomer starter som neurologiske: Grov tremor, utydelig tale, ataksi, nystagmus, konfusion og evt. opkast/diarré. Livstruende kramper, koma og hjertestop ved konc. typisk >1,5 mmol/L.', treatment: 'Spejl fastholdes strengt (0,6-0,8 mmol/L). Væskemangel/dehydrering + NSAID og tiazider LØFTER spejlet. Behandling: Seponering omgående, saltvand IV, og oftest regelret dialyse ved spejl > 2,0 mmol/L.' },
-            { symptom: 'Nyre/Thyroidea', description: 'Nedsat renal koncentrationsevne inducerer polyuri og sekundær polydipsi (nefrogen diabetes insipidus). Kan også give blivende nedsat eGFR (Nyresvigt) og Hypothyreose.', treatment: 'Rutinæssig klinisk TSH / Kreatinin overvågning (halvårligt minimum).' },
-            { symptom: 'Psoriasis / Acne', description: 'Kendt for at kunne reaktivere og forværre hudsygdomme.', treatment: 'Henvis evt til dermatolog.' }
+            { symptom: 'Intoxikation (Lithium-forgiftning)', description: 'Symptomer starter neurologisk og gastrointestinalt: Grov tremor, dysartri (snøvlet tale), ataksi, nystagmus, diarré og konfusion. Ved svær forgiftning (>1,5-2,0 mmol/L): Kramper, nyresvigt, bevidsthedspåvirkning og arytmier.', treatment: 'Akut seponering. Rigelig intravenøs væskebehandling med isotont saltvand for at fremme renal elimination. Hæmodialyse er indiceret ved svære neurologiske symptomer eller ved serum-lithium typisk > 2,5 - 4,0 mmol/L.' },
+            { symptom: 'Renale og thyroideapåvirkninger', description: 'Nedsat renal koncentrationsevne med polyuri og sekundær polydipsi (nefrogen diabetes insipidus), risiko for kronisk nyresygdom (faldende eGFR) samt hypothyreose.', treatment: 'Obligatorisk kontrol af P-Kreatinin, eGFR, P-TSH og væsketal før opstart og regelmæssigt hver 3.-6. måned.' },
+            { symptom: 'Dermatologiske gener', description: 'Kan udløse eller forværre psoriasis og akne.', treatment: 'Dermatologisk tilsyn og lokalbehandling. Dosisreduktion ved svære tilfælde.' }
         ],
         sources: [{ title: 'Pro.medicin.dk (Lithium)', url: 'https://pro.medicin.dk/Sog/Sog?query=lithium' }]
     },
@@ -273,25 +276,25 @@ export const PSYKOFARMAKA_DATA = [
         name: 'Lamotrigin',
         group: 'Stemningsstabiliserende',
         subgroup: 'Antiepileptikum',
-        effect: 'Effektivt stemningsstabiliserende primært rettet imod profylakse af _depressive_ episoder ved Bipolar lidelse (men forhindrer ikke manier synderligt). Bruges også ved epilepsi.',
-        normalDose: 'Optrappes EKSTREMT STRATEGISK langsomt (oftest kun 25 mg hver 2. uge) til oftest 100-200 mg/dag (voksne uden VPA-interaktion).',
+        effect: 'Effektivt stemningsstabiliserende lægemiddel primært rettet mod profylakse af depressive episoder ved bipolar lidelse type I og II (forhindrer ikke maniske episoder). Anvendes desuden ved epilepsi. Frarådes ved unipolar depression ifølge DMPG 2026.',
+        normalDose: 'Optrappes meget langsomt for at minimere risikoen for alvorlige hudreaktioner (typisk 25 mg dagligt i uge 1-2, 50 mg dagligt i uge 3-4, derefter 100 mg dagligt, måldosis 100-200 mg dagligt). OBS: Ved kombination med valproat (hæmmer glucuronidering) skal dosis halveres!',
         sideEffects: [
-            { symptom: 'Livstruende Hududslæt (SJS)', description: 'Allergisk hypersensitivitet: Stevens-Johnson syndrom eller Toksisk epidermal nekrolyse (Lyell syndrome). Oftest trigget ved for hurtig optrapning, specielt i kombination med valproat.', treatment: 'SKAL SEPONERES OMGÅENDE og vurderes mhp. indlæggelse ved enhver tegn til HELE KROPS UDSLÆT især på slimhinder (øjne/mund) eller ledsagede influenzasymptomer/feber.' }
+            { symptom: 'Alvorlige hududslæt (Stevens-Johnsons syndrom / TEN)', description: 'Sjælden, men potentielt fatal overfølsomhedsreaktion med udbredt hudafskalning og slimhindeinvolvering (øjne, mund, genitalia). Optræder oftest inden for de første 8 uger ved for hurtig optrapning.', treatment: 'BEHANDLINGEN SKAL SEPONERES OMGÅENDE ved ethvert tegn på nyt hududslæt, især hvis ledsaget af feber, lymfeknudesvulst eller slimhindelæsioner. Kræver akut lægevurdering.' }
         ],
         sources: [{ title: 'Pro.medicin.dk (Lamotrigin)', url: 'https://pro.medicin.dk/Sog/Sog?query=lamotrigin' }]
     },
 
-    // Benzodiazepiner / Angstdæmpende / Søvn
+    // Benzodiazepiner / Angstdæmpende / Sedativa
     {
         id: 'diazepam',
         name: 'Diazepam (Stesolid)',
         group: 'Angstdæmpende / Sedativa',
         subgroup: 'Benzodiazepin',
-        effect: 'Klassisk angstdæmpende og muskelafslappende benzodiazepin. Binder (GABA_A - allosterisk) til komplekset og øger inhibitorisk kloridkanal-åbning. Præparatet er decideret berygtet for dets uhyrligt lange halveringstid (ofte over 100 timer inklusiv dets markante aktive metabolit desmethyldiazepam).',
-        normalDose: 'Let uro/angst (P.N): 2-5 mg (kortvarigt brug). Akut svær uro / kramper: 10 mg (kan da gives IV langsomt, IM eller rektalt).',
+        effect: 'Klassisk langtidsvirkende benzodiazepin med udtalt anxiolytisk, sedativ, krampestillende og muskelrelakserende virkning. Binder allosterisk til GABA_A-receptorkomplekset og forstærker GABA-transmissionen. Kendetegnet ved en meget lang halveringstid (20-100 timer for modersubstansen, og for den aktive metabolit desmethyldiazepam op til 100-200 timer).',
+        normalDose: 'Akut uro/angst p.n.: 2-5 mg (kortvarig brug). Akut svær agitation eller kramper: 5-10 mg (kan gives langsomt i.v., i.m. eller rektalt som klysma).',
         sideEffects: [
-            { symptom: 'Tilvænning & Abstinens', description: 'Massiv fysiologisk og psykologisk toleransudvikling og afhængighed – ("benzo-afhængighed").', treatment: 'Regimet må som udgangspunkt absolut kun løbe tidsbegrænset og kortvarigt under en måned som hovedregel (eller kun p.n). Håndter seponering over LANG tid da hurtigt stop kan medføre status epilepticus.' },
-            { symptom: 'Risiko for Ældre (Fald/Koma)', description: 'Akkumulerer og lagrer sig enormt grundet svindende leverfunktion (nedsat CYP evne). Døsighed, motorisk svigt og respirations-understøttelse.', treatment: 'GIV ALDRIG DIAZEPAM TIL ÆLDRE SOM BEROLIGENDE uden absolut exceptionel grund. Konverter hellere til Oxazepam (som ikke har aktive metabolitter) eller brug SGA.' }
+            { symptom: 'Tolerans og afhængighed', description: 'Hurtig udvikling af fysiologisk og psykologisk tolerans og afhængighed allerede efter få ugers fast brug.', treatment: 'Behandlingen bør som hovedregel være kortvarig (maks. 1-2 uger) eller p.n. Udtrapning efter længere tids brug skal ske gradvist for at undgå abstinenskramper og delirium.' },
+            { symptom: 'Akkumulering og faldrisiko hos ældre', description: 'Grundet lang halveringstid og nedsat hepatisk clearance hos ældre er der stor risiko for akkumulering med sedation, konfusion, ataksi og faldulykker.', treatment: 'Diazepam bør generelt undgås til ældre som beroligende middel. Vælg i stedet et kort- eller mellemvirkende præparat uden aktive metabolitter (fx Oxazepam).' }
         ],
         sources: [{ title: 'Pro.medicin.dk (Diazepam)', url: 'https://pro.medicin.dk/Sog/Sog?query=diazepam' }]
     },
@@ -300,25 +303,25 @@ export const PSYKOFARMAKA_DATA = [
         name: 'Lorazepam',
         group: 'Angstdæmpende / Sedativa',
         subgroup: 'Benzodiazepin',
-        effect: 'Middel/kortvirkende benzodiazepin. Særlig udbredt sublingualt/po til den absolut akutte agiterede/angste patient pga fravær af mærkbare aktive metabolitter og en meget fornuftig profil i forhold til belastning af leveren.',
-        normalDose: 'IM/Peroral/sublingual: typisk 1 til max 2,5 mg pr. administration.',
+        effect: 'Mellemvirkende benzodiazepin uden aktive metabolitter. Særligt velegnet sublingualt eller peroralt til den akut agiterede eller angste patient. Omsættes udelukkende ved direkte glukuronidering, hvilket gør det skånsomt for patienter med nedsat leverfunktion.',
+        normalDose: 'Peroral / sublingual / i.m.: Typisk 1-2 mg pr. administration (maks. 4 mg dagligt uden forudgående overlægegodkendelse).',
         sideEffects: [
-            { symptom: 'Respirationshæmning (Farlig cocktail)', description: 'Især ved IV og i kombination med CNS-depressiva (som alkohol eller især opioider) kan respirationen fatalt paralyseres fuldstændigt.', treatment: 'Mål kontinuerligt respirationsfrekvens / ilt-SAT. Har patienten fået metadon/heroin er BZ stærkt kontraindiceret indtil de er metaboliseret eller der gives Naloxon. Antidot ved overdosering er Flumazenil.' }
+            { symptom: 'Respirationsdepression', description: 'Risiko for respirationsdepression, særligt ved intravenøs administration eller i kombination med andre CNS-depressiva (alkohol, opioider).', treatment: 'Monitorér respirationsfrekvens og saturation. Ved samtidig opioidindgift udvises ekstrem forsigtighed. Antidot ved overdosering er Flumazenil.' }
         ],
         sources: [{ title: 'Pro.medicin.dk (Lorazepam)', url: 'https://pro.medicin.dk/Sog/Sog?query=lorazepam' }]
     },
 
-    // ADHD
+    // ADHD / Centralstimulerende & Non-stimulerende
     {
         id: 'methylphenidat',
         name: 'Methylphenidat (Ritalin/Concerta)',
         group: 'ADHD / Centralstimulerende',
-        subgroup: 'Dopamin genoptagelseshæmmer',
-        effect: 'Systemisk centralstimulerende. Blokerer præsynaptiske transportproteiner for dopamin og noradrenalin (re-uptake inhibitor). Bedrer markant den eksekutive funktion, mindsker motorisk uopmærksomhed og hyperaktivitet. Gylden standard.',
-        normalDose: 'Startdosis: Kortvirkende 5-10 mg x 2-3 / dgl. Modificeret frigivelse (Depot): Start oftest 18-36 mg, titreres op til et "sweet spot" – for voksne op mod max 80-100 mg (officielt 60 mg m. forbehold).',
+        subgroup: 'Dopamin- og noradrenalingenoptagelseshæmmer',
+        effect: 'Centralstimulerende førstevalgspræparat til behandling af ADHD hos børn, unge og voksne. Blokerer præsynaptiske genoptagelsestransportere for dopamin (DAT) og noradrenalin (NET), hvilket øger den synaptiske koncentration i præfrontale cortex og basalganglier. Forbedrer opmærksomhed, impulskontrol og eksekutive funktioner markant.',
+        normalDose: 'Optrapning sker ofte med korttidsvirkende tabletter (5-10 mg x 2-3 dagligt) for at finde optimal dosis. Derefter konvertering til depottabletter/kapsler (18-54 mg om morgenen). Vejledende maksimaldosis: Voksne 80-100 mg dagligt, børn op til 2,1 mg/kg/dag (eller 60-90 mg dagligt).',
         sideEffects: [
-            { symptom: 'Anoreksi og Vækst Hæmning', description: 'Betydeligt nedsat eller fuldstændig blokeret appetit på medicinens peak er utrolig almen. Medfører stagnation i barnets længde og faretruende vægttab.', treatment: 'Konstant kontrol-regime (Længde/Vægt kurve til børn). Indlæg "drug-holidays" (i weekender / lange ferier) for at tillade indhentningsvækst. Kost-tilskud efter medicinens udtømning om aftenen.' },
-            { symptom: 'Hjerte (Sympatikus aktivering)', description: 'Tachycardi, forhøjet tonus (blodtryksstigninger). Kan evt udløse underliggende arytmier udtalt.', treatment: 'Screen klinisk forud og jævnligt for EKG anormaliteter. Kontroller BT / Puls årligt / ved ny dosis. Stop behandling hvis BT forbliver forhøjet uhåndteret.' }
+            { symptom: 'Nedsat appetit og vægttab', description: 'Appetitløshed på medicinens virkningspeak er meget almindelig og kan føre til vægttab og væksthæmning hos børn.', treatment: 'Følg vægt- og vækstkurve nøje. Indtag måltider før medicinindgift om morgenen og tæt på sengetid. "Medicinpauser" i weekender/ferier kan overvejes efter aftale.' },
+            { symptom: 'Kardiovaskulære effekter', description: 'Takykardi og stigning i blodtryk pga. sympatomimetisk stimulering. Kan afsløre underliggende arytmier.', treatment: 'Klinisk undersøgelse og EKG forud for opstart. Monitorér puls og blodtryk regelmæssigt (hver 3.-6. måned).' }
         ],
         sources: [{ title: 'Pro.medicin.dk (Methylphenidat)', url: 'https://pro.medicin.dk/Sog/Sog?query=methylphenidat' }]
     },
@@ -326,11 +329,11 @@ export const PSYKOFARMAKA_DATA = [
         id: 'lisdexamfetamin',
         name: 'Lisdexamfetamin (Elvanse)',
         group: 'ADHD / Centralstimulerende',
-        subgroup: 'Amfetamin',
-        effect: 'Prodrug til dextroamfetamin forbundet til lysin. Frigives derfor fysiologisk stabilt (gennem spaltning i røde blodlegemer) over en hel dag; kan klinisk ikke frigives her-og-nu (ved at sniffe/knuse pilen), forhindrer groft narkotisk misbrug ift. rene varianter.',
-        normalDose: 'Startdosis: 30 mg. Optitreres evt. 20 mg/ugen. Vedligeholdelse: 30-70 mg (Max 70 mg officielt).',
+        subgroup: 'Amfetamin-prodrug',
+        effect: 'Prodrug til dextroamfetamin kovalent bundet til L-lysin. Spaltes enzymatisk af røde blodlegemer til aktivt dextroamfetamin, hvilket giver en jævn og forudsigelig terapeutisk profil over 12-14 timer. Den manglende direkte biotilgængelighed ved knusning eller nasal administration minimerer misbrugspotentialet.',
+        normalDose: 'Startdosis: 30 mg om morgenen. Kan øges med 20 mg ugentligt til vedligeholdelse 30-70 mg dagligt (maks 70 mg dagligt).',
         sideEffects: [
-            { symptom: 'Aften Insomni', description: 'På grund af dets extremt stabile, 13-14 timers tidsrum kan det forårsage alvorlige søvnrytme-forstyrrelser og manglende indtræden at træthed hos visse brugere ift Methylphenidat.', treatment: 'Medicinen gives kategorisk altid KUN allertidligste morgenstund for at medicinen kan "tømmes" inden aften. Overvej seponering / tillæg søvn-regime ved svær søvnløshed.' }
+            { symptom: 'Insomni (søvnforstyrrelser)', description: 'Grundet den lange virkningsvarighed (12-14 timer) kan indtagelse senere på dagen forårsage betydelige indsovningsvanskeligheder.', treatment: 'Skal altid indtages tidligt om morgenen. Ved vedvarende insomni revurderes dosis eller præparat.' }
         ],
         sources: [{ title: 'Pro.medicin.dk (Lisdexamfetamin)', url: 'https://pro.medicin.dk/Sog/Sog?query=lisdexamfetamin' }]
     },
@@ -338,25 +341,25 @@ export const PSYKOFARMAKA_DATA = [
         id: 'atomoxetin',
         name: 'Atomoxetin (Strattera)',
         group: 'ADHD / Non-stimulerende',
-        subgroup: 'Noradrenalin Reuptake Inhibitor',
-        effect: 'Potent non-stimulerende selektiv noradrenalin-genoptagelseshæmmer, der mangler det klassiske affekt på dopamin systemet. Det giver IKKE the rush/misbrugspotentiale som centralstimulerende giver, og er oftere af dette brugt som et glimrende valg hvor tic / tics komorbiditet eller tidl drug-abuse overskygger.',
-        normalDose: 'Start 40 mg dgl, øges til 80-100 mg efter min. en uges stabil fase.',
+        subgroup: 'Selektiv noradrenalingenoptagelseshæmmer',
+        effect: 'Selektiv noradrenalin-genoptagelseshæmmer (SNRI uden dopaminerg effekt i nucleus accumbens). Non-stimulerende alternativ til ADHD. Har intet misbrugspotentiale og er ikke omfattet af euforiserende stoffer-reglerne. Velegnet ved komorbid angst, tics eller tidligere/aktuelt rusmiddelmisbrug.',
+        normalDose: 'Startdosis 40 mg dagligt i 1-2 uger, optitreres til 80-100 mg dagligt (maks 100-120 mg dagligt).',
         sideEffects: [
-            { symptom: 'Hepatotoksitet', description: 'Kan af ukendte grunde inducere sjælden (men fatal) auto-immun leverskade.', treatment: 'Stop medicinering fuldstændigt og straks henvendelse jvf blodprøvekontrol hvis svære mavesmerter, tegn på gulsot/ikterus mm. forekommer.' }
+            { symptom: 'Hepatotoksicitet', description: 'Sjælden, men potentielt alvorlig leverskade er rapporteret.', treatment: 'Informer patienten om at kontakte læge ved tegn på leversygdom (mavesmerter, ikterus, mørk urin). Seponér ved forhøjede levertal.' }
         ],
         sources: [{ title: 'Pro.medicin.dk (Atomoxetin)', url: 'https://pro.medicin.dk/Sog/Sog?query=atomoxetin' }]
     },
 
-    // Abstinens / Misbrug / Andet
+    // Abstinens / Antidot / Misbrug
     {
         id: 'chlordiazepoxid',
         name: 'Chlordiazepoxid (Risolid)',
         group: 'Abstinensbehandling',
         subgroup: 'Benzodiazepin',
-        effect: 'Klassisk benzodiazepin der i psykiatri/rusmiddel regimet stortset besidder kongeværdigheden ift at dæmpe massive CNS-excitatoriske tilstande, nemlig indlæggende Alkohol/Benzo dæmpende kure (abstinensbehandlinger).',
-        normalDose: 'Indlæggelse/Afrusning: Styres stringent via scorer. (Fx BAS-skema, 25-50 mg chlordiazepoxid administreret kun når abstinensscore vurderes høj nok ved overvågning timer for timer).',
+        effect: 'Langtidsvirkende benzodiazepin. Førstevalg ved afrusning og abstinensbehandling ved alkohol- og benzodiazepinabstinenser. Hæmmer CNS-hyperexcitabilitet og forebygger abstinenskramper og delirium tremens.',
+        normalDose: 'Doseringsstyret ud fra valideret abstinensscore (fx BAS eller CIWA-Ar): 25-50-100 mg p.o. ved symptomer med intervaller af 1-2 timer, indtil patienten er beroliget og abstinensscoren falder. Aftrappes derefter over 4-7 døgn.',
         sideEffects: [
-            { symptom: 'Alvorlig Kumulering', description: 'Mange aktive metabolitter – halveringstiden strækker op mod 100 timer! Over medicinering den 1. og 2. dag kan pludselig lægge patienten livstruende i dyb sedation på dag 3/4 pga depot effetten blusser i blodet.', treatment: 'Gives ALTID (såfremt overhoved muligt) scoring-bestemt fremfor fast skemalagt. Ved overkumulering holdes medicinen helt ude min. nogle døgn, hold observation.' }
+            { symptom: 'Kumulering og oversedation', description: 'Har aktive metabolitter med meget lang halveringstid (op til 100 timer). Tæt dosering de første 1-2 døgn kan medføre kraftig kumulering og dyb sedation på dag 3-4.', treatment: 'Dosering bør så vidt muligt styres af løbende score (symptom-trigget) frem for faste skemaer. Ved oversedation pauseres medicinen under tæt observation.' }
         ],
         sources: [{ title: 'Pro.medicin.dk (Chlordiazepoxid)', url: 'https://pro.medicin.dk/Sog/Sog?query=chlordiazepoxid' }]
     },
@@ -365,10 +368,10 @@ export const PSYKOFARMAKA_DATA = [
         name: 'Flumazenil (Lanexat)',
         group: 'Antidot',
         subgroup: 'Benzodiazepin Antagonist',
-        effect: 'Den rene spejl-antagonist til GABA-A (Benzodiazepin) receptorerne. Det eneste stof klinisk i stand til at vække en patient fra en overdosis/koma forårsaget udelukkende af midler som fx diazepam via omgående skubbing af agonisten ud.',
-        normalDose: '0,2 mg IV injektion direkte ind over halve halve minut - observer klinin. Gentages 100 µg med hyppige mellemrum op til total fx 1-3 mg indtil vågenhed.',
+        effect: 'Specifik, kompetitiv antagonist på benzodiazepin-bindingsstedet på GABA_A-receptoren. Ophæver hurtigt og selektivt de sedative og respirationsdeprimerende virkninger af benzodiazepiner.',
+        normalDose: '0,2 mg i.v. over 15-30 sekunder. Hvis ønsket bevidsthedsniveau ikke opnås inden for 60 sekunder, kan der gives yderligere 0,1 mg med 60 sekunders mellemrum, op til maksimalt 1-2 mg.',
         sideEffects: [
-            { symptom: 'Udløsning af Status Epilepticus (Livsfare!!)', description: 'Flumazenil trækker tæppet væk momentant – hos en patient med underliggende misbrugsbåren GABA regulering (tidligere misbrugere) udløses akut fuld-blods benzodiazepin-abstinens der ofte munder i u-behandlelig og fatal status epileptus da ens vigtigste medicin netop var benzo (som nu er blokeret!).', treatment: 'En kontraindikeret absolut livsfare at give Flumazenil hvis det blotte kendskab til Benzo-misbrug eller tri-cykliske (TCA) antydes pre! Vurder i stedet at intubere til respiratoren uden antidot og lade det slide af.' }
+            { symptom: 'Udløsning af akutte abstinenser og status epilepticus', description: 'Hos patienter med kronisk benzodiazepinforbrug eller afhængighed vil flumazenil momentant fremkalde svære abstinenser med høj risiko for behandlingsresistente kramper og status epilepticus. Ligeledes farligt ved blandingsforgiftning med tricykliske antidepressiva (TCA).', treatment: 'Flumazenil er kontraindiceret ved mistanke om kronisk benzodiazepinmisbrug eller samtidig TCA-intoksikation. I disse tilfælde sikres luftveje og ventilation understøttes frem for anvendelse af antidot.' }
         ],
         sources: [{ title: 'Pro.medicin.dk (Flumazenil)', url: 'https://pro.medicin.dk/Sog/Sog?query=flumazenil' }]
     },
@@ -377,10 +380,10 @@ export const PSYKOFARMAKA_DATA = [
         name: 'Naloxon',
         group: 'Antidot',
         subgroup: 'Opioid Antagonist',
-        effect: 'Opioid receptor komptiv antagonist (Mu). Livs-redderen ved respirationsstop grundet morfica overdosering. Binder med ekstrem høj affinitet og dislocerer midlertidigt opioid receptorents agonist - resultatet er dramtisk vågenhed sekunder efter IV.',
-        normalDose: '0,4 mg (voksne) skubbet pr. IV hurtigt. Er tillige tilgængelig IM samt ved en dedikeret nasal-spray til førstehjælpsmedicum i ambulancerne.',
+        effect: 'Kompetitiv opioid-antagonist med høj affinitet for my-opioidreceptorer. Livreddende antidot ved opioidoverdosering med respirationsstop eller svær bevidsthedspåvirkning.',
+        normalDose: '0,4 - 0,8 mg i.v. (eller i.m. / subkutant / som næsespray). Dosis kan gentages med 2-3 minutters interval, indtil spontan og tilstrækkelig respiration er genetableret.',
         sideEffects: [
-            { symptom: 'Rekylanfald (Re-sedation)', description: 'Naloxon udrenses hurtigere (t1/2 ~ 1 t) end effekten af de oftest stærkt akkumulerende lægemidler patienten overdoseres med (Metadon, Heroin fx tager mange timer/dage). Overlevere *tror* de er raske men falder i en pludselig døds-koma når tømningskoncentrationen af Naloxon igen falder til fordel for opioiden under en tur hjem.', treatment: 'Holdes indlagt for massiv monitorering! Iværksæt Naloxon dropp hvis det kliniske spejl antyder faretruende re-sedation over timerne efter.' }
+            { symptom: 'Re-sedation (relaps)', description: 'Naloxon har en kort plasmahalveringstid (ca. 30-60 minutter), hvilket er markant kortere end de fleste opioider (fx metadon og morfin). Patienten risikerer at glide tilbage i respirationsstop, når naloxon udvaskes.', treatment: 'Patienten skal observeres i mindst 4-6 timer (ved depot/metadon længere). Ved recidiverende respirationsdepression opstartes kontinuerlig i.v. Naloxon-infusion.' }
         ],
         sources: [{ title: 'Pro.medicin.dk (Naloxon)', url: 'https://pro.medicin.dk/Sog/Sog?query=naloxon' }]
     },
@@ -389,10 +392,10 @@ export const PSYKOFARMAKA_DATA = [
         name: 'Disulfiram (Antabus)',
         group: 'Misbrugsbehandling',
         subgroup: 'Acetaldehyddehydrogenase-hæmmer',
-        effect: 'Aversiv-betingende anti-craving/alkohol terapi. Inhiberer enzymet acetaldehyd-dehydrogenase, medfører at under en genstand alkoholindtagelse danner kroppen toksiske mængder acetaldehyd, der giver en frygtelig usmags / organisk straf-reaktion på kroppen.',
-        normalDose: 'Opstarts-fase p.o: 800 mg de første dage-uge for loading. Derefter rutine udleveres klinisk typisk 400-800 mg fx kun to gange i ugen, grundet god t1/2.',
+        effect: 'Aversiv behandling af alkoholafhængighed. Hæmmer enzymet acetaldehyd-dehydrogenase irreversibelt, hvilket medfører akkumulering af toksisk acetaldehyd ved samtidig alkoholindtagelse og udløser en kraftig fysisk ubehagsreaktion.',
+        normalDose: 'Startdosis: Typisk 800 mg p.o. som enkeltdosis første dag, derefter vedligeholdelse med 400 mg 2 gange ugentligt eller 200 mg dagligt under overvågning.',
         sideEffects: [
-            { symptom: 'Den klassiske "Antabus-Alkohol"-reaktion', description: 'Oplevelse af at være levende "afkodet". Brystsmerter, eksplosiv hjertebanken, kvalme/brek, massiv hud-rubor i ansigtet, åndedrætsbesvær, og blodtrykfald opstået i farlig kardiovaskulært chok / død worstcase.', treatment: 'En indgående, bindende psykiatrisk samarbejdsaftale om nul-tolerance med alkohol under dækning af de op til _uger_ disulfiramen dvæler forude.' }
+            { symptom: 'Disulfiram-alkohol-reaktion (DER)', description: 'Flush (ansigtsrødme), pulserende hovedpine, takykardi, hypotension, dyspnø, kvalme og opkastning. Ved store mængder alkohol kan reaktionen udvikle sig til kardiovaskulært kollaps og arytmi.', treatment: 'Behandling kræver patientens fulde informerede samtykke og motivation. Ved svær reaktion: Sengeleje, ilt, intravenøs væskebehandling og symptomatisk behandling under monitorering.' }
         ],
         sources: [{ title: 'Pro.medicin.dk (Disulfiram)', url: 'https://pro.medicin.dk/Sog/Sog?query=disulfiram' }]
     }

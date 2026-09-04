@@ -18,7 +18,7 @@ export const BIPOLAR_GUIDELINE = {
         {
             title: 'Akut Manisk Episode (Type I)',
             summary: 'Lithium, Quetiapin, Aripiprazol, Olanzapin eller Risperidon anbefales som 1. valg.',
-            details: `Trinvis farmakologisk behandling af akut mani:\n\n1. Valg (Anvend til min. 70%):\n• Lithium (Kun ved mild til moderat mani i monoterapi). Optitreres til 0,8-1,0 mmol/l (evt. op til 1,2 under indlæggelse).\n• Antipsykotika: Aripiprazol, Quetiapin, Olanzapin, Risperidon\n• Antiepileptika: Valproat (Frarådes til kvinder i fertil alder)\n\nKombinationsbehandling (ved manglende respons):\n• Kombinér to af følgende: Antipsykotikum, Lithium eller Valproat.\n• Anvend generelt IKKE to antipsykotika eller to antiepileptika samtidig pga. øget bivirkningsrisiko.\n\nECT (Elektrokonvulsiv Terapi):\n• Har effekt hos 80% med mani og kan være livreddende ved manisk delir.`
+            details: `Trinvis farmakologisk behandling af akut mani:\n\n1. Valg (Anvend til min. 70%):\n• Lithium (Kun ved mild til moderat mani i monoterapi). Optitreres til 0,8-1,0 mmol/l (evt. op til 1,2 under indlæggelse).\n• Antipsykotika: Aripiprazol, Quetiapin, Olanzapin, Risperidon\n• Antiepileptika: Valproat (OBS: Skærpede restriktioner - kontraindiceret til kvinder i fertil alder pga. høj teratogenicitet; kræver årligt graviditetsforebyggende program. Nye restriktioner gælder også mænd i fertil alder).\n\nKombinationsbehandling (ved manglende respons):\n• Kombinér to af følgende: Antipsykotikum, Lithium eller Valproat.\n• Anvend generelt IKKE to antipsykotika eller to antiepileptika samtidig pga. øget bivirkningsrisiko.\n\nECT (Elektrokonvulsiv Terapi):\n• Har effekt hos 80% med mani og kan være livreddende ved manisk delir.`
         },
         {
             title: 'Akut Depressiv Episode (Type I)',
@@ -28,7 +28,7 @@ export const BIPOLAR_GUIDELINE = {
         {
             title: 'Blandingstilstande',
             summary: 'Specifikke anbefalinger gælder, hvis patienten har både maniske og depressive symptomer.',
-            details: `Manisk blandingstilstand (Akut mani med depressive symptomer):\n• 1. Valg: Aripiprazol, Asenapin, Olanzapin eller Ziprasidon.\n• Evt. kombination af Lithium, Valproat eller Quetiapin.\n\nDepressiv blandingstilstand (Akut depression med hypomane symptomer):\n• 1. Valg: Lamotrigin, Lithium, Olanzapin, Quetiapin eller Ziprasidon.`
+            details: `Manisk blandingstilstand (Akut mani med depressive symptomer):\n• 1. Valg: Aripiprazol, Olanzapin, Ziprasidon (Asenapin/Sycrest er afregistreret i DK).\n• Evt. kombination af Lithium, Valproat eller Quetiapin.\n\nDepressiv blandingstilstand (Akut depression med hypomane symptomer):\n• 1. Valg: Lamotrigin, Lithium, Olanzapin, Quetiapin eller Ziprasidon.`
         },
         {
             title: 'Bipolar Lidelse Type II',
@@ -38,12 +38,12 @@ export const BIPOLAR_GUIDELINE = {
         {
             title: 'Vedligeholdelsesbehandling & Monitorering',
             summary: 'Forebyggelse af nye episoder kræver ofte flerårig behandling. TDM er afgørende for Lithium.',
-            details: `Forebyggelse af Mani:\n• 1. Valg: Lithium, Quetiapin, Aripiprazol, Olanzapin, Risperidon, Valproat.\n\nForebyggelse af Depression:\n• 1. Valg: Lithium, Quetiapin, Lamotrigin.\n\nLithium Monitorering (Therapeutic Drug Monitoring - TDM):\n• Obligatorisk pga. snævert terapeutisk interval. Måles som 12-timers værdi.\n• Vedligeholdelsesbehandling: 0,5 - 0,8 mmol/L.\n• Akut Mani eller Depression: 0,6 - 1,2 mmol/L.\n\nSeponering:\n• Skal foregå over måneder for at reducere tilbagefaldsrisiko. Undtagelse: Antidepressiva seponeres ofte straks ved akut mani.`
+            details: `Forebyggelse af Mani:\n• 1. Valg: Lithium, Quetiapin, Aripiprazol, Olanzapin, Risperidon, Valproat.\n\nForebyggelse af Depression:\n• 1. Valg: Lithium, Quetiapin, Lamotrigin.\n\nLithium Monitorering (Therapeutic Drug Monitoring - TDM):\n• Obligatorisk pga. snævert terapeutisk interval. Måles som 12-timers dalværdi (standardiseret prøvetagning 12 timer efter aftendosis).\n• Vedligeholdelsesbehandling: 0,5 - 0,8 mmol/L (ældre ofte 0,4 - 0,6 mmol/L).\n• Akut Mani: 0,8 - 1,2 mmol/L.\n• Toksicitetsgrænse: > 1,2 - 1,5 mmol/L (kræver akut seponering og væskebehandling).\n\nSeponering:\n• Skal foregå over måneder for at reducere tilbagefaldsrisiko. Undtagelse: Antidepressiva seponeres ofte straks ved akut mani.`
         },
         {
             title: 'Særlige Grupper: Børn, Unge og Gravide',
             summary: 'Behandling kræver tæt specialist-opfølgning og streng overvågning af bivirkninger.',
-            details: `Børn og Unge (Under 18 år):\n• 1. Valgspræparater ved mani: Lithium, Aripiprazol, Quetiapin og Risperidon.\n• Olanzapin bør undgås som 1. valg pga. svær risiko for vægtøgning hos børn.\n• Valproat frarådes generelt til børn/unge, og må IKKE anvendes til piger i fertil alder pga. teratogenicitet og risiko for PCOS (Polycystisk Ovariesyndrom).\n• Diagnosticering (via B&U psykiatri) kræver observation og rating-scales på tværs af miljøer.\n\nGravide:\n• Særlig forsigtighed. Valproat er kontraindiceret. ECT kan overvejes i særlige tilfælde ved svær depression eller mani.`
+            details: `Børn og Unge (Under 18 år):\n• 1. Valgspræparater ved mani: Lithium, Aripiprazol, Quetiapin og Risperidon.\n• Olanzapin bør undgås som 1. valg pga. svær risiko for vægtøgning hos børn.\n• Valproat frarådes generelt til børn/unge, og må IKKE anvendes til piger i fertil alder pga. teratogenicitet og risiko for PCOS (Polycystisk Ovariesyndrom).\n• Diagnosticering (via B&U psykiatri) kræver observation og rating-scales på tværs af miljøer.\n\nGravide:\n• Særlig forsigtighed. Valproat er strengt kontraindiceret (teratogent og risiko for neuroudviklingsforstyrrelser). Lithium medfører let øget risiko for Ebsteins anomali, men kan i visse tilfælde fortsættes efter specialistkonference under tæt monitorering. ECT kan overvejes som skånsomt alternativ ved svær behandlingsresistent mani/depression under graviditet.`
         }
     ]
 };

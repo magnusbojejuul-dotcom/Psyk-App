@@ -1,5 +1,5 @@
 export const GUIDELINE_ADVARSLER = [
-    { type: 'critical', text: 'I.m.-olanzepin må aldrig kombineres med i.m.-benzodiazepin. Har man behov for at give im Lorazepam efter im Olanzapin, må det tidligst ske efter 1 time. Har man behov for at give im Olanzapin efter im Lorazepam, må det tidligst ske efter 2 timer.' },
+    { type: 'critical', text: 'I.m.-olanzapin må aldrig kombineres med i.m.-benzodiazepin. Har man behov for at give im Lorazepam efter im Olanzapin, må det tidligst ske efter 1 time. Har man behov for at give im Olanzapin efter im Lorazepam, må det tidligst ske efter 2 timer.' },
     { type: 'warning', text: 'Ved behandling af ældre skal der generelt varetages med forsigtighed. Doser skal som udgangspunkt være 1/4 eller 1/2 af voksendoser. Injektion olanzapin bør undgås til ældre med demens.' },
     { type: 'warning', text: 'Toksisk psykose (udløst af centralstimulantia) bør i den akutte fase ikke behandles med antipsykotika på grund af risiko for udvikling af kramper og malignt neuroleptika syndrom. Behandles udelukkende med benzodiazepiner.' },
     { type: 'info', text: 'Antipsykotisk behandling skal så vidt muligt forudgås af EKG.' }

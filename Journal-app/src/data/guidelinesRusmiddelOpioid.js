@@ -9,36 +9,41 @@ export const RUSMIDDEL_OPIOID = {
         title: 'Opioidforgiftning (Intoksikation)',
         description: 'Den klassiske opioid-triade er: Koma, Knappenålspupiller og Respirationsdepression. Hurtig genkendelse og behandling med Naloxon er livreddende.',
         symptoms: [
-            { name: 'Miosis (Knappenålspupiller)', icon: 'eye', desc: 'Bortset fra sjældne undtagelser/blanding er pupillerne stærkt formindskede.' },
-            { name: 'Respirationsdepression', icon: 'wind', desc: 'Lav respirationsfrekvens (< 12/min). Den primære dødsårsag.' },
-            { name: 'Koma / Nedsat bevidsthed', icon: 'brain', desc: 'Sover dybt og kan ofte slet ikke vækkes af smerte.' },
-            { name: 'Cyanose / Bleghed', icon: 'activity', desc: 'Blå læber og negle pga. iltmangel (hypoxi).' },
-            { name: 'Slappe muskler, evt frisk blødning', icon: 'shield', desc: 'Evt friske indstiksmærker ved I.V.-brug.' }
+            { name: 'Miosis (Knappenålspupiller)', icon: 'eye', desc: 'Stærkt forsnævrede pupiller (bortset fra ved blanding med fx kokain/amfetamin eller svær hypoksi).' },
+            { name: 'Respirationsdepression', icon: 'wind', desc: 'Langsom (< 8-10/min) eller overfladisk respiration. Den direkte dødsårsag ved overdosering.' },
+            { name: 'Koma / Nedsat bevidsthed', icon: 'brain', desc: 'Dyb bevidstløshed, manglende reaktion på tiltale og smertestimulation.' },
+            { name: 'Cyanose / Bleghed', icon: 'activity', desc: 'Perifer eller central cyanose (blå læber/negle) som tegn på hypoksi.' },
+            { name: 'Muskelslaphed & Indstik', icon: 'shield', desc: 'Slap muskeltonus, frie luftveje truede. Evt. synlige friske indstiksmærker.' }
         ],
-        management: 'AKUT: Skab frie luftveje. Ventiler m. maske/pose hvis respiration er < 8 pr min. Antidot er NALOXON (0,4 mg I.V./I.M. eller næsespray). Genses hyppigt, da Naloxons effekt klinger af FØR de fleste opioider = risiko for resedering. Naloxon udløser omgående (men kortvarige) abstinenser!'
+        management: 'AKUT ABCDE: Skab frie luftveje og ventiler med maske/pose (100% ilt) ved respirationssvigt. Antidot er NALOXON (0,4 - 0,8 mg i.v., i.m. eller som næsespray). Gentages hvert 2.-3. minut til spontan respiration. OBS: Naloxon har kortere halveringstid end de fleste opioider – patienten SKAL observeres for risiko for re-sedation og respirationsstop!'
     },
     algorithmTitle: 'Abstinens- og Substitutionsbehandling',
     isStepBased: true,
     algorithm: [
         {
             title: 'Opioidabstinenser (Klinisk Billede)',
-            details: `• Symptomatologi ligner en svær influenza: Rastløshed, svedudbrud, "gåsehud", rindende øjne og næse (rhinorrhoea).\n• Senere: Smerter i led og muskler (knogle-smerter), mavekramper, kvalme, diarre, opkastning og dysfori / svær "craving".\n• Opioidabstinenser er enormt pinefulde, men yderst sjældent livsfarlige (i modsætning til alkohol/benzo-abstinenser).`
+            summary: 'Influenzalignende billede med mydriasis, sved, gåsehud, kramper og svær craving. Sjældent livstruende.',
+            details: `• Symptomer debuterer 6-12 timer (heroin/morfin) til 24-48 timer (metadon) efter ophør.\n• Initiale symptomer: Rastløshed, gabende, tåre- og næseflåd (rhinorré), svedeture, gåsehud (piloerektion) og pupildilatation (mydriasis).\n• Tiltagende symptomer: Diffuse muskel- og knoglesmerter, mavekramper, kvalme, opkastning, profus diarré og intens stoftrang (craving).\n• Opioidabstinenser er ekstremt pinefulde for patienten, men i sig selv sjældent livstruende (i modsætning til alkohol- og benzodiazepinabstinenser).`
         },
         {
-            title: 'Diagnosticering',
-            details: `• Anvend et anerkendt scoringssystem (fx COWS - Clinical Opiate Withdrawal Scale).\n• Opstart aldrig substitutionsbehandling hvis patienten er påvirket. Patienten SKAL opleve synlige tegn på abstinenser før Buprenorphin startes.`
+            title: 'Objektiv Abstinensvurdering (COWS)',
+            summary: 'Anvend Clinical Opiate Withdrawal Scale (COWS). Krav om objektive abstinenser før Buprenorphin opstartes.',
+            details: `• Anvend et standardiseret, valideret scoringsværktøj: COWS (Clinical Opiate Withdrawal Scale).\n• Opstart ALDRIG substitutionsbehandling hvis patienten er påvirket eller asymptomatisk.\n• Forud for 1. dosis Buprenorphin SKAL patienten frembyde tydelige, objektive abstinenser (COWS-score typisk ≥ 12-13) for at undgå at fremkalde akutte abstinenser.`
         },
         {
             title: 'Substitutionsbehandling: Buprenorphin (1. Valg)',
-            details: `• Buprenorphin (Suboxone/Subutex) er partiel agonist og er hyppigt et førstevalg pga. højere sikkerhed for overdosis.\n• VIGTIGT: Buprenorphin displacerer fulde agonister fra receptorerne. Gives det for tidligt udløses et AKUT ABSTINENS-syndrom (precipitated withdrawal). Derfor KRAV at patienten har objektive abstinenser ved opstart.\n• Start fx med 2-4 mg sublingualt overvåget, vurder derefter effekt.`
+            summary: 'Partiel my-agonist med højere sikkerhed og loft-effekt på respirationsdepression. OBS: Precipitated withdrawal.',
+            details: `• Buprenorphin (Suboxone / Buvidal / Subutex) er førstevalg ved lægelig substitutionsbehandling pga. god sikkerhedsprofil og 'ceiling effect' for respirationsdepression.\n• VIGTIGT OM PRECIPITATED WITHDRAWAL: Buprenorphin har ekstrem høj receptoraffinitet og displacerer fulde agonister fra my-receptorerne. Gives det for tidligt, udløses voldsomme, akutte abstinenser. Der skal gå minimum 12-24 timer efter kortvirkende opioider og 24-48 timer efter metadon før opstart.\n• Startdosis: 2-4 mg sublingualt under overvågning. Dosis optitreres til 8-16 mg (maks 24 mg dagligt). Depotformuleringer (Buvidal ugentlig/månedlig s.c.) kan overvejes.`
         },
         {
             title: 'Substitutionsbehandling: Metadon',
-            details: `• Metadon er fuld agonist og anvendes ved utilstrækkelig effekt af Buprenorphin, eller til personer med mangeårigt tungt misbrug og høj tolerance.\n• Risiko for akkumulering og QT-FORLÆNGELSE. EKG anbefales ved doser >100 mg/dag eller ift. anden risikomedicin.\n• Initialdosis oftest 20-30 mg (afhængigt af opbygget tolerancens). OBS: Metadon-steady state opnås først efter flere dage, så øg langsomt for at undgå utilsigtet overdosis efter 3-4 dage.`
+            summary: 'Fuld my-agonist. Anvendes ved utilstrækkelig effekt af Buprenorphin eller høj tolerance. Obs QTc-forlængelse.',
+            details: `• Metadon (fuld agonist) anvendes primært, hvis Buprenorphin har utilstrækkelig effekt, eller hos patienter med mangeårig, massiv tolerance.\n• Risiko for akkumulering: Halveringstiden er 15-60 timer, og steady-state opnås først efter 3-5 dage. Øg dosis langsomt for at undgå utilsigtet overdosis efter nogle dage.\n• Kardial sikkerhed: Metadon forlænger QTc-intervallet (rødt præparat). EKG er obligatorisk ved baseline og ved doser >100 mg dagligt samt ved polyfarmaci.\n• Startdosis typisk 20-30 mg p.o. som enkeltdosis, titreres gradvist.`
         },
         {
-            title: 'Symptomatisk Lindring under Abstinens (Uden Substitution)',
-            details: `• Smerte/Rastløshed: Undgå primært BZD uden speciallæge; Truxal (Quetiapin off-label) for søvn.\n• NSAID / Paracetamol for knoglesmerter.\n• Loperamid for diarre og evt. Ondansetron for kvalme og opkast.`
+            title: 'Symptomatisk Lindring under Abstinens',
+            summary: 'Non-opioid understøttende behandling: Paracetamol/NSAID, Loperamid, og sederende antihistamin / antipsykotikum til natten.',
+            details: `Ved udtrapning eller abstinensbehandling uden substitutionsmedicin:\n• Muskelsmerter / knoglesmerter: Paracetamol 1 g x 4 p.o. kombineret med NSAID (fx Ibuprofen 400 mg x 3).\n• Diarré: Loperamid (Imodium) 2-4 mg p.n. (maks 16 mg/døgn).\n• Kvalme / mavekramper: Ondansetron 4-8 mg eller Metoclopramid / Domperidon.\n• Søvnløshed og uro: Chlorprothixen (Truxal) 25-50 mg til natten eller Quetiapin 25-50 mg (off-label). Undgå som hovedregel benzodiazepiner pga. høj afhængigheds- og overdosisrisiko.`
         }
     ]
 };
