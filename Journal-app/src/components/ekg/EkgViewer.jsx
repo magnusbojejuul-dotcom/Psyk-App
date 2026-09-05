@@ -50,9 +50,9 @@ export default function EkgViewer({
         pathophysiology: caseData.anatomicalEffect || '',
         clinicalCriteria: 'Klinisk vurdering jf. Dansk Cardiologisk Selskab.',
         cellularElectrophysiology: {
-            channelsAndReceptors: 'Spændingsafhængige ionkanaler (Nav1.5, Cav1.2, K+ kanaler) og myokardielle pumper.',
-            actionPotentialPhase: 'Aktionspotentialets depolariserings- (fase 0) og repolariseringsfaser (fase 2-3).',
-            injuryCurrentOrVector: 'Vektoriel udbredelse gennem arbejdsmuskulatur og ledningsvæv.'
+            molecularMechanism: 'Spændingsafhængige ionkanaler (Nav1.5, Cav1.2, K+ kanaler) og myokardielle pumper.',
+            actionPotentialEffect: 'Aktionspotentialets depolariserings- (fase 0) og repolariseringsfaser (fase 2-3).',
+            ekgManifestation: 'Vektoriel udbredelse gennem arbejdsmuskulatur og ledningsvæv.'
         },
         sundhedDkTitle: 'Sundhed.dk: Lægehåndbogen',
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-tjekliste/',
@@ -302,47 +302,50 @@ export default function EkgViewer({
                         </div>
                     </div>
 
-                    {/* 4. DEDIKERET MOLEKYLÆR & CELLULÆR ELEKTROFYSIOLOGI (KANALER, RECEPTORER & VEKTORER) */}
+                    {/* 4. DEDIKERET MOLEKYLÆR & CELLULÆR ELEKTROFYSIOLOGI (ÅRSAGSKÆDE FRA KANAL TIL EKG) */}
                     {clinicalInsight.cellularElectrophysiology && (
                         <div className="p-4 rounded-2xl bg-gradient-to-br from-indigo-50/90 via-slate-50 to-purple-50/80 border border-indigo-200/80 flex flex-col gap-3 text-xs shadow-2xs">
                             <div className="flex items-center justify-between pb-2 border-b border-indigo-100">
                                 <div className="flex items-center gap-2 text-indigo-950 font-bold text-xs">
                                     <span className="p-1 rounded-lg bg-indigo-100 text-indigo-800 text-sm">🔬</span>
-                                    <h4>Hjertets Fysiologi, Ionkanaler & Receptorer</h4>
+                                    <h4>Elektrofysiologisk Årsagskæde: Fra Ionkanal til EKG-tak</h4>
                                 </div>
                                 <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-indigo-100/70 text-indigo-900 border border-indigo-200/50">
-                                    Molekylær & Vektoriel Forklaring
+                                    Mekanistisk Dybdeforklaring
                                 </span>
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                                {/* 1. Kanalsystemer, Pumper & Receptorer */}
-                                <div className="p-2.5 rounded-xl bg-white/90 border border-indigo-100 flex flex-col gap-1">
-                                    <strong className="text-indigo-950 text-[11px] font-bold flex items-center gap-1.5">
-                                        <span className="text-amber-600">⚡</span> Ionkanaler & Receptorer:
-                                    </strong>
+                                {/* 1. Kanal- & Receptorsvigt */}
+                                <div className="p-3 rounded-xl bg-white/95 border border-indigo-100 flex flex-col gap-1.5 shadow-2xs">
+                                    <div className="flex items-center gap-1.5 text-indigo-950 font-bold text-[11px]">
+                                        <span className="p-1 rounded-md bg-amber-100 text-amber-800 text-xs">⚡</span>
+                                        <h5>1. Kanaler, Ioner & Receptorer</h5>
+                                    </div>
                                     <p className="text-[11px] text-slate-700 leading-relaxed">
-                                        {clinicalInsight.cellularElectrophysiology.channelsAndReceptors}
+                                        {clinicalInsight.cellularElectrophysiology.molecularMechanism || clinicalInsight.cellularElectrophysiology.channelsAndReceptors}
                                     </p>
                                 </div>
 
-                                {/* 2. Aktionspotentialets Faser */}
-                                <div className="p-2.5 rounded-xl bg-white/90 border border-indigo-100 flex flex-col gap-1">
-                                    <strong className="text-indigo-950 text-[11px] font-bold flex items-center gap-1.5">
-                                        <span className="text-blue-600">📊</span> Aktionspotentialefaser (0–4):
-                                    </strong>
+                                {/* 2. Membran- & Aktionspotentiale */}
+                                <div className="p-3 rounded-xl bg-white/95 border border-indigo-100 flex flex-col gap-1.5 shadow-2xs">
+                                    <div className="flex items-center gap-1.5 text-indigo-950 font-bold text-[11px]">
+                                        <span className="p-1 rounded-md bg-blue-100 text-blue-800 text-xs">📊</span>
+                                        <h5>2. Membran- & Aktionspotentiale</h5>
+                                    </div>
                                     <p className="text-[11px] text-slate-700 leading-relaxed">
-                                        {clinicalInsight.cellularElectrophysiology.actionPotentialPhase}
+                                        {clinicalInsight.cellularElectrophysiology.actionPotentialEffect || clinicalInsight.cellularElectrophysiology.actionPotentialPhase}
                                     </p>
                                 </div>
 
-                                {/* 3. Vektor- & Skadestrømsmekanisme */}
-                                <div className="p-2.5 rounded-xl bg-white/90 border border-indigo-100 flex flex-col gap-1">
-                                    <strong className="text-indigo-950 text-[11px] font-bold flex items-center gap-1.5">
-                                        <span className="text-rose-600">🎯</span> Vektor & Skadestrøm:
-                                    </strong>
+                                {/* 3. Hvorfor ses det på EKG'et? */}
+                                <div className="p-3 rounded-xl bg-white/95 border border-indigo-100 flex flex-col gap-1.5 shadow-2xs">
+                                    <div className="flex items-center gap-1.5 text-indigo-950 font-bold text-[11px]">
+                                        <span className="p-1 rounded-md bg-rose-100 text-rose-800 text-xs">🎯</span>
+                                        <h5>3. EKG-Manifestation & Vektorer</h5>
+                                    </div>
                                     <p className="text-[11px] text-slate-700 leading-relaxed">
-                                        {clinicalInsight.cellularElectrophysiology.injuryCurrentOrVector}
+                                        {clinicalInsight.cellularElectrophysiology.ekgManifestation || clinicalInsight.cellularElectrophysiology.injuryCurrentOrVector}
                                     </p>
                                 </div>
                             </div>
