@@ -118,6 +118,7 @@ export const CASE_CLINICAL_COMPARISONS = {
         keyFindings: 'Regelmæssig sinusrytme (72 bpm), positiv P-tak foran hvert QRS i afledning II, normal hjerteakse (+60°), PR-interval 160 ms (normalt 120-200 ms), smalt QRS 85 ms (< 120 ms), isoelektrisk ST-segment og afrundede asymmetriske T-takker.',
         diffFromNormal: 'Dette er det fysiologiske reference-EKG. Alle tidsintervaller (PR, QRS, QTc), tak-amplituder og overledninger er inden for normale referencegrænser. Danner udgangspunkt for sammenligning med alle patologiske tilstande.',
         pathophysiology: 'Normal impulsudbredelse fra SA-knuden i højre atrium, fysiologisk forsinkelse i AV-knuden (sikrer fuld atrietømning) og lynhurtig synkron aktivering af begge ventrikler via His-Purkinje systemet fra endokardium mod epikardium.',
+        clinicalCriteria: 'Sundhed.dk / DCS Kriterier for Normal-EKG: Frekvens 50-100/min, regelmæssig sinusrytme med positiv P i II og negativ i aVR, PR-interval 120-200 ms, QRS-bredde < 120 ms, normal akse (-30° til +90°), QTc < 440 ms (mænd) / < 460 ms (kvinder), normal R-progression i V1–V6 og isoelektrisk ST-segment.',
         sundhedDkTitle: 'Sundhed.dk: EKG-tjekliste i almen praksis',
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-tjekliste/',
         dcsTitle: 'DCS: Nationale Vejledninger for EKG',

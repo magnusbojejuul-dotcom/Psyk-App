@@ -242,7 +242,7 @@ export default function EkgViewer({
                         <div className="p-3.5 rounded-2xl bg-amber-50/70 border border-amber-200 flex flex-col gap-1.5">
                             <div className="flex items-center gap-2 text-xs font-bold text-amber-950">
                                 <span className="text-base">🔍</span>
-                                <h4>Hvad er særligt ved dette EKG?</h4>
+                                <h4>De specifikke EKG-forandringer</h4>
                             </div>
                             <p className="text-xs text-amber-900 leading-relaxed">
                                 {clinicalInsight.keyFindings}
@@ -259,18 +259,20 @@ export default function EkgViewer({
                             )}
                         </div>
 
-                        {/* 2. Hvorfor adskiller det sig fra et normalt EKG? */}
-                        <div className="p-3.5 rounded-2xl bg-rose-50/70 border border-rose-200 flex flex-col gap-1.5">
+                        {/* 2. Hvorfor ses forandringerne? (Elektrofysiologi & Patofysiologi) */}
+                        <div className="p-3.5 rounded-2xl bg-rose-50/70 border border-rose-200 flex flex-col gap-2">
                             <div className="flex items-center gap-2 text-xs font-bold text-rose-950">
                                 <span className="text-base">⚖️</span>
-                                <h4>Forskel fra et normalt EKG</h4>
+                                <h4>Hvorfor ses forandringen? (Mekanisme)</h4>
                             </div>
                             <p className="text-xs text-rose-900 leading-relaxed">
+                                <strong className="text-rose-950 font-bold">Forskel fra normal: </strong>
                                 {clinicalInsight.diffFromNormal}
                             </p>
-                            <p className="text-[11px] text-rose-800/90 leading-relaxed pt-1 border-t border-rose-200/60 mt-auto">
-                                <strong>Mekanisme:</strong> {clinicalInsight.pathophysiology}
-                            </p>
+                            <div className="text-xs text-rose-950 leading-relaxed pt-2 border-t border-rose-200/70 mt-auto bg-rose-100/50 p-2.5 rounded-xl">
+                                <strong className="text-rose-900 font-bold block mb-0.5">🔬 Elektrofysiologisk mekanisme:</strong>
+                                <span>{clinicalInsight.pathophysiology}</span>
+                            </div>
                         </div>
 
                         {/* 3. Diagnostiske Kriterier (DCS & Sundhed.dk) */}
@@ -294,6 +296,19 @@ export default function EkgViewer({
                             )}
                         </div>
                     </div>
+
+                    {/* 4. DEDIKERET HAMPTON KLINISK PERLE BANNER */}
+                    {caseData.hamptonPearls && (
+                        <div className="p-3.5 rounded-2xl bg-emerald-50/90 border border-emerald-200 flex items-start gap-3 text-xs text-emerald-950 shadow-2xs">
+                            <div className="px-2.5 py-1 rounded-xl bg-emerald-200 text-emerald-900 font-bold text-[11px] shrink-0 flex items-center gap-1.5 mt-0.5">
+                                <span>📖</span>
+                                <span>Hampton Perle</span>
+                            </div>
+                            <p className="leading-relaxed flex-1 text-emerald-950">
+                                {caseData.hamptonPearls}
+                            </p>
+                        </div>
+                    )}
                 </div>
             )}
 
