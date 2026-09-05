@@ -9,7 +9,8 @@ import {
     RotateCcw,
     ExternalLink,
     HelpCircle,
-    FileText
+    FileText,
+    BookOpen
 } from '../Icons';
 import { LEAD_NAMES, LEAD_DETAILS, generateLeadWaveform } from '../../data/ekgCases';
 import { CASE_CLINICAL_COMPARISONS } from '../../data/ekgClinicalComparisons';
@@ -213,8 +214,8 @@ export default function EkgViewer({
                             </div>
                         </div>
 
-                        {/* Eksterne opslag til Sundhed.dk & DCS */}
-                        <div className="flex items-center gap-2">
+                        {/* Eksterne opslag til Sundhed.dk, DCS & Internationale Kilder */}
+                        <div className="flex flex-wrap items-center gap-2">
                             {clinicalInsight.sundhedDkUrl && (
                                 <a
                                     href={clinicalInsight.sundhedDkUrl}
@@ -223,7 +224,7 @@ export default function EkgViewer({
                                     className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#EFF3F0] hover:bg-[#E2E8DF] text-xs font-bold text-[#2C3F34] border border-[#D9E1DA] transition-colors"
                                     title="Åbn Sundhed.dk Lægehåndbogen i ny fane"
                                 >
-                                    <span>Sundhed.dk (Lægehåndbogen)</span>
+                                    <span>Sundhed.dk</span>
                                     <ExternalLink className="w-3.5 h-3.5 opacity-70" />
                                 </a>
                             )}
@@ -235,7 +236,19 @@ export default function EkgViewer({
                                     className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-xs font-bold text-slate-800 border border-slate-300 transition-colors"
                                     title="Åbn Dansk Cardiologisk Selskab (DCS) Vejledning"
                                 >
-                                    <span>DCS (Kardiologi.dk)</span>
+                                    <span>DCS (NBV)</span>
+                                    <ExternalLink className="w-3.5 h-3.5 opacity-70" />
+                                </a>
+                            )}
+                            {clinicalInsight.internationalUrl && (
+                                <a
+                                    href={clinicalInsight.internationalUrl}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-indigo-50 hover:bg-indigo-100 text-xs font-bold text-indigo-900 border border-indigo-200 transition-colors"
+                                    title={clinicalInsight.internationalTitle ? `Åbn ${clinicalInsight.internationalTitle} (NCBI/PubMed)` : 'Åbn international reference (NCBI/PubMed)'}
+                                >
+                                    <span>NCBI / StatPearls</span>
                                     <ExternalLink className="w-3.5 h-3.5 opacity-70" />
                                 </a>
                             )}
@@ -352,16 +365,23 @@ export default function EkgViewer({
                         </div>
                     )}
 
-                    {/* 5. DEDIKERET HAMPTON KLINISK PERLE BANNER */}
-                    {caseData.hamptonPearls && (
-                        <div className="p-3.5 rounded-2xl bg-emerald-50/90 border border-emerald-200 flex items-start gap-3 text-xs text-emerald-950 shadow-2xs">
-                            <div className="px-2.5 py-1 rounded-xl bg-emerald-200 text-emerald-900 font-bold text-[11px] shrink-0 flex items-center gap-1.5 mt-0.5">
-                                <span>📖</span>
-                                <span>Hampton Perle</span>
+                    {/* 5. DEDIKERET HAMPTON KLINISK PERLE OG BOGREFERANCE BANNER */}
+                    {(caseData.hamptonPearls || clinicalInsight.hamptonRef) && (
+                        <div className="p-3.5 rounded-2xl bg-emerald-50/90 border border-emerald-200 flex flex-col md:flex-row md:items-start gap-3 text-xs text-emerald-950 shadow-2xs">
+                            <div className="flex flex-col gap-1 shrink-0 md:max-w-[280px]">
+                                <div className="px-2.5 py-1 rounded-xl bg-emerald-200 text-emerald-900 font-bold text-[11px] flex items-center gap-1.5 w-fit">
+                                    <BookOpen className="w-3.5 h-3.5 text-emerald-800" />
+                                    <span>Hampton: EKG - let at se</span>
+                                </div>
+                                {clinicalInsight.hamptonRef && (
+                                    <span className="text-[10px] font-semibold text-emerald-800 leading-snug">
+                                        {clinicalInsight.hamptonRef}
+                                    </span>
+                                )}
                             </div>
-                            <p className="leading-relaxed flex-1 text-emerald-950">
+                            <div className="leading-relaxed flex-1 text-emerald-950 pt-0.5 border-t md:border-t-0 md:border-l md:pl-3 border-emerald-200/80">
                                 {caseData.hamptonPearls}
-                            </p>
+                            </div>
                         </div>
                     )}
                 </div>

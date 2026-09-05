@@ -128,6 +128,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-tjekliste/',
         dcsTitle: 'DCS: Nationale Vejledninger for EKG',
         dcsUrl: 'https://nbv.cardio.dk',
+        hamptonRef: 'John R. Hampton: EKG - let at se (Kapitel 1: Hvad EKG\'et handler om – Det normale EKG, s. 1-46)',
+        internationalTitle: 'NCBI StatPearls: Normal Sinus Rhythm',
+        internationalUrl: 'https://www.ncbi.nlm.nih.gov/books/NBK551652/',
         realEkgImages: [
             {
                 id: 'ns1',
@@ -182,6 +185,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/koronarsygdom/akut-koronart-syndrom/',
         dcsTitle: 'DCS Behandlingsvejledning: Akut Koronart Syndrom (AKS / STEMI)',
         dcsUrl: 'https://nbv.cardio.dk/kapitel/aks/',
+        hamptonRef: 'John R. Hampton: EKG - let at se (Kapitel 4: EKG ved myokardieiskæmi og infarkt – Forvægsinfarkt og LAD-okklusion, s. 97-134)',
+        internationalTitle: 'NCBI StatPearls: Anterior Myocardial Infarction',
+        internationalUrl: 'https://www.ncbi.nlm.nih.gov/books/NBK532281/',
         realEkgImages: [
             {
                 id: 'as1',
@@ -229,6 +235,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/koronarsygdom/akut-koronart-syndrom/',
         dcsTitle: 'DCS NBV: Revaskularisering ved akut STEMI',
         dcsUrl: 'https://nbv.cardio.dk/kapitel/aks/',
+        hamptonRef: 'John R. Hampton: EKG - let at se (Kapitel 4: EKG ved myokardieiskæmi og infarkt – Inferiort infarkt og reciprokke forandringer, s. 97-134)',
+        internationalTitle: 'NCBI StatPearls: Inferior Myocardial Infarction',
+        internationalUrl: 'https://www.ncbi.nlm.nih.gov/books/NBK470403/',
         realEkgImages: [
             {
                 id: 'is1',
@@ -276,6 +285,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-ledningsforstyrrelser/',
         dcsTitle: 'DCS Vejledning: Pacemakerbehandling & Ledningsforstyrrelser',
         dcsUrl: 'https://nbv.cardio.dk/kapitel/pacemakerbehandling/',
+        hamptonRef: 'John R. Hampton: EKG - let at se (Kapitel 2: Ledningshindringer – Venstresidigt grenblok og WiLLiaM-reglen, s. 47-70)',
+        internationalTitle: 'NCBI StatPearls: Left Bundle Branch Block',
+        internationalUrl: 'https://www.ncbi.nlm.nih.gov/books/NBK482167/',
         realEkgImages: [
             {
                 id: 'lb1',
@@ -323,6 +335,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-ledningsforstyrrelser/',
         dcsTitle: 'DCS Vejledning: Pacemakerbehandling & Ledningsforstyrrelser',
         dcsUrl: 'https://nbv.cardio.dk/kapitel/pacemakerbehandling/',
+        hamptonRef: 'John R. Hampton: EKG - let at se (Kapitel 2: Ledningshindringer – Højresidigt grenblok og MaRRoW-reglen, s. 47-70)',
+        internationalTitle: 'NCBI StatPearls: Right Bundle Branch Block',
+        internationalUrl: 'https://www.ncbi.nlm.nih.gov/books/NBK470387/',
         realEkgImages: [
             {
                 id: 'rb1',
@@ -370,6 +385,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/arytmier/atrieflimren-og-flagren/',
         dcsTitle: 'DCS Behandlingsvejledning: Atrieflimren',
         dcsUrl: 'https://nbv.cardio.dk/kapitel/af/',
+        hamptonRef: 'John R. Hampton: EKG - let at se (Kapitel 3: Rytmeforstyrrelser – Atrieflimren og arrhythmia absoluta, s. 71-96)',
+        internationalTitle: 'NCBI StatPearls: Atrial Fibrillation',
+        internationalUrl: 'https://www.ncbi.nlm.nih.gov/books/NBK526072/',
         realEkgImages: [
             {
                 id: 'af1',
@@ -410,6 +428,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/arytmier/atrieflimren-og-flagren/',
         dcsTitle: 'DCS Vejledning: Atrieflimren og -flagren',
         dcsUrl: 'https://nbv.cardio.dk/kapitel/af/',
+        hamptonRef: 'John R. Hampton: EKG - let at se (Kapitel 3: Rytmeforstyrrelser – Atrieflagren og 2:1 savtænder, s. 71-96)',
+        internationalTitle: 'NCBI StatPearls: Atrial Flutter',
+        internationalUrl: 'https://www.ncbi.nlm.nih.gov/books/NBK540985/',
         realEkgImages: [
             {
                 id: 'afl1',
@@ -450,6 +471,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/arytmier/ventrikulaer-takykardi/',
         dcsTitle: 'DCS Vejledning: Ventrikulære arytmier',
         dcsUrl: 'https://nbv.cardio.dk/kapitel/vt/',
+        hamptonRef: 'John R. Hampton: EKG - let at se (Kapitel 3: Rytmeforstyrrelser – Bredkomplekset takykardi og ventrikulær takykardi, s. 71-96)',
+        internationalTitle: 'NCBI StatPearls: Ventricular Tachycardia',
+        internationalUrl: 'https://www.ncbi.nlm.nih.gov/books/NBK532954/',
         realEkgImages: [
             {
                 id: 'vt1',
@@ -490,6 +514,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/akut-og-foerstehjaelp/tilstande-og-sygdomme/foerstehjaelp/akutte-medicinske-tilstande/ventrikelflimren-og-takykardi/',
         dcsTitle: 'DCS Vejledning: Genoplivning og Hjertestop',
         dcsUrl: 'https://nbv.cardio.dk/kapitel/hjertestop/',
+        hamptonRef: 'John R. Hampton: EKG - let at se (Kapitel 3: Rytmeforstyrrelser – Hjertestop og ventrikelflimren, s. 71-96)',
+        internationalTitle: 'NCBI StatPearls: Ventricular Fibrillation',
+        internationalUrl: 'https://www.ncbi.nlm.nih.gov/books/NBK537211/',
         realEkgImages: [
             {
                 id: 'vf1',
@@ -523,6 +550,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/arytmier/langt-qt-syndrom/',
         dcsTitle: 'DCS Vejledning: Farmakologisk påvirkning & Arytmier',
         dcsUrl: 'https://nbv.cardio.dk/kapitel/farmaka/',
+        hamptonRef: 'John R. Hampton: EKG - let at se (Kapitel 6: EKG ved andre tilstande – QTc-forlængelse og risiko for Torsades, s. 143-158)',
+        internationalTitle: 'NCBI StatPearls: Long QT Syndrome',
+        internationalUrl: 'https://www.ncbi.nlm.nih.gov/books/NBK441860/',
         realEkgImages: [
             {
                 id: 'lqt1',
@@ -563,6 +593,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/generelt/tilstande-og-sygdomme/elektrolytforstyrrelser/hyperkaliaemi/',
         dcsTitle: 'DCS NBV: Elektrolytforstyrrelser og arytmi',
         dcsUrl: 'https://nbv.cardio.dk',
+        hamptonRef: 'John R. Hampton: EKG - let at se (Kapitel 6: EKG ved andre tilstande – Elektrolytforstyrrelser og teltede T-takker, s. 143-158)',
+        internationalTitle: 'NCBI StatPearls: Hyperkalemia',
+        internationalUrl: 'https://www.ncbi.nlm.nih.gov/books/NBK470284/',
         realEkgImages: [
             {
                 id: 'hk1',
@@ -610,6 +643,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/generelt/tilstande-og-sygdomme/elektrolytforstyrrelser/hypokaliaemi/',
         dcsTitle: 'DCS Retningslinjer: Elektrolytforstyrrelser i kardiologien',
         dcsUrl: 'https://nbv.cardio.dk',
+        hamptonRef: 'John R. Hampton: EKG - let at se (Kapitel 6: EKG ved andre tilstande – Hypokaliæmi og prominente U-takker, s. 143-158)',
+        internationalTitle: 'NCBI StatPearls: Hypokalemia',
+        internationalUrl: 'https://www.ncbi.nlm.nih.gov/books/NBK482465/',
         realEkgImages: [
             {
                 id: 'hypo1',
@@ -650,6 +686,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/oevrige-sygdomme/perikardit/',
         dcsTitle: 'DCS NBV: Perikardiesygdomme',
         dcsUrl: 'https://nbv.cardio.dk/kapitel/perikardiesygdomme/',
+        hamptonRef: 'John R. Hampton: EKG - let at se (Kapitel 4: Myokardieiskæmi og differentialdiagnoser – Akut perikarditis vs. STEMI, s. 97-134)',
+        internationalTitle: 'NCBI StatPearls: Pericarditis',
+        internationalUrl: 'https://www.ncbi.nlm.nih.gov/books/NBK431080/',
         realEkgImages: [
             {
                 id: 'peri1',
@@ -690,6 +729,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-ledningsforstyrrelser/',
         dcsTitle: 'DCS Vejledning: Pacemakerbehandling & Bradykardi',
         dcsUrl: 'https://nbv.cardio.dk/kapitel/pacemakerbehandling/',
+        hamptonRef: 'John R. Hampton: EKG - let at se (Kapitel 2: Ledningshindringer – Førstegrads atrioventrikulært blok, s. 47-70)',
+        internationalTitle: 'NCBI StatPearls: First-Degree Atrioventricular Block',
+        internationalUrl: 'https://www.ncbi.nlm.nih.gov/books/NBK448164/',
         realEkgImages: [
             {
                 id: 'av1_1',
@@ -730,6 +772,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-ledningsforstyrrelser/',
         dcsTitle: 'DCS Vejledning: Pacemakerbehandling & Bradykardi',
         dcsUrl: 'https://nbv.cardio.dk/kapitel/pacemakerbehandling/',
+        hamptonRef: 'John R. Hampton: EKG - let at se (Kapitel 2: Ledningshindringer – Wenckebach fænomen (Mobitz type I), s. 47-70)',
+        internationalTitle: 'NCBI StatPearls: Second-Degree Atrioventricular Block (Mobitz I / Wenckebach)',
+        internationalUrl: 'https://www.ncbi.nlm.nih.gov/books/NBK470535/',
         realEkgImages: [
             {
                 id: 'wenck1',
@@ -770,6 +815,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-ledningsforstyrrelser/',
         dcsTitle: 'DCS Vejledning: Pacemakerbehandling & Bradykardi',
         dcsUrl: 'https://nbv.cardio.dk/kapitel/pacemakerbehandling/',
+        hamptonRef: 'John R. Hampton: EKG - let at se (Kapitel 2: Ledningshindringer – Andengrads AV-blok Mobitz type II, s. 47-70)',
+        internationalTitle: 'NCBI StatPearls: Mobitz Type II Atrioventricular Block',
+        internationalUrl: 'https://www.ncbi.nlm.nih.gov/books/NBK470375/',
         realEkgImages: [
             {
                 id: 'mob2_1',
@@ -803,6 +851,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-ledningsforstyrrelser/',
         dcsTitle: 'DCS Vejledning: Pacemakerbehandling ved Totalblok',
         dcsUrl: 'https://nbv.cardio.dk/kapitel/pacemakerbehandling/',
+        hamptonRef: 'John R. Hampton: EKG - let at se (Kapitel 2: Ledningshindringer – Tredjegrads AV-blok (komplet hjerteblok), s. 47-70)',
+        internationalTitle: 'NCBI StatPearls: Third-Degree Atrioventricular Block (Complete Heart Block)',
+        internationalUrl: 'https://www.ncbi.nlm.nih.gov/books/NBK545199/',
         realEkgImages: [
             {
                 id: 'av3_1',
@@ -836,6 +887,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-tjekliste/',
         dcsTitle: 'DCS Vejledning: Arteriel Hypertension og Hjertepåvirkning',
         dcsUrl: 'https://nbv.cardio.dk/kapitel/hypertension/',
+        hamptonRef: 'John R. Hampton: EKG - let at se (Kapitel 5: EKG ved ventrikelhypertrofi – Venstre ventrikelhypertrofi og strain, s. 135-142)',
+        internationalTitle: 'NCBI StatPearls: Left Ventricular Hypertrophy',
+        internationalUrl: 'https://www.ncbi.nlm.nih.gov/books/NBK557761/',
         realEkgImages: [
             {
                 id: 'lvh1',
@@ -876,6 +930,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/koronarsygdom/akut-koronart-syndrom/',
         dcsTitle: 'DCS NBV: Posteriort STEMI og supplerende afledninger (V7-V9)',
         dcsUrl: 'https://nbv.cardio.dk/kapitel/aks/',
+        hamptonRef: 'John R. Hampton: EKG - let at se (Kapitel 4: Myokardieiskæmi og infarkt – Sandt posteriort infarkt og spejlbilleder, s. 97-134)',
+        internationalTitle: 'NCBI StatPearls: Posterior Myocardial Infarction',
+        internationalUrl: 'https://www.ncbi.nlm.nih.gov/books/NBK545216/',
         realEkgImages: [
             {
                 id: 'post1',
@@ -916,6 +973,9 @@ export const CASE_CLINICAL_COMPARISONS = {
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/tromboembolisk-sygdom/lungeemboli/',
         dcsTitle: 'DCS NBV: Akut lungeemboli og højresidig overbelastning',
         dcsUrl: 'https://nbv.cardio.dk/kapitel/lungeemboli/',
+        hamptonRef: 'John R. Hampton: EKG - let at se (Kapitel 6: EKG ved andre tilstande – Akut cor pulmonale og lungeemboli, s. 143-158)',
+        internationalTitle: 'NCBI StatPearls: Electrocardiogram Manifestations Of Pulmonary Embolism',
+        internationalUrl: 'https://www.ncbi.nlm.nih.gov/books/NBK560770/',
         realEkgImages: [
             {
                 id: 'pe1',
