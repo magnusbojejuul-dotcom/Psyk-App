@@ -119,6 +119,11 @@ export const CASE_CLINICAL_COMPARISONS = {
         diffFromNormal: 'Dette er det fysiologiske reference-EKG. Alle tidsintervaller (PR, QRS, QTc), tak-amplituder og overledninger er inden for normale referencegrænser. Danner udgangspunkt for sammenligning med alle patologiske tilstande.',
         pathophysiology: 'Normal impulsudbredelse fra SA-knuden i højre atrium, fysiologisk forsinkelse i AV-knuden (sikrer fuld atrietømning) og lynhurtig synkron aktivering af begge ventrikler via His-Purkinje systemet fra endokardium mod epikardium.',
         clinicalCriteria: 'Sundhed.dk / DCS Kriterier for Normal-EKG: Frekvens 50-100/min, regelmæssig sinusrytme med positiv P i II og negativ i aVR, PR-interval 120-200 ms, QRS-bredde < 120 ms, normal akse (-30° til +90°), QTc < 440 ms (mænd) / < 460 ms (kvinder), normal R-progression i V1–V6 og isoelektrisk ST-segment.',
+        cellularElectrophysiology: {
+            channelsAndReceptors: 'HCN4 (If "funny current"), Cav1.2 (ICa,L), Nav1.5 (INa), hERG/Kv11.1 (IKr), KCNQ1 (IKs), Kir2.1 (IK1), Na+/K+-ATPase, β1-adrenoceptorer, M2-muskarine receptorer.',
+            actionPotentialPhase: 'SA-knude: Fase 4 spontan pacemakerdepolarisering (If -> ICa,L). Ventrikel: Fase 0 (INa influx), Fase 2 plateau (balance mellem ICa,L og IKr/IKs), Fase 3 repolarisering (IKr/IKs), Fase 4 stabilt hvilepotentiale (-90 mV via IK1).',
+            injuryCurrentOrVector: 'Normal hjerteakse (+30° til +60°). Depolarisering breder sig fra endokardium mod epikardium (positivt QRS i II, V5-V6). Repolarisering sker fra epikardium mod endokardium (pga. højere Ito-densitet epikardielt), hvorfor T-takken fysiologisk har samme fortegn som QRS-hovedudslaget.'
+        },
         sundhedDkTitle: 'Sundhed.dk: EKG-tjekliste i almen praksis',
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-tjekliste/',
         dcsTitle: 'DCS: Nationale Vejledninger for EKG',
@@ -168,6 +173,11 @@ export const CASE_CLINICAL_COMPARISONS = {
         diffFromNormal: 'I et normalt EKG er ST-segmentet helt fladt (isoelektrisk på grundlinjen). Ved Anterior STEMI løftes ST-segmentet dramatisk flere millimeter op over grundlinjen pga. akut transmural iskæmi. T-takkerne bliver hyperakutte og fusionerer med ST-stykket. Modstående afledninger (II, III, aVF) udviser et elektrisk spejlbillede (reciprok ST-depression).',
         pathophysiology: 'Akut total trombotisk okklusion af LAD (Left Anterior Descending) arterien forårsager iltmangel i hele forvæggen og septum. De iskæmiske ventrikelmyocytter mister deres hvilemembranpotentiale, hvilket skaber en permanent skadestrøm (injury current) rettet fremad mod V1–V4.',
         clinicalCriteria: 'DCS Kriterier for STEMI: ST-elevation ved J-punktet i to sammenhængende afledninger: ≥ 2.0 mm hos mænd ≥ 40 år (≥ 2.5 mm hos mænd < 40 år) eller ≥ 1.5 mm hos kvinder i V2–V3, samt ≥ 1.0 mm i øvrige afledninger.',
+        cellularElectrophysiology: {
+            channelsAndReceptors: 'Metaboliske K_ATP-kanaler (Kir6.2/SUR2A), svigtende Na+/K+-ATPase, spændingsinaktiverede Nav1.5, ukontrolleret intracellulær Ca2+-ophobning.',
+            actionPotentialPhase: 'Transmural anoksi -> intracellulært ATP falder -> Na+/K+-ATPase svigter -> hvilemembranpotentialet depolariseres fra -90 mV til ca. -65 mV (fase 4). Åbning af K_ATP-kanaler forkorter fase 2 plateau og fase 3 repolarisering i infarktzonen.',
+            injuryCurrentOrVector: 'To skadestrømme: 1) Diastolisk skadestrøm: potentialforskel mellem det delvist depolariserede iskæmiske væv (-65 mV) og normalt væv (-90 mV) driver strøm væk fra V1-V4 (sænker TQ-linjen, som apparatet modregner som ST-løft). 2) Systolisk skadestrøm: under fase 2 er iskæmisk epikardium hurtigere repolariseret end raskt myokardium, hvilket skaber en sand strøm mod elektroderne V1-V4 -> massiv konveks ST-elevation ("tombstone") forfra og reciprok depression inferiort (II, III, aVF).'
+        },
         sundhedDkTitle: 'Sundhed.dk: ST-elevationsmyokardieinfarkt (STEMI)',
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/koronarsygdom/akut-koronart-syndrom/',
         dcsTitle: 'DCS Behandlingsvejledning: Akut Koronart Syndrom (AKS / STEMI)',
@@ -210,6 +220,11 @@ export const CASE_CLINICAL_COMPARISONS = {
         diffFromNormal: 'Normale inferiore afledninger har fladt ST-segment og positiv R-tak. Ved inferior STEMI er ST-linjen løftet i bunden af hjertet. Fundet af ST-elevation i III og aVF ledsaget af reciprok depression i aVL er > 95% sensitivt og specifikt for akut koronarokklusion.',
         pathophysiology: 'Akut okklusion af RCA (Højre Koronararterie) eller sjældnere LCx. Da RCA forsyner AV-knuden hos ca. 90% af befolkningen, ses ofte ledsagende sinusbradykardi eller AV-blok.',
         clinicalCriteria: 'DCS Kriterier: ST-elevation ≥ 1.0 mm i mindst to af afledningerne II, III og aVF, ledsaget af reciprok depression i aVL.',
+        cellularElectrophysiology: {
+            channelsAndReceptors: 'K_ATP-kanaler, Na+/K+-ATPase svigt, β1-adrenoceptorer vs. M2-muskarin vagal overstimulation (Bezold-Jarisch refleks via kardielle C-fibre).',
+            actionPotentialPhase: 'Transmural iskæmi i diafragmale venstre ventrikelvæg. ATP-udtømning -> K_ATP-åbning og tab af fase 4 hvilepotentiale. Ved affektion af RCA nodale grene svigter Cav1.2 i AV-knuden -> fase 0 forsinkelse i AV-knuden (AV-blok).',
+            injuryCurrentOrVector: 'Transmural skadestrømsvektor peger direkte nedad og bagud mod de inferiore afledninger (II, III, aVF) -> udtalte ST-elevationer. Den høje laterale væg (I og aVL) ser vektorens bagende -> reciprok ST-depression i aVL (sensitivitetsmarkør > 95%).'
+        },
         sundhedDkTitle: 'Sundhed.dk: Akut myokardieinfarkt og koronarsygdom',
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/koronarsygdom/akut-koronart-syndrom/',
         dcsTitle: 'DCS NBV: Revaskularisering ved akut STEMI',
@@ -252,6 +267,11 @@ export const CASE_CLINICAL_COMPARISONS = {
         diffFromNormal: 'Et normalt QRS er smalt (< 120 ms) og har fysiologiske små septale q-takker i V5/V6. Ved LBBB forsvinder de septale q-takker fuldstændigt, fordi septum aktiveres i modsat retning (fra højre mod venstre). Hele venstre ventrikel aktiveres asynkront og forsinket, hvilket gør QRS-komplekset bredt, klodset og kærvet.',
         pathophysiology: 'Blokering i venstre grenbundt tvinger aktiveringsbølgen til først at gå gennem højre ventrikel og derefter sprede sig langsomt celle-til-celle gennem myokardiet til den store venstre ventrikel. Den asynkrone kontraktion nedsætter venstre ventrikels pumpefunktion.',
         clinicalCriteria: 'DCS / Sundhed.dk Kriterier: QRS ≥ 120 ms hos voksne, bred kærvet R-tak i I, aVL, V5–V6, fravær af q i V5–V6. OBS: Nyopstået LBBB ved mistanke om akut myokardieiskæmi skal håndteres som STEMI-ækvivalent!',
+        cellularElectrophysiology: {
+            channelsAndReceptors: 'Defekt ledning i venstre grenbundt. Transmission overtages af langsom myocyt-til-myocyt ledning via gap junctions (connexin 43, Cx43, ledningshastighed ~0.5 m/s) fremfor hurtige Purkinjefibre (Nav1.5, Cx40, hastighed 2-4 m/s).',
+            actionPotentialPhase: 'Fase 0 depolarisering af venstre ventrikel forsinkes med 40-70 ms. Asynkron depolarisering medfører abnorm repolariseringssekvens (fase 3).',
+            injuryCurrentOrVector: 'Septal aktivering er omvendt: fra højre mod venstre (septal q i V5-V6 tabes). Vektoren peger massivt mod venstre og bagud -> dyb bred QS/rS i V1 og bred kærvet R-tak i I, aVL, V5-V6. Sekundær repolarisationsabnormitet: forsinket depolarisering medfører, at repolariseringen begynder endokardielt før epikardiet er færdigt -> diskordant ST-depression og T-inversion lateralt.'
+        },
         sundhedDkTitle: 'Sundhed.dk: Grenblok og fascikelblok',
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-ledningsforstyrrelser/',
         dcsTitle: 'DCS Vejledning: Pacemakerbehandling & Ledningsforstyrrelser',
@@ -294,6 +314,11 @@ export const CASE_CLINICAL_COMPARISONS = {
         diffFromNormal: 'I et normalt EKG er V1 domineret af en lille r og en dyb, slank S-tak, og QRS er smalt (< 120 ms). Ved RBBB depolariseres venstre ventrikel først normalt, hvorefter den forsinkede højre ventrikel danner en ekstra, sen positiv tak (R\') i V1 og en sen bred S-tak i V6.',
         pathophysiology: 'Blokering i højre grenbundt. Venstre ventrikel aktiveres normalt via venstre gren, hvorefter impulsen spreder sig langsomt over i højre ventrikel. Den sene aktivering af højre ventrikel giver en kraftig vektor rettet fremad og mod højre.',
         clinicalCriteria: 'DCS / Sundhed.dk Kriterier: QRS ≥ 120 ms, rsR\' eller bred kærvet R i V1–V2, samt bred sløret S-tak (varighed > R eller > 40 ms) i afledning I og V6. RBBB kan forekomme hos hjertesunde, men kan også signalere højresidig belastning (lungeemboli, cor pulmonale).',
+        cellularElectrophysiology: {
+            channelsAndReceptors: 'Blokeret ledning i højre grenbundt. Venstre ventrikels Purkinjesystem (Nav1.5, Cx40/Cx43) fungerer normalt, men transseptal spredning til højre ventrikel sker langsomt myocyt-til-myocyt via gap junctions (Cx43).',
+            actionPotentialPhase: 'Fase 0 i venstre ventrikel forløber normalt (slanke 60-80 ms), men fase 0 i højre ventrikel starter først 40-60 ms forsinket.',
+            injuryCurrentOrVector: 'Første vektor (septum + venstre ventrikel) er normal -> lille r i V1 og slank q i V6. Anden vektor: da venstre ventrikel er færdigdepolariseret, depolariseres højre ventrikel uimodsagt mod højre og fremad -> sen, bred R\'-tak i V1 ("kaninører" / rsR\') og bred, sløret S-tak i I, aVL og V6.'
+        },
         sundhedDkTitle: 'Sundhed.dk: Højresidigt grenblok',
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-ledningsforstyrrelser/',
         dcsTitle: 'DCS Vejledning: Pacemakerbehandling & Ledningsforstyrrelser',
@@ -336,6 +361,11 @@ export const CASE_CLINICAL_COMPARISONS = {
         diffFromNormal: 'Et normalt EKG har regelmæssige, identiske P-takker med fast PR-interval (120-200 ms) foran hvert eneste QRS, og hjerteaktionen er helt regelmæssig. Ved atrieflimren er der ingen koordineret atrieaktivering, ingen P-takker og helt tilfældige RR-intervaller.',
         pathophysiology: 'Kaotisk mikro-reentry elektrisk aktivitet i atrierne med frekvens på 400-600/min. AV-knuden fungerer som fysiologisk filter og overleder kun en brøkdel af impulserne helt uregelmæssigt til ventriklerne.',
         clinicalCriteria: 'DCS Kriterier: Uregelmæssige RR-intervaller uden P-takker af mindst 30 sekunders varighed på EKG/telemetri. Vigtigste kliniske fokus: Antikoagulation (AK-behandling vurderet ud fra CHA2DS2-VASc score) for at forebygge apopleksi.',
+        cellularElectrophysiology: {
+            channelsAndReceptors: 'Elektrisk remodeling: Nedregulering af L-type Ca2+-strøm (ICa,L), opregulering af indadrettet kaliumstrøm (IK1) og konstitutivt aktiv acetylkolinfølsom kaliumstrøm (IK,ACh). Hæmning af Cav1.2 i AV-knuden via dekrementel ledning.',
+            actionPotentialPhase: 'Atrialt aktionspotentiale: Ekstrem forkortelse af fase 2 og fase 3 repolarisering -> den effektive refraktærperiode (ERP) reduceres drastisk. Dette tillader bølgebrud og dannelse af multiple mikroskopiske re-entry wavelets (frekvens 400-600/min).',
+            injuryCurrentOrVector: 'Mangel på koordineret atriel depolarisationsvektor (ingen P-tak, kun tilfældige f-bølger). AV-knuden filtrerer via "skjult overledning" (concealed conduction), hvor partielle impulser forlænger AV-knudens refraktærtid uden at nå igennem -> helt uregelmæssige R-R intervaller (arrhythmia absoluta).'
+        },
         sundhedDkTitle: 'Sundhed.dk: Atrieflimren og atrieflagren',
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/arytmier/atrieflimren-og-flagren/',
         dcsTitle: 'DCS Behandlingsvejledning: Atrieflimren',
@@ -371,6 +401,11 @@ export const CASE_CLINICAL_COMPARISONS = {
         diffFromNormal: 'Normale atriebølger er diskrete afrundede P-takker efterfulgt af en flad isoelektrisk PR-linje. Ved atrieflagren oscillerer grundlinjen kontinuerligt som en savtakket klinge uden flad hvilefase.',
         pathophysiology: 'Makro-reentry kredsløb typisk mod uret i højre atrium omkring den cavotrikuspidale isthmus (CTI). AV-knuden kan ikke nå at overlede 300 impulser i minuttet og blokerer hver anden impuls fysiologisk.',
         clinicalCriteria: 'DCS Kriterier: Regelmæssig atriefrekvens på ca. 250-350/min med typisk savtakket udseende. Kurativ behandling er ofte radiofrekvensablation (RFA) af cavotrikuspidale isthmus.',
+        cellularElectrophysiology: {
+            channelsAndReceptors: 'Makro-reentry kredsløb afhængig af anatomiske barrierer (crista terminalis, fossa ovalis) og funktionel langsom ledning i cavotrikuspidale isthmus (CTI) via Nav1.5 og gap junction modstand. AV-knudens refraktæritet styret af Cav1.2.',
+            actionPotentialPhase: 'Konstant cirkulerende fase 0-3 bølgefront i højre atrium med cykluslængde på ca. 200 ms (frekvens 300/min). Ingen fase 4 hvileperiode for atriet.',
+            injuryCurrentOrVector: 'Depolarisationsbølgen løber typisk mod uret (kaudokranielt op ad septum og kraniokaudalt ned ad fri væg). Den uafbrudte cirkulation danner en kontinuerlig dipolvektor rettet opad og væk fra inferiore afledninger -> kontinuerlige negative savtænder (F-bølger) i II, III og aVF uden isoelektrisk linje. AV-knudens refraktærperiode blokerer hver 2. impuls -> 2:1 ventrikelfrekvens på præcis 150/min.'
+        },
         sundhedDkTitle: 'Sundhed.dk: Atrieflagren i almen praksis',
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/arytmier/atrieflimren-og-flagren/',
         dcsTitle: 'DCS Vejledning: Atrieflimren og -flagren',
@@ -406,6 +441,11 @@ export const CASE_CLINICAL_COMPARISONS = {
         diffFromNormal: 'Et normalt EKG har smalle QRS-komplekser styret af SA-knuden via His-Purkinje systemet. Ved VT udspringer impulsen fra et ektopisk fokus i ventrikelmyokardiet. Strømmen spredes langsomt muskelcelle-til-muskelcelle, hvilket giver kæmpe brede QRS-komplekser og ophæver atriernes kontrol over ventriklerne.',
         pathophysiology: 'Ofte et re-entry fænomen omkring arvæv efter tidligere myokardieinfarkt, eller udløst af iskæmi, kardiomyopati eller elektrolytforstyrrelser. Hæmodynamisk ustabilitet skyldes manglende fyldningstid og tab af atriebidrag (atrial kick).',
         clinicalCriteria: 'DCS Kriterier: Enhver bredkomplekset takykardi hos patient med tidligere AMI eller kendt hjertesygdom skal behandles som VT indtil det modsatte er bevist! Brugada- og Vereckei-kriterier benyttes til differentialdiagnose mod SVT med grenblok.',
+        cellularElectrophysiology: {
+            channelsAndReceptors: 'Arvævsreentry (borderzone med langsom ledning via de-phosphoryleret Cx43) eller abnorm automaticitet/triggered activity via forsinkede efter-depolariseringer (DADs) drevet af intracellulær Ca2+-overload, ryanodin-receptorer (RyR2) og den elektrogene Na+/Ca2+-veksler (NCX).',
+            actionPotentialPhase: 'Fase 0 i ventriklerne initieres ektopisk og udbreder sig celle-til-celle udenom Purkinjefibrene -> forlænget fase 0 opstigningstid (dV/dt) -> QRS-bredde > 120-160 ms.',
+            injuryCurrentOrVector: 'Vektoren bestemmes af fokussets placering i ventriklen. AV-dissociation: SA-knudens If-pacemaker kører uafhængigt med 60-80/min i atrierne (fase 4 spontan depolarisering), mens ventriklerne drives uafhængigt med 140-220/min. Capture beats (normal smal QRS) eller fusion beats bekræfter uafhængig atrioventrikulær aktivering.'
+        },
         sundhedDkTitle: 'Sundhed.dk: Ventrikulær takykardi (Lægehåndbogen)',
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/arytmier/ventrikulaer-takykardi/',
         dcsTitle: 'DCS Vejledning: Ventrikulære arytmier',
@@ -441,6 +481,11 @@ export const CASE_CLINICAL_COMPARISONS = {
         diffFromNormal: 'Et normalt EKG har veldefinerede takker og koordineret pumpefunktion. Ved VF er der ingen koordineret mekanisk kontraktion af ventriklerne overhovedet – patienten er klinisk død med hjertestop uden puls og respiration.',
         pathophysiology: 'Flere samtidige kaotiske re-entry bølger i ventrikelmyokardiet. Ventriklerne sitrer mekanisk uden at pumpe blod ud i kredsløbet, hvilket medfører akut cirkulatorisk kollaps og irreversibel hjerneskade inden for få minutter uden HLR og defibrillering.',
         clinicalCriteria: 'DCS / ERC Retningslinjer: Stødbar hjertestoprytme! Omgående uafbrudt hjertelungeredning (30:2) og øjeblikkelig defibrillering med bifasisk DC-stød (150-200 J) hurtigst muligt. Adrenalin 1 mg og Amiodaron 300 mg iv jf. ALS-algoritmen.',
+        cellularElectrophysiology: {
+            channelsAndReceptors: 'Kaotisk bølgebrud (wave break) og dannelse af multiple spiralbølger ("rotorer") i ventriklerne. Svigtende Nav1.5-koordination, heterogen inaktivering af Cav1.2 og inhomogenitet i IKr/IKs repolarisering.',
+            actionPotentialPhase: 'Fuldstændig desynkronisering af samtlige aktionspotentialefaser: myocytter befinder sig samtidigt i fase 0, fase 2, fase 3 og fase 4 på kryds og tværs af myokardiet.',
+            injuryCurrentOrVector: 'Ingen organiseret elektrisk dipol eller nettovektor. EKG viser uregelmæssige, kaotiske mikrosvingninger (frekvens 300-500/min) uden identificerbare takker. Mekanisk kardiomyocyt-sitren uden pumpefunktion og akut cirkulatorisk kollaps.'
+        },
         sundhedDkTitle: 'Sundhed.dk: Hjertestop og genoplivning',
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/akut-og-foerstehjaelp/tilstande-og-sygdomme/foerstehjaelp/akutte-medicinske-tilstande/ventrikelflimren-og-takykardi/',
         dcsTitle: 'DCS Vejledning: Genoplivning og Hjertestop',
@@ -469,6 +514,11 @@ export const CASE_CLINICAL_COMPARISONS = {
         diffFromNormal: 'I et normalt EKG slutter ventrikelforløbet (QTc) inden for 400-440 ms (mindre end halvdelen af RR-intervallet). Ved forlænget QTc forsinkes repolariseringen markant, hvilket skaber et sårbart tidsvindue ("R-on-T fænomen"), hvor et tidligt ekstraslag kan udløse malign ventrikelarytmi.',
         pathophysiology: 'Blokering af de spændingsafhængige hERG kaliumkanaler (IKr) forlænger aktionspotentialets fase 3. Særligt hyppigt udløst af psykofarmaka (antipsykotika som haloperidol, ziprasidon; antidepressiva som citalopram/escitalopram) eller elektrolytforstyrrelser.',
         clinicalCriteria: 'DCS Kriterier for Psykofarmaka: QTc > 500 ms (eller stigning > 60 ms fra baseline) kræver omgående dosisreduktion eller seponering af udløsende lægemiddel! Korrektion af elektrolytter (hypokaliæmi, hypomagnesiæmi). Ved Torsades gives magnesiumsulfat iv.',
+        cellularElectrophysiology: {
+            channelsAndReceptors: 'Molekylær blokering af pore-kaviteten i hERG/Kv11.1-kanalen (KCNH2), som medierer den hurtige forsinkede ensretter-kaliumstrøm IKr. Potenseret af hypokaliæmi eller psykofarmaka (antipsykotika, antidepressiva).',
+            actionPotentialPhase: 'Selektiv forlængelse af ventrikelmyocytternes fase 2 plateau og fase 3 repolarisering pga. reduceret udadgående K+-strøm -> aktionspotentialets varighed (APD) stiger markant.',
+            injuryCurrentOrVector: 'Forlænget QT-interval (QTc > 500 ms). Mekanisme for Torsades de Pointes (TdP): Den forlængede fase 2 giver L-type Ca2+-kanaler (Cav1.2) tid til at reaktivere, hvilket genererer tidlige efter-depolariseringer (EADs). Når en EAD når tærskelpotentialet under T-takkens sårbare fase ("R-on-T"), udløses polymorf VT med kontinuerlig aksevridning om grundlinjen.'
+        },
         sundhedDkTitle: 'Sundhed.dk: Langt QT-syndrom (LQTS)',
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/arytmier/langt-qt-syndrom/',
         dcsTitle: 'DCS Vejledning: Farmakologisk påvirkning & Arytmier',
@@ -504,6 +554,11 @@ export const CASE_CLINICAL_COMPARISONS = {
         diffFromNormal: 'Normale T-takker er asymmetriske (stiger langsomt og falder hurtigere) og har en bred basis. Ved hyperkaliæmi bliver T-takkerne ekstremt høje, nålespidse og symmetriske som teltdug.',
         pathophysiology: 'Forhøjet ekstracellulært kalium (K+ > 5.5-6.0 mmol/L) øger membranens kaliumpermeabilitet, hvilket drastisk accelererer fase 3 repolariseringen (høje spidse T-takker) og nedsætter ledningshastigheden i hele ledningssystemet (bredt QRS).',
         clinicalCriteria: 'Akut livstruende medicinsk nødsituation ved K+ > 6.5 mmol/L. Kræver omgående akut EKG og akut behandling med calciumchlorid/calciumgluconat til stabilisering af kardiomyocytternes tærskelpotentiale, efterfulgt af glukose-insulin infusion.',
+        cellularElectrophysiology: {
+            channelsAndReceptors: 'Ekstracellulær hyperkaliæmi ([K+]o > 6.0-7.5 mmol/L). Paradoksal allosterisk konformationsændring øger IKr og IK1 konduktans. Spændingsafhængig steady-state inaktivering af hurtige Nav1.5-kanaler. Overbelastet Na+/K+-ATPase.',
+            actionPotentialPhase: '1) Fase 3 repolarisering accelereres via øget IKr-konduktans -> teltede T-takker. 2) Hvilemembranpotentialet forskydes ifølge Nernst-ligningen fra -90 mV til -70/-60 mV (fase 4 depolarisering). Dette inaktiverer Nav1.5, hvilket slår fase 0 depolariseringen ud -> drastisk fald i dV/dt_max, ekstrem breddeøgning af QRS og elektrisk lammelse af atrierne (tab af P-takker).',
+            injuryCurrentOrVector: 'Teltede, spidse, symmetriske T-takker med smal basis -> tab af P-takker (sinoventrikulær rytme) -> fusion af QRS og T til præterminal sinusbølge. Behandling: Intravenøs Ca2+ (calciumgluconat) forskyder kardiomyocytternes tærskelpotentiale i positiv retning og genopretter excitabilitetsgradienten uden at ændre kaliumniveauet.'
+        },
         sundhedDkTitle: 'Sundhed.dk: Hyperkaliæmi (Lægehåndbogen)',
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/generelt/tilstande-og-sygdomme/elektrolytforstyrrelser/hyperkaliaemi/',
         dcsTitle: 'DCS NBV: Elektrolytforstyrrelser og arytmi',
@@ -546,6 +601,11 @@ export const CASE_CLINICAL_COMPARISONS = {
         diffFromNormal: 'I et normalt EKG er T-takken den dominerende repolariseringsbølge, og U-takken er enten fraværende eller knap synlig. Ved hypokaliæmi skrumper T-takken, mens U-takken vokser og ofte bliver højere end T-takken.',
         pathophysiology: 'Lavt ekstracellulært kalium (K+ < 3.5 mmol/L) forsinker ventriklernes repolarisering og hyperpolariserer membranpotentialet. Dette øger ventriklernes excitabilitet og disponerer for både supraventrikulære og ventrikulære arytmier (særligt ved samtidig digitalisbehandling).',
         clinicalCriteria: 'DCS Kriterier: S-kalium < 3.0 mmol/L betragtes som moderat/svær og kræver substitution med kaliumchlorid (oralt eller iv under telemetri). Samtidig korrektion af hypomagnesiæmi er ofte nødvendig for at genoprette kaliumbalancen.',
+        cellularElectrophysiology: {
+            channelsAndReceptors: 'Lav ekstracellulær kalium ([K+]o < 3.5 mmol/L). Hæmning af IK1 og IKr konduktans. Substratmangel hæmmer Na+/K+-ATPase, hvilket aktiverer revers transport i Na+/Ca2+-veksleren (NCX).',
+            actionPotentialPhase: 'Hyperpolarisering af fase 4, men drastisk forsinkelse af fase 3 repolarisering pga. svigtende kaliumeffluks. Forlænget aktionspotentiale særligt udtalt i mid-myokardielle M-celler og Purkinjefibre.',
+            injuryCurrentOrVector: 'T-takken afflades eller inverterer. Udtalt transmural dispersionsgradient mellem epikardium og M-celler/Purkinjefibre danner en prominent U-tak i V2–V4 umiddelbart efter T-takken. Intracellulær Ca2+-ophobning via NCX disponerer for forsinkede efter-depolariseringer (DADs) og ventrikulære arytmier.'
+        },
         sundhedDkTitle: 'Sundhed.dk: Hypokaliæmi (Lægehåndbogen)',
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/generelt/tilstande-og-sygdomme/elektrolytforstyrrelser/hypokaliaemi/',
         dcsTitle: 'DCS Retningslinjer: Elektrolytforstyrrelser i kardiologien',
@@ -581,6 +641,11 @@ export const CASE_CLINICAL_COMPARISONS = {
         diffFromNormal: 'Et normalt EKG har isoelektrisk ST- og PR-segment. Forskellen fra STEMI er afgørende: Ved STEMI er ST-elevationen konveks/hvælvet og begrænset til ét anatomisk koronarterritorium med reciprokke depressioner. Ved perikarditis er inflammationen diffus i hele hjertesækken, hvorfor elevationerne er konkave og ses i næsten samtlige afledninger.',
         pathophysiology: 'Inflammation i det viscerale og parietale perikardium skaber en overfladisk epikardiel skadestrøm over hele hjertets overflade. Atriernes epikardium afficeres også, hvilket forårsager den karakteristiske PR-segmentsænkning.',
         clinicalCriteria: 'DCS Kriterier for Akut Perikarditis (mindst 2 af 4): 1) Pleuritiske, stillingsafhængige brystsmerter (lindres ved foroverbøjning), 2) Perikardiel gnidningslyd ved stetoskopi, 3) Typiske EKG-forandringer (udbredt konkav ST-elevation + PR-depression), 4) Perikardieekssudat på ekkokardiografi.',
+        cellularElectrophysiology: {
+            channelsAndReceptors: 'Subepikardiel inflammation i kardiomyocytterne under det viscerale perikardium. Membranskade medfører lokalt ion-lækage (ufuldstændig opretholdelse af K+- og Na+-gradienter).',
+            actionPotentialPhase: 'Diffus epikardiel forstyrrelse af fase 4 hvilemembranpotentiale og fase 2/3 repolarisering i det yderste tynde cellelag af ventrikler og atrier.',
+            injuryCurrentOrVector: 'Diffus epikardiel skadestrøm rettet udad mod samtlige overliggende elektroder -> konkave ("hængekøje"-formede) ST-elevationer i næsten alle afledninger (I, II, III, aVF, V2-V6). Atriernes epikardium inflammeres også: atriel repolariseringsvektor (Ta-bølge) er modsat P-vektoren -> skadestrømmen giver PR-depression i ventrikelafledningerne og reciprok PR-elevation i aVR. aVR kigger som eneste afledning direkte ind i kaviteterne bagfra.'
+        },
         sundhedDkTitle: 'Sundhed.dk: Akut perikarditis',
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/oevrige-sygdomme/perikardit/',
         dcsTitle: 'DCS NBV: Perikardiesygdomme',
@@ -616,6 +681,11 @@ export const CASE_CLINICAL_COMPARISONS = {
         diffFromNormal: 'I et normalt EKG er PR-intervallet 120-200 ms. Ved 1. grads AV-blok er forsinkelsen i AV-knuden øget, men ingen impulser blokeres fuldstændigt.',
         pathophysiology: 'Abnorm fysiologisk eller patologisk ledningsforsinkelse i AV-knuden. Kan være et uskyldigt fund hos veltrænede unge atleter (høj vagustone), men kan også skyldes medicin (betablokkere, verapamil, digoxin) eller aldersbetinget degenerativ ledningssygdom.',
         clinicalCriteria: 'Sundhed.dk / DCS Kriterier: PR > 200 ms. Kræver som udgangspunkt ingen pacemakerbehandling alene, men medicingennemgang for AV-nodale hæmmere bør foretages.',
+        cellularElectrophysiology: {
+            channelsAndReceptors: 'L-type Ca2+-kanaler (Cav1.2) i AV-knudens kompakte del. β1-adrenerge receptorer (øger ledningshastighed via PKA) vs. M2-muskarine receptorer (Gi -> hæmmer Cav1.2, åbner IK,ACh -> nedsætter ledningshastighed).',
+            actionPotentialPhase: 'AV-knudens aktionspotentiale er calciumafhængigt ("slow-response"). Fase 0 opstigningshastighed (dV/dt) er fysiologisk langsom og forsinkes yderligere af høj vagustone eller farmakologisk hæmning (betablokker, verapamil, digoxin).',
+            injuryCurrentOrVector: 'Overledningstiden fra sinusknuden gennem atrierne, AV-knuden og His-bundtet forlænges ud over det normale tidsvindue på 200 ms. PR-segmentet forlænges konstant, men da alle impulser overledes 1:1, er QRS-morfologien og ventrikelvektoren normal.'
+        },
         sundhedDkTitle: 'Sundhed.dk: AV-blok 1. grad',
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-ledningsforstyrrelser/',
         dcsTitle: 'DCS Vejledning: Pacemakerbehandling & Bradykardi',
@@ -651,6 +721,11 @@ export const CASE_CLINICAL_COMPARISONS = {
         diffFromNormal: 'Et normalt EKG har et helt fast PR-interval ved alle slag. Ved Wenckebach udtrættes AV-knuden progressivt, indtil den refraktære tilstand forhindrer én enkelt impuls i at passere.',
         pathophysiology: 'Funktionel udtrætning i selve AV-knuden. Ofte benign og reversibel (fx under søvn hos unge pga. vagustone eller under akut inferiort STEMI pga. iskæmi i RCA/AV-nodal gren).',
         clinicalCriteria: 'DCS Kriterier: Behandlingskrævende pacemaker er sjældent indiceret ved asymptomatisk Wenckebach, medmindre der er udtalt bradykardi med symptomer (svimmelhed, synkope).',
+        cellularElectrophysiology: {
+            channelsAndReceptors: 'Dekrementel ledning i AV-knudens Cav1.2-kanaler. Moduleret af M2-receptorer og β1-receptorer.',
+            actionPotentialPhase: 'Progressiv forlængelse af AV-knudecellernes absolutte og relative refraktærperiode. For hvert slag ankommer den næste atriale impuls tidligere i calciumkanalernes restitutionsfase -> fase 0 forsinkes mere og mere (længere PR-interval).',
+            injuryCurrentOrVector: 'Wenckebach-fænomen: PR-intervallet forlænges gradvist, indtil en impuls rammer AV-knuden midt i den absolutte refraktærperiode og blokeres fuldstændigt (isoleret P-tak uden QRS). Efter udfaldet restituerer AV-knuden, og cyklussen genoptages. RR-intervallerne forkortes paradoksalt op til udfaldet, fordi den største stigning i PR sker mellem slag 1 og 2.'
+        },
         sundhedDkTitle: 'Sundhed.dk: AV-blok 2. grad (Wenckebach)',
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-ledningsforstyrrelser/',
         dcsTitle: 'DCS Vejledning: Pacemakerbehandling & Bradykardi',
@@ -686,6 +761,11 @@ export const CASE_CLINICAL_COMPARISONS = {
         diffFromNormal: 'Modsat Wenckebach, hvor overledningen bliver gradvist længere, er PR-intervallet ved Mobitz II helt konstant før udfaldet.',
         pathophysiology: 'Blokeringen sidder dybere i ledningssystemet (infranodalt i His\' bundt eller grenbundterne) pga. strukturel fibrose eller svær iskæmi. His-Purkinje cellerne arbejder efter "alt-eller-intet" princippet og fejler pludseligt.',
         clinicalCriteria: 'DCS Kriterier: Absolut klasse I indikation for permanent pacemaker! Mobitz II er ustabil og livstruende, uanset om patienten aktuelt har symptomer eller ej.',
+        cellularElectrophysiology: {
+            channelsAndReceptors: 'Infranodal sygdom i His-Purkinje systemet (His\' bundt eller grenbundterne). Hurtige Nav1.5-kanaler i specialiseret ledningsvæv.',
+            actionPotentialPhase: 'His-Purkinje celler er "fast-response" celler. Modsat AV-knuden udviser de ikke dekrementel ledning, men fungerer efter alt-eller-intet princippet. Fase 0 depolarisering er enten fuldstændig normal eller totalt blokeret.',
+            injuryCurrentOrVector: 'PR-intervallet er helt konstant for de overledte slag (ingen forudgående forlængelse). Pga. strukturel fibrose eller iskæmi svigter natriumkanal-aktiveringen pludseligt og uvarslet for én impuls -> akut udfald af et QRS-kompleks. Da blokket sidder infranodalt, er det ledsagende QRS-kompleks næsten altid bredt (grenblok), og tilstanden kan momentant progrediere til totalt AV-blok (Adams-Stokes asystoli).'
+        },
         sundhedDkTitle: 'Sundhed.dk: AV-blok Mobitz type II',
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-ledningsforstyrrelser/',
         dcsTitle: 'DCS Vejledning: Pacemakerbehandling & Bradykardi',
@@ -714,6 +794,11 @@ export const CASE_CLINICAL_COMPARISONS = {
         diffFromNormal: 'I et normalt EKG udløses ethvert QRS af en forudgående P-tak. Ved totalblok er forbindelsen mellem atrier og ventrikler fuldstændig afbrudt.',
         pathophysiology: 'Total blokering i AV-knuden eller His-Purkinje systemet. Ventriklerne holdes kun i gang af en langsom, ustabil perifer erstatningsrytme, hvilket medfører svær bradykardi, hypotension og risiko for asystoli.',
         clinicalCriteria: 'DCS Kriterier: Akut livstruende tilstand! Kræver indlæggelse på kardiologisk afdeling under kontinuerlig telemetri, akut temporær pacing ved hæmodynamisk ustabilitet (eller isoprenalin/atropin som nødbehandling) og permanent pacemaker (PPM).',
+        cellularElectrophysiology: {
+            channelsAndReceptors: 'Total anatomisk eller funktionel afbrydelse af Nav1.5- og Cav1.2-medieret ledning mellem atrier og ventrikler. Ventrikulær erstatningsrytme drevet af subsidiære pacemakerceller (Purkinjefibrenes langsomme spontane fase 4 depolarisering via HCN-kanaler og I_NCX).',
+            actionPotentialPhase: 'Atrier: SA-knudens fase 4 automaticitet kører normalt med 60-90/min. Ventrikler: Modtager intet atriesignal. Fase 0 i ventriklerne initieres udelukkende af en langsom perifer erstatningspacemaker (frekvens 20-40/min).',
+            injuryCurrentOrVector: 'Komplet AV-dissociation: P-takkerne marcherer regelmæssigt med deres egen atriefrekvens (P-P interval fast) og vandrer vilkårligt ind over QRS og T-takker. QRS-komplekserne marcherer med deres egen langsomme rytme (R-R interval fast). Hvis junctionalt fokus: smalle QRS (40-50 bpm); hvis idioventrikulært fokus: brede QRS (20-35 bpm).'
+        },
         sundhedDkTitle: 'Sundhed.dk: Tredjegrads AV-blok (Totalblok)',
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-ledningsforstyrrelser/',
         dcsTitle: 'DCS Vejledning: Pacemakerbehandling ved Totalblok',
@@ -742,6 +827,11 @@ export const CASE_CLINICAL_COMPARISONS = {
         diffFromNormal: 'Et normalt EKG har moderate voltager (< 35 mm sammenlagt). Ved LVH medfører den fortykkede venstre ventrikelvæg langt kraftigere elektriske vektorer og forlænget depolariseringstid.',
         pathophysiology: 'Kronisk trykbelastning (hypertension, aortastenose) eller volumenbelastning tvinger kardiomyocytterne i venstre ventrikel til hypertrofi for at modstå vægspændingen (Laplaces lov). Den øgede muskelmasse genererer kraftigere voltager mod venstre og bagud.',
         clinicalCriteria: 'Sokolow-Lyon Kriterium: S i V1 + R i V5 eller V6 ≥ 35 mm (3.5 mV). Cornell Voltagescore: R i aVL + S i V3 > 28 mm (mænd) eller > 20 mm (kvinder). Ekkokardiografi er guldstandard til verifikation af vægtykkelse og masse.',
+        cellularElectrophysiology: {
+            channelsAndReceptors: 'Mekanisk stræk aktiverer AT1-angiotensinreceptorer, α1-adrenoceptorer og endotelin-receptorer -> intracellulær MAPK-kaskade og kardiomyocyt-hypertrofi. Flere parallelle sarkomerer, øget membranoverflade og flere fungerende Nav1.5- og Cav1.2-kanaler pr. ventrikelvolumen.',
+            actionPotentialPhase: 'Forlænget fase 0 transmural udbredelsestid gennem den fortykkede venstre ventrikelvæg (intrinsikoid afbøjningstid > 50 ms i V5-V6). Relativ subendokardial iskæmi ændrer fase 2/3 repolariseringen.',
+            injuryCurrentOrVector: 'Den øgede muskelmasse genererer en massivt forstørret depolarisationsdipol rettet bagud og mod venstre -> høje R-takker i de laterale afledninger (V5, V6, I, aVL) og dybe reciprokke S-takker i V1-V2 (Sokolow-Lyon >= 35 mm). Hypertrofien komprimerer de intramyokardielle kar i systolen -> relativ subendokardial iskæmi og forsinket endokardiel repolarisering -> asymmetrisk ST-depression og T-inversion i I, aVL, V5, V6 ("strain"-mønster).'
+        },
         sundhedDkTitle: 'Sundhed.dk: Venstre ventrikelhypertrofi (LVH)',
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/undersoegelser/ekg-tjekliste/',
         dcsTitle: 'DCS Vejledning: Arteriel Hypertension og Hjertepåvirkning',
@@ -777,6 +867,11 @@ export const CASE_CLINICAL_COMPARISONS = {
         diffFromNormal: 'I et normalt EKG er V1 domineret af en lille r og dyb S-tak med isoelektrisk ST-segment. Ved bagvægsinfarkt kigger de anteriore afledninger V1–V3 på "bagsiden" af skadestrømmen, så en posterior ST-elevation registreres som en anterior ST-depression!',
         pathophysiology: 'Akut okklusion af arteria circumflexa (LCx) eller en distal gren af RCA forårsager transmural iskæmi i hjertets posterobasale væg. Da der ikke sidder standardelektroder på ryggen, registreres skadestrømmen omvendt forfra.',
         clinicalCriteria: 'DCS Kriterier: ST-depression i V1–V3 hos patient med akutte brystsmerter skal ALTID give mistanke om posteriort STEMI! Kræver supplerende optagelse af bagvægsafledninger V7–V9. Ved ST-elevation ≥ 0.5 mm i V7–V9 aktiveres akut STEMI-kald til KAG/PCI.',
+        cellularElectrophysiology: {
+            channelsAndReceptors: 'Akut okklusion af arteria circumflexa (LCx) eller en posterolateral gren af RCA. Mangel på ATP -> Na+/K+-ATPase svigt -> åbning af metaboliske K_ATP-kanaler i den posterobasale væg.',
+            actionPotentialPhase: 'Transmural iskæmi i bagvæggen af venstre ventrikel. Diastolisk depolarisering af hvilepotentialet (fase 4) og forkortet fase 2/3 aktionspotentiale i de posteriore kardiomyocytter.',
+            injuryCurrentOrVector: 'Skadestrømsvektoren peger dorsalt (bagud mod ryggen). Da standard 12-aflednings EKG placerer elektroderne V1-V3 anteriort på brystkassen, ser elektroderne ind i bagsiden af skadestrømmen (spejlbillede): 1) Den posteriore ST-elevation ses som en horisontal ST-depression i V1-V3. 2) Det posteriore Q-takstab ses som en høj bred R-tak (R/S > 1) i V1-V2. 3) Den posteriore T-taks inversion ses som en høj opretstående, symmetrisk T-tak i V1-V3. Bekræftes ved ST-elevation >= 0.5 mm i de dorsale afledninger V7-V9 på ryggen.'
+        },
         sundhedDkTitle: 'Sundhed.dk: Akut koronarsygdom og atypiske infarkter',
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/koronarsygdom/akut-koronart-syndrom/',
         dcsTitle: 'DCS NBV: Posteriort STEMI og supplerende afledninger (V7-V9)',
@@ -812,6 +907,11 @@ export const CASE_CLINICAL_COMPARISONS = {
         diffFromNormal: 'Et normalt EKG har normal akse, slanke højre ventrikel voltager og ingen isolerede Q-takker i afledning III. Ved massiv lungeemboli stiger trykket i lungekredsløbet akut, hvilket dilaterer højre ventrikel og drejer hjertet anatomisk.',
         pathophysiology: 'Tromboembolisk okklusion af truncus pulmonalis eller store lungearteriegrene giver akut trykstigning i det pulmonale karsystem. Højre ventrikel overbelastes akut (cor pulmonale), hvilket medfører iskæmi i højre ventrikelvæg og rotation af hjertets elektriske akse mod højre.',
         clinicalCriteria: 'DCS / ESC Kriterier for Akut Lungeemboli: EKG er sjældent diagnostisk alene, men afspejler graden af akut højre ventrikelbelastning! S1Q3T3 ses kun hos ca. 15-20% ved større embolier. Vigtigste diagnostiske redskab er CT-pulmonal angiografi (CTPA) og D-dimer.',
+        cellularElectrophysiology: {
+            channelsAndReceptors: 'Tromboemboli i lungekarsengen -> massiv stigning i højre ventrikels afterload. Neurohumoral sympatikusaktivering (β1-adrenoceptorer -> takykardi) og hypoksisk vasokonstriktion.',
+            actionPotentialPhase: 'Akut dilatation og tårnhøjt vægstress i højre ventrikel -> akut iskæmi i højre ventrikels myocytter med forsinket fase 2/3 repolarisering i højre ventrikelvæg.',
+            injuryCurrentOrVector: '1) Sinustakykardi via β1-stimulation af sinusknuden (If). 2) Akut dilatation af højre ventrikel roterer hjertet anatomisk med uret og forskyder septum mod venstre -> akut højredrejning af hjerteaksen samt McGinn-White mønster: S1Q3T3 (dyb S i I, patologisk Q i III og inverteret T i III). 3) Akut iskæmisk overbelastning af højre ventrikel forårsager udbredte T-taks inversioner i de højresidige brystafledninger V1–V4 og ofte ukomplet eller komplet RBBB.'
+        },
         sundhedDkTitle: 'Sundhed.dk: Lungeemboli (Lægehåndbogen)',
         sundhedDkUrl: 'https://www.sundhed.dk/sundhedsfaglig/laegehaandbogen/hjerte-kar/tilstande-og-sygdomme/tromboembolisk-sygdom/lungeemboli/',
         dcsTitle: 'DCS NBV: Akut lungeemboli og højresidig overbelastning',
