@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Activity, Cookie, FileText, ChevronRight, Stethoscope, Pill, Heart } from '../components/Icons';
+import { Brain, Activity, Cookie, FileText, ChevronRight, Stethoscope, Pill, Heart, Compass, ExternalLink } from '../components/Icons';
 
 function LandingPage({ onNavigate }) {
     return (
@@ -251,6 +251,37 @@ function LandingPage({ onNavigate }) {
                             Åbn værktøj <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                         </div>
                     </button>
+
+                    {/* Tile 10: Vejledning (God Vejledning RN) */}
+                    <a
+                        href="https://godvejledning.rn.dk/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group relative flex flex-col items-start p-5 rounded-3xl bg-white/70 backdrop-blur-md border border-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer overflow-hidden isolate text-left"
+                    >
+                        <div className="absolute inset-0 bg-gradient-to-br from-teal-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+
+                        <div className="w-12 h-12 rounded-xl bg-[#F2F6F3] flex items-center justify-center mb-4 shadow-sm border border-white group-hover:bg-[#00627D] transition-colors duration-300">
+                            <Compass className="w-6 h-6 text-[#00627D] group-hover:text-white transition-colors duration-300" />
+                        </div>
+
+                        <div className="flex items-center gap-2 mb-2">
+                            <h2 className="text-lg font-bold text-[#3A4A40] text-left leading-tight group-hover:text-[#00485c] transition-colors">
+                                Vejledning
+                            </h2>
+                            <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-teal-50 text-[#00627D] border border-teal-200 uppercase">
+                                RN
+                            </span>
+                        </div>
+
+                        <p className="text-left text-[#839788] text-xs mb-5 leading-relaxed">
+                            Region Nordjyllands portal for lægelig videreuddannelse: samtaler, uddannelsesdokumenter, undervisning og kompetencevurdering.
+                        </p>
+
+                        <div className="mt-auto flex items-center gap-1.5 text-[#00627D] text-xs font-bold uppercase tracking-wide group-hover:text-[#003848] transition-colors">
+                            Åbn vejledning <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                        </div>
+                    </a>
 
                 </div>
             </main>
