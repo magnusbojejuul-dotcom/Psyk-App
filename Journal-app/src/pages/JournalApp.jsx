@@ -96,6 +96,19 @@ function JournalApp({ onNavigate }) {
         return null;
     };
 
+    const formatCategoryHeader = (cat) => {
+        let formatted = cat.replace(/&/g, 'og');
+        if (/^F\d/i.test(formatted)) {
+            return formatted.replace(/^([Ff]\d+)(\s*-\s*)(.*)$/, (_, code, sep, rest) => {
+                let lowerRest = rest.toLowerCase()
+                    .replace(/\bicd-10\b/gi, 'ICD-10')
+                    .replace(/\bocd\b/gi, 'OCD');
+                return `${code.toUpperCase()}${sep}${lowerRest}`;
+            });
+        }
+        return formatted.toLowerCase();
+    };
+
     const processCategoryOptions = (categoryOptions, categoryName, currentSelectedIds, currentDetails) => {
         const summaryLines = [];
         const elaborationLines = [];
@@ -105,7 +118,7 @@ function JournalApp({ onNavigate }) {
         const detailedOptionsByPrefix = {};
         const prefixUsage = new Set();
         
-        const isDepressionCategory = categoryName === 'Depression (ICD-10 Screening)';
+        const isDepressionCategory = categoryName.includes('Depression') && (categoryName.includes('ICD-10') || categoryName.includes('F3'));
 
         // Filter out parent options from ALL groups if ANY of their sub-options are currently selected
         const selectedSubOptions = Array.from(currentSelectedIds)
@@ -257,7 +270,7 @@ function JournalApp({ onNavigate }) {
 
                     if (hasAbnormality && selectedOptions.length > 0) {
                         const text = processCategoryOptions(sec.options, cat, ids, details);
-                        const formattedCat = cat.toLowerCase().replace(/&/g, 'og');
+                        const formattedCat = formatCategoryHeader(cat);
                         obsLines.push(`Ad ${formattedCat}:\n${text}\n`);
                         movedCategories.add(cat);
                     }
@@ -325,7 +338,7 @@ function JournalApp({ onNavigate }) {
                 if (selectedInCat.length > 0) {
                     const text = processCategoryOptions(categoryOptions, cat, ids, details);
                     if (text) {
-                        const formattedCat = cat.toLowerCase().replace(/&/g, 'og');
+                        const formattedCat = formatCategoryHeader(cat);
                         sectionLines.push(`Ad ${formattedCat}:\n${text}\n`);
                     }
                 }
