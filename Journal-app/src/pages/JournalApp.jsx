@@ -241,6 +241,40 @@ function JournalApp({ onNavigate }) {
         return mainText;
     };
 
+    const formatF2Text = (halluOptions, delOptions, currentSelectedIds, currentDetails) => {
+        const hasHalluSymptom = halluOptions.some(o => !o.isDefault && currentSelectedIds.has(o.id));
+        const hasDelSymptom = delOptions.some(o => !o.isDefault && currentSelectedIds.has(o.id));
+
+        const hasHalluDefault = currentSelectedIds.has('ap_hallu_none');
+        const hasDelDefault = currentSelectedIds.has('ap_delusion_none');
+
+        // Begge er standard (eller ingen positive symptomer)
+        if (!hasHalluSymptom && !hasDelSymptom) {
+            if (hasHalluDefault || hasDelDefault) {
+                return 'Beskriver hverken hallucinationer, vrangforestillinger eller formelle tankeforstyrrelser.';
+            }
+            return '';
+        }
+
+        const parts = [];
+
+        if (hasHalluSymptom) {
+            const hText = processCategoryOptions(halluOptions, 'F2 - Hallucinationer (Perception)', currentSelectedIds, currentDetails);
+            if (hText) parts.push(hText);
+        } else if (hasHalluDefault) {
+            parts.push('Beskriver ingen hallucinationer.');
+        }
+
+        if (hasDelSymptom) {
+            const dText = processCategoryOptions(delOptions, 'F2 - Vrangforestillinger & Tanker', currentSelectedIds, currentDetails);
+            if (dText) parts.push(dText);
+        } else if (hasDelDefault) {
+            parts.push('Beskriver ingen vrangforestillinger eller formelle tankeforstyrrelser.');
+        }
+
+        return parts.join(' ').trim();
+    };
+
     const generateTextContent = (section, ids, details, contactReason, timeline, diets, uniform, summaryMode) => {
         const allSections = [
             { id: 'psych_actual', title: 'AKTUELT PSYKISK (ANAMNESE)', options: ACTUAL_PSYCH_OPTIONS },
@@ -264,7 +298,30 @@ function JournalApp({ onNavigate }) {
             const obsLines = [];
             sectionsToRender.forEach(sec => {
                 const categories = Array.from(new Set(sec.options.map(o => o.category)));
+                let handledF2Summary = false;
+
                 categories.forEach(cat => {
+                    if (cat.startsWith('F2 - ')) {
+                        if (handledF2Summary) return;
+                        handledF2Summary = true;
+
+                        const f2HalluOpts = sec.options.filter(o => o.category === 'F2 - Hallucinationer (Perception)');
+                        const f2DelOpts = sec.options.filter(o => o.category === 'F2 - Vrangforestillinger & Tanker');
+
+                        const hasHalluAbn = f2HalluOpts.filter(o => ids.has(o.id)).some(o => o.isPathology || (!o.isDefault && !o.isNormal));
+                        const hasDelAbn = f2DelOpts.filter(o => ids.has(o.id)).some(o => o.isPathology || (!o.isDefault && !o.isNormal));
+
+                        if (hasHalluAbn || hasDelAbn) {
+                            const text = formatF2Text(f2HalluOpts, f2DelOpts, ids, details);
+                            if (text) {
+                                obsLines.push(`Ad F2 - psykotiske symptomer:\n${text}\n`);
+                                movedCategories.add('F2 - Hallucinationer (Perception)');
+                                movedCategories.add('F2 - Vrangforestillinger & Tanker');
+                            }
+                        }
+                        return;
+                    }
+
                     const categoryOptions = sec.options.filter(o => o.category === cat);
                     const selectedOptions = categoryOptions.filter(o => ids.has(o.id));
                     const hasAbnormality = selectedOptions.some(o => o.isPathology || (!o.isDefault && !o.isNormal));
@@ -330,8 +387,29 @@ function JournalApp({ onNavigate }) {
             }
 
             const categories = Array.from(new Set(sec.options.map(o => o.category)));
+            let handledF2Section = false;
+
             categories.forEach(cat => {
                 if (movedCategories.has(cat)) return;
+
+                if (cat.startsWith('F2 - ')) {
+                    if (handledF2Section) return;
+                    handledF2Section = true;
+
+                    const f2HalluOpts = sec.options.filter(o => o.category === 'F2 - Hallucinationer (Perception)');
+                    const f2DelOpts = sec.options.filter(o => o.category === 'F2 - Vrangforestillinger & Tanker');
+
+                    const selHallu = f2HalluOpts.filter(o => ids.has(o.id));
+                    const selDel = f2DelOpts.filter(o => ids.has(o.id));
+
+                    if (selHallu.length > 0 || selDel.length > 0) {
+                        const text = formatF2Text(f2HalluOpts, f2DelOpts, ids, details);
+                        if (text) {
+                            sectionLines.push(`Ad F2 - psykotiske symptomer:\n${text}\n`);
+                        }
+                    }
+                    return;
+                }
 
                 const categoryOptions = sec.options.filter(o => o.category === cat);
                 const selectedInCat = categoryOptions.filter(o => ids.has(o.id));
