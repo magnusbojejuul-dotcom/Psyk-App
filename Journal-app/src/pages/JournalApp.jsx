@@ -118,7 +118,7 @@ function JournalApp({ onNavigate }) {
         const detailedOptionsByPrefix = {};
         const prefixUsage = new Set();
         
-        const isDepressionCategory = categoryName.includes('Depression') && (categoryName.includes('ICD-10') || categoryName.includes('F3'));
+        const isDepressionCategory = categoryName === 'F3 - Depression (ICD-10 screening)' || categoryName === 'Depression (ICD-10 Screening)';
 
         // Filter out parent options from ALL groups if ANY of their sub-options are currently selected
         const selectedSubOptions = Array.from(currentSelectedIds)
@@ -265,11 +265,12 @@ function JournalApp({ onNavigate }) {
             sectionsToRender.forEach(sec => {
                 const categories = Array.from(new Set(sec.options.map(o => o.category)));
                 categories.forEach(cat => {
-                    const selectedOptions = sec.options.filter(o => o.category === cat && ids.has(o.id));
+                    const categoryOptions = sec.options.filter(o => o.category === cat);
+                    const selectedOptions = categoryOptions.filter(o => ids.has(o.id));
                     const hasAbnormality = selectedOptions.some(o => o.isPathology || (!o.isDefault && !o.isNormal));
 
                     if (hasAbnormality && selectedOptions.length > 0) {
-                        const text = processCategoryOptions(sec.options, cat, ids, details);
+                        const text = processCategoryOptions(categoryOptions, cat, ids, details);
                         const formattedCat = formatCategoryHeader(cat);
                         obsLines.push(`Ad ${formattedCat}:\n${text}\n`);
                         movedCategories.add(cat);

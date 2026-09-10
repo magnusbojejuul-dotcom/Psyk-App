@@ -18,7 +18,7 @@ export const SOMATIC_ACT_NORMAL_IDS = [
     'act_cns_ok', 'act_cp_ok', 'act_gi_ok', 'act_uro_ok', 'act_musc_ok', 'act_sleep_ok', 'act_appetite_ok'
 ];
 
-export { ACTUAL_PSYCH_OPTIONS } from './data/actualPsychOptions';
+export { ACTUAL_PSYCH_OPTIONS, MANIA_OPTION_IDS } from './data/actualPsychOptions';
 
 export const PSYCH_OPTIONS = [
     { id: 'orient_normal', label: 'Fuldt orienteret', category: 'Bevidsthed', text: 'Vågen, klar og orienteret i tid, sted og egne data.', isDefault: true, exclude: ['orient_confused', 'orient_delir', 'orient_sløv'] },
