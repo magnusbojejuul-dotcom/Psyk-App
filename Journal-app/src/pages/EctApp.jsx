@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronRight, FileText, CheckCircle, Circle, Download, AlertTriangle, AlertCircle, Info, Stethoscope, Copy, Activity, BookOpen, ChevronDown, ChevronUp } from '../components/Icons';
+import PdfViewer from '../components/PdfViewer';
 
 const ECT_CHECKLIST = [
     {
@@ -293,31 +294,18 @@ function EctApp({ onNavigate }) {
                         </button>
                     </div>
 
-                    <div className="flex justify-between items-center mb-4 shrink-0">
-                        <h2 className="text-lg font-bold text-[#3A4A40] flex items-center gap-2">
-                            {activePdf === 'henvisning' ? 'Afd. Specifik Henvisning' : 'Fælles Regional Retningslinje'}
-                        </h2>
-                        <a 
-                            href={activePdf === 'henvisning' ? `${import.meta.env.BASE_URL}pdf/Bilag_1_Henvisning_ECT.pdf` : `${import.meta.env.BASE_URL}pdf/ECT_Retningslinje.pdf`} 
-                            download 
-                            className="flex items-center gap-2 bg-[#839788] text-white px-3 py-1.5 rounded-lg hover:bg-[#6A7A6E] transition-colors shadow-sm font-medium text-xs lg:text-sm"
-                        >
-                            <Download className="w-4 h-4" /> Download
-                        </a>
-                    </div>
-                    
-                    <div className="flex-1 border border-[#E8E4D9] rounded-xl overflow-hidden shadow-inner bg-[#F9F8F6]">
+                    <div className="flex-1 flex flex-col min-h-[500px]">
                         {activePdf === 'henvisning' ? (
-                            <iframe
-                                src={`${import.meta.env.BASE_URL}pdf/Bilag_1_Henvisning_ECT.pdf#toolbar=1`}
-                                className="w-full h-full"
-                                title="Bilag 1 - Henvisning og booking ECT"
+                            <PdfViewer
+                                url={`${import.meta.env.BASE_URL}pdf/Bilag_1_Henvisning_ECT.pdf`}
+                                title="Afd. Specifik Henvisning"
+                                downloadName="Bilag_1_Henvisning_ECT.pdf"
                             />
                         ) : (
-                            <iframe
-                                src={`${import.meta.env.BASE_URL}pdf/ECT_Retningslinje.pdf#toolbar=1`}
-                                className="w-full h-full"
-                                title="ECT Vejledning Retningslinje"
+                            <PdfViewer
+                                url={`${import.meta.env.BASE_URL}pdf/ECT_Retningslinje.pdf`}
+                                title="Fælles Regional Retningslinje"
+                                downloadName="ECT_Retningslinje.pdf"
                             />
                         )}
                     </div>

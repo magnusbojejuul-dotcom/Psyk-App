@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronRight, FileText, AlertTriangle, AlertCircle, Info, Stethoscope, Users, User, ShieldAlert, Download, Copy, Check, Clipboard } from '../components/Icons';
+import PdfViewer from '../components/PdfViewer';
 
 function GuidelinesApp({ onNavigate }) {
     const [activeInstruks, setActiveInstruks] = useState('plan_anoreksi');
@@ -9,126 +10,97 @@ function GuidelinesApp({ onNavigate }) {
     const renderAnoreksiPlan = () => {
         return (
             <div className="max-w-4xl mx-auto h-full flex flex-col">
-                <div className="mb-8 flex justify-between items-start shrink-0">
-                    <div>
-                        <h2 className="text-2xl md:text-3xl font-bold text-[#3A4A40] mb-2">Behandlingsplan for Anoreksi</h2>
-                        <p className="text-[#839788]">Direkte afspejling af standard behandlingsplan skabelon for Anorexia Nervosa.</p>
-                    </div>
-                    <a href={`${import.meta.env.BASE_URL}pdf/Eksempel%20på%20behandlingsplan%20Anoreksi.pdf`} download className="flex items-center gap-2 bg-[#839788] text-white px-4 py-2 rounded-xl hover:bg-[#6A7A6E] transition-colors shadow-sm font-medium text-sm">
-                        <Download className="w-4 h-4" /> Download Original PDF
-                    </a>
+                <div className="mb-4 shrink-0">
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#3A4A40] mb-1">Behandlingsplan for Anoreksi</h2>
+                    <p className="text-[#839788] text-sm">Direkte afspejling af standard behandlingsplan skabelon for Anorexia Nervosa.</p>
                 </div>
 
-                <div className="glass-panel p-4 rounded-2xl shadow-sm flex-1 flex flex-col min-h-[600px]">
-                    <iframe
-                        src={`${import.meta.env.BASE_URL}pdf/Eksempel%20på%20behandlingsplan%20Anoreksi.pdf`}
-                        className="w-full flex-1 rounded-xl border border-[#E8E4D9] bg-white min-h-[500px]"
-                        title="Anoreksi Behandlingsplan Document"
+                <div className="flex-1 min-h-[600px] flex flex-col">
+                    <PdfViewer
+                        url={`${import.meta.env.BASE_URL}pdf/Eksempel%20på%20behandlingsplan%20Anoreksi.pdf`}
+                        title="Behandlingsplan for Anoreksi"
+                        downloadName="Eksempel på behandlingsplan Anoreksi.pdf"
                     />
                 </div>
             </div>
         );
-    }
+    };
 
     const renderGenerelPlan = () => {
         return (
             <div className="max-w-4xl mx-auto h-full flex flex-col">
-                <div className="mb-8 flex justify-between items-start shrink-0">
-                    <div>
-                        <h2 className="text-2xl md:text-3xl font-bold text-[#3A4A40] mb-2">Generel Behandlingsplan (Eksempel)</h2>
-                        <p className="text-[#839788]">Direkte afspejling af eksempel på behandlingsplan.</p>
-                    </div>
-                    <a href={`${import.meta.env.BASE_URL}pdf/Eksempel%20på%20behandlingsplan.pdf`} download className="flex items-center gap-2 bg-[#839788] text-white px-4 py-2 rounded-xl hover:bg-[#6A7A6E] transition-colors shadow-sm font-medium text-sm">
-                        <Download className="w-4 h-4" /> Download Original PDF
-                    </a>
+                <div className="mb-4 shrink-0">
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#3A4A40] mb-1">Generel Behandlingsplan (Eksempel)</h2>
+                    <p className="text-[#839788] text-sm">Direkte afspejling af eksempel på behandlingsplan.</p>
                 </div>
 
-                <div className="glass-panel p-4 rounded-2xl shadow-sm flex-1 flex flex-col min-h-[600px]">
-                    <iframe
-                        src={`${import.meta.env.BASE_URL}pdf/Eksempel%20på%20behandlingsplan.pdf`}
-                        className="w-full flex-1 rounded-xl border border-[#E8E4D9] bg-white min-h-[500px]"
-                        title="Generel Behandlingsplan Document"
+                <div className="flex-1 min-h-[600px] flex flex-col">
+                    <PdfViewer
+                        url={`${import.meta.env.BASE_URL}pdf/Eksempel%20på%20behandlingsplan.pdf`}
+                        title="Generel Behandlingsplan"
+                        downloadName="Eksempel på behandlingsplan.pdf"
                     />
                 </div>
             </div>
         );
-    }
+    };
 
     const renderGennemgang = () => {
         return (
             <div className="max-w-4xl mx-auto h-full flex flex-col">
-                <div className="mb-8 flex justify-between items-start shrink-0">
-                    <div>
-                        <h2 className="text-2xl md:text-3xl font-bold text-[#3A4A40] mb-2">Gennemgang af Instruks</h2>
-                        <p className="text-[#839788]">Visning af det originale "Gennemgang.pdf" dokument.</p>
-                    </div>
-                    <a href={`${import.meta.env.BASE_URL}pdf/Gennemgang.pdf`} download className="flex items-center gap-2 bg-[#839788] text-white px-4 py-2 rounded-xl hover:bg-[#6A7A6E] transition-colors shadow-sm font-medium text-sm">
-                        <Download className="w-4 h-4" /> Download Original PDF
-                    </a>
+                <div className="mb-4 shrink-0">
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#3A4A40] mb-1">Gennemgang af Instruks</h2>
+                    <p className="text-[#839788] text-sm">Visning af det originale "Gennemgang.pdf" dokument.</p>
                 </div>
 
-                <div className="glass-panel p-4 rounded-2xl shadow-sm flex-1 flex flex-col min-h-[600px]">
-                    <div className="p-4 bg-blue-50 border border-blue-200 rounded-xl mb-4 text-sm text-blue-900 flex items-start gap-3">
-                        <Info className="w-5 h-5 shrink-0 mt-0.5" />
-                        <p>Dette dokument er indlejret direkte fra et visuelt PDF-format. Brug knappen øverst til højre hvis du ønsker at downloade filen på din computer.</p>
-                    </div>
-                    <iframe
-                        src={`${import.meta.env.BASE_URL}pdf/Gennemgang.pdf`}
-                        className="w-full flex-1 rounded-xl border border-[#E8E4D9] bg-white min-h-[500px]"
-                        title="Gennemgang.pdf Document"
+                <div className="flex-1 min-h-[600px] flex flex-col">
+                    <PdfViewer
+                        url={`${import.meta.env.BASE_URL}pdf/Gennemgang.pdf`}
+                        title="Gennemgang af Instruks"
+                        downloadName="Gennemgang.pdf"
                     />
                 </div>
             </div>
         );
-    }
+    };
 
     const renderBlodproever = () => {
         return (
             <div className="max-w-4xl mx-auto h-full flex flex-col">
-                <div className="mb-8 flex justify-between items-start shrink-0">
-                    <div>
-                        <h2 className="text-2xl md:text-3xl font-bold text-[#3A4A40] mb-2">Blodprøver (Spiseforstyrrelse)</h2>
-                        <p className="text-[#839788]">Vejledende beskrivelse og behandling ved spiseforstyrrelse.</p>
-                    </div>
-                    <a href={`${import.meta.env.BASE_URL}pdf/Blodproever_Spiseforstyrrelse.pdf`} download className="flex items-center gap-2 bg-[#839788] text-white px-4 py-2 rounded-xl hover:bg-[#6A7A6E] transition-colors shadow-sm font-medium text-sm">
-                        <Download className="w-4 h-4" /> Download Original PDF
-                    </a>
+                <div className="mb-4 shrink-0">
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#3A4A40] mb-1">Blodprøver (Spiseforstyrrelse)</h2>
+                    <p className="text-[#839788] text-sm">Vejledende beskrivelse og behandling ved spiseforstyrrelse.</p>
                 </div>
 
-                <div className="glass-panel p-4 rounded-2xl shadow-sm flex-1 flex flex-col min-h-[600px]">
-                    <iframe
-                        src={`${import.meta.env.BASE_URL}pdf/Blodproever_Spiseforstyrrelse.pdf`}
-                        className="w-full flex-1 rounded-xl border border-[#E8E4D9] bg-white min-h-[500px]"
-                        title="Blodprøver Document"
+                <div className="flex-1 min-h-[600px] flex flex-col">
+                    <PdfViewer
+                        url={`${import.meta.env.BASE_URL}pdf/Blodproever_Spiseforstyrrelse.pdf`}
+                        title="Blodprøver (Spiseforstyrrelse)"
+                        downloadName="Blodproever_Spiseforstyrrelse.pdf"
                     />
                 </div>
             </div>
         );
-    }
+    };
 
     const renderJournaloptagAN = () => {
         return (
             <div className="max-w-4xl mx-auto h-full flex flex-col">
-                <div className="mb-8 flex justify-between items-start shrink-0">
-                    <div>
-                        <h2 className="text-2xl md:text-3xl font-bold text-[#3A4A40] mb-2">Journaloptagelse (AN)</h2>
-                        <p className="text-[#839788]">Direkte afspejling af standard skabelon for journaloptagelse.</p>
-                    </div>
-                    <a href={`${import.meta.env.BASE_URL}pdf/Journaloptag_AN.pdf`} download className="flex items-center gap-2 bg-[#839788] text-white px-4 py-2 rounded-xl hover:bg-[#6A7A6E] transition-colors shadow-sm font-medium text-sm">
-                        <Download className="w-4 h-4" /> Download Original PDF
-                    </a>
+                <div className="mb-4 shrink-0">
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#3A4A40] mb-1">Journaloptagelse (AN)</h2>
+                    <p className="text-[#839788] text-sm">Direkte afspejling af standard skabelon for journaloptagelse.</p>
                 </div>
 
-                <div className="glass-panel p-4 rounded-2xl shadow-sm flex-1 flex flex-col min-h-[600px]">
-                    <iframe
-                        src={`${import.meta.env.BASE_URL}pdf/Journaloptag_AN.pdf`}
-                        className="w-full flex-1 rounded-xl border border-[#E8E4D9] bg-white min-h-[500px]"
-                        title="Journaloptagelse AN Document"
+                <div className="flex-1 min-h-[600px] flex flex-col">
+                    <PdfViewer
+                        url={`${import.meta.env.BASE_URL}pdf/Journaloptag_AN.pdf`}
+                        title="Journaloptagelse (AN)"
+                        downloadName="Journaloptag_AN.pdf"
                     />
                 </div>
             </div>
         );
-    }
+    };
 
     const renderGennemgangS6 = () => {
         const copyS6Template = () => {
@@ -202,47 +174,39 @@ HUSK:
             setTimeout(() => setCopiedS6(false), 2500);
         };
 
+        const copyAction = (
+            <button
+                onClick={copyS6Template}
+                className="px-3 py-1.5 bg-white border border-[#E8E4D9] text-[#3A4A40] hover:bg-[#F2F6F3] rounded-xl transition-colors shadow-2xs font-medium text-xs flex items-center gap-1.5 cursor-pointer"
+                title="Kopiér skabelonteksten til udklipsholderen"
+            >
+                {copiedS6 ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5 text-[#839788]" />}
+                <span>{copiedS6 ? 'Kopieret!' : 'Kopiér skabelon'}</span>
+            </button>
+        );
+
         return (
             <div className="max-w-4xl mx-auto h-full flex flex-col pb-8">
-                <div className="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shrink-0">
-                    <div>
-                        <div className="flex items-center gap-2 mb-1">
-                            <span className="text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-[#E2E8DF] text-[#3A4A40]">Afsnit S6</span>
-                            <span className="text-xs text-[#839788]">Der skrives i ’dotten’ Journaloptagelse</span>
-                        </div>
-                        <h2 className="text-2xl md:text-3xl font-bold text-[#3A4A40]">Skabelon til Gennemgang på S6</h2>
-                        <p className="text-[#839788] text-sm">Direkte afspejling af standard skabelon for journaloptagelse og gennemgang på S6.</p>
+                <div className="mb-4 shrink-0">
+                    <div className="flex items-center gap-2 mb-1">
+                        <span className="text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-[#E2E8DF] text-[#3A4A40]">Afsnit S6</span>
+                        <span className="text-xs text-[#839788]">Der skrives i ’dotten’ Journaloptagelse</span>
                     </div>
-
-                    <div className="flex items-center gap-2.5 flex-wrap">
-                        <button
-                            onClick={copyS6Template}
-                            className="flex items-center gap-1.5 bg-white border border-[#E8E4D9] text-[#3A4A40] px-3.5 py-2 rounded-xl hover:bg-[#F2F6F3] transition-colors shadow-sm font-medium text-sm cursor-pointer"
-                        >
-                            {copiedS6 ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4 text-[#839788]" />}
-                            <span>{copiedS6 ? 'Kopieret til udklip!' : 'Kopiér skabelon'}</span>
-                        </button>
-
-                        <a
-                            href={`${import.meta.env.BASE_URL}pdf/Skabelon_Gennemgang_S6.pdf`}
-                            download
-                            className="flex items-center gap-2 bg-[#839788] text-white px-4 py-2 rounded-xl hover:bg-[#6A7A6E] transition-colors shadow-sm font-medium text-sm"
-                        >
-                            <Download className="w-4 h-4" /> Download Original PDF
-                        </a>
-                    </div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#3A4A40]">Skabelon til Gennemgang på S6</h2>
+                    <p className="text-[#839788] text-sm">Direkte afspejling af standard skabelon for journaloptagelse og gennemgang på S6.</p>
                 </div>
 
-                <div className="glass-panel p-4 rounded-2xl shadow-sm flex-1 flex flex-col min-h-[600px]">
-                    <iframe
-                        src={`${import.meta.env.BASE_URL}pdf/Skabelon_Gennemgang_S6.pdf`}
-                        className="w-full flex-1 rounded-xl border border-[#E8E4D9] bg-white min-h-[500px]"
+                <div className="flex-1 min-h-[600px] flex flex-col">
+                    <PdfViewer
+                        url={`${import.meta.env.BASE_URL}pdf/Skabelon_Gennemgang_S6.pdf`}
                         title="Skabelon til Gennemgang på S6"
+                        downloadName="Skabelon_Gennemgang_S6.pdf"
+                        extraActions={copyAction}
                     />
                 </div>
             </div>
         );
-    }
+    };
 
     return (
         <div className="flex flex-col h-screen bg-[#F9F8F6] font-sans selection:bg-[#E2E8DF] selection:text-slate-900">
