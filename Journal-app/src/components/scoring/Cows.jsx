@@ -143,7 +143,7 @@ function Cows() {
 
     const handleCopy = () => {
         const total = calculateTotalScore();
-        const text = `COWS (Clinical Opiate Withdrawal Scale):\nTotal score: ${total}/48 point.\nTolkning: ${interpretation.text} (${Object.keys(answers).length}/${COWS_QUESTIONS.length} spørgsmål besvaret).`;
+        const text = `COWS (Clinical Opiate Withdrawal Scale):\nTotalscore: ${total}/48 point.\nTolkning: ${interpretation.text} (${Object.keys(answers).length}/${COWS_QUESTIONS.length} spørgsmål besvaret).`;
         navigator.clipboard.writeText(text);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
@@ -192,7 +192,7 @@ function Cows() {
                             {calculateTotalScore()}
                         </div>
                         <div className="text-xs font-medium text-slate-500 uppercase tracking-widest">
-                            Total Score
+                            Totalscore
                         </div>
                     </div>
                 </div>
@@ -220,7 +220,7 @@ function Cows() {
                             Advarsel: Risiko for præcipiterede abstinenser ved opstart af buprenorphin
                         </strong>
                         <p className="text-amber-900/90 leading-relaxed text-sm">
-                            Patienten må <strong className="font-bold underline">IKKE</strong> have indtaget buprenorphin forud for vurderingen, hvis der planlægges opstart af buprenorphin-behandling. Buprenorphin er en partiel agonist med ekstremt høj receptoraffinitet. Indtages buprenorphin før patienten fremstår med tydelige og tilstrækkeligt svære abstinenser fra en fuld agonist (fx heroin, metadon eller morfin), vil præparatet fortrænge den fulde agonist og i stedet udløse akutte, voldsomme og meget pinefulde <em>præcipiterede (fremprovokerede) abstinenser</em>.
+                            Patienten må <strong className="font-bold underline">IKKE</strong> have indtaget buprenorphin forud for vurderingen, hvis der planlægges opstart af buprenorphin-behandling. Buprenorphin er en partiel agonist med ekstremt høj receptoraffinitet. Indtages buprenorphin før patienten fremstår med tydelige og tilstrækkeligt svære abstinenser fra en fuld agonist (f.eks. heroin, metadon eller morfin), vil præparatet fortrænge den fulde agonist og i stedet udløse akutte, voldsomme og meget pinefulde <em>præcipiterede (fremprovokerede) abstinenser</em>.
                         </p>
                     </div>
                     <div className="pt-2 mt-2 border-t border-amber-200/50">

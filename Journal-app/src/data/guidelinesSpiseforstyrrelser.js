@@ -27,7 +27,7 @@ export const SPISEFORSTYRRELSER_GUIDELINE = {
         {
             title: 'Bulimia Nervosa',
             summary: 'Kognitiv adfærdsterapi (CBT-ED) og evt. medicinsk tillæg.',
-            details: `• Førstevalg er specialiseret kognitiv adfærdsterapi for spiseforstyrrelser (CBT-ED).\n• For børn/unge er familiebaseret terapi oftest udgangspunktet.\n• Farmakologisk (hvis indikeret): SSRI, hyppigst Fluoxetin (i højere doser, fx 60 mg), kan anvendes som supplement til fald i overspisning og udrensning, i kombination med terapi.`
+            details: `• Førstevalg er specialiseret kognitiv adfærdsterapi for spiseforstyrrelser (CBT-ED).\n• For børn/unge er familiebaseret terapi oftest udgangspunktet.\n• Farmakologisk (hvis indikeret): SSRI, hyppigst Fluoxetin (i højere doser, f.eks. 60 mg), kan anvendes som supplement til reduktion af overspisning og kompenserende adfærd/udrensning, i kombination med terapi.`
         }
     ]
 };

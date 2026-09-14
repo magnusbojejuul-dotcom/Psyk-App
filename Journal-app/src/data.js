@@ -126,5 +126,5 @@ export const ANOREXIA_OPTIONS = [
     { id: 'an_comp_lax', label: 'Afføringsmiddel', category: 'Kompenserende Adfærd', text: 'Benytter afføringsmidler.', smartMerge: { prefix: 'Af kompenserende adfærd benyttes ', item: 'afføringsmidler', suffix: '.' } },
     { id: 'an_comp_vomit', label: 'Opkast', category: 'Kompenserende Adfærd', text: 'Benytter provokeret opkast.', smartMerge: { prefix: 'Af kompenserende adfærd benyttes ', item: 'provokeret opkast', suffix: '.' } },
     { id: 'an_comp_exercise', label: 'Motion', category: 'Kompenserende Adfærd', text: 'Benytter overdreven motion.', smartMerge: { prefix: 'Af kompenserende adfærd benyttes ', item: 'overdreven motion', suffix: '.' } },
-    { id: 'an_ord_standard', label: 'Standard kosttilskud pt.', category: 'Standard Ordinationer', text: 'Patienten får ikke kosttilskud. Der ordineres:\nMEDICIN:\nrp. Multivitamin x 1 dagl\nrp. Thiamin 300 mg x 1 dagl i 3 uger, gerne før første måltid.\nrp. Unikalk x 2 dagl' }
+    { id: 'an_ord_standard', label: 'Standard kosttilskud', category: 'Standard Ordinationer', text: 'Patienten får ikke kosttilskud. Der ordineres:\nMEDICIN:\nrp. Multivitamin x 1 dagl\nrp. Thiamin 300 mg x 1 dagl i 3 uger, gerne før første måltid.\nrp. Unikalk x 2 dagl' }
 ];

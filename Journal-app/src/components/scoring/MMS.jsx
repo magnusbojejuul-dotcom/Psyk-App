@@ -31,7 +31,7 @@ const MMS_QUESTIONS = [
     {
         id: 'registration',
         title: '3. Registrering',
-        description: 'Nævn 3 ord (fx Æble, Bord, Mønt) og bed pt. gentage dem. 1 point for hvert korrekt gentaget første gang.',
+        description: 'Nævn 3 ord (f.eks. æble, bord, mønt) og bed patienten gentage dem. 1 point for hvert korrekt gentaget første gang.',
         options: [
             { label: '0 ord', value: 0 },
             { label: '1 ord', value: 1 },
@@ -55,7 +55,7 @@ const MMS_QUESTIONS = [
     {
         id: 'recall',
         title: '5. Hukommelse',
-        description: 'Bed pt. genkalde de 3 ord fra tidligere (Æble, Bord, Mønt).',
+        description: 'Bed patienten genkalde de 3 ord fra tidligere (æble, bord, mønt).',
         options: [
             { label: '0 ord', value: 0 },
             { label: '1 ord', value: 1 },
@@ -66,7 +66,7 @@ const MMS_QUESTIONS = [
     {
         id: 'naming',
         title: '6. Benævnelse',
-        description: 'Korrekt benævnelse af 2 viste genstande (fx ur og blyant).',
+        description: 'Korrekt benævnelse af 2 viste genstande (f.eks. ur og blyant).',
         options: [
             { label: '0', value: 0 },
             { label: '1 rgt', value: 1 },
@@ -85,7 +85,7 @@ const MMS_QUESTIONS = [
     {
         id: 'command_verbal',
         title: '8. 3-trins ordre',
-        description: 'Bed pt.: "Tag papiret i højre hånd, fold det på midten, og læg det på gulvet".',
+        description: 'Bed patienten: "Tag papiret i højre hånd, fold det på midten, og læg det på gulvet".',
         options: [
             { label: '0 trin', value: 0 },
             { label: '1 trin', value: 1 },
@@ -142,7 +142,7 @@ function MMS() {
     const isComplete = Object.keys(scores).length === MMS_QUESTIONS.length;
 
     const handleCopy = () => {
-        const text = `MMS (Mini-Mental State Examination):\nTotal score: ${totalScore}/30 point.\nTolkning: ${getScoreInterpretation()} (${Object.keys(scores).length}/${MMS_QUESTIONS.length} domæner besvaret).`;
+        const text = `MMS (Mini-Mental State Examination):\nTotalscore: ${totalScore}/30 point.\nTolkning: ${getScoreInterpretation()} (${Object.keys(scores).length}/${MMS_QUESTIONS.length} domæner besvaret).`;
         navigator.clipboard.writeText(text);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
@@ -180,7 +180,7 @@ function MMS() {
                         </div>
                         <h1 className="text-3xl font-bold text-[#3A4A40] mb-3">MMS (Mini-Mental State)</h1>
                         <p className="text-[#839788] text-base max-w-xl leading-relaxed">
-                            Screeningsværktøj til at vurdere den kognitive funktion. Testen dækker orientering, indlæring, opmærksomhed/regning, hukommelse, og sprog/konstruktionsevne. (Maks 30 point).
+                            Screeningsværktøj til at vurdere den kognitive funktion. Testen dækker orientering, indlæring, opmærksomhed/regning, hukommelse, og sprog/konstruktionsevne. (Maks. 30 point).
                         </p>
                     </div>
 

@@ -130,7 +130,7 @@ function Dudit() {
     };
 
     const handleCopy = () => {
-        const text = `DUDIT (Drug Use Disorders Identification Test):\nKøn: ${gender === 'mand' ? 'Mand' : 'Kvinde'}\nTotal score: ${totalScore}/44 point.\nTolkning: ${getScoreInterpretation()} (${Object.keys(scores).length}/${DUDIT_QUESTIONS.length} spørgsmål besvaret).`;
+        const text = `DUDIT (Drug Use Disorders Identification Test):\nKøn: ${gender === 'mand' ? 'Mand' : 'Kvinde'}\nTotalscore: ${totalScore}/44 point.\nTolkning: ${getScoreInterpretation()} (${Object.keys(scores).length}/${DUDIT_QUESTIONS.length} spørgsmål besvaret).`;
         navigator.clipboard.writeText(text);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
@@ -389,8 +389,8 @@ function Dudit() {
                 <Info className="w-5 h-5 text-[#839788] shrink-0 mt-0.5" />
                 <div className="text-sm text-[#5C6D63] space-y-4 w-full">
                     <div>
-                        <p className="font-semibold text-[#3A4A40] mb-2">Faglig Tolkning af Total Score:</p>
-                        <p className="mb-2">Pointgrænserne afhænger af kønnet. Der kan max scores 44 point.</p>
+                        <p className="font-semibold text-[#3A4A40] mb-2">Faglig tolkning af totalscore:</p>
+                        <p className="mb-2">Pointgrænserne afhænger af kønnet. Der kan maks. scores 44 point.</p>
                         <ul className="list-disc pl-4 space-y-2">
                             <li>
                                 <strong>Mænd:</strong>

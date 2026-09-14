@@ -4,14 +4,14 @@ export const ALKOHOL_GUIDELINE = {
     pdfs: [
         { title: 'NKR Alkoholafhængighed og Psykisk Lidelse', url: `${import.meta.env.BASE_URL}pdf/national-klinisk-retningslinje-alkoholafhaengighed.pdf` }
     ],
-    intro: 'NKR omhandler udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse (fx personlighedsforstyrrelser, affektive lidelser, angstlidelser, psykotiske lidelser og ADHD).',
+    intro: 'NKR omhandler udredning og behandling af samtidig alkoholafhængighed og psykisk lidelse (f.eks. personlighedsforstyrrelser, affektive lidelser, angstlidelser, psykotiske lidelser og ADHD).',
     algorithmTitle: 'Klinisk Vejledning',
     isStepBased: false,
     algorithm: [
         {
             title: 'Identifikation og Udredning',
-            summary: 'Systematisk screening for psykisk lidelse og alkoholafhængighed (fx AUDIT). Ingen må afvises pga. komorbiditet.',
-            details: `• Det er god praksis systematisk at identificere psykisk lidelse i forbindelse med udredning og behandling af alkoholafhængighed og vice-versa.\n• Der bør anvendes validerede screeningsværktøjer (fx AUDIT).\n• Screeningen bør foretages så tidligt, som eventuelle abstinenssymptomer tillader (når de er ovre).\n• En person bør IKKE afvises fra behandling af den psykiske lidelse, fordi vedkommende også har en alkoholafhængighed, eller omvendt.`
+            summary: 'Systematisk screening for psykisk lidelse og alkoholafhængighed (f.eks. AUDIT). Ingen må afvises pga. komorbiditet.',
+            details: `• Det er god praksis systematisk at identificere psykisk lidelse i forbindelse med udredning og behandling af alkoholafhængighed og vice-versa.\n• Der bør anvendes validerede screeningsværktøjer (f.eks. AUDIT).\n• Screeningen bør foretages så tidligt, som eventuelle abstinenssymptomer tillader (når de er ovre).\n• En person bør IKKE afvises fra behandling af den psykiske lidelse, fordi vedkommende også har en alkoholafhængighed, eller omvendt.`
         },
         {
             title: 'Behandlingstilgang',
@@ -26,7 +26,7 @@ export const ALKOHOL_GUIDELINE = {
         {
             title: 'Efterbehandling / Opfølgning',
             summary: 'Længerevarende opfølgning og efterbehandling pga. forhøjet recidivrisiko ved samtidig psykisk lidelse.',
-            details: `• Efterbehandling/opfølgning bør tilbydes (fx telefonopkald eller individuelle/gruppebaserede ambulante samtaler ved fremmøde).\n• Opfølgningen skal ofte strække sig længere end ved ren alkoholafhængighed pga. øget tilbagefaldsrisiko ved komorbid psykisk lidelse.\n• Skal forhandles og aftales med modtageren ved afslutningen af den aktive behandling.`
+            details: `• Efterbehandling/opfølgning bør tilbydes (f.eks. telefonopkald eller individuelle/gruppebaserede ambulante samtaler ved fremmøde).\n• Opfølgningen skal ofte strække sig længere end ved ren alkoholafhængighed pga. øget tilbagefaldsrisiko ved komorbid psykisk lidelse.\n• Skal forhandles og aftales med modtageren ved afslutningen af den aktive behandling.`
         }
     ]
 };

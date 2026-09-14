@@ -125,7 +125,7 @@ const HAMA_QUESTIONS = [
     {
         id: 'gastrointestinal',
         title: '11. Gastrointestinale symptomer',
-        description: 'Synkebesvær, ændret mave/tarm funktion (fx diarré, forstoppelse), kvalme, mavesmerter.',
+        description: 'Synkebesvær, ændret mave-tarm-funktion (f.eks. diarré, forstoppelse), kvalme, mavesmerter.',
         options: [
             { label: 'Ikke til stede', value: 0 },
             { label: 'Let', value: 1 },
@@ -210,7 +210,7 @@ function HamiltonAngst() {
     };
 
     const handleCopy = () => {
-        const text = `HAM-A (Hamilton Angstskala):\nTotal score: ${totalScore}/56 point.\nTolkning: ${getScoreInterpretation()} (${Object.keys(scores).length}/${HAMA_QUESTIONS.length} spørgsmål besvaret).`;
+        const text = `HAM-A (Hamilton Angstskala):\nTotalscore: ${totalScore}/56 point.\nTolkning: ${getScoreInterpretation()} (${Object.keys(scores).length}/${HAMA_QUESTIONS.length} spørgsmål besvaret).`;
         navigator.clipboard.writeText(text);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);

@@ -230,7 +230,7 @@ function HamiltonDepression() {
     };
 
     const handleCopy = () => {
-        const text = `HAM-D17 (Hamilton Depressionsskala):\nTotal score: ${totalScore}/52 point.\nTolkning: ${getScoreInterpretation()} (${Object.keys(scores).length}/${HAMD_QUESTIONS.length} spørgsmål besvaret).`;
+        const text = `HAM-D17 (Hamilton Depressionsskala):\nTotalscore: ${totalScore}/52 point.\nTolkning: ${getScoreInterpretation()} (${Object.keys(scores).length}/${HAMD_QUESTIONS.length} spørgsmål besvaret).`;
         navigator.clipboard.writeText(text);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);

@@ -16,17 +16,17 @@ export const OCD_GUIDELINE = {
         {
             title: 'Moderat til Svær OCD (Børn og Unge)',
             summary: 'Familiebaseret eller individuel KAT. Stærk anbefaling IMOD rutinemæssig SSRI som 1. valg.',
-            details: `• Manualiseret familiebaseret KAT og standard KAT betragtes som ligestillede tilbud.\n• Vær generelt tilbageholdende med at tilbyde KAT i grupper til børn/unge.\n• STÆRK ANBEFALING MOD: Anvend ikke SSRI som tillæg til KAT som førstevalg (ingen dokumenteret merværdi og medfører kendte bivirkninger).\n• SSRI kan evt. overvejes, hvis KAT ikke har tilstrækkelig effekt (fx pga. komorbiditet), dog med tæt monitorering grundet risikoen for at fremkalde selvmordstanker.`
+            details: `• Manualiseret familiebaseret KAT og standard KAT betragtes som ligestillede tilbud.\n• Vær generelt tilbageholdende med at tilbyde KAT i grupper til børn/unge.\n• STÆRK ANBEFALING MOD: Anvend ikke SSRI som tillæg til KAT som førstevalg (ingen dokumenteret merværdi og medfører kendte bivirkninger).\n• SSRI kan evt. overvejes, hvis KAT ikke har tilstrækkelig effekt (f.eks. pga. komorbiditet), dog med tæt monitorering grundet risikoen for at fremkalde selvmordstanker.`
         },
         {
             title: 'Moderat til Svær OCD (Voksne)',
             summary: 'Individuel eller gruppe-KAT som 1. valg. SSRI kun ved utilstrækkelig effekt af psykoterapi.',
-            details: `• KAT kan tilbydes individuelt eller i gruppe. Individuelle forløb kan foretrækkes ved følsomme/intime symptomer.\n• SVAG ANBEFALING MOD SSRI som førstevalg. Tillægsbehandling bør først forsøges, hvis KAT fejler.\n• SVAG ANBEFALING MOD Tredjebølge KAT (fx ACT og Mindfulness) i stedet for standard KAT, idet effekten er uvis. Bør kun anvendes ved stærkt patientønske og *kun* hvis eksponering stadig indgår.\n• SVAG ANBEFALING MOD atypisk antipsykotikum: Anvend kun off-label og efter nøje overvejelse hos voksne med svær OCD, der ikke har haft effekt af KAT og SSRI. Vær opmærksom på langsom optrapning og genovervej altid diagnosen først.`
+            details: `• KAT kan tilbydes individuelt eller i gruppe. Individuelle forløb kan foretrækkes ved følsomme/intime symptomer.\n• SVAG ANBEFALING MOD SSRI som førstevalg. Tillægsbehandling bør først forsøges, hvis KAT fejler.\n• SVAG ANBEFALING MOD Tredjebølge KAT (f.eks. ACT og mindfulness) i stedet for standard KAT, idet effekten er uvis. Bør kun anvendes ved stærkt patientønske og *kun* hvis eksponering stadig indgår.\n• SVAG ANBEFALING MOD atypisk antipsykotikum: Anvend kun off-label og efter nøje overvejelse hos voksne med svær OCD, der ikke har haft effekt af KAT og SSRI. Vær opmærksom på langsom optrapning og genovervej altid diagnosen først.`
         },
         {
             title: 'Opfølgning & Medicinseponering',
             summary: 'Genovervej terapiformat ved manglende effekt. Medicinnedtrapning over mindst 2 måneder ved remission.',
-            details: `• Revurder altid terapi-formatet, hvis en patient fortsat har moderat/svær OCD efter opstartsforløbet i KAT; der kan med fordel overvejes yderligere et KAT-forløb i et andet format (fx fra gruppe til individuel).\n• For patienter i antidepressiv behandling bør man overveje at seponere behandlingen allerede 6 mdr. efter stabilisering af symptombilledet i stedet for 12 mdr.\n• Seponeringen bør ske med langsom nedtrapning udbredt over minimum to måneder pga. seponeringssymptomer.`
+            details: `• Revurder altid terapi-formatet, hvis en patient fortsat har moderat/svær OCD efter opstartsforløbet i KAT; der kan med fordel overvejes yderligere et KAT-forløb i et andet format (f.eks. fra gruppe til individuel).\n• For patienter i antidepressiv behandling bør man overveje at seponere behandlingen allerede 6 mdr. efter stabilisering af symptombilledet i stedet for 12 mdr.\n• Seponeringen bør ske med langsom nedtrapning udbredt over minimum to måneder pga. seponeringssymptomer.`
         }
     ]
 };

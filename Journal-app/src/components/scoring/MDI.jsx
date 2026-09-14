@@ -212,7 +212,7 @@ function MDI() {
     };
 
     const handleCopy = () => {
-        const text = `MDI (Major Depression Inventory):\nTotal score: ${totalScore}/50 point.\nTolkning: ${getScoreInterpretation()}.`;
+        const text = `MDI (Major Depression Inventory):\nTotalscore: ${totalScore}/50 point.\nTolkning: ${getScoreInterpretation()}.`;
         navigator.clipboard.writeText(text);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);

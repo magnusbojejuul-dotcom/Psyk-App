@@ -23,7 +23,7 @@ export const BIPOLAR_GUIDELINE = {
         {
             title: 'Akut Depressiv Episode (Type I)',
             summary: 'Quetiapin (1. valg) eller kombinationsbehandling. Antidepressiva bør kun tages under dække af maniforebyggende.',
-            details: `Trinvis farmakologisk behandling af akut bipolar depression type I:\n\n1. Valg:\n• Quetiapin\n\n2. Valg (Overvej):\n• Lithium (Individuel vurdering ved svær depression med selvmordsrisiko pga. toxicitet)\n• Lurasidon, Olanzapin\n• Lamotrigin (Antiepileptikum)\n\nKombinationsbehandling:\n• Kombinér to af følgende: Lithium, Quetiapin og Lamotrigin.\n• SSRI kan forsøges i kombination, men KUN under dække af maniforebyggende præparat, for at undgå at fremprovokere mani eller lynhurtige stemningsskift (rapid cycling).`
+            details: `Trinvis farmakologisk behandling af akut bipolar depression type I:\n\n1. Valg:\n• Quetiapin\n\n2. Valg (Overvej):\n• Lithium (Individuel vurdering ved svær depression med selvmordsrisiko pga. toksicitet)\n• Lurasidon, Olanzapin\n• Lamotrigin (Antiepileptikum)\n\nKombinationsbehandling:\n• Kombinér to af følgende: Lithium, Quetiapin og Lamotrigin.\n• SSRI kan forsøges i kombination, men KUN under dække af maniforebyggende præparat, for at undgå at fremprovokere mani eller lynhurtige stemningsskift (rapid cycling).`
         },
         {
             title: 'Blandingstilstande',
@@ -43,7 +43,7 @@ export const BIPOLAR_GUIDELINE = {
         {
             title: 'Særlige Grupper: Børn, Unge og Gravide',
             summary: 'Behandling kræver tæt specialist-opfølgning og streng overvågning af bivirkninger.',
-            details: `Børn og Unge (Under 18 år):\n• 1. Valgspræparater ved mani: Lithium, Aripiprazol, Quetiapin og Risperidon.\n• Olanzapin bør undgås som 1. valg pga. svær risiko for vægtøgning hos børn.\n• Valproat frarådes generelt til børn/unge, og må IKKE anvendes til piger i fertil alder pga. teratogenicitet og risiko for PCOS (Polycystisk Ovariesyndrom).\n• Diagnosticering (via B&U psykiatri) kræver observation og rating-scales på tværs af miljøer.\n\nGravide:\n• Særlig forsigtighed. Valproat er strengt kontraindiceret (teratogent og risiko for neuroudviklingsforstyrrelser). Lithium medfører let øget risiko for Ebsteins anomali, men kan i visse tilfælde fortsættes efter specialistkonference under tæt monitorering. ECT kan overvejes som skånsomt alternativ ved svær behandlingsresistent mani/depression under graviditet.`
+            details: `Børn og Unge (Under 18 år):\n• 1. Valgspræparater ved mani: Lithium, Aripiprazol, Quetiapin og Risperidon.\n• Olanzapin bør undgås som 1. valg pga. svær risiko for vægtøgning hos børn.\n• Valproat frarådes generelt til børn/unge, og må IKKE anvendes til piger i fertil alder pga. teratogenicitet og risiko for PCOS (Polycystisk Ovariesyndrom).\n• Diagnosticering (via børne- og ungdomspsykiatri) kræver observation og ratingskalaer på tværs af miljøer.\n\nGravide:\n• Særlig forsigtighed. Valproat er strengt kontraindiceret (teratogent og risiko for neuroudviklingsforstyrrelser). Lithium medfører let øget risiko for Ebsteins anomali, men kan i visse tilfælde fortsættes efter specialistkonference under tæt monitorering. ECT kan overvejes som skånsomt alternativ ved svær behandlingsresistent mani/depression under graviditet.`
         }
     ]
 };

@@ -52,7 +52,7 @@ export const targetGroupsData = [
         "levelType": "primary",
         "badgeText": "Privatpraktiserende psykiater",
         "symptoms": [
-          "Mistanke om eller kendt ADHD/ADD med opmærksomhedsforstyrrelse, hyperaktivitet og impulsivitet til stede fra tidlig barndom (før 7-års alderen).",
+          "Mistanke om eller kendt ADHD/ADD med opmærksomhedsforstyrrelse, hyperaktivitet og impulsivitet til stede fra tidlig barndom (før 7-årsalderen).",
           "Komorbiditet eller rusmiddelbrug er til stede, men vurderes IKKE i en sværhedsgrad, der berettiger til hospitalspsykiatri.",
           "Patienten oplever vanskeligheder socialt og erhvervsmæssigt, men fungerer fortsat på trods og uden massiv støtteforanstaltning."
         ],

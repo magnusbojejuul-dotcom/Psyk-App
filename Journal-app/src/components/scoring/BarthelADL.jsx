@@ -16,7 +16,7 @@ const BARTHEL_QUESTIONS = [
         title: '2. Kontinent for urin',
         options: [
             { label: 'Kontinent for urin', value: 10 },
-            { label: 'Enkeltstående uheld max 1 gang i døgnet', value: 5 },
+            { label: 'Enkeltstående uheld maks. 1 gang i døgnet', value: 5 },
             { label: 'Inkontinent', value: 0 },
         ]
     },
@@ -26,7 +26,7 @@ const BARTHEL_QUESTIONS = [
         description: 'Maden placeret inden for rækkevidde',
         options: [
             { label: 'Helt selvhjulpen', value: 10 },
-            { label: 'Hjælp til at skære mad ud etc.', value: 5 },
+            { label: 'Hjælp til at skære mad ud m.v.', value: 5 },
             { label: 'Kan ikke selv / Afhængig af hjælp', value: 0 },
         ]
     },
@@ -52,8 +52,8 @@ const BARTHEL_QUESTIONS = [
         title: '6. Forflytning (seng til stol)',
         options: [
             { label: 'Helt selvhjulpen', value: 15 },
-            { label: 'Minimal hjælp (fx verbal)', value: 10 },
-            { label: 'Maksimal hjælp (fx 2 personer)', value: 5 },
+            { label: 'Minimal hjælp (f.eks. verbal)', value: 10 },
+            { label: 'Maksimal hjælp (f.eks. 2 personer)', value: 5 },
             { label: 'Kan ikke sidde / afhængig af hjælp', value: 0 },
         ]
     },
@@ -133,7 +133,7 @@ function BarthelADL() {
     };
 
     const handleCopy = () => {
-        const text = `Barthel ADL-indeks:\nTotal score: ${totalScore}/100 point.\nTolkning: ${getScoreInterpretation()} (${Object.keys(scores).length}/${BARTHEL_QUESTIONS.length} punkter besvaret).`;
+        const text = `Barthel ADL-indeks:\nTotalscore: ${totalScore}/100 point.\nTolkning: ${getScoreInterpretation()} (${Object.keys(scores).length}/${BARTHEL_QUESTIONS.length} punkter besvaret).`;
         navigator.clipboard.writeText(text);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);

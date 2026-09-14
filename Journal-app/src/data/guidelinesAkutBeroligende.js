@@ -18,12 +18,12 @@ export const VOKSNE_UDEN_PSYKOTISKE_SYMPTOMER = {
 export const VOKSNE_MED_PSYKOTISKE_SYMPTOMER = {
     peroral: [
         { valg: '1', praeparat: 'Tbl. olanzapin 5-10 mg\neller Tbl. risperidon 1-2 mg\neller Tbl. quetiapin 50-100 mg', bemaerkning: 'Smeltetabletter kan anvendes ved usikker compliance. Antipsykotisk behandling forudgås af EKG.' },
-        { valg: '2', praeparat: 'Tbl. eller dråber zuclopenthixol (cisordinol) 10 mg', bemaerkning: 'Antipsykotisk behandling forudgås af EKG.' },
+        { valg: '2', praeparat: 'Tbl. eller dråber zuclopenthixol (Cisordinol) 10 mg', bemaerkning: 'Antipsykotisk behandling forudgås af EKG.' },
         { valg: '3', praeparat: 'Tbl. haloperidol sædvanligvis 5-10 mg fordelt på 2 doser', bemaerkning: 'Undgå relaterede antipsykotika. Forudgås af EKG.' }
     ],
     im: [
-        { valg: '1', praeparat: 'Inj. olanzapin 5-10 mg i.m.\neller Inj. aripiprazol 9.75 mg i.m.', bemaerkning: 'Olanzapin-dosis kan gentages efter 2 timer og evt. igen 4 timer efter 2. injektion. Højst 3 injektioner (maks. 20 mg/døgn). Aripiprazol kan gentages efter mindst 2 timer (maks. 30 mg/døgn).' },
-        { valg: '2', praeparat: 'Inj. zuclopenthixolacetat (Cisordinol-Acutard) 100 mg i.m.', bemaerkning: 'Doseringen gentages ved behov, almindeligvis efter 2-3 døgn. Må kun gives hvis pt. tidligere har tålt cisordinol.' },
+        { valg: '1', praeparat: 'Inj. olanzapin 5-10 mg i.m.\neller Inj. aripiprazol 9,75 mg i.m.', bemaerkning: 'Olanzapin-dosis kan gentages efter 2 timer og evt. igen 4 timer efter 2. injektion. Højst 3 injektioner (maks. 20 mg/døgn). Aripiprazol kan gentages efter mindst 2 timer (maks. 30 mg/døgn).' },
+        { valg: '2', praeparat: 'Inj. zuclopenthixolacetat (Cisordinol-Acutard) 100 mg i.m.', bemaerkning: 'Doseringen gentages ved behov, almindeligvis efter 2-3 døgn. Må kun gives hvis patienten tidligere har tålt Cisordinol.' },
         { valg: '3', praeparat: 'Inj. haloperidol 5 mg i.m.', bemaerkning: 'Dosis kan justeres med 2-4 timers mellemrum til højest 20 mg/døgn. Høj forekomst af akut dystoni (hav Akineton klar ved behov).' }
     ]
 };

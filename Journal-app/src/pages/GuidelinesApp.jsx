@@ -108,10 +108,10 @@ function GuidelinesApp({ onNavigate }) {
 
 SAMTALE MED BEHANDLINGSSIGTE
 GENNEMGANG
-Til stede: pt., [XX], [XX], samt ut.
+Til stede: patienten, [XX], [XX], samt ut.
 
 HENVISNINGSÅRSAG
-[Hvorfor er pt. blevet indlagt]
+[Hvorfor er patienten blevet indlagt]
 
 AKTUELT PSYKISK
 Kort oprids af tid op til indlæggelse: 
@@ -142,7 +142,7 @@ AKTUELT SOMATISK
 Er der noget nyt / lavet undersøgelser: 
 
 MEDICIN
-Afstemme ordinationsoversigt med pt: 
+Afstemme ordinationsoversigt med patienten: 
 Husk CAVE: 
 
 AKTUELT SOCIALT
@@ -153,7 +153,7 @@ Socialt netværk:
 Børn: 
 
 UDGANG
-Kan pt. få udgang (Ledsaget / Uledsaget / Særlig aftale): 
+Kan patienten få udgang (Ledsaget / Uledsaget / Særlig aftale): 
 
 ORDINATIONER
 Observationsfokus: [Hvis depressionsdiagnose ikke er stillet, skriv 'sænket/nedsat stemningsleje']

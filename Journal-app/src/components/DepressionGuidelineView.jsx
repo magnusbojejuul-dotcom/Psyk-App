@@ -694,7 +694,7 @@ export function DepressionGuidelineView({ onNavigate, guideline }) {
                                             <div className="bg-white p-3 rounded-lg border border-[#E8E4D9]">
                                                 <span className="text-[#839788] text-[10px] font-bold uppercase block">2. Kontrol (uge 3-4)</span>
                                                 <strong className="text-sm text-[#3A4A40]">Evt. 30 mg x 1 dgl.</strong>
-                                                <span className="text-[11px] text-amber-700 block mt-0.5">Maks dosis (off-label)</span>
+                                                <span className="text-[11px] text-amber-700 block mt-0.5">Maks. dosis (off-label)</span>
                                             </div>
                                             <div className="bg-white p-3 rounded-lg border border-[#E8E4D9]">
                                                 <span className="text-[#839788] text-[10px] font-bold uppercase block">Udtrapning</span>
@@ -759,7 +759,7 @@ export function DepressionGuidelineView({ onNavigate, guideline }) {
                                     </div>
 
                                     <div className="p-4 rounded-xl bg-amber-50/70 border border-amber-200 text-xs text-amber-950 space-y-1">
-                                        <strong>Obs Hyponatriæmi og Faldrisiko:</strong>
+                                        <strong>Obs. hyponatriæmi og faldrisiko:</strong>
                                         <p className="leading-relaxed">
                                             Hyponatriæmi ses hos op mod 8% af 55+ årige og forstærkes af SSRI/SNRI, særligt ved samtidig brug af thiazid-diuretika eller NSAID. Kontrollér altid natrium før og under behandling. Antidepressiva øger den generelle faldrisiko (OR 1,57).
                                         </p>
@@ -894,7 +894,7 @@ export function DepressionGuidelineView({ onNavigate, guideline }) {
                                     • <strong>CYP1A2 & Rygning:</strong> {renderWithDrugLinks('Agomelatin', onNavigate)} omsættes via CYP1A2. Rygning inducerer enzymet; ved rygestop kan koncentrationen stige voldsomt. Fluvoxamin er kontraindiceret sammen med agomelatin.
                                 </p>
                                 <p>
-                                    • <strong>TDM "de nouveau":</strong> Anvendes ved kombinationsbehandling, hvor patienten måles før og efter tillæg af interagerende stof (fx aripiprazol før og efter start af fluoxetin).
+                                    • <strong>TDM "de nouveau":</strong> Anvendes ved kombinationsbehandling, hvor patienten måles før og efter tillæg af interagerende stof (f.eks. aripiprazol før og efter start af fluoxetin).
                                 </p>
                             </div>
                         </div>

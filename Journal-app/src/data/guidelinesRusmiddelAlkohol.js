@@ -32,13 +32,13 @@ export const RUSMIDDEL_ALKOHOL = {
         },
         {
             title: 'Farmakologisk Abstinensbehandling',
-            summary: 'Chlordiazepoxid (Risolid) styret efter scoringsskema (fx BAS). Diazepam i.v. ved kramper.',
-            details: `• Grundstenen i behandlingen er krydstolerance med Benzodiazepiner (førstevalg er Chlordiazepoxid / Risolid, alternativt Diazepam / Stesolid).\n• Dosering bør styres via systematisk scoring (fx BAS - Bjerregaard Abstinens Score eller CIWA-Ar).\n• Standardregime ved moderate til svære abstinenser: Chlordiazepoxid (Risolid) 25-50-100 mg p.o. ved symptomer med 1-2 timers interval, derefter aftrapning over 4-7 dage efter skema.\n• Ved kramper: Diazepam 10-20 mg i.v. langsomt (eller rektalt). Overflyt til tæt observation / intermediærafsnit.`
+            summary: 'Chlordiazepoxid (Risolid) styret efter scoringsskema (f.eks. BAS). Diazepam i.v. ved kramper.',
+            details: `• Grundstenen i behandlingen er krydstolerance med Benzodiazepiner (førstevalg er Chlordiazepoxid / Risolid, alternativt Diazepam / Stesolid).\n• Dosering bør styres via systematisk scoring (f.eks. BAS - Bjerregaard Abstinens Score eller CIWA-Ar).\n• Standardregime ved moderate til svære abstinenser: Chlordiazepoxid (Risolid) 25-50-100 mg p.o. ved symptomer med 1-2 timers interval, derefter aftrapning over 4-7 dage efter skema.\n• Ved kramper: Diazepam 10-20 mg i.v. langsomt (eller rektalt). Overflyt til tæt observation / intermediærafsnit.`
         },
         {
             title: 'Langsigtet Tilbagefaldsforebyggelse',
             summary: 'Acamprosat (mod craving/afholdenhed), Naltrexon (mod drikketrang/reduktion) eller Disulfiram (Antabus).',
-            details: `• Ved ønske om længerevarende AFHOLDENHED: Acamprosat (Campral) eller Naltrexon kombineret med psykoterapeutisk samtalebehandling. Disulfiram (Antabus) kræver stabil motivation og udelukkelse af kognitive skader; seponeres omgående ved alkoholindtagelse.\n• Ved ønske om REDUKTION i forbrug: Naltrexon (50 mg) for at dæmpe belønningskaskaden ved alkohol.\n• Farmakologisk støtte skal altid ledsages af struktureret samtalebehandling (fx CRA, motiverende samtaler eller kognitiv adfærdsterapi).`
+            details: `• Ved ønske om længerevarende AFHOLDENHED: Acamprosat (Campral) eller Naltrexon kombineret med psykoterapeutisk samtalebehandling. Disulfiram (Antabus) kræver stabil motivation og udelukkelse af kognitive skader; seponeres omgående ved alkoholindtagelse.\n• Ved ønske om REDUKTION i forbrug: Naltrexon (50 mg) for at dæmpe belønningskaskaden ved alkohol.\n• Farmakologisk støtte skal altid ledsages af struktureret samtalebehandling (f.eks. CRA, motiverende samtaler eller kognitiv adfærdsterapi).`
         },
         {
             title: 'Monitorering og Skærmning',

@@ -257,7 +257,7 @@ Særlige risici hos ældre:
             title: '11. Bivirkninger, Interaktioner & TDM (Tabel 2 & Bilag 2)',
             summary: 'Klassespecifikke bivirkninger, CYP2D6/CYP1A2 interaktioner, QTc-risiko samt retningslinjer for Therapeutic Drug Monitoring (TDM).',
             details: `Klassespecifikke bivirkninger (Tabel 2):
-• SSRI: Kvalme/diarré, søvnforstyrrelser, seksuel dysfunktion (libidotab, anorgasmi - mindre ved fluoxetin), hyponatriæmi, øget blødningstendens (trombocytpåvirkning; obs samtidig NSAID/AK), forlænget QTc (særligt citalopram/escitalopram).
+• SSRI: Kvalme/diarré, søvnforstyrrelser, seksuel dysfunktion (libidotab, anorgasmi - mindre ved fluoxetin), hyponatriæmi, øget blødningstendens (trombocytpåvirkning; obs. samtidig NSAID/AK), forlænget QTc (særligt citalopram/escitalopram).
 • SNRI: GI-gener, forhøjet blodtryk, svedtendens, tremor, udtalte seponeringssymptomer (venlafaxin/duloxetin).
 • NaSSA: Vægtøgning, sedation, metaboliske forstyrrelser.
 • Agomelatin: Leverpåvirkning (monitorér ALAT efter 3, 6, 12, 24 uger). Ingen seksuelle bivirkninger.
@@ -310,14 +310,14 @@ export const DEPRESSION_PREVIOUS_SPLIT_ALGORITHM = {
                 },
                 {
                     title: 'Skift til præparat af anden farmakologisk klasse:\n• Venlafaxin, duloxetin (SNRI)\n• Mirtazapin (NaSSA)\n• TCA (evt. i samråd med psykiater)',
-                    details: 'Kriterier for skift af behandling:\n• Det anbefales først at forsøge skift til et antidepressivum med en anden farmakodynamisk virkningsprofil (fx fra SSRI til SNRI eller TCA).\n• Alternativt kan overvejes at tillægge mianserin eller mirtazepin givet til natten oveni SSRI, specielt ved fortsat søvnbesvær.\n• Duloxetin og venlafaxin kan anvendes ved svigt af SSRI, men er ikke førstevalg pga. flere bivirkninger.'
+                    details: 'Kriterier for skift af behandling:\n• Det anbefales først at forsøge skift til et antidepressivum med en anden farmakodynamisk virkningsprofil (f.eks. fra SSRI til SNRI eller TCA).\n• Alternativt kan overvejes at tillægge mianserin eller mirtazapin givet til natten oveni SSRI, specielt ved fortsat søvnbesvær.\n• Duloxetin og venlafaxin kan anvendes ved svigt af SSRI, men er ikke førstevalg pga. flere bivirkninger.'
                 },
                 {
                     title: 'Ingen tegn på bedring efter yderligere 2-4 uger på optimal dosis'
                 },
                 {
                     title: '• Addér lithium i samråd med psykiater\n• Ved manglende effekt henvisning til psykiater eller indlæggelse på psykiatrisk afdeling',
-                    details: 'Behandlingsresistens over for to eller flere antidepressiva taler i sig selv for lithium som førstevalg i forsøg på at forebygge udvikling af bipolar lidelse.\n\nVed fortsat utilstrækkelig effekt anbefales augmentation med lithium eller antipsykotikum (fx quetiapin eller aripiprazol).'
+                    details: 'Behandlingsresistens over for to eller flere antidepressiva taler i sig selv for lithium som førstevalg i forsøg på at forebygge udvikling af bipolar lidelse.\n\nVed fortsat utilstrækkelig effekt anbefales augmentation med lithium eller antipsykotikum (f.eks. quetiapin eller aripiprazol).'
                 }
             ]
         },
@@ -327,7 +327,7 @@ export const DEPRESSION_PREVIOUS_SPLIT_ALGORITHM = {
                 {
                     title: 'Svær depression',
                     summary: 'Behandling med dual action eller TCA',
-                    details: 'Patienter med svær depression (HAM-D17: 25-52) tilbydes altid behandling med antidepressiva.\n\n• TCA: Nortriptylin foretrækkes frem for øvrige TCA pga. lavere tendens til ortostatisk hypotension.\n• Mirtazepin kan overvejes som tillæg ved søvnbesvær.'
+                    details: 'Patienter med svær depression (HAM-D17: 25-52) tilbydes altid behandling med antidepressiva.\n\n• TCA: Nortriptylin foretrækkes frem for øvrige TCA pga. lavere tendens til ortostatisk hypotension.\n• Mirtazapin kan overvejes som tillæg ved søvnbesvær.'
                 },
                 {
                     title: 'Ingen tegn på bedring efter 2-4 uger på optimal dosis'
@@ -350,7 +350,7 @@ export const DEPRESSION_PREVIOUS_SPLIT_ALGORITHM = {
                 {
                     title: 'Depression med psykotiske symptomer',
                     summary: '• Behandling med TCA\n• Overvej ECT',
-                    details: 'Behandling foregår altid under indlæggelse (specialistopgave).\n\n• 1. valg: ECT anbefales pga. bedst effekt.\n• 2. valg: Kombination af TCA (fx nortriptylin) og antipsykotika kan overvejes hos patienter, som ikke kan behandles med eller ikke ønsker ECT.'
+                    details: 'Behandling foregår altid under indlæggelse (specialistopgave).\n\n• 1. valg: ECT anbefales pga. bedst effekt.\n• 2. valg: Kombination af TCA (f.eks. nortriptylin) og antipsykotika kan overvejes hos patienter, som ikke kan behandles med eller ikke ønsker ECT.'
                 },
                 {
                     title: 'Ingen tegn på bedring efter 2-4 uger på optimal dosis'

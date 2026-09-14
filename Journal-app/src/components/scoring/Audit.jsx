@@ -146,7 +146,7 @@ function Audit() {
     };
 
     const handleCopy = () => {
-        const text = `AUDIT (Alcohol Use Disorders Identification Test):\nTotal score: ${totalScore}/40 point.\nTolkning: ${getScoreInterpretation()} (${Object.keys(scores).length}/${AUDIT_QUESTIONS.length} spørgsmål besvaret).`;
+        const text = `AUDIT (Alcohol Use Disorders Identification Test):\nTotalscore: ${totalScore}/40 point.\nTolkning: ${getScoreInterpretation()} (${Object.keys(scores).length}/${AUDIT_QUESTIONS.length} spørgsmål besvaret).`;
         navigator.clipboard.writeText(text);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
@@ -265,7 +265,7 @@ function Audit() {
                 <Info className="w-5 h-5 text-[#839788] shrink-0 mt-0.5" />
                 <div className="text-sm text-[#5C6D63] space-y-4 w-full">
                     <div>
-                        <p className="font-semibold text-[#3A4A40] mb-2">Faglig Tolkning af Total Score:</p>
+                        <p className="font-semibold text-[#3A4A40] mb-2">Faglig tolkning af totalscore:</p>
                         <ul className="list-disc pl-4 space-y-1">
                             <li><strong>0-7 point:</strong> Lavrisiko (ingen umiddelbar mistanke om et risikofyldt alkoholforbrug; OBS: For kvinder og ældre er grænsen <strong>0-5</strong> point).</li>
                             <li><strong>8-15 point:</strong> Tyder på storforbrug af alkohol.</li>

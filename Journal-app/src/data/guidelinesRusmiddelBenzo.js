@@ -5,7 +5,7 @@ export const RUSMIDDEL_BENZO = {
         { title: 'Håndtering af Forgiftning & Abstinens', url: `${import.meta.env.BASE_URL}pdf/haandtering-af-behandling-af-benzodiazepin-forgiftning-og-abstinens.pdf` },
         { title: 'Benzodiazepinnedtrapning', url: `${import.meta.env.BASE_URL}pdf/Benzodiazepinnedtrapning.pdf` }
     ],
-    intro: 'Benzodiazepiner (BZD) virker inhibitorisk i CNS ved at binde sig til GABA-receptoren. Overdosering er hyppig, men sjældent fatal i sig selv, medmindre de blandes med andre CNS-dæmpende stoffer (fx Alkohol eller Opioider).',
+    intro: 'Benzodiazepiner (BZD) virker inhibitorisk i CNS ved at binde sig til GABA-receptoren. Overdosering er hyppig, men sjældent fatal i sig selv, medmindre de blandes med andre CNS-dæmpende stoffer (f.eks. alkohol eller opioider).',
     toxication: {
         title: 'Benzodiazepinforgiftning (Intoksikation)',
         description: 'Forgiftningsbilledet er præget af sedering. Den primære fare opstår ved kombinationsforgiftninger (med alkohol eller opioider). Ren benzodiazepinforgiftning er sjældent fatal.',
@@ -16,7 +16,7 @@ export const RUSMIDDEL_BENZO = {
             { name: 'Normale Pupiller', icon: 'eye', desc: 'I modsætning til opioider (miosis) er pupillerne oftest normale eller midtstillede.' },
             { name: 'Respirationsdepression', icon: 'wind', desc: 'Sjældent ved ren benzodiazepinindtagelse, men farlig ved blandingsforgiftning.' }
         ],
-        management: 'ABCDE. Ren benzodiazepinoverdosering kræver primært tæt klinisk observation. Antidot er FLUMAZENIL (Lanexat) 0,2-0,3 mg i.v. OBS: Kontraindiceret ved kendt/mistænkt kronisk benzodiazepinmisbrug (risiko for svære kramper / status epilepticus) og ved blandingsforgiftning med TCA. Flumazenil har kortere virkningsvarighed end benzodiazepiner – obs. risiko for re-sedation!'
+        management: 'ABCDE-tilgang. Ren benzodiazepinoverdosering kræver primært tæt klinisk observation. Antidot er FLUMAZENIL (Lanexat) 0,2-0,3 mg i.v. OBS: Kontraindiceret ved kendt/mistænkt kronisk benzodiazepinmisbrug (risiko for svære kramper / status epilepticus) og ved blandingsforgiftning med TCA. Flumazenil har kortere virkningsvarighed end benzodiazepiner – obs. risiko for resedation.'
     },
     algorithmTitle: 'Abstinensbehandling & Nedtrapning',
     isStepBased: true,

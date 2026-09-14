@@ -103,7 +103,7 @@ function TUG() {
                 <div className="text-sm text-[#5C6D63] space-y-2">
                     <p><strong>Observationer udover tid:</strong></p>
                     <p>
-                        Læg mærke til patientens skridtlængde, reaktionsspænding, sving med armene, holdning og brug af hjælpemiddel. Subjektiv usikkerhed (fx at de skal bruge hænder på armlæn for at rejse sig) kan have stærk prognostisk værdi.
+                        Læg mærke til patientens skridtlængde, reaktionsspænding, sving med armene, holdning og brug af hjælpemiddel. Subjektiv usikkerhed (f.eks. at patienten skal bruge hænder på armlæn for at rejse sig) kan have stærk prognostisk værdi.
                     </p>
                 </div>
             </div>

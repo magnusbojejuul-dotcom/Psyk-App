@@ -46,10 +46,10 @@ const ECT_CHECKLIST = [
         items: [
             { 
                 id: 'somatisk_tilsyn', 
-                label: 'Sikr relevant tilsyn (kardiolog, neurolog etc.) ved komplicerende lidelser og bestil f.eks. INR-blodprøve.',
+                label: 'Sikr relevant tilsyn (kardiolog, neurolog m.v.) ved komplicerende lidelser og bestil f.eks. INR-blodprøve.',
                 infoPath: 'Vejledning - Afsnit 2.4.3 og 2.4.4',
                 infoText: [
-                    '**Relative kontraindikationer (kun ved livstruende tilstand):**\nCerebralt/aortaaneurisme, forhøjet intrakranielt tryk, rumopfyldende processer, intracerebral blødning/apopleksi, nyligt myokardieinfarkt, kardiale arytmier, feocromocytom.',
+                    '**Relative kontraindikationer (kun ved livstruende tilstand):**\nCerebralt/aortaaneurisme, forhøjet intrakranielt tryk, rumopfyldende processer, intracerebral blødning/apopleksi, nyligt myokardieinfarkt, kardiale arytmier, fæokromocytom.',
                     '**Risikofaktorer (kræver forsigtighed/tilsyn):**\nKardiologiske sygdomme (angina pectoris, hypertension, pacemaker), Pulmonale sygdomme (astma, KOL), Øjensygdomme (glaukom), Graviditet, elektrolytforstyrrelser, nedsat nyrefunktion, svær overvægt (BMI > 35), Diabetes.'
                 ]
             },
@@ -75,8 +75,8 @@ const ECT_CHECKLIST = [
                 infoPath: 'Vejledning - Afsnit 5',
                 infoText: [
                     '**Seponeres fuldstændigt under forløbet:** Reserpin, Lidokain, Theophyllin.',
-                    '**Må IKKE gives efter kl. 17 dagen før:** Benzodiazepiner (hæver krampetærsklen), Lithium, Antiepileptika (bl.a. pregabalin, valproat).',
-                    '**Må IKKE gives på ECT-morgenen:** Diuretika (risiko for blæreruptur), korttidsvirkende Diabetes-medicin.',
+                    '**Må IKKE gives efter kl. 17 dagen før:** Benzodiazepiner (hæver krampetærsklen), lithium, antiepileptika (bl.a. pregabalin, valproat).',
+                    '**Må IKKE gives på ECT-morgenen:** Diuretika (risiko for blæreruptur), korttidsvirkende diabetesmedicin.',
                     '**MÅ gives senest kl. 06.00 ECT-morgen:** Antihypertensiva, Antianginøs hjertemedicin, Astmamedicin (ikke theophyllin), syrepumpehæmmere, insulinpumpe/langtidsvirkende insulin.'
                 ]
             },
@@ -95,11 +95,11 @@ const ECT_CHECKLIST = [
                 infoPath: 'Vejledning - Afsnit 6',
                 infoText: [
                     '**Unilateral (RUL):**\nFørstevalg hos depressive (ikke-psykotiske, ikke spisevægrende). Kan også overvejes frem for bilateral hos ældre patienter for at undgå svære kognitive bivirkninger.',
-                    '**Bilateral (bitemporal):**\nFørstevalg ved behov for hurtigt indsættende effekt (psykotisk depression, selvmordsfare, agitation, katatoni, delir). Anvendes ALTID ved behandling under tvang og en bloc.'
+                    '**Bilateral (bitemporal):**\nFørstevalg ved behov for hurtigt indsættende effekt (psykotisk depression, selvmordsfare, agitation, katatoni, delirium). Anvendes ALTID ved behandling under tvang og en bloc.'
                 ]
             },
             { id: 'tilfoj_liste', label: 'Tilføj patient på ECT akut- eller elektivliste i EPJ.' },
-            { id: 'kommentar', label: 'Skriv i kommentar, hvis pt. har diabetes eller er i Lithium-beh. (for at få en tidlig tid).' }
+            { id: 'kommentar', label: 'Skriv i kommentar, hvis patienten har diabetes eller er i lithiumbehandling (for at få en tidlig tid).' }
         ]
     }
 ];
