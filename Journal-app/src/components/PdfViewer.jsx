@@ -11,6 +11,12 @@ try {
 }
 
 export default function PdfViewer({ url, title, downloadName, extraActions }) {
+    // Check if the browser natively supports inline PDF rendering (e.g. desktop Chrome, Edge, Safari, Firefox)
+    const hasNativePdf = typeof navigator !== 'undefined' && Boolean(navigator.pdfViewerEnabled);
+
+    // Default to native browser PDF iframe on desktop where supported, and canvas viewer on mobile
+    const [useNative, setUseNative] = useState(() => hasNativePdf);
+
     const containerRef = useRef(null);
     const [pdfDoc, setPdfDoc] = useState(null);
     const [numPages, setNumPages] = useState(0);
@@ -20,8 +26,6 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
     const [error, setError] = useState(null);
     const [renderedPages, setRenderedPages] = useState({});
     const [pageDimensions, setPageDimensions] = useState({});
-    const [extractedText, setExtractedText] = useState('');
-    const [copiedAll, setCopiedAll] = useState(false);
 
     const canvasRefs = useRef({});
     const textLayerRefs = useRef({});
@@ -39,8 +43,10 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
 
     const safeUrl = getSafeUrl(url);
 
-    // Load document
+    // Load document when in canvas mode
     useEffect(() => {
+        if (useNative) return;
+
         let isCancelled = false;
         setLoading(true);
         setError(null);
@@ -48,8 +54,6 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
         setNumPages(0);
         setRenderedPages({});
         setPageDimensions({});
-        setExtractedText('');
-        setCopiedAll(false);
 
         // Cancel running renders
         Object.values(renderTasksRef.current).forEach(task => {
@@ -61,7 +65,6 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
         });
         renderTasksRef.current = {};
 
-        // Cancel running text layers
         Object.values(textLayerTasksRef.current).forEach(task => {
             try {
                 if (task && task.cancel) task.cancel();
@@ -100,53 +103,7 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
                 // ignore
             }
         };
-    }, [safeUrl]);
-
-    // Extract text from all pages for one-click copy
-    useEffect(() => {
-        if (!pdfDoc || numPages === 0) return;
-        let isCancelled = false;
-
-        const extractAll = async () => {
-            try {
-                const parts = [];
-                for (let i = 1; i <= numPages; i++) {
-                    const page = await pdfDoc.getPage(i);
-                    const tc = await page.getTextContent();
-                    if (!tc || !tc.items || tc.items.length === 0) continue;
-
-                    let lastY = null;
-                    let pageStr = '';
-                    for (const item of tc.items) {
-                        if (!item.str) continue;
-                        if (lastY !== null && Math.abs(item.transform[5] - lastY) > 5) {
-                            pageStr += '\n';
-                        } else if (pageStr && !pageStr.endsWith(' ') && !pageStr.endsWith('\n')) {
-                            pageStr += ' ';
-                        }
-                        pageStr += item.str;
-                        lastY = item.transform[5];
-                    }
-
-                    if (pageStr.trim()) {
-                        parts.push(pageStr.trim());
-                    }
-                }
-
-                if (!isCancelled && parts.length > 0) {
-                    setExtractedText(parts.join('\n\n'));
-                }
-            } catch (e) {
-                console.warn("Could not extract full text:", e);
-            }
-        };
-
-        extractAll();
-
-        return () => {
-            isCancelled = true;
-        };
-    }, [pdfDoc, numPages]);
+    }, [safeUrl, useNative]);
 
     // Calculate fit-width scale based on container width
     const calculateFitScale = useCallback(async (doc) => {
@@ -154,12 +111,10 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
         try {
             const page = await doc.getPage(1);
             const baseViewport = page.getViewport({ scale: 1.0 });
-            // Available width inside container minus padding
-            const padding = window.innerWidth < 640 ? 28 : 48;
+            const padding = window.innerWidth < 640 ? 24 : 48;
             const containerWidth = Math.max(containerRef.current.clientWidth - padding, 260);
             
             if (baseViewport.width > 0) {
-                // Calculate scale to fit page neatly
                 const optimalScale = Math.min(Math.max(Number((containerWidth / baseViewport.width).toFixed(2)), 0.45), 1.5);
                 setFitWidthScale(optimalScale);
                 setScale(optimalScale);
@@ -170,53 +125,29 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
     }, []);
 
     useEffect(() => {
-        if (pdfDoc) {
+        if (pdfDoc && !useNative) {
             calculateFitScale(pdfDoc);
         }
-    }, [pdfDoc, calculateFitScale]);
+    }, [pdfDoc, useNative, calculateFitScale]);
 
-    // Re-calculate on window resize
-    useEffect(() => {
-        let timeoutId;
-        const handleResize = () => {
-            clearTimeout(timeoutId);
-            timeoutId = setTimeout(() => {
-                if (pdfDoc && containerRef.current) {
-                    calculateFitScale(pdfDoc);
-                }
-            }, 150);
-        };
-        window.addEventListener('resize', handleResize);
-        return () => {
-            clearTimeout(timeoutId);
-            window.removeEventListener('resize', handleResize);
-        };
-    }, [pdfDoc, calculateFitScale]);
-
-    // Render single page
+    // Render single page to canvas and textLayer overlay
     const renderPage = useCallback(async (pageNum, doc, currentScale) => {
         let canvas = canvasRefs.current[pageNum];
         if (!canvas) {
-            // Wait briefly if React DOM ref is just mounting
             await new Promise(r => setTimeout(r, 60));
             canvas = canvasRefs.current[pageNum];
         }
         if (!canvas || !doc) return;
 
-        // Cancel previous render tasks for this page
         if (renderTasksRef.current[pageNum]) {
             try {
                 renderTasksRef.current[pageNum].cancel();
-            } catch (e) {
-                // ignore
-            }
+            } catch (e) {}
         }
         if (textLayerTasksRef.current[pageNum]) {
             try {
                 textLayerTasksRef.current[pageNum].cancel();
-            } catch (e) {
-                // ignore
-            }
+            } catch (e) {}
         }
 
         try {
@@ -228,13 +159,11 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
             const cssWidth = Math.floor(textViewport.width);
             const cssHeight = Math.floor(textViewport.height);
 
-            // Store page dimensions for wrapper and text layer
             setPageDimensions(prev => ({
                 ...prev,
                 [pageNum]: { width: cssWidth, height: cssHeight }
             }));
 
-            // Setup Canvas
             canvas.width = Math.floor(canvasViewport.width);
             canvas.height = Math.floor(canvasViewport.height);
             canvas.style.width = `${cssWidth}px`;
@@ -253,7 +182,7 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
             await renderTask.promise;
             delete renderTasksRef.current[pageNum];
 
-            // Render TextLayer for selection & copying
+            // Render TextLayer directly overlaid onto canvas
             const textLayerDiv = textLayerRefs.current[pageNum];
             if (textLayerDiv) {
                 textLayerDiv.innerHTML = '';
@@ -282,9 +211,9 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
         }
     }, []);
 
-    // Render all pages when scale or pdfDoc changes
+    // Render all pages in canvas mode
     useEffect(() => {
-        if (!pdfDoc || numPages === 0) return;
+        if (useNative || !pdfDoc || numPages === 0) return;
 
         let isCancelled = false;
         const renderAll = async () => {
@@ -301,22 +230,18 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
             Object.values(renderTasksRef.current).forEach(task => {
                 try {
                     if (task && task.cancel) task.cancel();
-                } catch (e) {
-                    // ignore
-                }
+                } catch (e) {}
             });
             renderTasksRef.current = {};
 
             Object.values(textLayerTasksRef.current).forEach(task => {
                 try {
                     if (task && task.cancel) task.cancel();
-                } catch (e) {
-                    // ignore
-                }
+                } catch (e) {}
             });
             textLayerTasksRef.current = {};
         };
-    }, [pdfDoc, numPages, scale, renderPage]);
+    }, [useNative, pdfDoc, numPages, scale, renderPage]);
 
     const handleZoomIn = () => {
         setScale(prev => Math.min(Number((prev + 0.15).toFixed(2)), 2.5));
@@ -330,15 +255,120 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
         setScale(fitWidthScale);
     };
 
-    const handleCopyAll = () => {
-        if (!extractedText) return;
-        navigator.clipboard.writeText(extractedText);
-        setCopiedAll(true);
-        setTimeout(() => setCopiedAll(false), 2500);
-    };
+    // -------------------------------------------------------------
+    // 1. Native Desktop PDF Viewer (Pure iframe, standard Chrome/Edge reader)
+    // -------------------------------------------------------------
+    if (useNative) {
+        return (
+            <div className="flex flex-col h-full w-full bg-white rounded-2xl border border-[#E8E4D9] overflow-hidden shadow-sm">
+                {/* Header & Controls Toolbar */}
+                <div className="bg-white/95 backdrop-blur-sm border-b border-[#E8E4D9] px-4 py-2.5 sm:py-3 flex flex-wrap items-center justify-between gap-2 sm:gap-3 shrink-0 z-10">
+                    <div className="flex items-center gap-2 min-w-0">
+                        <span className="text-xs font-bold text-[#3A4A40] uppercase tracking-wider flex items-center gap-1.5 truncate">
+                            <FileText className="w-4 h-4 text-[#839788] shrink-0" />
+                            <span className="truncate">{title || 'Dokument'}</span>
+                        </span>
+                    </div>
 
+                    <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+                        {extraActions}
+
+                        {/* Open in new tab */}
+                        <a
+                            href={safeUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-2.5 sm:px-3 py-1.5 bg-white border border-[#E8E4D9] text-[#3A4A40] hover:bg-[#F2F6F3] rounded-xl transition-colors shadow-2xs font-medium text-xs flex items-center gap-1.5 cursor-pointer"
+                            title="Åbn PDF i ny browserfane"
+                        >
+                            <ExternalLink className="w-3.5 h-3.5 text-[#839788]" />
+                            <span className="hidden sm:inline">Åbn i ny fane</span>
+                        </a>
+
+                        {/* Download button */}
+                        <a
+                            href={safeUrl}
+                            download={downloadName || true}
+                            className="px-2.5 sm:px-3 py-1.5 bg-[#839788] text-white hover:bg-[#6A7A6E] rounded-xl transition-colors shadow-2xs font-medium text-xs flex items-center gap-1.5 cursor-pointer"
+                            title="Hent original PDF til din enhed"
+                        >
+                            <Download className="w-3.5 h-3.5" />
+                            <span>Hent PDF</span>
+                        </a>
+                    </div>
+                </div>
+
+                {/* Direct Native PDF Frame - User can mark text directly in document */}
+                <div className="flex-1 w-full h-full min-h-[600px] bg-white">
+                    <iframe
+                        src={safeUrl}
+                        className="w-full h-full border-0 min-h-[600px]"
+                        title={title || "PDF Document"}
+                    />
+                </div>
+            </div>
+        );
+    }
+
+    // -------------------------------------------------------------
+    // 2. Mobile/Responsive Canvas Viewer (with exact text layer overlay)
+    // -------------------------------------------------------------
     return (
         <div ref={containerRef} className="flex flex-col h-full w-full bg-[#F4F2EB] rounded-2xl border border-[#E8E4D9] overflow-hidden shadow-sm">
+            {/* Scoped CSS to ensure textLayer is 100% transparent and overlaid directly on canvas */}
+            <style>{`
+                .pdf-page-wrapper {
+                    position: relative !important;
+                }
+                .pdf-page-wrapper .textLayer {
+                    position: absolute !important;
+                    text-align: initial !important;
+                    left: 0 !important;
+                    top: 0 !important;
+                    right: 0 !important;
+                    bottom: 0 !important;
+                    overflow: hidden !important;
+                    opacity: 1 !important;
+                    line-height: 1 !important;
+                    -webkit-text-size-adjust: none !important;
+                    -moz-text-size-adjust: none !important;
+                    text-size-adjust: none !important;
+                    forced-color-adjust: none !important;
+                    transform-origin: 0 0 !important;
+                    z-index: 10 !important;
+                    user-select: text !important;
+                    -webkit-user-select: text !important;
+                }
+                .pdf-page-wrapper .textLayer :is(span, br) {
+                    color: transparent !important;
+                    position: absolute !important;
+                    white-space: pre !important;
+                    cursor: text !important;
+                    transform-origin: 0% 0% !important;
+                }
+                .pdf-page-wrapper .textLayer span.markedContent {
+                    top: 0 !important;
+                    height: 0 !important;
+                }
+                .pdf-page-wrapper .textLayer ::selection {
+                    background: rgba(59, 130, 246, 0.35) !important;
+                    color: transparent !important;
+                }
+                .pdf-page-wrapper .textLayer ::-moz-selection {
+                    background: rgba(59, 130, 246, 0.35) !important;
+                    color: transparent !important;
+                }
+                .pdf-page-wrapper .textLayer .endOfContent {
+                    display: block !important;
+                    position: absolute !important;
+                    inset: 100% 0 0 !important;
+                    z-index: -1 !important;
+                    cursor: default !important;
+                    user-select: none !important;
+                    -webkit-user-select: none !important;
+                }
+            `}</style>
+
             {/* Header & Controls Toolbar */}
             <div className="bg-white/95 backdrop-blur-sm border-b border-[#E8E4D9] px-4 py-2.5 sm:py-3 flex flex-wrap items-center justify-between gap-2 sm:gap-3 shrink-0 z-10">
                 <div className="flex items-center gap-2 min-w-0">
@@ -354,20 +384,7 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
                 </div>
 
                 <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
-                    {/* Extra actions (e.g. S6 custom action) passed from parent */}
                     {extraActions}
-
-                    {/* Quick copy full document text button */}
-                    {extractedText && (
-                        <button
-                            onClick={handleCopyAll}
-                            className="px-2.5 sm:px-3 py-1.5 bg-white border border-[#E8E4D9] text-[#3A4A40] hover:bg-[#F2F6F3] rounded-xl transition-colors shadow-2xs font-medium text-xs flex items-center gap-1.5 cursor-pointer"
-                            title="Kopiér al tekst fra dette dokument til udklipsholderen"
-                        >
-                            {copiedAll ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5 text-[#839788]" />}
-                            <span>{copiedAll ? 'Tekst kopieret!' : 'Kopiér al tekst'}</span>
-                        </button>
-                    )}
 
                     {/* Zoom controls */}
                     <div className="flex items-center bg-[#F9F8F6] border border-[#E8E4D9] rounded-xl p-0.5">
@@ -465,7 +482,7 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
                             return (
                                 <div
                                     key={pageNum}
-                                    className="relative mb-6 shadow-md rounded-xl overflow-hidden bg-white border border-[#E8E4D9] shrink-0 min-h-[250px] flex items-center justify-center select-text"
+                                    className="pdf-page-wrapper mb-6 shadow-md rounded-xl overflow-hidden bg-white border border-[#E8E4D9] shrink-0 min-h-[250px] select-text"
                                     style={{
                                         width: dimensions?.width ? `${dimensions.width}px` : undefined,
                                         height: dimensions?.height ? `${dimensions.height}px` : undefined,
@@ -475,14 +492,14 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
                                         Side {pageNum} af {numPages}
                                     </div>
                                     {!isRendered && (
-                                        <div className="p-8 flex items-center gap-2 text-xs text-[#839788]">
+                                        <div className="p-8 flex items-center justify-center gap-2 text-xs text-[#839788] h-full">
                                             <div className="w-4 h-4 border-2 border-[#839788] border-t-transparent rounded-full animate-spin"></div>
                                             <span>Gengiver side {pageNum}...</span>
                                         </div>
                                     )}
                                     <canvas
                                         ref={el => (canvasRefs.current[pageNum] = el)}
-                                        className={`block transition-opacity duration-200 ${isRendered ? 'opacity-100' : 'opacity-0 absolute'}`}
+                                        className={`block transition-opacity duration-200 ${isRendered ? 'opacity-100' : 'opacity-0'}`}
                                     />
                                     <div
                                         ref={el => (textLayerRefs.current[pageNum] = el)}
