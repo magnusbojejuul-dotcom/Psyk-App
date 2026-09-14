@@ -51,35 +51,35 @@ export const ACTUAL_PSYCH_OPTIONS = [
 
     // 6. F0 - Organiske årsager
     { id: 'ap_f0_none', label: 'Ingen organisk mistanke', category: 'F0 - Organiske årsager', text: 'Ingen oplysninger om tidligere hovedtraumer, cerebrale insult eller øvrig organisk årsag.', isDefault: true, exclude: ['ap_f0_trauma', 'ap_f0_neuro', 'ap_f0_somatic', 'ap_f0_cog'] },
-    { id: 'ap_f0_trauma', label: 'Tidligere hovedtraumer', category: 'F0 - Organiske årsager', text: 'Anamnestisk oplysning om tidligere hovedtraume.', hasInput: true, inputPlaceholder: 'Tidspunkt, bevidstløshed, følger...', exclude: ['ap_f0_none'], smartMerge: { prefix: 'Der er oplysninger om ', item: 'tidligere hovedtraume', suffix: ':' } },
-    { id: 'ap_f0_neuro', label: 'Neurologisk sygdom / Kramper', category: 'F0 - Organiske årsager', text: 'Anamnese med kendt neurologisk lidelse eller kramper.', hasInput: true, inputPlaceholder: 'Epilepsi, apopleksi, etc.', exclude: ['ap_f0_none'], smartMerge: { prefix: 'Der er oplysninger om ', item: 'neurologisk sygdom eller kramper', suffix: ':' } },
-    { id: 'ap_f0_somatic', label: 'Somatisk udløsende sygdom', category: 'F0 - Organiske årsager', text: 'Mistanke om somatisk tilgrundliggende sygdom.', hasInput: true, inputPlaceholder: 'Infektion, endokrint, forgiftning...', exclude: ['ap_f0_none'], smartMerge: { prefix: 'Der er ', item: 'mistanke om tilgrundliggende somatisk sygdom', suffix: ':' } },
-    { id: 'ap_f0_cog', label: 'Kognitiv svækkelse / Delir', category: 'F0 - Organiske årsager', text: 'Tegn på kognitiv svækkelse eller fluktuerende bevidsthed (obs. delir).', hasInput: true, inputPlaceholder: 'Hukommelse, orientering, tempo...', exclude: ['ap_f0_none'], smartMerge: { prefix: 'Der er ', item: 'kognitiv svækkelse / obs. delir', suffix: ':' } },
+    { id: 'ap_f0_trauma', label: 'Tidligere hovedtraumer', category: 'F0 - Organiske årsager', text: 'Oplyser om tidligere hovedtraume.', hasInput: true, inputPlaceholder: 'Tidspunkt, bevidstløshed, følger...', exclude: ['ap_f0_none'], smartMerge: { prefix: 'Oplyser om ', item: 'tidligere hovedtraume', suffix: ':' } },
+    { id: 'ap_f0_neuro', label: 'Neurologisk sygdom / Kramper', category: 'F0 - Organiske årsager', text: 'Oplyser om neurologisk lidelse eller kramper.', hasInput: true, inputPlaceholder: 'Epilepsi, apopleksi, etc.', exclude: ['ap_f0_none'], smartMerge: { prefix: 'Oplyser om ', item: 'neurologisk lidelse eller kramper', suffix: ':' } },
+    { id: 'ap_f0_somatic', label: 'Somatisk udløsende sygdom', category: 'F0 - Organiske årsager', text: 'Oplyser om tilgrundliggende somatisk sygdom.', hasInput: true, inputPlaceholder: 'Infektion, endokrint, forgiftning...', exclude: ['ap_f0_none'], smartMerge: { prefix: 'Oplyser om ', item: 'somatisk sygdom', suffix: ':' } },
+    { id: 'ap_f0_cog', label: 'Kognitiv påvirkning / Delir', category: 'F0 - Organiske årsager', text: 'Beskriver kognitive vanskeligheder eller konfusion.', hasInput: true, inputPlaceholder: 'Hukommelse, orientering, tempo...', exclude: ['ap_f0_none'], smartMerge: { prefix: 'Beskriver ', item: 'kognitive vanskeligheder eller konfusion', suffix: ':' } },
 
     // 7. F1 - Misbrug & Rusmidler
     { id: 'ap_subst_none', label: 'Ingen rusmidler', category: 'F1 - Misbrug & Rusmidler', text: 'Der benægtes brug af rusmidler (både aktuelt og tidligere).', isDefault: true, exclude: ['ap_subst_alc', 'ap_subst_cann', 'ap_subst_stim', 'ap_subst_benzo', 'ap_subst_opioid', 'ap_subst_prev'] },
     { id: 'ap_subst_alc', label: 'Alkohol (Aktuelt)', category: 'F1 - Misbrug & Rusmidler', text: 'Angiver aktuelt forbrug af alkohol.', hasInput: true, inputPlaceholder: 'Genstande pr. uge / mønster', exclude: ['ap_subst_none'], smartMerge: { prefix: 'Der angives aktuelt forbrug af ', item: 'alkohol', suffix: ':' } },
     { id: 'ap_subst_cann', label: 'Cannabis', category: 'F1 - Misbrug & Rusmidler', text: 'Angiver forbrug af cannabis.', hasInput: true, inputPlaceholder: 'Hyppighed / mængde', exclude: ['ap_subst_none'], smartMerge: { prefix: 'Der angives forbrug af ', item: 'cannabis', suffix: ':' } },
-    { id: 'ap_subst_stim', label: 'Centralstimulerende', category: 'F1 - Misbrug & Rusmidler', text: 'Angiver forbrug af centralstimulerende stoffer (kokain/amfetamin).', hasInput: true, inputPlaceholder: 'Stof / hyppighed', exclude: ['ap_subst_none'], smartMerge: { prefix: 'Der angives forbrug af ', item: 'centralstimulerende stoffer', suffix: ':' } },
+    { id: 'ap_subst_stim', label: 'Centralstimulerende', category: 'F1 - Misbrug & Rusmidler', text: 'Angiver forbrug af centralstimulerende stoffer.', hasInput: true, inputPlaceholder: 'Stof / hyppighed', exclude: ['ap_subst_none'], smartMerge: { prefix: 'Der angives forbrug af ', item: 'centralstimulerende stoffer', suffix: ':' } },
     { id: 'ap_subst_benzo', label: 'Benzodiazepiner', category: 'F1 - Misbrug & Rusmidler', text: 'Angiver forbrug af benzodiazepiner.', hasInput: true, inputPlaceholder: 'Præparat / dosis / ordination', exclude: ['ap_subst_none'], smartMerge: { prefix: 'Der angives forbrug af ', item: 'benzodiazepiner', suffix: ':' } },
     { id: 'ap_subst_opioid', label: 'Opioider', category: 'F1 - Misbrug & Rusmidler', text: 'Angiver forbrug af opioider.', hasInput: true, inputPlaceholder: 'Præparat / mængde', exclude: ['ap_subst_none'], smartMerge: { prefix: 'Der angives forbrug af ', item: 'opioider', suffix: ':' } },
-    { id: 'ap_subst_prev', label: 'Tidligere misbrug', category: 'F1 - Misbrug & Rusmidler', text: 'Oplyser om tidligere misbrug i anamnesen.', hasInput: true, inputPlaceholder: 'Hvilke stoffer? Remissionsperiode?', exclude: ['ap_subst_none'], smartMerge: { prefix: 'Anamnestisk er der oplysninger om ', item: 'tidligere misbrugsanamnese', suffix: ':' } },
+    { id: 'ap_subst_prev', label: 'Tidligere misbrug', category: 'F1 - Misbrug & Rusmidler', text: 'Oplyser om tidligere misbrug.', hasInput: true, inputPlaceholder: 'Hvilke stoffer? Remissionsperiode?', exclude: ['ap_subst_none'], smartMerge: { prefix: 'Anamnestisk er der oplysninger om ', item: 'tidligere misbrug', suffix: ':' } },
 
     // 8. F2 - Hallucinationer (Perception)
-    { id: 'ap_hallu_none', label: 'Ingen hallucinationer', category: 'F2 - Hallucinationer (Perception)', text: 'Beskriver ingen hallucinationer på nogen sansemodaliteter.', isDefault: true, exclude: ['ap_hallu_audit', 'ap_hallu_visual', 'ap_hallu_olfact', 'ap_hallu_tactile'] },
-    { id: 'ap_hallu_audit', label: 'Hørehallucinationer', category: 'F2 - Hallucinationer (Perception)', text: 'Beskriver hørehallucinationer.', hasInput: true, inputPlaceholder: 'Stemmer, imperative, kommenterende...', exclude: ['ap_hallu_none'], smartMerge: { prefix: 'Beskriver ', item: 'hørehallucinationer', suffix: ':' } },
-    { id: 'ap_hallu_visual', label: 'Synshallucinationer', category: 'F2 - Hallucinationer (Perception)', text: 'Beskriver synshallucinationer.', hasInput: true, inputPlaceholder: 'Former, personer, skygger...', exclude: ['ap_hallu_none'], smartMerge: { prefix: 'Beskriver ', item: 'synshallucinationer', suffix: ':' } },
-    { id: 'ap_hallu_olfact', label: 'Lugt/Smag', category: 'F2 - Hallucinationer (Perception)', text: 'Beskriver lugt- eller smagshallucinationer.', hasInput: true, inputPlaceholder: 'Karakter...', exclude: ['ap_hallu_none'], smartMerge: { prefix: 'Beskriver ', item: 'lugt- eller smagshallucinationer', suffix: ':' } },
-    { id: 'ap_hallu_tactile', label: 'Taktile hallucinationer', category: 'F2 - Hallucinationer (Perception)', text: 'Beskriver taktile/somatiske hallucinationer.', hasInput: true, inputPlaceholder: 'Karakter...', exclude: ['ap_hallu_none'], smartMerge: { prefix: 'Beskriver ', item: 'taktile/somatiske hallucinationer', suffix: ':' } },
+    { id: 'ap_hallu_none', label: 'Ingen hallucinationer', category: 'F2 - Hallucinationer (Perception)', text: 'Beskriver ingen hallucinationer.', isDefault: true, exclude: ['ap_hallu_audit', 'ap_hallu_visual', 'ap_hallu_olfact', 'ap_hallu_tactile'] },
+    { id: 'ap_hallu_audit', label: 'Hørehallucinationer', category: 'F2 - Hallucinationer (Perception)', text: 'Beskriver hørehallucinationer.', hasInput: true, inputPlaceholder: 'Karakter, stemmer...', exclude: ['ap_hallu_none'], smartMerge: { prefix: 'Beskriver ', item: 'hørehallucinationer', suffix: ':' } },
+    { id: 'ap_hallu_visual', label: 'Synshallucinationer', category: 'F2 - Hallucinationer (Perception)', text: 'Beskriver synshallucinationer.', hasInput: true, inputPlaceholder: 'Karakter, synsindtryk...', exclude: ['ap_hallu_none'], smartMerge: { prefix: 'Beskriver ', item: 'synshallucinationer', suffix: ':' } },
+    { id: 'ap_hallu_olfact', label: 'Lugt/Smag', category: 'F2 - Hallucinationer (Perception)', text: 'Beskriver lugt- eller smagshallucinationer.', hasInput: true, inputPlaceholder: 'Karakter af lugt/smag...', exclude: ['ap_hallu_none'], smartMerge: { prefix: 'Beskriver ', item: 'lugt- eller smagshallucinationer', suffix: ':' } },
+    { id: 'ap_hallu_tactile', label: 'Taktile hallucinationer', category: 'F2 - Hallucinationer (Perception)', text: 'Beskriver taktile eller somatiske hallucinationer.', hasInput: true, inputPlaceholder: 'Karakter af kropslige fornemmelser...', exclude: ['ap_hallu_none'], smartMerge: { prefix: 'Beskriver ', item: 'taktile/somatiske hallucinationer', suffix: ':' } },
 
     // 9. F2 - Vrangforestillinger & Tanker
     { id: 'ap_delusion_none', label: 'Ingen vrangforestillinger', category: 'F2 - Vrangforestillinger & Tanker', text: 'Beskriver ingen vrangforestillinger eller formelle tankeforstyrrelser.', isDefault: true, exclude: ['ap_delusion_para', 'ap_delusion_megalo', 'ap_delusion_depress', 'ap_delusion_hypo', 'ap_delusion_control', 'ap_thought_disorder'] },
-    { id: 'ap_delusion_para', label: 'Paranoia (Persekutorisk)', category: 'F2 - Vrangforestillinger & Tanker', text: 'Oplever paranoide/persekutoriske vrangforestillinger.', hasInput: true, inputPlaceholder: 'Forfølgelse, overvågning...', exclude: ['ap_delusion_none'], smartMerge: { prefix: 'Tankeindhold præget af ', item: 'paranoide (persekutoriske) vrangforestillinger', suffix: ':' } },
-    { id: 'ap_delusion_megalo', label: 'Storhed (Megaloman)', category: 'F2 - Vrangforestillinger & Tanker', text: 'Giver udtryk for megalomane vrangforestillinger.', hasInput: true, inputPlaceholder: 'Særlige evner, rigdom, mission...', exclude: ['ap_delusion_none'], smartMerge: { prefix: 'Tankeindhold præget af ', item: 'megalomane vrangforestillinger', suffix: ':' } },
-    { id: 'ap_delusion_depress', label: 'Depressive / Ruinering', category: 'F2 - Vrangforestillinger & Tanker', text: 'Udviser depressive vrangforestillinger.', hasInput: true, inputPlaceholder: 'Skyld, straf, økonomisk ruin...', exclude: ['ap_delusion_none'], smartMerge: { prefix: 'Tankeindhold præget af ', item: 'depressive vrangforestillinger (skyld/ruinering)', suffix: ':' } },
-    { id: 'ap_delusion_hypo', label: 'Hypokondre', category: 'F2 - Vrangforestillinger & Tanker', text: 'Udviser hypokondre vrangforestillinger.', hasInput: true, inputPlaceholder: 'Uhelbredelig sygdom, forrådnelse...', exclude: ['ap_delusion_none'], smartMerge: { prefix: 'Tankeindhold præget af ', item: 'hypokondre vrangforestillinger', suffix: ':' } },
-    { id: 'ap_delusion_control', label: 'Styrings- & Påvirkningsoplevelser', category: 'F2 - Vrangforestillinger & Tanker', text: 'Oplever styrings- og tankepåvirkningsoplevelser.', hasInput: true, inputPlaceholder: 'Styret udefra, tankepåføring/fradrag/udspredelse...', exclude: ['ap_delusion_none'], smartMerge: { prefix: 'Tankeindhold præget af ', item: 'styrings- og tankepåvirkningsoplevelser', suffix: ':' } },
-    { id: 'ap_thought_disorder', label: 'Tankeforstyrrelser', category: 'F2 - Vrangforestillinger & Tanker', text: 'Tegn på formelle tankeforstyrrelser.', hasInput: true, inputPlaceholder: 'Tankemylder, tankestop, springende, inkohærens...', exclude: ['ap_delusion_none'], smartMerge: { prefix: 'Tankegang præget af ', item: 'formelle tankeforstyrrelser', suffix: ':' } },
+    { id: 'ap_delusion_para', label: 'Paranoia (Persekutorisk)', category: 'F2 - Vrangforestillinger & Tanker', text: 'Beskriver paranoide forestillinger.', hasInput: true, inputPlaceholder: 'Karakter af forestillinger...', exclude: ['ap_delusion_none'], smartMerge: { prefix: 'Beskriver ', item: 'paranoide forestillinger', suffix: ':' } },
+    { id: 'ap_delusion_megalo', label: 'Storhed (Megaloman)', category: 'F2 - Vrangforestillinger & Tanker', text: 'Beskriver storhedsforestillinger.', hasInput: true, inputPlaceholder: 'Karakter af forestillinger...', exclude: ['ap_delusion_none'], smartMerge: { prefix: 'Beskriver ', item: 'storhedsforestillinger', suffix: ':' } },
+    { id: 'ap_delusion_depress', label: 'Depressive / Ruinering', category: 'F2 - Vrangforestillinger & Tanker', text: 'Beskriver depressive forestillinger.', hasInput: true, inputPlaceholder: 'Skyld, straf, ruinering...', exclude: ['ap_delusion_none'], smartMerge: { prefix: 'Beskriver ', item: 'depressive forestillinger (skyld/ruinering)', suffix: ':' } },
+    { id: 'ap_delusion_hypo', label: 'Hypokondre', category: 'F2 - Vrangforestillinger & Tanker', text: 'Beskriver hypokondre forestillinger.', hasInput: true, inputPlaceholder: 'Karakter af forestillinger...', exclude: ['ap_delusion_none'], smartMerge: { prefix: 'Beskriver ', item: 'hypokondre forestillinger', suffix: ':' } },
+    { id: 'ap_delusion_control', label: 'Styrings- & Påvirkningsoplevelser', category: 'F2 - Vrangforestillinger & Tanker', text: 'Beskriver styrings- eller påvirkningsoplevelser.', hasInput: true, inputPlaceholder: 'Karakter af oplevelser...', exclude: ['ap_delusion_none'], smartMerge: { prefix: 'Beskriver ', item: 'styrings- eller påvirkningsoplevelser', suffix: ':' } },
+    { id: 'ap_thought_disorder', label: 'Tankeforstyrrelser', category: 'F2 - Vrangforestillinger & Tanker', text: 'Beskriver formelle tankeforstyrrelser.', hasInput: true, inputPlaceholder: 'Tankemylder, tankestop, associationsspring...', exclude: ['ap_delusion_none'], smartMerge: { prefix: 'Beskriver ', item: 'formelle tankeforstyrrelser', suffix: ':' } },
 
     // 9. F3 - Depression (ICD-10 screening)
     { id: 'dep_none', label: 'Ingen depr. symptomer', category: 'F3 - Depression (ICD-10 screening)', text: 'Ingen tegn på depressive symptomer.', isDefault: true, exclude: [...DEP_CORE_IDS, ...DEP_ACC_IDS, 'dep_duration_2w'] },
@@ -112,17 +112,17 @@ export const ACTUAL_PSYCH_OPTIONS = [
         id: 'ap_mania_elevated', 
         label: 'Løftet stemningsleje / Eufori', 
         category: 'F3 - Maniske symptomer', 
-        text: 'Løftet stemningsleje/eufori.', 
+        text: 'Beskriver løftet stemningsleje eller eufori.', 
         exclude: ['ap_mania_none'], 
         hasInput: true, 
         inputPlaceholder: 'Uddybning af stemningsleje...', 
-        smartMerge: { prefix: 'Beskriver ', item: 'løftet stemningsleje/eufori', suffix: ':' } 
+        smartMerge: { prefix: 'Beskriver ', item: 'løftet stemningsleje eller eufori', suffix: ':' } 
     },
     { 
         id: 'ap_mania_irritable', 
         label: 'Irritabilitet / Vredladenhed', 
         category: 'F3 - Maniske symptomer', 
-        text: 'Irritabilitet eller vredladenhed.', 
+        text: 'Beskriver irritabilitet eller vredladenhed.', 
         exclude: ['ap_mania_none'], 
         hasInput: true, 
         inputPlaceholder: 'Konflikter, vredesudbrud...', 
@@ -132,7 +132,7 @@ export const ACTUAL_PSYCH_OPTIONS = [
         id: 'ap_mania_hyper', 
         label: 'Hyperaktivitet / Fysisk rastløshed', 
         category: 'F3 - Maniske symptomer', 
-        text: 'Hyperaktivitet og fysisk rastløshed.', 
+        text: 'Beskriver hyperaktivitet og fysisk rastløshed.', 
         exclude: ['ap_mania_none'], 
         hasInput: true, 
         inputPlaceholder: 'Adfærd, igangsatte projekter...', 
@@ -140,65 +140,65 @@ export const ACTUAL_PSYCH_OPTIONS = [
     },
     { 
         id: 'ap_mania_sleep', 
-        label: 'Nedsat søvnbehov (uudtrættet)', 
+        label: 'Nedsat søvnbehov', 
         category: 'F3 - Maniske symptomer', 
-        text: 'Udtalt nedsat søvnbehov uden oplevelse af træthed.', 
+        text: 'Beskriver nedsat søvnbehov.', 
         exclude: ['ap_mania_none'], 
         hasInput: true, 
         inputPlaceholder: 'Søvnmængde, timer...', 
-        smartMerge: { prefix: 'Beskriver ', item: 'nedsat søvnbehov (uudtrættet)', suffix: ':' } 
+        smartMerge: { prefix: 'Beskriver ', item: 'nedsat søvnbehov', suffix: ':' } 
     },
     { 
         id: 'ap_mania_speech', 
         label: 'Taletrang (Presset tale)', 
         category: 'F3 - Maniske symptomer', 
-        text: 'Udtalt taletrang og talepres.', 
+        text: 'Beskriver taletrang og talepres.', 
         exclude: ['ap_mania_none'], 
         hasInput: true, 
         inputPlaceholder: 'Talepres, tempo...', 
-        smartMerge: { prefix: 'Beskriver ', item: 'udtalt taletrang (presset tale)', suffix: ':' } 
+        smartMerge: { prefix: 'Beskriver ', item: 'taletrang og talepres', suffix: ':' } 
     },
     { 
         id: 'ap_mania_flight', 
         label: 'Tankeflugt / Tankemylder', 
         category: 'F3 - Maniske symptomer', 
-        text: 'Oplevelse af tankeflugt og accelereret tankegang.', 
+        text: 'Beskriver tankeflugt eller accelereret tankegang.', 
         exclude: ['ap_mania_none'], 
         hasInput: true, 
         inputPlaceholder: 'Associationsspring, tankemylder...', 
-        smartMerge: { prefix: 'Beskriver ', item: 'tankeflugt og associationsspring', suffix: ':' } 
+        smartMerge: { prefix: 'Beskriver ', item: 'tankeflugt', suffix: ':' } 
     },
     { 
         id: 'ap_mania_inhibit', 
         label: 'Hæmningsløshed / Risikoadfærd', 
         category: 'F3 - Maniske symptomer', 
-        text: 'Hæmningsløshed og hensynsløs risikoadfærd.', 
+        text: 'Beskriver hæmningsløs eller risikobetonet adfærd.', 
         exclude: ['ap_mania_none'], 
         hasInput: true, 
-        inputPlaceholder: 'Pengeforbrug, seksuel hæmningsløshed...', 
-        smartMerge: { prefix: 'Beskriver ', item: 'hæmningsløshed og risikobetonet adfærd', suffix: ':' } 
+        inputPlaceholder: 'Pengeforbrug, grænseoverskridende adfærd...', 
+        smartMerge: { prefix: 'Beskriver ', item: 'hæmningsløs eller risikobetonet adfærd', suffix: ':' } 
     },
     { 
         id: 'ap_mania_megalo', 
-        label: 'Storhedstanker / Megalomani', 
+        label: 'Storhedstanker', 
         category: 'F3 - Maniske symptomer', 
-        text: 'Storhedstanker og overvurdering af egne evner.', 
+        text: 'Beskriver storhedstanker.', 
         exclude: ['ap_mania_none'], 
         hasInput: true, 
         inputPlaceholder: 'Karakter af storhedstanker...', 
-        smartMerge: { prefix: 'Beskriver ', item: 'storhedstanker (megalomani)', suffix: ':' } 
+        smartMerge: { prefix: 'Beskriver ', item: 'storhedstanker', suffix: ':' } 
     },
     { 
         id: 'ap_mania_duration', 
         label: 'Varighed ≥ 1 uge (el. indlæggelse)', 
         category: 'F3 - Maniske symptomer', 
-        text: 'Symptomvarighed over 1 uge eller tilstand af en sværhedsgrad der nødvendiggør indlæggelse.', 
+        text: 'Symptomvarighed over 1 uge eller indlæggelseskrævende tilstand.', 
         exclude: ['ap_mania_none'], 
         smartMerge: { prefix: 'Tidskriterie: ', item: 'varighed ≥ 1 uge eller indlæggelseskrævende', suffix: '.' } 
     },
     { 
         id: 'ap_mania_freetext', 
-        label: 'Uddybning / Bipolart forløb (Fritekst)', 
+        label: 'Uddybning af forløb (Fritekst)', 
         category: 'F3 - Maniske symptomer', 
         text: 'Uddybning af maniske/hypomane træk og forløb:', 
         hasInput: true, 
@@ -207,30 +207,30 @@ export const ACTUAL_PSYCH_OPTIONS = [
     },
 
     // 11. F4 - Angst, OCD & Belastning
-    { id: 'ap_f4_none', label: 'Ingen angst/OCD/traume', category: 'F4 - Angst, OCD & Belastning', text: 'Benægter generende angstsymptomer, specifikke fobier, socialangst, tvangstanker, tvangshandlinger eller traumer.', isDefault: true, exclude: ['ap_f4_anx_gen', 'ap_f4_panic', 'ap_f4_phobia', 'ap_f4_social', 'ap_f4_ocd', 'ap_f4_trauma'] },
-    { id: 'ap_f4_anx_gen', label: 'Generaliseret angst / Uro', category: 'F4 - Angst, OCD & Belastning', text: 'Beskriver generaliseret ængstelighed, bekymringstendens og indre uro.', hasInput: true, inputPlaceholder: 'Karakter / fysiske angstsymptomer...', exclude: ['ap_f4_none'], smartMerge: { prefix: 'Beskriver ', item: 'generaliseret angst og indre uro', suffix: ':' } },
-    { id: 'ap_f4_panic', label: 'Panikangst (Anfald)', category: 'F4 - Angst, OCD & Belastning', text: 'Oplever pludselige panikanfald med hjertebanken, åndenød eller dødsangst.', hasInput: true, inputPlaceholder: 'Hyppighed, varighed, symptomer...', exclude: ['ap_f4_none'], smartMerge: { prefix: 'Beskriver ', item: 'panikangstanfald', suffix: ':' } },
-    { id: 'ap_f4_phobia', label: 'Fobier (Specifikke)', category: 'F4 - Angst, OCD & Belastning', text: 'Beskriver specifikke fobier med ledsagende undgåelsesadfærd.', hasInput: true, inputPlaceholder: 'Hvilke fobier (fx højder, edderkopper, tandlæge), undgåelse...', exclude: ['ap_f4_none'], smartMerge: { prefix: 'Beskriver ', item: 'specifikke fobier med ledsagende undgåelsesadfærd', suffix: ':' } },
-    { id: 'ap_f4_social', label: 'Socialangst (Socialfobi)', category: 'F4 - Angst, OCD & Belastning', text: 'Beskriver udtalt socialangst og frygt for vurdering i sociale situationer.', hasInput: true, inputPlaceholder: 'Udløsende situationer, undgåelse...', exclude: ['ap_f4_none'], smartMerge: { prefix: 'Beskriver ', item: 'udtalt socialangst', suffix: ':' } },
-    { id: 'ap_f4_ocd', label: 'OCD (Tvangstanker/-handlinger)', category: 'F4 - Angst, OCD & Belastning', text: 'Beskriver tvangstanker og/eller tvangshandlinger (OCD).', hasInput: true, inputPlaceholder: 'Ritualer, tidsforbrug, modstand...', exclude: ['ap_f4_none'], smartMerge: { prefix: 'Beskriver ', item: 'OCD-symptomer (tvangstanker/tvangshandlinger)', suffix: ':' } },
-    { id: 'ap_f4_trauma', label: 'Traume / PTSD-symptomer', category: 'F4 - Angst, OCD & Belastning', text: 'Anamnese med psykiske traumer og genoplevelsessymptomer/flashbacks/mareridt (PTSD).', hasInput: true, inputPlaceholder: 'Traumetype, flashbacks, undgåelse...', exclude: ['ap_f4_none'], smartMerge: { prefix: 'Beskriver ', item: 'traumerelaterede symptomer / PTSD-træk', suffix: ':' } },
+    { id: 'ap_f4_none', label: 'Ingen angst/OCD/traume', category: 'F4 - Angst, OCD & Belastning', text: 'Benægter generende angst, fobier, tvangstanker, tvangshandlinger eller traumer.', isDefault: true, exclude: ['ap_f4_anx_gen', 'ap_f4_panic', 'ap_f4_phobia', 'ap_f4_social', 'ap_f4_ocd', 'ap_f4_trauma'] },
+    { id: 'ap_f4_anx_gen', label: 'Generaliseret angst / Uro', category: 'F4 - Angst, OCD & Belastning', text: 'Beskriver generaliseret angst og indre uro.', hasInput: true, inputPlaceholder: 'Karakter, fysiske symptomer...', exclude: ['ap_f4_none'], smartMerge: { prefix: 'Beskriver ', item: 'generaliseret angst og indre uro', suffix: ':' } },
+    { id: 'ap_f4_panic', label: 'Panikangst (Anfald)', category: 'F4 - Angst, OCD & Belastning', text: 'Beskriver panikanfald.', hasInput: true, inputPlaceholder: 'Hyppighed, varighed, symptomer...', exclude: ['ap_f4_none'], smartMerge: { prefix: 'Beskriver ', item: 'panikanfald', suffix: ':' } },
+    { id: 'ap_f4_phobia', label: 'Fobier (Specifikke)', category: 'F4 - Angst, OCD & Belastning', text: 'Beskriver specifikke fobier.', hasInput: true, inputPlaceholder: 'Hvilke fobier...', exclude: ['ap_f4_none'], smartMerge: { prefix: 'Beskriver ', item: 'specifikke fobier', suffix: ':' } },
+    { id: 'ap_f4_social', label: 'Social angst', category: 'F4 - Angst, OCD & Belastning', text: 'Beskriver social angst.', hasInput: true, inputPlaceholder: 'Sociale situationer, ubehag...', exclude: ['ap_f4_none'], smartMerge: { prefix: 'Beskriver ', item: 'social angst', suffix: ':' } },
+    { id: 'ap_f4_ocd', label: 'OCD (Tvangstanker/-handlinger)', category: 'F4 - Angst, OCD & Belastning', text: 'Beskriver tvangstanker og/eller tvangshandlinger.', hasInput: true, inputPlaceholder: 'Ritualer, tidsforbrug...', exclude: ['ap_f4_none'], smartMerge: { prefix: 'Beskriver ', item: 'tvangstanker og/eller tvangshandlinger', suffix: ':' } },
+    { id: 'ap_f4_trauma', label: 'Traumer / Belastning', category: 'F4 - Angst, OCD & Belastning', text: 'Beskriver tidligere traumer eller belastende hændelser.', hasInput: true, inputPlaceholder: 'Traumetype, reaktioner...', exclude: ['ap_f4_none'], smartMerge: { prefix: 'Beskriver ', item: 'tidligere traumer eller belastende hændelser', suffix: ':' } },
 
     // 12. Suicidalscreening & Risiko
     { id: 'ap_risk_none', label: 'Ingen selvskade/tanker', category: 'Suicidalscreening & Risiko', text: 'Benægter aktuelle selvmordstanker, planer eller intentioner. Benægter ligeledes aktuel selvskade.', isDefault: true, exclude: ['ap_risk_thoughts', 'ap_risk_plans', 'ap_risk_sh_curr', 'ap_risk_protective'] },
-    { id: 'ap_risk_thoughts', label: 'Selvmordstanker', category: 'Suicidalscreening & Risiko', text: 'Tilkendegiver selvmordstanker', hasInput: true, inputPlaceholder: 'Karakter/Hyppighed', exclude: ['ap_risk_none'] },
-    { id: 'ap_risk_plans', label: 'Konkrete planer', category: 'Suicidalscreening & Risiko', text: 'Har konkrete planer om selvmord', hasInput: true, inputPlaceholder: 'Beskriv planer', exclude: ['ap_risk_none'] },
-    { id: 'ap_risk_protective', label: 'Modforestillinger', category: 'Suicidalscreening & Risiko', text: 'Patienten udtrykker klare modforestillinger mod selvmord', hasInput: true, inputPlaceholder: 'Børn, familie, fremtidsplaner...', exclude: ['ap_risk_none'], smartMerge: { prefix: 'Risikovurdering: Udtrykker modforestillinger i form af ', item: 'beskyttende faktorer', suffix: '.' } },
-    { id: 'ap_risk_sh_curr', label: 'Aktuel selvskade', category: 'Suicidalscreening & Risiko', text: 'Aktuel selvskadende adfærd', hasInput: true, inputPlaceholder: 'Metode/Hyppighed', exclude: ['ap_risk_none'] },
-    { id: 'ap_risk_hist_sui', label: 'Tidl. selvmordsforsøg', category: 'Suicidalscreening & Risiko', text: 'Tidligere selvmordsforsøg i anamnesen', hasInput: true, inputPlaceholder: 'Hvornår? Metode?' },
-    { id: 'ap_risk_hist_sh', label: 'Tidl. selvskade', category: 'Suicidalscreening & Risiko', text: 'Tidligere selvskadende adfærd i anamnesen', hasInput: true, inputPlaceholder: 'Type? Periode?' },
+    { id: 'ap_risk_thoughts', label: 'Selvmordstanker', category: 'Suicidalscreening & Risiko', text: 'Beskriver selvmordstanker.', hasInput: true, inputPlaceholder: 'Karakter/Hyppighed...', exclude: ['ap_risk_none'], smartMerge: { prefix: 'Beskriver ', item: 'selvmordstanker', suffix: ':' } },
+    { id: 'ap_risk_plans', label: 'Konkrete planer', category: 'Suicidalscreening & Risiko', text: 'Oplyser om konkrete selvmordsplaner.', hasInput: true, inputPlaceholder: 'Beskriv planer...', exclude: ['ap_risk_none'], smartMerge: { prefix: 'Oplyser om ', item: 'konkrete selvmordsplaner', suffix: ':' } },
+    { id: 'ap_risk_protective', label: 'Modforestillinger', category: 'Suicidalscreening & Risiko', text: 'Udtrykker modforestillinger mod selvmord.', hasInput: true, inputPlaceholder: 'Modforestillinger (fx familie, fremtidsplaner)...', exclude: ['ap_risk_none'], smartMerge: { prefix: 'Udtrykker ', item: 'modforestillinger mod selvmord', suffix: ':' } },
+    { id: 'ap_risk_sh_curr', label: 'Aktuel selvskade', category: 'Suicidalscreening & Risiko', text: 'Beskriver aktuel selvskadende adfærd.', hasInput: true, inputPlaceholder: 'Metode/Hyppighed...', exclude: ['ap_risk_none'], smartMerge: { prefix: 'Beskriver ', item: 'aktuel selvskadende adfærd', suffix: ':' } },
+    { id: 'ap_risk_hist_sui', label: 'Tidl. selvmordsforsøg', category: 'Suicidalscreening & Risiko', text: 'Oplyser om tidligere selvmordsforsøg.', hasInput: true, inputPlaceholder: 'Hvornår? Metode?...' },
+    { id: 'ap_risk_hist_sh', label: 'Tidl. selvskade', category: 'Suicidalscreening & Risiko', text: 'Oplyser om tidligere selvskade.', hasInput: true, inputPlaceholder: 'Type? Periode?...' },
 
     // 13. Søvn & Døgnrytme
-    { id: 'ap_sleep_norm', label: 'Søvn upåfaldende', category: 'Søvn & Døgnrytme', text: 'Søvnen er fuldstændig upåfaldende.', isDefault: true, exclude: ['ap_sleep_insomnia_onset', 'ap_sleep_insomnia_maint', 'ap_sleep_early_awake', 'ap_sleep_nightmare', 'ap_sleep_circadian'] },
-    { id: 'ap_sleep_insomnia_onset', label: 'Indsovningsbesvær', category: 'Søvn & Døgnrytme', text: 'Tilkendegiver indsovningsbesvær', hasInput: true, inputPlaceholder: 'Hvor længe/ofte?', exclude: ['ap_sleep_norm'], smartMerge: { prefix: 'Der er i perioden oplevet ', item: 'indsovningsbesvær', suffix: '.' } },
-    { id: 'ap_sleep_insomnia_maint', label: 'Gennemsovningsbesvær', category: 'Søvn & Døgnrytme', text: 'Tilkendegiver gennemsovningsbesvær med hyppige opvågninger', hasInput: true, exclude: ['ap_sleep_norm'], smartMerge: { prefix: 'Der er i perioden oplevet ', item: 'gennemsovningsbesvær', suffix: '.' } },
-    { id: 'ap_sleep_early_awake', label: 'Tidlig opvågnen', category: 'Søvn & Døgnrytme', text: 'Tilkendegiver tendens til for tidlig opvågnen', hasInput: true, exclude: ['ap_sleep_norm'], smartMerge: { prefix: 'Der er i perioden oplevet ', item: 'tendens til for tidlig opvågnen', suffix: '.' } },
-    { id: 'ap_sleep_nightmare', label: 'Mareridt', category: 'Søvn & Døgnrytme', text: 'Oplever mareridt', hasInput: true, inputPlaceholder: 'Tema/Hyppighed', exclude: ['ap_sleep_norm'], smartMerge: { prefix: 'Søvnen er præget af ', item: 'hyppige mareridt', suffix: '.' } },
-    { id: 'ap_sleep_circadian', label: 'Forskudt døgnrytme', category: 'Søvn & Døgnrytme', text: 'Døgnrytmen er forskudt', hasInput: true, inputPlaceholder: 'F.eks. sover om dagen', exclude: ['ap_sleep_norm'], smartMerge: { prefix: 'Søvnen er præget af ', item: 'forskudt døgnrytme', suffix: '.' } },
+    { id: 'ap_sleep_norm', label: 'Søvn upåfaldende', category: 'Søvn & Døgnrytme', text: 'Søvnen angives upåfaldende.', isDefault: true, exclude: ['ap_sleep_insomnia_onset', 'ap_sleep_insomnia_maint', 'ap_sleep_early_awake', 'ap_sleep_nightmare', 'ap_sleep_circadian'] },
+    { id: 'ap_sleep_insomnia_onset', label: 'Indsovningsbesvær', category: 'Søvn & Døgnrytme', text: 'Beskriver indsovningsbesvær.', hasInput: true, inputPlaceholder: 'Hvor længe/ofte?...', exclude: ['ap_sleep_norm'], smartMerge: { prefix: 'Beskriver ', item: 'indsovningsbesvær', suffix: ':' } },
+    { id: 'ap_sleep_insomnia_maint', label: 'Gennemsovningsbesvær', category: 'Søvn & Døgnrytme', text: 'Beskriver gennemsovningsbesvær.', hasInput: true, inputPlaceholder: 'Uddybning...', exclude: ['ap_sleep_norm'], smartMerge: { prefix: 'Beskriver ', item: 'gennemsovningsbesvær', suffix: ':' } },
+    { id: 'ap_sleep_early_awake', label: 'Tidlig opvågnen', category: 'Søvn & Døgnrytme', text: 'Beskriver for tidlig opvågnen.', hasInput: true, inputPlaceholder: 'Uddybning...', exclude: ['ap_sleep_norm'], smartMerge: { prefix: 'Beskriver ', item: 'for tidlig opvågnen', suffix: ':' } },
+    { id: 'ap_sleep_nightmare', label: 'Mareridt', category: 'Søvn & Døgnrytme', text: 'Beskriver mareridt.', hasInput: true, inputPlaceholder: 'Tema/Hyppighed...', exclude: ['ap_sleep_norm'], smartMerge: { prefix: 'Beskriver ', item: 'mareridt', suffix: ':' } },
+    { id: 'ap_sleep_circadian', label: 'Forskudt døgnrytme', category: 'Søvn & Døgnrytme', text: 'Beskriver forskudt døgnrytme.', hasInput: true, inputPlaceholder: 'F.eks. sover om dagen...', exclude: ['ap_sleep_norm'], smartMerge: { prefix: 'Beskriver ', item: 'forskudt døgnrytme', suffix: ':' } },
 
     // 14. Motivation & Ønsker
     { id: 'ap_mot_yes', label: 'Motiveret', category: 'Motivation & Ønsker', text: 'Er motiveret for behandling.', isDefault: true, exclude: ['ap_mot_no'] },
