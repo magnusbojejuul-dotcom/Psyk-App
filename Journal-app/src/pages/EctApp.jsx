@@ -13,7 +13,7 @@ const ECT_CHECKLIST = [
                 infoPath: 'Vejledning - Afsnit 2.7 og 2.8',
                 infoText: [
                     '**Børn og Unge:** Unge (15-17 år) giver *selv* samtykke, forældre inddrages og informeres. Børn (<15 år) kræver forældresamtykke (samt barnets samtykke hvis indlagt).',
-                    '**Tvang (§12, stk. 3):** ECT kan gis på tvang ved aktuel eller potentiel livstruende tilstand (f.eks. akut selvmordsfare, svær spise/drikkevægring eller delirium acutum).'
+                    '**Tvang (§12, stk. 3):** ECT kan gives på tvang ved aktuel eller potentiel livstruende tilstand (f.eks. akut selvmordsfare, svær spise/drikkevægring eller delirium acutum).'
                 ]
             },
             { 
@@ -46,7 +46,7 @@ const ECT_CHECKLIST = [
         items: [
             { 
                 id: 'somatisk_tilsyn', 
-                label: 'Sikre relevant tilsyn (kardiolog, neurolog etc.) ved komplicerende lidelser og bestil f.eks INR blodprøve.',
+                label: 'Sikr relevant tilsyn (kardiolog, neurolog etc.) ved komplicerende lidelser og bestil f.eks. INR-blodprøve.',
                 infoPath: 'Vejledning - Afsnit 2.4.3 og 2.4.4',
                 infoText: [
                     '**Relative kontraindikationer (kun ved livstruende tilstand):**\nCerebralt/aortaaneurisme, forhøjet intrakranielt tryk, rumopfyldende processer, intracerebral blødning/apopleksi, nyligt myokardieinfarkt, kardiale arytmier, feocromocytom.',
@@ -74,14 +74,14 @@ const ECT_CHECKLIST = [
                 label: 'Pauser/justér relevant medicin forud for ECT.',
                 infoPath: 'Vejledning - Afsnit 5',
                 infoText: [
-                    '**Seponeres fuldstændigt under forløbet:** Reserpin, Lidokain, Theophylin.',
-                    '**Må IKKE gives efter kl. 17 dagen før:** Benzodiazepiner (hæver krampetærsklen), Lithium, Antiepileptika (bl.a Pregabalin, Valproat).',
+                    '**Seponeres fuldstændigt under forløbet:** Reserpin, Lidokain, Theophyllin.',
+                    '**Må IKKE gives efter kl. 17 dagen før:** Benzodiazepiner (hæver krampetærsklen), Lithium, Antiepileptika (bl.a. pregabalin, valproat).',
                     '**Må IKKE gives på ECT-morgenen:** Diuretika (risiko for blæreruptur), korttidsvirkende Diabetes-medicin.',
-                    '**MÅ gives senest kl. 06.00 ECT-morgen:** Antihypertensiva, Antianginøs hjertemedicin, Astmamedicin (ikke theophylin), syrepumpehæmmere, insulinpumpe/langtidsvirkende insulin.'
+                    '**MÅ gives senest kl. 06.00 ECT-morgen:** Antihypertensiva, Antianginøs hjertemedicin, Astmamedicin (ikke theophyllin), syrepumpehæmmere, insulinpumpe/langtidsvirkende insulin.'
                 ]
             },
             { id: 'toks', label: 'Ordinér måling af TOKS (obs. BT>160/100 mmHg).' },
-            { id: 'hydrering', label: 'Ordinér hydrering (min. 1000ml væske dagen før ECT).' },
+            { id: 'hydrering', label: 'Ordinér hydrering (min. 1000 ml væske dagen før ECT).' },
             { id: 'diabetes', label: 'Ved diabetes: Ordinér BS-måling kl. 7 og 1x/time indtil ECT.', isOptional: true }
         ]
     },
@@ -91,7 +91,7 @@ const ECT_CHECKLIST = [
         items: [
             { 
                 id: 'henvisning', 
-                label: 'Opret standardplanen "Henvisning til ECT" og udfyld SFIer (Indikation unilateral/bilateral).',
+                label: 'Opret standardplanen "Henvisning til ECT" og udfyld SFI\'er (Indikation unilateral/bilateral).',
                 infoPath: 'Vejledning - Afsnit 6',
                 infoText: [
                     '**Unilateral (RUL):**\nFørstevalg hos depressive (ikke-psykotiske, ikke spisevægrende). Kan også overvejes frem for bilateral hos ældre patienter for at undgå svære kognitive bivirkninger.',

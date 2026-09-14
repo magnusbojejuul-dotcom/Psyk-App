@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ExternalLink, Info, Download, Stethoscope } from '../Icons';
+import { ExternalLink, Info, Download, Stethoscope, Copy, Check } from '../Icons';
 
 const AUDIT_QUESTIONS = [
     {
@@ -113,6 +113,7 @@ const AUDIT_QUESTIONS = [
 function Audit() {
     const [scores, setScores] = useState({});
     const [totalScore, setTotalScore] = useState(0);
+    const [copied, setCopied] = useState(false);
 
     useEffect(() => {
         const total = Object.values(scores).reduce((sum, val) => sum + val, 0);
@@ -141,7 +142,14 @@ function Audit() {
         if (totalScore >= 20) return "Tyder på alkoholafhængighed";
         if (totalScore >= 16) return "Skadeligt forbrug af alkohol";
         if (totalScore >= 8) return "Storforbrug af alkohol";
-        return "Lavrisiko (Mænd)";
+        return "Lavrisiko";
+    };
+
+    const handleCopy = () => {
+        const text = `AUDIT (Alcohol Use Disorders Identification Test):\nTotal score: ${totalScore}/40 point.\nTolkning: ${getScoreInterpretation()} (${Object.keys(scores).length}/${AUDIT_QUESTIONS.length} spørgsmål besvaret).`;
+        navigator.clipboard.writeText(text);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
     };
 
     return (
@@ -237,8 +245,18 @@ function Audit() {
                         </div>
                     </div>
 
-                    <div className="text-3xl font-black tracking-tight">
-                        {totalScore}<span className="text-lg font-bold opacity-70 ml-1">/40</span>
+                    <div className="flex items-center gap-3">
+                        <div className="text-3xl font-black tracking-tight">
+                            {totalScore}<span className="text-lg font-bold opacity-70 ml-1">/40</span>
+                        </div>
+                        <button
+                            onClick={handleCopy}
+                            title="Kopier resultat til udklipsholder"
+                            className="p-2.5 rounded-xl bg-white/80 hover:bg-white text-[#3A4A40] shadow-sm transition-all flex items-center gap-1.5 text-xs font-bold shrink-0"
+                        >
+                            {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4 text-[#839788]" />}
+                            <span className="hidden sm:inline">{copied ? 'Kopieret!' : 'Kopier'}</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -249,7 +267,7 @@ function Audit() {
                     <div>
                         <p className="font-semibold text-[#3A4A40] mb-2">Faglig Tolkning af Total Score:</p>
                         <ul className="list-disc pl-4 space-y-1">
-                            <li><strong>0-7 point:</strong> Der er ikke umiddelbart mistanke om alkoholforbrug (OBS: For kvinder og ældre er grænsen <strong>0-5</strong> point).</li>
+                            <li><strong>0-7 point:</strong> Lavrisiko (ingen umiddelbar mistanke om et risikofyldt alkoholforbrug; OBS: For kvinder og ældre er grænsen <strong>0-5</strong> point).</li>
                             <li><strong>8-15 point:</strong> Tyder på storforbrug af alkohol.</li>
                             <li><strong>16-19 point:</strong> Tyder på et skadeligt forbrug af alkohol.</li>
                             <li><strong>≥ 20 point:</strong> Tyder på alkoholafhængighed.</li>

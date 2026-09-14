@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ExternalLink, Brain, Info } from '../Icons';
+import { ExternalLink, Brain, Info, Copy, Check } from '../Icons';
 
 const MMS_QUESTIONS = [
     {
@@ -31,7 +31,7 @@ const MMS_QUESTIONS = [
     {
         id: 'registration',
         title: '3. Registrering',
-        description: 'Nævn 3 ord (fx Æble, Bord, Mønt) og bed ptt. gentage dem. 1 point for hvert korrekt gentaget første gang.',
+        description: 'Nævn 3 ord (fx Æble, Bord, Mønt) og bed pt. gentage dem. 1 point for hvert korrekt gentaget første gang.',
         options: [
             { label: '0 ord', value: 0 },
             { label: '1 ord', value: 1 },
@@ -55,7 +55,7 @@ const MMS_QUESTIONS = [
     {
         id: 'recall',
         title: '5. Hukommelse',
-        description: 'Bed ptt. genkalde de 3 ord fra tidligere (Æble, Bord, Mønt).',
+        description: 'Bed pt. genkalde de 3 ord fra tidligere (Æble, Bord, Mønt).',
         options: [
             { label: '0 ord', value: 0 },
             { label: '1 ord', value: 1 },
@@ -85,7 +85,7 @@ const MMS_QUESTIONS = [
     {
         id: 'command_verbal',
         title: '8. 3-trins ordre',
-        description: 'Bed ptt: "Tag papiret i højre hånd, fold det på midten, og læg det på gulvet".',
+        description: 'Bed pt.: "Tag papiret i højre hånd, fold det på midten, og læg det på gulvet".',
         options: [
             { label: '0 trin', value: 0 },
             { label: '1 trin', value: 1 },
@@ -125,6 +125,7 @@ const MMS_QUESTIONS = [
 function MMS() {
     const [scores, setScores] = useState({});
     const [totalScore, setTotalScore] = useState(0);
+    const [copied, setCopied] = useState(false);
 
     useEffect(() => {
         const total = Object.values(scores).reduce((sum, val) => sum + val, 0);
@@ -139,6 +140,13 @@ function MMS() {
     };
 
     const isComplete = Object.keys(scores).length === MMS_QUESTIONS.length;
+
+    const handleCopy = () => {
+        const text = `MMS (Mini-Mental State Examination):\nTotal score: ${totalScore}/30 point.\nTolkning: ${getScoreInterpretation()} (${Object.keys(scores).length}/${MMS_QUESTIONS.length} domæner besvaret).`;
+        navigator.clipboard.writeText(text);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+    };
 
     // MMS Interpretation:
     // 24-30 Normalt/Let svækkelse (Bør tolkes ift uddannelse)
@@ -190,7 +198,15 @@ function MMS() {
 
             <div className="space-y-6">
                 {MMS_QUESTIONS.map((q) => {
-                    const optionCols = q.options.length <= 4 ? `sm:grid-cols-${q.options.length}` : (q.options.length === 6 ? 'sm:grid-cols-6' : 'sm:grid-cols-5');
+                    const optionCols = q.options.length === 2
+                        ? 'sm:grid-cols-2'
+                        : q.options.length === 3
+                            ? 'sm:grid-cols-3'
+                            : q.options.length === 4
+                                ? 'sm:grid-cols-4'
+                                : q.options.length === 6
+                                    ? 'sm:grid-cols-6'
+                                    : 'sm:grid-cols-5';
 
                     return (
                         <div key={q.id} className="bg-white/60 backdrop-blur-sm rounded-[2rem] p-6 shadow-sm border border-white hover:shadow-md transition-shadow">
@@ -241,8 +257,18 @@ function MMS() {
                         </div>
                     </div>
 
-                    <div className="text-3xl font-black tracking-tight">
-                        {totalScore}<span className="text-lg font-bold opacity-70 ml-1">/30</span>
+                    <div className="flex items-center gap-3">
+                        <div className="text-3xl font-black tracking-tight">
+                            {totalScore}<span className="text-lg font-bold opacity-70 ml-1">/30</span>
+                        </div>
+                        <button
+                            onClick={handleCopy}
+                            title="Kopier resultat til udklipsholder"
+                            className="p-2.5 rounded-xl bg-white/80 hover:bg-white text-[#3A4A40] shadow-sm transition-all flex items-center gap-1.5 text-xs font-bold shrink-0"
+                        >
+                            {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4 text-[#839788]" />}
+                            <span className="hidden sm:inline">{copied ? 'Kopieret!' : 'Kopier'}</span>
+                        </button>
                     </div>
                 </div>
             </div>

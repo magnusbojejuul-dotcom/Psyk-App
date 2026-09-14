@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ExternalLink, Brain, Info } from '../Icons';
+import { ExternalLink, Brain, Info, Copy, Check } from '../Icons';
 
 const HAMD_QUESTIONS = [
     {
@@ -9,7 +9,7 @@ const HAMD_QUESTIONS = [
         options: [
             { label: 'Ingen', value: 0 },
             { label: 'Kun overfor sig selv', value: 1 },
-            { label: 'Gråd labilitet', value: 2 },
+            { label: 'Grådlabilitet', value: 2 },
             { label: 'Græder spontant', value: 3 },
             { label: 'Græder næsten uafbrudt', value: 4 },
         ]
@@ -161,10 +161,10 @@ const HAMD_QUESTIONS = [
     {
         id: 'hypochondriasis',
         title: '15. Hypokondri',
-        description: 'Overskuelig fokusering på helbred.',
+        description: 'Optagethed af kropslige symptomer og helbred.',
         options: [
             { label: 'Ingen', value: 0 },
-            { label: 'Bekymrer mod egen krop', value: 1 },
+            { label: 'Bekymrer sig om egen krop', value: 1 },
             { label: 'Optaget af helbredet', value: 2 },
             { label: 'Klager konstant', value: 3 },
             { label: 'Hypokondre vrangforestillinger', value: 4 },
@@ -195,6 +195,7 @@ const HAMD_QUESTIONS = [
 function HamiltonDepression() {
     const [scores, setScores] = useState({});
     const [totalScore, setTotalScore] = useState(0);
+    const [copied, setCopied] = useState(false);
 
     useEffect(() => {
         const total = Object.values(scores).reduce((sum, val) => sum + val, 0);
@@ -226,6 +227,13 @@ function HamiltonDepression() {
         if (totalScore >= 18) return "Moderat depression";
         if (totalScore >= 13) return "Let depression";
         return "Normal / remission";
+    };
+
+    const handleCopy = () => {
+        const text = `HAM-D17 (Hamilton Depressionsskala):\nTotal score: ${totalScore}/52 point.\nTolkning: ${getScoreInterpretation()} (${Object.keys(scores).length}/${HAMD_QUESTIONS.length} spørgsmål besvaret).`;
+        navigator.clipboard.writeText(text);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
     };
 
     return (
@@ -260,8 +268,7 @@ function HamiltonDepression() {
 
             <div className="space-y-6">
                 {HAMD_QUESTIONS.map((q) => {
-                    // Check how many options to determine column layout format
-                    const optionCols = q.options.length <= 3 ? `sm:grid-cols-${q.options.length}` : 'sm:grid-cols-5';
+                    const optionCols = q.options.length === 2 ? 'sm:grid-cols-2' : (q.options.length === 3 ? 'sm:grid-cols-3' : 'sm:grid-cols-5');
 
                     return (
                         <div key={q.id} className="bg-white/60 backdrop-blur-sm rounded-[2rem] p-6 shadow-sm border border-white hover:shadow-md transition-shadow">
@@ -299,7 +306,7 @@ function HamiltonDepression() {
                 })}
             </div>
 
-            <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-md">
+            <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-lg">
                 <div className={`p-4 rounded-2xl shadow-xl border backdrop-blur-xl flex items-center justify-between transition-all duration-500 ${getScoreColor()}`}>
                     <div className="flex items-center gap-3">
                         <div className="p-2 bg-white/50 rounded-xl">
@@ -315,8 +322,18 @@ function HamiltonDepression() {
                         </div>
                     </div>
 
-                    <div className="text-3xl font-black tracking-tight">
-                        {totalScore}<span className="text-lg font-bold opacity-70 ml-1">/52</span>
+                    <div className="flex items-center gap-3">
+                        <div className="text-3xl font-black tracking-tight">
+                            {totalScore}<span className="text-lg font-bold opacity-70 ml-1">/52</span>
+                        </div>
+                        <button
+                            onClick={handleCopy}
+                            title="Kopier resultat til udklipsholder"
+                            className="p-2.5 rounded-xl bg-white/80 hover:bg-white text-[#3A4A40] shadow-sm transition-all flex items-center gap-1.5 text-xs font-bold shrink-0"
+                        >
+                            {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4 text-[#839788]" />}
+                            <span className="hidden sm:inline">{copied ? 'Kopieret!' : 'Kopier'}</span>
+                        </button>
                     </div>
                 </div>
             </div>

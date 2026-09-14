@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ExternalLink, Activity, Info } from '../Icons'; // Adjusted import path depending on directory
+import { ExternalLink, Activity, Info, Copy, Check } from '../Icons';
 
 const BARTHEL_QUESTIONS = [
     {
@@ -98,6 +98,7 @@ const BARTHEL_QUESTIONS = [
 function BarthelADL() {
     const [scores, setScores] = useState({});
     const [totalScore, setTotalScore] = useState(0);
+    const [copied, setCopied] = useState(false);
 
     // Calculate total score whenever individual scores change
     useEffect(() => {
@@ -129,6 +130,13 @@ function BarthelADL() {
         if (totalScore >= 50) return "Moderat hjælpebehov";
         if (totalScore >= 25) return "Svært hjælpebehov";
         return "Totalt afhængig";
+    };
+
+    const handleCopy = () => {
+        const text = `Barthel ADL-indeks:\nTotal score: ${totalScore}/100 point.\nTolkning: ${getScoreInterpretation()} (${Object.keys(scores).length}/${BARTHEL_QUESTIONS.length} punkter besvaret).`;
+        navigator.clipboard.writeText(text);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
     };
 
     return (
@@ -219,8 +227,18 @@ function BarthelADL() {
                         </div>
                     </div>
 
-                    <div className="text-3xl font-black tracking-tight">
-                        {totalScore}<span className="text-lg font-bold opacity-70 ml-1">/100</span>
+                    <div className="flex items-center gap-3">
+                        <div className="text-3xl font-black tracking-tight">
+                            {totalScore}<span className="text-lg font-bold opacity-70 ml-1">/100</span>
+                        </div>
+                        <button
+                            onClick={handleCopy}
+                            title="Kopier resultat til udklipsholder"
+                            className="p-2.5 rounded-xl bg-white/80 hover:bg-white text-[#3A4A40] shadow-sm transition-all flex items-center gap-1.5 text-xs font-bold shrink-0"
+                        >
+                            {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4 text-[#839788]" />}
+                            <span className="hidden sm:inline">{copied ? 'Kopieret!' : 'Kopier'}</span>
+                        </button>
                     </div>
                 </div>
             </div>

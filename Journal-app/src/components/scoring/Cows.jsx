@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Info, Download } from '../Icons';
+import { ExternalLink, Info, Download, Copy, Check } from '../Icons';
 
 const COWS_QUESTIONS = [
     {
@@ -74,11 +74,11 @@ const COWS_QUESTIONS = [
         title: '7. Gastrointestinale symptomer (GI Upset)',
         subtitle: 'I løbet af den seneste 1/2 time',
         options: [
-            { label: 'Ingen mavetræthed eller gener', value: 0 },
+            { label: 'Ingen mavegener', value: 0 },
             { label: 'Mavekramper', value: 1 },
             { label: 'Kvalme eller tynd afføring', value: 2 },
-            { label: 'Opkastning eller diaré', value: 3 },
-            { label: 'Flere tilfælde af opkastning eller diaré', value: 5 },
+            { label: 'Opkastning eller diarré', value: 3 },
+            { label: 'Flere tilfælde af opkastning eller diarré', value: 5 },
         ]
     },
     {
@@ -111,7 +111,7 @@ const COWS_QUESTIONS = [
             { label: 'Ingen angst', value: 0 },
             { label: 'Patienten rapporterer øget irritabilitet eller let angst', value: 1 },
             { label: 'Patienten virker åbenlyst irritabel eller meget angst', value: 2 },
-            { label: 'Patienten er så angst eller irritabel at pgl. har svært ved at medvirke til samtalen', value: 4 },
+            { label: 'Patienten er så angst eller irritabel, at vedkommende har svært ved at medvirke til samtalen', value: 4 },
         ]
     },
     {
@@ -128,6 +128,7 @@ const COWS_QUESTIONS = [
 
 function Cows() {
     const [answers, setAnswers] = useState({});
+    const [copied, setCopied] = useState(false);
 
     const handleOptionSelect = (questionId, value) => {
         setAnswers(prev => ({
@@ -138,6 +139,14 @@ function Cows() {
 
     const calculateTotalScore = () => {
         return Object.values(answers).reduce((sum, value) => sum + value, 0);
+    };
+
+    const handleCopy = () => {
+        const total = calculateTotalScore();
+        const text = `COWS (Clinical Opiate Withdrawal Scale):\nTotal score: ${total}/48 point.\nTolkning: ${interpretation.text} (${Object.keys(answers).length}/${COWS_QUESTIONS.length} spørgsmål besvaret).`;
+        navigator.clipboard.writeText(text);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
     };
 
     const getScoreInterpretation = () => {
@@ -298,6 +307,14 @@ function Cows() {
                             Nulstil score
                         </button>
                         <div className="flex flex-col md:flex-row gap-2">
+                            <button
+                                onClick={handleCopy}
+                                title="Kopier resultat til udklipsholder"
+                                className="flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-white border border-[#E2E8DF] shadow-sm text-[#3A4A40] hover:border-[#839788] transition-all group"
+                            >
+                                {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4 text-[#839788]" />}
+                                <span className="text-sm font-medium">{copied ? 'Kopieret!' : 'Kopier'}</span>
+                            </button>
                             <a
                                 href="https://www.mdcalc.com/calc/1985/cows-score-opiate-withdrawal"
                                 target="_blank"

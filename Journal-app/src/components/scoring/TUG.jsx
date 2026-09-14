@@ -17,7 +17,7 @@ function TUG() {
                         </div>
                         <h1 className="text-3xl font-bold text-[#3A4A40] mb-3">TUG (Timed Up and Go)</h1>
                         <p className="text-[#839788] text-base max-w-xl leading-relaxed">
-                            Simpel og hurtig test af basal mobilitet, balance og faldrisiko, primært anvendt til ældre. Testen uretager tiden det tager at rejse sig, gå 3 meter, vende om og sætte sig igen.
+                            Simpel og hurtig test af basal mobilitet, balance og faldrisiko, primært anvendt til ældre. Testen måler tiden, det tager at rejse sig, gå 3 meter, vende om og sætte sig igen.
                         </p>
                     </div>
 
@@ -57,7 +57,7 @@ function TUG() {
                         <div>
                             <h3 className="font-semibold text-[#3A4A40]">Instruktion</h3>
                             <p className="text-[#5C6D63] text-sm mt-1">
-                                "Når jeg siger TIL, vil jeg have, at du rejser dig op, og går frem til stregen på gulvet i dit almindelige tempo. Vend om ved stregen, gå tilbage og sæt dig ned igen."
+                                "Når jeg siger GÅ, vil jeg have, at du rejser dig op, og går frem til stregen på gulvet i dit almindelige tempo. Vend om ved stregen, gå tilbage og sæt dig ned igen."
                             </p>
                         </div>
                     </div>

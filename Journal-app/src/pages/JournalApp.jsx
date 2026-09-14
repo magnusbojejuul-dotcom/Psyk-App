@@ -291,6 +291,11 @@ function JournalApp({ onNavigate }) {
         sectionsToRender.forEach(sec => {
             const sectionLines = [];
 
+            if (section === 'full_note') {
+                sectionLines.push(sec.title);
+                sectionLines.push("");
+            }
+
             if (sec.id === 'psych_actual') {
                 if (contactReason.trim()) {
                     sectionLines.push(`Ad kontaktårsag:\n${contactReason.trim()}\n`);
@@ -628,7 +633,8 @@ function JournalApp({ onNavigate }) {
                 trimmed === '---' ||
                 trimmed === 'AKTUELT PSYKISK (ANAMNESE)' ||
                 trimmed === 'AKTUELT SOMATISK' ||
-                trimmed === 'SOMATISK VURDERING') continue;
+                trimmed === 'SOMATISK VURDERING' ||
+                trimmed === 'ANOREKSIA NERVOSA (F50.0)') continue;
             
             // Skip "Ad category:" lines
             if (trimmed.toLowerCase().startsWith('ad ') && trimmed.endsWith(':')) continue;

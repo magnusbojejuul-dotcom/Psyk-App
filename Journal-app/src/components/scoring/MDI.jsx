@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ExternalLink, Brain, Info } from '../Icons';
+import { ExternalLink, Brain, Info, Copy, Check } from '../Icons';
 
 const MDI_QUESTIONS = [
     {
@@ -140,7 +140,7 @@ const MDI_QUESTIONS = [
     },
     {
         id: '10a',
-        title: '10a. Hadt nedsat appetit?',
+        title: '10a. Haft nedsat appetit?',
         description: 'Vælg den højeste score mellem 10a og 10b',
         options: [
             { label: 'Hele tiden', value: 5 },
@@ -169,6 +169,7 @@ const MDI_QUESTIONS = [
 function MDI() {
     const [scores, setScores] = useState({});
     const [totalScore, setTotalScore] = useState(0);
+    const [copied, setCopied] = useState(false);
 
     useEffect(() => {
         let total = 0;
@@ -208,6 +209,13 @@ function MDI() {
         if (totalScore >= 25) return "Moderat depression";
         if (totalScore >= 20) return "Let depression";
         return "Ikke depressiv";
+    };
+
+    const handleCopy = () => {
+        const text = `MDI (Major Depression Inventory):\nTotal score: ${totalScore}/50 point.\nTolkning: ${getScoreInterpretation()}.`;
+        navigator.clipboard.writeText(text);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
     };
 
     return (
@@ -292,8 +300,18 @@ function MDI() {
                         </div>
                     </div>
 
-                    <div className="text-3xl font-black tracking-tight">
-                        {totalScore}<span className="text-lg font-bold opacity-70 ml-1">/50</span>
+                    <div className="flex items-center gap-3">
+                        <div className="text-3xl font-black tracking-tight">
+                            {totalScore}<span className="text-lg font-bold opacity-70 ml-1">/50</span>
+                        </div>
+                        <button
+                            onClick={handleCopy}
+                            title="Kopier resultat til udklipsholder"
+                            className="p-2.5 rounded-xl bg-white/80 hover:bg-white text-[#3A4A40] shadow-sm transition-all flex items-center gap-1.5 text-xs font-bold shrink-0"
+                        >
+                            {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4 text-[#839788]" />}
+                            <span className="hidden sm:inline">{copied ? 'Kopieret!' : 'Kopier'}</span>
+                        </button>
                     </div>
                 </div>
             </div>

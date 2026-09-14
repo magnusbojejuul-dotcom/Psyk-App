@@ -50,7 +50,7 @@ export const ACTUAL_PSYCH_OPTIONS = [
     // --- ICD-10 F0-F4 PSYKIATRISK SCREENING ---
 
     // 6. F0 - Organiske årsager
-    { id: 'ap_f0_none', label: 'Ingen organisk mistanke', category: 'F0 - Organiske årsager', text: 'Ingen oplysninger om tidligere hovedtraumer, cerebrale insult eller øvrig organisk årsag.', isDefault: true, exclude: ['ap_f0_trauma', 'ap_f0_neuro', 'ap_f0_somatic', 'ap_f0_cog'] },
+    { id: 'ap_f0_none', label: 'Ingen organisk mistanke', category: 'F0 - Organiske årsager', text: 'Ingen oplysninger om tidligere hovedtraumer, cerebrale insulter eller øvrig organisk årsag.', isDefault: true, exclude: ['ap_f0_trauma', 'ap_f0_neuro', 'ap_f0_somatic', 'ap_f0_cog'] },
     { id: 'ap_f0_trauma', label: 'Tidligere hovedtraumer', category: 'F0 - Organiske årsager', text: 'Oplyser om tidligere hovedtraume.', hasInput: true, inputPlaceholder: 'Tidspunkt, bevidstløshed, følger...', exclude: ['ap_f0_none'], smartMerge: { prefix: 'Oplyser om ', item: 'tidligere hovedtraume', suffix: ':' } },
     { id: 'ap_f0_neuro', label: 'Neurologisk sygdom / Kramper', category: 'F0 - Organiske årsager', text: 'Oplyser om neurologisk lidelse eller kramper.', hasInput: true, inputPlaceholder: 'Epilepsi, apopleksi, etc.', exclude: ['ap_f0_none'], smartMerge: { prefix: 'Oplyser om ', item: 'neurologisk lidelse eller kramper', suffix: ':' } },
     { id: 'ap_f0_somatic', label: 'Somatisk udløsende sygdom', category: 'F0 - Organiske årsager', text: 'Oplyser om tilgrundliggende somatisk sygdom.', hasInput: true, inputPlaceholder: 'Infektion, endokrint, forgiftning...', exclude: ['ap_f0_none'], smartMerge: { prefix: 'Oplyser om ', item: 'somatisk sygdom', suffix: ':' } },

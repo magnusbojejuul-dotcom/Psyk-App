@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { ExternalLink, Brain, Info } from '../Icons';
+import { ExternalLink, Brain, Info, Copy, Check } from '../Icons';
 
 const HAMA_QUESTIONS = [
     {
         id: 'anxious_mood',
         title: '1. Angsttilstand',
-        description: 'Bekymringer, forbrug af det værste, angstfuld forventning, irritabilitet.',
+        description: 'Bekymringer, frygt for det værste, angstfuld forventning, irritabilitet.',
         options: [
             { label: 'Ikke til stede', value: 0 },
             { label: 'Let', value: 1 },
@@ -17,7 +17,7 @@ const HAMA_QUESTIONS = [
     {
         id: 'tension',
         title: '2. Spænding',
-        description: 'Spændingsfornemmelse, træthedsfornemmelse, skrik-tendens, let til gråd, sitren, rastløshed.',
+        description: 'Spændingsfornemmelse, træthedsfornemmelse, letskræmthed / sammenfaren, let til gråd, sitren, rastløshed.',
         options: [
             { label: 'Ikke til stede', value: 0 },
             { label: 'Let', value: 1 },
@@ -175,6 +175,7 @@ const HAMA_QUESTIONS = [
 function HamiltonAngst() {
     const [scores, setScores] = useState({});
     const [totalScore, setTotalScore] = useState(0);
+    const [copied, setCopied] = useState(false);
 
     useEffect(() => {
         const total = Object.values(scores).reduce((sum, val) => sum + val, 0);
@@ -208,6 +209,13 @@ function HamiltonAngst() {
         return "Ingen/mild angst";
     };
 
+    const handleCopy = () => {
+        const text = `HAM-A (Hamilton Angstskala):\nTotal score: ${totalScore}/56 point.\nTolkning: ${getScoreInterpretation()} (${Object.keys(scores).length}/${HAMA_QUESTIONS.length} spørgsmål besvaret).`;
+        navigator.clipboard.writeText(text);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+    };
+
     return (
         <div className="w-full max-w-3xl mx-auto space-y-8 pb-32 animate-fade-in-up">
 
@@ -222,7 +230,7 @@ function HamiltonAngst() {
                         </div>
                         <h1 className="text-3xl font-bold text-[#3A4A40] mb-3">Hamilton Angstskala (HAM-A)</h1>
                         <p className="text-[#839788] text-base max-w-xl leading-relaxed">
-                            Klinisk interview-baseret redskab til vurdering af sværhedsgraden af generel angstbehandling hos voksne. Den dækker både psykologiske og somatiske angstsymptomer.
+                            Klinisk interview-baseret redskab til vurdering af sværhedsgraden af angstsymptomer hos voksne. Den dækker både psykologiske og somatiske angstsymptomer.
                         </p>
                     </div>
 
@@ -290,8 +298,18 @@ function HamiltonAngst() {
                         </div>
                     </div>
 
-                    <div className="text-3xl font-black tracking-tight">
-                        {totalScore}<span className="text-lg font-bold opacity-70 ml-1">/56</span>
+                    <div className="flex items-center gap-3">
+                        <div className="text-3xl font-black tracking-tight">
+                            {totalScore}<span className="text-lg font-bold opacity-70 ml-1">/56</span>
+                        </div>
+                        <button
+                            onClick={handleCopy}
+                            title="Kopier resultat til udklipsholder"
+                            className="p-2.5 rounded-xl bg-white/80 hover:bg-white text-[#3A4A40] shadow-sm transition-all flex items-center gap-1.5 text-xs font-bold shrink-0"
+                        >
+                            {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4 text-[#839788]" />}
+                            <span className="hidden sm:inline">{copied ? 'Kopieret!' : 'Kopier'}</span>
+                        </button>
                     </div>
                 </div>
             </div>

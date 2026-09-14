@@ -55,14 +55,14 @@ function Rusmiddeltestning() {
                             <tr className="hover:bg-[#F2F6F3]/50 transition-colors">
                                 <td className="py-4 px-4 font-medium">Cannabis (Hash / THC)</td>
                                 <td className="py-4 px-4">2-4 dage</td>
-                                <td className="py-4 px-4">Op til længe (flere uger, &gt;30 dage) e. misbrug</td>
+                                <td className="py-4 px-4">Flere uger (op til &gt;30 dage) ved kronisk forbrug</td>
                             </tr>
 
                             {/* Amfetamin */}
                             <tr className="hover:bg-[#F2F6F3]/50 transition-colors">
                                 <td className="py-4 px-4 font-medium">Amfetamin & Metamfetamin</td>
                                 <td className="py-4 px-4">2-4 dage</td>
-                                <td className="py-4 px-4">Ofte uændret (evt lille forlængelse)</td>
+                                <td className="py-4 px-4">Sædvanligvis uændret (evt. let forlængelse)</td>
                             </tr>
 
                             {/* Kokain */}
@@ -90,7 +90,7 @@ function Rusmiddeltestning() {
                             <tr className="hover:bg-[#F2F6F3]/50 transition-colors">
                                 <td className="py-4 px-4 font-medium">Buprenorfin</td>
                                 <td className="py-4 px-4">Op til 8 døgn</td>
-                                <td className="py-4 px-4">Måske svagt forlænget</td>
+                                <td className="py-4 px-4">Eventuelt let forlængelse</td>
                             </tr>
 
                             {/* Benzodiazepiner */}
