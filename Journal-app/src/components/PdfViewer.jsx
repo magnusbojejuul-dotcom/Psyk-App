@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import * as pdfjsLib from 'pdfjs-dist';
-import { ZoomIn, ZoomOut, RotateCcw, Download, ExternalLink, AlertCircle, FileText, Check } from './Icons';
+import { ZoomIn, ZoomOut, RotateCcw, Download, ExternalLink, AlertCircle, FileText, Check, Copy } from './Icons';
 import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.min.js?url';
 
 // Configure the worker to use Vite's worker bundle with public fallback
@@ -19,9 +19,14 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [renderedPages, setRenderedPages] = useState({});
+    const [pageDimensions, setPageDimensions] = useState({});
+    const [extractedText, setExtractedText] = useState('');
+    const [copiedAll, setCopiedAll] = useState(false);
 
     const canvasRefs = useRef({});
+    const textLayerRefs = useRef({});
     const renderTasksRef = useRef({});
+    const textLayerTasksRef = useRef({});
 
     // Safe encoded URL for fetching
     const getSafeUrl = (rawUrl) => {
@@ -42,6 +47,9 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
         setPdfDoc(null);
         setNumPages(0);
         setRenderedPages({});
+        setPageDimensions({});
+        setExtractedText('');
+        setCopiedAll(false);
 
         // Cancel running renders
         Object.values(renderTasksRef.current).forEach(task => {
@@ -52,6 +60,16 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
             }
         });
         renderTasksRef.current = {};
+
+        // Cancel running text layers
+        Object.values(textLayerTasksRef.current).forEach(task => {
+            try {
+                if (task && task.cancel) task.cancel();
+            } catch (e) {
+                // ignore
+            }
+        });
+        textLayerTasksRef.current = {};
 
         const loadingTask = pdfjsLib.getDocument({
             url: safeUrl,
@@ -83,6 +101,52 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
             }
         };
     }, [safeUrl]);
+
+    // Extract text from all pages for one-click copy
+    useEffect(() => {
+        if (!pdfDoc || numPages === 0) return;
+        let isCancelled = false;
+
+        const extractAll = async () => {
+            try {
+                const parts = [];
+                for (let i = 1; i <= numPages; i++) {
+                    const page = await pdfDoc.getPage(i);
+                    const tc = await page.getTextContent();
+                    if (!tc || !tc.items || tc.items.length === 0) continue;
+
+                    let lastY = null;
+                    let pageStr = '';
+                    for (const item of tc.items) {
+                        if (!item.str) continue;
+                        if (lastY !== null && Math.abs(item.transform[5] - lastY) > 5) {
+                            pageStr += '\n';
+                        } else if (pageStr && !pageStr.endsWith(' ') && !pageStr.endsWith('\n')) {
+                            pageStr += ' ';
+                        }
+                        pageStr += item.str;
+                        lastY = item.transform[5];
+                    }
+
+                    if (pageStr.trim()) {
+                        parts.push(pageStr.trim());
+                    }
+                }
+
+                if (!isCancelled && parts.length > 0) {
+                    setExtractedText(parts.join('\n\n'));
+                }
+            } catch (e) {
+                console.warn("Could not extract full text:", e);
+            }
+        };
+
+        extractAll();
+
+        return () => {
+            isCancelled = true;
+        };
+    }, [pdfDoc, numPages]);
 
     // Calculate fit-width scale based on container width
     const calculateFitScale = useCallback(async (doc) => {
@@ -139,10 +203,17 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
         }
         if (!canvas || !doc) return;
 
-        // Cancel previous render task for this page
+        // Cancel previous render tasks for this page
         if (renderTasksRef.current[pageNum]) {
             try {
                 renderTasksRef.current[pageNum].cancel();
+            } catch (e) {
+                // ignore
+            }
+        }
+        if (textLayerTasksRef.current[pageNum]) {
+            try {
+                textLayerTasksRef.current[pageNum].cancel();
             } catch (e) {
                 // ignore
             }
@@ -151,25 +222,58 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
         try {
             const page = await doc.getPage(pageNum);
             const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
-            const viewport = page.getViewport({ scale: currentScale * pixelRatio });
+            const canvasViewport = page.getViewport({ scale: currentScale * pixelRatio });
+            const textViewport = page.getViewport({ scale: currentScale });
 
-            canvas.width = Math.floor(viewport.width);
-            canvas.height = Math.floor(viewport.height);
-            canvas.style.width = `${Math.floor(viewport.width / pixelRatio)}px`;
-            canvas.style.height = `${Math.floor(viewport.height / pixelRatio)}px`;
+            const cssWidth = Math.floor(textViewport.width);
+            const cssHeight = Math.floor(textViewport.height);
+
+            // Store page dimensions for wrapper and text layer
+            setPageDimensions(prev => ({
+                ...prev,
+                [pageNum]: { width: cssWidth, height: cssHeight }
+            }));
+
+            // Setup Canvas
+            canvas.width = Math.floor(canvasViewport.width);
+            canvas.height = Math.floor(canvasViewport.height);
+            canvas.style.width = `${cssWidth}px`;
+            canvas.style.height = `${cssHeight}px`;
 
             const ctx = canvas.getContext('2d');
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
             const renderContext = {
                 canvasContext: ctx,
-                viewport: viewport,
+                viewport: canvasViewport,
             };
 
             const renderTask = page.render(renderContext);
             renderTasksRef.current[pageNum] = renderTask;
             await renderTask.promise;
             delete renderTasksRef.current[pageNum];
+
+            // Render TextLayer for selection & copying
+            const textLayerDiv = textLayerRefs.current[pageNum];
+            if (textLayerDiv) {
+                textLayerDiv.innerHTML = '';
+                textLayerDiv.style.width = `${cssWidth}px`;
+                textLayerDiv.style.height = `${cssHeight}px`;
+                textLayerDiv.style.setProperty('--scale-factor', textViewport.scale);
+
+                const textContent = await page.getTextContent();
+                if (textContent && textContent.items && textContent.items.length > 0) {
+                    const textTask = pdfjsLib.renderTextLayer({
+                        textContentSource: textContent,
+                        container: textLayerDiv,
+                        viewport: textViewport,
+                    });
+                    textLayerTasksRef.current[pageNum] = textTask;
+                    await textTask.promise;
+                    delete textLayerTasksRef.current[pageNum];
+                }
+            }
+
             setRenderedPages(prev => ({ ...prev, [pageNum]: true }));
         } catch (err) {
             if (err?.name !== 'RenderingCancelledException') {
@@ -202,6 +306,15 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
                 }
             });
             renderTasksRef.current = {};
+
+            Object.values(textLayerTasksRef.current).forEach(task => {
+                try {
+                    if (task && task.cancel) task.cancel();
+                } catch (e) {
+                    // ignore
+                }
+            });
+            textLayerTasksRef.current = {};
         };
     }, [pdfDoc, numPages, scale, renderPage]);
 
@@ -215,6 +328,13 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
 
     const handleResetZoom = () => {
         setScale(fitWidthScale);
+    };
+
+    const handleCopyAll = () => {
+        if (!extractedText) return;
+        navigator.clipboard.writeText(extractedText);
+        setCopiedAll(true);
+        setTimeout(() => setCopiedAll(false), 2500);
     };
 
     return (
@@ -234,8 +354,20 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
                 </div>
 
                 <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
-                    {/* Extra actions (e.g. Kopiér skabelon) passed from parent */}
+                    {/* Extra actions (e.g. S6 custom action) passed from parent */}
                     {extraActions}
+
+                    {/* Quick copy full document text button */}
+                    {extractedText && (
+                        <button
+                            onClick={handleCopyAll}
+                            className="px-2.5 sm:px-3 py-1.5 bg-white border border-[#E8E4D9] text-[#3A4A40] hover:bg-[#F2F6F3] rounded-xl transition-colors shadow-2xs font-medium text-xs flex items-center gap-1.5 cursor-pointer"
+                            title="Kopiér al tekst fra dette dokument til udklipsholderen"
+                        >
+                            {copiedAll ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5 text-[#839788]" />}
+                            <span>{copiedAll ? 'Tekst kopieret!' : 'Kopiér al tekst'}</span>
+                        </button>
+                    )}
 
                     {/* Zoom controls */}
                     <div className="flex items-center bg-[#F9F8F6] border border-[#E8E4D9] rounded-xl p-0.5">
@@ -329,12 +461,17 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
                         {Array.from({ length: numPages }, (_, index) => {
                             const pageNum = index + 1;
                             const isRendered = renderedPages[pageNum];
+                            const dimensions = pageDimensions[pageNum];
                             return (
                                 <div
                                     key={pageNum}
-                                    className="relative mb-6 shadow-md rounded-xl overflow-hidden bg-white border border-[#E8E4D9] shrink-0 min-h-[250px] flex items-center justify-center"
+                                    className="relative mb-6 shadow-md rounded-xl overflow-hidden bg-white border border-[#E8E4D9] shrink-0 min-h-[250px] flex items-center justify-center select-text"
+                                    style={{
+                                        width: dimensions?.width ? `${dimensions.width}px` : undefined,
+                                        height: dimensions?.height ? `${dimensions.height}px` : undefined,
+                                    }}
                                 >
-                                    <div className="absolute top-2 right-2 bg-slate-900/70 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded-full pointer-events-none z-10">
+                                    <div className="absolute top-2 right-2 bg-slate-900/70 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded-full pointer-events-none z-20">
                                         Side {pageNum} af {numPages}
                                     </div>
                                     {!isRendered && (
@@ -346,6 +483,14 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
                                     <canvas
                                         ref={el => (canvasRefs.current[pageNum] = el)}
                                         className={`block transition-opacity duration-200 ${isRendered ? 'opacity-100' : 'opacity-0 absolute'}`}
+                                    />
+                                    <div
+                                        ref={el => (textLayerRefs.current[pageNum] = el)}
+                                        className="textLayer"
+                                        style={{
+                                            width: dimensions?.width ? `${dimensions.width}px` : undefined,
+                                            height: dimensions?.height ? `${dimensions.height}px` : undefined,
+                                        }}
                                     />
                                 </div>
                             );
