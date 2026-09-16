@@ -35,6 +35,7 @@ function JournalApp({ onNavigate }) {
 
     // Custom Modal State
     const [confirmDialog, setConfirmDialog] = useState({ isOpen: false, action: null });
+    const [isWideAside, setIsWideAside] = useState(false);
 
     useEffect(() => {
         const defaults = new Set();
@@ -97,6 +98,9 @@ function JournalApp({ onNavigate }) {
     };
 
     const formatCategoryHeader = (cat) => {
+        if (/f3/i.test(cat) && /depression/i.test(cat)) {
+            return 'F3 - depression (screening – diagnosen stilles ikke alene på denne baggrund)';
+        }
         let formatted = cat.replace(/&/g, 'og');
         if (/^F\d/i.test(formatted)) {
             return formatted.replace(/^([Ff]\d+)(\s*-\s*)(.*)$/, (_, code, sep, rest) => {
@@ -740,9 +744,9 @@ function JournalApp({ onNavigate }) {
     const renderCardGrid = (dataSet) => {
         const categories = Array.from(new Set(dataSet.map(o => o.category)));
         return (
-            <div className={`pb-20 transition-all duration-300`}>
+            <div className="w-full pb-20 transition-all duration-300">
                 {activeSection === 'psych_actual' && (
-                    <div className="mb-6 glass-panel rounded-2xl overflow-hidden">
+                    <div className="mb-6 w-full glass-panel rounded-2xl overflow-hidden shadow-sm">
                         <div className="bg-[#FAF9F6]/50 px-5 py-4 border-b border-[#E8E4D9]/50 flex items-center gap-2">
                             <h3 className="font-bold text-[#3A4A40] text-sm uppercase tracking-wider">Indledende Anamnese</h3>
                             <PenLine className="w-4 h-4 text-[#839788]" />
@@ -772,7 +776,7 @@ function JournalApp({ onNavigate }) {
                 )}
 
                 {activeSection === 'diagnosis_anorexia' && (
-                    <div className="mb-8">
+                    <div className="mb-8 w-full">
                         <div className="glass-panel rounded-2xl p-6">
                             <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
                                 <div>
@@ -904,7 +908,7 @@ function JournalApp({ onNavigate }) {
                     </div>
                 )}
 
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6 w-full">
                     {categories.map(cat => (
                         <div key={cat} className="glass-panel rounded-2xl overflow-hidden flex flex-col h-full border border-white/60">
                             <div className="bg-white/40 px-5 py-3.5 border-b border-[#E8E4D9]/50 flex items-center justify-between backdrop-blur-md">
@@ -1068,7 +1072,7 @@ function JournalApp({ onNavigate }) {
                     </div>
                 </nav>
                 <main className="flex-1 overflow-y-auto bg-transparent p-6">
-                    <div className="max-w-6xl mx-auto flex flex-col items-center">
+                    <div className="w-full max-w-6xl mx-auto flex flex-col items-stretch">
                         <div className="flex w-full justify-between items-center mb-6">
                             <div>
                                 <h2 className="text-xl font-bold text-[#3A4A40]">
@@ -1115,18 +1119,79 @@ function JournalApp({ onNavigate }) {
                         {activeSection === 'somatic_obj' && renderCardGrid(SOMATIC_OBJ_OPTIONS)}
                         {activeSection === 'diagnosis_anorexia' && renderCardGrid(ANOREXIA_OPTIONS)}
                         {activeSection === 'full_note' && (
-                            <div className="glass-panel w-full rounded-2xl shadow-sm p-10 flex flex-col items-center justify-center text-center h-[500px]">
-                                <Layers className="h-16 w-16 text-[#3A4A40]/10 mb-4" />
-                                <h3 className="text-lg font-medium text-[#3A4A40]">Samlet Visning</h3>
-                                <p className="text-slate-500 max-w-md mt-2">Tekstboksen til højre viser nu det komplette notat samlet fra alle sektioner.<br /><br />Gå til de enkelte sektioner i menuen til venstre for at redigere indholdet.</p>
+                            <div className="glass-panel w-full rounded-2xl shadow-sm p-6 md:p-8 flex flex-col mb-12">
+                                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 mb-5 border-b border-[#E8E4D9]">
+                                    <div className="flex items-center gap-3">
+                                        <div className="p-2.5 bg-[#839788]/15 rounded-xl text-[#3A4A40]">
+                                            <Layers className="h-6 w-6" />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-lg font-bold text-[#3A4A40]">Samlet Journalnotat</h3>
+                                            <p className="text-xs text-[#839788]">
+                                                Komplet overblik over alle registrerede fund og anamnestiske afsnit
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <button
+                                            type="button"
+                                            onClick={copyToClipboard}
+                                            className="flex items-center gap-2 bg-[#839788] hover:bg-[#6B8070] text-white px-4 py-2.5 rounded-xl font-bold transition-all shadow-sm hover:shadow text-xs cursor-pointer active:scale-95"
+                                        >
+                                            <Clipboard className="h-4 w-4" /> Kopier Hele Notatet
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div className="mb-4">
+                                    <div className="flex items-center justify-between text-xs text-[#839788] mb-2 px-1 font-medium">
+                                        <span>Notattekst (synkroniseret med højre resultatkolonne)</span>
+                                        <span>{generatedText ? `${generatedText.split(/\s+/).filter(Boolean).length} ord • ${generatedText.length} tegn` : '0 tegn'}</span>
+                                    </div>
+                                    <textarea
+                                        className="w-full min-h-[460px] p-6 bg-white/70 backdrop-blur-sm border border-[#E8E4D9] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#839788]/20 focus:border-[#839788] text-sm leading-[1.8] text-[#3A4A40] font-mono shadow-inner resize-y transition-all"
+                                        value={generatedText}
+                                        onChange={handleManualTextChange}
+                                        spellCheck="false"
+                                        placeholder="Ingen tekst genereret endnu. Vælg punkter i sektionerne til venstre for at opbygge notatet..."
+                                    />
+                                </div>
+
+                                <div className="pt-2 flex flex-wrap items-center justify-between gap-3 text-xs text-[#839788]">
+                                    <div className="flex items-center gap-2">
+                                        <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                                        <span>Klar til direkte overførsel (Ctrl+C / Ctrl+V) til EPJ eller Sundhedsplatformen.</span>
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-[#3A4A40]/70">Gå til sektion:</span>
+                                        <button onClick={() => changeSection('psych_actual')} className="px-2.5 py-1 bg-white hover:bg-[#F2F6F3] text-[#3A4A40] border border-[#E8E4D9] rounded-lg transition-colors font-medium cursor-pointer">Aktuelt Psykisk</button>
+                                        <button onClick={() => changeSection('psych')} className="px-2.5 py-1 bg-white hover:bg-[#F2F6F3] text-[#3A4A40] border border-[#E8E4D9] rounded-lg transition-colors font-medium cursor-pointer">Objektivt Psykisk</button>
+                                        <button onClick={() => changeSection('somatic_act')} className="px-2.5 py-1 bg-white hover:bg-[#F2F6F3] text-[#3A4A40] border border-[#E8E4D9] rounded-lg transition-colors font-medium cursor-pointer">Somatisk</button>
+                                    </div>
+                                </div>
                             </div>
                         )}
                     </div>
                 </main>
-                <aside className="w-80 xl:w-96 glass-panel border-l-0 flex flex-col shadow-xl z-20 flex-shrink-0">
+                <aside className={`${isWideAside ? 'w-[480px] lg:w-[540px] xl:w-[620px] 2xl:w-[700px]' : 'w-[380px] lg:w-[420px] xl:w-[480px] 2xl:w-[520px]'} glass-panel border-l-0 flex flex-col shadow-xl z-20 flex-shrink-0 transition-all duration-300`}>
                     <div className="p-5 border-b border-[#E8E4D9]/50 flex justify-between items-center bg-[#F9F8F6]/30">
-                        <div className="flex items-center gap-2"><FileText className="h-4 w-4 text-[#839788]" /><h3 className="font-semibold text-[#3A4A40] text-sm uppercase tracking-wide">{activeSection === 'full_note' ? 'Hele Notatet' : 'Resultat (Sektion)'}</h3></div>
-                        {showSummary && <span className="text-xs bg-emerald-100 text-emerald-800 px-2.5 py-1 rounded-full font-medium">Resume aktivt</span>}
+                        <div className="flex items-center gap-2">
+                            <FileText className="h-4 w-4 text-[#839788]" />
+                            <h3 className="font-semibold text-[#3A4A40] text-sm uppercase tracking-wide">
+                                {activeSection === 'full_note' ? 'Hele Notatet' : 'Resultat (Sektion)'}
+                            </h3>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            {showSummary && <span className="text-xs bg-emerald-100 text-emerald-800 px-2.5 py-1 rounded-full font-medium">Resume aktivt</span>}
+                            <button
+                                type="button"
+                                onClick={() => setIsWideAside(!isWideAside)}
+                                className="p-1.5 text-[#839788] hover:text-[#3A4A40] hover:bg-white/80 rounded-lg transition-colors cursor-pointer"
+                                title={isWideAside ? "Standard kolonnebredde" : "Gør kolonnen ekstra bred"}
+                            >
+                                {isWideAside ? <Minimize className="h-4 w-4" /> : <Maximize className="h-4 w-4" />}
+                            </button>
+                        </div>
                     </div>
                     <div className="flex-1 relative">
                         <textarea
