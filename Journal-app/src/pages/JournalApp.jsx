@@ -1072,7 +1072,7 @@ function JournalApp({ onNavigate }) {
                     </div>
                 </nav>
                 <main className="flex-1 overflow-y-auto bg-transparent p-6">
-                    <div className="w-full max-w-6xl mx-auto flex flex-col items-stretch">
+                    <div className="w-full mx-auto flex flex-col items-stretch">
                         <div className="flex w-full justify-between items-center mb-6">
                             <div>
                                 <h2 className="text-xl font-bold text-[#3A4A40]">
@@ -1173,7 +1173,7 @@ function JournalApp({ onNavigate }) {
                         )}
                     </div>
                 </main>
-                <aside className={`${isWideAside ? 'w-[480px] lg:w-[540px] xl:w-[620px] 2xl:w-[700px]' : 'w-[380px] lg:w-[420px] xl:w-[480px] 2xl:w-[520px]'} glass-panel border-l-0 flex flex-col shadow-xl z-20 flex-shrink-0 transition-all duration-300`}>
+                <aside className={`${isWideAside ? 'w-[600px] lg:w-[700px] xl:w-[800px] 2xl:w-[880px]' : 'w-[480px] lg:w-[580px] xl:w-[680px] 2xl:w-[760px]'} glass-panel border-l-0 flex flex-col shadow-xl z-20 flex-shrink-0 transition-all duration-300`}>
                     <div className="p-5 border-b border-[#E8E4D9]/50 flex justify-between items-center bg-[#F9F8F6]/30">
                         <div className="flex items-center gap-2">
                             <FileText className="h-4 w-4 text-[#839788]" />
