@@ -1071,7 +1071,7 @@ function JournalApp({ onNavigate }) {
                         </button>
                     </div>
                 </nav>
-                <main className="flex-1 overflow-y-auto bg-transparent p-6 pr-8 lg:pr-10">
+                <main className="flex-1 min-w-0 overflow-y-auto bg-transparent p-6 pr-6 lg:pr-8">
                     <div className="w-full mx-auto flex flex-col items-stretch">
                         <div className="flex w-full justify-between items-center mb-6">
                             <div>
@@ -1173,7 +1173,7 @@ function JournalApp({ onNavigate }) {
                         )}
                     </div>
                 </main>
-                <aside className={`${isWideAside ? 'w-[520px] lg:w-[620px] xl:w-[720px] 2xl:w-[800px]' : 'w-[420px] lg:w-[500px] xl:w-[580px] 2xl:w-[660px]'} glass-panel border-l-0 flex flex-col shadow-xl z-20 flex-shrink-0 transition-all duration-300`}>
+                <aside className={`${isWideAside ? 'w-[40%] xl:w-[42%] min-w-[360px] max-w-[760px]' : 'w-[28%] lg:w-[30%] xl:w-[32%] 2xl:w-[34%] min-w-[280px] max-w-[620px]'} glass-panel border-l-0 flex flex-col shadow-xl z-20 flex-shrink-0 transition-all duration-300`}>
                     <div className="p-5 border-b border-[#E8E4D9]/50 flex justify-between items-center bg-[#F9F8F6]/30">
                         <div className="flex items-center gap-2">
                             <FileText className="h-4 w-4 text-[#839788]" />
