@@ -389,13 +389,11 @@ ${ir.trim()}
 ${gr.trim()}
 `)),Nt.id==="diagnosis_anorexia"&&Sr.length>0)if(Dr){const tr=Sr[0];tr&&(Qt.push(`Ad kostanamnese:
 Patienten angiver at spise det samme hver dag. Nedenstående er repræsentativt for det daglige indtag:`),tr.meals.morgen&&Qt.push(`- Morgen: ${tr.meals.morgen}`),tr.meals.formiddag&&Qt.push(`- Før frokost: ${tr.meals.formiddag}`),tr.meals.frokost&&Qt.push(`- Frokost: ${tr.meals.frokost}`),tr.meals.eftermiddag&&Qt.push(`- Eftermiddag: ${tr.meals.eftermiddag}`),tr.meals.aften&&Qt.push(`- Aften: ${tr.meals.aften}`),tr.meals.sen_aften&&Qt.push(`- Efter aften: ${tr.meals.sen_aften}`),tr.meals.vaeske&&Qt.push(`- Væske: ${tr.meals.vaeske}`),Qt.push(""))}else Qt.push(`Ad kostanamnese:
-Eksempler fra sidste 14 dage:`),Sr.forEach(tr=>{Qt.push(`${tr.label||"Uden navn"}:`),tr.meals.morgen&&Qt.push(`- Morgen: ${tr.meals.morgen}`),tr.meals.formiddag&&Qt.push(`- Før frokost: ${tr.meals.formiddag}`),tr.meals.frokost&&Qt.push(`- Frokost: ${tr.meals.frokost}`),tr.meals.eftermiddag&&Qt.push(`- Eftermiddag: ${tr.meals.eftermiddag}`),tr.meals.aften&&Qt.push(`- Aften: ${tr.meals.aften}`),tr.meals.sen_aften&&Qt.push(`- Efter aften: ${tr.meals.sen_aften}`),tr.meals.vaeske&&Qt.push(`- Væske: ${tr.meals.vaeske}`),Qt.push("")});if(Nt.id==="coercion"){Nt.options.filter(xr=>!xr.isSedative&&ur.has(xr.id)).forEach(xr=>{const Rt=`${xr.category} - ${xr.label}:`,yt=bt(xr,ar[xr.id]);Qt.push(`${Rt}
-${yt}
+Eksempler fra sidste 14 dage:`),Sr.forEach(tr=>{Qt.push(`${tr.label||"Uden navn"}:`),tr.meals.morgen&&Qt.push(`- Morgen: ${tr.meals.morgen}`),tr.meals.formiddag&&Qt.push(`- Før frokost: ${tr.meals.formiddag}`),tr.meals.frokost&&Qt.push(`- Frokost: ${tr.meals.frokost}`),tr.meals.eftermiddag&&Qt.push(`- Eftermiddag: ${tr.meals.eftermiddag}`),tr.meals.aften&&Qt.push(`- Aften: ${tr.meals.aften}`),tr.meals.sen_aften&&Qt.push(`- Efter aften: ${tr.meals.sen_aften}`),tr.meals.vaeske&&Qt.push(`- Væske: ${tr.meals.vaeske}`),Qt.push("")});if(Nt.id==="coercion"){Nt.options.filter(xr=>!xr.isSedative&&ur.has(xr.id)).forEach(xr=>{const Rt=bt(xr,ar[xr.id]);Qt.push(`${Rt}
 `)});const jr=Nt.options.filter(xr=>xr.isSedative&&ur.has(xr.id));if(jr.length>0){const xr=[];jr.forEach(yt=>{const Mt=yt.fixedDose||(yt.id==="coercion_sedative_lorazepam"?"2mg":"10mg"),Zt=(Ut&&Ut[yt.id]?Ut[yt.id]:yt.defaultRoute||"i.m.").replace(/\.$/,"");xr.push(`Der er givet ${Mt} ${yt.substance} ${Zt}.`)});const Rt=`${COERCION_SEDATIVE_BASE_TEXT}
 
 ${xr.join(`
-`)}`;Qt.push(`Beroligende medicin:
-${Rt}
+`)}`;Qt.push(`${Rt}
 `)}Qt.length>0&&(Nr.push(...Qt),Nr.push(""));return}Array.from(new Set(Nt.options.map(tr=>tr.category))).forEach(tr=>{if(Ir.has(tr))return;const jr=Nt.options.filter(Rt=>Rt.category===tr);if(jr.filter(Rt=>ur.has(Rt.id)).length>0){const Rt=kt(jr,tr,ur,ar);if(Rt){const yt=pt(tr);Qt.push(`Ad ${yt}:
 ${Rt}
 `)}}}),Qt.length>0&&(Nr.push(...Qt),Nr.push(""))}),Nr.join(`
