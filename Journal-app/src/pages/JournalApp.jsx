@@ -2,8 +2,9 @@ import React, { useState, useEffect, useRef, useMemo } from 'react';
 import DiffMatchPatch from 'diff-match-patch';
 import GdprBanner from '../GdprBanner';
 import { ANOREXIA_OPTIONS } from '../data/anorexiaOptions';
+import { COERCION_OPTIONS, COERCION_SEDATIVE_BASE_TEXT } from '../data/coercionOptions';
 import Input from '../components/Input';
-import { Activity, Brain, Stethoscope, FileText, RotateCcw, Clipboard, Copy, Maximize, Minimize, CheckCircle2, AlertCircle, XCircle, ToggleLeft, ToggleRight, MessageSquare, Layers, Trash2, Star, PenLine, Cookie, Plus, ChevronRight, Layout, Repeat, AlertTriangle, AlignLeft } from '../components/Icons';
+import { Activity, Brain, Stethoscope, FileText, RotateCcw, Clipboard, Copy, Maximize, Minimize, CheckCircle2, AlertCircle, XCircle, ToggleLeft, ToggleRight, MessageSquare, Layers, Trash2, Star, PenLine, Cookie, Plus, ChevronRight, Layout, Repeat, AlertTriangle, AlignLeft, ShieldAlert } from '../components/Icons';
 import { ACTUAL_PSYCH_OPTIONS, DEP_CORE_IDS, DEP_ACC_IDS } from '../data/actualPsychOptions';
 import { PSYCH_OPTIONS, PSYCH_NORMAL_IDS } from '../data/psychOptions';
 import { SOMATIC_ACT_OPTIONS, SOMATIC_OBJ_OPTIONS, SOMATIC_NORMAL_IDS, SOMATIC_ACT_NORMAL_IDS } from '../data/somaticOptions';
@@ -17,6 +18,7 @@ function JournalApp({ onNavigate }) {
     const [isFullscreen, setIsFullscreen] = useState(false);
     const [notification, setNotification] = useState(null);
     const [showSummary, setShowSummary] = useState(false);
+    const [sedativeRoutes, setSedativeRoutes] = useState({ coercion_sedative_lorazepam: 'i.m.', coercion_sedative_olanzapine: 'i.m.' });
 
     // Indledende Anamnese states
     const [contactReasonText, setContactReasonText] = useState('');
@@ -39,7 +41,7 @@ function JournalApp({ onNavigate }) {
 
     useEffect(() => {
         const defaults = new Set();
-        [...PSYCH_OPTIONS, ...SOMATIC_OBJ_OPTIONS, ...SOMATIC_ACT_OPTIONS, ...ACTUAL_PSYCH_OPTIONS, ...ANOREXIA_OPTIONS].forEach(opt => {
+        [...PSYCH_OPTIONS, ...SOMATIC_OBJ_OPTIONS, ...SOMATIC_ACT_OPTIONS, ...ACTUAL_PSYCH_OPTIONS, ...ANOREXIA_OPTIONS, ...COERCION_OPTIONS].forEach(opt => {
             if (opt.isDefault) defaults.add(opt.id);
         });
         setSelectedIds(defaults);
@@ -62,6 +64,16 @@ function JournalApp({ onNavigate }) {
     const formatWithDetail = (opt, detail) => {
         let base = opt.text.trim();
         const d = detail ? detail.trim() : '';
+
+        if (opt.hasPlaceholder || /\.{3,}/.test(base)) {
+            if (d === '') return base;
+            let replaced = base.replace(/\.{3,}(\s*(\n|$))/g, (match, p1) => {
+                const term = d.match(/[.:?!]$/) ? d : `${d}.`;
+                return term + p1;
+            });
+            replaced = replaced.replace(/\.{3,}/g, d);
+            return replaced;
+        }
 
         if (d === '') {
             if (base.endsWith(':')) return base.slice(0, -1) + '.';
@@ -224,7 +236,8 @@ function JournalApp({ onNavigate }) {
             }
         });
 
-        let mainText = [...summaryLines, ...standaloneLines].join(' ').trim();
+        const delimiter = (standaloneLines.some(l => l.includes('\n') || l.length > 80)) ? '\n\n' : ' ';
+        let mainText = [...summaryLines, ...standaloneLines].join(delimiter).trim();
 
         if (isDepressionCategory) {
             const severity = calculateDepressionSeverity(currentSelectedIds);
@@ -245,18 +258,19 @@ function JournalApp({ onNavigate }) {
         return mainText;
     };
 
-    const generateTextContent = (section, ids, details, contactReason, timeline, diets, uniform, summaryMode) => {
+    const generateTextContent = (section, ids, details, contactReason, timeline, diets, uniform, summaryMode, routes = sedativeRoutes) => {
         const allSections = [
             { id: 'psych_actual', title: 'AKTUELT PSYKISK (ANAMNESE)', options: ACTUAL_PSYCH_OPTIONS },
             { id: 'psych', title: 'OBJEKTIVT PSYKISK (MSE)', options: PSYCH_OPTIONS },
             { id: 'somatic_act', title: 'AKTUELT SOMATISK', options: SOMATIC_ACT_OPTIONS },
             { id: 'somatic_obj', title: 'SOMATISK VURDERING', options: SOMATIC_OBJ_OPTIONS },
-            { id: 'diagnosis_anorexia', title: 'ANOREKSIA NERVOSA (F50.0)', options: ANOREXIA_OPTIONS }
+            { id: 'diagnosis_anorexia', title: 'ANOREKSIA NERVOSA (F50.0)', options: ANOREXIA_OPTIONS },
+            { id: 'coercion', title: 'STANDARDFRASER TIL TVANG', options: COERCION_OPTIONS }
         ];
 
         let sectionsToRender = [];
         if (section === 'full_note') {
-            sectionsToRender = allSections;
+            sectionsToRender = allSections.filter(s => s.id !== 'coercion');
         } else {
             sectionsToRender = allSections.filter(s => s.id === section);
         }
@@ -339,6 +353,34 @@ function JournalApp({ onNavigate }) {
                 }
             }
 
+            if (sec.id === 'coercion') {
+                const nonSedativeSelected = sec.options.filter(o => !o.isSedative && ids.has(o.id));
+                nonSedativeSelected.forEach(opt => {
+                    const header = `${opt.category} - ${opt.label}:`;
+                    const text = formatWithDetail(opt, details[opt.id]);
+                    sectionLines.push(`${header}\n${text}\n`);
+                });
+
+                const sedativeSelected = sec.options.filter(o => o.isSedative && ids.has(o.id));
+                if (sedativeSelected.length > 0) {
+                    const medLines = [];
+                    sedativeSelected.forEach(opt => {
+                        const dose = opt.fixedDose || (opt.id === 'coercion_sedative_lorazepam' ? '2mg' : '10mg');
+                        const route = (routes && routes[opt.id]) ? routes[opt.id] : (opt.defaultRoute || 'i.m.');
+                        const cleanRoute = route.replace(/\.$/, '');
+                        medLines.push(`Der er givet ${dose} ${opt.substance} ${cleanRoute}.`);
+                    });
+                    const fullSedativeText = `${COERCION_SEDATIVE_BASE_TEXT}\n\n${medLines.join('\n')}`;
+                    sectionLines.push(`Beroligende medicin:\n${fullSedativeText}\n`);
+                }
+
+                if (sectionLines.length > 0) {
+                    lines.push(...sectionLines);
+                    lines.push("");
+                }
+                return;
+            }
+
             const categories = Array.from(new Set(sec.options.map(o => o.category)));
 
             categories.forEach(cat => {
@@ -368,7 +410,7 @@ function JournalApp({ onNavigate }) {
 
 
     useEffect(() => {
-        const autoText = generateTextContent(activeSection, selectedIds, optionDetails, contactReasonText, timelineText, dietDays, isUniformDiet, showSummary);
+        const autoText = generateTextContent(activeSection, selectedIds, optionDetails, contactReasonText, timelineText, dietDays, isUniformDiet, showSummary, sedativeRoutes);
 
         if (!manualEditMode) {
             setGeneratedText(autoText);
@@ -383,7 +425,7 @@ function JournalApp({ onNavigate }) {
             lastAutoTextRef.current = autoText;
             lastUserTextRef.current = newTextArr;
         }
-    }, [selectedIds, activeSection, showSummary, optionDetails, contactReasonText, timelineText, dietDays, isUniformDiet, manualEditMode]);
+    }, [selectedIds, activeSection, showSummary, optionDetails, sedativeRoutes, contactReasonText, timelineText, dietDays, isUniformDiet, manualEditMode]);
 
     const changeSection = (newSection) => {
         if (manualEditMode) setManualEditMode(false);
@@ -396,7 +438,7 @@ function JournalApp({ onNavigate }) {
         lastUserTextRef.current = newValue;
 
         // Auto-gendan hvis teksten matcher den auto-genererede tekst
-        const autoText = generateTextContent(activeSection, selectedIds, optionDetails, contactReasonText, timelineText, dietDays, isUniformDiet, showSummary);
+        const autoText = generateTextContent(activeSection, selectedIds, optionDetails, contactReasonText, timelineText, dietDays, isUniformDiet, showSummary, sedativeRoutes);
         if (newValue === autoText) {
             setManualEditMode(false);
         } else {
@@ -544,6 +586,7 @@ function JournalApp({ onNavigate }) {
             else if (activeSection === 'somatic_obj') currentOptions = SOMATIC_OBJ_OPTIONS;
             else if (activeSection === 'somatic_act') currentOptions = SOMATIC_ACT_OPTIONS;
             else if (activeSection === 'diagnosis_anorexia') currentOptions = ANOREXIA_OPTIONS;
+            else if (activeSection === 'coercion') currentOptions = COERCION_OPTIONS;
 
             const newSet = new Set(selectedIds);
             const newDetails = { ...optionDetails };
@@ -559,6 +602,10 @@ function JournalApp({ onNavigate }) {
             if (activeSection === 'diagnosis_anorexia') {
                 setDietDays([]);
                 setIsUniformDiet(false);
+            }
+
+            if (activeSection === 'coercion') {
+                setSedativeRoutes({ coercion_sedative_lorazepam: 'i.m.', coercion_sedative_olanzapine: 'i.m.' });
             }
 
             setSelectedIds(newSet);
@@ -577,6 +624,7 @@ function JournalApp({ onNavigate }) {
         else if (activeSection === 'somatic_obj') currentOptions = SOMATIC_OBJ_OPTIONS;
         else if (activeSection === 'somatic_act') currentOptions = SOMATIC_ACT_OPTIONS;
         else if (activeSection === 'diagnosis_anorexia') currentOptions = ANOREXIA_OPTIONS;
+        else if (activeSection === 'coercion') currentOptions = COERCION_OPTIONS;
         else if (activeSection === 'full_note') {
             return;
         }
@@ -589,6 +637,10 @@ function JournalApp({ onNavigate }) {
         });
 
         currentOptions.filter(o => o.isDefault).forEach(o => newSet.add(o.id));
+
+        if (activeSection === 'coercion') {
+            setSedativeRoutes({ coercion_sedative_lorazepam: 'i.m.', coercion_sedative_olanzapine: 'i.m.' });
+        }
 
         setSelectedIds(newSet);
         setManualEditMode(false);
@@ -638,10 +690,18 @@ function JournalApp({ onNavigate }) {
                 trimmed === 'AKTUELT PSYKISK (ANAMNESE)' ||
                 trimmed === 'AKTUELT SOMATISK' ||
                 trimmed === 'SOMATISK VURDERING' ||
-                trimmed === 'ANOREKSIA NERVOSA (F50.0)') continue;
+                trimmed === 'ANOREKSIA NERVOSA (F50.0)' ||
+                trimmed === 'STANDARDFRASER TIL TVANG') continue;
             
             // Skip "Ad category:" lines
             if (trimmed.toLowerCase().startsWith('ad ') && trimmed.endsWith(':')) continue;
+            if (trimmed.endsWith(':') && (
+                trimmed.includes('Tvangstilbageholdelse') ||
+                trimmed.includes('Tvangsindlæggelse') ||
+                trimmed.includes('Revurdering') ||
+                trimmed.includes('Beroligende medicin') ||
+                trimmed.includes('Bæltefiksering')
+            )) continue;
 
             // Split into sentences (simple splitting by dot and space)
             const splitSentences = trimmed.split(/\. /);
@@ -947,7 +1007,7 @@ function JournalApp({ onNavigate }) {
                                                     </div>
                                                 </div>
                                             </button>
-                                            {isSelected && (
+                                            {isSelected && !option.isSedative && (
                                                 <div className="mt-2 mb-2 ml-2 pl-3 border-l-2 border-[#839788]/30">
                                                     <input
                                                         type="text"
@@ -957,6 +1017,25 @@ function JournalApp({ onNavigate }) {
                                                         onChange={(e) => handleDetailChange(option.id, e.target.value)}
                                                         onClick={(e) => e.stopPropagation()}
                                                     />
+                                                </div>
+                                            )}
+                                            {isSelected && option.isSedative && (
+                                                <div className="mt-2 mb-2 ml-2 p-3 bg-white/80 border border-[#E8E4D9] rounded-xl flex items-center justify-between gap-2 shadow-sm text-xs text-[#3A4A40] animate-in fade-in slide-in-from-top-1">
+                                                    <span className="font-semibold text-[11px] text-[#55695B] uppercase tracking-wider">
+                                                        Fold-ud: Vælg p.o / i.m ({option.fixedDose}):
+                                                    </span>
+                                                    <select
+                                                        value={sedativeRoutes[option.id] || 'i.m.'}
+                                                        onChange={(e) => {
+                                                            e.stopPropagation();
+                                                            setSedativeRoutes(prev => ({ ...prev, [option.id]: e.target.value }));
+                                                        }}
+                                                        onClick={(e) => e.stopPropagation()}
+                                                        className="text-xs py-1 px-2.5 bg-white border border-[#E8E4D9] rounded-lg focus:outline-none focus:border-[#839788] font-bold text-[#3A4A40] shadow-xs cursor-pointer"
+                                                    >
+                                                        <option value="i.m.">i.m. (intramuskulært)</option>
+                                                        <option value="p.o.">p.o. (peroralt)</option>
+                                                    </select>
                                                 </div>
                                             )}
                                         </div>
@@ -1066,6 +1145,11 @@ function JournalApp({ onNavigate }) {
                             <Cookie className={`h-5 w-5 ${activeSection === 'diagnosis_anorexia' ? 'text-[#839788]' : 'text-slate-400'}`} /> <span className="font-medium">Anoreksia Nervosa</span>
                         </button>
                         <div className="h-px bg-[#E8E4D9] my-2"></div>
+                        <div className="px-3 py-1"><span className="text-xs font-semibold text-[#839788]/80 uppercase tracking-wider">Tvang & Akut</span></div>
+                        <button onClick={() => changeSection('coercion')} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left transition-all duration-200 ${activeSection === 'coercion' ? 'bg-white text-[#3A4A40] shadow ring-1 ring-[#E8E4D9]' : 'text-slate-600 hover:bg-white/60'}`}>
+                            <ShieldAlert className={`h-5 w-5 ${activeSection === 'coercion' ? 'text-[#839788]' : 'text-slate-400'}`} /> <span className="font-medium">Standardfraser til tvang</span>
+                        </button>
+                        <div className="h-px bg-[#E8E4D9] my-2"></div>
                         <button onClick={() => changeSection('full_note')} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left transition-all duration-200 ${activeSection === 'full_note' ? 'bg-[#3A4A40] text-white shadow shadow-[#3A4A40]/30' : 'text-[#3A4A40] bg-[#E8E4D9]/50 hover:bg-[#E8E4D9]'}`}>
                             <Layers className={`h-5 w-5 ${activeSection === 'full_note' ? 'text-white' : 'text-[#839788]'}`} /> <span className="font-bold">Samlet Notat</span>
                         </button>
@@ -1081,6 +1165,7 @@ function JournalApp({ onNavigate }) {
                                     {activeSection === 'somatic_obj' && 'Somatisk Vurdering'}
                                     {activeSection === 'somatic_act' && 'Somatisk Anamnese'}
                                     {activeSection === 'diagnosis_anorexia' && 'Anoreksia Nervosa (F50.0)'}
+                                    {activeSection === 'coercion' && 'Standardfraser til tvang'}
                                     {activeSection === 'full_note' && 'Samlet Journalnotat (Oversigt)'}
                                 </h2>
                             </div>
@@ -1118,6 +1203,28 @@ function JournalApp({ onNavigate }) {
                         {activeSection === 'somatic_act' && renderCardGrid(SOMATIC_ACT_OPTIONS)}
                         {activeSection === 'somatic_obj' && renderCardGrid(SOMATIC_OBJ_OPTIONS)}
                         {activeSection === 'diagnosis_anorexia' && renderCardGrid(ANOREXIA_OPTIONS)}
+                        {activeSection === 'coercion' && (
+                            <div className="flex flex-col gap-6 w-full">
+                                {renderCardGrid(COERCION_OPTIONS)}
+                                <div className="glass-panel p-4 rounded-2xl border border-[#E8E4D9] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-[#55695B] bg-white/50">
+                                    <div>
+                                        <span className="font-semibold text-[#3A4A40]">Generelt tillæg (kan tilføjes ved behov):</span>
+                                        <p className="italic mt-0.5">"Ingen sygdomsindsigt. Behandlingsalliancen er særdeles ringe på nuværende tidspunkt."</p>
+                                    </div>
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            navigator.clipboard.writeText("Ingen sygdomsindsigt. Behandlingsalliancen er særdeles ringe på nuværende tidspunkt.");
+                                            setNotification({ message: 'Kopieret til udklipsholder', type: 'success' });
+                                            setTimeout(() => setNotification(null), 2500);
+                                        }}
+                                        className="px-3 py-1.5 bg-white hover:bg-[#F2F6F3] text-[#3A4A40] border border-[#E8E4D9] rounded-xl font-medium flex items-center gap-1.5 shrink-0 transition-colors shadow-sm cursor-pointer"
+                                    >
+                                        <Copy className="w-3.5 h-3.5 text-[#839788]" /> Kopier sætning
+                                    </button>
+                                </div>
+                            </div>
+                        )}
                         {activeSection === 'full_note' && (
                             <div className="glass-panel w-full rounded-2xl shadow-sm p-6 md:p-8 flex flex-col mb-12">
                                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 mb-5 border-b border-[#E8E4D9]">
