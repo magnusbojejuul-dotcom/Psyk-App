@@ -356,9 +356,8 @@ function JournalApp({ onNavigate }) {
             if (sec.id === 'coercion') {
                 const nonSedativeSelected = sec.options.filter(o => !o.isSedative && ids.has(o.id));
                 nonSedativeSelected.forEach(opt => {
-                    const header = `${opt.category} - ${opt.label}:`;
                     const text = formatWithDetail(opt, details[opt.id]);
-                    sectionLines.push(`${header}\n${text}\n`);
+                    sectionLines.push(`${text}\n`);
                 });
 
                 const sedativeSelected = sec.options.filter(o => o.isSedative && ids.has(o.id));
@@ -371,7 +370,7 @@ function JournalApp({ onNavigate }) {
                         medLines.push(`Der er givet ${dose} ${opt.substance} ${cleanRoute}.`);
                     });
                     const fullSedativeText = `${COERCION_SEDATIVE_BASE_TEXT}\n\n${medLines.join('\n')}`;
-                    sectionLines.push(`Beroligende medicin:\n${fullSedativeText}\n`);
+                    sectionLines.push(`${fullSedativeText}\n`);
                 }
 
                 if (sectionLines.length > 0) {
