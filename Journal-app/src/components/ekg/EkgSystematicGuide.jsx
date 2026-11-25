@@ -14,6 +14,7 @@ import {
     Maximize2, 
     ExternalLink 
 } from '../Icons';
+import CabreraAxisCompass from './CabreraAxisCompass';
 
 // Kliniske Billedimport til de 7 trin
 // 1. Rytme
@@ -315,38 +316,8 @@ export default function EkgSystematicGuide({ onNavigateTab, onSelectCase }) {
                             </div>
                         </div>
 
-                        {/* Pædagogisk Cabrera SVG Diagram */}
-                        <div className="p-3 bg-[#F2F6F3] rounded-xl border border-[#D9E1DA] flex flex-col md:flex-row items-center gap-4">
-                            <div className="w-48 h-48 shrink-0 relative flex items-center justify-center">
-                                <svg viewBox="0 0 200 200" className="w-full h-full">
-                                    {/* Cirkel baggrund */}
-                                    <circle cx="100" cy="100" r="85" fill="#FAF9F6" stroke="#D9E1DA" strokeWidth="2" />
-                                    {/* Normal Sektor (-30° til +90°) */}
-                                    <path d="M 100 100 L 173.6 57.5 A 85 85 0 0 1 100 185 Z" fill="#E2E8DF" opacity="0.65" />
-                                    {/* Akser */}
-                                    <line x1="15" y1="100" x2="185" y2="100" stroke="#839788" strokeWidth="1.5" strokeDasharray="3 3" />
-                                    <line x1="100" y1="15" x2="100" y2="185" stroke="#839788" strokeWidth="1.5" strokeDasharray="3 3" />
-                                    {/* Lead Vektorer */}
-                                    <line x1="100" y1="100" x2="185" y2="100" stroke="#2C3F34" strokeWidth="2.5" />
-                                    <line x1="100" y1="100" x2="142.5" y2="173.6" stroke="#2C3F34" strokeWidth="2.5" />
-                                    <line x1="100" y1="100" x2="100" y2="185" stroke="#2C3F34" strokeWidth="2.5" />
-                                    <line x1="100" y1="100" x2="173.6" y2="57.5" stroke="#2C3F34" strokeWidth="1.5" />
-                                    {/* Tekster */}
-                                    <text x="175" y="95" fontSize="9" fontWeight="bold" fill="#2C3F34">I (0°)</text>
-                                    <text x="145" y="180" fontSize="9" fontWeight="bold" fill="#2C3F34">II (+60°)</text>
-                                    <text x="92" y="195" fontSize="9" fontWeight="bold" fill="#2C3F34">aVF (+90°)</text>
-                                    <text x="160" y="50" fontSize="9" fontWeight="bold" fill="#839788">aVL (-30°)</text>
-                                    <text x="100" y="125" fontSize="8" fontWeight="bold" fill="#2C3F34" textAnchor="middle">Normal Akse</text>
-                                </svg>
-                            </div>
-                            <div className="text-[11px] text-[#3A4A40] space-y-1.5">
-                                <strong className="block text-xs font-bold text-[#2C3F34]">Cabrera-Cirklen & Polaritet:</strong>
-                                <p>• <strong>Lead I (0°):</strong> Måler horisontalt mod venstre arm.</p>
-                                <p>• <strong>Lead II (+60°):</strong> Måler skråt nedad mod venstre fod (hjertets fysiologiske anatomiske længdeakse).</p>
-                                <p>• <strong>aVF (+90°):</strong> Måler lodret nedad mod fødderne.</p>
-                                <p>• Hvis både I og II er positive, <em>skal</em> aksen ligge i det grønne fysiologiske felt (-30° til +90°)!</p>
-                            </div>
-                        </div>
+                        {/* Pædagogisk Interaktiv Cabrera SVG Diagram */}
+                        <CabreraAxisCompass />
                     </div>
                 </div>
             ),

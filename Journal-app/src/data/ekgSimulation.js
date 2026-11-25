@@ -76,7 +76,7 @@ const QRS_KNOTS = [
     [264, 1.0, 0.55, -0.60], [280, -0.08, -0.17, -0.14], [300, 0, 0, 0],
 ];
 
-export function cardiacVector(time) {
+export function cardiacVector(time, axisOffsetDeg = 0) {
     const t = cyclePosition(time);
     if (t >= 80 && t < 180) {
         const envelope = Math.sin(Math.PI * (t - 80) / 100) ** 2;
@@ -88,33 +88,106 @@ export function cardiacVector(time) {
         const to = QRS_KNOTS[index + 1];
         const fraction = (t - from[0]) / (to[0] - from[0]);
         const smooth = fraction * fraction * (3 - 2 * fraction);
-        return from.slice(1).map((value, axis) => value + (to[axis + 1] - value) * smooth);
+        const base = from.slice(1).map((value, axis) => value + (to[axis + 1] - value) * smooth);
+        return rotateFrontal(base, axisOffsetDeg);
     }
     if (t >= 380 && t < 540) {
         const envelope = Math.sin(Math.PI * (t - 380) / 160) ** 2;
-        return [0.28, 0.38, 0.10].map(value => value * envelope);
+        return rotateFrontal([0.28, 0.38, 0.10].map(value => value * envelope), axisOffsetDeg * 0.45);
     }
     return [0, 0, 0];
 }
 
-export function voltageAt(lead, time) {
-    const axis = (MODEL_LEADS[lead] || MODEL_LEADS.II).axis;
-    return cardiacVector(time).reduce((sum, value, index) => sum + value * axis[index], 0);
+function rotateFrontal([x, y, z], deg) {
+    if (!deg) return [x, y, z];
+    const rad = radians(deg);
+    const cos = Math.cos(rad);
+    const sin = Math.sin(rad);
+    return [x * cos - y * sin, x * sin + y * cos, z];
 }
 
-export function projectionAt(lead, time) {
+export function voltageAt(lead, time, axisOffsetDeg = 0) {
+    const axis = (MODEL_LEADS[lead] || MODEL_LEADS.II).axis;
+    return cardiacVector(time, axisOffsetDeg).reduce((sum, value, index) => sum + value * axis[index], 0);
+}
+
+export function projectionAt(lead, time, axisOffsetDeg = 0) {
     const details = MODEL_LEADS[lead] || MODEL_LEADS.II;
-    const vector = cardiacVector(time);
+    const vector = cardiacVector(time, axisOffsetDeg);
     const visibleVector = [vector[0], vector[details.plane === 'frontal' ? 1 : 2]];
     const unit = [Math.cos(radians(details.angle)), Math.sin(radians(details.angle))];
     const length = visibleVector[0] * unit[0] + visibleVector[1] * unit[1];
-    return { vector: visibleVector, unit, point: unit.map(value => value * length), voltage: voltageAt(lead, time) };
+    return { vector: visibleVector, unit, point: unit.map(value => value * length), voltage: voltageAt(lead, time, axisOffsetDeg) };
 }
 
-export function waveformPath(lead, width = 400, baseline = 100, gain = 56) {
+export function waveformPath(lead, width = 400, baseline = 100, gain = 56, axisOffsetDeg = 0) {
     const points = [];
     for (let time = 0; time <= CYCLE_MS; time += 2) {
-        points.push(`${time === 0 ? 'M' : 'L'}${(time / CYCLE_MS * width).toFixed(2)},${(baseline - voltageAt(lead, time) * gain).toFixed(2)}`);
+        points.push(`${time === 0 ? 'M' : 'L'}${(time / CYCLE_MS * width).toFixed(2)},${(baseline - voltageAt(lead, time, axisOffsetDeg) * gain).toFixed(2)}`);
+    }
+    return points.join(' ');
+}
+
+export const AXIS_PRESETS = {
+    normal: {
+        id: 'normal',
+        label: 'Normal akse',
+        short: 'Normal (+50°)',
+        offsetDeg: 0,
+        zone: 'Normal (−30° til +90°)',
+        color: '#2f7a62',
+        clinicalNote: 'Venstre ventrikels tykke væg leder nettovektoren nedad mod venstre (langs afledning II). Både I og II er positive.'
+    },
+    lad: {
+        id: 'lad',
+        label: 'Venstredrejet (LAD)',
+        short: 'LAD (−50°)',
+        offsetDeg: -100,
+        zone: 'Venstredrejet (< −30°)',
+        color: '#c87a19',
+        clinicalNote: 'Nettovektoren drejer opad mod venstre skulder (fx LAFB eller udtalt LVH). Afledning I og aVL er positive, mens II og aVF bliver negative.'
+    },
+    rad: {
+        id: 'rad',
+        label: 'Højredrejet (RAD)',
+        short: 'RAD (+110°)',
+        offsetDeg: 60,
+        zone: 'Højredrejet (> +90°)',
+        color: '#d45b2c',
+        clinicalNote: 'Nettovektoren drejer nedad mod højre (fx akut lungeemboli eller RVH). Afledning I bliver negativ, mens III og aVF bliver kraftigt positive.'
+    }
+};
+
+export function meanQrsAngle(axisOffsetDeg = 0) {
+    let sx = 0;
+    let sy = 0;
+    for (let t = 210; t <= 300; t += 2) {
+        const [x, y] = cardiacVector(t, axisOffsetDeg);
+        sx += x;
+        sy += y;
+    }
+    let deg = Math.atan2(sy, sx) * 180 / Math.PI;
+    if (deg <= -180) deg += 360;
+    if (deg > 180) deg -= 360;
+    return deg;
+}
+
+export function axisZoneForAngle(angleDeg) {
+    let a = ((angleDeg % 360) + 360) % 360;
+    if (a > 180) a -= 360;
+    if (a >= -30 && a <= 90) return { id: 'normal', label: 'Normal akse', color: '#2f7a62' };
+    if (a >= -90 && a < -30) return { id: 'lad', label: 'Venstredrejet (LAD)', color: '#c87a19' };
+    if (a > 90 && a <= 180) return { id: 'rad', label: 'Højredrejet (RAD)', color: '#d45b2c' };
+    return { id: 'extreme', label: 'Ekstrem akse', color: '#be3c48' };
+}
+
+export function vectorLoopPath(plane, cx, cy, scale, axisOffsetDeg = 0) {
+    const points = [];
+    for (let t = 210; t <= 300; t += 2) {
+        const v = cardiacVector(t, axisOffsetDeg);
+        const vx = v[0];
+        const vy = v[plane === 'frontal' ? 1 : 2];
+        points.push(`${t === 210 ? 'M' : 'L'}${(cx + vx * scale).toFixed(2)},${(cy + vy * scale).toFixed(2)}`);
     }
     return points.join(' ');
 }

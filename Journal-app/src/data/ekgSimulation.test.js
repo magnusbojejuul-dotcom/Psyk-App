@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { MODEL_LEADS, PHASES, advancePlayback, cardiacVector, phaseAt, projectionAt, voltageAt, waveformPath } from './ekgSimulation.js';
+import { AXIS_PRESETS, MODEL_LEADS, PHASES, advancePlayback, axisZoneForAngle, cardiacVector, meanQrsAngle, phaseAt, projectionAt, vectorLoopPath, voltageAt, waveformPath } from './ekgSimulation.js';
 
 const close = (actual, expected, tolerance = 1e-10) => assert.ok(Math.abs(actual - expected) < tolerance, `${actual} differs from ${expected}`);
 
@@ -85,4 +85,58 @@ test('phase targets, quiet intervals, and cycle wrap stay synchronized', () => {
             assert.ok(Math.abs(value - cardiacVector(time + .001)[index]) < .001);
         });
     }
+});
+
+test('Einthoven and augmented lead identities hold across all axis presets', () => {
+    for (const preset of Object.values(AXIS_PRESETS)) {
+        const offset = preset.offsetDeg;
+        for (let time = 0; time < 800; time += 2) {
+            const I = voltageAt('I', time, offset);
+            const II = voltageAt('II', time, offset);
+            close(II, I + voltageAt('III', time, offset));
+            close(voltageAt('aVR', time, offset), -(I + II) / 2);
+            close(voltageAt('aVL', time, offset), I - II / 2);
+            close(voltageAt('aVF', time, offset), II - I / 2);
+        }
+    }
+});
+
+test('meanQrsAngle, axisZoneForAngle, and net QRS polarities match Normal, LAD, and RAD', () => {
+    const angleNormal = meanQrsAngle(AXIS_PRESETS.normal.offsetDeg);
+    const angleLad = meanQrsAngle(AXIS_PRESETS.lad.offsetDeg);
+    const angleRad = meanQrsAngle(AXIS_PRESETS.rad.offsetDeg);
+
+    assert.ok(angleNormal >= 45 && angleNormal <= 65, `Normal angle was ${angleNormal}`);
+    assert.ok(angleLad >= -55 && angleLad <= -35, `LAD angle was ${angleLad}`);
+    assert.ok(angleRad >= 105 && angleRad <= 125, `RAD angle was ${angleRad}`);
+
+    assert.equal(axisZoneForAngle(angleNormal).id, 'normal');
+    assert.equal(axisZoneForAngle(angleLad).id, 'lad');
+    assert.equal(axisZoneForAngle(angleRad).id, 'rad');
+    assert.equal(axisZoneForAngle(-135).id, 'extreme');
+
+    const netQrs = (lead, offset) => {
+        let sum = 0;
+        for (let t = 210; t <= 300; t += 2) sum += voltageAt(lead, t, offset);
+        return sum;
+    };
+
+    assert.ok(netQrs('I', AXIS_PRESETS.lad.offsetDeg) > 0);
+    assert.ok(netQrs('II', AXIS_PRESETS.lad.offsetDeg) < 0);
+    assert.ok(netQrs('aVF', AXIS_PRESETS.lad.offsetDeg) < 0);
+
+    assert.ok(netQrs('I', AXIS_PRESETS.rad.offsetDeg) < 0);
+    assert.ok(netQrs('III', AXIS_PRESETS.rad.offsetDeg) > 0);
+    assert.ok(netQrs('aVF', AXIS_PRESETS.rad.offsetDeg) > 0);
+
+    const extremeAngle = meanQrsAngle(175);
+    assert.equal(Math.round(extremeAngle), -135);
+    assert.equal(axisZoneForAngle(extremeAngle).id, 'extreme');
+    assert.ok(netQrs('I', 175) < 0);
+    assert.ok(netQrs('II', 175) < 0);
+    assert.ok(netQrs('aVF', 175) < 0);
+    assert.ok(netQrs('aVR', 175) > 0);
+
+    assert.ok(vectorLoopPath('frontal', 330, 260, 104, 0).startsWith('M'));
+    assert.ok(vectorLoopPath('horizontal', 330, 248, 86, 0).startsWith('M'));
 });
