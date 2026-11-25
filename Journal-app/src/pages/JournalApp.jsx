@@ -4,7 +4,7 @@ import GdprBanner from '../GdprBanner';
 import { ANOREXIA_OPTIONS } from '../data/anorexiaOptions';
 import { COERCION_OPTIONS, COERCION_SEDATIVE_BASE_TEXT } from '../data/coercionOptions';
 import Input from '../components/Input';
-import { Activity, Brain, Stethoscope, FileText, RotateCcw, Clipboard, Copy, Maximize, Minimize, CheckCircle2, AlertCircle, XCircle, ToggleLeft, ToggleRight, MessageSquare, Layers, Trash2, Star, PenLine, Cookie, Plus, ChevronRight, Layout, Repeat, AlertTriangle, AlignLeft, ShieldAlert } from '../components/Icons';
+import { Activity, Brain, Stethoscope, FileText, RotateCcw, Clipboard, Copy, Maximize, Minimize, CheckCircle2, AlertCircle, XCircle, ToggleLeft, ToggleRight, MessageSquare, Layers, Trash2, Star, PenLine, Cookie, Plus, ChevronRight, Layout, Repeat, AlertTriangle, AlignLeft, ShieldAlert, Info } from '../components/Icons';
 import { ACTUAL_PSYCH_OPTIONS, DEP_CORE_IDS, DEP_ACC_IDS } from '../data/actualPsychOptions';
 import { PSYCH_OPTIONS, PSYCH_NORMAL_IDS } from '../data/psychOptions';
 import { SOMATIC_ACT_OPTIONS, SOMATIC_OBJ_OPTIONS, SOMATIC_NORMAL_IDS, SOMATIC_ACT_NORMAL_IDS } from '../data/somaticOptions';
@@ -38,14 +38,7 @@ function JournalApp({ onNavigate }) {
     // Custom Modal State
     const [confirmDialog, setConfirmDialog] = useState({ isOpen: false, action: null });
     const [isWideAside, setIsWideAside] = useState(false);
-
-    useEffect(() => {
-        const defaults = new Set();
-        [...PSYCH_OPTIONS, ...SOMATIC_OBJ_OPTIONS, ...SOMATIC_ACT_OPTIONS, ...ACTUAL_PSYCH_OPTIONS, ...ANOREXIA_OPTIONS, ...COERCION_OPTIONS].forEach(opt => {
-            if (opt.isDefault) defaults.add(opt.id);
-        });
-        setSelectedIds(defaults);
-    }, []);
+    const [isResultFocused, setIsResultFocused] = useState(false);
 
     // --- CORE TEXT GENERATION LOGIC ---
 
@@ -309,11 +302,6 @@ function JournalApp({ onNavigate }) {
         sectionsToRender.forEach(sec => {
             const sectionLines = [];
 
-            if (section === 'full_note') {
-                sectionLines.push(sec.title);
-                sectionLines.push("");
-            }
-
             if (sec.id === 'psych_actual') {
                 if (contactReason.trim()) {
                     sectionLines.push(`Ad kontaktårsag:\n${contactReason.trim()}\n`);
@@ -398,6 +386,10 @@ function JournalApp({ onNavigate }) {
             });
 
             if (sectionLines.length > 0) {
+                if (section === 'full_note') {
+                    lines.push(sec.title);
+                    lines.push("");
+                }
                 lines.push(...sectionLines);
                 lines.push("");
             }
@@ -634,8 +626,6 @@ function JournalApp({ onNavigate }) {
         currentOptions.forEach(o => {
             newSet.delete(o.id);
         });
-
-        currentOptions.filter(o => o.isDefault).forEach(o => newSet.add(o.id));
 
         if (activeSection === 'coercion') {
             setSedativeRoutes({ coercion_sedative_lorazepam: 'i.m.', coercion_sedative_olanzapine: 'i.m.' });
@@ -1304,8 +1294,38 @@ function JournalApp({ onNavigate }) {
                             className={`absolute inset-0 w-full h-full p-6 border-none resize-none focus:ring-0 text-sm leading-[1.8] text-[#3A4A40] font-mono bg-transparent focus:outline-none ${manualEditMode ? 'bg-[#F9F8F6]/50 shadow-inner' : ''}`}
                             value={generatedText}
                             onChange={handleManualTextChange}
+                            onFocus={() => setIsResultFocused(true)}
+                            onBlur={() => setIsResultFocused(false)}
                             spellCheck="false"
                         ></textarea>
+                        {!generatedText.trim() && !isResultFocused && (
+                            <div className="absolute inset-0 p-5 flex items-start pointer-events-none select-none">
+                                <div className="bg-[#FAF9F6]/90 border border-[#E8E4D9] rounded-2xl p-4 shadow-xs w-full">
+                                    <div className="flex items-start gap-2.5">
+                                        <Info className="w-4 h-4 text-[#839788] shrink-0 mt-0.5" />
+                                        <h4 className="text-xs font-bold uppercase tracking-wider text-[#3A4A40]">
+                                            Kom i gang med journalnotatet
+                                        </h4>
+                                    </div>
+                                    <ul className="text-xs leading-relaxed text-[#55695B] space-y-1.5 mt-2.5 list-disc pl-5">
+                                        <li>
+                                            <strong className="text-[#3A4A40]">Afkryds valg</strong> i de forskellige underemner til venstre – journalteksten opbygges automatisk her.
+                                        </li>
+                                        <li>
+                                            <strong className="text-[#3A4A40]">Uddyb oplysninger</strong> i tekstfeltet, der vises lige nedenunder et afkrydset valg.
+                                        </li>
+                                        <li>
+                                            <strong className="text-[#3A4A40]">Skriv direkte</strong> i dette resultat-afsnit ved at klikke her og begynde at skrive.
+                                        </li>
+                                    </ul>
+                                    {(activeSection === 'psych' || activeSection === 'somatic_act' || activeSection === 'somatic_obj') && (
+                                        <p className="text-[11px] text-[#839788] mt-3 pt-2.5 border-t border-[#E8E4D9]/70">
+                                            Tip: Brug &quot;Sæt Normalstatus&quot; øverst, hvis du ønsker normaltekst indsat.
+                                        </p>
+                                    )}
+                                </div>
+                            </div>
+                        )}
                     </div>
                     {manualEditMode && (
                         <div className="bg-[#FAF9F6] px-5 py-3 border-t border-[#E8E4D9] flex items-center justify-between text-xs">
