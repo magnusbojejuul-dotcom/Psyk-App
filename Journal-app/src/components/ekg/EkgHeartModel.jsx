@@ -12,6 +12,7 @@ import {
     voltageAt,
     waveformPath
 } from '../../data/ekgSimulation';
+import { PHASE_COLORS } from '../../data/heartConductionPaths';
 import EkgChestModel from './EkgChestModel';
 import EkgFrontalHeartSvg from './EkgFrontalHeartSvg';
 import './EkgHeartModel.css';
@@ -19,7 +20,17 @@ import './EkgHeartModel.css';
 const LEADS = Object.keys(MODEL_LEADS);
 const FRONTAL_ORDER = ['aVL', 'I', 'II', 'aVF', 'III', 'aVR'];
 
-function Trace({ lead, time, compact = false, axisOffsetDeg = 0 }) {
+const TRACE_SEGMENTS = [
+    { id: 'rest1', start: 0, end: 80, color: PHASE_COLORS.rest },
+    { id: 'p', start: 80, end: 180, color: PHASE_COLORS.p },
+    { id: 'pr', start: 180, end: 210, color: PHASE_COLORS.pr },
+    { id: 'qrs', start: 210, end: 300, color: PHASE_COLORS.qrs },
+    { id: 'st', start: 300, end: 380, color: PHASE_COLORS.st },
+    { id: 't', start: 380, end: 540, color: PHASE_COLORS.t },
+    { id: 'rest2', start: 540, end: 800, color: PHASE_COLORS.rest }
+];
+
+function Trace({ lead, time, compact = false, axisOffsetDeg = 0, onJump }) {
     const id = useId().replace(/:/g, '');
     const width = 400;
     const baseline = compact ? 40 : 104;
@@ -29,12 +40,37 @@ function Trace({ lead, time, compact = false, axisOffsetDeg = 0 }) {
     const x = time / CYCLE_MS * width;
     const y = baseline - voltageAt(lead, time, axisOffsetDeg) * gain;
     const phase = phaseAt(time);
+    const activeColor = phase.id === 'p'
+        ? PHASE_COLORS.p
+        : phase.id === 'pr'
+            ? PHASE_COLORS.pr
+            : ['septal', 'ventricular', 'basal'].includes(phase.id)
+                ? PHASE_COLORS.qrs
+                : phase.id === 'st'
+                    ? PHASE_COLORS.st
+                    : phase.id === 't'
+                        ? PHASE_COLORS.t
+                        : PHASE_COLORS.rest;
     const showPhaseBand = !compact && phase.id !== 'rest';
     const bandX = phase.start / CYCLE_MS * width;
     const bandW = (phase.end - phase.start) / CYCLE_MS * width;
 
+    const handleSvgClick = event => {
+        if (compact || !onJump) return;
+        const rect = event.currentTarget.getBoundingClientRect();
+        if (!rect.width) return;
+        const frac = Math.max(0, Math.min(0.999, (event.clientX - rect.left) / rect.width));
+        onJump(Math.round(frac * CYCLE_MS));
+    };
+
     return (
-        <svg viewBox={`0 0 ${width} ${height}`} className={compact ? 'ehm-mini-trace' : 'ehm-trace'} role="img" aria-label={`EKG-kurve for ${lead}`}>
+        <svg
+            viewBox={`0 0 ${width} ${height}`}
+            className={`${compact ? 'ehm-mini-trace' : 'ehm-trace'} ${!compact && onJump ? 'is-interactive' : ''}`}
+            role="img"
+            aria-label={`EKG-kurve for ${lead}`}
+            onClick={handleSvgClick}
+        >
             <defs>
                 <pattern id={`${id}-subgrid`} width="4" height="4" patternUnits="userSpaceOnUse">
                     <path d="M4 0H0V4" fill="none" stroke="#f2e7e5" strokeWidth="0.45" />
@@ -44,21 +80,58 @@ function Trace({ lead, time, compact = false, axisOffsetDeg = 0 }) {
                     <path d="M20 0H0V20" fill="none" stroke="#e4d6d3" strokeWidth="0.85" />
                 </pattern>
                 <clipPath id={`${id}-sweep`}><rect width={x} height={height} /></clipPath>
+                {!compact && TRACE_SEGMENTS.map(seg => {
+                    const segEnd = Math.min(time, seg.end);
+                    const segX = seg.start / CYCLE_MS * width;
+                    const segW = Math.max(0, (segEnd - seg.start) / CYCLE_MS * width);
+                    return (
+                        <clipPath key={seg.id} id={`${id}-seg-${seg.id}`}>
+                            <rect x={segX} y="0" width={segW} height={height} />
+                        </clipPath>
+                    );
+                })}
             </defs>
             {!compact && <rect width="400" height={height} fill={`url(#${id}-grid)`} rx="8" />}
             {showPhaseBand && (
-                <rect x={bandX} y="24" width={bandW} height={height - 42} fill={phase.color} opacity="0.085" rx="3" />
+                <rect x={bandX} y="24" width={bandW} height={height - 42} fill={activeColor} opacity="0.09" rx="3" />
             )}
             {!compact && PHASES.filter(p => ['p', 'ventricular', 't'].includes(p.id)).map(p => (
-                <text key={p.id} x={p.time / 2} y="17" className="ehm-wave-label">
+                <text
+                    key={p.id}
+                    x={p.time / 2}
+                    y="17"
+                    className="ehm-wave-label"
+                    style={{
+                        fill: p.id === 'p' ? PHASE_COLORS.p : p.id === 't' ? PHASE_COLORS.t : PHASE_COLORS.qrs,
+                        fontWeight: 700
+                    }}
+                >
                     {p.id === 'ventricular' ? 'QRS' : p.short}
                 </text>
             ))}
             <line x1="0" y1={baseline} x2="400" y2={baseline} stroke="#b9c6bd" strokeWidth="0.9" />
-            <path d={path} fill="none" stroke="#b9c9bf" strokeWidth={compact ? 1.9 : 2.1} />
-            <path d={path} clipPath={`url(#${id}-sweep)`} fill="none" stroke="#2f7a62" strokeWidth={compact ? 2.5 : 2.8} strokeLinejoin="round" />
-            <line x1={x} y1={compact ? 0 : 24} x2={x} y2={height - (compact ? 0 : 18)} stroke="#d58227" strokeWidth="1.1" opacity="0.7" />
-            <circle cx={x} cy={y} r={compact ? 3 : 4.5} fill="#d58227" stroke="white" strokeWidth="1.5" data-trace-dot={lead} />
+            <path d={path} fill="none" stroke="#c3cfc7" strokeWidth={compact ? 1.9 : 2.1} />
+
+            {compact ? (
+                <path d={path} clipPath={`url(#${id}-sweep)`} fill="none" stroke="#2f7a62" strokeWidth="2.5" strokeLinejoin="round" />
+            ) : (
+                TRACE_SEGMENTS.map(seg => (
+                    time > seg.start && (
+                        <path
+                            key={seg.id}
+                            d={path}
+                            clipPath={`url(#${id}-seg-${seg.id})`}
+                            fill="none"
+                            stroke={seg.color}
+                            strokeWidth="3.1"
+                            strokeLinejoin="round"
+                        />
+                    )
+                ))
+            )}
+
+            <line x1={x} y1={compact ? 0 : 24} x2={x} y2={height - (compact ? 0 : 18)} stroke={activeColor} strokeWidth="1.2" opacity="0.72" />
+            <circle cx={x} cy={y} r={compact ? 3 : 4.8} fill={activeColor} stroke="white" strokeWidth="1.6" data-trace-dot={lead} />
             {!compact && (
                 <>
                     <text x="4" y="192" className="ehm-wave-label">0 ms</text>
@@ -113,6 +186,11 @@ export default function EkgHeartModel({ selectedLead, onSelectLead }) {
         ? Math.round(Math.atan2(projection.vector[1], projection.vector[0]) * 180 / Math.PI)
         : null;
 
+    const formatDeg = val => {
+        const r = Math.round(val);
+        return r > 0 ? `+${r}°` : r < 0 ? `−${Math.abs(r)}°` : '0°';
+    };
+
     useEffect(() => {
         if (!playing) return undefined;
         let frame;
@@ -151,10 +229,10 @@ export default function EkgHeartModel({ selectedLead, onSelectLead }) {
                 <div>
                     <div className="ehm-eyebrow">DET SAMME HJERTESLAG · 12 SYNSVINKLER</div>
                     <h2>Fra elektrisk impuls til EKG</h2>
-                    <p>Klik på en afledning. Følg impulsen i hjertet, se den elektriske akse i Cabrera-cirklen, og forstå hvorfor kurven går op eller ned.</p>
+                    <p>Klik på en afledning eller direkte på EKG-kurven. Følg impulserne gennem hjertets ledningsbaner i samme farve som takkerne på EKG&apos;et.</p>
                 </div>
                 <span className="ehm-badge">
-                    <Activity size={14} /> Normal sinusrytme · 75/min · {details.plane === 'frontal' ? `Akse ${meanAxisDeg >= 0 ? '+' : ''}${Math.round(meanAxisDeg)}°` : 'Horisontalplan'}
+                    <Activity size={14} /> Normal sinusrytme · 75/min · {details.plane === 'frontal' ? `Akse ${formatDeg(meanAxisDeg)}` : 'Horisontalplan'}
                 </span>
             </div>
 
@@ -173,11 +251,11 @@ export default function EkgHeartModel({ selectedLead, onSelectLead }) {
                     </div>
 
                     <div className="ehm-map-caption">
-                        <span>{details.plane === 'frontal' ? 'Frontalplan · Cabrera hexaxialt kompas (set forfra)' : 'Horisontalplan · set fra fødderne'}</span>
+                        <span>{details.plane === 'frontal' ? 'Frontalplan · lyst anatomisk hjerte + elektrisk impuls' : 'Horisontalplan · set fra fødderne'}</span>
                         <div className="ehm-toggles">
                             {details.plane === 'frontal' && (
                                 <label>
-                                    <input type="checkbox" checked={showAxisZones} onChange={event => setShowAxisZones(event.target.checked)} /> Vis aksezoner
+                                    <input type="checkbox" checked={showAxisZones} onChange={event => setShowAxisZones(event.target.checked)} /> Vis Cabrera-akse
                                 </label>
                             )}
                             <label>
@@ -248,12 +326,23 @@ export default function EkgHeartModel({ selectedLead, onSelectLead }) {
                     )}
 
                     <div className="ehm-map-legend">
-                        <span><i className="ehm-key-vector" />{details.plane === 'horizontal' ? 'Samlet elektrisk retning' : 'Øjebliksvektor'}</span>
-                        <span><i className="ehm-key-projection" />Positiv (+) projektion</span>
-                        <span><i className="ehm-key-neg-projection" />Negativ (−) projektion</span>
-                        {details.plane === 'frontal'
-                            ? <span><i className="ehm-key-axis-dot" style={{ background: activePreset.color }} />Gns. hjerteakse ({Math.round(meanAxisDeg) > 0 ? `+${Math.round(meanAxisDeg)}°` : Math.round(meanAxisDeg) < 0 ? `−${Math.abs(Math.round(meanAxisDeg))}°` : '0°'})</span>
-                            : <span><i className="ehm-key-spread" />Lokal bølgeudbredelse</span>}
+                        {details.plane === 'frontal' ? (
+                            <>
+                                <span><i className="ehm-key-axis-dot" style={{ background: PHASE_COLORS.p }} />P (atrier)</span>
+                                <span><i className="ehm-key-axis-dot" style={{ background: PHASE_COLORS.pr }} />PR (AV-pause)</span>
+                                <span><i className="ehm-key-axis-dot" style={{ background: PHASE_COLORS.qrs }} />QRS (ventrikler)</span>
+                                <span><i className="ehm-key-axis-dot" style={{ background: PHASE_COLORS.t }} />T (repol.)</span>
+                                <span><i className="ehm-key-projection" />+ projektion</span>
+                                <span><i className="ehm-key-neg-projection" />− projektion</span>
+                            </>
+                        ) : (
+                            <>
+                                <span><i className="ehm-key-vector" />Samlet elektrisk retning</span>
+                                <span><i className="ehm-key-projection" />Positiv (+) projektion</span>
+                                <span><i className="ehm-key-neg-projection" />Negativ (−) projektion</span>
+                                <span><i className="ehm-key-spread" />Lokal bølgeudbredelse</span>
+                            </>
+                        )}
                     </div>
                     <div className="ehm-anatomy-note">
                         {details.plane === 'frontal'
@@ -279,10 +368,10 @@ export default function EkgHeartModel({ selectedLead, onSelectLead }) {
                                 {voltage >= 0 ? '+' : '−'}{Math.abs(voltage).toFixed(2)} <small>mV</small>
                             </div>
                         </div>
-                        <Trace lead={lead} time={time} axisOffsetDeg={axisOffsetDeg} />
+                        <Trace lead={lead} time={time} axisOffsetDeg={axisOffsetDeg} onJump={jump} />
                         <div className="ehm-monitor-footer">
-                            <span>Ét slag · 800 ms</span>
-                            <span>{instantAngle !== null ? `Vektorvinkel nu: ${instantAngle >= 0 ? '+' : ''}${instantAngle}°` : 'Modelamplitude · fælles skala'}</span>
+                            <span>Klik på kurven for at hoppe i hjerteslaget</span>
+                            <span>{instantAngle !== null ? `Vektorvinkel nu: ${formatDeg(instantAngle)}` : 'Ét slag · 800 ms'}</span>
                         </div>
                     </section>
 
@@ -303,7 +392,7 @@ export default function EkgHeartModel({ selectedLead, onSelectLead }) {
                                             ? projectionRatio < 0.2
                                                 ? 'Vektoren ligger næsten vinkelret (90°) på afledningens akse. Derfor krydser kurven grundlinjen.'
                                                 : 'Den elektriske vektor er svag i dette øjeblik, så udsvinget bliver lille.'
-                                            : `Den samlede elektriske vektor peger ${voltage > 0 ? 'mod' : 'væk fra'} afledningens pluspol (${voltage > 0 ? 'grønt felt' : 'rødligt modfelt'}). Derfor ligger kurven ${voltage > 0 ? 'over' : 'under'} grundlinjen.`}
+                                            : `Den samlede elektriske vektor peger ${voltage > 0 ? 'mod' : 'væk fra'} afledningens pluspol. Derfor ligger kurven ${voltage > 0 ? 'over' : 'under'} grundlinjen.`}
                                 </p>
                             </div>
                         </div>
@@ -353,7 +442,7 @@ export default function EkgHeartModel({ selectedLead, onSelectLead }) {
                     </label>
                     <span>{speed === 'study' ? 'Læring: QRS er strakt fra 90 ms til 11 sek. Kurvens tidsakse viser stadig hjertets tid.' : 'Ensartet tempo gennem hele hjerteslaget.'}</span>
                 </div>
-                <p className="ehm-timeline-hint"><Zap size={13} /> Vælg en fase for at fryse tiden. Skift derefter afledning eller akse og sammenlign præcis samme øjeblik.</p>
+                <p className="ehm-timeline-hint"><Zap size={13} /> Vælg en fase eller klik direkte på EKG-kurven for at fryse tiden og sammenligne afledninger.</p>
             </section>
 
             <section className="ehm-comparison">
@@ -400,10 +489,9 @@ export default function EkgHeartModel({ selectedLead, onSelectLead }) {
             </div>
 
             <details className="ehm-method">
-                <summary>Sådan skal modellen forstås · fagligt grundlag</summary>
-                <p>Undervisningsmodel af sinusrytme med justerbar frontal elektrisk akse (Cabrera-cirklen). Hjertet, dipolvektoren, projektionen og alle 12 afledningskurver følger samme matematiske model. Ved skift mellem Normal akse, LAD og RAD roteres den ventrikulære depolarisationsvektor i frontalplanet, mens Einthovens og Goldbergs identiteter bevares eksakt.</p>
-                <p>Q og S er negative udsving; R er et positivt udsving i QRS. Når vektoren ligger vinkelret (90°) på en aflednings akse, er øjebliksspændingen nul; et helt QRS kan derfor blive ækvifasisk, når vektoren drejer fra det positive til det negative hemifelt undervejs.</p>
-                <p>Fagligt grundlag: <a href="https://cvphysiology.com/arrhythmias/a014" target="_blank" rel="noreferrer">Klabunde: elektriske vektorer og EKG-regler</a> · <a href="https://cvphysiology.com/arrhythmias/a016" target="_blank" rel="noreferrer">Ventrikelaktivering</a> · <a href="https://cvphysiology.com/arrhythmias/a013c" target="_blank" rel="noreferrer">Brystafledninger</a>.</p>
+                <summary>Sådan skal modellen forstås · fagligt grundlag og billedkreditering</summary>
+                <p>Undervisningsmodel af sinusrytme med justerbar frontal elektrisk akse (Cabrera-cirklen). Hjertets ledningsbaner, dipolvektoren, projektionen og alle 12 afledningskurver følger samme fysiologiske tidslinje med 1-til-1 farvekodning mellem hjerte og EKG-bølge.</p>
+                <p>Anatomisk hjerte- og ledningsillustration baseret på <em>ConductionsystemoftheheartwithoutHeart</em> (Madhero88 / Wikimedia Commons, CC BY-SA 3.0), bearbejdet til lyst hvileformat med levende impulslag. Fagligt grundlag: <a href="https://cvphysiology.com/arrhythmias/a014" target="_blank" rel="noreferrer">Klabunde: elektriske vektorer og EKG-regler</a> · <a href="https://cvphysiology.com/arrhythmias/a016" target="_blank" rel="noreferrer">Ventrikelaktivering</a> · <a href="https://cvphysiology.com/arrhythmias/a013c" target="_blank" rel="noreferrer">Brystafledninger</a>.</p>
             </details>
         </div>
     );
