@@ -200,21 +200,36 @@ export default function EkgChestModel({ lead, time, onSelect, showVector, prefix
                     <text x="354" y="254" fontSize="12.5" fontWeight="750" textAnchor="middle">VV</text>
                 </g>
 
-                {(depolarizing || repolarizing) && [-65, 0, 65, 140].map(angle => {
+                {depolarizing && [-65, 0, 65, 140].map(angle => {
                     const a = angle * Math.PI / 180;
-                    const base = repolarizing ? 0.94 - recovery * 0.28 : 0.62 + spread * 0.22;
-                    const dir = repolarizing ? -1 : 1;
+                    const base = 0.62 + spread * 0.22;
                     return (
                         <line
                             key={angle}
                             x1={354 + Math.cos(a) * 81 * base}
                             y1={248 + Math.sin(a) * 90 * base}
-                            x2={354 + Math.cos(a) * 81 * (base + dir * 0.16)}
-                            y2={248 + Math.sin(a) * 90 * (base + dir * 0.16)}
+                            x2={354 + Math.cos(a) * 81 * (base + 0.16)}
+                            y2={248 + Math.sin(a) * 90 * (base + 0.16)}
                             stroke="#247ea9"
                             strokeWidth="2.4"
                             markerEnd={`url(#${prefix}-local-arrow)`}
                         />
+                    );
+                })}
+                {repolarizing && [-65, 0, 65, 140].map(angle => {
+                    const a = angle * Math.PI / 180;
+                    const ix = 354 + Math.cos(a) * 81 * 0.56;
+                    const iy = 248 + Math.sin(a) * 90 * 0.56;
+                    const ox = 354 + Math.cos(a) * 81 * 0.94;
+                    const oy = 248 + Math.sin(a) * 90 * 0.94;
+                    return (
+                        <g key={angle} style={{ pointerEvents: 'none' }}>
+                            <line x1={ix} y1={iy} x2={ox} y2={oy} stroke="#4f8f80" strokeWidth="1.3" strokeDasharray="2 2" opacity="0.7" />
+                            <circle cx={ix} cy={iy} r="6.8" fill="#fff3ee" stroke="#c86b51" strokeWidth="1.4" />
+                            <text x={ix} y={iy} textAnchor="middle" dominantBaseline="central" fontSize="9.5" fontWeight="800" fill="#b44c34">−</text>
+                            <circle cx={ox} cy={oy} r="6.8" fill="#eafaf4" stroke="#1f866f" strokeWidth="1.4" />
+                            <text x={ox} y={oy} textAnchor="middle" dominantBaseline="central" fontSize="9.5" fontWeight="800" fill="#166d59">+</text>
+                        </g>
                     );
                 })}
                 {septal && <line x1="298" y1="238" x2="266" y2="250" stroke="#247ea9" strokeWidth="3" markerEnd={`url(#${prefix}-local-arrow)`} />}
@@ -290,7 +305,7 @@ export default function EkgChestModel({ lead, time, onSelect, showVector, prefix
                         ? 'Den sidste basale aktivering ligger delvis uden for dette snit.'
                         : 'Atrier og AV-knude ligger uden for dette snit. Start QRS for at følge ventriklerne.'
                     : repolarizing
-                        ? 'Blå pile: repolarisation udefra og ind (epikardium → endokardium). Orange pil: den samlede vektor.'
+                        ? 'Epikardiet genoplades først (+ yderst, − inderst) → elektrisk vektor (− → +) peger stadig mod venstre (V5/V6).'
                         : septal
                             ? 'Septum aktiveres først fra venstre mod højre (lille blå pil), hvilket giver r-tak i V1 og q-tak i V6.'
                             : depolarizing

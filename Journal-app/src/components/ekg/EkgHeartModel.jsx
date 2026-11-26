@@ -375,7 +375,7 @@ export default function EkgHeartModel({ selectedLead, onSelectLead }) {
                                     <li>
                                         <i style={{ background: '#248f77' }} />
                                         <div>
-                                            <strong>Grønne indadgående pile (T-tak):</strong> Repolarisering løber udefra og ind (<em>epikardium → endokardium</em>). Fordi ladningen samtidig vender fortegn, peger den samlede elektriske vektor stadig mod <strong>+</strong> (fx i II) → positiv T-tak.
+                                            <strong>+ yderst / − inderst (T-tak):</strong> Epikardiet genoplades først (<em>+</em> udenpå), mens indersiden stadig er depolariseret (<em>−</em>). Derfor peger den elektriske vektor (<em>− → +</em>) stadig ud mod <strong>+</strong>-afledningen (fx i II) → positiv T-tak.
                                         </div>
                                     </li>
                                 </ul>
@@ -397,6 +397,12 @@ export default function EkgHeartModel({ selectedLead, onSelectLead }) {
                                 axisOffsetDeg={axisOffsetDeg}
                                 prefix={prefix}
                             />
+                        )}
+
+                        {details.plane === 'frontal' && phase.id === 't' && (
+                            <p className="ehm-repol-note">
+                                <strong>T-tak:</strong> Epikardiet genoplades først (<span>+ yderst</span>, <span className="is-neg">− inderst</span>) → den elektriske vektor (<em>− → +</em>) peger stadig ud mod apeks / afledning II.
+                            </p>
                         )}
                     </div>
 

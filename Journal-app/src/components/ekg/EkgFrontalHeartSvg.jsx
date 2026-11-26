@@ -251,7 +251,7 @@ function ConductionOverlay({ time, prefix }) {
                 </g>
             )}
 
-            {/* T-wave: Epicardium -> Endocardium repolarization wavefront + inward transmural arrows */}
+            {/* T-wave: Epicardium -> Endocardium repolarization wave + extracellular + / - charge polarity */}
             {repolEdgeFade > 0.01 && (
                 <g opacity={repolEdgeFade}>
                     <g fill="none" strokeLinecap="round" strokeLinejoin="round" filter={`url(#${prefix}-impulse-glow)`}>
@@ -259,32 +259,33 @@ function ConductionOverlay({ time, prefix }) {
                             const waveD = smoothWavePath(wallPairs, repolP);
                             return (
                                 <g key={idx}>
-                                    <path d={waveD} stroke={PHASE_COLORS.t} strokeWidth="24" opacity="0.28" />
-                                    <path d={waveD} stroke={PHASE_COLORS.t} strokeWidth="11" opacity="0.92" />
-                                    <path d={waveD} stroke="#ffffff" strokeWidth="3.8" opacity="0.58" />
+                                    <path d={waveD} stroke={PHASE_COLORS.t} strokeWidth="24" opacity="0.26" />
+                                    <path d={waveD} stroke={PHASE_COLORS.t} strokeWidth="10" opacity="0.88" />
+                                    <path d={waveD} stroke="#ffffff" strokeWidth="3.5" opacity="0.58" />
                                 </g>
                             );
                         })}
                     </g>
-                    {REPOLARIZATION_ARROWS.map(arrow => {
-                        const startFrac = Math.max(0, repolP - 0.12);
-                        const endFrac = Math.min(1, repolP + 0.36);
-                        const sx = arrow.from[0] + (arrow.to[0] - arrow.from[0]) * startFrac;
-                        const sy = arrow.from[1] + (arrow.to[1] - arrow.from[1]) * startFrac;
-                        const ex = arrow.from[0] + (arrow.to[0] - arrow.from[0]) * endFrac;
-                        const ey = arrow.from[1] + (arrow.to[1] - arrow.from[1]) * endFrac;
+                    {REPOLARIZATION_ARROWS.map(pair => {
+                        const [ox, oy] = pair.from;
+                        const [ix, iy] = pair.to;
                         return (
-                            <line
-                                key={arrow.id}
-                                x1={sx.toFixed(1)}
-                                y1={sy.toFixed(1)}
-                                x2={ex.toFixed(1)}
-                                y2={ey.toFixed(1)}
-                                stroke="#1b7e68"
-                                strokeWidth="7.5"
-                                strokeLinecap="round"
-                                markerEnd={`url(#${prefix}-repol-arrow)`}
-                            />
+                            <g key={pair.id} style={{ pointerEvents: 'none' }}>
+                                <line
+                                    x1={ix}
+                                    y1={iy}
+                                    x2={ox}
+                                    y2={oy}
+                                    stroke="#4f8f80"
+                                    strokeWidth="3.2"
+                                    strokeDasharray="6 6"
+                                    opacity="0.72"
+                                />
+                                <circle cx={ix} cy={iy} r="20" fill="#fff3ee" stroke="#c86b51" strokeWidth="4" />
+                                <text x={ix} y={iy} textAnchor="middle" dominantBaseline="central" fontSize="28" fontWeight="800" fill="#b44c34">−</text>
+                                <circle cx={ox} cy={oy} r="20" fill="#eafaf4" stroke="#1f866f" strokeWidth="4" />
+                                <text x={ox} y={oy} textAnchor="middle" dominantBaseline="central" fontSize="28" fontWeight="800" fill="#166d59">+</text>
+                            </g>
                         );
                     })}
                 </g>
@@ -372,9 +373,6 @@ export default function EkgFrontalHeartSvg({
                 </marker>
                 <marker id={`${prefix}-proj-neg`} viewBox="0 0 10 10" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse">
                     <path d="M1,1 L9,5 L1,9 Z" fill="#c0444f" />
-                </marker>
-                <marker id={`${prefix}-repol-arrow`} viewBox="0 0 10 10" markerWidth="20" markerHeight="20" refX="7.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
-                    <path d="M1,1.5 L8.5,5 L1,8.5 Z" fill="#1b7e68" />
                 </marker>
 
                 {CABRERA_SECTORS.map(sec => (
