@@ -1,39 +1,34 @@
 import React, { useState, useRef } from 'react';
 import { ChevronRight, ChevronDown, FileText, AlertTriangle, AlertCircle, Info, Stethoscope, Users, User, ShieldAlert, Download, Copy, Check, Clipboard, BookOpen } from '../components/Icons';
 import PdfViewer from '../components/PdfViewer';
-import GroenspaettebogView from '../components/GroenspaettebogView';
-import { GROENSPAETTEBOG_THEMES } from '../data/groenspaettebogData';
+import { GROENSPAETTEBOG_META, GROENSPAETTEBOG_THEMES } from '../data/groenspaettebogData';
 
 function GuidelinesApp({ onNavigate }) {
     const [activeInstruks, setActiveInstruks] = useState('plan_anoreksi');
     const [activeTab, setActiveTab] = useState('voksne_med');
     const [copiedS6, setCopiedS6] = useState(false);
     const [isGroenspaetteOpen, setIsGroenspaetteOpen] = useState(false);
-    const [groenspaetteSubSection, setGroenspaetteSubSection] = useState(null);
+    const [groenspaettePage, setGroenspaettePage] = useState(1);
     const mainRef = useRef(null);
 
     const isGroenspaetteActive =
-        activeInstruks === 'groenspaettebog_oversigt' ||
-        activeInstruks === 'gs_fuld_pdf' ||
+        activeInstruks === 'groenspaettebog_fuld' ||
         activeInstruks.startsWith('gs_');
 
-    const selectGroenspaette = (navId, subSectionId = null) => {
+    const selectGroenspaette = (navId, page = 1) => {
         setActiveInstruks(navId);
-        setGroenspaetteSubSection(subSectionId);
+        setGroenspaettePage(page);
         setIsGroenspaetteOpen(true);
         if (mainRef.current) {
             mainRef.current.scrollTo({ top: 0, behavior: 'smooth' });
         }
     };
 
-    const handleToggleGroenspaetteDropdown = () => {
-        if (!isGroenspaetteOpen) {
-            setIsGroenspaetteOpen(true);
-            if (!isGroenspaetteActive) {
-                selectGroenspaette('groenspaettebog_oversigt');
-            }
+    const handleClickGroenspaetteMain = () => {
+        if (activeInstruks === 'groenspaettebog_fuld') {
+            setIsGroenspaetteOpen(prev => !prev);
         } else {
-            setIsGroenspaetteOpen(false);
+            selectGroenspaette('groenspaettebog_fuld', 1);
         }
     };
 
@@ -238,6 +233,92 @@ HUSK:
         );
     };
 
+    const renderGroenspaettebogen = () => {
+        const fullPdfUrl = `${import.meta.env.BASE_URL}${GROENSPAETTEBOG_META.pdfFile}`;
+
+        if (activeInstruks === 'groenspaettebog_fuld') {
+            return (
+                <div className="max-w-4xl mx-auto h-full flex flex-col">
+                    <div className="mb-4 shrink-0">
+                        <h2 className="text-2xl md:text-3xl font-bold text-[#3A4A40] mb-1">{GROENSPAETTEBOG_META.title}</h2>
+                        <p className="text-[#839788] text-sm">
+                            Visning af det fulde dokument ({GROENSPAETTEBOG_META.totalPages} sider). Vælg et tema i dropdown-menuen til venstre for at se de relevante sider direkte.
+                        </p>
+                    </div>
+
+                    <div className="flex-1 min-h-[600px] flex flex-col">
+                        <PdfViewer
+                            url={fullPdfUrl}
+                            title={GROENSPAETTEBOG_META.title}
+                            downloadName={GROENSPAETTEBOG_META.downloadName}
+                        />
+                    </div>
+                </div>
+            );
+        }
+
+        const theme = GROENSPAETTEBOG_THEMES.find(t => t.navId === activeInstruks);
+        if (!theme) return null;
+
+        const fullPdfAction = (
+            <button
+                onClick={() => selectGroenspaette('groenspaettebog_fuld', 1)}
+                className="px-3 py-1.5 bg-white border border-[#E8E4D9] text-[#3A4A40] hover:bg-[#F2F6F3] rounded-xl transition-colors shadow-2xs font-medium text-xs flex items-center gap-1.5 cursor-pointer"
+                title="Vis hele Grønspættebogen (45 sider)"
+            >
+                <BookOpen className="w-3.5 h-3.5 text-[#839788]" />
+                <span>Vis hele PDF&apos;en ({GROENSPAETTEBOG_META.totalPages} s.)</span>
+            </button>
+        );
+
+        return (
+            <div className="max-w-4xl mx-auto h-full flex flex-col">
+                <div className="mb-4 shrink-0">
+                    <div className="flex items-center gap-2 mb-1">
+                        <span className="text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-[#E2E8DF] text-[#3A4A40]">
+                            Grønspættebogen · {theme.pages}
+                        </span>
+                    </div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#3A4A40] mb-1">
+                        Grønspættebogen – {theme.title}
+                    </h2>
+                    <p className="text-[#839788] text-sm">{theme.description}</p>
+
+                    {theme.subTopics && theme.subTopics.length > 0 && (
+                        <div className="mt-3 flex items-center gap-1.5 overflow-x-auto pb-1">
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#839788] shrink-0 mr-1">
+                                Hop til:
+                            </span>
+                            {theme.subTopics.map((topic) => (
+                                <button
+                                    key={topic.docPage}
+                                    onClick={() => setGroenspaettePage(topic.localPage)}
+                                    className={`px-2.5 py-1 rounded-lg text-xs font-medium transition-all shrink-0 cursor-pointer border ${
+                                        groenspaettePage === topic.localPage
+                                            ? 'bg-[#3A4A40] text-white border-[#3A4A40] shadow-2xs'
+                                            : 'bg-white text-[#5C6B61] border-[#E8E4D9] hover:bg-[#F2F6F3] hover:text-[#3A4A40]'
+                                    }`}
+                                >
+                                    {topic.label} (s. {topic.docPage})
+                                </button>
+                            ))}
+                        </div>
+                    )}
+                </div>
+
+                <div className="flex-1 min-h-[600px] flex flex-col">
+                    <PdfViewer
+                        url={`${import.meta.env.BASE_URL}${theme.pdfFile}`}
+                        title={`Grønspættebogen – ${theme.shortTitle} (${theme.pages})`}
+                        downloadName={theme.downloadName}
+                        initialPage={groenspaettePage}
+                        extraActions={fullPdfAction}
+                    />
+                </div>
+            </div>
+        );
+    };
+
     return (
         <div className="flex flex-col h-screen bg-[#F9F8F6] font-sans selection:bg-[#E2E8DF] selection:text-slate-900">
 
@@ -335,37 +416,37 @@ HUSK:
 
                         {/* Grønspættebogen Dropdown */}
                         <div className="pt-1">
-                            <button
-                                onClick={handleToggleGroenspaetteDropdown}
-                                aria-expanded={isGroenspaetteOpen}
-                                className={`w-full flex items-center justify-between gap-2 px-4 py-3 rounded-xl text-left transition-all cursor-pointer ${isGroenspaetteActive
+                            <div
+                                className={`w-full flex items-center rounded-xl transition-all ${isGroenspaetteActive
                                     ? 'bg-white text-[#3A4A40] shadow ring-1 ring-[#E8E4D9] font-medium'
                                     : 'text-[#839788] hover:bg-white/50 hover:text-[#3A4A40]'
                                     }`}
                             >
-                                <div className="flex items-center gap-3 min-w-0">
+                                <button
+                                    onClick={handleClickGroenspaetteMain}
+                                    className="flex-1 flex items-center gap-3 pl-4 pr-2 py-3 text-left min-w-0 cursor-pointer"
+                                    title="Vis hele Grønspættebogen (45 sider)"
+                                >
                                     <BookOpen className={`h-5 w-5 shrink-0 ${isGroenspaetteActive ? 'text-[#839788]' : 'opacity-60'}`} />
                                     <span className="text-sm truncate">Grønspættebogen</span>
-                                </div>
-                                <ChevronDown className={`h-4 w-4 shrink-0 transition-transform duration-200 ${isGroenspaetteOpen ? 'rotate-180' : ''}`} />
-                            </button>
+                                </button>
+                                <button
+                                    onClick={() => setIsGroenspaetteOpen(prev => !prev)}
+                                    aria-expanded={isGroenspaetteOpen}
+                                    aria-label="Fold Grønspættebogens emner ud"
+                                    className="pr-3 pl-1.5 py-3 text-current cursor-pointer"
+                                    title="Vis/skjul emner"
+                                >
+                                    <ChevronDown className={`h-4 w-4 shrink-0 transition-transform duration-200 ${isGroenspaetteOpen ? 'rotate-180' : ''}`} />
+                                </button>
+                            </div>
 
                             {isGroenspaetteOpen && (
                                 <div className="border-l-2 border-[#E2E8DF] ml-5 pl-2.5 space-y-1 mt-1.5">
-                                    <button
-                                        onClick={() => selectGroenspaette('groenspaettebog_oversigt')}
-                                        className={`w-full flex items-center justify-between gap-2 px-3 py-2 rounded-lg text-left text-xs transition-all cursor-pointer ${activeInstruks === 'groenspaettebog_oversigt'
-                                            ? 'bg-white text-[#3A4A40] shadow-2xs ring-1 ring-[#E8E4D9] font-semibold'
-                                            : 'text-[#839788] hover:bg-white/60 hover:text-[#3A4A40]'
-                                            }`}
-                                    >
-                                        <span className="truncate">Overblik &amp; Indhold</span>
-                                    </button>
-
                                     {GROENSPAETTEBOG_THEMES.map((theme) => (
                                         <button
                                             key={theme.id}
-                                            onClick={() => selectGroenspaette(theme.navId)}
+                                            onClick={() => selectGroenspaette(theme.navId, 1)}
                                             className={`w-full flex items-center justify-between gap-2 px-3 py-2 rounded-lg text-left text-xs transition-all cursor-pointer ${activeInstruks === theme.navId
                                                 ? 'bg-white text-[#3A4A40] shadow-2xs ring-1 ring-[#E8E4D9] font-semibold'
                                                 : 'text-[#839788] hover:bg-white/60 hover:text-[#3A4A40]'
@@ -375,17 +456,6 @@ HUSK:
                                             <span className="text-[10px] opacity-75 shrink-0">{theme.pages}</span>
                                         </button>
                                     ))}
-
-                                    <button
-                                        onClick={() => selectGroenspaette('gs_fuld_pdf')}
-                                        className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg text-left text-xs transition-all cursor-pointer ${activeInstruks === 'gs_fuld_pdf'
-                                            ? 'bg-white text-[#3A4A40] shadow-2xs ring-1 ring-[#E8E4D9] font-semibold'
-                                            : 'text-[#839788] hover:bg-white/60 hover:text-[#3A4A40]'
-                                            }`}
-                                    >
-                                        <FileText className="h-3.5 w-3.5 shrink-0 opacity-80" />
-                                        <span className="truncate">Fuld PDF (45 sider)</span>
-                                    </button>
                                 </div>
                             )}
                         </div>
@@ -401,11 +471,11 @@ HUSK:
                             value={activeInstruks}
                             onChange={(e) => {
                                 const val = e.target.value;
-                                if (val === 'groenspaettebog_oversigt' || val.startsWith('gs_')) {
-                                    selectGroenspaette(val);
+                                if (val === 'groenspaettebog_fuld' || val.startsWith('gs_')) {
+                                    selectGroenspaette(val, 1);
                                 } else {
                                     setActiveInstruks(val);
-                                    setGroenspaetteSubSection(null);
+                                    setGroenspaettePage(1);
                                 }
                             }}
                             className="w-full px-3 py-2 bg-white border border-[#E8E4D9] rounded-xl text-sm text-[#3A4A40] font-medium focus:outline-none focus:ring-2 focus:ring-[#839788]"
@@ -417,13 +487,12 @@ HUSK:
                             <option value="journaloptag_an">Journaloptagelse (AN)</option>
                             <option value="gennemgang_s6">Gennemgang på S6 (Skabelon)</option>
                             <optgroup label="Grønspættebogen (AFP)">
-                                <option value="groenspaettebog_oversigt">Overblik &amp; Indhold</option>
+                                <option value="groenspaettebog_fuld">Grønspættebogen (Fuld PDF – 45 s.)</option>
                                 {GROENSPAETTEBOG_THEMES.map((theme) => (
                                     <option key={theme.id} value={theme.navId}>
                                         {theme.shortTitle} ({theme.pages})
                                     </option>
                                 ))}
-                                <option value="gs_fuld_pdf">Fuld PDF (45 sider)</option>
                             </optgroup>
                         </select>
                     </div>
@@ -436,13 +505,7 @@ HUSK:
                         {activeInstruks === 'blodproever' && renderBlodproever()}
                         {activeInstruks === 'journaloptag_an' && renderJournaloptagAN()}
                         {activeInstruks === 'gennemgang_s6' && renderGennemgangS6()}
-                        {isGroenspaetteActive && (
-                            <GroenspaettebogView
-                                activeId={activeInstruks}
-                                initialSubSection={groenspaetteSubSection}
-                                onSelectView={selectGroenspaette}
-                            />
-                        )}
+                        {isGroenspaetteActive && renderGroenspaettebogen()}
                     </main>
                 </div>
             </div>

@@ -10,7 +10,7 @@ try {
     console.warn("Could not set pdf workerSrc:", e);
 }
 
-export default function PdfViewer({ url, title, downloadName, extraActions }) {
+export default function PdfViewer({ url, title, downloadName, extraActions, initialPage = 1 }) {
     // Check if the browser natively supports inline PDF rendering (e.g. desktop Chrome, Edge, Safari, Firefox)
     const hasNativePdf = typeof navigator !== 'undefined' && Boolean(navigator.pdfViewerEnabled);
 
@@ -29,6 +29,7 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
 
     const canvasRefs = useRef({});
     const textLayerRefs = useRef({});
+    const pageWrapperRefs = useRef({});
     const renderTasksRef = useRef({});
     const textLayerTasksRef = useRef({});
 
@@ -243,6 +244,17 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
         };
     }, [useNative, pdfDoc, numPages, scale, renderPage]);
 
+    // Scroll to initialPage in canvas mode
+    useEffect(() => {
+        if (useNative || loading || numPages === 0) return;
+        if (initialPage > 1 && initialPage <= numPages) {
+            const targetEl = pageWrapperRefs.current[initialPage];
+            if (targetEl) {
+                targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    }, [useNative, loading, numPages, initialPage, safeUrl]);
+
     const handleZoomIn = () => {
         setScale(prev => Math.min(Number((prev + 0.15).toFixed(2)), 2.5));
     };
@@ -259,6 +271,7 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
     // 1. Native Desktop PDF Viewer (Pure iframe, standard Chrome/Edge reader)
     // -------------------------------------------------------------
     if (useNative) {
+        const iframeSrc = initialPage && initialPage > 1 ? `${safeUrl}#page=${initialPage}` : safeUrl;
         return (
             <div className="flex flex-col h-full w-full bg-white rounded-2xl border border-[#E8E4D9] overflow-hidden shadow-sm">
                 {/* Header & Controls Toolbar */}
@@ -301,7 +314,8 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
                 {/* Direct Native PDF Frame - User can mark text directly in document */}
                 <div className="flex-1 w-full h-full min-h-[600px] bg-white">
                     <iframe
-                        src={safeUrl}
+                        key={iframeSrc}
+                        src={iframeSrc}
                         className="w-full h-full border-0 min-h-[600px]"
                         title={title || "PDF Document"}
                     />
@@ -482,6 +496,7 @@ export default function PdfViewer({ url, title, downloadName, extraActions }) {
                             return (
                                 <div
                                     key={pageNum}
+                                    ref={el => (pageWrapperRefs.current[pageNum] = el)}
                                     className="pdf-page-wrapper mb-6 shadow-md rounded-xl overflow-hidden bg-white border border-[#E8E4D9] shrink-0 min-h-[250px] select-text"
                                     style={{
                                         width: dimensions?.width ? `${dimensions.width}px` : undefined,
