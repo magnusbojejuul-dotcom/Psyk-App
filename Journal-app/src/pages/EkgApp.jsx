@@ -11,6 +11,17 @@ import EkgHeartModel from '../components/ekg/EkgHeartModel';
 import EkgViewer from '../components/ekg/EkgViewer';
 import EkgSystematicGuide from '../components/ekg/EkgSystematicGuide';
 
+const CASE_TO_RHYTHM = {
+    normal_sinus: 'normal',
+    afib: 'afib',
+    aflutter: 'aflutter',
+    av_block_1: 'av_block_1',
+    av_block_3: 'av_block_3',
+    lbbb: 'lbbb',
+    rbbb: 'rbbb',
+    vt: 'vt'
+};
+
 export default function EkgApp({ onNavigate }) {
     const [activeTab, setActiveTab] = useState(() => {
         const hash = window.location.hash.toLowerCase();
@@ -26,17 +37,22 @@ export default function EkgApp({ onNavigate }) {
         return 'normal_sinus';
     });
     const [selectedLead, setSelectedLead] = useState('II');
+    const [modelRhythmId, setModelRhythmId] = useState('normal');
 
     const currentCase = EKG_CASES.find(c => c.id === currentCaseId) || EKG_CASES[0];
 
     const handleSelectCase = (newCase) => {
         setCurrentCaseId(newCase.id);
+        if (CASE_TO_RHYTHM[newCase.id]) {
+            setModelRhythmId(CASE_TO_RHYTHM[newCase.id]);
+        }
         if (newCase.affectedLeads && newCase.affectedLeads.length > 0) {
             setSelectedLead(newCase.affectedLeads[0]);
         }
     };
 
     const handleShowOnHeart = () => {
+        setModelRhythmId(CASE_TO_RHYTHM[currentCase.id] || 'normal');
         if (currentCase.affectedLeads && currentCase.affectedLeads.length > 0) {
             setSelectedLead(currentCase.affectedLeads[0]);
         }
@@ -108,6 +124,8 @@ export default function EkgApp({ onNavigate }) {
                     <EkgHeartModel
                         selectedLead={selectedLead}
                         onSelectLead={setSelectedLead}
+                        rhythmId={modelRhythmId}
+                        onSelectRhythm={setModelRhythmId}
                     />
                 )}
 

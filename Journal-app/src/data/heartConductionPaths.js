@@ -86,3 +86,39 @@ export const REPOLARIZATION_ARROWS = [
     { id: 'apex', from: [882, 920], to: [824, 858] },
     { id: 'rv1', from: [540, 930], to: [552, 854] }
 ];
+
+export const PATHOLOGY_MARKERS = {
+    avDelay: { x: 318, y: 532, label: 'Langsom AV', color: '#d48817' },
+    avTotalBlock: { x: 345, y: 510, label: 'Totalblok', color: '#c43b47' },
+    avEscapeFocus: { x: 524, y: 554, label: 'Erstatning', color: '#c43b47' },
+    lbbbBlock: { x: 554, y: 540, label: 'Venstre gren blokeret', color: '#8b5cf6' },
+    rbbbBlock: { x: 548, y: 584, label: 'Højre gren blokeret', color: '#0ea5e9' },
+    vtFocus: { x: 868, y: 725, label: 'Ektopisk fokus', color: '#dc2626' },
+};
+
+export const PATHOLOGY_PATHS = {
+    flutterLoop: 'M 178 320 C 266 320 318 378 308 456 C 296 534 232 562 164 536 C 106 512 96 426 122 362 C 136 330 156 320 178 320 Z',
+    afibFoci: [
+        { id: 'la1', x: 486, y: 214, phase: 0.0 },
+        { id: 'la2', x: 562, y: 196, phase: 0.24 },
+        { id: 'la3', x: 632, y: 242, phase: 0.51 },
+        { id: 'la4', x: 518, y: 286, phase: 0.74 },
+        { id: 'ra1', x: 248, y: 376, phase: 0.37 },
+        { id: 'ra2', x: 186, y: 458, phase: 0.86 },
+    ],
+    lbbbTransseptal: [
+        'M 575 638 Q 642 622 710 606',
+        'M 628 696 Q 698 682 772 670',
+        'M 702 764 Q 778 756 854 748',
+    ],
+    rbbbTransseptal: [
+        'M 648 632 Q 596 664 548 692',
+        'M 704 696 Q 642 732 572 766',
+        'M 754 756 Q 684 794 606 822',
+    ],
+    vtSpread: [
+        'M 868 725 Q 798 668 712 612',
+        'M 868 725 Q 774 720 656 716',
+        'M 868 725 Q 842 630 806 520',
+    ],
+};

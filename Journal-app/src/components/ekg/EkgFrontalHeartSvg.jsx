@@ -7,6 +7,8 @@ import {
     HEART_IMG_H,
     HEART_IMG_W,
     HEART_LABELS,
+    PATHOLOGY_MARKERS,
+    PATHOLOGY_PATHS,
     PHASE_COLORS,
     REPOLARIZATION_ARROWS,
     REPOLARIZATION_WALLS
@@ -97,48 +99,152 @@ function smoothWavePath(pairs, progress) {
     return d;
 }
 
-function ConductionOverlay({ time, prefix }) {
-    // Smooth, continuous choreography from SA node -> atrial tracts -> AV node -> His -> bundles -> Purkinje -> epicardial-to-endocardial repolarization
-    const saActive = time >= 72 && time < 195;
-    const saPulse = saActive ? Math.sin(clamp01((time - 72) / 60) * Math.PI) : 0;
+function BlockMark({ x, y, color = '#c43b47', pulse = 0 }) {
+    const r = 24 + pulse * 6;
+    return (
+        <g style={{ pointerEvents: 'none' }}>
+            {pulse > 0.05 && (
+                <circle cx={x} cy={y} r={r + 14} fill={color} opacity={0.22 * pulse} />
+            )}
+            <circle cx={x} cy={y} r={r} fill="#fff5f5" stroke={color} strokeWidth="6" />
+            <path d={`M ${x - 10} ${y - 10} L ${x + 10} ${y + 10} M ${x + 10} ${y - 10} L ${x - 10} ${y + 10}`} stroke={color} strokeWidth="6.5" strokeLinecap="round" />
+        </g>
+    );
+}
 
-    const atrialLineActive = time >= 80 && time < 205;
-    const atrialLineFade = time >= 182 ? clamp01(1 - (time - 182) / 23) : 1;
-    const saBridgeProgress = clamp01((time - 80) / 26);
-    const internodalProgress = clamp01((time - 80) / 76);
-    const bachmannProgress = clamp01((time - 82) / 54);
-    const bachmannBranchProgress = clamp01((time - 120) / 46);
-    const atrialGlow = time >= 88 && time < 200
-        ? Math.sin(clamp01((time - 88) / 112) * Math.PI) * 0.24
+function FocusMark({ x, y, color = '#dc2626', pulse = 0 }) {
+    return (
+        <g style={{ pointerEvents: 'none' }}>
+            <circle cx={x} cy={y} r={28 + pulse * 26} fill={color} opacity={0.14 + pulse * 0.24} />
+            <circle cx={x} cy={y} r={20 + pulse * 6} fill="#fff7ed" stroke={color} strokeWidth="5.5" />
+            <polygon
+                points={`${x + 3},${y - 13} ${x - 9},${y + 2} ${x},${y + 2} ${x - 4},${y + 13} ${x + 9},${y - 2} ${x},${y - 2}`}
+                fill={color}
+            />
+        </g>
+    );
+}
+
+function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
+    const isAfib = rhythmId === 'afib';
+    const isFlutter = rhythmId === 'aflutter';
+    const isAv1 = rhythmId === 'av_block_1';
+    const isAv3 = rhythmId === 'av_block_3';
+    const isLbbb = rhythmId === 'lbbb';
+    const isRbbb = rhythmId === 'rbbb';
+    const isVt = rhythmId === 'vt';
+
+    // Atrial choreography per rhythm
+    let saActive = time >= 72 && time < 195;
+    let saStart = 80;
+    let saEnd = 195;
+    if (isAfib || isFlutter || isVt) {
+        saActive = false;
+    } else if (isAv1) {
+        saStart = 40;
+        saEnd = 135;
+        saActive = time >= 35 && time < 135;
+    } else if (isAv3) {
+        if (time >= 80 && time < 170) {
+            saStart = 85;
+            saEnd = 165;
+            saActive = true;
+        } else if (time >= 480 && time < 570) {
+            saStart = 485;
+            saEnd = 565;
+            saActive = true;
+        } else {
+            saActive = false;
+        }
+    }
+
+    const saPulse = saActive ? Math.sin(clamp01((time - saStart) / 55) * Math.PI) : 0;
+    const atrialLineActive = saActive;
+    const atrialLineFade = saActive && time >= saEnd - 22 ? clamp01(1 - (time - (saEnd - 22)) / 22) : 1;
+    const saBridgeProgress = clamp01((time - saStart) / 22);
+    const internodalProgress = clamp01((time - saStart) / 62);
+    const bachmannProgress = clamp01((time - saStart - 2) / 46);
+    const bachmannBranchProgress = clamp01((time - saStart - 34) / 38);
+
+    const normalAtrialGlow = saActive
+        ? Math.sin(clamp01((time - saStart) / (saEnd - saStart)) * Math.PI) * 0.24
+        : 0;
+    const afibGlow = isAfib ? (0.14 + 0.08 * Math.sin((time / 800) * Math.PI * 12)) : 0;
+    const flutterGlow = isFlutter ? (0.14 + 0.08 * Math.sin(((time % 200) / 200) * Math.PI * 2)) : 0;
+    const atrialGlow = Math.max(normalAtrialGlow, afibGlow, flutterGlow);
+
+    // AV node timing
+    const avStart = isAv1 ? 125 : isAv3 ? 0 : 160;
+    const avEnd = isAv1 ? 298 : isAv3 ? 0 : 215;
+    const avActive = isVt ? false : (isAv1 || !isAv3) ? (time >= avStart && time < avEnd) : false;
+    const avPulse = avActive ? Math.sin(clamp01((time - avStart) / Math.max(1, avEnd - avStart)) * Math.PI) : 0;
+    const av3BlockedFlash = isAv3
+        ? Math.max(
+            time >= 145 && time < 205 ? Math.sin(clamp01((time - 145) / 60) * Math.PI) : 0,
+            time >= 545 && time < 605 ? Math.sin(clamp01((time - 545) / 60) * Math.PI) : 0
+        )
         : 0;
 
-    const avActive = time >= 160 && time < 215;
-    const avPulse = avActive ? Math.sin(clamp01((time - 160) / 55) * Math.PI) : 0;
+    // Ventricular timing per rhythm
+    const qrsStart = isAv1 ? 290 : isAv3 ? 220 : 210;
+    const qrsEnd = (isLbbb || isRbbb) ? 355 : isAv3 ? 340 : isAv1 ? 380 : 300;
+    const vtLocal = time % 400;
+    const vtBeatActive = isVt && vtLocal >= 15 && vtLocal < 188;
+    const vtBeatFade = vtBeatActive && vtLocal >= 164 ? clamp01(1 - (vtLocal - 164) / 24) : 1;
 
-    const ventLineActive = time >= 210 && time < 320;
-    const ventLineFade = time >= 295 ? clamp01(1 - (time - 295) / 25) : 1;
-    const hisProgress = clamp01((time - 210) / 12);
-    const bundleProgress = clamp01((time - 220) / 42);
-    const fascicleProgress = clamp01((time - 232) / 22);
-    const purkinjeProgress = clamp01((time - 258) / 38);
+    const ventLineActive = !isVt && time >= qrsStart && time < qrsEnd + 20;
+    const ventLineFade = ventLineActive && time >= qrsEnd - 5 ? clamp01(1 - (time - (qrsEnd - 5)) / 25) : 1;
+    const hisProgress = isAv3 ? 0 : clamp01((time - qrsStart) / 14);
+    const bundleProgress = isAv3
+        ? clamp01((time - qrsStart - 10) / 55)
+        : clamp01((time - qrsStart - 10) / 42);
+    const fascicleProgress = isAv3 ? clamp01((time - qrsStart - 20) / 30) : clamp01((time - qrsStart - 22) / 22);
+    const purkinjeProgress = isAv3
+        ? clamp01((time - qrsStart - 45) / 55)
+        : clamp01((time - qrsStart - 48) / 38);
 
-    const septalGlow = time >= 212 && time < 252
-        ? Math.sin(clamp01((time - 212) / 40) * Math.PI) * 0.20
+    const septalGlow = isVt
+        ? 0
+        : (time >= qrsStart + 2 && time < qrsStart + 42)
+            ? Math.sin(clamp01((time - qrsStart - 2) / 40) * Math.PI) * 0.20
+            : 0;
+
+    // Differential chamber glows for LBBB / RBBB / VT vs symmetric
+    const ventBaseGlow = (!isVt && time >= qrsStart + 20 && time < qrsEnd + 10)
+        ? Math.sin(clamp01((time - (qrsStart + 20)) / (qrsEnd - qrsStart - 10)) * Math.PI * 0.65) * 0.18
         : 0;
-    const ventDepolGlow = time >= 232 && time < 310
-        ? Math.sin(clamp01((time - 232) / 78) * Math.PI * 0.5) * 0.17
-        : 0;
-    const isRepol = time >= 380 && time < 550;
-    const repolP = clamp01((time - 380) / 160);
+    const rvDepolGlow = isVt
+        ? (vtBeatActive ? Math.sin(clamp01((vtLocal - 40) / 140) * Math.PI) * 0.16 * vtBeatFade : 0)
+        : isLbbb
+            ? (time >= 220 && time < 305 ? Math.sin(clamp01((time - 220) / 85) * Math.PI) * 0.20 : 0)
+            : isRbbb
+                ? (time >= 270 && time < 365 ? Math.sin(clamp01((time - 270) / 95) * Math.PI) * 0.22 : 0)
+                : ventBaseGlow;
+    const lvDepolGlow = isVt
+        ? (vtBeatActive ? Math.sin(clamp01((vtLocal - 15) / 165) * Math.PI) * 0.22 * vtBeatFade : 0)
+        : isLbbb
+            ? (time >= 255 && time < 365 ? Math.sin(clamp01((time - 255) / 110) * Math.PI) * 0.22 : 0)
+            : isRbbb
+                ? (time >= 222 && time < 305 ? Math.sin(clamp01((time - 222) / 83) * Math.PI) * 0.19 : 0)
+                : ventBaseGlow;
+
+    const repolStart = isAv1 ? 460 : isAv3 ? 355 : isLbbb ? 395 : isRbbb ? 390 : 380;
+    const repolDur = isAv3 ? 120 : 160;
+    const isRepol = isVt
+        ? (vtLocal >= 200 && vtLocal < 360)
+        : (time >= repolStart && time < repolStart + repolDur + 10);
+    const repolP = isVt
+        ? clamp01((vtLocal - 200) / 160)
+        : clamp01((time - repolStart) / repolDur);
     const repolEdgeFade = !isRepol
         ? 0
-        : time < 402
-            ? clamp01((time - 380) / 22)
-            : time > 515
-                ? clamp01((550 - time) / 35)
+        : repolP < 0.14
+            ? clamp01(repolP / 0.14)
+            : repolP > 0.80
+                ? clamp01((1 - repolP) / 0.20)
                 : 1;
-    const stGlow = time >= 300 && time < 540
-        ? (time < 380 ? 0.12 : 0.12 * (1 - repolP))
+    const stGlow = (!isVt && time >= qrsEnd && time < repolStart + repolDur)
+        ? (time < repolStart ? 0.11 : 0.11 * (1 - repolP))
         : 0;
     const repolGlow = isRepol ? Math.sin(repolP * Math.PI) * 0.16 : 0;
 
@@ -148,8 +254,10 @@ function ConductionOverlay({ time, prefix }) {
             <g filter={`url(#${prefix}-soft-blur)`} style={{ pointerEvents: 'none' }}>
                 {atrialGlow > 0.005 && (
                     <>
-                        <ellipse {...CHAMBER_GLOWS.ra} fill={PHASE_COLORS.p} opacity={atrialGlow} />
-                        <ellipse cx={CHAMBER_GLOWS.la.cx} cy={CHAMBER_GLOWS.la.cy} rx={CHAMBER_GLOWS.la.rx} ry={CHAMBER_GLOWS.la.ry} fill={PHASE_COLORS.p} opacity={atrialGlow * 0.88} />
+                        <ellipse {...CHAMBER_GLOWS.ra} fill={isAfib ? '#7c5cbf' : isFlutter ? '#2b78b8' : PHASE_COLORS.p} opacity={atrialGlow} />
+                        {!isFlutter && (
+                            <ellipse cx={CHAMBER_GLOWS.la.cx} cy={CHAMBER_GLOWS.la.cy} rx={CHAMBER_GLOWS.la.rx} ry={CHAMBER_GLOWS.la.ry} fill={isAfib ? '#7c5cbf' : PHASE_COLORS.p} opacity={atrialGlow * 0.88} />
+                        )}
                     </>
                 )}
                 {septalGlow > 0.005 && (
@@ -163,7 +271,7 @@ function ConductionOverlay({ time, prefix }) {
                         opacity={septalGlow}
                     />
                 )}
-                {(ventDepolGlow > 0.005 || stGlow > 0.005) && (
+                {(rvDepolGlow > 0.005 || lvDepolGlow > 0.005 || stGlow > 0.005) && (
                     <>
                         <ellipse
                             cx={CHAMBER_GLOWS.rv.cx}
@@ -171,8 +279,8 @@ function ConductionOverlay({ time, prefix }) {
                             rx={CHAMBER_GLOWS.rv.rx}
                             ry={CHAMBER_GLOWS.rv.ry}
                             transform={`rotate(${CHAMBER_GLOWS.rv.rotate} ${CHAMBER_GLOWS.rv.cx} ${CHAMBER_GLOWS.rv.cy})`}
-                            fill={stGlow > 0 ? PHASE_COLORS.st : PHASE_COLORS.qrs}
-                            opacity={Math.max(ventDepolGlow, stGlow) * 0.82}
+                            fill={stGlow > 0 && rvDepolGlow <= 0.005 ? PHASE_COLORS.st : isVt ? '#dc2626' : isRbbb && time >= 270 ? '#0ea5e9' : PHASE_COLORS.qrs}
+                            opacity={Math.max(rvDepolGlow, stGlow) * 0.85}
                         />
                         <ellipse
                             cx={CHAMBER_GLOWS.lv.cx}
@@ -180,8 +288,8 @@ function ConductionOverlay({ time, prefix }) {
                             rx={CHAMBER_GLOWS.lv.rx}
                             ry={CHAMBER_GLOWS.lv.ry}
                             transform={`rotate(${CHAMBER_GLOWS.lv.rotate} ${CHAMBER_GLOWS.lv.cx} ${CHAMBER_GLOWS.lv.cy})`}
-                            fill={stGlow > 0 ? PHASE_COLORS.st : PHASE_COLORS.qrs}
-                            opacity={Math.max(ventDepolGlow, stGlow)}
+                            fill={stGlow > 0 && lvDepolGlow <= 0.005 ? PHASE_COLORS.st : isVt ? '#dc2626' : isLbbb && time >= 255 ? '#8b5cf6' : PHASE_COLORS.qrs}
+                            opacity={Math.max(lvDepolGlow, stGlow)}
                         />
                     </>
                 )}
@@ -209,6 +317,47 @@ function ConductionOverlay({ time, prefix }) {
                 )}
             </g>
 
+            {/* Atrial fibrillation: chaotic scattered ectopic micro-foci */}
+            {isAfib && (
+                <g style={{ pointerEvents: 'none' }}>
+                    {PATHOLOGY_PATHS.afibFoci.map(f => {
+                        const pulse = 0.5 + 0.5 * Math.sin((time / 800) * Math.PI * 8 + f.phase * Math.PI * 2);
+                        return (
+                            <g key={f.id}>
+                                <circle cx={f.x} cy={f.y} r={14 + pulse * 24} fill="#7c5cbf" opacity={0.14 + pulse * 0.22} />
+                                <circle cx={f.x} cy={f.y} r={9 + pulse * 4} fill="#efe7ff" stroke="#7c5cbf" strokeWidth="4" />
+                            </g>
+                        );
+                    })}
+                </g>
+            )}
+
+            {/* Atrial flutter: rapid counter-clockwise macro-reentry loop in RA */}
+            {isFlutter && (
+                <g style={{ pointerEvents: 'none' }}>
+                    <path
+                        d={PATHOLOGY_PATHS.flutterLoop}
+                        fill="none"
+                        stroke="#2b78b8"
+                        strokeWidth="12"
+                        strokeDasharray="34 22"
+                        strokeDashoffset={((time % 200) / 200) * 168}
+                        opacity="0.86"
+                        strokeLinecap="round"
+                    />
+                    <path
+                        d={PATHOLOGY_PATHS.flutterLoop}
+                        fill="none"
+                        stroke="#ffffff"
+                        strokeWidth="4"
+                        strokeDasharray="34 22"
+                        strokeDashoffset={((time % 200) / 200) * 168}
+                        opacity="0.72"
+                        strokeLinecap="round"
+                    />
+                </g>
+            )}
+
             {/* P-wave: SA node + internodal tracts & Bachmann's bundle into LA */}
             {saActive && (
                 <g opacity={atrialLineFade}>
@@ -230,25 +379,107 @@ function ConductionOverlay({ time, prefix }) {
                 </g>
             )}
 
-            {/* PR delay: AV node golden physiological hold */}
-            {avActive && (
+            {/* PR delay: AV node golden physiological or prolonged hold */}
+            {(avActive || isAv1) && !isAv3 && !isVt && (
                 <g>
-                    <circle cx={CONDUCTION_PATHS.avNode.cx} cy={CONDUCTION_PATHS.avNode.cy} r={52 + avPulse * 30} fill={PHASE_COLORS.pr} opacity={0.32 + avPulse * 0.24} filter={`url(#${prefix}-soft-blur)`} />
-                    <path d={CONDUCTION_PATHS.avNode.outline} fill={PHASE_COLORS.pr} opacity={0.68 + avPulse * 0.24} />
+                    {(avActive || isAv1) && (
+                        <>
+                            <circle cx={CONDUCTION_PATHS.avNode.cx} cy={CONDUCTION_PATHS.avNode.cy} r={(isAv1 ? 60 : 52) + avPulse * 30} fill={PHASE_COLORS.pr} opacity={isAv1 ? (0.28 + avPulse * 0.34) : (0.32 + avPulse * 0.24)} filter={`url(#${prefix}-soft-blur)`} />
+                            <path d={CONDUCTION_PATHS.avNode.outline} fill={PHASE_COLORS.pr} opacity={isAv1 ? (0.52 + avPulse * 0.40) : (0.68 + avPulse * 0.24)} />
+                        </>
+                    )}
+                    {isAv1 && (
+                        <g style={{ pointerEvents: 'none' }}>
+                            <circle cx={PATHOLOGY_MARKERS.avDelay.x} cy={PATHOLOGY_MARKERS.avDelay.y} r="36" fill="none" stroke="#d48817" strokeWidth="5" strokeDasharray="12 8" opacity={0.45 + avPulse * 0.50} />
+                        </g>
+                    )}
                 </g>
             )}
 
             {/* QRS: His bundle -> bundle branches -> septal fascicles -> Purkinje arborizations */}
             {ventLineActive && (
                 <g fill="none" strokeLinecap="round" strokeLinejoin="round" opacity={ventLineFade} filter={`url(#${prefix}-impulse-glow)`}>
-                    <ElectricPath d={CONDUCTION_PATHS.hisBundle} progress={hisProgress} color={PHASE_COLORS.qrs} width={16} />
-                    <ElectricPath d={CONDUCTION_PATHS.rbbSeptal} progress={bundleProgress} color={PHASE_COLORS.qrs} width={15} />
-                    <ElectricPath d={CONDUCTION_PATHS.lbbSeptal} progress={bundleProgress} color={PHASE_COLORS.qrs} width={16} />
-                    <ElectricPath d={CONDUCTION_PATHS.lbbSeptalFascicleA} progress={fascicleProgress} color={PHASE_COLORS.qrs} width={11} />
-                    <ElectricPath d={CONDUCTION_PATHS.lbbSeptalFascicleB} progress={fascicleProgress} color={PHASE_COLORS.qrs} width={10} />
-                    <ElectricPath d={CONDUCTION_PATHS.rvPurkinje} progress={purkinjeProgress} color={PHASE_COLORS.qrs} width={14} />
-                    <ElectricPath d={CONDUCTION_PATHS.lvPurkinje} progress={purkinjeProgress} color={PHASE_COLORS.qrs} width={16} />
+                    {!isAv3 && <ElectricPath d={CONDUCTION_PATHS.hisBundle} progress={hisProgress} color={PHASE_COLORS.qrs} width={16} />}
+                    {!isRbbb && <ElectricPath d={CONDUCTION_PATHS.rbbSeptal} progress={bundleProgress} color={PHASE_COLORS.qrs} width={15} />}
+                    {!isLbbb && <ElectricPath d={CONDUCTION_PATHS.lbbSeptal} progress={bundleProgress} color={PHASE_COLORS.qrs} width={16} />}
+                    {!isLbbb && (
+                        <>
+                            <ElectricPath d={CONDUCTION_PATHS.lbbSeptalFascicleA} progress={fascicleProgress} color={PHASE_COLORS.qrs} width={11} />
+                            <ElectricPath d={CONDUCTION_PATHS.lbbSeptalFascicleB} progress={fascicleProgress} color={PHASE_COLORS.qrs} width={10} />
+                        </>
+                    )}
+                    {!isRbbb && <ElectricPath d={CONDUCTION_PATHS.rvPurkinje} progress={purkinjeProgress} color={PHASE_COLORS.qrs} width={14} />}
+                    {!isLbbb && <ElectricPath d={CONDUCTION_PATHS.lvPurkinje} progress={purkinjeProgress} color={PHASE_COLORS.qrs} width={16} />}
                 </g>
+            )}
+
+            {/* Slow cell-to-cell transseptal / myocardial detours */}
+            {isLbbb && time >= 235 && time < 365 && (
+                <g fill="none" strokeLinecap="round" opacity={time > 340 ? clamp01((365 - time) / 25) : 1}>
+                    {PATHOLOGY_PATHS.lbbbTransseptal.map((d, idx) => (
+                        <path
+                            key={idx}
+                            d={d}
+                            pathLength="1"
+                            stroke="#8b5cf6"
+                            strokeWidth="10"
+                            strokeDasharray="16 12"
+                            strokeDashoffset={-clamp01((time - 235) / 100) * 60}
+                            opacity="0.90"
+                        />
+                    ))}
+                </g>
+            )}
+            {isRbbb && time >= 265 && time < 368 && (
+                <g fill="none" strokeLinecap="round" opacity={time > 345 ? clamp01((368 - time) / 23) : 1}>
+                    {PATHOLOGY_PATHS.rbbbTransseptal.map((d, idx) => (
+                        <path
+                            key={idx}
+                            d={d}
+                            pathLength="1"
+                            stroke="#0ea5e9"
+                            strokeWidth="10"
+                            strokeDasharray="16 12"
+                            strokeDashoffset={-clamp01((time - 265) / 90) * 60}
+                            opacity="0.90"
+                        />
+                    ))}
+                </g>
+            )}
+            {isVt && vtBeatActive && (
+                <g fill="none" strokeLinecap="round" opacity={vtBeatFade}>
+                    {PATHOLOGY_PATHS.vtSpread.map((d, idx) => (
+                        <ElectricPath key={idx} d={d} progress={clamp01((vtLocal - 20) / 145)} color="#dc2626" width={13} />
+                    ))}
+                </g>
+            )}
+
+            {/* Permanent anatomical cause markers so user sees WHY rhythm changes even when paused */}
+            {isAv3 && (
+                <>
+                    <BlockMark x={PATHOLOGY_MARKERS.avTotalBlock.x} y={PATHOLOGY_MARKERS.avTotalBlock.y} color="#c43b47" pulse={av3BlockedFlash} />
+                    <FocusMark x={PATHOLOGY_MARKERS.avEscapeFocus.x} y={PATHOLOGY_MARKERS.avEscapeFocus.y} color="#d9534f" pulse={time >= 215 && time < 330 ? Math.sin(clamp01((time - 215) / 115) * Math.PI) : 0.15} />
+                </>
+            )}
+            {isLbbb && (
+                <>
+                    <path d={CONDUCTION_PATHS.lbbSeptal} fill="none" stroke="#8b5cf6" strokeWidth="6" strokeDasharray="12 14" opacity="0.28" />
+                    <BlockMark x={PATHOLOGY_MARKERS.lbbbBlock.x} y={PATHOLOGY_MARKERS.lbbbBlock.y} color="#8b5cf6" pulse={time >= 215 && time < 280 ? 1 : 0.15} />
+                </>
+            )}
+            {isRbbb && (
+                <>
+                    <path d={CONDUCTION_PATHS.rbbSeptal} fill="none" stroke="#0ea5e9" strokeWidth="6" strokeDasharray="12 14" opacity="0.28" />
+                    <BlockMark x={PATHOLOGY_MARKERS.rbbbBlock.x} y={PATHOLOGY_MARKERS.rbbbBlock.y} color="#0ea5e9" pulse={time >= 215 && time < 280 ? 1 : 0.15} />
+                </>
+            )}
+            {isVt && (
+                <FocusMark
+                    x={PATHOLOGY_MARKERS.vtFocus.x}
+                    y={PATHOLOGY_MARKERS.vtFocus.y}
+                    color="#dc2626"
+                    pulse={vtBeatActive ? Math.sin(clamp01((vtLocal - 15) / 140) * Math.PI) : 0.2}
+                />
             )}
 
             {/* T-wave: Epicardium -> Endocardium repolarization wave + extracellular + / - charge polarity */}
@@ -269,6 +500,9 @@ function ConductionOverlay({ time, prefix }) {
                     {REPOLARIZATION_ARROWS.map(pair => {
                         const [ox, oy] = pair.from;
                         const [ix, iy] = pair.to;
+                        const flip = isVt || (isLbbb && pair.id !== 'rv1');
+                        const posCoord = flip ? [ix, iy] : [ox, oy];
+                        const negCoord = flip ? [ox, oy] : [ix, iy];
                         return (
                             <g key={pair.id} style={{ pointerEvents: 'none' }}>
                                 <line
@@ -281,10 +515,10 @@ function ConductionOverlay({ time, prefix }) {
                                     strokeDasharray="6 6"
                                     opacity="0.72"
                                 />
-                                <circle cx={ix} cy={iy} r="20" fill="#fff3ee" stroke="#c86b51" strokeWidth="4" />
-                                <text x={ix} y={iy} textAnchor="middle" dominantBaseline="central" fontSize="28" fontWeight="800" fill="#b44c34">−</text>
-                                <circle cx={ox} cy={oy} r="20" fill="#eafaf4" stroke="#1f866f" strokeWidth="4" />
-                                <text x={ox} y={oy} textAnchor="middle" dominantBaseline="central" fontSize="28" fontWeight="800" fill="#166d59">+</text>
+                                <circle cx={negCoord[0]} cy={negCoord[1]} r="20" fill="#fff3ee" stroke="#c86b51" strokeWidth="4" />
+                                <text x={negCoord[0]} y={negCoord[1]} textAnchor="middle" dominantBaseline="central" fontSize="28" fontWeight="800" fill="#b44c34">−</text>
+                                <circle cx={posCoord[0]} cy={posCoord[1]} r="20" fill="#eafaf4" stroke="#1f866f" strokeWidth="4" />
+                                <text x={posCoord[0]} y={posCoord[1]} textAnchor="middle" dominantBaseline="central" fontSize="28" fontWeight="800" fill="#166d59">+</text>
                             </g>
                         );
                     })}
@@ -314,15 +548,16 @@ export default function EkgFrontalHeartSvg({
     showVector,
     showAxisZones = true,
     axisOffsetDeg = 0,
+    rhythmId = 'normal',
     prefix
 }) {
     const details = MODEL_LEADS[lead] || MODEL_LEADS.II;
-    const { vector, unit, point, voltage } = projectionAt(lead, time, axisOffsetDeg);
+    const { vector, unit, point, voltage } = projectionAt(lead, time, axisOffsetDeg, rhythmId);
     const tip = [CX + vector[0] * VECTOR_SCALE, CY + vector[1] * VECTOR_SCALE];
     const foot = [CX + point[0] * VECTOR_SCALE, CY + point[1] * VECTOR_SCALE];
     const magnitude = Math.hypot(...vector);
 
-    const meanAngle = meanQrsAngle(axisOffsetDeg);
+    const meanAngle = meanQrsAngle(axisOffsetDeg, rhythmId);
     const meanZone = axisZoneForAngle(meanAngle);
     const [meanMarkerX, meanMarkerY] = polar(CX, CY, R_INNER + 5.5, meanAngle);
 
@@ -453,7 +688,7 @@ export default function EkgFrontalHeartSvg({
             />
 
             {/* Living synchronized electrical impulse layer */}
-            <ConductionOverlay time={time} prefix={prefix} />
+            <ConductionOverlay time={time} prefix={prefix} rhythmId={rhythmId} />
 
             {/* Clean instantaneous vector + orthogonal projection onto selected lead */}
             {showVector && magnitude > 0.008 && (

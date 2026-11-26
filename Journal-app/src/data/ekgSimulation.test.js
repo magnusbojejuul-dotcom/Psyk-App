@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { AXIS_PRESETS, MODEL_LEADS, PHASES, advancePlayback, axisZoneForAngle, cardiacVector, meanQrsAngle, phaseAt, projectionAt, vectorLoopPath, voltageAt, waveformPath } from './ekgSimulation.js';
+import { AXIS_PRESETS, MODEL_LEADS, PHASES, RHYTHM_PRESETS, advancePlayback, axisZoneForAngle, cardiacVector, meanQrsAngle, phaseAt, phasesForRhythm, projectionAt, traceSegmentsForRhythm, vectorLoopPath, voltageAt, waveformPath } from './ekgSimulation.js';
 
 const close = (actual, expected, tolerance = 1e-10) => assert.ok(Math.abs(actual - expected) < tolerance, `${actual} differs from ${expected}`);
 
@@ -156,4 +156,78 @@ test('drawn vector projections match lead voltage sign and 90-degree orthogonali
             }
         }
     }
+});
+
+test('Einthoven, Goldberg, and 90-degree orthogonality hold across all rhythm presets', () => {
+    for (const rhythm of Object.values(RHYTHM_PRESETS)) {
+        for (let time = 0; time < 800; time += 4) {
+            const I = voltageAt('I', time, 0, rhythm.id);
+            const II = voltageAt('II', time, 0, rhythm.id);
+            close(II, I + voltageAt('III', time, 0, rhythm.id));
+            close(voltageAt('aVR', time, 0, rhythm.id), -(I + II) / 2);
+            close(voltageAt('aVL', time, 0, rhythm.id), I - II / 2);
+            close(voltageAt('aVF', time, 0, rhythm.id), II - I / 2);
+
+            for (const lead of ['I', 'II', 'aVF', 'V1', 'V6']) {
+                const { vector, unit, point } = projectionAt(lead, time, 0, rhythm.id);
+                close((vector[0] - point[0]) * unit[0] + (vector[1] - point[1]) * unit[1], 0, 1e-9);
+            }
+        }
+        assert.ok(phasesForRhythm(rhythm.id).length >= 5);
+        assert.ok(traceSegmentsForRhythm(rhythm.id).length >= 3);
+        assert.ok(vectorLoopPath('frontal', 480, 474, 100, 0, rhythm.id).startsWith('M'));
+    }
+});
+
+test('arrhythmias and conduction blocks match expected clinical ECG morphologies', () => {
+    // AV block 1: prolonged PR interval (> 200 ms), delayed QRS peak around 332 ms, flat prolonged PR segment.
+    assert.ok(voltageAt('II', 85, 0, 'av_block_1') > 0.14);
+    assert.deepEqual(cardiacVector(210, 0, 'av_block_1'), [0, 0, 0]);
+    assert.ok(voltageAt('II', 332, 0, 'av_block_1') > 1.0);
+    assert.equal(phaseAt(210, 'av_block_1').id, 'pr');
+
+    // AV block 3: two dissociated P waves (125 ms and 525 ms) + escape QRS around 280 ms.
+    assert.ok(voltageAt('II', 125, 0, 'av_block_3') > 0.14);
+    assert.ok(voltageAt('II', 525, 0, 'av_block_3') > 0.14);
+    assert.ok(voltageAt('II', 285, 0, 'av_block_3') > 0.8);
+    assert.equal(phaseAt(125, 'av_block_3').id, 'p');
+    assert.equal(phaseAt(525, 'av_block_3').id, 'p2');
+
+    // Atrial fibrillation: no large discrete sinus P wave, undulating chaotic baseline + narrow normal QRS.
+    const afibPPeak = Math.max(...Array.from({ length: 100 }, (_, i) => Math.abs(voltageAt('II', 80 + i, 0, 'afib'))));
+    assert.ok(afibPPeak < 0.08, `AFib baseline amplitude ${afibPPeak} should stay low`);
+    assert.ok(voltageAt('II', 252, 0, 'afib') > 1.0);
+
+    // Atrial flutter: sawtooth inferior waves (negative II/III/aVF peaks) + positive V1 flutter wave before QRS.
+    const flutterMinII = Math.min(...Array.from({ length: 200 }, (_, i) => voltageAt('II', i, 0, 'aflutter')));
+    const flutterMaxV1 = Math.max(...Array.from({ length: 200 }, (_, i) => voltageAt('V1', i, 0, 'aflutter')));
+    assert.ok(flutterMinII < -0.15, `Flutter II min ${flutterMinII} should show negative sawtooth`);
+    assert.ok(flutterMaxV1 > 0.05, `Flutter V1 max ${flutterMaxV1} should show positive flutter wave`);
+    assert.ok(voltageAt('II', 252, 0, 'aflutter') > 1.0);
+
+    // LBBB: broad QRS >= 120 ms, deep negative V1, tall broad positive V6/I/aVL, discordant T wave.
+    assert.ok(voltageAt('V1', 260, 0, 'lbbb') < -0.75);
+    assert.ok(voltageAt('V1', 308, 0, 'lbbb') < -0.9);
+    assert.ok(voltageAt('V6', 255, 0, 'lbbb') > 0.85);
+    assert.ok(voltageAt('V6', 308, 0, 'lbbb') > 1.0);
+    assert.ok(voltageAt('I', 308, 0, 'lbbb') > 1.0);
+    assert.ok(voltageAt('V6', 480, 0, 'lbbb') < -0.15);
+    assert.ok(voltageAt('V1', 480, 0, 'lbbb') > 0.20);
+
+    // RBBB: broad QRS >= 120 ms, rsR' pattern in V1, broad slurred terminal S in V6 and I.
+    assert.ok(voltageAt('V1', 222, 0, 'rbbb') > 0.20);
+    assert.ok(voltageAt('V1', 252, 0, 'rbbb') < -0.65);
+    assert.ok(voltageAt('V1', 305, 0, 'rbbb') > 0.80);
+    assert.ok(voltageAt('V6', 252, 0, 'rbbb') > 0.70);
+    assert.ok(voltageAt('V6', 305, 0, 'rbbb') < -0.50);
+    assert.ok(voltageAt('I', 305, 0, 'rbbb') < -0.50);
+
+    // VT: two fast broad QRS beats per 800 ms loop, northwest extreme axis (aVR+/V1+, I-/II-), discordant T wave.
+    assert.equal(axisZoneForAngle(meanQrsAngle(0, 'vt')).id, 'extreme');
+    assert.ok(voltageAt('aVR', 120, 0, 'vt') > 0.75);
+    assert.ok(voltageAt('aVR', 520, 0, 'vt') > 0.75);
+    assert.ok(voltageAt('V1', 120, 0, 'vt') > 0.80);
+    assert.ok(voltageAt('I', 120, 0, 'vt') < -0.75);
+    assert.ok(voltageAt('II', 120, 0, 'vt') < -0.85);
+    assert.ok(voltageAt('V1', 280, 0, 'vt') < -0.15);
 });

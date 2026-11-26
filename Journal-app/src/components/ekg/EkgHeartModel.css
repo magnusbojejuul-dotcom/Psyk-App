@@ -3,11 +3,26 @@
 .ehm button { cursor: pointer; }
 .ehm-mobile-monitor { display: none; }
 .ehm button:focus-visible, .ehm input:focus-visible, .ehm select:focus-visible, .ehm summary:focus-visible { outline: 3px solid #d58227; outline-offset: 4px; }
-.ehm-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin: 1px 0 25px; }
+.ehm-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin: 1px 0 18px; }
 .ehm-eyebrow, .ehm-step-label { font-size: 10px; font-weight: 750; letter-spacing: .12em; color: var(--muted); }
 .ehm-heading h2 { font-size: clamp(24px, 2.8vw, 34px); letter-spacing: -.045em; font-weight: 650; line-height: 1.25; margin: 8px 0; }
 .ehm-heading p, .ehm-comparison-heading p { font-size: 13px; color: var(--muted); line-height: 1.6; margin: 0; }
 .ehm-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; white-space: nowrap; border: 1px solid var(--line); background: #f0f4ec; padding: 9px 13px; border-radius: 20px; }
+.ehm-rhythm-bar { margin-bottom: 18px; display: flex; flex-direction: column; gap: 10px; }
+.ehm-rhythm-pills { display: flex; flex-wrap: wrap; gap: 7px; }
+.ehm-rhythm-pills button { display: inline-flex; align-items: center; gap: 7px; border: 1px solid #d4ded3; background: #fffefb; color: #476054; border-radius: 12px; padding: 8px 12px; font-size: 11.5px; font-weight: 650; transition: all .15s ease; }
+.ehm-rhythm-pills button i { width: 8px; height: 8px; border-radius: 50%; background: var(--rhythm-color); opacity: .75; }
+.ehm-rhythm-pills button:hover { border-color: var(--rhythm-color); color: #243b31; }
+.ehm-rhythm-pills button[aria-pressed=true] { background: var(--rhythm-color); border-color: var(--rhythm-color); color: white; box-shadow: 0 2px 8px rgba(32, 62, 50, .18); }
+.ehm-rhythm-pills button[aria-pressed=true] i { background: white; opacity: 1; }
+.ehm-pathology-banner { border: 1px solid color-mix(in srgb, var(--rhythm-color) 35%, #dfe6dc); background: #fffefb; border-left: 4px solid var(--rhythm-color); border-radius: 14px; padding: 13px 16px; display: flex; flex-direction: column; gap: 10px; }
+.ehm-pathology-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.ehm-pathology-cols strong { display: block; font-size: 11.5px; font-weight: 750; color: #233c32; margin-bottom: 3px; }
+.ehm-pathology-cols p { font-size: 11px; line-height: 1.55; color: #53685c; margin: 0; }
+.ehm-rec-leads { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; padding-top: 8px; border-top: 1px solid #edf1eb; font-size: 10.5px; color: #5b7063; }
+.ehm-rec-leads button { border: 1px solid #cdd8cb; background: #f4f8f2; color: #2f4b3f; border-radius: 8px; padding: 3px 10px; font-size: 10.5px; font-weight: 700; transition: all .12s ease; }
+.ehm-rec-leads button:hover { border-color: var(--rhythm-color); }
+.ehm-rec-leads button[aria-pressed=true] { background: #2f7a62; border-color: #2f7a62; color: white; }
 .ehm-workspace { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(310px, 1fr); gap: 18px; align-items: stretch; }
 .ehm-model-card, .ehm-monitor, .ehm-explanation, .ehm-timeline { border: 1px solid var(--line); border-radius: 20px; background: #fffefb; }
 .ehm-model-card { overflow: hidden; display: flex; flex-direction: column; }
@@ -107,7 +122,7 @@
 .ehm-lead-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 9px; }.ehm-lead-preview { min-width: 0; background: #fffefb; border: 1px solid var(--line); border-radius: 12px; padding: 10px 11px 6px; text-align: left; color: var(--ink); }.ehm-lead-preview[aria-pressed=true] { border: 2px solid var(--green); padding: 9px 10px 5px; background: #f0f5ed; }.ehm-preview-label { display: flex; align-items: baseline; justify-content: space-between; gap: 4px; }.ehm-preview-label strong { font-size: 13px; }.ehm-preview-label span { color: var(--muted); font-size: 8px; }.ehm-mini-trace { display: block; width: 100%; margin-top: 8px; }
 .ehm-placement, .ehm-method { border-top: 1px solid var(--line); margin-top: 20px; padding: 14px 1px 0; font-size: 11px; color: var(--muted); line-height: 1.8; }.ehm-placement summary, .ehm-method summary { cursor: pointer; color: #566e5e; font-weight: 600; }.ehm-placement p, .ehm-method p { margin: 9px 0; max-width: 960px; }.ehm-method { margin-top: 12px; }.ehm-method a { text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 1050px) { .ehm-heading { align-items: flex-start; flex-direction: column; gap: 10px; }.ehm-workspace { grid-template-columns: minmax(0, 1.15fr) minmax(300px, 1fr); }.ehm-model-card > .ehm-card-top { gap: 12px; }.ehm-transport { gap: 12px; flex-wrap: wrap; }.ehm-phase-buttons button { padding: 10px 6px; gap: 4px; }.ehm-preview-label { flex-direction: column; }.ehm-heart-map { min-height: 350px; } }
-@media (max-width: 760px) { .ehm-workspace { grid-template-columns: 1fr; }.ehm-heart-map { min-height: 0; flex: auto; }.ehm-side { display: grid; grid-template-columns: 1fr; }.ehm-model-card > .ehm-card-top { padding: 15px; }.ehm-map-caption { padding: 0 15px; }.ehm-transport { gap: 16px; }.ehm-scrub { flex-basis: 100%; order: 3; }.ehm-speed { margin-left: auto; }.ehm-phase-buttons { grid-template-columns: repeat(4, minmax(0, 1fr)); }.ehm-lead-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }.ehm-comparison-heading { align-items: flex-start; flex-direction: column; gap: 8px; }.ehm-timeline-hint { align-items: flex-start; line-height: 1.6; }.ehm-timeline-hint svg { flex-shrink: 0; margin-top: 2px; }.ehm-timeline { padding: 15px; }.ehm-play { padding: 10px; min-width: 88px; }.ehm-icon-button { padding: 6px; }.ehm-map-legend { font-size: 9px; gap: 9px; } }
+@media (max-width: 760px) { .ehm-workspace { grid-template-columns: 1fr; }.ehm-pathology-cols { grid-template-columns: 1fr; gap: 10px; }.ehm-heart-map { min-height: 0; flex: auto; }.ehm-side { display: grid; grid-template-columns: 1fr; }.ehm-model-card > .ehm-card-top { padding: 15px; }.ehm-map-caption { padding: 0 15px; }.ehm-transport { gap: 16px; }.ehm-scrub { flex-basis: 100%; order: 3; }.ehm-speed { margin-left: auto; }.ehm-phase-buttons { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }.ehm-lead-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }.ehm-comparison-heading { align-items: flex-start; flex-direction: column; gap: 8px; }.ehm-timeline-hint { align-items: flex-start; line-height: 1.6; }.ehm-timeline-hint svg { flex-shrink: 0; margin-top: 2px; }.ehm-timeline { padding: 15px; }.ehm-play { padding: 10px; min-width: 88px; }.ehm-icon-button { padding: 6px; }.ehm-map-legend { font-size: 9px; gap: 9px; } }
 @media (prefers-reduced-motion: reduce) { .ehm *, .ehm *::before, .ehm *::after { scroll-behavior: auto !important; transition: none !important; } }
 @media (max-width: 760px) {
     .ehm { padding-bottom: 130px; }
