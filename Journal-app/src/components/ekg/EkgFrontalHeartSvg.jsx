@@ -3,6 +3,7 @@ import heartConductionBase from '../../assets/ekg_heart_conduction_base.png';
 import {
     CHAMBER_GLOWS,
     CONDUCTION_PATHS,
+    HEART_CENTER,
     HEART_IMG_H,
     HEART_IMG_W,
     HEART_LABELS,
@@ -23,11 +24,11 @@ const R_OUTER = 187;
 const R_LEAD = 216;
 const VECTOR_SCALE = 100;
 
-const IMG_W = 288;
+const IMG_W = 282;
 const IMG_H = Number((IMG_W * HEART_IMG_H / HEART_IMG_W).toFixed(2));
-const IMG_X = Number((CX - IMG_W / 2).toFixed(2));
-const IMG_Y = Number((CY - IMG_H / 2).toFixed(2));
 const IMG_SCALE = IMG_W / HEART_IMG_W;
+const IMG_X = Number((CX - HEART_CENTER.x * IMG_SCALE).toFixed(2));
+const IMG_Y = Number((CY - HEART_CENTER.y * IMG_SCALE).toFixed(2));
 
 const rad = deg => deg * Math.PI / 180;
 const polar = (cx, cy, r, deg) => [cx + Math.cos(rad(deg)) * r, cy + Math.sin(rad(deg)) * r];
@@ -64,44 +65,54 @@ const CABRERA_SECTORS = [
     { id: 'extreme', label: 'EKSTREM', startDeg: 180, endDeg: 270, textStart: -170, textEnd: -100, sweep: 1, color: '#be3c48', activeFill: 'rgba(190, 60, 72, 0.18)' }
 ];
 
+function ElectricPath({ d, progress, color, width = 14 }) {
+    const p = clamp01(progress);
+    if (p <= 0.001) return null;
+    return (
+        <g>
+            <path d={d} pathLength="1" strokeDasharray={`${p} 1`} stroke={color} strokeWidth={width * 1.9} opacity="0.30" />
+            <path d={d} pathLength="1" strokeDasharray={`${p} 1`} stroke={color} strokeWidth={width} opacity="0.96" />
+            <path d={d} pathLength="1" strokeDasharray={`${p} 1`} stroke="#ffffff" strokeWidth={width * 0.34} opacity="0.62" />
+        </g>
+    );
+}
+
 function ConductionOverlay({ time, prefix }) {
-    // Phase timings aligned 1:1 with ekgSimulation.js PHASES
-    const saActive = time >= 70 && time < 185;
-    const saPulse = saActive ? Math.sin(clamp01((time - 70) / 55) * Math.PI) : 0;
+    // Smooth, continuous choreography from SA node -> atrial tracts -> AV node -> His -> bundles -> Purkinje
+    const saActive = time >= 72 && time < 195;
+    const saPulse = saActive ? Math.sin(clamp01((time - 72) / 60) * Math.PI) : 0;
 
     const atrialLineActive = time >= 80 && time < 205;
-    const atrialLineFade = time >= 178 ? clamp01(1 - (time - 178) / 27) : 1;
-    const internodalProgress = clamp01((time - 80) / 92);
-    const bachmannProgress = clamp01((time - 88) / 86);
-    const bachmannBranchProgress = clamp01((time - 132) / 46);
-    const atrialGlow = time >= 95 && time < 205
-        ? Math.sin(clamp01((time - 95) / 110) * Math.PI) * 0.16
+    const atrialLineFade = time >= 182 ? clamp01(1 - (time - 182) / 23) : 1;
+    const saBridgeProgress = clamp01((time - 80) / 26);
+    const internodalProgress = clamp01((time - 80) / 76);
+    const bachmannProgress = clamp01((time - 82) / 54);
+    const bachmannBranchProgress = clamp01((time - 120) / 46);
+    const atrialGlow = time >= 88 && time < 200
+        ? Math.sin(clamp01((time - 88) / 112) * Math.PI) * 0.24
         : 0;
 
-    const avActive = time >= 175 && time < 216;
-    const avPulse = avActive ? Math.sin(clamp01((time - 175) / 41) * Math.PI) : 0;
+    const avActive = time >= 160 && time < 215;
+    const avPulse = avActive ? Math.sin(clamp01((time - 160) / 55) * Math.PI) : 0;
 
-    const septalActive = time >= 210 && time < 265;
-    const septalFade = time >= 242 ? clamp01(1 - (time - 242) / 23) : 1;
-    const hisProgress = clamp01((time - 210) / 18);
-    const fascicleProgress = clamp01((time - 220) / 22);
+    const ventLineActive = time >= 210 && time < 320;
+    const ventLineFade = time >= 295 ? clamp01(1 - (time - 295) / 25) : 1;
+    const hisProgress = clamp01((time - 210) / 12);
+    const bundleProgress = clamp01((time - 220) / 42);
+    const fascicleProgress = clamp01((time - 232) / 22);
+    const purkinjeProgress = clamp01((time - 258) / 38);
+
     const septalGlow = time >= 212 && time < 252
-        ? Math.sin(clamp01((time - 212) / 40) * Math.PI) * 0.19
+        ? Math.sin(clamp01((time - 212) / 40) * Math.PI) * 0.20
         : 0;
-
-    const ventLineActive = time >= 224 && time < 325;
-    const ventLineFade = time >= 295 ? clamp01(1 - (time - 295) / 30) : 1;
-    const bundleProgress = clamp01((time - 224) / 38);
-    const purkinjeProgress = clamp01((time - 252) / 44);
-
     const ventDepolGlow = time >= 232 && time < 310
-        ? Math.sin(clamp01((time - 232) / 78) * Math.PI * 0.5) * 0.16
+        ? Math.sin(clamp01((time - 232) / 78) * Math.PI * 0.5) * 0.17
         : 0;
-    const stGlow = time >= 310 && time < 385
-        ? 0.11 * (time >= 365 ? clamp01(1 - (time - 365) / 20) : 1)
+    const stGlow = time >= 300 && time < 385
+        ? 0.12 * (time >= 365 ? clamp01(1 - (time - 365) / 20) : 1)
         : 0;
     const repolGlow = time >= 380 && time < 545
-        ? Math.sin(clamp01((time - 380) / 165) * Math.PI) * 0.17
+        ? Math.sin(clamp01((time - 380) / 165) * Math.PI) * 0.18
         : 0;
 
     return (
@@ -111,7 +122,7 @@ function ConductionOverlay({ time, prefix }) {
                 {atrialGlow > 0.005 && (
                     <>
                         <ellipse {...CHAMBER_GLOWS.ra} fill={PHASE_COLORS.p} opacity={atrialGlow} />
-                        <ellipse cx={CHAMBER_GLOWS.la.cx} cy={CHAMBER_GLOWS.la.cy} rx={CHAMBER_GLOWS.la.rx} ry={CHAMBER_GLOWS.la.ry} fill={PHASE_COLORS.p} opacity={atrialGlow * 0.85} />
+                        <ellipse cx={CHAMBER_GLOWS.la.cx} cy={CHAMBER_GLOWS.la.cy} rx={CHAMBER_GLOWS.la.rx} ry={CHAMBER_GLOWS.la.ry} fill={PHASE_COLORS.p} opacity={atrialGlow * 0.88} />
                     </>
                 )}
                 {septalGlow > 0.005 && (
@@ -171,61 +182,45 @@ function ConductionOverlay({ time, prefix }) {
                 )}
             </g>
 
-            {/* P-wave: SA node + internodal & Bachmann impulse propagation */}
+            {/* P-wave: SA node + internodal tracts & Bachmann's bundle into LA */}
             {saActive && (
                 <g opacity={atrialLineFade}>
-                    <circle cx={CONDUCTION_PATHS.saNode.cx} cy={CONDUCTION_PATHS.saNode.cy} r={54 + saPulse * 24} fill={PHASE_COLORS.p} opacity={0.22 + saPulse * 0.16} filter={`url(#${prefix}-soft-blur)`} />
-                    <path d={CONDUCTION_PATHS.saNode.outline} fill={PHASE_COLORS.p} opacity="0.72" />
+                    <circle cx={CONDUCTION_PATHS.saNode.cx} cy={CONDUCTION_PATHS.saNode.cy} r={62 + saPulse * 28} fill={PHASE_COLORS.p} opacity={0.28 + saPulse * 0.18} filter={`url(#${prefix}-soft-blur)`} />
+                    <path d={CONDUCTION_PATHS.saNode.outline} fill={PHASE_COLORS.p} opacity="0.82" />
                 </g>
             )}
 
             {atrialLineActive && (
                 <g fill="none" strokeLinecap="round" strokeLinejoin="round" opacity={atrialLineFade} filter={`url(#${prefix}-impulse-glow)`}>
+                    <ElectricPath d={CONDUCTION_PATHS.saBridge} progress={saBridgeProgress} color={PHASE_COLORS.p} width={11} />
                     {[CONDUCTION_PATHS.internodalAnt, CONDUCTION_PATHS.internodalMid, CONDUCTION_PATHS.internodalPost].map((d, idx) => (
-                        <path key={idx} d={d} pathLength="1" strokeDasharray={`${internodalProgress} 1`} stroke={PHASE_COLORS.p} strokeWidth="14" />
+                        <ElectricPath key={idx} d={d} progress={internodalProgress} color={PHASE_COLORS.p} width={15} />
                     ))}
-                    <path d={CONDUCTION_PATHS.bachmannMain} pathLength="1" strokeDasharray={`${bachmannProgress} 1`} stroke={PHASE_COLORS.p} strokeWidth="13" />
-                    {bachmannBranchProgress > 0 && (
-                        <>
-                            <path d={CONDUCTION_PATHS.bachmannBranchA} pathLength="1" strokeDasharray={`${bachmannBranchProgress} 1`} stroke={PHASE_COLORS.p} strokeWidth="11" />
-                            <path d={CONDUCTION_PATHS.bachmannBranchB} pathLength="1" strokeDasharray={`${bachmannBranchProgress} 1`} stroke={PHASE_COLORS.p} strokeWidth="11" />
-                        </>
-                    )}
+                    <ElectricPath d={CONDUCTION_PATHS.bachmannMain} progress={bachmannProgress} color={PHASE_COLORS.p} width={15} />
+                    <ElectricPath d={CONDUCTION_PATHS.bachmannBranchA} progress={bachmannBranchProgress} color={PHASE_COLORS.p} width={12} />
+                    <ElectricPath d={CONDUCTION_PATHS.bachmannBranchB} progress={bachmannBranchProgress} color={PHASE_COLORS.p} width={12} />
+                    <ElectricPath d={CONDUCTION_PATHS.bachmannBranchC} progress={bachmannBranchProgress} color={PHASE_COLORS.p} width={11} />
                 </g>
             )}
 
             {/* PR delay: AV node golden physiological hold */}
             {avActive && (
                 <g>
-                    <circle cx={CONDUCTION_PATHS.avNode.cx} cy={CONDUCTION_PATHS.avNode.cy} r={46 + avPulse * 28} fill={PHASE_COLORS.pr} opacity={0.28 + avPulse * 0.22} filter={`url(#${prefix}-soft-blur)`} />
-                    <path d={CONDUCTION_PATHS.avNode.outline} fill={PHASE_COLORS.pr} opacity={0.62 + avPulse * 0.25} />
+                    <circle cx={CONDUCTION_PATHS.avNode.cx} cy={CONDUCTION_PATHS.avNode.cy} r={52 + avPulse * 30} fill={PHASE_COLORS.pr} opacity={0.32 + avPulse * 0.24} filter={`url(#${prefix}-soft-blur)`} />
+                    <path d={CONDUCTION_PATHS.avNode.outline} fill={PHASE_COLORS.pr} opacity={0.68 + avPulse * 0.24} />
                 </g>
             )}
 
-            {/* QRS phase 1: His bundle + left-to-right septal fascicles */}
-            {septalActive && (
-                <g fill="none" strokeLinecap="round" strokeLinejoin="round" opacity={septalFade} filter={`url(#${prefix}-impulse-glow)`}>
-                    <path d={CONDUCTION_PATHS.hisBundle} pathLength="1" strokeDasharray={`${hisProgress} 1`} stroke={PHASE_COLORS.qrs} strokeWidth="15" />
-                    {fascicleProgress > 0 && (
-                        <>
-                            <path d={CONDUCTION_PATHS.lbbSeptalFascicleA} pathLength="1" strokeDasharray={`${fascicleProgress} 1`} stroke={PHASE_COLORS.qrs} strokeWidth="10" />
-                            <path d={CONDUCTION_PATHS.lbbSeptalFascicleB} pathLength="1" strokeDasharray={`${fascicleProgress} 1`} stroke={PHASE_COLORS.qrs} strokeWidth="9" />
-                        </>
-                    )}
-                </g>
-            )}
-
-            {/* QRS phases 2-3: Bundle branches & Purkinje arborizations */}
+            {/* QRS: His bundle -> bundle branches -> septal fascicles -> Purkinje arborizations */}
             {ventLineActive && (
                 <g fill="none" strokeLinecap="round" strokeLinejoin="round" opacity={ventLineFade} filter={`url(#${prefix}-impulse-glow)`}>
-                    <path d={CONDUCTION_PATHS.rbbSeptal} pathLength="1" strokeDasharray={`${bundleProgress} 1`} stroke={PHASE_COLORS.qrs} strokeWidth="14" />
-                    <path d={CONDUCTION_PATHS.lbbSeptal} pathLength="1" strokeDasharray={`${bundleProgress} 1`} stroke={PHASE_COLORS.qrs} strokeWidth="15" />
-                    {purkinjeProgress > 0 && (
-                        <>
-                            <path d={CONDUCTION_PATHS.rvPurkinje} pathLength="1" strokeDasharray={`${purkinjeProgress} 1`} stroke={PHASE_COLORS.qrs} strokeWidth="13" />
-                            <path d={CONDUCTION_PATHS.lvPurkinje} pathLength="1" strokeDasharray={`${purkinjeProgress} 1`} stroke={PHASE_COLORS.qrs} strokeWidth="15" />
-                        </>
-                    )}
+                    <ElectricPath d={CONDUCTION_PATHS.hisBundle} progress={hisProgress} color={PHASE_COLORS.qrs} width={16} />
+                    <ElectricPath d={CONDUCTION_PATHS.rbbSeptal} progress={bundleProgress} color={PHASE_COLORS.qrs} width={15} />
+                    <ElectricPath d={CONDUCTION_PATHS.lbbSeptal} progress={bundleProgress} color={PHASE_COLORS.qrs} width={16} />
+                    <ElectricPath d={CONDUCTION_PATHS.lbbSeptalFascicleA} progress={fascicleProgress} color={PHASE_COLORS.qrs} width={11} />
+                    <ElectricPath d={CONDUCTION_PATHS.lbbSeptalFascicleB} progress={fascicleProgress} color={PHASE_COLORS.qrs} width={10} />
+                    <ElectricPath d={CONDUCTION_PATHS.rvPurkinje} progress={purkinjeProgress} color={PHASE_COLORS.qrs} width={14} />
+                    <ElectricPath d={CONDUCTION_PATHS.lvPurkinje} progress={purkinjeProgress} color={PHASE_COLORS.qrs} width={16} />
                 </g>
             )}
 

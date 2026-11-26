@@ -37,7 +37,7 @@ export const cyclePosition = time => ((time % CYCLE_MS) + CYCLE_MS) % CYCLE_MS;
 
 // Display time is stretched; physiology and ECG sampling keep their original ms.
 const LEARNING_SEGMENTS = [
-    [0, 80, 600], [80, 180, 2000], [180, 210, 1400],
+    [0, 80, 700], [80, 180, 3400], [180, 210, 1800],
     [210, 230, 2600], [230, 244, 2200], [244, 270, 3800], [270, 300, 2400],
     [300, 380, 1400], [380, 540, 3000], [540, 800, 1200],
 ];

@@ -162,12 +162,13 @@ export default function EkgHeartModel({ selectedLead, onSelectLead }) {
     const [playing, setPlaying] = useState(false);
     const [speed, setSpeed] = useState('study');
     const [qrsOnly, setQrsOnly] = useState(false);
-    const [time, setTime] = useState(252);
+    const [time, setTime] = useState(142);
     const [showVector, setShowVector] = useState(true);
     const [showAxisZones, setShowAxisZones] = useState(true);
     const [axisPresetId, setAxisPresetId] = useState('normal');
     const [showAll, setShowAll] = useState(false);
     const lastTime = useRef(null);
+    const untouchedInitial = useRef(true);
     const prefix = useId().replace(/:/g, '');
 
     const details = MODEL_LEADS[lead];
@@ -210,8 +211,16 @@ export default function EkgHeartModel({ selectedLead, onSelectLead }) {
         setLocalLead(name);
         onSelectLead?.(name);
     };
-    const jump = value => { setPlaying(false); setTime(value); if (value < 210 || value >= 300) setQrsOnly(false); };
+    const jump = value => { untouchedInitial.current = false; setPlaying(false); setTime(value); if (value < 210 || value >= 300) setQrsOnly(false); };
+    const togglePlay = () => {
+        if (!playing && untouchedInitial.current && !qrsOnly) {
+            setTime(65);
+        }
+        untouchedInitial.current = false;
+        setPlaying(previous => !previous);
+    };
     const startQrs = () => {
+        untouchedInitial.current = false;
         setSpeed('study');
         setQrsOnly(true);
         if (time < 210 || time >= 300) setTime(210);
@@ -405,7 +414,7 @@ export default function EkgHeartModel({ selectedLead, onSelectLead }) {
             <section className="ehm-timeline" aria-label="Afspilning og faser">
                 <div className="ehm-transport">
                     <div className="ehm-play-controls">
-                        <button type="button" className="ehm-play" onClick={() => setPlaying(previous => !previous)}>
+                        <button type="button" className="ehm-play" onClick={togglePlay}>
                             {playing ? <Pause size={17} /> : <Play size={17} />}{playing ? 'Pause' : 'Afspil'}
                         </button>
                         <button type="button" className="ehm-icon-button" aria-label="Forrige fase" onClick={() => step(-1)}><ChevronLeft size={19} /></button>
@@ -481,7 +490,7 @@ export default function EkgHeartModel({ selectedLead, onSelectLead }) {
                 <div>
                     <strong>Afledning {lead}</strong>
                     <span>{phase.short} · {voltage >= 0 ? '+' : '−'}{Math.abs(voltage).toFixed(2)} mV</span>
-                    <button type="button" aria-label={playing ? 'Sæt EKG på pause' : 'Start EKG'} onClick={() => setPlaying(previous => !previous)}>
+                    <button type="button" aria-label={playing ? 'Sæt EKG på pause' : 'Start EKG'} onClick={togglePlay}>
                         {playing ? <Pause size={15} /> : <Play size={15} />}
                     </button>
                 </div>
