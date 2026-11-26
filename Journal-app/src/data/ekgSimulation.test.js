@@ -140,3 +140,20 @@ test('meanQrsAngle, axisZoneForAngle, and net QRS polarities match Normal, LAD, 
     assert.ok(vectorLoopPath('frontal', 330, 260, 104, 0).startsWith('M'));
     assert.ok(vectorLoopPath('horizontal', 330, 248, 86, 0).startsWith('M'));
 });
+
+test('drawn vector projections match lead voltage sign and 90-degree orthogonality across all 12 leads and axis presets', () => {
+    for (const preset of Object.values(AXIS_PRESETS)) {
+        for (const [lead, details] of Object.entries(MODEL_LEADS)) {
+            const offset = details.plane === 'frontal' ? preset.offsetDeg : 0;
+            for (let time = 0; time < 800; time += 5) {
+                const { vector, unit, point, voltage } = projectionAt(lead, time, offset);
+                const dotAlongUnit = point[0] * unit[0] + point[1] * unit[1];
+                const residualDot = (vector[0] - point[0]) * unit[0] + (vector[1] - point[1]) * unit[1];
+                close(residualDot, 0, 1e-9);
+                if (Math.abs(voltage) > 0.005) {
+                    assert.equal(Math.sign(dotAlongUnit), Math.sign(voltage), `${lead} at ${time}ms (${preset.id})`);
+                }
+            }
+        }
+    }
+});

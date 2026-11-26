@@ -7,7 +7,9 @@ import {
     HEART_IMG_H,
     HEART_IMG_W,
     HEART_LABELS,
-    PHASE_COLORS
+    PHASE_COLORS,
+    REPOLARIZATION_ARROWS,
+    REPOLARIZATION_WALLS
 } from '../../data/heartConductionPaths';
 import {
     MODEL_LEADS,
@@ -77,8 +79,26 @@ function ElectricPath({ d, progress, color, width = 14 }) {
     );
 }
 
+function smoothWavePath(pairs, progress) {
+    const p = clamp01(progress);
+    const pts = pairs.map(([outer, inner]) => [
+        outer[0] + (inner[0] - outer[0]) * p,
+        outer[1] + (inner[1] - outer[1]) * p
+    ]);
+    if (pts.length < 2) return '';
+    let d = `M ${pts[0][0].toFixed(1)} ${pts[0][1].toFixed(1)}`;
+    for (let i = 1; i < pts.length - 1; i++) {
+        const mx = (pts[i][0] + pts[i + 1][0]) / 2;
+        const my = (pts[i][1] + pts[i + 1][1]) / 2;
+        d += ` Q ${pts[i][0].toFixed(1)} ${pts[i][1].toFixed(1)} ${mx.toFixed(1)} ${my.toFixed(1)}`;
+    }
+    const last = pts[pts.length - 1];
+    d += ` L ${last[0].toFixed(1)} ${last[1].toFixed(1)}`;
+    return d;
+}
+
 function ConductionOverlay({ time, prefix }) {
-    // Smooth, continuous choreography from SA node -> atrial tracts -> AV node -> His -> bundles -> Purkinje
+    // Smooth, continuous choreography from SA node -> atrial tracts -> AV node -> His -> bundles -> Purkinje -> epicardial-to-endocardial repolarization
     const saActive = time >= 72 && time < 195;
     const saPulse = saActive ? Math.sin(clamp01((time - 72) / 60) * Math.PI) : 0;
 
@@ -108,12 +128,19 @@ function ConductionOverlay({ time, prefix }) {
     const ventDepolGlow = time >= 232 && time < 310
         ? Math.sin(clamp01((time - 232) / 78) * Math.PI * 0.5) * 0.17
         : 0;
-    const stGlow = time >= 300 && time < 385
-        ? 0.12 * (time >= 365 ? clamp01(1 - (time - 365) / 20) : 1)
+    const isRepol = time >= 380 && time < 550;
+    const repolP = clamp01((time - 380) / 160);
+    const repolEdgeFade = !isRepol
+        ? 0
+        : time < 402
+            ? clamp01((time - 380) / 22)
+            : time > 515
+                ? clamp01((550 - time) / 35)
+                : 1;
+    const stGlow = time >= 300 && time < 540
+        ? (time < 380 ? 0.12 : 0.12 * (1 - repolP))
         : 0;
-    const repolGlow = time >= 380 && time < 545
-        ? Math.sin(clamp01((time - 380) / 165) * Math.PI) * 0.18
-        : 0;
+    const repolGlow = isRepol ? Math.sin(repolP * Math.PI) * 0.16 : 0;
 
     return (
         <g transform={`translate(${IMG_X} ${IMG_Y}) scale(${IMG_SCALE})`}>
@@ -224,6 +251,45 @@ function ConductionOverlay({ time, prefix }) {
                 </g>
             )}
 
+            {/* T-wave: Epicardium -> Endocardium repolarization wavefront + inward transmural arrows */}
+            {repolEdgeFade > 0.01 && (
+                <g opacity={repolEdgeFade}>
+                    <g fill="none" strokeLinecap="round" strokeLinejoin="round" filter={`url(#${prefix}-impulse-glow)`}>
+                        {[REPOLARIZATION_WALLS.lv, REPOLARIZATION_WALLS.rv].map((wallPairs, idx) => {
+                            const waveD = smoothWavePath(wallPairs, repolP);
+                            return (
+                                <g key={idx}>
+                                    <path d={waveD} stroke={PHASE_COLORS.t} strokeWidth="24" opacity="0.28" />
+                                    <path d={waveD} stroke={PHASE_COLORS.t} strokeWidth="11" opacity="0.92" />
+                                    <path d={waveD} stroke="#ffffff" strokeWidth="3.8" opacity="0.58" />
+                                </g>
+                            );
+                        })}
+                    </g>
+                    {REPOLARIZATION_ARROWS.map(arrow => {
+                        const startFrac = Math.max(0, repolP - 0.12);
+                        const endFrac = Math.min(1, repolP + 0.36);
+                        const sx = arrow.from[0] + (arrow.to[0] - arrow.from[0]) * startFrac;
+                        const sy = arrow.from[1] + (arrow.to[1] - arrow.from[1]) * startFrac;
+                        const ex = arrow.from[0] + (arrow.to[0] - arrow.from[0]) * endFrac;
+                        const ey = arrow.from[1] + (arrow.to[1] - arrow.from[1]) * endFrac;
+                        return (
+                            <line
+                                key={arrow.id}
+                                x1={sx.toFixed(1)}
+                                y1={sy.toFixed(1)}
+                                x2={ex.toFixed(1)}
+                                y2={ey.toFixed(1)}
+                                stroke="#1b7e68"
+                                strokeWidth="7.5"
+                                strokeLinecap="round"
+                                markerEnd={`url(#${prefix}-repol-arrow)`}
+                            />
+                        );
+                    })}
+                </g>
+            )}
+
             {/* Clean anatomical abbreviations placed in free regions */}
             {HEART_LABELS.map(lbl => (
                 <text
@@ -306,6 +372,9 @@ export default function EkgFrontalHeartSvg({
                 </marker>
                 <marker id={`${prefix}-proj-neg`} viewBox="0 0 10 10" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse">
                     <path d="M1,1 L9,5 L1,9 Z" fill="#c0444f" />
+                </marker>
+                <marker id={`${prefix}-repol-arrow`} viewBox="0 0 10 10" markerWidth="20" markerHeight="20" refX="7.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+                    <path d="M1,1.5 L8.5,5 L1,8.5 Z" fill="#1b7e68" />
                 </marker>
 
                 {CABRERA_SECTORS.map(sec => (
@@ -394,16 +463,22 @@ export default function EkgFrontalHeartSvg({
                     <line x1={tip[0]} y1={tip[1]} x2={foot[0]} y2={foot[1]} stroke={projectionColor} strokeWidth="1.4" strokeDasharray="3 3" opacity="0.75" />
                     {rightAnglePath && <path d={rightAnglePath} fill="none" stroke={projectionColor} strokeWidth="1.1" opacity="0.75" />}
 
-                    <line x1={CX} y1={CY} x2={foot[0]} y2={foot[1]} stroke="#ffffff" strokeWidth="7" strokeLinecap="round" opacity="0.85" />
-                    <line
-                        x1={CX}
-                        y1={CY}
-                        x2={foot[0]}
-                        y2={foot[1]}
-                        stroke={projectionColor}
-                        strokeWidth="4"
-                        markerEnd={`url(#${prefix}-${voltage >= 0 ? 'proj-pos' : 'proj-neg'})`}
-                    />
+                    {projLengthPx > 8 ? (
+                        <>
+                            <line x1={CX} y1={CY} x2={foot[0]} y2={foot[1]} stroke="#ffffff" strokeWidth="7" strokeLinecap="round" opacity="0.85" />
+                            <line
+                                x1={CX}
+                                y1={CY}
+                                x2={foot[0]}
+                                y2={foot[1]}
+                                stroke={projectionColor}
+                                strokeWidth="4"
+                                markerEnd={`url(#${prefix}-${voltage >= 0 ? 'proj-pos' : 'proj-neg'})`}
+                            />
+                        </>
+                    ) : (
+                        <circle cx={CX} cy={CY} r="5.5" fill="#ffffff" stroke="#7c8f83" strokeWidth="1.4" opacity="0.85" />
+                    )}
 
                     <line x1={CX} y1={CY} x2={tip[0]} y2={tip[1]} stroke="#ffffff" strokeWidth="7" strokeLinecap="round" opacity="0.85" />
                     <line

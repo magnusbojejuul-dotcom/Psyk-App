@@ -60,3 +60,29 @@ export const HEART_LABELS = [
     { id: 'HV', text: 'HV', x: 432, y: 696, kind: 'chamber' },
     { id: 'VV', text: 'VV', x: 800, y: 585, kind: 'chamber' }
 ];
+
+// Epicardial -> endocardial ventricular wall pairs for T-wave repolarization sweep.
+export const REPOLARIZATION_WALLS = {
+    lv: [
+        [[838, 365], [768, 385]],
+        [[896, 455], [824, 478]],
+        [[938, 565], [872, 586]],
+        [[955, 690], [892, 702]],
+        [[946, 825], [880, 825]],
+        [[862, 926], [818, 868]]
+    ],
+    rv: [
+        [[762, 940], [728, 862]],
+        [[630, 938], [608, 848]],
+        [[490, 926], [472, 825]],
+        [[350, 892], [342, 782]],
+        [[228, 824], [228, 725]]
+    ]
+};
+
+export const REPOLARIZATION_ARROWS = [
+    { id: 'lv1', from: [932, 558], to: [866, 584] },
+    { id: 'lv2', from: [950, 728], to: [882, 740] },
+    { id: 'apex', from: [882, 920], to: [824, 858] },
+    { id: 'rv1', from: [540, 930], to: [552, 854] }
+];

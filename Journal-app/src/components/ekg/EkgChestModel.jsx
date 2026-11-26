@@ -36,15 +36,22 @@ export default function EkgChestModel({ lead, time, onSelect, showVector, prefix
     const electrode = electrodePoint(lead);
 
     const magnitude = Math.hypot(...vector);
-    const scale = 86;
+    const scale = 100;
     const tip = [CX + vector[0] * scale, CY + vector[1] * scale];
     const foot = [CX + point[0] * scale, CY + point[1] * scale];
     const vcgHorizontal = vectorLoopPath('horizontal', CX, CY, scale, 0);
 
-    const arrowRadius = magnitude > 0.008 ? Math.max(46, Math.min(92, magnitude * scale)) : 0;
-    const arrowTip = arrowRadius > 0
-        ? [CX + (vector[0] / magnitude) * arrowRadius, CY + (vector[1] / magnitude) * arrowRadius]
-        : [CX, CY];
+    const projLengthPx = Math.hypot(foot[0] - CX, foot[1] - CY);
+    const dropLengthPx = Math.hypot(tip[0] - foot[0], tip[1] - foot[1]);
+    let rightAnglePath = null;
+    if (projLengthPx > 12 && dropLengthPx > 12) {
+        const s = 7;
+        const ux = (CX - foot[0]) / projLengthPx;
+        const uy = (CY - foot[1]) / projLengthPx;
+        const dx = (tip[0] - foot[0]) / dropLengthPx;
+        const dy = (tip[1] - foot[1]) / dropLengthPx;
+        rightAnglePath = `M ${(foot[0] + ux * s).toFixed(1)} ${(foot[1] + uy * s).toFixed(1)} L ${(foot[0] + ux * s + dx * s).toFixed(1)} ${(foot[1] + uy * s + dy * s).toFixed(1)} L ${(foot[0] + dx * s).toFixed(1)} ${(foot[1] + dy * s).toFixed(1)}`;
+    }
 
     const septal = time >= 210 && time < 230;
     const depolarizing = time >= 230 && time < 300;
@@ -218,21 +225,24 @@ export default function EkgChestModel({ lead, time, onSelect, showVector, prefix
 
                 {showVector && magnitude > 0.008 && (
                     <g aria-label="Samlet elektrisk retning i horisontalplanet">
-                        <line x1={tip[0]} y1={tip[1]} x2={foot[0]} y2={foot[1]} stroke={projectionColor} strokeWidth="1.4" strokeDasharray="3 3" opacity="0.7" />
-                        {Math.hypot(foot[0] - CX, foot[1] - CY) > 8 && (
+                        <line x1={tip[0]} y1={tip[1]} x2={foot[0]} y2={foot[1]} stroke={projectionColor} strokeWidth="1.4" strokeDasharray="3 3" opacity="0.75" />
+                        {rightAnglePath && <path d={rightAnglePath} fill="none" stroke={projectionColor} strokeWidth="1.1" opacity="0.75" />}
+                        {projLengthPx > 8 ? (
                             <line
                                 x1={CX}
                                 y1={CY}
                                 x2={foot[0]}
                                 y2={foot[1]}
                                 stroke={projectionColor}
-                                strokeWidth="3.6"
-                                opacity="0.88"
+                                strokeWidth="3.8"
+                                opacity="0.92"
                                 markerEnd={`url(#${prefix}-chest-proj)`}
                             />
+                        ) : (
+                            <circle cx={CX} cy={CY} r="5.2" fill="#ffffff" stroke="#7c8f83" strokeWidth="1.4" opacity="0.85" />
                         )}
-                        <line x1={CX} y1={CY} x2={arrowTip[0]} y2={arrowTip[1]} stroke="#fffdf5" strokeWidth="7.5" strokeLinecap="round" />
-                        <line x1={CX} y1={CY} x2={arrowTip[0]} y2={arrowTip[1]} stroke="#d58227" strokeWidth="3.6" markerEnd={`url(#${prefix}-net-arrow)`} />
+                        <line x1={CX} y1={CY} x2={tip[0]} y2={tip[1]} stroke="#fffdf5" strokeWidth="7.5" strokeLinecap="round" />
+                        <line x1={CX} y1={CY} x2={tip[0]} y2={tip[1]} stroke="#d58227" strokeWidth="3.6" markerEnd={`url(#${prefix}-net-arrow)`} />
                         <circle cx={CX} cy={CY} r="4.5" fill="#d58227" stroke="#fffdf8" strokeWidth="1.5" />
                     </g>
                 )}
@@ -295,7 +305,7 @@ export default function EkgChestModel({ lead, time, onSelect, showVector, prefix
                 <div className="ehm-measure-track"><span>−</span><i /><b style={{ left: `${Math.max(4, Math.min(96, 50 + voltage / 1.5 * 40))}%` }} /><span>+</span></div>
                 <span>{voltage < 0 ? '−' : '+'}{Math.abs(voltage).toFixed(2)} mV</span>
             </div>
-            <p className="ehm-arrow-note">Den orange pil viser den elektriske retning i horisontalplanet; grøn/rød pil viser projektionen på valgt brystafledning.</p>
+            <p className="ehm-arrow-note">Den orange pil viser den elektriske vektors retning og styrke i horisontalplanet; grøn/rød pil viser 90°-projektionen på valgt brystafledning.</p>
         </div>
     );
 }

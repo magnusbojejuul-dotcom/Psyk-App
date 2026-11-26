@@ -1,5 +1,5 @@
 import React, { useEffect, useId, useMemo, useRef, useState } from 'react';
-import { Play, Pause, RotateCcw, ChevronLeft, ChevronRight, Activity, ArrowRight, Zap } from 'lucide-react';
+import { Play, Pause, RotateCcw, ChevronLeft, ChevronRight, Activity, ArrowRight, Zap, Info, X } from 'lucide-react';
 import {
     AXIS_PRESETS,
     CYCLE_MS,
@@ -167,6 +167,7 @@ export default function EkgHeartModel({ selectedLead, onSelectLead }) {
     const [showAxisZones, setShowAxisZones] = useState(true);
     const [axisPresetId, setAxisPresetId] = useState('normal');
     const [showAll, setShowAll] = useState(false);
+    const [showVectorInfo, setShowVectorInfo] = useState(false);
     const lastTime = useRef(null);
     const untouchedInitial = useRef(true);
     const prefix = useId().replace(/:/g, '');
@@ -205,6 +206,15 @@ export default function EkgHeartModel({ selectedLead, onSelectLead }) {
         frame = requestAnimationFrame(animate);
         return () => cancelAnimationFrame(frame);
     }, [playing, speed, qrsOnly]);
+
+    useEffect(() => {
+        if (!showVectorInfo) return undefined;
+        const onKey = event => {
+            if (event.key === 'Escape') setShowVectorInfo(false);
+        };
+        window.addEventListener('keydown', onKey);
+        return () => window.removeEventListener('keydown', onKey);
+    }, [showVectorInfo]);
 
     const selectLead = name => {
         if (MODEL_LEADS[name].plane !== details.plane) setPlaying(false);
@@ -320,19 +330,75 @@ export default function EkgHeartModel({ selectedLead, onSelectLead }) {
                         </div>
                     )}
 
-                    {details.plane === 'horizontal' ? (
-                        <EkgChestModel lead={lead} time={time} onSelect={selectLead} showVector={showVector} prefix={prefix} />
-                    ) : (
-                        <EkgFrontalHeartSvg
-                            lead={lead}
-                            time={time}
-                            onSelect={selectLead}
-                            showVector={showVector}
-                            showAxisZones={showAxisZones}
-                            axisOffsetDeg={axisOffsetDeg}
-                            prefix={prefix}
-                        />
-                    )}
+                    <div className="ehm-figure-stage">
+                        <button
+                            type="button"
+                            className="ehm-vector-info-btn"
+                            aria-expanded={showVectorInfo}
+                            aria-controls={`${prefix}-vector-info`}
+                            onClick={() => setShowVectorInfo(open => !open)}
+                        >
+                            <Info size={13} />
+                            <span>Forstå vektorer</span>
+                        </button>
+
+                        {showVectorInfo && (
+                            <div
+                                id={`${prefix}-vector-info`}
+                                className="ehm-vector-popover"
+                                role="dialog"
+                                aria-label="Forklaring af elektriske vektorer og EKG-aflæsninger"
+                            >
+                                <div className="ehm-vector-popover-head">
+                                    <strong>Hvad viser vektorerne på hjertet?</strong>
+                                    <button
+                                        type="button"
+                                        aria-label="Luk vektorforklaring"
+                                        onClick={() => setShowVectorInfo(false)}
+                                    >
+                                        <X size={14} />
+                                    </button>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <i style={{ background: '#dd6b20' }} />
+                                        <div>
+                                            <strong>Orange pil (hjertets vektor):</strong> Viser den samlede retning og styrke af elektriciteten lige nu — lille i atrierne, stor i venstre ventrikel.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <i style={{ background: '#2f7a62' }} />
+                                        <div>
+                                            <strong>Grøn (+) eller rød (−) projektion:</strong> Fældet i 90° ned på den valgte aflednings linje. Peger projektionen mod <strong>+</strong> (grøn), går EKG-kurven <strong>opad</strong>; peger den væk (rød), går den <strong>nedad</strong>; ved præcis 90° måles <strong>0 mV</strong>.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <i style={{ background: '#248f77' }} />
+                                        <div>
+                                            <strong>Grønne indadgående pile (T-tak):</strong> Repolarisering løber udefra og ind (<em>epikardium → endokardium</em>). Fordi ladningen samtidig vender fortegn, peger den samlede elektriske vektor stadig mod <strong>+</strong> (fx i II) → positiv T-tak.
+                                        </div>
+                                    </li>
+                                </ul>
+                                <p className="ehm-vector-popover-note">
+                                    Samme slag ses fra 12 vinkler: Afledning <strong>II (+60°)</strong> ser hovedvektoren komme imod sig (+), mens <strong>aVR (−150°)</strong> ser den bevæge sig væk (−).
+                                </p>
+                            </div>
+                        )}
+
+                        {details.plane === 'horizontal' ? (
+                            <EkgChestModel lead={lead} time={time} onSelect={selectLead} showVector={showVector} prefix={prefix} />
+                        ) : (
+                            <EkgFrontalHeartSvg
+                                lead={lead}
+                                time={time}
+                                onSelect={selectLead}
+                                showVector={showVector}
+                                showAxisZones={showAxisZones}
+                                axisOffsetDeg={axisOffsetDeg}
+                                prefix={prefix}
+                            />
+                        )}
+                    </div>
 
                     <div className="ehm-map-legend">
                         {details.plane === 'frontal' ? (
