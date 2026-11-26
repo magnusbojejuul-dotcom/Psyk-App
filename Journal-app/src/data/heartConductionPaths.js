@@ -97,7 +97,8 @@ export const PATHOLOGY_MARKERS = {
 };
 
 export const PATHOLOGY_PATHS = {
-    flutterLoop: 'M 178 320 C 266 320 318 378 308 456 C 296 534 232 562 164 536 C 106 512 96 426 122 362 C 136 330 156 320 178 320 Z',
+    flutterLoop: 'M 184 316 C 272 314 328 378 318 460 C 306 540 234 574 162 544 C 102 518 92 428 118 360 C 132 326 156 317 184 316 Z',
+    flutterAvTap: 'M 294 510 Q 308 524 322 532',
     afibFoci: [
         { id: 'la1', x: 486, y: 214, phase: 0.0 },
         { id: 'la2', x: 562, y: 196, phase: 0.24 },
@@ -106,19 +107,57 @@ export const PATHOLOGY_PATHS = {
         { id: 'ra1', x: 248, y: 376, phase: 0.37 },
         { id: 'ra2', x: 186, y: 458, phase: 0.86 },
     ],
+    afibWavelets: [
+        { id: 'w1', d: 'M 470 226 Q 515 178 566 196', phase: 0.0 },
+        { id: 'w2', d: 'M 556 192 Q 618 198 648 250', phase: 0.18 },
+        { id: 'w3', d: 'M 638 258 Q 584 294 522 276', phase: 0.36 },
+        { id: 'w4', d: 'M 510 278 Q 458 264 474 218', phase: 0.55 },
+        { id: 'w5', d: 'M 252 368 Q 282 424 252 478', phase: 0.28 },
+        { id: 'w6', d: 'M 178 456 Q 152 382 214 344', phase: 0.67 },
+        { id: 'w7', d: 'M 232 496 Q 286 508 310 526', phase: 0.82 },
+    ],
     lbbbTransseptal: [
-        'M 575 638 Q 642 622 710 606',
-        'M 628 696 Q 698 682 772 670',
-        'M 702 764 Q 778 756 854 748',
+        'M 562 608 Q 642 590 735 572',
+        'M 608 668 Q 692 648 792 634',
+        'M 664 732 Q 752 718 852 708',
+        'M 726 798 Q 802 794 878 784',
     ],
     rbbbTransseptal: [
-        'M 648 632 Q 596 664 548 692',
-        'M 704 696 Q 642 732 572 766',
-        'M 754 756 Q 684 794 606 822',
+        'M 642 612 Q 580 648 518 682',
+        'M 692 674 Q 618 716 540 752',
+        'M 744 738 Q 660 782 566 814',
+        'M 776 802 Q 684 832 586 848',
     ],
     vtSpread: [
-        'M 868 725 Q 798 668 712 612',
-        'M 868 725 Q 774 720 656 716',
-        'M 868 725 Q 842 630 806 520',
+        'M 868 725 Q 842 610 792 475',
+        'M 868 725 Q 786 648 675 585',
+        'M 868 725 Q 755 710 612 696',
+        'M 868 725 Q 748 792 602 824',
+        'M 868 725 Q 828 842 758 886',
+    ],
+};
+
+export const PATHOLOGY_CALLOUTS = {
+    afib: [
+        { id: 'afib', x: 565, y: 74, tx: 548, ty: 196, title: 'Kaotiske foci (350–600/min)', sub: 'Ingen P-tak · AV filtrerer', color: '#7c5cbf' },
+    ],
+    aflutter: [
+        { id: 'aflutter', x: 252, y: 112, tx: 215, ty: 318, title: 'Reentry-cirkel (~300/min)', sub: 'Cirkelbølge i højre atrium', color: '#2b78b8' },
+    ],
+    av_block_1: [
+        { id: 'av1', x: 186, y: 654, tx: 318, ty: 540, title: 'AV-forsinkelse (PR > 200 ms)', sub: 'Impulsen bremses ekstra her', color: '#d48817' },
+    ],
+    av_block_3: [
+        { id: 'av3-blk', x: 182, y: 646, tx: 345, ty: 515, title: 'Total AV-blokade', sub: 'Atrie-impuls stoppes helt', color: '#c43b47' },
+        { id: 'av3-esc', x: 282, y: 882, tx: 524, ty: 572, title: 'Erstatningsfokus', sub: 'Driver ventrikler selvstændigt', color: '#d9534f' },
+    ],
+    lbbb: [
+        { id: 'lbbb', x: 742, y: 256, tx: 562, ty: 534, title: 'Venstre gren blokeret', sub: 'Langsom omvej HV → VV', color: '#8b5cf6' },
+    ],
+    rbbb: [
+        { id: 'rbbb', x: 262, y: 880, tx: 548, ty: 598, title: 'Højre gren blokeret', sub: 'Langsom omvej VV → HV', color: '#0ea5e9' },
+    ],
+    vt: [
+        { id: 'vt', x: 640, y: 906, tx: 862, ty: 748, title: 'Ektopisk VT-fokus', sub: 'Hurtig muskelspredning', color: '#dc2626' },
     ],
 };

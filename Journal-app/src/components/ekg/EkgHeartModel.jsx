@@ -24,13 +24,13 @@ const FRONTAL_ORDER = ['aVL', 'I', 'II', 'aVF', 'III', 'aVR'];
 
 const RHYTHM_START_TIME = {
     normal: 142,
-    afib: 130,
-    aflutter: 100,
-    av_block_1: 210,
-    av_block_3: 525,
-    lbbb: 295,
-    rbbb: 305,
-    vt: 115
+    afib: 40,
+    aflutter: 20,
+    av_block_1: 30,
+    av_block_3: 70,
+    lbbb: 205,
+    rbbb: 205,
+    vt: 10
 };
 
 function Trace({ lead, time, compact = false, axisOffsetDeg = 0, rhythmId = 'normal', onJump }) {
@@ -174,7 +174,24 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
     const [showVectorInfo, setShowVectorInfo] = useState(false);
     const lastTime = useRef(null);
     const untouchedInitial = useRef(true);
+    const prevExternalRhythm = useRef(externalRhythmId);
     const prefix = useId().replace(/:/g, '');
+
+    useEffect(() => {
+        if (externalRhythmId && externalRhythmId !== prevExternalRhythm.current) {
+            prevExternalRhythm.current = externalRhythmId;
+            setQrsOnly(false);
+            setTime(RHYTHM_START_TIME[externalRhythmId] ?? 142);
+            if (externalRhythmId !== 'normal') {
+                setSpeed('0.25');
+                setPlaying(true);
+            } else {
+                setSpeed('study');
+                setPlaying(false);
+            }
+            untouchedInitial.current = false;
+        }
+    }, [externalRhythmId]);
 
     const details = MODEL_LEADS[lead];
     const activePreset = AXIS_PRESETS[axisPresetId] || AXIS_PRESETS.normal;
@@ -230,6 +247,13 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
         onSelectRhythm?.(id);
         setQrsOnly(false);
         setTime(RHYTHM_START_TIME[id] ?? 142);
+        if (id === 'normal') {
+            setSpeed('study');
+            setPlaying(false);
+        } else {
+            setSpeed('0.25');
+            setPlaying(true);
+        }
         untouchedInitial.current = false;
     };
     const jump = value => { untouchedInitial.current = false; setPlaying(false); setTime(value); if (value < 210 || value >= 300) setQrsOnly(false); };
@@ -569,6 +593,7 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
                         <select aria-label="Afspilningstempo" value={speed} onChange={event => setSpeed(event.target.value)}>
                             <option value="study">Læring · QRS på 11 sek.</option>
                             <option value="0.1">0,1× · langsomt</option>
+                            <option value="0.25">0,25× · jævn langsom (rytmer)</option>
                             <option value="0.5">0,5× · langsomt</option>
                             <option value="1">1× · realtid</option>
                         </select>

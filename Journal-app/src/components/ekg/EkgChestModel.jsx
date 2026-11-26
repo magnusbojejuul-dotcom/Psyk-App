@@ -141,6 +141,15 @@ export default function EkgChestModel({ lead, time, onSelect, showVector, prefix
                     <marker id={`${prefix}-chest-proj`} viewBox="0 0 10 10" markerWidth="9" markerHeight="9" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse">
                         <path d="M1 1 L9 5 L1 9 Z" fill={projectionColor} />
                     </marker>
+                    <marker id={`${prefix}-lbbb-arrow`} viewBox="0 0 10 10" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+                        <path d="M1 1 L9 5 L1 9 Z" fill="#8b5cf6" />
+                    </marker>
+                    <marker id={`${prefix}-rbbb-arrow`} viewBox="0 0 10 10" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+                        <path d="M1 1 L9 5 L1 9 Z" fill="#0ea5e9" />
+                    </marker>
+                    <marker id={`${prefix}-vt-arrow`} viewBox="0 0 10 10" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+                        <path d="M1 1 L9 5 L1 9 Z" fill="#dc2626" />
+                    </marker>
                 </defs>
 
                 <text x={CX} y="24" className="ehm-svg-direction">RYG · POSTERIORT</text>
@@ -218,12 +227,35 @@ export default function EkgChestModel({ lead, time, onSelect, showVector, prefix
                         strokeWidth="1.6"
                     />
                     {septal && <path d="M 284 196 Q 268 244 285 288" stroke="#2f85b8" strokeWidth="10" strokeLinecap="round" fill="none" opacity="0.68" />}
-                    {isLbbb && depolarizing && <line x1="262" y1="246" x2="314" y2="246" stroke="#8b5cf6" strokeWidth="4" strokeDasharray="5 4" markerEnd={`url(#${prefix}-local-arrow)`} />}
-                    {isRbbb && time >= 272 && time < 355 && <line x1="312" y1="246" x2="250" y2="246" stroke="#0ea5e9" strokeWidth="4" strokeDasharray="5 4" markerEnd={`url(#${prefix}-local-arrow)`} />}
+                    {isLbbb && (
+                        <g style={{ pointerEvents: 'none' }}>
+                            <circle cx="294" cy="232" r="11" fill="#fff5f5" stroke="#8b5cf6" strokeWidth="2.8" />
+                            <path d="M 290 228 L 298 236 M 298 228 L 290 236" stroke="#8b5cf6" strokeWidth="2.8" strokeLinecap="round" />
+                            <path d="M 262 214 Q 298 212 332 204" fill="none" stroke="#8b5cf6" strokeWidth="3.2" strokeDasharray="6 4" opacity={depolarizing ? 0.92 : 0.42} markerEnd={`url(#${prefix}-lbbb-arrow)`} />
+                            <path d="M 258 246 Q 294 246 326 246" fill="none" stroke="#8b5cf6" strokeWidth="3.8" strokeDasharray="6 4" opacity={depolarizing ? 0.95 : 0.42} markerEnd={`url(#${prefix}-lbbb-arrow)`} />
+                            <path d="M 262 278 Q 300 282 336 290" fill="none" stroke="#8b5cf6" strokeWidth="3.2" strokeDasharray="6 4" opacity={depolarizing ? 0.92 : 0.42} markerEnd={`url(#${prefix}-lbbb-arrow)`} />
+                        </g>
+                    )}
+                    {isRbbb && (
+                        <g style={{ pointerEvents: 'none' }}>
+                            <circle cx="268" cy="232" r="11" fill="#fff5f5" stroke="#0ea5e9" strokeWidth="2.8" />
+                            <path d="M 264 228 L 272 236 M 272 228 L 264 236" stroke="#0ea5e9" strokeWidth="2.8" strokeLinecap="round" />
+                            <path d="M 316 208 Q 278 210 242 218" fill="none" stroke="#0ea5e9" strokeWidth="3.2" strokeDasharray="6 4" opacity={time >= 268 && time < 358 ? 0.92 : 0.42} markerEnd={`url(#${prefix}-rbbb-arrow)`} />
+                            <path d="M 320 246 Q 282 246 240 248" fill="none" stroke="#0ea5e9" strokeWidth="3.8" strokeDasharray="6 4" opacity={time >= 268 && time < 358 ? 0.95 : 0.42} markerEnd={`url(#${prefix}-rbbb-arrow)`} />
+                            <path d="M 314 286 Q 278 286 246 280" fill="none" stroke="#0ea5e9" strokeWidth="3.2" strokeDasharray="6 4" opacity={time >= 268 && time < 358 ? 0.92 : 0.42} markerEnd={`url(#${prefix}-rbbb-arrow)`} />
+                        </g>
+                    )}
                     {isVt && (
                         <g style={{ pointerEvents: 'none' }}>
-                            <circle cx="422" cy="264" r={10 + (depolarizing ? 5 : 0)} fill="#fee2e2" stroke="#dc2626" strokeWidth="2.2" />
-                            <polygon points="424,257 418,265 422,265 420,271 426,263 422,263" fill="#dc2626" />
+                            {depolarizing && [0, 0.5].map((off, idx) => {
+                                const rp = ((Math.max(0, vtLocal - 20) / 160) + off) % 1;
+                                return <circle key={idx} cx="422" cy="264" r={16 + rp * 62} fill="none" stroke="#dc2626" strokeWidth="2.4" opacity={(1 - rp) * 0.55} />;
+                            })}
+                            <path d="M 412 254 Q 368 220 318 192" fill="none" stroke="#dc2626" strokeWidth="3" strokeDasharray="5 4" opacity={depolarizing ? 0.92 : 0.42} markerEnd={`url(#${prefix}-vt-arrow)`} />
+                            <path d="M 410 264 Q 348 256 276 246" fill="none" stroke="#dc2626" strokeWidth="3.4" strokeDasharray="5 4" opacity={depolarizing ? 0.95 : 0.42} markerEnd={`url(#${prefix}-vt-arrow)`} />
+                            <path d="M 412 274 Q 364 300 310 314" fill="none" stroke="#dc2626" strokeWidth="3" strokeDasharray="5 4" opacity={depolarizing ? 0.92 : 0.42} markerEnd={`url(#${prefix}-vt-arrow)`} />
+                            <circle cx="422" cy="264" r={12 + (depolarizing ? 5 : 0)} fill="#fee2e2" stroke="#dc2626" strokeWidth="2.6" />
+                            <polygon points="424,255 416,265 422,265 419,274 428,263 422,263" fill="#dc2626" />
                         </g>
                     )}
                 </g>
@@ -298,6 +330,15 @@ export default function EkgChestModel({ lead, time, onSelect, showVector, prefix
                         <circle cx={CX} cy={CY} r="4.5" fill="#d58227" stroke="#fffdf8" strokeWidth="1.5" />
                     </g>
                 )}
+
+                {rhythmId !== 'normal' ? (
+                    <g style={{ pointerEvents: 'none' }}>
+                        <rect x="16" y="16" width="268" height="28" rx="9" fill="rgba(255, 254, 250, 0.94)" stroke={isLbbb ? '#8b5cf6' : isRbbb ? '#0ea5e9' : isVt ? '#dc2626' : '#5e7a6d'} strokeWidth="1.4" />
+                        <text x="28" y="34" fontSize="10.5" fontWeight="750" fill="#233c32">
+                            {isLbbb ? 'LBBB · Venstre gren blokeret (HV → VV)' : isRbbb ? 'RBBB · Højre gren blokeret (VV → HV)' : isVt ? 'VT · Ektopisk fokus i venstre ventrikel' : rhythmId === 'afib' ? 'Atrieflimren · Ektopiske atriefoci (over snit)' : rhythmId === 'aflutter' ? 'Atrieflagren · Reentry i RA (over snit)' : rhythmId === 'av_block_1' ? 'AV-blok I · Forsinket i AV (over snit)' : 'AV-blok III · Erstatningsfokus i ventrikel'}
+                        </text>
+                    </g>
+                ) : null}
 
                 {CHEST_LEADS.map(name => {
                     const [x, y] = electrodePoint(name);

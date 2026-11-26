@@ -7,6 +7,7 @@ import {
     HEART_IMG_H,
     HEART_IMG_W,
     HEART_LABELS,
+    PATHOLOGY_CALLOUTS,
     PATHOLOGY_MARKERS,
     PATHOLOGY_PATHS,
     PHASE_COLORS,
@@ -69,13 +70,13 @@ const CABRERA_SECTORS = [
     { id: 'extreme', label: 'EKSTREM', startDeg: 180, endDeg: 270, textStart: -170, textEnd: -100, sweep: 1, color: '#be3c48', activeFill: 'rgba(190, 60, 72, 0.18)' }
 ];
 
-function ElectricPath({ d, progress, color, width = 14 }) {
+function ElectricPath({ d, progress, color, width = 14, markerEnd }) {
     const p = clamp01(progress);
     if (p <= 0.001) return null;
     return (
         <g>
             <path d={d} pathLength="1" strokeDasharray={`${p} 1`} stroke={color} strokeWidth={width * 1.9} opacity="0.30" />
-            <path d={d} pathLength="1" strokeDasharray={`${p} 1`} stroke={color} strokeWidth={width} opacity="0.96" />
+            <path d={d} pathLength="1" strokeDasharray={`${p} 1`} stroke={color} strokeWidth={width} opacity="0.96" markerEnd={p > 0.2 ? markerEnd : undefined} />
             <path d={d} pathLength="1" strokeDasharray={`${p} 1`} stroke="#ffffff" strokeWidth={width * 0.34} opacity="0.62" />
         </g>
     );
@@ -100,14 +101,13 @@ function smoothWavePath(pairs, progress) {
 }
 
 function BlockMark({ x, y, color = '#c43b47', pulse = 0 }) {
-    const r = 24 + pulse * 6;
+    const r = 34 + pulse * 7;
     return (
         <g style={{ pointerEvents: 'none' }}>
-            {pulse > 0.05 && (
-                <circle cx={x} cy={y} r={r + 14} fill={color} opacity={0.22 * pulse} />
-            )}
-            <circle cx={x} cy={y} r={r} fill="#fff5f5" stroke={color} strokeWidth="6" />
-            <path d={`M ${x - 10} ${y - 10} L ${x + 10} ${y + 10} M ${x + 10} ${y - 10} L ${x - 10} ${y + 10}`} stroke={color} strokeWidth="6.5" strokeLinecap="round" />
+            <circle cx={x} cy={y} r={r + 12 + pulse * 14} fill={color} opacity={0.14 + pulse * 0.24} />
+            <circle cx={x} cy={y} r={r + 4} fill="#ffffff" opacity="0.95" />
+            <circle cx={x} cy={y} r={r} fill="#fff3f3" stroke={color} strokeWidth="7.5" />
+            <path d={`M ${x - 14} ${y - 14} L ${x + 14} ${y + 14} M ${x + 14} ${y - 14} L ${x - 14} ${y + 14}`} stroke={color} strokeWidth="8.5" strokeLinecap="round" />
         </g>
     );
 }
@@ -115,12 +115,54 @@ function BlockMark({ x, y, color = '#c43b47', pulse = 0 }) {
 function FocusMark({ x, y, color = '#dc2626', pulse = 0 }) {
     return (
         <g style={{ pointerEvents: 'none' }}>
-            <circle cx={x} cy={y} r={28 + pulse * 26} fill={color} opacity={0.14 + pulse * 0.24} />
-            <circle cx={x} cy={y} r={20 + pulse * 6} fill="#fff7ed" stroke={color} strokeWidth="5.5" />
+            <circle cx={x} cy={y} r={38 + pulse * 30} fill={color} opacity={0.15 + pulse * 0.26} />
+            <circle cx={x} cy={y} r={34} fill="#ffffff" opacity="0.95" />
+            <circle cx={x} cy={y} r={30 + pulse * 5} fill="#fff7ed" stroke={color} strokeWidth="7" />
             <polygon
-                points={`${x + 3},${y - 13} ${x - 9},${y + 2} ${x},${y + 2} ${x - 4},${y + 13} ${x + 9},${y - 2} ${x},${y - 2}`}
+                points={`${x + 4},${y - 19} ${x - 13},${y + 3} ${x},${y + 3} ${x - 5},${y + 19} ${x + 13},${y - 3} ${x},${y - 3}`}
                 fill={color}
             />
+        </g>
+    );
+}
+
+function CalloutBadge({ x, y, tx, ty, title, sub, color }) {
+    const w = 336;
+    const h = 76;
+    const left = x - w / 2;
+    const top = y - h / 2;
+    const anchorX = Math.max(left + 20, Math.min(left + w - 20, tx));
+    const anchorY = ty < y ? top : top + h;
+    return (
+        <g style={{ pointerEvents: 'none' }}>
+            <line
+                x1={anchorX}
+                y1={anchorY}
+                x2={tx}
+                y2={ty}
+                stroke={color}
+                strokeWidth="4.5"
+                strokeDasharray="10 8"
+                opacity="0.88"
+            />
+            <circle cx={tx} cy={ty} r="7.5" fill={color} stroke="#ffffff" strokeWidth="3" />
+            <rect
+                x={left}
+                y={top}
+                width={w}
+                height={h}
+                rx="18"
+                fill="rgba(255, 254, 250, 0.96)"
+                stroke={color}
+                strokeWidth="4.5"
+            />
+            <rect x={left + 8} y={top + 11} width="9" height={h - 22} rx="4.5" fill={color} />
+            <text x={left + 28} y={top + 32} fontSize="24" fontWeight="800" fill="#1e352b">
+                {title}
+            </text>
+            <text x={left + 28} y={top + 60} fontSize="20" fontWeight="600" fill="#4f6659">
+                {sub}
+            </text>
         </g>
     );
 }
@@ -317,43 +359,95 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
                 )}
             </g>
 
-            {/* Atrial fibrillation: chaotic scattered ectopic micro-foci */}
+            {/* Atrial fibrillation: muted SA + chaotic scattered ectopic micro-foci & colliding wavelets */}
             {isAfib && (
                 <g style={{ pointerEvents: 'none' }}>
+                    <path d={CONDUCTION_PATHS.saNode.outline} fill="#cbd5d0" stroke="#7c5cbf" strokeWidth="3.5" strokeDasharray="8 6" opacity="0.72" />
+                    <g fill="none" strokeLinecap="round">
+                        {PATHOLOGY_PATHS.afibWavelets.map(w => {
+                            const cyc = ((time / 800) * 3.5 + w.phase) % 1;
+                            const fade = Math.sin(cyc * Math.PI);
+                            return (
+                                <g key={w.id} opacity={0.25 + fade * 0.72}>
+                                    <path
+                                        d={w.d}
+                                        pathLength="1"
+                                        stroke="#7c5cbf"
+                                        strokeWidth="12"
+                                        strokeDasharray={`${Math.min(1, cyc * 1.15)} 1`}
+                                        markerEnd={`url(#${prefix}-arr-afib)`}
+                                    />
+                                    <path
+                                        d={w.d}
+                                        pathLength="1"
+                                        stroke="#ffffff"
+                                        strokeWidth="3.8"
+                                        strokeDasharray={`${Math.min(1, cyc * 1.15)} 1`}
+                                        opacity="0.7"
+                                    />
+                                </g>
+                            );
+                        })}
+                    </g>
                     {PATHOLOGY_PATHS.afibFoci.map(f => {
                         const pulse = 0.5 + 0.5 * Math.sin((time / 800) * Math.PI * 8 + f.phase * Math.PI * 2);
                         return (
                             <g key={f.id}>
-                                <circle cx={f.x} cy={f.y} r={14 + pulse * 24} fill="#7c5cbf" opacity={0.14 + pulse * 0.22} />
-                                <circle cx={f.x} cy={f.y} r={9 + pulse * 4} fill="#efe7ff" stroke="#7c5cbf" strokeWidth="4" />
+                                <circle cx={f.x} cy={f.y} r={18 + pulse * 30} fill="#7c5cbf" opacity={0.14 + pulse * 0.24} />
+                                <circle cx={f.x} cy={f.y} r={12 + pulse * 5} fill="#f5efff" stroke="#7c5cbf" strokeWidth="4.5" />
                             </g>
                         );
                     })}
+                    {/* Irregular AV node filtering shimmer */}
+                    <circle cx={CONDUCTION_PATHS.avNode.cx} cy={CONDUCTION_PATHS.avNode.cy} r={44 + (Math.sin((time / 800) * Math.PI * 10) * 10)} fill="#7c5cbf" opacity="0.24" />
+                    <path d={CONDUCTION_PATHS.avNode.outline} fill="#7c5cbf" opacity="0.58" />
                 </g>
             )}
 
-            {/* Atrial flutter: rapid counter-clockwise macro-reentry loop in RA */}
+            {/* Atrial flutter: rapid counter-clockwise macro-reentry loop in RA with 3 orbiting comet arcs */}
             {isFlutter && (
                 <g style={{ pointerEvents: 'none' }}>
                     <path
                         d={PATHOLOGY_PATHS.flutterLoop}
                         fill="none"
                         stroke="#2b78b8"
-                        strokeWidth="12"
-                        strokeDasharray="34 22"
-                        strokeDashoffset={((time % 200) / 200) * 168}
-                        opacity="0.86"
+                        strokeWidth="18"
+                        opacity="0.22"
+                    />
+                    <path
+                        d={PATHOLOGY_PATHS.flutterLoop}
+                        fill="none"
+                        pathLength="1"
+                        stroke="#2b78b8"
+                        strokeWidth="14"
+                        strokeDasharray="0.16 0.1733"
+                        strokeDashoffset={-(((time % 200) / 200) * 0.3333)}
+                        opacity="0.95"
                         strokeLinecap="round"
                     />
                     <path
                         d={PATHOLOGY_PATHS.flutterLoop}
                         fill="none"
+                        pathLength="1"
                         stroke="#ffffff"
-                        strokeWidth="4"
-                        strokeDasharray="34 22"
-                        strokeDashoffset={((time % 200) / 200) * 168}
-                        opacity="0.72"
+                        strokeWidth="5"
+                        strokeDasharray="0.14 0.1933"
+                        strokeDashoffset={-(((time % 200) / 200) * 0.3333)}
+                        opacity="0.88"
                         strokeLinecap="round"
+                    />
+                    {/* Directional arrows along the macro-reentry ring */}
+                    <path d="M 218 317 Q 254 326 276 348" fill="none" stroke="#1d5f99" strokeWidth="8" markerEnd={`url(#${prefix}-arr-flutter)`} />
+                    <path d="M 160 543 Q 126 522 108 486" fill="none" stroke="#1d5f99" strokeWidth="8" markerEnd={`url(#${prefix}-arr-flutter)`} />
+                    {/* Flutter waves reaching AV node gatekeeper */}
+                    <path
+                        d={PATHOLOGY_PATHS.flutterAvTap}
+                        fill="none"
+                        stroke="#2b78b8"
+                        strokeWidth="10"
+                        strokeLinecap="round"
+                        opacity={0.35 + 0.55 * Math.sin(((time % 200) / 200) * Math.PI)}
+                        markerEnd={`url(#${prefix}-arr-flutter)`}
                     />
                 </g>
             )}
@@ -382,17 +476,54 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
             {/* PR delay: AV node golden physiological or prolonged hold */}
             {(avActive || isAv1) && !isAv3 && !isVt && (
                 <g>
-                    {(avActive || isAv1) && (
-                        <>
-                            <circle cx={CONDUCTION_PATHS.avNode.cx} cy={CONDUCTION_PATHS.avNode.cy} r={(isAv1 ? 60 : 52) + avPulse * 30} fill={PHASE_COLORS.pr} opacity={isAv1 ? (0.28 + avPulse * 0.34) : (0.32 + avPulse * 0.24)} filter={`url(#${prefix}-soft-blur)`} />
-                            <path d={CONDUCTION_PATHS.avNode.outline} fill={PHASE_COLORS.pr} opacity={isAv1 ? (0.52 + avPulse * 0.40) : (0.68 + avPulse * 0.24)} />
-                        </>
-                    )}
+                    <circle cx={CONDUCTION_PATHS.avNode.cx} cy={CONDUCTION_PATHS.avNode.cy} r={(isAv1 ? 68 : 52) + avPulse * 32} fill={PHASE_COLORS.pr} opacity={isAv1 ? (0.30 + avPulse * 0.36) : (0.32 + avPulse * 0.24)} filter={`url(#${prefix}-soft-blur)`} />
+                    <path d={CONDUCTION_PATHS.avNode.outline} fill={PHASE_COLORS.pr} opacity={isAv1 ? (0.58 + avPulse * 0.38) : (0.68 + avPulse * 0.24)} />
                     {isAv1 && (
                         <g style={{ pointerEvents: 'none' }}>
-                            <circle cx={PATHOLOGY_MARKERS.avDelay.x} cy={PATHOLOGY_MARKERS.avDelay.y} r="36" fill="none" stroke="#d48817" strokeWidth="5" strokeDasharray="12 8" opacity={0.45 + avPulse * 0.50} />
+                            <circle cx={PATHOLOGY_MARKERS.avDelay.x} cy={PATHOLOGY_MARKERS.avDelay.y} r="50" fill="none" stroke="#f3dfb4" strokeWidth="10" opacity="0.82" />
+                            <circle
+                                cx={PATHOLOGY_MARKERS.avDelay.x}
+                                cy={PATHOLOGY_MARKERS.avDelay.y}
+                                r="50"
+                                fill="none"
+                                pathLength="1"
+                                stroke="#d48817"
+                                strokeWidth="10"
+                                strokeLinecap="round"
+                                strokeDasharray={`${time >= 130 && time <= 298 ? clamp01((time - 130) / 160) : 0.25} 1`}
+                                transform={`rotate(-90 ${PATHOLOGY_MARKERS.avDelay.x} ${PATHOLOGY_MARKERS.avDelay.y})`}
+                                opacity={time >= 120 && time <= 310 ? 0.96 : 0.45}
+                            />
                         </g>
                     )}
+                </g>
+            )}
+
+            {/* Blocked pathway veils so disconnected bundle branches clearly look cut off */}
+            {isLbbb && (
+                <g fill="none" strokeLinecap="round" style={{ pointerEvents: 'none' }}>
+                    {[CONDUCTION_PATHS.lbbSeptal, CONDUCTION_PATHS.lbbSeptalFascicleA, CONDUCTION_PATHS.lbbSeptalFascicleB, CONDUCTION_PATHS.lvPurkinje].map((d, idx) => (
+                        <g key={idx}>
+                            <path d={d} stroke="#f5f3ee" strokeWidth="22" opacity="0.82" />
+                            <path d={d} stroke="#8b5cf6" strokeWidth="7" strokeDasharray="16 14" opacity="0.42" />
+                        </g>
+                    ))}
+                </g>
+            )}
+            {isRbbb && (
+                <g fill="none" strokeLinecap="round" style={{ pointerEvents: 'none' }}>
+                    {[CONDUCTION_PATHS.rbbSeptal, CONDUCTION_PATHS.rvPurkinje].map((d, idx) => (
+                        <g key={idx}>
+                            <path d={d} stroke="#f5f3ee" strokeWidth="22" opacity="0.82" />
+                            <path d={d} stroke="#0ea5e9" strokeWidth="7" strokeDasharray="16 14" opacity="0.42" />
+                        </g>
+                    ))}
+                </g>
+            )}
+            {isVt && (
+                <g style={{ pointerEvents: 'none' }}>
+                    <path d={CONDUCTION_PATHS.saNode.outline} fill="#cbd5d0" opacity="0.78" />
+                    <path d={CONDUCTION_PATHS.avNode.outline} fill="#cbd5d0" opacity="0.78" />
                 </g>
             )}
 
@@ -400,85 +531,89 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
             {ventLineActive && (
                 <g fill="none" strokeLinecap="round" strokeLinejoin="round" opacity={ventLineFade} filter={`url(#${prefix}-impulse-glow)`}>
                     {!isAv3 && <ElectricPath d={CONDUCTION_PATHS.hisBundle} progress={hisProgress} color={PHASE_COLORS.qrs} width={16} />}
-                    {!isRbbb && <ElectricPath d={CONDUCTION_PATHS.rbbSeptal} progress={bundleProgress} color={PHASE_COLORS.qrs} width={15} />}
-                    {!isLbbb && <ElectricPath d={CONDUCTION_PATHS.lbbSeptal} progress={bundleProgress} color={PHASE_COLORS.qrs} width={16} />}
+                    {!isRbbb && <ElectricPath d={CONDUCTION_PATHS.rbbSeptal} progress={bundleProgress} color={isAv3 ? '#c43b47' : PHASE_COLORS.qrs} width={15} />}
+                    {!isLbbb && <ElectricPath d={CONDUCTION_PATHS.lbbSeptal} progress={bundleProgress} color={isAv3 ? '#c43b47' : PHASE_COLORS.qrs} width={16} />}
                     {!isLbbb && (
                         <>
-                            <ElectricPath d={CONDUCTION_PATHS.lbbSeptalFascicleA} progress={fascicleProgress} color={PHASE_COLORS.qrs} width={11} />
-                            <ElectricPath d={CONDUCTION_PATHS.lbbSeptalFascicleB} progress={fascicleProgress} color={PHASE_COLORS.qrs} width={10} />
+                            <ElectricPath d={CONDUCTION_PATHS.lbbSeptalFascicleA} progress={fascicleProgress} color={isAv3 ? '#c43b47' : PHASE_COLORS.qrs} width={11} />
+                            <ElectricPath d={CONDUCTION_PATHS.lbbSeptalFascicleB} progress={fascicleProgress} color={isAv3 ? '#c43b47' : PHASE_COLORS.qrs} width={10} />
                         </>
                     )}
-                    {!isRbbb && <ElectricPath d={CONDUCTION_PATHS.rvPurkinje} progress={purkinjeProgress} color={PHASE_COLORS.qrs} width={14} />}
-                    {!isLbbb && <ElectricPath d={CONDUCTION_PATHS.lvPurkinje} progress={purkinjeProgress} color={PHASE_COLORS.qrs} width={16} />}
+                    {!isRbbb && <ElectricPath d={CONDUCTION_PATHS.rvPurkinje} progress={purkinjeProgress} color={isAv3 ? '#c43b47' : PHASE_COLORS.qrs} width={14} />}
+                    {!isLbbb && <ElectricPath d={CONDUCTION_PATHS.lvPurkinje} progress={purkinjeProgress} color={isAv3 ? '#c43b47' : PHASE_COLORS.qrs} width={16} />}
                 </g>
             )}
 
-            {/* Slow cell-to-cell transseptal / myocardial detours */}
-            {isLbbb && time >= 235 && time < 365 && (
-                <g fill="none" strokeLinecap="round" opacity={time > 340 ? clamp01((365 - time) / 25) : 1}>
-                    {PATHOLOGY_PATHS.lbbbTransseptal.map((d, idx) => (
-                        <path
-                            key={idx}
-                            d={d}
-                            pathLength="1"
-                            stroke="#8b5cf6"
-                            strokeWidth="10"
-                            strokeDasharray="16 12"
-                            strokeDashoffset={-clamp01((time - 235) / 100) * 60}
-                            opacity="0.90"
-                        />
-                    ))}
-                </g>
-            )}
-            {isRbbb && time >= 265 && time < 368 && (
-                <g fill="none" strokeLinecap="round" opacity={time > 345 ? clamp01((368 - time) / 23) : 1}>
-                    {PATHOLOGY_PATHS.rbbbTransseptal.map((d, idx) => (
-                        <path
-                            key={idx}
-                            d={d}
-                            pathLength="1"
-                            stroke="#0ea5e9"
-                            strokeWidth="10"
-                            strokeDasharray="16 12"
-                            strokeDashoffset={-clamp01((time - 265) / 90) * 60}
-                            opacity="0.90"
-                        />
-                    ))}
-                </g>
-            )}
-            {isVt && vtBeatActive && (
-                <g fill="none" strokeLinecap="round" opacity={vtBeatFade}>
-                    {PATHOLOGY_PATHS.vtSpread.map((d, idx) => (
-                        <ElectricPath key={idx} d={d} progress={clamp01((vtLocal - 20) / 145)} color="#dc2626" width={13} />
-                    ))}
-                </g>
-            )}
-
-            {/* Permanent anatomical cause markers so user sees WHY rhythm changes even when paused */}
-            {isAv3 && (
-                <>
-                    <BlockMark x={PATHOLOGY_MARKERS.avTotalBlock.x} y={PATHOLOGY_MARKERS.avTotalBlock.y} color="#c43b47" pulse={av3BlockedFlash} />
-                    <FocusMark x={PATHOLOGY_MARKERS.avEscapeFocus.x} y={PATHOLOGY_MARKERS.avEscapeFocus.y} color="#d9534f" pulse={time >= 215 && time < 330 ? Math.sin(clamp01((time - 215) / 115) * Math.PI) : 0.15} />
-                </>
-            )}
+            {/* Slow cell-to-cell transseptal / myocardial detours with fixed directional guide arrows */}
             {isLbbb && (
-                <>
-                    <path d={CONDUCTION_PATHS.lbbSeptal} fill="none" stroke="#8b5cf6" strokeWidth="6" strokeDasharray="12 14" opacity="0.28" />
-                    <BlockMark x={PATHOLOGY_MARKERS.lbbbBlock.x} y={PATHOLOGY_MARKERS.lbbbBlock.y} color="#8b5cf6" pulse={time >= 215 && time < 280 ? 1 : 0.15} />
-                </>
+                <g fill="none" strokeLinecap="round">
+                    {PATHOLOGY_PATHS.lbbbTransseptal.map((d, idx) => {
+                        const waveProg = clamp01((time - (236 + idx * 14)) / 82);
+                        const fade = time >= 225 && time < 370 ? (time > 345 ? clamp01((370 - time) / 25) : 1) : 0.34;
+                        return (
+                            <g key={idx} opacity={fade}>
+                                <path d={d} stroke="#8b5cf6" strokeWidth="7" strokeDasharray="16 14" opacity="0.48" markerEnd={`url(#${prefix}-arr-lbbb)`} />
+                                {time >= 235 && time < 368 && (
+                                    <ElectricPath d={d} progress={waveProg} color="#8b5cf6" width={12} markerEnd={`url(#${prefix}-arr-lbbb)`} />
+                                )}
+                            </g>
+                        );
+                    })}
+                </g>
             )}
             {isRbbb && (
-                <>
-                    <path d={CONDUCTION_PATHS.rbbSeptal} fill="none" stroke="#0ea5e9" strokeWidth="6" strokeDasharray="12 14" opacity="0.28" />
-                    <BlockMark x={PATHOLOGY_MARKERS.rbbbBlock.x} y={PATHOLOGY_MARKERS.rbbbBlock.y} color="#0ea5e9" pulse={time >= 215 && time < 280 ? 1 : 0.15} />
-                </>
+                <g fill="none" strokeLinecap="round">
+                    {PATHOLOGY_PATHS.rbbbTransseptal.map((d, idx) => {
+                        const waveProg = clamp01((time - (266 + idx * 12)) / 78);
+                        const fade = time >= 255 && time < 370 ? (time > 348 ? clamp01((370 - time) / 22) : 1) : 0.34;
+                        return (
+                            <g key={idx} opacity={fade}>
+                                <path d={d} stroke="#0ea5e9" strokeWidth="7" strokeDasharray="16 14" opacity="0.48" markerEnd={`url(#${prefix}-arr-rbbb)`} />
+                                {time >= 265 && time < 368 && (
+                                    <ElectricPath d={d} progress={waveProg} color="#0ea5e9" width={12} markerEnd={`url(#${prefix}-arr-rbbb)`} />
+                                )}
+                            </g>
+                        );
+                    })}
+                </g>
             )}
             {isVt && (
-                <FocusMark
-                    x={PATHOLOGY_MARKERS.vtFocus.x}
-                    y={PATHOLOGY_MARKERS.vtFocus.y}
-                    color="#dc2626"
-                    pulse={vtBeatActive ? Math.sin(clamp01((vtLocal - 15) / 140) * Math.PI) : 0.2}
+                <g fill="none" strokeLinecap="round">
+                    {vtBeatActive && [0, 0.33, 0.66].map((ringOffset, idx) => {
+                        const p = (clamp01((vtLocal - 15) / 165) + ringOffset) % 1;
+                        return (
+                            <circle
+                                key={idx}
+                                cx={PATHOLOGY_MARKERS.vtFocus.x}
+                                cy={PATHOLOGY_MARKERS.vtFocus.y}
+                                r={34 + p * 230}
+                                stroke="#dc2626"
+                                strokeWidth="7"
+                                opacity={(1 - p) * 0.45 * vtBeatFade}
+                            />
+                        );
+                    })}
+                    {PATHOLOGY_PATHS.vtSpread.map((d, idx) => (
+                        <g key={idx} opacity={vtBeatActive ? vtBeatFade : 0.32}>
+                            <path d={d} stroke="#dc2626" strokeWidth="7" strokeDasharray="14 14" opacity="0.42" markerEnd={`url(#${prefix}-arr-vt)`} />
+                            {vtBeatActive && (
+                                <ElectricPath d={d} progress={clamp01((vtLocal - 20) / 145)} color="#dc2626" width={13} markerEnd={`url(#${prefix}-arr-vt)`} />
+                            )}
+                        </g>
+                    ))}
+                </g>
+            )}
+
+            {/* Blocked AV arrival stop-ring halo */}
+            {isAv3 && av3BlockedFlash > 0.05 && (
+                <circle
+                    cx={PATHOLOGY_MARKERS.avTotalBlock.x}
+                    cy={PATHOLOGY_MARKERS.avTotalBlock.y}
+                    r={44 + av3BlockedFlash * 52}
+                    fill="none"
+                    stroke="#c43b47"
+                    strokeWidth="8"
+                    opacity={av3BlockedFlash * 0.72}
                 />
             )}
 
@@ -536,6 +671,53 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
                 >
                     {lbl.text}
                 </text>
+            ))}
+        </g>
+    );
+}
+
+function PathologyForeground({ time, rhythmId = 'normal' }) {
+    if (rhythmId === 'normal') return null;
+    const isAv3 = rhythmId === 'av_block_3';
+    const isLbbb = rhythmId === 'lbbb';
+    const isRbbb = rhythmId === 'rbbb';
+    const isVt = rhythmId === 'vt';
+
+    const vtLocal = time % 400;
+    const vtBeatActive = isVt && vtLocal >= 15 && vtLocal < 188;
+    const av3BlockedFlash = isAv3
+        ? Math.max(
+            time >= 145 && time < 205 ? Math.sin(clamp01((time - 145) / 60) * Math.PI) : 0,
+            time >= 545 && time < 605 ? Math.sin(clamp01((time - 545) / 60) * Math.PI) : 0
+        )
+        : 0;
+    const callouts = PATHOLOGY_CALLOUTS[rhythmId] || [];
+
+    return (
+        <g transform={`translate(${IMG_X} ${IMG_Y}) scale(${IMG_SCALE})`} style={{ pointerEvents: 'none' }}>
+            {isAv3 && (
+                <>
+                    <line x1="336" y1="472" x2="354" y2="546" stroke="#c43b47" strokeWidth="10" strokeLinecap="round" opacity="0.88" />
+                    <BlockMark x={PATHOLOGY_MARKERS.avTotalBlock.x} y={PATHOLOGY_MARKERS.avTotalBlock.y} color="#c43b47" pulse={av3BlockedFlash} />
+                    <FocusMark x={PATHOLOGY_MARKERS.avEscapeFocus.x} y={PATHOLOGY_MARKERS.avEscapeFocus.y} color="#d9534f" pulse={time >= 215 && time < 330 ? Math.sin(clamp01((time - 215) / 115) * Math.PI) : 0.2} />
+                </>
+            )}
+            {isLbbb && (
+                <BlockMark x={PATHOLOGY_MARKERS.lbbbBlock.x} y={PATHOLOGY_MARKERS.lbbbBlock.y} color="#8b5cf6" pulse={time >= 215 && time < 285 ? 1 : 0.25} />
+            )}
+            {isRbbb && (
+                <BlockMark x={PATHOLOGY_MARKERS.rbbbBlock.x} y={PATHOLOGY_MARKERS.rbbbBlock.y} color="#0ea5e9" pulse={time >= 215 && time < 285 ? 1 : 0.25} />
+            )}
+            {isVt && (
+                <FocusMark
+                    x={PATHOLOGY_MARKERS.vtFocus.x}
+                    y={PATHOLOGY_MARKERS.vtFocus.y}
+                    color="#dc2626"
+                    pulse={vtBeatActive ? Math.sin(clamp01((vtLocal - 15) / 140) * Math.PI) : 0.25}
+                />
+            )}
+            {callouts.map(item => (
+                <CalloutBadge key={item.id} {...item} />
             ))}
         </g>
     );
@@ -608,6 +790,21 @@ export default function EkgFrontalHeartSvg({
                 </marker>
                 <marker id={`${prefix}-proj-neg`} viewBox="0 0 10 10" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse">
                     <path d="M1,1 L9,5 L1,9 Z" fill="#c0444f" />
+                </marker>
+                <marker id={`${prefix}-arr-flutter`} viewBox="0 0 10 10" markerWidth="26" markerHeight="26" refX="7" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+                    <path d="M1,1 L9,5 L1,9 Z" fill="#1d5f99" />
+                </marker>
+                <marker id={`${prefix}-arr-lbbb`} viewBox="0 0 10 10" markerWidth="26" markerHeight="26" refX="7" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+                    <path d="M1,1 L9,5 L1,9 Z" fill="#8b5cf6" />
+                </marker>
+                <marker id={`${prefix}-arr-rbbb`} viewBox="0 0 10 10" markerWidth="26" markerHeight="26" refX="7" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+                    <path d="M1,1 L9,5 L1,9 Z" fill="#0ea5e9" />
+                </marker>
+                <marker id={`${prefix}-arr-vt`} viewBox="0 0 10 10" markerWidth="26" markerHeight="26" refX="7" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+                    <path d="M1,1 L9,5 L1,9 Z" fill="#dc2626" />
+                </marker>
+                <marker id={`${prefix}-arr-afib`} viewBox="0 0 10 10" markerWidth="22" markerHeight="22" refX="7" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+                    <path d="M1,1 L9,5 L1,9 Z" fill="#7c5cbf" />
                 </marker>
 
                 {CABRERA_SECTORS.map(sec => (
@@ -726,6 +923,9 @@ export default function EkgFrontalHeartSvg({
                     <circle cx={CX} cy={CY} r="4.2" fill="#dd6b20" stroke="#ffffff" strokeWidth="1.5" />
                 </g>
             )}
+
+            {/* High-visibility pathology block/focus badges and callouts rendered above vector arrows */}
+            <PathologyForeground time={time} rhythmId={rhythmId} />
 
             {/* Minus pole medallion for active lead */}
             <g aria-hidden="true">
