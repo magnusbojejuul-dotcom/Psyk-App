@@ -139,25 +139,25 @@ export const PATHOLOGY_PATHS = {
 
 export const PATHOLOGY_CALLOUTS = {
     afib: [
-        { id: 'afib', x: 565, y: 74, tx: 548, ty: 196, title: 'Kaotiske foci (350–600/min)', sub: 'Ingen P-tak · AV filtrerer', color: '#7c5cbf' },
+        { id: 'afib', sx: 122, sy: 66, tx: 548, ty: 196, title: 'Kaotiske foci (350–600/min)', sub: 'Ingen P-tak · AV filtrerer', color: '#7c5cbf' },
     ],
     aflutter: [
-        { id: 'aflutter', x: 252, y: 112, tx: 215, ty: 318, title: 'Reentry-cirkel (~300/min)', sub: 'Cirkelbølge i højre atrium', color: '#2b78b8' },
+        { id: 'aflutter', sx: 118, sy: 66, tx: 215, ty: 318, title: 'Reentry-cirkel (~300/min)', sub: 'Cirkelbølge i højre atrium', color: '#2b78b8' },
     ],
     av_block_1: [
-        { id: 'av1', x: 186, y: 654, tx: 318, ty: 540, title: 'AV-forsinkelse (PR > 200 ms)', sub: 'Impulsen bremses ekstra her', color: '#d48817' },
+        { id: 'av1', sx: 118, sy: 372, tx: 318, ty: 540, title: 'AV-forsinkelse (PR > 200 ms)', sub: 'Impulsen bremses ekstra her', color: '#d48817' },
     ],
     av_block_3: [
-        { id: 'av3-blk', x: 182, y: 646, tx: 345, ty: 515, title: 'Total AV-blokade', sub: 'Atrie-impuls stoppes helt', color: '#c43b47' },
-        { id: 'av3-esc', x: 282, y: 882, tx: 524, ty: 572, title: 'Erstatningsfokus', sub: 'Driver ventrikler selvstændigt', color: '#d9534f' },
+        { id: 'av3-blk', sx: 112, sy: 368, tx: 345, ty: 515, title: 'Total AV-blokade', sub: 'Atrie-impuls stoppes helt', color: '#c43b47' },
+        { id: 'av3-esc', sx: 560, sy: 372, tx: 524, ty: 572, title: 'Erstatningsfokus', sub: 'Driver ventrikler selvstændigt', color: '#d9534f' },
     ],
     lbbb: [
-        { id: 'lbbb', x: 742, y: 256, tx: 562, ty: 534, title: 'Venstre gren blokeret', sub: 'Langsom omvej HV → VV', color: '#8b5cf6' },
+        { id: 'lbbb', sx: 560, sy: 370, tx: 562, ty: 534, title: 'Venstre gren blokeret', sub: 'Langsom omvej HV → VV', color: '#8b5cf6' },
     ],
     rbbb: [
-        { id: 'rbbb', x: 262, y: 880, tx: 548, ty: 598, title: 'Højre gren blokeret', sub: 'Langsom omvej VV → HV', color: '#0ea5e9' },
+        { id: 'rbbb', sx: 118, sy: 372, tx: 548, ty: 598, title: 'Højre gren blokeret', sub: 'Langsom omvej VV → HV', color: '#0ea5e9' },
     ],
     vt: [
-        { id: 'vt', x: 640, y: 906, tx: 862, ty: 748, title: 'Ektopisk VT-fokus', sub: 'Hurtig muskelspredning', color: '#dc2626' },
+        { id: 'vt', sx: 560, sy: 378, tx: 862, ty: 748, title: 'Ektopisk VT-fokus', sub: 'Hurtig muskelspredning', color: '#dc2626' },
     ],
 };

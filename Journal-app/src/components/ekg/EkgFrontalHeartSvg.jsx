@@ -126,41 +126,43 @@ function FocusMark({ x, y, color = '#dc2626', pulse = 0 }) {
     );
 }
 
-function CalloutBadge({ x, y, tx, ty, title, sub, color }) {
-    const w = 336;
-    const h = 76;
-    const left = x - w / 2;
-    const top = y - h / 2;
-    const anchorX = Math.max(left + 20, Math.min(left + w - 20, tx));
-    const anchorY = ty < y ? top : top + h;
+function CalloutBadge({ sx, sy, tx, ty, title, sub, color }) {
+    const targetX = IMG_X + tx * IMG_SCALE;
+    const targetY = IMG_Y + ty * IMG_SCALE;
+    const w = Math.max(182, Math.ceil(Math.max(title.length * 7.6, sub.length * 6.3) + 28));
+    const h = 54;
+    const left = Math.max(10, Math.min(670 - w, sx - w / 2));
+    const top = sy - h / 2;
+    const anchorX = Math.max(left + 12, Math.min(left + w - 12, targetX));
+    const anchorY = targetY < top ? top : targetY > top + h ? top + h : sy;
     return (
         <g style={{ pointerEvents: 'none' }}>
             <line
                 x1={anchorX}
                 y1={anchorY}
-                x2={tx}
-                y2={ty}
+                x2={targetX}
+                y2={targetY}
                 stroke={color}
-                strokeWidth="4.5"
-                strokeDasharray="10 8"
-                opacity="0.88"
+                strokeWidth="1.8"
+                strokeDasharray="4 3"
+                opacity="0.92"
             />
-            <circle cx={tx} cy={ty} r="7.5" fill={color} stroke="#ffffff" strokeWidth="3" />
+            <circle cx={targetX} cy={targetY} r="3.8" fill={color} stroke="#ffffff" strokeWidth="1.4" />
             <rect
                 x={left}
                 y={top}
                 width={w}
                 height={h}
-                rx="18"
-                fill="rgba(255, 254, 250, 0.96)"
+                rx="10"
+                fill="rgba(255, 254, 250, 0.97)"
                 stroke={color}
-                strokeWidth="4.5"
+                strokeWidth="1.8"
             />
-            <rect x={left + 8} y={top + 11} width="9" height={h - 22} rx="4.5" fill={color} />
-            <text x={left + 28} y={top + 32} fontSize="24" fontWeight="800" fill="#1e352b">
+            <rect x={left + 4.5} y={top + 7} width="4.5" height={h - 14} rx="2.2" fill={color} />
+            <text x={left + 16} y={top + 21} fontSize="12.5" fontWeight="750" fill="#1e352b">
                 {title}
             </text>
-            <text x={left + 28} y={top + 60} fontSize="20" fontWeight="600" fill="#4f6659">
+            <text x={left + 16} y={top + 40} fontSize="10.5" fontWeight="550" fill="#4f6659">
                 {sub}
             </text>
         </g>
@@ -694,28 +696,30 @@ function PathologyForeground({ time, rhythmId = 'normal' }) {
     const callouts = PATHOLOGY_CALLOUTS[rhythmId] || [];
 
     return (
-        <g transform={`translate(${IMG_X} ${IMG_Y}) scale(${IMG_SCALE})`} style={{ pointerEvents: 'none' }}>
-            {isAv3 && (
-                <>
-                    <line x1="336" y1="472" x2="354" y2="546" stroke="#c43b47" strokeWidth="10" strokeLinecap="round" opacity="0.88" />
-                    <BlockMark x={PATHOLOGY_MARKERS.avTotalBlock.x} y={PATHOLOGY_MARKERS.avTotalBlock.y} color="#c43b47" pulse={av3BlockedFlash} />
-                    <FocusMark x={PATHOLOGY_MARKERS.avEscapeFocus.x} y={PATHOLOGY_MARKERS.avEscapeFocus.y} color="#d9534f" pulse={time >= 215 && time < 330 ? Math.sin(clamp01((time - 215) / 115) * Math.PI) : 0.2} />
-                </>
-            )}
-            {isLbbb && (
-                <BlockMark x={PATHOLOGY_MARKERS.lbbbBlock.x} y={PATHOLOGY_MARKERS.lbbbBlock.y} color="#8b5cf6" pulse={time >= 215 && time < 285 ? 1 : 0.25} />
-            )}
-            {isRbbb && (
-                <BlockMark x={PATHOLOGY_MARKERS.rbbbBlock.x} y={PATHOLOGY_MARKERS.rbbbBlock.y} color="#0ea5e9" pulse={time >= 215 && time < 285 ? 1 : 0.25} />
-            )}
-            {isVt && (
-                <FocusMark
-                    x={PATHOLOGY_MARKERS.vtFocus.x}
-                    y={PATHOLOGY_MARKERS.vtFocus.y}
-                    color="#dc2626"
-                    pulse={vtBeatActive ? Math.sin(clamp01((vtLocal - 15) / 140) * Math.PI) : 0.25}
-                />
-            )}
+        <g style={{ pointerEvents: 'none' }}>
+            <g transform={`translate(${IMG_X} ${IMG_Y}) scale(${IMG_SCALE})`}>
+                {isAv3 && (
+                    <>
+                        <line x1="336" y1="472" x2="354" y2="546" stroke="#c43b47" strokeWidth="10" strokeLinecap="round" opacity="0.88" />
+                        <BlockMark x={PATHOLOGY_MARKERS.avTotalBlock.x} y={PATHOLOGY_MARKERS.avTotalBlock.y} color="#c43b47" pulse={av3BlockedFlash} />
+                        <FocusMark x={PATHOLOGY_MARKERS.avEscapeFocus.x} y={PATHOLOGY_MARKERS.avEscapeFocus.y} color="#d9534f" pulse={time >= 215 && time < 330 ? Math.sin(clamp01((time - 215) / 115) * Math.PI) : 0.2} />
+                    </>
+                )}
+                {isLbbb && (
+                    <BlockMark x={PATHOLOGY_MARKERS.lbbbBlock.x} y={PATHOLOGY_MARKERS.lbbbBlock.y} color="#8b5cf6" pulse={time >= 215 && time < 285 ? 1 : 0.25} />
+                )}
+                {isRbbb && (
+                    <BlockMark x={PATHOLOGY_MARKERS.rbbbBlock.x} y={PATHOLOGY_MARKERS.rbbbBlock.y} color="#0ea5e9" pulse={time >= 215 && time < 285 ? 1 : 0.25} />
+                )}
+                {isVt && (
+                    <FocusMark
+                        x={PATHOLOGY_MARKERS.vtFocus.x}
+                        y={PATHOLOGY_MARKERS.vtFocus.y}
+                        color="#dc2626"
+                        pulse={vtBeatActive ? Math.sin(clamp01((vtLocal - 15) / 140) * Math.PI) : 0.25}
+                    />
+                )}
+            </g>
             {callouts.map(item => (
                 <CalloutBadge key={item.id} {...item} />
             ))}

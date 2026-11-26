@@ -331,14 +331,30 @@ export default function EkgChestModel({ lead, time, onSelect, showVector, prefix
                     </g>
                 )}
 
-                {rhythmId !== 'normal' ? (
-                    <g style={{ pointerEvents: 'none' }}>
-                        <rect x="16" y="16" width="268" height="28" rx="9" fill="rgba(255, 254, 250, 0.94)" stroke={isLbbb ? '#8b5cf6' : isRbbb ? '#0ea5e9' : isVt ? '#dc2626' : '#5e7a6d'} strokeWidth="1.4" />
-                        <text x="28" y="34" fontSize="10.5" fontWeight="750" fill="#233c32">
-                            {isLbbb ? 'LBBB · Venstre gren blokeret (HV → VV)' : isRbbb ? 'RBBB · Højre gren blokeret (VV → HV)' : isVt ? 'VT · Ektopisk fokus i venstre ventrikel' : rhythmId === 'afib' ? 'Atrieflimren · Ektopiske atriefoci (over snit)' : rhythmId === 'aflutter' ? 'Atrieflagren · Reentry i RA (over snit)' : rhythmId === 'av_block_1' ? 'AV-blok I · Forsinket i AV (over snit)' : 'AV-blok III · Erstatningsfokus i ventrikel'}
-                        </text>
-                    </g>
-                ) : null}
+                {rhythmId !== 'normal' ? (() => {
+                    const chestLabel = isLbbb
+                        ? 'LBBB · Venstre gren blokeret (HV → VV)'
+                        : isRbbb
+                            ? 'RBBB · Højre gren blokeret (VV → HV)'
+                            : isVt
+                                ? 'VT · Ektopisk fokus i venstre ventrikel'
+                                : rhythmId === 'afib'
+                                    ? 'Atrieflimren · Ektopiske atriefoci (over snit)'
+                                    : rhythmId === 'aflutter'
+                                        ? 'Atrieflagren · Reentry i RA (over snit)'
+                                        : rhythmId === 'av_block_1'
+                                            ? 'AV-blok I · Forsinket i AV (over snit)'
+                                            : 'AV-blok III · Erstatningsfokus i ventrikel';
+                    const pillW = Math.max(250, Math.ceil(chestLabel.length * 7.1 + 26));
+                    return (
+                        <g style={{ pointerEvents: 'none' }}>
+                            <rect x="14" y="14" width={pillW} height="34" rx="10" fill="rgba(255, 254, 250, 0.96)" stroke={isLbbb ? '#8b5cf6' : isRbbb ? '#0ea5e9' : isVt ? '#dc2626' : '#5e7a6d'} strokeWidth="1.6" />
+                            <text x="26" y="35" fontSize="12" fontWeight="750" fill="#233c32">
+                                {chestLabel}
+                            </text>
+                        </g>
+                    );
+                })() : null}
 
                 {CHEST_LEADS.map(name => {
                     const [x, y] = electrodePoint(name);
