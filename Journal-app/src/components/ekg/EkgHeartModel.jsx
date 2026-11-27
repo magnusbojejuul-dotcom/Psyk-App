@@ -306,7 +306,7 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
             setQrsOnly(false);
             setTime(RHYTHM_START_TIME[externalRhythmId] ?? 142);
             if (externalRhythmId !== 'normal') {
-                setSpeed('0.25');
+                setSpeed('0.1');
                 setPlaying(true);
             } else {
                 setSpeed('study');
@@ -378,7 +378,7 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
             setSpeed('study');
             setPlaying(false);
         } else {
-            setSpeed('0.25');
+            setSpeed('0.1');
             setPlaying(true);
         }
         untouchedInitial.current = false;
@@ -848,13 +848,13 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
                         <input id={`${prefix}-time`} aria-label={isVf ? 'Tid i optagelsen' : 'Tid i hjerteslaget'} type="range" min="0" max="799" step="1" value={Math.round(time)} onChange={event => jump(Number(event.target.value))} />
                     </div>
                     <label className="ehm-speed">
-                        Tempo
-                        <select aria-label="Afspilningstempo" value={speed} onChange={event => setSpeed(event.target.value)}>
-                            {!isVf && <option value="study">Læring · QRS på 11 sek.</option>}
-                            <option value="0.1">0,1× · langsomt</option>
-                            <option value="0.25">0,25× · jævn langsom (rytmer)</option>
-                            <option value="0.5">0,5× · langsomt</option>
-                            <option value="1">1× · realtid</option>
+                        Afspilningshastighed
+                        <select aria-label="Afspilningshastighed" value={speed} onChange={event => setSpeed(event.target.value)}>
+                            {!isVf && <option value="study">QRS-fokus · Ekstra langsom ved QRS</option>}
+                            <option value="0.1">0,1× · Meget langsom</option>
+                            <option value="0.25">0,25× · Langsom</option>
+                            <option value="0.5">0,5× · Halv hastighed</option>
+                            <option value="1">1× · Realtid</option>
                         </select>
                     </label>
                 </div>
@@ -879,7 +879,15 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
                             <input type="checkbox" checked={qrsOnly} onChange={event => { setQrsOnly(event.target.checked); if (event.target.checked && (time < 210 || time >= 300)) jump(220); }} /> Gentag kun QRS
                         </label>
                     ) : <span />}
-                    <span>{isVf ? 'Kontinuerlig afspilning af det kaotiske flimresignal.' : speed === 'study' ? 'Læring: QRS er strakt fra 90 ms til 11 sek. Kurvens tidsakse viser stadig hjertets tid.' : 'Ensartet tempo gennem hele hjerteslaget.'}</span>
+                    <span>
+                        {isVf
+                            ? `Kontinuerlig afspilning i ${speed.replace('.', ',')}× hastighed.`
+                            : speed === 'study'
+                                ? 'QRS-fokus: QRS sænkes ekstra meget for at vise hver delbevægelse, mens tidsaksen viser hjertets reelle ms.'
+                                : speed === '1'
+                                    ? 'Realtid (0,8 sek. pr. hjerteslag ved 75 slag/min).'
+                                    : `Jævn afspilning i ${speed.replace('.', ',')}× hastighed (${(0.8 / Number(speed)).toFixed(1).replace('.', ',')} sek. pr. hjerteslag).`}
+                    </span>
                 </div>
                 <p className="ehm-timeline-hint"><Zap size={13} /> {isVf ? 'Klik på EKG-kurven eller brug skyderen for at fryse et øjebliksbillede og sammenligne afledninger.' : 'Vælg en fase eller klik direkte på EKG-kurven for at fryse tiden og sammenligne afledninger.'}</p>
             </section>
