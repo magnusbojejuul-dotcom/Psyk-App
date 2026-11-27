@@ -16,7 +16,7 @@ import {
     waveformPath
 } from '../../data/ekgSimulation';
 import { CASE_CLINICAL_COMPARISONS } from '../../data/ekgClinicalComparisons';
-import { PHASE_COLORS } from '../../data/heartConductionPaths';
+import { PATHOLOGY_CALLOUTS, PHASE_COLORS } from '../../data/heartConductionPaths';
 import EkgChestModel from './EkgChestModel';
 import EkgFrontalHeartSvg from './EkgFrontalHeartSvg';
 import './EkgHeartModel.css';
@@ -229,6 +229,7 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
     const [showAll, setShowAll] = useState(false);
     const [showVectorInfo, setShowVectorInfo] = useState(false);
     const [showNormalGhost, setShowNormalGhost] = useState(true);
+    const [expandedCalloutId, setExpandedCalloutId] = useState(null);
     const lastTime = useRef(null);
     const untouchedInitial = useRef(true);
     const prevExternalRhythm = useRef(externalRhythmId);
@@ -302,6 +303,7 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
     const selectRhythm = id => {
         setLocalRhythmId(id);
         onSelectRhythm?.(id);
+        setExpandedCalloutId(null);
         setQrsOnly(false);
         setTime(RHYTHM_START_TIME[id] ?? 142);
         if (id === 'normal') {
@@ -363,44 +365,15 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
                         </button>
                     ))}
                 </div>
-                {rhythmId !== 'normal' && (
-                    <div className="ehm-pathology-banner" style={{ '--rhythm-color': activeRhythm.color }}>
-                        <div className="ehm-pathology-cols">
-                            <div>
-                                <strong>Årsag på hjertet: {activeRhythm.causeTitle}</strong>
-                                <p>{activeRhythm.causeBody}</p>
-                            </div>
-                            <div>
-                                <strong>Typiske EKG-fund</strong>
-                                <p>{activeRhythm.ecgHallmarks}</p>
-                            </div>
-                        </div>
-                        <div className="ehm-rec-leads">
-                            <div className="ehm-rec-leads-group">
-                                <span>Se især i afledning:</span>
-                                {activeRhythm.recommendedLeads.map(rec => (
-                                    <button
-                                        key={rec}
-                                        type="button"
-                                        aria-pressed={lead === rec}
-                                        onClick={() => selectLead(rec)}
-                                    >
-                                        {rec}
-                                    </button>
-                                ))}
-                            </div>
-                            {onOpenRealExamples && realScanCount > 0 && (
-                                <button
-                                    type="button"
-                                    className="ehm-real-link-btn"
-                                    onClick={() => onOpenRealExamples(rhythmId)}
-                                >
-                                    <span>Se ægte patientoptagelser ({realScanCount} ægte {realScanCount === 1 ? 'optagelse' : 'optagelser'})</span>
-                                    <ArrowRight size={13} />
-                                </button>
-                            )}
-                        </div>
-                    </div>
+                {onOpenRealExamples && realScanCount > 0 && (
+                    <button
+                        type="button"
+                        className="ehm-real-link-btn"
+                        onClick={() => onOpenRealExamples(rhythmId)}
+                    >
+                        <span>Ægte patientoptagelser ({realScanCount})</span>
+                        <ArrowRight size={13} />
+                    </button>
                 )}
             </section>
 
@@ -542,20 +515,104 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
                             </div>
                         )}
 
-                        {details.plane === 'horizontal' ? (
-                            <EkgChestModel lead={lead} time={time} onSelect={selectLead} showVector={showVector} prefix={prefix} rhythmId={rhythmId} />
-                        ) : (
-                            <EkgFrontalHeartSvg
-                                lead={lead}
-                                time={time}
-                                onSelect={selectLead}
-                                showVector={showVector}
-                                showAxisZones={showAxisZones}
-                                axisOffsetDeg={axisOffsetDeg}
-                                rhythmId={rhythmId}
-                                prefix={prefix}
-                            />
-                        )}
+                        {(() => {
+                            const rawCallouts = PATHOLOGY_CALLOUTS[rhythmId] || [];
+                            const figureCallouts = details.plane === 'horizontal'
+                                ? (rawCallouts.length ? [{ ...rawCallouts[0], corner: 'top-left' }] : [])
+                                : rawCallouts;
+                            const renderCalloutCards = () => figureCallouts.map(item => {
+                                const isPinned = expandedCalloutId === item.id;
+                                return (
+                                    <div
+                                        key={item.id}
+                                        className={`ehm-callout-card is-${item.corner} ${isPinned ? 'is-expanded' : ''}`}
+                                        style={{ '--rhythm-color': item.color }}
+                                        tabIndex={0}
+                                        role="region"
+                                        aria-label={`${item.title} — hold musen over eller klik for fuld forklaring`}
+                                        onClick={() => setExpandedCalloutId(prev => (prev === item.id ? null : item.id))}
+                                        onKeyDown={event => {
+                                            if (event.key === 'Enter' || event.key === ' ') {
+                                                event.preventDefault();
+                                                setExpandedCalloutId(prev => (prev === item.id ? null : item.id));
+                                            }
+                                        }}
+                                    >
+                                        <div className="ehm-callout-head">
+                                            <div>
+                                                <strong>{item.title}</strong>
+                                                <span>{item.sub}</span>
+                                                <small>{item.ecg}</small>
+                                            </div>
+                                            <span className="ehm-callout-hint">{isPinned ? 'Fold ind ▴' : 'Fold ud ▾'}</span>
+                                        </div>
+                                        <div className="ehm-callout-extra">
+                                            <div className="ehm-callout-extra-inner">
+                                                <div className="ehm-callout-section">
+                                                    <b>Årsag på hjertet: {activeRhythm.causeTitle}</b>
+                                                    <p>{activeRhythm.causeBody}</p>
+                                                </div>
+                                                <div className="ehm-callout-section">
+                                                    <b>Typiske EKG-fund</b>
+                                                    <p>{activeRhythm.ecgHallmarks}</p>
+                                                </div>
+                                                <div className="ehm-callout-actions">
+                                                    <div className="ehm-rec-leads-group">
+                                                        <span>Se især:</span>
+                                                        {activeRhythm.recommendedLeads.map(rec => (
+                                                            <button
+                                                                key={rec}
+                                                                type="button"
+                                                                aria-pressed={lead === rec}
+                                                                onClick={event => {
+                                                                    event.stopPropagation();
+                                                                    selectLead(rec);
+                                                                }}
+                                                            >
+                                                                {rec}
+                                                            </button>
+                                                        ))}
+                                                    </div>
+                                                    {onOpenRealExamples && realScanCount > 0 && (
+                                                        <button
+                                                            type="button"
+                                                            className="ehm-real-link-btn"
+                                                            onClick={event => {
+                                                                event.stopPropagation();
+                                                                onOpenRealExamples(rhythmId);
+                                                            }}
+                                                        >
+                                                            <span>Ægte optagelser ({realScanCount})</span>
+                                                            <ArrowRight size={12} />
+                                                        </button>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                );
+                            });
+
+                            return details.plane === 'horizontal' ? (
+                                <EkgChestModel lead={lead} time={time} onSelect={selectLead} showVector={showVector} prefix={prefix} rhythmId={rhythmId}>
+                                    {renderCalloutCards()}
+                                </EkgChestModel>
+                            ) : (
+                                <div className="ehm-svg-anchor-wrap">
+                                    <EkgFrontalHeartSvg
+                                        lead={lead}
+                                        time={time}
+                                        onSelect={selectLead}
+                                        showVector={showVector}
+                                        showAxisZones={showAxisZones}
+                                        axisOffsetDeg={axisOffsetDeg}
+                                        rhythmId={rhythmId}
+                                        prefix={prefix}
+                                    />
+                                    {renderCalloutCards()}
+                                </div>
+                            );
+                        })()}
 
                         {details.plane === 'frontal' && phase.id === 't' && (
                             <p className="ehm-repol-note">

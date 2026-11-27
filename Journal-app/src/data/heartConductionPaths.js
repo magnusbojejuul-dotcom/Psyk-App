@@ -158,28 +158,28 @@ export const PATHOLOGY_PATHS = {
 
 export const PATHOLOGY_CALLOUTS = {
     afib: [
-        { id: 'afib', sx: 126, sy: 68, tx: 548, ty: 196, title: 'Kaotiske foci (350–600/min)', sub: 'Flere udgangspunkter i atrierne', ecg: 'EKG: Ingen P-tak · urolige f-takker', color: '#7c5cbf' },
+        { id: 'afib', corner: 'top-left', ax: 108, ay: 86, tx: 548, ty: 196, title: 'Kaotiske foci (350–600/min)', sub: 'Flere udgangspunkter i atrierne', ecg: 'EKG: Ingen P-tak · urolige f-takker', color: '#7c5cbf' },
     ],
     aflutter: [
-        { id: 'aflutter', sx: 122, sy: 68, tx: 215, ty: 318, title: 'Reentry-cirkel (~300/min)', sub: 'Stabil karrusel i højre atrium', ecg: 'EKG: Savtak-bølger i II/III/aVF', color: '#2b78b8' },
+        { id: 'aflutter', corner: 'top-left', ax: 108, ay: 86, tx: 215, ty: 318, title: 'Reentry-cirkel (~300/min)', sub: 'Stabil karrusel i højre atrium', ecg: 'EKG: Savtak-bølger i II/III/aVF', color: '#2b78b8' },
     ],
     av_block_1: [
-        { id: 'av1', sx: 122, sy: 372, tx: 318, ty: 540, title: 'AV-forsinkelse (PR > 200 ms)', sub: 'Impulsen bremses i AV-knuden', ecg: 'EKG: Forlænget PR · smalt QRS', color: '#d48817' },
+        { id: 'av1', corner: 'bottom-left', ax: 104, ay: 452, tx: 318, ty: 540, title: 'AV-forsinkelse (PR > 200 ms)', sub: 'Impulsen bremses i AV-knuden', ecg: 'EKG: Forlænget PR · smalt QRS', color: '#d48817' },
     ],
     av_block_3: [
-        { id: 'av3-blk', sx: 118, sy: 368, tx: 345, ty: 515, title: 'Total AV-blokade', sub: 'Atrie-impuls stoppes helt', ecg: 'EKG: P & QRS er helt uafhængige', color: '#c43b47' },
-        { id: 'av3-esc', sx: 556, sy: 372, tx: 524, ty: 572, title: 'Erstatningsfokus', sub: 'Driver ventrikler i eget tempo', ecg: 'EKG: Langsom, uafhængig rytme', color: '#d9534f' },
+        { id: 'av3-blk', corner: 'bottom-left', ax: 104, ay: 452, tx: 345, ty: 515, title: 'Total AV-blokade', sub: 'Atrie-impuls stoppes helt', ecg: 'EKG: P & QRS er helt uafhængige', color: '#c43b47' },
+        { id: 'av3-esc', corner: 'bottom-right', ax: 576, ay: 452, tx: 524, ty: 572, title: 'Erstatningsfokus', sub: 'Driver ventrikler i eget tempo', ecg: 'EKG: Langsom, uafhængig rytme', color: '#d9534f' },
     ],
     lbbb: [
-        { id: 'lbbb', sx: 556, sy: 370, tx: 562, ty: 534, title: 'Venstre gren blokeret', sub: 'Langsom muskelomvej HV → VV', ecg: 'EKG: Bredt QRS · QS i V1, M-R i V6', color: '#8b5cf6' },
+        { id: 'lbbb', corner: 'bottom-right', ax: 576, ay: 452, tx: 562, ty: 534, title: 'Venstre gren blokeret', sub: 'Langsom muskelomvej HV → VV', ecg: 'EKG: Bredt QRS · QS i V1, M-R i V6', color: '#8b5cf6' },
     ],
     rbbb: [
-        { id: 'rbbb', sx: 122, sy: 372, tx: 548, ty: 598, title: 'Højre gren blokeret', sub: 'Langsom omvej fra venstre side', ecg: 'EKG: Bredt QRS · rsR′ i V1, S i V6', color: '#0ea5e9' },
+        { id: 'rbbb', corner: 'bottom-left', ax: 104, ay: 452, tx: 548, ty: 598, title: 'Højre gren blokeret', sub: 'Langsom omvej fra venstre side', ecg: 'EKG: Bredt QRS · rsR′ i V1, S i V6', color: '#0ea5e9' },
     ],
     vt: [
-        { id: 'vt', sx: 556, sy: 374, tx: 862, ty: 748, title: 'Ektopisk VT-fokus', sub: 'Hurtig celle-til-celle spredning', ecg: 'EKG: 150/min brede QRS · + i aVR/V1', color: '#dc2626' },
+        { id: 'vt', corner: 'bottom-right', ax: 576, ay: 452, tx: 862, ty: 748, title: 'Ektopisk VT-fokus', sub: 'Hurtig celle-til-celle spredning', ecg: 'EKG: 150/min brede QRS · + i aVR/V1', color: '#dc2626' },
     ],
     vf: [
-        { id: 'vf', sx: 556, sy: 374, tx: 740, ty: 730, title: 'Ventrikelflimren (Hjertestop)', sub: 'Kaotiske mikro-bølger overalt', ecg: 'EKG: Kaos uden QRS · kræver DC-stød', color: '#b91c1c' },
+        { id: 'vf', corner: 'bottom-right', ax: 576, ay: 452, tx: 740, ty: 730, title: 'Ventrikelflimren (Hjertestop)', sub: 'Kaotiske mikro-bølger overalt', ecg: 'EKG: Kaos uden QRS · kræver DC-stød', color: '#b91c1c' },
     ],
 };

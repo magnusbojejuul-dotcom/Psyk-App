@@ -1,42 +1,445 @@
 import React from 'react';
+import chestCrossSectionBase from '../../assets/ekg_chest_cross_section_base.png';
+import {
+    CHEST_CHAMBER_GLOWS,
+    CHEST_CONDUCTION_PATHS,
+    CHEST_HEART_CENTER,
+    CHEST_IMG_H,
+    CHEST_IMG_W,
+    CHEST_LABELS,
+    CHEST_PATHOLOGY_MARKERS,
+    CHEST_PATHOLOGY_PATHS,
+    CHEST_REPOL_ARROWS,
+    CHEST_REPOL_WALLS,
+    THORAX_CENTER,
+    THORAX_RX,
+    THORAX_RY
+} from '../../data/chestConductionPaths';
+import { PHASE_COLORS } from '../../data/heartConductionPaths';
 import { MODEL_LEADS, phaseAt, projectionAt, vectorLoopPath } from '../../data/ekgSimulation';
 
 const CHEST_LEADS = ['V1', 'V2', 'V3', 'V4', 'V5', 'V6'];
-const CX = 330;
-const CY = 248;
-const TORSO_RX = 232;
-const TORSO_RY = 172;
+const CX = 340;
+const CY = 266;
+const IMG_W = 510;
+const IMG_H = Number((IMG_W * CHEST_IMG_H / CHEST_IMG_W).toFixed(2));
+const IMG_SCALE = IMG_W / CHEST_IMG_W;
+const IMG_X = Number((CX - CHEST_HEART_CENTER.x * IMG_SCALE).toFixed(2));
+const IMG_Y = Number((CY - CHEST_HEART_CENTER.y * IMG_SCALE).toFixed(2));
 
-// Anatomical right ventricle crescent and thick left ventricle cross-section.
-const RV_OUTER = 'M 315 154 C 248 150 198 196 202 252 C 206 312 260 338 320 321 C 288 299 270 269 273 229 C 276 194 292 167 315 154 Z';
-const RV_INNER = 'M 284 176 C 244 180 215 212 218 250 C 222 290 253 310 288 311 C 263 278 255 241 267 206 Z';
+const TCX_SVG = IMG_X + THORAX_CENTER.x * IMG_SCALE;
+const TCY_SVG = IMG_Y + THORAX_CENTER.y * IMG_SCALE;
+const TRX_SVG = THORAX_RX * IMG_SCALE;
+const TRY_SVG = THORAX_RY * IMG_SCALE;
 
-function electrodePoint(name) {
+const clamp01 = v => Math.max(0, Math.min(1, v));
+
+function electrodePoint(name, pad = 28) {
     const angle = MODEL_LEADS[name].angle * Math.PI / 180;
-    const radius = 1 / Math.sqrt((Math.cos(angle) / TORSO_RX) ** 2 + (Math.sin(angle) / TORSO_RY) ** 2);
-    return [CX + Math.cos(angle) * radius, CY + Math.sin(angle) * radius];
+    const radius = 1 / Math.sqrt((Math.cos(angle) / TRX_SVG) ** 2 + (Math.sin(angle) / TRY_SVG) ** 2);
+    return [TCX_SVG + Math.cos(angle) * (radius + pad), TCY_SVG + Math.sin(angle) * (radius + pad)];
 }
 
 function torsoHemiPath(leadAngleDeg, positive) {
     const start = (leadAngleDeg + (positive ? -90 : 90)) * Math.PI / 180;
     const end = (leadAngleDeg + (positive ? 90 : 270)) * Math.PI / 180;
-    const r1 = 1 / Math.sqrt((Math.cos(start) / TORSO_RX) ** 2 + (Math.sin(start) / TORSO_RY) ** 2);
-    const r2 = 1 / Math.sqrt((Math.cos(end) / TORSO_RX) ** 2 + (Math.sin(end) / TORSO_RY) ** 2);
-    const x1 = CX + Math.cos(start) * r1;
-    const y1 = CY + Math.sin(start) * r1;
-    const x2 = CX + Math.cos(end) * r2;
-    const y2 = CY + Math.sin(end) * r2;
-    return `M ${CX} ${CY} L ${x1.toFixed(1)} ${y1.toFixed(1)} A ${TORSO_RX} ${TORSO_RY} 0 0 1 ${x2.toFixed(1)} ${y2.toFixed(1)} Z`;
+    const r1 = 1 / Math.sqrt((Math.cos(start) / TRX_SVG) ** 2 + (Math.sin(start) / TRY_SVG) ** 2);
+    const r2 = 1 / Math.sqrt((Math.cos(end) / TRX_SVG) ** 2 + (Math.sin(end) / TRY_SVG) ** 2);
+    const x1 = TCX_SVG + Math.cos(start) * r1;
+    const y1 = TCY_SVG + Math.sin(start) * r1;
+    const x2 = TCX_SVG + Math.cos(end) * r2;
+    const y2 = TCY_SVG + Math.sin(end) * r2;
+    return `M ${TCX_SVG.toFixed(1)} ${TCY_SVG.toFixed(1)} L ${x1.toFixed(1)} ${y1.toFixed(1)} A ${TRX_SVG.toFixed(1)} ${TRY_SVG.toFixed(1)} 0 0 1 ${x2.toFixed(1)} ${y2.toFixed(1)} Z`;
 }
 
-export default function EkgChestModel({ lead, time, onSelect, showVector, prefix, rhythmId = 'normal' }) {
+function ElectricPath({ d, progress, color, width = 12, markerEnd }) {
+    const p = clamp01(progress);
+    if (p <= 0.001) return null;
+    return (
+        <g>
+            <path d={d} pathLength="1" strokeDasharray={`${p} 1`} stroke={color} strokeWidth={width * 1.8} opacity="0.28" />
+            <path d={d} pathLength="1" strokeDasharray={`${p} 1`} stroke={color} strokeWidth={width} opacity="0.95" markerEnd={p > 0.2 ? markerEnd : undefined} />
+            <path d={d} pathLength="1" strokeDasharray={`${p} 1`} stroke="#ffffff" strokeWidth={width * 0.34} opacity="0.62" />
+        </g>
+    );
+}
+
+function smoothWavePath(pairs, progress) {
+    const p = clamp01(progress);
+    const pts = pairs.map(([outer, inner]) => [
+        outer[0] + (inner[0] - outer[0]) * p,
+        outer[1] + (inner[1] - outer[1]) * p
+    ]);
+    if (pts.length < 2) return '';
+    let d = `M ${pts[0][0].toFixed(1)} ${pts[0][1].toFixed(1)}`;
+    for (let i = 1; i < pts.length - 1; i++) {
+        const mx = (pts[i][0] + pts[i + 1][0]) / 2;
+        const my = (pts[i][1] + pts[i + 1][1]) / 2;
+        d += ` Q ${pts[i][0].toFixed(1)} ${pts[i][1].toFixed(1)} ${mx.toFixed(1)} ${my.toFixed(1)}`;
+    }
+    const last = pts[pts.length - 1];
+    d += ` L ${last[0].toFixed(1)} ${last[1].toFixed(1)}`;
+    return d;
+}
+
+function BlockMark({ x, y, color = '#8b5cf6', pulse = 0 }) {
+    const r = 20 + pulse * 4;
+    return (
+        <g style={{ pointerEvents: 'none' }}>
+            <circle cx={x} cy={y} r={r + 8 + pulse * 9} fill={color} opacity={0.14 + pulse * 0.24} />
+            <circle cx={x} cy={y} r={r + 2} fill="#ffffff" opacity="0.95" />
+            <circle cx={x} cy={y} r={r} fill="#fff3f3" stroke={color} strokeWidth="4.5" />
+            <path d={`M ${x - 8} ${y - 8} L ${x + 8} ${y + 8} M ${x + 8} ${y - 8} L ${x - 8} ${y + 8}`} stroke={color} strokeWidth="5" strokeLinecap="round" />
+        </g>
+    );
+}
+
+function FocusMark({ x, y, color = '#dc2626', pulse = 0 }) {
+    return (
+        <g style={{ pointerEvents: 'none' }}>
+            <circle cx={x} cy={y} r={22 + pulse * 18} fill={color} opacity={0.15 + pulse * 0.26} />
+            <circle cx={x} cy={y} r={20} fill="#ffffff" opacity="0.95" />
+            <circle cx={x} cy={y} r={17 + pulse * 3} fill="#fff7ed" stroke={color} strokeWidth="4.2" />
+            <polygon
+                points={`${x + 2.5},${y - 11} ${x - 7.5},${y + 1.5} ${x},${y + 1.5} ${x - 3},${y + 11} ${x + 7.5},${y - 1.5} ${x},${y - 1.5}`}
+                fill={color}
+            />
+        </g>
+    );
+}
+
+function ChestConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
+    const isLbbb = rhythmId === 'lbbb';
+    const isRbbb = rhythmId === 'rbbb';
+    const isVt = rhythmId === 'vt';
+    const isVf = rhythmId === 'vf';
+    const isAv1 = rhythmId === 'av_block_1';
+    const isAv3 = rhythmId === 'av_block_3';
+
+    const vtLocal = time % 400;
+    const vtBeatActive = isVt && vtLocal >= 12 && vtLocal < 192;
+    const vtBeatFade = vtBeatActive && vtLocal >= 166 ? clamp01(1 - (vtLocal - 166) / 26) : 1;
+
+    const qrsStart = isAv1 ? 290 : isAv3 ? 220 : 210;
+    const qrsEnd = (isLbbb || isRbbb) ? 355 : isAv3 ? 340 : isAv1 ? 380 : 300;
+    const repolStart = isAv1 ? 460 : isAv3 ? 355 : isLbbb ? 395 : isRbbb ? 390 : 380;
+    const repolDur = isAv3 ? 120 : 160;
+
+    const ventLineActive = !isVt && !isVf && time >= qrsStart && time < qrsEnd + 20;
+    const ventLineFade = ventLineActive && time >= qrsEnd - 5 ? clamp01(1 - (time - (qrsEnd - 5)) / 25) : 1;
+    const septumProgress = clamp01((time - qrsStart) / 36);
+    const purkinjeProgress = clamp01((time - qrsStart - 14) / 48);
+
+    const septalGlow = (!isVt && !isVf && time >= qrsStart && time < qrsStart + 44)
+        ? Math.sin(clamp01((time - qrsStart) / 44) * Math.PI) * 0.24
+        : 0;
+    const ventBaseGlow = (!isVt && !isVf && time >= qrsStart + 18 && time < qrsEnd + 10)
+        ? Math.sin(clamp01((time - (qrsStart + 18)) / (qrsEnd - qrsStart - 8)) * Math.PI * 0.7) * 0.22
+        : 0;
+    const vfShimmer = isVf ? 0.18 + 0.08 * Math.sin((time / 800) * Math.PI * 10) : 0;
+
+    const rvGlow = isVf
+        ? vfShimmer
+        : isVt
+            ? (vtBeatActive ? Math.sin(clamp01((vtLocal - 45) / 135) * Math.PI) * 0.20 * vtBeatFade : 0)
+            : isLbbb
+                ? (time >= 215 && time < 305 ? Math.sin(clamp01((time - 215) / 90) * Math.PI) * 0.24 : 0)
+                : isRbbb
+                    ? (time >= 268 && time < 362 ? Math.sin(clamp01((time - 268) / 94) * Math.PI) * 0.26 : 0)
+                    : ventBaseGlow;
+
+    const lvGlow = isVf
+        ? vfShimmer
+        : isVt
+            ? (vtBeatActive ? Math.sin(clamp01((vtLocal - 12) / 168) * Math.PI) * 0.26 * vtBeatFade : 0)
+            : isLbbb
+                ? (time >= 250 && time < 362 ? Math.sin(clamp01((time - 250) / 112) * Math.PI) * 0.26 : 0)
+                : isRbbb
+                    ? (time >= 220 && time < 305 ? Math.sin(clamp01((time - 220) / 85) * Math.PI) * 0.22 : 0)
+                    : ventBaseGlow;
+
+    const isRepol = isVf
+        ? false
+        : isVt
+            ? (vtLocal >= 195 && vtLocal < 370)
+            : (time >= repolStart && time < repolStart + repolDur + 10);
+    const repolP = isVt ? clamp01((vtLocal - 195) / 175) : clamp01((time - repolStart) / repolDur);
+    const repolEdgeFade = !isRepol
+        ? 0
+        : repolP < 0.14
+            ? clamp01(repolP / 0.14)
+            : repolP > 0.80
+                ? clamp01((1 - repolP) / 0.20)
+                : 1;
+    const stGlow = (!isVt && !isVf && time >= qrsEnd && time < repolStart + repolDur)
+        ? (time < repolStart ? 0.12 : 0.12 * (1 - repolP))
+        : 0;
+    const repolGlow = isRepol ? Math.sin(repolP * Math.PI) * 0.18 : 0;
+
+    return (
+        <g transform={`translate(${IMG_X} ${IMG_Y}) scale(${IMG_SCALE})`}>
+            {/* Soft regional myocardial depolarization / repolarization glows */}
+            <g filter={`url(#${prefix}-chest-soft)`} style={{ pointerEvents: 'none' }}>
+                {septalGlow > 0.005 && (
+                    <ellipse
+                        cx={CHEST_CHAMBER_GLOWS.septum.cx}
+                        cy={CHEST_CHAMBER_GLOWS.septum.cy}
+                        rx={CHEST_CHAMBER_GLOWS.septum.rx}
+                        ry={CHEST_CHAMBER_GLOWS.septum.ry}
+                        transform={`rotate(${CHEST_CHAMBER_GLOWS.septum.rotate} ${CHEST_CHAMBER_GLOWS.septum.cx} ${CHEST_CHAMBER_GLOWS.septum.cy})`}
+                        fill={PHASE_COLORS.qrs}
+                        opacity={septalGlow}
+                    />
+                )}
+                {(rvGlow > 0.005 || lvGlow > 0.005 || stGlow > 0.005) && (
+                    <>
+                        <ellipse
+                            cx={CHEST_CHAMBER_GLOWS.rv.cx}
+                            cy={CHEST_CHAMBER_GLOWS.rv.cy}
+                            rx={CHEST_CHAMBER_GLOWS.rv.rx}
+                            ry={CHEST_CHAMBER_GLOWS.rv.ry}
+                            transform={`rotate(${CHEST_CHAMBER_GLOWS.rv.rotate} ${CHEST_CHAMBER_GLOWS.rv.cx} ${CHEST_CHAMBER_GLOWS.rv.cy})`}
+                            fill={stGlow > 0 && rvGlow <= 0.005 ? PHASE_COLORS.st : (isVt || isVf) ? '#dc2626' : isRbbb && time >= 268 ? '#0ea5e9' : PHASE_COLORS.qrs}
+                            opacity={Math.max(rvGlow, stGlow) * 0.86}
+                        />
+                        <ellipse
+                            cx={CHEST_CHAMBER_GLOWS.lv.cx}
+                            cy={CHEST_CHAMBER_GLOWS.lv.cy}
+                            rx={CHEST_CHAMBER_GLOWS.lv.rx}
+                            ry={CHEST_CHAMBER_GLOWS.lv.ry}
+                            fill={stGlow > 0 && lvGlow <= 0.005 ? PHASE_COLORS.st : (isVt || isVf) ? '#dc2626' : isLbbb && time >= 250 ? '#8b5cf6' : PHASE_COLORS.qrs}
+                            opacity={Math.max(lvGlow, stGlow)}
+                        />
+                    </>
+                )}
+                {repolGlow > 0.005 && (
+                    <>
+                        <ellipse
+                            cx={CHEST_CHAMBER_GLOWS.rv.cx}
+                            cy={CHEST_CHAMBER_GLOWS.rv.cy}
+                            rx={CHEST_CHAMBER_GLOWS.rv.rx}
+                            ry={CHEST_CHAMBER_GLOWS.rv.ry}
+                            transform={`rotate(${CHEST_CHAMBER_GLOWS.rv.rotate} ${CHEST_CHAMBER_GLOWS.rv.cx} ${CHEST_CHAMBER_GLOWS.rv.cy})`}
+                            fill={PHASE_COLORS.t}
+                            opacity={repolGlow * 0.78}
+                        />
+                        <ellipse
+                            cx={CHEST_CHAMBER_GLOWS.lv.cx}
+                            cy={CHEST_CHAMBER_GLOWS.lv.cy}
+                            rx={CHEST_CHAMBER_GLOWS.lv.rx}
+                            ry={CHEST_CHAMBER_GLOWS.lv.ry}
+                            fill={PHASE_COLORS.t}
+                            opacity={repolGlow}
+                        />
+                    </>
+                )}
+            </g>
+
+            {/* Blocked Purkinje branch veil for LBBB / RBBB */}
+            {isLbbb && (
+                <g fill="none" strokeLinecap="round" style={{ pointerEvents: 'none' }}>
+                    <path d={CHEST_CONDUCTION_PATHS.lvPurkinje} stroke="#f5f3ee" strokeWidth="14" opacity="0.82" />
+                    <path d={CHEST_CONDUCTION_PATHS.lvPurkinje} stroke="#8b5cf6" strokeWidth="4.5" strokeDasharray="12 10" opacity="0.45" />
+                </g>
+            )}
+            {isRbbb && (
+                <g fill="none" strokeLinecap="round" style={{ pointerEvents: 'none' }}>
+                    <path d={CHEST_CONDUCTION_PATHS.rvPurkinje} stroke="#f5f3ee" strokeWidth="14" opacity="0.82" />
+                    <path d={CHEST_CONDUCTION_PATHS.rvPurkinje} stroke="#0ea5e9" strokeWidth="4.5" strokeDasharray="12 10" opacity="0.45" />
+                </g>
+            )}
+
+            {/* Subendocardial Purkinje & septal activation wavefronts */}
+            {ventLineActive && (
+                <g fill="none" strokeLinecap="round" strokeLinejoin="round" opacity={ventLineFade} filter={`url(#${prefix}-chest-glow)`}>
+                    {!isLbbb && (
+                        <ElectricPath d={CHEST_CONDUCTION_PATHS.septalWave} progress={septumProgress} color="#2f85b8" width={8} />
+                    )}
+                    <ElectricPath d={CHEST_CONDUCTION_PATHS.septumTract} progress={septumProgress} color={isAv3 ? '#c43b47' : PHASE_COLORS.qrs} width={10} />
+                    {!isRbbb && (
+                        <ElectricPath d={CHEST_CONDUCTION_PATHS.rvPurkinje} progress={purkinjeProgress} color={isAv3 ? '#c43b47' : PHASE_COLORS.qrs} width={10} />
+                    )}
+                    {!isLbbb && (
+                        <ElectricPath d={CHEST_CONDUCTION_PATHS.lvPurkinje} progress={purkinjeProgress} color={isAv3 ? '#c43b47' : PHASE_COLORS.qrs} width={11} />
+                    )}
+                </g>
+            )}
+
+            {/* LBBB / RBBB transseptal slow cell-to-cell detour waves */}
+            {isLbbb && (
+                <g fill="none" strokeLinecap="round">
+                    {CHEST_PATHOLOGY_PATHS.lbbbTransseptal.map((d, idx) => {
+                        const wp = clamp01((time - (236 + idx * 14)) / 82);
+                        const fade = time >= 225 && time < 370 ? (time > 345 ? clamp01((370 - time) / 25) : 1) : 0.36;
+                        return (
+                            <g key={idx} opacity={fade}>
+                                <path d={d} stroke="#8b5cf6" strokeWidth="5" strokeDasharray="12 10" opacity="0.52" markerEnd={`url(#${prefix}-lbbb-arrow)`} />
+                                {time >= 235 && time < 368 && (
+                                    <ElectricPath d={d} progress={wp} color="#8b5cf6" width={8.5} markerEnd={`url(#${prefix}-lbbb-arrow)`} />
+                                )}
+                            </g>
+                        );
+                    })}
+                </g>
+            )}
+            {isRbbb && (
+                <g fill="none" strokeLinecap="round">
+                    {CHEST_PATHOLOGY_PATHS.rbbbTransseptal.map((d, idx) => {
+                        const wp = clamp01((time - (266 + idx * 12)) / 78);
+                        const fade = time >= 255 && time < 370 ? (time > 348 ? clamp01((370 - time) / 22) : 1) : 0.36;
+                        return (
+                            <g key={idx} opacity={fade}>
+                                <path d={d} stroke="#0ea5e9" strokeWidth="5" strokeDasharray="12 10" opacity="0.52" markerEnd={`url(#${prefix}-rbbb-arrow)`} />
+                                {time >= 265 && time < 368 && (
+                                    <ElectricPath d={d} progress={wp} color="#0ea5e9" width={8.5} markerEnd={`url(#${prefix}-rbbb-arrow)`} />
+                                )}
+                            </g>
+                        );
+                    })}
+                </g>
+            )}
+
+            {/* VT concentric shockwaves and radiating LV->RV slow myocardial spread */}
+            {isVt && (
+                <g fill="none" strokeLinecap="round">
+                    {vtBeatActive && [0, 0.33, 0.66].map((off, idx) => {
+                        const rp = (clamp01((vtLocal - 12) / 165) + off) % 1;
+                        return (
+                            <circle
+                                key={idx}
+                                cx={CHEST_PATHOLOGY_MARKERS.vtFocus.x}
+                                cy={CHEST_PATHOLOGY_MARKERS.vtFocus.y}
+                                r={22 + rp * 185}
+                                stroke="#dc2626"
+                                strokeWidth="4.5"
+                                opacity={(1 - rp) * 0.45 * vtBeatFade}
+                            />
+                        );
+                    })}
+                    {CHEST_PATHOLOGY_PATHS.vtSpread.map((d, idx) => (
+                        <g key={idx} opacity={vtBeatActive ? vtBeatFade : 0.34}>
+                            <path d={d} stroke="#dc2626" strokeWidth="5" strokeDasharray="10 10" opacity="0.45" markerEnd={`url(#${prefix}-vt-arrow)`} />
+                            {vtBeatActive && (
+                                <ElectricPath d={d} progress={clamp01((vtLocal - 16) / 150)} color="#dc2626" width={9} markerEnd={`url(#${prefix}-vt-arrow)`} />
+                            )}
+                        </g>
+                    ))}
+                </g>
+            )}
+
+            {/* VF chaotic ventricular micro-reentry wavelets */}
+            {isVf && (
+                <g style={{ pointerEvents: 'none' }}>
+                    <g fill="none" strokeLinecap="round">
+                        {CHEST_PATHOLOGY_PATHS.vfWavelets.map(w => {
+                            const cyc = ((time / 800) * 4.2 + w.phase) % 1;
+                            const fade = Math.sin(cyc * Math.PI);
+                            return (
+                                <g key={w.id} opacity={0.3 + fade * 0.7}>
+                                    <path d={w.d} pathLength="1" stroke="#b91c1c" strokeWidth="8.5" strokeDasharray={`${Math.min(1, cyc * 1.15)} 1`} markerEnd={`url(#${prefix}-vt-arrow)`} />
+                                    <path d={w.d} pathLength="1" stroke="#ffffff" strokeWidth="2.8" strokeDasharray={`${Math.min(1, cyc * 1.15)} 1`} opacity="0.7" />
+                                </g>
+                            );
+                        })}
+                    </g>
+                    {CHEST_PATHOLOGY_PATHS.vfFoci.map(f => {
+                        const pulse = 0.5 + 0.5 * Math.sin((time / 800) * Math.PI * 10 + f.phase * Math.PI * 2);
+                        return (
+                            <g key={f.id}>
+                                <circle cx={f.x} cy={f.y} r={12 + pulse * 20} fill="#b91c1c" opacity={0.16 + pulse * 0.25} />
+                                <circle cx={f.x} cy={f.y} r={7 + pulse * 3.5} fill="#fef2f2" stroke="#b91c1c" strokeWidth="3.5" />
+                            </g>
+                        );
+                    })}
+                </g>
+            )}
+
+            {/* T-wave repolarization wave + epicardial/endocardial + / - polarity */}
+            {repolEdgeFade > 0.01 && (
+                <g opacity={repolEdgeFade}>
+                    <g fill="none" strokeLinecap="round" strokeLinejoin="round" filter={`url(#${prefix}-chest-glow)`}>
+                        {[CHEST_REPOL_WALLS.lv, CHEST_REPOL_WALLS.rv].map((wallPairs, idx) => {
+                            const waveD = smoothWavePath(wallPairs, repolP);
+                            return (
+                                <g key={idx}>
+                                    <path d={waveD} stroke={PHASE_COLORS.t} strokeWidth="18" opacity="0.28" />
+                                    <path d={waveD} stroke={PHASE_COLORS.t} strokeWidth="7.5" opacity="0.90" />
+                                    <path d={waveD} stroke="#ffffff" strokeWidth="2.6" opacity="0.58" />
+                                </g>
+                            );
+                        })}
+                    </g>
+                    {CHEST_REPOL_ARROWS.map(pair => {
+                        const [ox, oy] = pair.from;
+                        const [ix, iy] = pair.to;
+                        const flip = isVt || (isLbbb && pair.id !== 'rvAnt');
+                        const posCoord = flip ? [ix, iy] : [ox, oy];
+                        const negCoord = flip ? [ox, oy] : [ix, iy];
+                        return (
+                            <g key={pair.id} style={{ pointerEvents: 'none' }}>
+                                <line x1={ix} y1={iy} x2={ox} y2={oy} stroke="#4f8f80" strokeWidth="2.6" strokeDasharray="5 4" opacity="0.72" />
+                                <circle cx={negCoord[0]} cy={negCoord[1]} r="14" fill="#fff3ee" stroke="#c86b51" strokeWidth="3" />
+                                <text x={negCoord[0]} y={negCoord[1]} textAnchor="middle" dominantBaseline="central" fontSize="20" fontWeight="800" fill="#b44c34">−</text>
+                                <circle cx={posCoord[0]} cy={posCoord[1]} r="14" fill="#eafaf4" stroke="#1f866f" strokeWidth="3" />
+                                <text x={posCoord[0]} y={posCoord[1]} textAnchor="middle" dominantBaseline="central" fontSize="20" fontWeight="800" fill="#166d59">+</text>
+                            </g>
+                        );
+                    })}
+                </g>
+            )}
+
+            {/* Clean anatomical abbreviations */}
+            {CHEST_LABELS.map(lbl => (
+                <text
+                    key={lbl.id}
+                    x={lbl.x}
+                    y={lbl.y}
+                    textAnchor="middle"
+                    className={lbl.kind === 'chamber' ? 'ehm-chest-chamber-lg' : 'ehm-chest-anat-lg'}
+                >
+                    {lbl.text}
+                </text>
+            ))}
+        </g>
+    );
+}
+
+function ChestPathologyForeground({ time, rhythmId = 'normal' }) {
+    const isLbbb = rhythmId === 'lbbb';
+    const isRbbb = rhythmId === 'rbbb';
+    const isVt = rhythmId === 'vt';
+    if (!isLbbb && !isRbbb && !isVt) return null;
+    const vtLocal = time % 400;
+    const vtBeatActive = isVt && vtLocal >= 12 && vtLocal < 192;
+
+    return (
+        <g transform={`translate(${IMG_X} ${IMG_Y}) scale(${IMG_SCALE})`} style={{ pointerEvents: 'none' }}>
+            {isLbbb && (
+                <BlockMark x={CHEST_PATHOLOGY_MARKERS.lbbbBlock.x} y={CHEST_PATHOLOGY_MARKERS.lbbbBlock.y} color="#8b5cf6" pulse={time >= 215 && time < 285 ? 1 : 0.25} />
+            )}
+            {isRbbb && (
+                <BlockMark x={CHEST_PATHOLOGY_MARKERS.rbbbBlock.x} y={CHEST_PATHOLOGY_MARKERS.rbbbBlock.y} color="#0ea5e9" pulse={time >= 215 && time < 285 ? 1 : 0.25} />
+            )}
+            {isVt && (
+                <FocusMark
+                    x={CHEST_PATHOLOGY_MARKERS.vtFocus.x}
+                    y={CHEST_PATHOLOGY_MARKERS.vtFocus.y}
+                    color="#dc2626"
+                    pulse={vtBeatActive ? Math.sin(clamp01((vtLocal - 12) / 140) * Math.PI) : 0.25}
+                />
+            )}
+        </g>
+    );
+}
+
+export default function EkgChestModel({ lead, time, onSelect, showVector, prefix, rhythmId = 'normal', children }) {
     const details = MODEL_LEADS[lead] || MODEL_LEADS.V1;
     const phase = phaseAt(time, rhythmId);
     const { vector, unit, point, voltage } = projectionAt(lead, time, 0, rhythmId);
-    const electrode = electrodePoint(lead);
+    const [elecX, elecY] = electrodePoint(lead, 28);
 
     const magnitude = Math.hypot(...vector);
-    const scale = 100;
+    const scale = 96;
     const tip = [CX + vector[0] * scale, CY + vector[1] * scale];
     const foot = [CX + point[0] * scale, CY + point[1] * scale];
     const vcgHorizontal = vectorLoopPath('horizontal', CX, CY, scale, 0, rhythmId);
@@ -53,6 +456,7 @@ export default function EkgChestModel({ lead, time, onSelect, showVector, prefix
         rightAnglePath = `M ${(foot[0] + ux * s).toFixed(1)} ${(foot[1] + uy * s).toFixed(1)} L ${(foot[0] + ux * s + dx * s).toFixed(1)} ${(foot[1] + uy * s + dy * s).toFixed(1)} L ${(foot[0] + dx * s).toFixed(1)} ${(foot[1] + dy * s).toFixed(1)}`;
     }
 
+    const projectionColor = voltage >= 0 ? '#2f7a62' : '#c0444f';
     const isLbbb = rhythmId === 'lbbb';
     const isRbbb = rhythmId === 'rbbb';
     const isVt = rhythmId === 'vt';
@@ -65,327 +469,141 @@ export default function EkgChestModel({ lead, time, onSelect, showVector, prefix
     const qrsEnd = (isLbbb || isRbbb) ? 355 : isAv3 ? 340 : isAv1 ? 380 : 300;
     const repolStart = isAv1 ? 460 : isAv3 ? 355 : isLbbb ? 395 : isRbbb ? 390 : 380;
     const repolDur = isAv3 ? 120 : 160;
-
     const septal = !isVt && !isVf && time >= qrsStart && time < qrsStart + 24 && !isLbbb;
-    const depolarizing = isVf
-        ? true
-        : isVt
-            ? (vtLocal >= 15 && vtLocal < 190)
-            : (time >= (isLbbb ? 210 : qrsStart + 20) && time < qrsEnd);
-    const repolarizing = isVf
-        ? false
-        : isVt
-            ? (vtLocal >= 190 && vtLocal < 385)
-            : (time >= repolStart && time < repolStart + repolDur);
+    const depolarizing = isVf || (isVt ? (vtLocal >= 12 && vtLocal < 192) : (time >= (isLbbb ? 210 : qrsStart + 20) && time < qrsEnd));
+    const repolarizing = !isVf && (isVt ? (vtLocal >= 195 && vtLocal < 370) : (time >= repolStart && time < repolStart + repolDur));
     const activated = !isVt && !isVf && time >= qrsEnd && time < repolStart;
-
-    const spread = isVt
-        ? Math.max(0, Math.min(1, (vtLocal - 15) / 175))
-        : Math.max(0, Math.min(1, (time - (qrsStart + 20)) / Math.max(1, qrsEnd - (qrsStart + 20))));
-    const recovery = isVt
-        ? Math.max(0, Math.min(1, (vtLocal - 190) / 195))
-        : Math.max(0, Math.min(1, (time - repolStart) / repolDur));
-    const boundary = repolarizing ? 1 - recovery * 0.45 : 0.54 + spread * 0.46;
-    const ventricularFill = isVf
-        ? '#f5c2c2'
-        : activated
-            ? '#dc8872'
-            : depolarizing || repolarizing
-                ? `url(#${prefix}-chest-wall)`
-                : `url(#${prefix}-chest-rest)`;
-    const rvFill = isRbbb && time >= 272 && time < 360
-        ? '#9bd4f2'
-        : isLbbb && time >= 210 && time < 265
-            ? '#f0b688'
-            : ventricularFill;
-    const lvFill = isLbbb && time >= 255 && time < 360
-        ? '#c7b5f6'
-        : ventricularFill;
     const outsideSlice = !isVf && (['p', 'p2', 'pr'].includes(phase.id) || (phase.id === 'basal' && !isLbbb && !isRbbb));
-    const projectionColor = voltage >= 0 ? '#2f7a62' : '#c0444f';
 
     const perpRadA = (details.angle - 90) * Math.PI / 180;
     const perpRadB = (details.angle + 90) * Math.PI / 180;
-    const perpRA = 1 / Math.sqrt((Math.cos(perpRadA) / TORSO_RX) ** 2 + (Math.sin(perpRadA) / TORSO_RY) ** 2);
-    const perpRB = 1 / Math.sqrt((Math.cos(perpRadB) / TORSO_RX) ** 2 + (Math.sin(perpRadB) / TORSO_RY) ** 2);
+    const perpRA = 1 / Math.sqrt((Math.cos(perpRadA) / TRX_SVG) ** 2 + (Math.sin(perpRadA) / TRY_SVG) ** 2);
+    const perpRB = 1 / Math.sqrt((Math.cos(perpRadB) / TRX_SVG) ** 2 + (Math.sin(perpRadB) / TRY_SVG) ** 2);
 
     return (
         <div className="ehm-chest">
-            <svg
-                className="ehm-heart-map ehm-chest-map"
-                viewBox="0 0 660 500"
-                role="group"
-                aria-label="Horisontalplan og brystafledninger V1 til V6, set fra fødderne"
-            >
+            <div className="ehm-svg-anchor-wrap">
+                <svg
+                    className="ehm-heart-map ehm-chest-map"
+                    viewBox="0 0 680 540"
+                    role="group"
+                    aria-label="Horisontalplan og brystafledninger V1 til V6, set fra fødderne"
+                >
                 <defs>
-                    <radialGradient id={`${prefix}-chest-bg`} cx="50%" cy="50%" r="58%">
-                        <stop offset="0%" stopColor="#fcfcf7" />
-                        <stop offset="80%" stopColor="#f3f5ed" />
-                        <stop offset="100%" stopColor="#e8ede3" />
-                    </radialGradient>
-                    <radialGradient id={`${prefix}-chest-rest`}>
-                        <stop offset="0%" stopColor="#e7ece7" />
-                        <stop offset="100%" stopColor="#d4dcd6" />
-                    </radialGradient>
-                    <radialGradient id={`${prefix}-chest-wall`}>
-                        <stop offset="0%" stopColor="#dc8872" />
-                        <stop offset={`${boundary * 100}%`} stopColor="#dc8872" />
-                        <stop offset={`${Math.min(1, boundary + 0.03) * 100}%`} stopColor={repolarizing ? '#2f947c' : '#f0b14b'} />
-                        <stop offset={`${Math.min(1, boundary + 0.08) * 100}%`} stopColor={repolarizing ? '#2f947c' : '#dde4de'} />
-                    </radialGradient>
-                    <clipPath id={`${prefix}-torso-clip`}>
-                        <ellipse cx={CX} cy={CY} rx={TORSO_RX} ry={TORSO_RY} />
-                    </clipPath>
-                    <filter id={`${prefix}-chest-shadow`} x="-20%" y="-20%" width="140%" height="140%">
-                        <feDropShadow dx="0" dy="3" stdDeviation="5" floodColor="#23372d" floodOpacity="0.12" />
+                    <filter id={`${prefix}-chest-soft`} x="-35%" y="-35%" width="170%" height="170%">
+                        <feGaussianBlur stdDeviation="20" />
                     </filter>
+                    <filter id={`${prefix}-chest-glow`} x="-25%" y="-25%" width="150%" height="150%">
+                        <feGaussianBlur stdDeviation="5" result="blur" />
+                        <feMerge>
+                            <feMergeNode in="blur" />
+                            <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                    </filter>
+                    <clipPath id={`${prefix}-torso-clip`}>
+                        <ellipse cx={TCX_SVG} cy={TCY_SVG} rx={TRX_SVG} ry={TRY_SVG} />
+                    </clipPath>
                     <marker id={`${prefix}-net-arrow`} viewBox="0 0 10 10" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse">
-                        <path d="M1 1 L9 5 L1 9 Z" fill="#d58227" />
+                        <path d="M1 1 L9 5 L1 9 Z" fill="#dd6b20" />
                     </marker>
-                    <marker id={`${prefix}-local-arrow`} viewBox="0 0 10 10" markerWidth="8" markerHeight="8" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse">
-                        <path d="M1 1 L9 5 L1 9 Z" fill="#247ea9" />
-                    </marker>
-                    <marker id={`${prefix}-chest-proj`} viewBox="0 0 10 10" markerWidth="9" markerHeight="9" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+                    <marker id={`${prefix}-chest-proj`} viewBox="0 0 10 10" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse">
                         <path d="M1 1 L9 5 L1 9 Z" fill={projectionColor} />
                     </marker>
-                    <marker id={`${prefix}-lbbb-arrow`} viewBox="0 0 10 10" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+                    <marker id={`${prefix}-lbbb-arrow`} viewBox="0 0 10 10" markerWidth="18" markerHeight="18" refX="7" refY="5" orient="auto" markerUnits="userSpaceOnUse">
                         <path d="M1 1 L9 5 L1 9 Z" fill="#8b5cf6" />
                     </marker>
-                    <marker id={`${prefix}-rbbb-arrow`} viewBox="0 0 10 10" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+                    <marker id={`${prefix}-rbbb-arrow`} viewBox="0 0 10 10" markerWidth="18" markerHeight="18" refX="7" refY="5" orient="auto" markerUnits="userSpaceOnUse">
                         <path d="M1 1 L9 5 L1 9 Z" fill="#0ea5e9" />
                     </marker>
-                    <marker id={`${prefix}-vt-arrow`} viewBox="0 0 10 10" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+                    <marker id={`${prefix}-vt-arrow`} viewBox="0 0 10 10" markerWidth="18" markerHeight="18" refX="7" refY="5" orient="auto" markerUnits="userSpaceOnUse">
                         <path d="M1 1 L9 5 L1 9 Z" fill="#dc2626" />
                     </marker>
                 </defs>
 
-                <text x={CX} y="24" className="ehm-svg-direction">RYG · POSTERIORT</text>
-                <text x={CX} y="486" className="ehm-svg-direction">BRYSTBEN · ANTERIORT</text>
-                <text x="44" y={CY + 4} className="ehm-svg-direction">HØJRE</text>
-                <text x="616" y={CY + 4} className="ehm-svg-direction">VENSTRE</text>
+                {/* Clean anatomical orientation captions */}
+                <text x={CX} y="20" className="ehm-svg-direction">RYG · POSTERIORT</text>
+                <text x={CX} y="526" className="ehm-svg-direction">BRYSTBEN · ANTERIORT</text>
+                <text x="36" y={CY + 4} className="ehm-svg-direction">HØJRE</text>
+                <text x="644" y={CY + 4} className="ehm-svg-direction">VENSTRE</text>
 
-                <ellipse cx={CX} cy={CY} rx={TORSO_RX + 10} ry={TORSO_RY + 10} fill="#e8ede3" stroke="#d0dacf" strokeWidth="1.5" />
-                <ellipse cx={CX} cy={CY} rx={TORSO_RX} ry={TORSO_RY} fill={`url(#${prefix}-chest-bg)`} stroke="#c8d4c8" strokeWidth="1.8" />
-
-                <g clipPath={`url(#${prefix}-torso-clip)`}>
-                    <path d={torsoHemiPath(details.angle, true)} fill="rgba(47, 122, 98, 0.095)" />
-                    <path d={torsoHemiPath(details.angle, false)} fill="rgba(192, 68, 79, 0.045)" />
+                {/* Subtle positive/negative measurement hemispheres clipped inside thorax */}
+                <g clipPath={`url(#${prefix}-torso-clip)`} style={{ pointerEvents: 'none' }}>
+                    <path d={torsoHemiPath(details.angle, true)} fill="rgba(47, 122, 98, 0.075)" />
+                    <path d={torsoHemiPath(details.angle, false)} fill="rgba(192, 68, 79, 0.038)" />
                     <line
-                        x1={CX + Math.cos(perpRadA) * perpRA}
-                        y1={CY + Math.sin(perpRadA) * perpRA}
-                        x2={CX + Math.cos(perpRadB) * perpRB}
-                        y2={CY + Math.sin(perpRadB) * perpRB}
+                        x1={TCX_SVG + Math.cos(perpRadA) * perpRA}
+                        y1={TCY_SVG + Math.sin(perpRadA) * perpRA}
+                        x2={TCX_SVG + Math.cos(perpRadB) * perpRB}
+                        y2={TCY_SVG + Math.sin(perpRadB) * perpRB}
                         stroke="#7f9385"
                         strokeWidth="1.1"
                         strokeDasharray="3 4"
-                        opacity="0.6"
+                        opacity="0.55"
                     />
                 </g>
 
-                <path
-                    d="M 272 134 C 192 128 124 186 126 248 C 128 312 184 366 254 362 C 218 332 192 292 192 246 C 192 196 226 154 272 134 Z"
-                    fill="#e7efe9"
-                    stroke="#d2ded5"
-                    strokeWidth="1.2"
-                    opacity="0.65"
-                />
-                <path
-                    d="M 388 134 C 468 128 536 186 534 248 C 532 312 478 364 410 356 C 438 326 446 286 442 244 C 437 196 416 156 388 134 Z"
-                    fill="#e7efe9"
-                    stroke="#d2ded5"
-                    strokeWidth="1.2"
-                    opacity="0.65"
-                />
-
-                <g fill="#dfe5db" stroke="#c3cec0" strokeWidth="1.3">
-                    <path d="M 324 80 L 330 56 L 336 80 M 298 92 L 320 96 M 362 92 L 340 96" strokeWidth="5" strokeLinecap="round" stroke="#d5ddd1" />
-                    <ellipse cx={CX} cy="99" rx="22" ry="16" />
-                    <ellipse cx={CX} cy="84" rx="7" ry="6" fill="#edf1eb" />
-                    <rect x="308" y="407" width="44" height="10" rx="5" />
-                </g>
-                <circle cx="364" cy="126" r="10.5" fill="#dfb3ab" stroke="#b37c73" strokeWidth="1.4" />
-                <circle cx="364" cy="126" r="6" fill="#f7e6e2" />
-
-                {CHEST_LEADS.map(name => {
-                    const [x, y] = electrodePoint(name);
-                    return <line key={name} x1={CX} y1={CY} x2={x} y2={y} stroke="#ced9cd" strokeDasharray="2 6" opacity="0.7" />;
-                })}
-
+                {/* Subtle measurement ray to active chest electrode */}
                 <line
-                    x1={CX - unit[0] * 145}
-                    y1={CY - unit[1] * 145}
-                    x2={electrode[0]}
-                    y2={electrode[1]}
+                    x1={CX - unit[0] * 125}
+                    y1={CY - unit[1] * 125}
+                    x2={elecX}
+                    y2={elecY}
                     stroke="#2f7a62"
-                    strokeWidth="2"
-                    strokeDasharray="6 5"
-                    opacity="0.75"
+                    strokeWidth="1.7"
+                    strokeDasharray="5 5"
+                    opacity="0.65"
                 />
 
-                <g filter={`url(#${prefix}-chest-shadow)`}>
-                    <path d={RV_OUTER} fill={rvFill} stroke="#83998b" strokeWidth="2" />
-                    <path d={RV_INNER} fill="#eaf1f5" stroke="#8ba3ad" strokeWidth="1.5" />
+                {/* Calm, bright resting transverse anatomical thorax + ventricles */}
+                <image
+                    href={chestCrossSectionBase}
+                    x={IMG_X}
+                    y={IMG_Y}
+                    width={IMG_W}
+                    height={IMG_H}
+                    preserveAspectRatio="xMidYMid meet"
+                />
 
-                    <ellipse cx="354" cy="248" rx="81" ry="90" fill={lvFill} stroke="#7d9486" strokeWidth="2.1" />
-                    <path
-                        d="M 354 195 C 378 195 397 215 397 244 C 397 254 391 262 385 268 C 391 276 388 294 366 301 C 344 306 318 290 315 268 C 312 260 319 253 317 244 C 313 219 330 195 354 195 Z"
-                        fill="#fff4ee"
-                        stroke="#bd938b"
-                        strokeWidth="1.6"
-                    />
-                    {septal && <path d="M 284 196 Q 268 244 285 288" stroke="#2f85b8" strokeWidth="10" strokeLinecap="round" fill="none" opacity="0.68" />}
-                    {isLbbb && (
-                        <g style={{ pointerEvents: 'none' }}>
-                            <circle cx="294" cy="232" r="11" fill="#fff5f5" stroke="#8b5cf6" strokeWidth="2.8" />
-                            <path d="M 290 228 L 298 236 M 298 228 L 290 236" stroke="#8b5cf6" strokeWidth="2.8" strokeLinecap="round" />
-                            <path d="M 262 214 Q 298 212 332 204" fill="none" stroke="#8b5cf6" strokeWidth="3.2" strokeDasharray="6 4" opacity={depolarizing ? 0.92 : 0.42} markerEnd={`url(#${prefix}-lbbb-arrow)`} />
-                            <path d="M 258 246 Q 294 246 326 246" fill="none" stroke="#8b5cf6" strokeWidth="3.8" strokeDasharray="6 4" opacity={depolarizing ? 0.95 : 0.42} markerEnd={`url(#${prefix}-lbbb-arrow)`} />
-                            <path d="M 262 278 Q 300 282 336 290" fill="none" stroke="#8b5cf6" strokeWidth="3.2" strokeDasharray="6 4" opacity={depolarizing ? 0.92 : 0.42} markerEnd={`url(#${prefix}-lbbb-arrow)`} />
-                        </g>
-                    )}
-                    {isRbbb && (
-                        <g style={{ pointerEvents: 'none' }}>
-                            <circle cx="268" cy="232" r="11" fill="#fff5f5" stroke="#0ea5e9" strokeWidth="2.8" />
-                            <path d="M 264 228 L 272 236 M 272 228 L 264 236" stroke="#0ea5e9" strokeWidth="2.8" strokeLinecap="round" />
-                            <path d="M 316 208 Q 278 210 242 218" fill="none" stroke="#0ea5e9" strokeWidth="3.2" strokeDasharray="6 4" opacity={time >= 268 && time < 358 ? 0.92 : 0.42} markerEnd={`url(#${prefix}-rbbb-arrow)`} />
-                            <path d="M 320 246 Q 282 246 240 248" fill="none" stroke="#0ea5e9" strokeWidth="3.8" strokeDasharray="6 4" opacity={time >= 268 && time < 358 ? 0.95 : 0.42} markerEnd={`url(#${prefix}-rbbb-arrow)`} />
-                            <path d="M 314 286 Q 278 286 246 280" fill="none" stroke="#0ea5e9" strokeWidth="3.2" strokeDasharray="6 4" opacity={time >= 268 && time < 358 ? 0.92 : 0.42} markerEnd={`url(#${prefix}-rbbb-arrow)`} />
-                        </g>
-                    )}
-                    {isVt && (
-                        <g style={{ pointerEvents: 'none' }}>
-                            {depolarizing && [0, 0.5].map((off, idx) => {
-                                const rp = ((Math.max(0, vtLocal - 20) / 160) + off) % 1;
-                                return <circle key={idx} cx="422" cy="264" r={16 + rp * 62} fill="none" stroke="#dc2626" strokeWidth="2.4" opacity={(1 - rp) * 0.55} />;
-                            })}
-                            <path d="M 412 254 Q 368 220 318 192" fill="none" stroke="#dc2626" strokeWidth="3" strokeDasharray="5 4" opacity={depolarizing ? 0.92 : 0.42} markerEnd={`url(#${prefix}-vt-arrow)`} />
-                            <path d="M 410 264 Q 348 256 276 246" fill="none" stroke="#dc2626" strokeWidth="3.4" strokeDasharray="5 4" opacity={depolarizing ? 0.95 : 0.42} markerEnd={`url(#${prefix}-vt-arrow)`} />
-                            <path d="M 412 274 Q 364 300 310 314" fill="none" stroke="#dc2626" strokeWidth="3" strokeDasharray="5 4" opacity={depolarizing ? 0.92 : 0.42} markerEnd={`url(#${prefix}-vt-arrow)`} />
-                            <circle cx="422" cy="264" r={12 + (depolarizing ? 5 : 0)} fill="#fee2e2" stroke="#dc2626" strokeWidth="2.6" />
-                            <polygon points="424,255 416,265 422,265 419,274 428,263 422,263" fill="#dc2626" />
-                        </g>
-                    )}
-                    {isVf && (
-                        <g style={{ pointerEvents: 'none' }}>
-                            {[
-                                { x: 245, y: 215, ph: 0 },
-                                { x: 252, y: 280, ph: 0.25 },
-                                { x: 356, y: 175, ph: 0.45 },
-                                { x: 416, y: 246, ph: 0.7 },
-                                { x: 352, y: 318, ph: 0.85 },
-                            ].map((pt, idx) => {
-                                const p = 0.5 + 0.5 * Math.sin((time / 800) * Math.PI * 10 + pt.ph * Math.PI * 2);
-                                return (
-                                    <g key={idx}>
-                                        <circle cx={pt.x} cy={pt.y} r={7 + p * 11} fill="#b91c1c" opacity={0.18 + p * 0.26} />
-                                        <circle cx={pt.x} cy={pt.y} r={4 + p * 2} fill="#fef2f2" stroke="#b91c1c" strokeWidth="1.8" />
-                                    </g>
-                                );
-                            })}
-                        </g>
-                    )}
-                </g>
+                {/* Living synchronized electrical conduction & pathology overlay */}
+                <ChestConductionOverlay time={time} prefix={prefix} rhythmId={rhythmId} />
 
-                <g className="ehm-chest-labels" fill="#4f6658" fontSize="11.5" fontWeight="600">
-                    <path d="M 432 126 L 424 160 L 418 186 M 164 316 L 204 294 M 184 166 L 254 176 L 281 211" fill="none" stroke="#97ab9d" strokeWidth="1.1" />
-                    <text x="438" y="117" textAnchor="middle">Venstre ventrikel</text>
-                    <text x="148" y="331" textAnchor="middle">Højre ventrikel</text>
-                    <text x="158" y="162" textAnchor="middle">Septum</text>
-                    <text x="234" y="256" fontSize="12" fontWeight="750">HV</text>
-                    <text x="354" y="254" fontSize="12.5" fontWeight="750" textAnchor="middle">VV</text>
-                </g>
-
-                {depolarizing && [-65, 0, 65, 140].map(angle => {
-                    const a = angle * Math.PI / 180;
-                    const base = 0.62 + spread * 0.22;
-                    return (
-                        <line
-                            key={angle}
-                            x1={354 + Math.cos(a) * 81 * base}
-                            y1={248 + Math.sin(a) * 90 * base}
-                            x2={354 + Math.cos(a) * 81 * (base + 0.16)}
-                            y2={248 + Math.sin(a) * 90 * (base + 0.16)}
-                            stroke="#247ea9"
-                            strokeWidth="2.4"
-                            markerEnd={`url(#${prefix}-local-arrow)`}
-                        />
-                    );
-                })}
-                {repolarizing && [-65, 0, 65, 140].map(angle => {
-                    const a = angle * Math.PI / 180;
-                    const ix = 354 + Math.cos(a) * 81 * 0.56;
-                    const iy = 248 + Math.sin(a) * 90 * 0.56;
-                    const ox = 354 + Math.cos(a) * 81 * 0.94;
-                    const oy = 248 + Math.sin(a) * 90 * 0.94;
-                    return (
-                        <g key={angle} style={{ pointerEvents: 'none' }}>
-                            <line x1={ix} y1={iy} x2={ox} y2={oy} stroke="#4f8f80" strokeWidth="1.3" strokeDasharray="2 2" opacity="0.7" />
-                            <circle cx={ix} cy={iy} r="6.8" fill={isVt || isLbbb ? '#eafaf4' : '#fff3ee'} stroke={isVt || isLbbb ? '#1f866f' : '#c86b51'} strokeWidth="1.4" />
-                            <text x={ix} y={iy} textAnchor="middle" dominantBaseline="central" fontSize="9.5" fontWeight="800" fill={isVt || isLbbb ? '#166d59' : '#b44c34'}>{isVt || isLbbb ? '+' : '−'}</text>
-                            <circle cx={ox} cy={oy} r="6.8" fill={isVt || isLbbb ? '#fff3ee' : '#eafaf4'} stroke={isVt || isLbbb ? '#c86b51' : '#1f866f'} strokeWidth="1.4" />
-                            <text x={ox} y={oy} textAnchor="middle" dominantBaseline="central" fontSize="9.5" fontWeight="800" fill={isVt || isLbbb ? '#b44c34' : '#166d59'}>{isVt || isLbbb ? '−' : '+'}</text>
-                        </g>
-                    );
-                })}
-                {septal && <line x1="298" y1="238" x2="266" y2="250" stroke="#247ea9" strokeWidth="3" markerEnd={`url(#${prefix}-local-arrow)`} />}
-
+                {/* Instantaneous VCG loop + 3D dipole vector & 90° orthogonal projection */}
                 {showVector && (
-                    <path d={vcgHorizontal} fill="none" stroke="#d58227" strokeWidth="1.5" strokeDasharray="3 3" opacity="0.4" />
+                    <path d={vcgHorizontal} fill="none" stroke="#dd6b20" strokeWidth="1.5" strokeDasharray="3 3" opacity="0.38" />
                 )}
 
                 {showVector && magnitude > 0.008 && (
                     <g aria-label="Samlet elektrisk retning i horisontalplanet">
-                        <line x1={tip[0]} y1={tip[1]} x2={foot[0]} y2={foot[1]} stroke={projectionColor} strokeWidth="1.4" strokeDasharray="3 3" opacity="0.75" />
-                        {rightAnglePath && <path d={rightAnglePath} fill="none" stroke={projectionColor} strokeWidth="1.1" opacity="0.75" />}
+                        <line x1={tip[0]} y1={tip[1]} x2={foot[0]} y2={foot[1]} stroke={projectionColor} strokeWidth="1.4" strokeDasharray="3 3" opacity="0.78" />
+                        {rightAnglePath && <path d={rightAnglePath} fill="none" stroke={projectionColor} strokeWidth="1.1" opacity="0.78" />}
                         {projLengthPx > 8 ? (
-                            <line
-                                x1={CX}
-                                y1={CY}
-                                x2={foot[0]}
-                                y2={foot[1]}
-                                stroke={projectionColor}
-                                strokeWidth="3.8"
-                                opacity="0.92"
-                                markerEnd={`url(#${prefix}-chest-proj)`}
-                            />
+                            <>
+                                <line x1={CX} y1={CY} x2={foot[0]} y2={foot[1]} stroke="#ffffff" strokeWidth="7" strokeLinecap="round" opacity="0.85" />
+                                <line
+                                    x1={CX}
+                                    y1={CY}
+                                    x2={foot[0]}
+                                    y2={foot[1]}
+                                    stroke={projectionColor}
+                                    strokeWidth="4"
+                                    markerEnd={`url(#${prefix}-chest-proj)`}
+                                />
+                            </>
                         ) : (
-                            <circle cx={CX} cy={CY} r="5.2" fill="#ffffff" stroke="#7c8f83" strokeWidth="1.4" opacity="0.85" />
+                            <circle cx={CX} cy={CY} r="5.5" fill="#ffffff" stroke="#7c8f83" strokeWidth="1.4" opacity="0.85" />
                         )}
-                        <line x1={CX} y1={CY} x2={tip[0]} y2={tip[1]} stroke="#fffdf5" strokeWidth="7.5" strokeLinecap="round" />
-                        <line x1={CX} y1={CY} x2={tip[0]} y2={tip[1]} stroke="#d58227" strokeWidth="3.6" markerEnd={`url(#${prefix}-net-arrow)`} />
-                        <circle cx={CX} cy={CY} r="4.5" fill="#d58227" stroke="#fffdf8" strokeWidth="1.5" />
+                        <line x1={CX} y1={CY} x2={tip[0]} y2={tip[1]} stroke="#ffffff" strokeWidth="7" strokeLinecap="round" opacity="0.85" />
+                        <line x1={CX} y1={CY} x2={tip[0]} y2={tip[1]} stroke="#dd6b20" strokeWidth="3.6" markerEnd={`url(#${prefix}-net-arrow)`} />
+                        <circle cx={CX} cy={CY} r="4.2" fill="#dd6b20" stroke="#ffffff" strokeWidth="1.5" />
                     </g>
                 )}
 
-                {rhythmId !== 'normal' ? (() => {
-                    const chestLabel = isLbbb
-                        ? 'LBBB · Venstre gren blokeret (HV → VV)'
-                        : isRbbb
-                            ? 'RBBB · Højre gren blokeret (VV → HV)'
-                            : isVt
-                                ? 'VT · Ektopisk fokus i venstre ventrikel'
-                                : isVf
-                                    ? 'VF · Kaotisk ventrikelflimren (ingen QRS)'
-                                    : rhythmId === 'afib'
-                                        ? 'Atrieflimren · Ektopiske atriefoci (over snit)'
-                                        : rhythmId === 'aflutter'
-                                            ? 'Atrieflagren · Reentry i RA (over snit)'
-                                            : rhythmId === 'av_block_1'
-                                                ? 'AV-blok I · Forsinket i AV (over snit)'
-                                                : 'AV-blok III · Erstatningsfokus i ventrikel';
-                    const pillW = Math.max(250, Math.ceil(chestLabel.length * 7.1 + 26));
-                    return (
-                        <g style={{ pointerEvents: 'none' }}>
-                            <rect x="14" y="14" width={pillW} height="34" rx="10" fill="rgba(255, 254, 250, 0.96)" stroke={isLbbb ? '#8b5cf6' : isRbbb ? '#0ea5e9' : isVt ? '#dc2626' : isVf ? '#b91c1c' : '#5e7a6d'} strokeWidth="1.6" />
-                            <text x="26" y="35" fontSize="12" fontWeight="750" fill="#233c32">
-                                {chestLabel}
-                            </text>
-                        </g>
-                    );
-                })() : null}
+                {/* High-visibility pathology block/focus badges rendered above vector arrows */}
+                <ChestPathologyForeground time={time} rhythmId={rhythmId} />
 
+                {/* 6 clickable V1–V6 electrode badges hugging the anatomical anterior-left thorax */}
                 {CHEST_LEADS.map(name => {
-                    const [x, y] = electrodePoint(name);
+                    const [x, y] = electrodePoint(name, 28);
                     const selected = name === lead;
                     return (
                         <g
@@ -404,29 +622,31 @@ export default function EkgChestModel({ lead, time, onSelect, showVector, prefix
                             }}
                         >
                             <rect
-                                x={x - 28}
-                                y={y - 20}
-                                width="56"
-                                height="40"
-                                rx="13"
+                                x={x - 27}
+                                y={y - 18}
+                                width="54"
+                                height="36"
+                                rx="12"
                                 fill={selected ? '#2f7a62' : '#fffef9'}
                                 stroke={selected ? '#235c4a' : '#c6d3c7'}
                                 strokeWidth={selected ? 2 : 1.3}
                             />
-                            <text x={x} y={y + 5} textAnchor="middle" fontSize="14.5" fontWeight="750" fill={selected ? '#ffffff' : '#354e43'}>
-                                {name}<tspan fontSize="9.5" dy="-5.5"> +</tspan>
+                            <text x={x} y={y + 4.5} textAnchor="middle" fontSize="13.5" fontWeight="750" fill={selected ? '#ffffff' : '#354e43'}>
+                                {name}<tspan fontSize="9.5" dy="-5"> +</tspan>
                             </text>
                         </g>
                     );
                 })}
-            </svg>
+                </svg>
+                {children}
+            </div>
 
             <div className="ehm-chest-caption">
                 {isVf
                     ? 'VF: Kaotiske mikro-bølger løber usynkront over hele begge ventrikler -> ingen QRS eller pumpefunktion (hjertestop).'
                     : isLbbb && depolarizing
                         ? 'LBBB: Højre ventrikel aktiveres først, hvorefter bølgen krydser langsomt mod venstre -> dyb QS i V1 og bred R i V6.'
-                        : isRbbb && time >= 272 && time < 355
+                        : isRbbb && time >= 268 && time < 358
                             ? 'RBBB: Venstre ventrikel er færdig, og bølgen krydser forsinket mod højre ventrikel -> høj R′-tak ("kaninøre") i V1 og S i V6.'
                             : isVt && depolarizing
                                 ? 'VT: Ektopisk fokus i venstre ventrikel spreder sig langsomt over mod højre/anteriort -> bredt QRS og høj R i V1.'
@@ -439,12 +659,12 @@ export default function EkgChestModel({ lead, time, onSelect, showVector, prefix
                                             ? 'Diskordant repolarisering: den ændrede aktivering vender fortegnene, så T-takken peger modsat QRS.'
                                             : 'Epikardiet genoplades først (+ yderst, − inderst) → elektrisk vektor (− → +) peger stadig mod venstre (V5/V6).'
                                         : septal
-                                            ? 'Septum aktiveres først fra venstre mod højre (lille blå pil), hvilket giver r-tak i V1 og q-tak i V6.'
+                                            ? 'Septum aktiveres først fra venstre mod højre (blå pil), hvilket giver lille r-tak i V1 og q-tak i V6.'
                                             : depolarizing
-                                                ? 'Blå pile: aktivering indefra og ud. Venstre ventrikels tykke væg trækker vektoren bagud-venstre mod V5/V6.'
+                                                ? 'Purkinje-net og ventrikelvægge aktiveres indefra og ud. Venstre ventrikels tykke væg trækker vektoren bagud-venstre mod V5/V6.'
                                                 : activated
                                                     ? 'Ventrikelvæggene er ensartet aktiverede i ST-plateaufasen — ingen spændingsforskel.'
-                                                    : 'Ventrikelvæggene er i hvile. Vælg et QRS-trin for at se aktiveringsbølgen.'}
+                                                    : 'Ventrikelvæggene er i hvile. Vælg et QRS-trin eller afspil for at se aktiveringsbølgen.'}
             </div>
 
             <div className="ehm-chest-measure" aria-label={`Udsving i ${lead}`}>

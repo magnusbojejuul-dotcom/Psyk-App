@@ -8,24 +8,39 @@
 .ehm-heading h2 { font-size: clamp(24px, 2.8vw, 34px); letter-spacing: -.045em; font-weight: 650; line-height: 1.25; margin: 8px 0; }
 .ehm-heading p, .ehm-comparison-heading p { font-size: 13px; color: var(--muted); line-height: 1.6; margin: 0; }
 .ehm-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; white-space: nowrap; border: 1px solid var(--line); background: #f0f4ec; padding: 9px 13px; border-radius: 20px; }
-.ehm-rhythm-bar { margin-bottom: 18px; display: flex; flex-direction: column; gap: 10px; }
+.ehm-rhythm-bar { margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
 .ehm-rhythm-pills { display: flex; flex-wrap: wrap; gap: 7px; }
 .ehm-rhythm-pills button { display: inline-flex; align-items: center; gap: 7px; border: 1px solid #d4ded3; background: #fffefb; color: #476054; border-radius: 12px; padding: 8px 12px; font-size: 11.5px; font-weight: 650; transition: all .15s ease; }
 .ehm-rhythm-pills button i { width: 8px; height: 8px; border-radius: 50%; background: var(--rhythm-color); opacity: .75; }
 .ehm-rhythm-pills button:hover { border-color: var(--rhythm-color); color: #243b31; }
 .ehm-rhythm-pills button[aria-pressed=true] { background: var(--rhythm-color); border-color: var(--rhythm-color); color: white; box-shadow: 0 2px 8px rgba(32, 62, 50, .18); }
 .ehm-rhythm-pills button[aria-pressed=true] i { background: white; opacity: 1; }
-.ehm-pathology-banner { border: 1px solid color-mix(in srgb, var(--rhythm-color) 35%, #dfe6dc); background: #fffefb; border-left: 4px solid var(--rhythm-color); border-radius: 14px; padding: 13px 16px; display: flex; flex-direction: column; gap: 10px; }
-.ehm-pathology-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-.ehm-pathology-cols strong { display: block; font-size: 11.5px; font-weight: 750; color: #233c32; margin-bottom: 3px; }
-.ehm-pathology-cols p { font-size: 11px; line-height: 1.55; color: #53685c; margin: 0; }
-.ehm-rec-leads { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 12px; padding-top: 8px; border-top: 1px solid #edf1eb; font-size: 10.5px; color: #5b7063; }
-.ehm-rec-leads-group { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
-.ehm-rec-leads-group button { border: 1px solid #cdd8cb; background: #f4f8f2; color: #2f4b3f; border-radius: 8px; padding: 3px 10px; font-size: 10.5px; font-weight: 700; transition: all .12s ease; }
+.ehm-svg-anchor-wrap { position: relative; width: 100%; max-width: 661px; margin: 0 auto; }
+.ehm-callout-card { position: absolute; z-index: 15; width: 192px; border: 1.6px solid var(--rhythm-color); border-left: 4.5px solid var(--rhythm-color); border-radius: 11px; background: rgba(255, 254, 250, 0.96); padding: 7px 9px; box-shadow: 0 4px 14px rgba(28, 46, 37, 0.09); backdrop-filter: blur(4px); cursor: pointer; transition: width .22s ease, box-shadow .22s ease, background .2s ease; text-align: left; }
+.ehm-callout-card.is-top-left { top: 8px; left: 8px; }
+.ehm-callout-card.is-bottom-left { bottom: 8px; left: 8px; }
+.ehm-callout-card.is-bottom-right { bottom: 8px; right: 8px; }
+.ehm-callout-card:hover, .ehm-callout-card:focus-within, .ehm-callout-card.is-expanded { width: min(336px, calc(100% - 16px)); z-index: 25; background: rgba(255, 254, 251, 0.99); box-shadow: 0 14px 32px rgba(24, 42, 34, 0.18); }
+.ehm-callout-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 6px; }
+.ehm-callout-head strong { display: block; font-size: 11.5px; font-weight: 780; color: #1e352b; line-height: 1.25; }
+.ehm-callout-head span { display: block; font-size: 10px; color: #4f6659; line-height: 1.3; margin-top: 2px; }
+.ehm-callout-head small { display: block; font-size: 9.8px; font-weight: 700; color: var(--rhythm-color); border-top: 1px solid #e7ece4; padding-top: 4px; margin-top: 4px; line-height: 1.3; }
+.ehm-callout-hint { font-size: 8.8px !important; font-weight: 700; color: #6a8073 !important; white-space: nowrap; flex-shrink: 0; margin-top: 0 !important; padding: 2px 5px; border-radius: 5px; background: #eff4ed; }
+.ehm-callout-extra { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows .24s ease, opacity .2s ease; }
+.ehm-callout-extra-inner { overflow: hidden; }
+.ehm-callout-card:hover .ehm-callout-extra, .ehm-callout-card:focus-within .ehm-callout-extra, .ehm-callout-card.is-expanded .ehm-callout-extra { grid-template-rows: 1fr; opacity: 1; }
+.ehm-callout-section { margin-top: 8px; padding-top: 7px; border-top: 1px solid #edf1eb; }
+.ehm-callout-section b { display: block; font-size: 10.5px; font-weight: 750; color: #233c32; margin-bottom: 2px; }
+.ehm-callout-section p { font-size: 10.2px; line-height: 1.48; color: #52675b; margin: 0; }
+.ehm-callout-actions { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px; margin-top: 8px; padding-top: 7px; border-top: 1px solid #edf1eb; }
+.ehm-rec-leads-group { display: flex; align-items: center; flex-wrap: wrap; gap: 5px; font-size: 10px; color: #5b7063; }
+.ehm-rec-leads-group button { border: 1px solid #cdd8cb; background: #f4f8f2; color: #2f4b3f; border-radius: 7px; padding: 2px 8px; font-size: 10px; font-weight: 700; transition: all .12s ease; }
 .ehm-rec-leads-group button:hover { border-color: var(--rhythm-color); }
 .ehm-rec-leads-group button[aria-pressed=true] { background: #2f7a62; border-color: #2f7a62; color: white; }
-.ehm-real-link-btn { display: inline-flex; align-items: center; gap: 6px; border: 1px solid #2f7a62; background: #eef6f1; color: #1f5c4c; border-radius: 9px; padding: 5px 11px; font-size: 10.5px; font-weight: 750; transition: all .15s ease; }
+.ehm-real-link-btn { display: inline-flex; align-items: center; gap: 5px; border: 1px solid #2f7a62; background: #eef6f1; color: #1f5c4c; border-radius: 9px; padding: 5px 10px; font-size: 10.5px; font-weight: 750; transition: all .15s ease; }
 .ehm-real-link-btn:hover { background: #2f7a62; color: #ffffff; }
+.ehm-chest-chamber-lg { font-size: 32px; font-weight: 800; fill: #445e52; paint-order: stroke; stroke: #ffffff; stroke-width: 8px; opacity: 0.9; pointer-events: none; }
+.ehm-chest-anat-lg { font-size: 22px; font-weight: 700; fill: #6c7f73; paint-order: stroke; stroke: #ffffff; stroke-width: 7px; opacity: 0.9; pointer-events: none; }
 .ehm-monitor-actions { display: flex; align-items: center; gap: 10px; }
 .ehm-ghost-toggle { display: inline-flex; align-items: center; gap: 5px; font-size: 10px; color: #5b7063; cursor: pointer; white-space: nowrap; }
 .ehm-footer-real-link { border: 0; background: transparent; color: #2f7a62; font-size: 10px; font-weight: 750; padding: 0; text-decoration: underline; text-underline-offset: 2px; }

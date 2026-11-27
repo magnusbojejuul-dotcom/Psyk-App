@@ -126,53 +126,22 @@ function FocusMark({ x, y, color = '#dc2626', pulse = 0 }) {
     );
 }
 
-function CalloutBadge({ sx, sy, tx, ty, title, sub, ecg, color }) {
+function CalloutLeader({ ax, ay, tx, ty, color }) {
     const targetX = IMG_X + tx * IMG_SCALE;
     const targetY = IMG_Y + ty * IMG_SCALE;
-    const w = Math.max(210, Math.ceil(Math.max(title.length * 7.5, sub.length * 6.2, (ecg || '').length * 6.0) + 30));
-    const h = ecg ? 72 : 54;
-    const left = Math.max(10, Math.min(670 - w, sx - w / 2));
-    const top = sy - h / 2;
-    const anchorX = Math.max(left + 12, Math.min(left + w - 12, targetX));
-    const anchorY = targetY < top ? top : targetY > top + h ? top + h : sy;
     return (
         <g style={{ pointerEvents: 'none' }}>
             <line
-                x1={anchorX}
-                y1={anchorY}
+                x1={ax}
+                y1={ay}
                 x2={targetX}
                 y2={targetY}
                 stroke={color}
-                strokeWidth="1.8"
+                strokeWidth="1.9"
                 strokeDasharray="4 3"
-                opacity="0.92"
+                opacity="0.88"
             />
-            <circle cx={targetX} cy={targetY} r="3.8" fill={color} stroke="#ffffff" strokeWidth="1.4" />
-            <rect
-                x={left}
-                y={top}
-                width={w}
-                height={h}
-                rx="10"
-                fill="rgba(255, 254, 250, 0.97)"
-                stroke={color}
-                strokeWidth="1.8"
-            />
-            <rect x={left + 4.5} y={top + 7} width="4.5" height={h - 14} rx="2.2" fill={color} />
-            <text x={left + 16} y={top + 20} fontSize="12.5" fontWeight="750" fill="#1e352b">
-                {title}
-            </text>
-            <text x={left + 16} y={top + 38} fontSize="10.5" fontWeight="550" fill="#4f6659">
-                {sub}
-            </text>
-            {ecg && (
-                <>
-                    <line x1={left + 16} y1={top + 45} x2={left + w - 12} y2={top + 45} stroke="#e7ece4" strokeWidth="1" />
-                    <text x={left + 16} y={top + 59} fontSize="10.2" fontWeight="700" fill={color}>
-                        {ecg}
-                    </text>
-                </>
-            )}
+            <circle cx={targetX} cy={targetY} r="4.2" fill={color} stroke="#ffffff" strokeWidth="1.5" />
         </g>
     );
 }
@@ -776,7 +745,7 @@ function PathologyForeground({ time, rhythmId = 'normal' }) {
                 )}
             </g>
             {callouts.map(item => (
-                <CalloutBadge key={item.id} {...item} />
+                <CalloutLeader key={item.id} {...item} />
             ))}
         </g>
     );
