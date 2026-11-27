@@ -10,10 +10,12 @@ import {
     phaseAt,
     phasesForRhythm,
     projectionAt,
+    traceAnnotationsForRhythm,
     traceSegmentsForRhythm,
     voltageAt,
     waveformPath
 } from '../../data/ekgSimulation';
+import { CASE_CLINICAL_COMPARISONS } from '../../data/ekgClinicalComparisons';
 import { PHASE_COLORS } from '../../data/heartConductionPaths';
 import EkgChestModel from './EkgChestModel';
 import EkgFrontalHeartSvg from './EkgFrontalHeartSvg';
@@ -30,10 +32,23 @@ const RHYTHM_START_TIME = {
     av_block_3: 70,
     lbbb: 205,
     rbbb: 205,
-    vt: 10
+    vt: 10,
+    vf: 20
 };
 
-function Trace({ lead, time, compact = false, axisOffsetDeg = 0, rhythmId = 'normal', onJump }) {
+const RHYTHM_TO_CASE = {
+    normal: 'normal_sinus',
+    afib: 'afib',
+    aflutter: 'aflutter',
+    av_block_1: 'av_block_1',
+    av_block_3: 'av_block_3',
+    lbbb: 'lbbb',
+    rbbb: 'rbbb',
+    vt: 'vt',
+    vf: 'vf'
+};
+
+function Trace({ lead, time, compact = false, axisOffsetDeg = 0, rhythmId = 'normal', showNormalGhost = false, onJump }) {
     const id = useId().replace(/:/g, '');
     const width = 400;
     const baseline = compact ? 40 : 104;
@@ -44,7 +59,12 @@ function Trace({ lead, time, compact = false, axisOffsetDeg = 0, rhythmId = 'nor
         [rhythmId]
     );
     const rhythmPhases = useMemo(() => phasesForRhythm(rhythmId), [rhythmId]);
+    const annotations = useMemo(() => (compact ? [] : traceAnnotationsForRhythm(rhythmId, lead)), [compact, rhythmId, lead]);
     const path = useMemo(() => waveformPath(lead, width, baseline, gain, axisOffsetDeg, rhythmId), [lead, baseline, gain, axisOffsetDeg, rhythmId]);
+    const ghostPath = useMemo(
+        () => (!compact && showNormalGhost && rhythmId !== 'normal' ? waveformPath(lead, width, baseline, gain, axisOffsetDeg, 'normal') : null),
+        [compact, showNormalGhost, rhythmId, lead, width, baseline, gain, axisOffsetDeg]
+    );
     const x = time / CYCLE_MS * width;
     const y = baseline - voltageAt(lead, time, axisOffsetDeg, rhythmId) * gain;
     const phase = phaseAt(time, rhythmId);
@@ -70,12 +90,12 @@ function Trace({ lead, time, compact = false, axisOffsetDeg = 0, rhythmId = 'nor
             onClick={handleSvgClick}
         >
             <defs>
-                <pattern id={`${id}-subgrid`} width="4" height="4" patternUnits="userSpaceOnUse">
-                    <path d="M4 0H0V4" fill="none" stroke="#f2e7e5" strokeWidth="0.45" />
+                <pattern id={`${id}-subgrid`} width="20" height="20" patternUnits="userSpaceOnUse">
+                    <path d="M20 0H0V20" fill="none" stroke="#f4dedc" strokeWidth="0.55" />
                 </pattern>
-                <pattern id={`${id}-grid`} width="20" height="20" patternUnits="userSpaceOnUse">
-                    <rect width="20" height="20" fill={`url(#${id}-subgrid)`} />
-                    <path d="M20 0H0V20" fill="none" stroke="#e4d6d3" strokeWidth="0.85" />
+                <pattern id={`${id}-grid`} width="100" height="100" patternUnits="userSpaceOnUse">
+                    <rect width="100" height="100" fill={`url(#${id}-subgrid)`} />
+                    <path d="M100 0H0V100" fill="none" stroke="#e0b8b4" strokeWidth="1.05" />
                 </pattern>
                 <clipPath id={`${id}-sweep`}><rect width={x} height={height} /></clipPath>
                 {!compact && segments.map(seg => {
@@ -104,10 +124,13 @@ function Trace({ lead, time, compact = false, axisOffsetDeg = 0, rhythmId = 'nor
                         fontWeight: 700
                     }}
                 >
-                    {p.id === 'ventricular' && rhythmId !== 'vt' && rhythmId !== 'av_block_3' ? 'QRS' : p.short}
+                    {p.id === 'ventricular' && rhythmId !== 'vt' && rhythmId !== 'vf' && rhythmId !== 'av_block_3' ? 'QRS' : p.short}
                 </text>
             ))}
             <line x1="0" y1={baseline} x2="400" y2={baseline} stroke="#b9c6bd" strokeWidth="0.9" />
+            {ghostPath && (
+                <path d={ghostPath} fill="none" stroke="#7d9888" strokeWidth="1.4" strokeDasharray="4 3" opacity="0.62" />
+            )}
             <path d={path} fill="none" stroke="#c3cfc7" strokeWidth={compact ? 1.9 : 2.1} />
 
             {compact ? (
@@ -128,13 +151,43 @@ function Trace({ lead, time, compact = false, axisOffsetDeg = 0, rhythmId = 'nor
                 ))
             )}
 
+            {annotations.map(ann => {
+                if (ann.type === 'bracket') {
+                    const x1 = ann.from / CYCLE_MS * width;
+                    const x2 = ann.to / CYCLE_MS * width;
+                    const mid = (x1 + x2) / 2;
+                    const pillW = Math.min(280, Math.max(96, ann.label.length * 5.6 + 14));
+                    const pillX = Math.max(4, Math.min(width - pillW - 4, mid - pillW / 2));
+                    return (
+                        <g key={ann.id} style={{ pointerEvents: 'none' }}>
+                            <path d={`M ${x1} 166 L ${x1} 171 L ${x2} 171 L ${x2} 166`} fill="none" stroke={ann.color} strokeWidth="1.3" opacity="0.88" />
+                            <rect x={pillX} y="164" width={pillW} height="15" rx="4" fill="rgba(255, 254, 250, 0.94)" stroke={ann.color} strokeWidth="0.9" />
+                            <text x={pillX + pillW / 2} y="174" textAnchor="middle" fontSize="8.6" fontWeight="750" fill={ann.color}>
+                                {ann.label}
+                            </text>
+                        </g>
+                    );
+                }
+                const mx = ann.time / CYCLE_MS * width;
+                return (
+                    <g key={ann.id} style={{ pointerEvents: 'none' }}>
+                        <circle cx={mx} cy="27" r="2.6" fill={ann.color} />
+                        <text x={mx} y="37" textAnchor="middle" fontSize="8.4" fontWeight="750" fill={ann.color}>
+                            {ann.label}
+                        </text>
+                    </g>
+                );
+            })}
+
             <line x1={x} y1={compact ? 0 : 24} x2={x} y2={height - (compact ? 0 : 18)} stroke={activeColor} strokeWidth="1.2" opacity="0.72" />
             <circle cx={x} cy={y} r={compact ? 3 : 4.8} fill={activeColor} stroke="white" strokeWidth="1.6" data-trace-dot={lead} />
             {!compact && (
                 <>
-                    <text x="4" y="192" className="ehm-wave-label">0 ms</text>
-                    <text x="200" y="192" className="ehm-wave-label" textAnchor="middle">400</text>
-                    <text x="396" y="192" className="ehm-wave-label" textAnchor="end">800 ms</text>
+                    <text x="4" y="194" className="ehm-wave-label">0 ms</text>
+                    <text x="100" y="194" className="ehm-wave-label" textAnchor="middle">200</text>
+                    <text x="200" y="194" className="ehm-wave-label" textAnchor="middle">400</text>
+                    <text x="300" y="194" className="ehm-wave-label" textAnchor="middle">600</text>
+                    <text x="396" y="194" className="ehm-wave-label" textAnchor="end">800 ms</text>
                 </>
             )}
         </svg>
@@ -153,7 +206,7 @@ function ElectrodePlacement({ lead }) {
     );
 }
 
-export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: externalRhythmId, onSelectRhythm }) {
+export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: externalRhythmId, onSelectRhythm, onOpenRealExamples }) {
     const [localLead, setLocalLead] = useState('II');
     const [localRhythmId, setLocalRhythmId] = useState('normal');
     const candidate = selectedLead ?? localLead;
@@ -162,6 +215,9 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
     const activeRhythm = RHYTHM_PRESETS[rhythmId] || RHYTHM_PRESETS.normal;
     const rhythmPhases = phasesForRhythm(rhythmId);
     const [qrsMin, qrsMax] = activeRhythm.qrsWindow || [210, 300];
+    const realCaseId = RHYTHM_TO_CASE[rhythmId] || 'normal_sinus';
+    const realCaseInfo = CASE_CLINICAL_COMPARISONS[realCaseId];
+    const realScanCount = realCaseInfo?.realEkgImages?.length || 0;
 
     const [playing, setPlaying] = useState(false);
     const [speed, setSpeed] = useState('study');
@@ -172,6 +228,7 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
     const [axisPresetId, setAxisPresetId] = useState('normal');
     const [showAll, setShowAll] = useState(false);
     const [showVectorInfo, setShowVectorInfo] = useState(false);
+    const [showNormalGhost, setShowNormalGhost] = useState(true);
     const lastTime = useRef(null);
     const untouchedInitial = useRef(true);
     const prevExternalRhythm = useRef(externalRhythmId);
@@ -319,17 +376,29 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
                             </div>
                         </div>
                         <div className="ehm-rec-leads">
-                            <span>Se især i afledning:</span>
-                            {activeRhythm.recommendedLeads.map(rec => (
+                            <div className="ehm-rec-leads-group">
+                                <span>Se især i afledning:</span>
+                                {activeRhythm.recommendedLeads.map(rec => (
+                                    <button
+                                        key={rec}
+                                        type="button"
+                                        aria-pressed={lead === rec}
+                                        onClick={() => selectLead(rec)}
+                                    >
+                                        {rec}
+                                    </button>
+                                ))}
+                            </div>
+                            {onOpenRealExamples && realScanCount > 0 && (
                                 <button
-                                    key={rec}
                                     type="button"
-                                    aria-pressed={lead === rec}
-                                    onClick={() => selectLead(rec)}
+                                    className="ehm-real-link-btn"
+                                    onClick={() => onOpenRealExamples(rhythmId)}
                                 >
-                                    {rec}
+                                    <span>Se ægte patientoptagelser ({realScanCount} ægte {realScanCount === 1 ? 'optagelse' : 'optagelser'})</span>
+                                    <ArrowRight size={13} />
                                 </button>
-                            ))}
+                            )}
                         </div>
                     </div>
                 )}
@@ -525,7 +594,14 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
                     <section className="ehm-monitor" aria-label="Live EKG">
                         <div className="ehm-card-top">
                             <span className="ehm-step-label">02 / DET AFLEDNINGEN MÅLER</span>
-                            <span className={`ehm-live ${playing ? 'is-playing' : ''}`}><i />{playing ? 'LIVE' : 'PAUSE'}</span>
+                            <div className="ehm-monitor-actions">
+                                {rhythmId !== 'normal' && (
+                                    <label className="ehm-ghost-toggle">
+                                        <input type="checkbox" checked={showNormalGhost} onChange={event => setShowNormalGhost(event.target.checked)} /> Sammenlign normal
+                                    </label>
+                                )}
+                                <span className={`ehm-live ${playing ? 'is-playing' : ''}`}><i />{playing ? 'LIVE' : 'PAUSE'}</span>
+                            </div>
                         </div>
                         <div className="ehm-monitor-title">
                             <div>
@@ -538,10 +614,16 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
                                 {voltage >= 0 ? '+' : '−'}{Math.abs(voltage).toFixed(2)} <small>mV</small>
                             </div>
                         </div>
-                        <Trace lead={lead} time={time} axisOffsetDeg={axisOffsetDeg} rhythmId={rhythmId} onJump={jump} />
+                        <Trace lead={lead} time={time} axisOffsetDeg={axisOffsetDeg} rhythmId={rhythmId} showNormalGhost={showNormalGhost} onJump={jump} />
                         <div className="ehm-monitor-footer">
-                            <span>Klik på kurven for at hoppe i hjerteslaget</span>
-                            <span>{instantAngle !== null ? `Vektorvinkel nu: ${formatDeg(instantAngle)}` : 'Ét slag · 800 ms'}</span>
+                            <span>Klik på kurven · 1 stort tern = 200 ms</span>
+                            {onOpenRealExamples && realScanCount > 0 ? (
+                                <button type="button" className="ehm-footer-real-link" onClick={() => onOpenRealExamples(rhythmId)}>
+                                    Ægte patient-EKG ({realScanCount}) →
+                                </button>
+                            ) : (
+                                <span>{instantAngle !== null ? `Vektorvinkel nu: ${formatDeg(instantAngle)}` : 'Ét slag · 800 ms'}</span>
+                            )}
                         </div>
                     </section>
 

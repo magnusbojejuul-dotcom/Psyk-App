@@ -19,10 +19,17 @@
 .ehm-pathology-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .ehm-pathology-cols strong { display: block; font-size: 11.5px; font-weight: 750; color: #233c32; margin-bottom: 3px; }
 .ehm-pathology-cols p { font-size: 11px; line-height: 1.55; color: #53685c; margin: 0; }
-.ehm-rec-leads { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; padding-top: 8px; border-top: 1px solid #edf1eb; font-size: 10.5px; color: #5b7063; }
-.ehm-rec-leads button { border: 1px solid #cdd8cb; background: #f4f8f2; color: #2f4b3f; border-radius: 8px; padding: 3px 10px; font-size: 10.5px; font-weight: 700; transition: all .12s ease; }
-.ehm-rec-leads button:hover { border-color: var(--rhythm-color); }
-.ehm-rec-leads button[aria-pressed=true] { background: #2f7a62; border-color: #2f7a62; color: white; }
+.ehm-rec-leads { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 12px; padding-top: 8px; border-top: 1px solid #edf1eb; font-size: 10.5px; color: #5b7063; }
+.ehm-rec-leads-group { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+.ehm-rec-leads-group button { border: 1px solid #cdd8cb; background: #f4f8f2; color: #2f4b3f; border-radius: 8px; padding: 3px 10px; font-size: 10.5px; font-weight: 700; transition: all .12s ease; }
+.ehm-rec-leads-group button:hover { border-color: var(--rhythm-color); }
+.ehm-rec-leads-group button[aria-pressed=true] { background: #2f7a62; border-color: #2f7a62; color: white; }
+.ehm-real-link-btn { display: inline-flex; align-items: center; gap: 6px; border: 1px solid #2f7a62; background: #eef6f1; color: #1f5c4c; border-radius: 9px; padding: 5px 11px; font-size: 10.5px; font-weight: 750; transition: all .15s ease; }
+.ehm-real-link-btn:hover { background: #2f7a62; color: #ffffff; }
+.ehm-monitor-actions { display: flex; align-items: center; gap: 10px; }
+.ehm-ghost-toggle { display: inline-flex; align-items: center; gap: 5px; font-size: 10px; color: #5b7063; cursor: pointer; white-space: nowrap; }
+.ehm-footer-real-link { border: 0; background: transparent; color: #2f7a62; font-size: 10px; font-weight: 750; padding: 0; text-decoration: underline; text-underline-offset: 2px; }
+.ehm-footer-real-link:hover { color: #1f5c4c; }
 .ehm-workspace { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(310px, 1fr); gap: 18px; align-items: stretch; }
 .ehm-model-card, .ehm-monitor, .ehm-explanation, .ehm-timeline { border: 1px solid var(--line); border-radius: 20px; background: #fffefb; }
 .ehm-model-card { overflow: hidden; display: flex; flex-direction: column; }

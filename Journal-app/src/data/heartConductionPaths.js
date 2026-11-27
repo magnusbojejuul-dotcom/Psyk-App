@@ -135,29 +135,51 @@ export const PATHOLOGY_PATHS = {
         'M 868 725 Q 748 792 602 824',
         'M 868 725 Q 828 842 758 886',
     ],
+    vfFoci: [
+        { id: 'vf1', x: 430, y: 710, phase: 0.0 },
+        { id: 'vf2', x: 540, y: 790, phase: 0.17 },
+        { id: 'vf3', x: 650, y: 695, phase: 0.34 },
+        { id: 'vf4', x: 755, y: 760, phase: 0.51 },
+        { id: 'vf5', x: 840, y: 650, phase: 0.68 },
+        { id: 'vf6', x: 860, y: 790, phase: 0.84 },
+        { id: 'vf7', x: 775, y: 540, phase: 0.42 },
+    ],
+    vfWavelets: [
+        { id: 'vw1', d: 'M 380 735 Q 445 670 505 740', phase: 0.0 },
+        { id: 'vw2', d: 'M 480 805 Q 560 765 620 825', phase: 0.14 },
+        { id: 'vw3', d: 'M 615 710 Q 675 645 730 715', phase: 0.28 },
+        { id: 'vw4', d: 'M 710 775 Q 785 725 835 795', phase: 0.42 },
+        { id: 'vw5', d: 'M 810 670 Q 875 605 885 710', phase: 0.56 },
+        { id: 'vw6', d: 'M 860 795 Q 820 870 740 850', phase: 0.70 },
+        { id: 'vw7', d: 'M 760 520 Q 820 570 790 645', phase: 0.84 },
+        { id: 'vw8', d: 'M 550 645 Q 605 695 570 755', phase: 0.92 },
+    ],
 };
 
 export const PATHOLOGY_CALLOUTS = {
     afib: [
-        { id: 'afib', sx: 122, sy: 66, tx: 548, ty: 196, title: 'Kaotiske foci (350–600/min)', sub: 'Ingen P-tak · AV filtrerer', color: '#7c5cbf' },
+        { id: 'afib', sx: 126, sy: 68, tx: 548, ty: 196, title: 'Kaotiske foci (350–600/min)', sub: 'Flere udgangspunkter i atrierne', ecg: 'EKG: Ingen P-tak · urolige f-takker', color: '#7c5cbf' },
     ],
     aflutter: [
-        { id: 'aflutter', sx: 118, sy: 66, tx: 215, ty: 318, title: 'Reentry-cirkel (~300/min)', sub: 'Cirkelbølge i højre atrium', color: '#2b78b8' },
+        { id: 'aflutter', sx: 122, sy: 68, tx: 215, ty: 318, title: 'Reentry-cirkel (~300/min)', sub: 'Stabil karrusel i højre atrium', ecg: 'EKG: Savtak-bølger i II/III/aVF', color: '#2b78b8' },
     ],
     av_block_1: [
-        { id: 'av1', sx: 118, sy: 372, tx: 318, ty: 540, title: 'AV-forsinkelse (PR > 200 ms)', sub: 'Impulsen bremses ekstra her', color: '#d48817' },
+        { id: 'av1', sx: 122, sy: 372, tx: 318, ty: 540, title: 'AV-forsinkelse (PR > 200 ms)', sub: 'Impulsen bremses i AV-knuden', ecg: 'EKG: Forlænget PR · smalt QRS', color: '#d48817' },
     ],
     av_block_3: [
-        { id: 'av3-blk', sx: 112, sy: 368, tx: 345, ty: 515, title: 'Total AV-blokade', sub: 'Atrie-impuls stoppes helt', color: '#c43b47' },
-        { id: 'av3-esc', sx: 560, sy: 372, tx: 524, ty: 572, title: 'Erstatningsfokus', sub: 'Driver ventrikler selvstændigt', color: '#d9534f' },
+        { id: 'av3-blk', sx: 118, sy: 368, tx: 345, ty: 515, title: 'Total AV-blokade', sub: 'Atrie-impuls stoppes helt', ecg: 'EKG: P & QRS er helt uafhængige', color: '#c43b47' },
+        { id: 'av3-esc', sx: 556, sy: 372, tx: 524, ty: 572, title: 'Erstatningsfokus', sub: 'Driver ventrikler i eget tempo', ecg: 'EKG: Langsom, uafhængig rytme', color: '#d9534f' },
     ],
     lbbb: [
-        { id: 'lbbb', sx: 560, sy: 370, tx: 562, ty: 534, title: 'Venstre gren blokeret', sub: 'Langsom omvej HV → VV', color: '#8b5cf6' },
+        { id: 'lbbb', sx: 556, sy: 370, tx: 562, ty: 534, title: 'Venstre gren blokeret', sub: 'Langsom muskelomvej HV → VV', ecg: 'EKG: Bredt QRS · QS i V1, M-R i V6', color: '#8b5cf6' },
     ],
     rbbb: [
-        { id: 'rbbb', sx: 118, sy: 372, tx: 548, ty: 598, title: 'Højre gren blokeret', sub: 'Langsom omvej VV → HV', color: '#0ea5e9' },
+        { id: 'rbbb', sx: 122, sy: 372, tx: 548, ty: 598, title: 'Højre gren blokeret', sub: 'Langsom omvej fra venstre side', ecg: 'EKG: Bredt QRS · rsR′ i V1, S i V6', color: '#0ea5e9' },
     ],
     vt: [
-        { id: 'vt', sx: 560, sy: 378, tx: 862, ty: 748, title: 'Ektopisk VT-fokus', sub: 'Hurtig muskelspredning', color: '#dc2626' },
+        { id: 'vt', sx: 556, sy: 374, tx: 862, ty: 748, title: 'Ektopisk VT-fokus', sub: 'Hurtig celle-til-celle spredning', ecg: 'EKG: 150/min brede QRS · + i aVR/V1', color: '#dc2626' },
+    ],
+    vf: [
+        { id: 'vf', sx: 556, sy: 374, tx: 740, ty: 730, title: 'Ventrikelflimren (Hjertestop)', sub: 'Kaotiske mikro-bølger overalt', ecg: 'EKG: Kaos uden QRS · kræver DC-stød', color: '#b91c1c' },
     ],
 };

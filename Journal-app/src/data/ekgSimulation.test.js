@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { AXIS_PRESETS, MODEL_LEADS, PHASES, RHYTHM_PRESETS, advancePlayback, axisZoneForAngle, cardiacVector, meanQrsAngle, phaseAt, phasesForRhythm, projectionAt, traceSegmentsForRhythm, vectorLoopPath, voltageAt, waveformPath } from './ekgSimulation.js';
+import { AXIS_PRESETS, MODEL_LEADS, PHASES, RHYTHM_PRESETS, advancePlayback, axisZoneForAngle, cardiacVector, meanQrsAngle, phaseAt, phasesForRhythm, projectionAt, traceAnnotationsForRhythm, traceSegmentsForRhythm, vectorLoopPath, voltageAt, waveformPath } from './ekgSimulation.js';
 
 const close = (actual, expected, tolerance = 1e-10) => assert.ok(Math.abs(actual - expected) < tolerance, `${actual} differs from ${expected}`);
 
@@ -173,8 +173,9 @@ test('Einthoven, Goldberg, and 90-degree orthogonality hold across all rhythm pr
                 close((vector[0] - point[0]) * unit[0] + (vector[1] - point[1]) * unit[1], 0, 1e-9);
             }
         }
-        assert.ok(phasesForRhythm(rhythm.id).length >= 5);
-        assert.ok(traceSegmentsForRhythm(rhythm.id).length >= 3);
+        assert.ok(phasesForRhythm(rhythm.id).length >= 4);
+        assert.ok(traceSegmentsForRhythm(rhythm.id).length >= 1);
+        assert.ok(Array.isArray(traceAnnotationsForRhythm(rhythm.id, 'II')));
         assert.ok(vectorLoopPath('frontal', 480, 474, 100, 0, rhythm.id).startsWith('M'));
     }
 });
@@ -230,4 +231,11 @@ test('arrhythmias and conduction blocks match expected clinical ECG morphologies
     assert.ok(voltageAt('I', 120, 0, 'vt') < -0.75);
     assert.ok(voltageAt('II', 120, 0, 'vt') < -0.85);
     assert.ok(voltageAt('V1', 280, 0, 'vt') < -0.15);
+
+    // VF: continuous chaotic undulating oscillations across all 4 quarters with no organized QRS/flat pause.
+    assert.equal(phaseAt(100, 'vf').short, 'VF · Kaos');
+    for (const start of [0, 200, 400, 600]) {
+        const peak = Math.max(...Array.from({ length: 200 }, (_, i) => Math.abs(voltageAt('II', start + i, 0, 'vf'))));
+        assert.ok(peak > 0.25 && peak < 1.2, `VF quarter ${start}ms peak ${peak} should oscillate visibly`);
+    }
 });

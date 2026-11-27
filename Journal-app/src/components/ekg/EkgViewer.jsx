@@ -31,7 +31,8 @@ export default function EkgViewer({
     onSelectCase,
     selectedLead = 'II',
     onSelectLead,
-    onShowOnHeart
+    onShowOnHeart,
+    focusRealToken = 0
 }) {
     // Zoom niveau for arket (1.0x, 1.25x, 1.5x, 2.0x)
     const [zoomLevel, setZoomLevel] = useState(1.0);
@@ -43,6 +44,16 @@ export default function EkgViewer({
     const [showExplanation, setShowExplanation] = useState(true);
     const [selectedImageIdx, setSelectedImageIdx] = useState(0);
     const paperContainerRef = useRef(null);
+    const realSectionRef = useRef(null);
+
+    React.useEffect(() => {
+        if (!focusRealToken) return undefined;
+        setDisplayMode('real');
+        const timer = setTimeout(() => {
+            realSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 80);
+        return () => clearTimeout(timer);
+    }, [focusRealToken]);
 
     // Hent kliniske detaljer og sammenligninger for netop denne case
     const clinicalInsight = CASE_CLINICAL_COMPARISONS[caseData.id] || {
@@ -642,7 +653,7 @@ export default function EkgViewer({
                 </div>
             ) : (
                 /* 2. ÆGTE KLINISKE EKG SCANS (MULTI-FOTO GALLERI FRA MEDICINSKE HOSPITALSKILDER) */
-                <div className="glass-panel rounded-3xl p-5 border border-[#E8E4D9] bg-white shadow-md flex flex-col gap-4">
+                <div ref={realSectionRef} className="glass-panel rounded-3xl p-5 border border-[#E8E4D9] bg-white shadow-md flex flex-col gap-4">
                     {/* Header med tæller & overblik */}
                     <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-[#E8E4D9]">
                         <div>

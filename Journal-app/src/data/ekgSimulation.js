@@ -97,11 +97,29 @@ const ESCAPE_KNOTS = [
     [304, 0.72, 0.60, -0.45], [326, -0.22, -0.10, 0.22], [340, 0, 0, 0],
 ];
 
-// Broad monomorphic VT QRS (160 ms within a 400 ms beat window, local time 20..180): extreme northwest / anterior-right axis.
-const VT_KNOTS = [
-    [20, 0, 0, 0], [45, -0.26, -0.20, 0.22], [86, -0.82, -0.70, 0.62],
-    [124, -0.92, -0.78, 0.68], [156, -0.44, -0.38, 0.34], [180, 0, 0, 0],
+// Continuous monomorphic VT cycle (400 ms beat window -> 150 bpm): broad northwest/anterior-right QRS flowing directly into discordant ST-T without flat plateaus.
+const VT_CYCLE_KNOTS = [
+    [0, 0, 0, 0],
+    [16, -0.05, -0.04, 0.04],
+    [48, -0.34, -0.28, 0.28],
+    [88, -0.86, -0.74, 0.66],
+    [122, -0.95, -0.80, 0.72],
+    [154, -0.44, -0.37, 0.34],
+    [186, 0.02, 0.02, -0.02],
+    [224, 0.15, 0.13, -0.12],
+    [282, 0.30, 0.26, -0.24],
+    [336, 0.16, 0.14, -0.13],
+    [376, 0.02, 0.02, -0.02],
+    [400, 0, 0, 0],
 ];
+
+// Asymmetric discordant ST-T curve starting cleanly from the end of QRS (no artificial flat shelf).
+function discordantStT(t, start, end, peakVec, axisOffsetDeg = 0) {
+    if (t < start || t >= end) return [0, 0, 0];
+    const p = (t - start) / (end - start);
+    const env = Math.sin(Math.PI * p) ** 1.45 * (0.75 + 0.5 * p);
+    return rotateFrontal(peakVec.map(v => v * env), axisOffsetDeg * 0.45);
+}
 
 function evalKnots(t, knots) {
     const start = knots[0][0];
@@ -223,11 +241,23 @@ export const RHYTHM_PRESETS = {
         short: 'VT',
         badge: '150 bpm · Bredt QRS',
         color: '#dc2626',
-        qrsWindow: [20, 180],
+        qrsWindow: [10, 190],
         causeTitle: 'Hurtigt ektopisk fokus i venstre ventrikel',
         causeBody: 'Et irritabelt fokus direkte i ventriklens muskelvæg fyrer hurtigt (~150/min) uden om Purkinje-nettet. Impulsen spreder sig langsomt fra muskelcelle til muskelcelle.',
         ecgHallmarks: 'Hurtig regelmæssig bredkomplekset takykardi (QRS ≥ 120 ms), ekstrem akse (positiv i aVR/V1, negativ i I/II/V6) og diskordante T-takker.',
         recommendedLeads: ['II', 'aVR', 'V1', 'V6'],
+    },
+    vf: {
+        id: 'vf',
+        label: 'Ventrikelflimren (VF)',
+        short: 'VF',
+        badge: 'Hjertestop · Kaotisk',
+        color: '#b91c1c',
+        qrsWindow: [0, 800],
+        causeTitle: 'Kaotisk elektrisk flimren i hele ventrikelvæggen',
+        causeBody: 'Utallige kaotiske mikro-reentry-bølger løber usynkront gennem begge ventrikler. Hjertet står mekanisk stille (hjertestop) uden pumpefunktion.',
+        ecgHallmarks: 'Fuldstændig uregelmæssige, bølgede svingninger af varierende amplitude uden identificerbare P-takker, QRS-komplekser eller T-takker. Kræver øjeblikkelig defibrillering og HLR.',
+        recommendedLeads: ['II', 'V1', 'V2'],
     },
 };
 
@@ -279,11 +309,17 @@ const RHYTHM_PHASES = {
         { id: 'rest', start: 555, end: 800, time: 680, short: 'Hvile', name: 'Elektrisk hvile', color: '#73828a', description: 'Hviletilstand før næste sinusslag.' },
     ],
     vt: [
-        { id: 'ventricular', start: 20, end: 180, time: 100, short: 'VT · QRS 1', name: 'Ektopisk bredt ventrikelslag', color: '#dc2626', description: 'Et ektopisk fokus i ventriklen fyrer direkte uden om ledningssystemet. Impulsen spreder sig langsomt opad mod højre -> bredt QRS og ekstrem akse.' },
-        { id: 't', start: 200, end: 360, time: 280, short: 'Disk. T', name: 'Diskordant repolarisering', color: '#379984', description: 'T-takken vender modsat det brede ektopiske QRS.' },
-        { id: 'ventricular', start: 420, end: 580, time: 500, short: 'VT · QRS 2', name: 'Hurtigt opfølgende VT-slag (150/min)', color: '#dc2626', description: 'Nyt hurtigt slag direkte fra samme ventrikelfokus — ingen styrende P-tak.' },
-        { id: 't', start: 600, end: 760, time: 680, short: 'Disk. T', name: 'Diskordant repolarisering', color: '#379984', description: 'Modsat rettet repolarisering før næste hurtige slag.' },
-        { id: 'rest', start: 0, end: 800, time: 390, short: 'Hurtig pause', name: 'Kort diastole', color: '#73828a', description: 'Meget kort pause mellem ventrikelslagene.' },
+        { id: 'ventricular', start: 10, end: 190, time: 105, short: 'VT · QRS 1', name: 'Ektopisk bredt ventrikelslag', color: '#dc2626', description: 'Et ektopisk fokus i ventriklen fyrer direkte uden om ledningssystemet. Impulsen spreder sig langsomt opad mod højre -> bredt QRS og ekstrem akse.' },
+        { id: 't', start: 190, end: 390, time: 282, short: 'Disk. T', name: 'Diskordant repolarisering', color: '#379984', description: 'QRS glider direkte over i en bred, modsat rettet ST-T-bølge (diskordant T-tak).' },
+        { id: 'ventricular', start: 410, end: 590, time: 505, short: 'VT · QRS 2', name: 'Hurtigt opfølgende VT-slag (150/min)', color: '#dc2626', description: 'Nyt hurtigt slag direkte fra samme ventrikelfokus — ingen styrende P-tak.' },
+        { id: 't', start: 590, end: 790, time: 682, short: 'Disk. T', name: 'Diskordant repolarisering', color: '#379984', description: 'Modsat rettet repolarisering før næste hurtige slag.' },
+        { id: 'rest', start: 0, end: 800, time: 398, short: 'Overgang', name: 'Kontinuerlig ventrikelrytme', color: '#73828a', description: 'Ved monomorf VT er der næsten ingen flad pause mellem slagene.' },
+    ],
+    vf: [
+        { id: 'ventricular', start: 0, end: 200, time: 100, short: 'VF · Kaos', name: 'Kaotisk ventrikelflimren', color: '#b91c1c', description: 'Utallige små reentry-bølger løber kaotisk gennem ventriklerne — intet samlet QRS eller minutvolumen.' },
+        { id: 'ventricular', start: 200, end: 400, time: 300, short: 'Ingen QRS', name: 'Ingen koordineret aktivering', color: '#b91c1c', description: 'Ingen P-, QRS- eller T-takker kan skelnes i den bølgede basislinje.' },
+        { id: 'ventricular', start: 400, end: 600, time: 500, short: 'Ureg. sving', name: 'Varierende bølgeamplitude', color: '#dc2626', description: 'Udsvingene skifter konstant form, frekvens og højde i alle afledninger.' },
+        { id: 'ventricular', start: 600, end: 800, time: 700, short: 'Stødbar', name: 'Hjertestop · Stødbar rytme', color: '#b91c1c', description: 'Akut livstruende tilstand, der kræver øjeblikkelig defibrillering (DC-stød) og HLR.' },
     ],
 };
 
@@ -312,15 +348,20 @@ export function traceSegmentsForRhythm(rhythmId = 'normal') {
         return [
             { from: 80, to: 180, color: '#527dd0' },
             { from: 210, to: 355, color: qrsColor },
-            { from: 390, to: 565, color: '#379984' },
+            { from: 355, to: 575, color: '#379984' },
         ];
     }
     if (rhythmId === 'vt') {
         return [
-            { from: 20, to: 180, color: '#dc2626' },
-            { from: 200, to: 360, color: '#379984' },
-            { from: 420, to: 580, color: '#dc2626' },
-            { from: 600, to: 760, color: '#379984' },
+            { from: 10, to: 190, color: '#dc2626' },
+            { from: 190, to: 390, color: '#379984' },
+            { from: 410, to: 590, color: '#dc2626' },
+            { from: 590, to: 790, color: '#379984' },
+        ];
+    }
+    if (rhythmId === 'vf') {
+        return [
+            { from: 0, to: 800, color: '#b91c1c' },
         ];
     }
     const atrialColor = rhythmId === 'afib' ? '#7c5cbf' : rhythmId === 'aflutter' ? '#2b78b8' : '#527dd0';
@@ -331,6 +372,60 @@ export function traceSegmentsForRhythm(rhythmId = 'normal') {
         { from: 270, to: 300, color: '#9b72b0' },
         { from: 380, to: 540, color: '#379984' },
     ];
+}
+
+export function traceAnnotationsForRhythm(rhythmId = 'normal', lead = 'II') {
+    if (rhythmId === 'av_block_1') {
+        return [
+            { id: 'pr-long', type: 'bracket', from: 40, to: 290, label: 'PR 250 ms (> 200 ms)', color: '#d48817' },
+        ];
+    }
+    if (rhythmId === 'av_block_3') {
+        return [
+            { id: 'p1', type: 'marker', time: 125, label: 'P (uafh.)', color: '#527dd0' },
+            { id: 'esc', type: 'bracket', from: 220, to: 340, label: 'Erstatnings-QRS', color: '#c43b47' },
+            { id: 'p2', type: 'marker', time: 525, label: 'P (uafh.)', color: '#527dd0' },
+        ];
+    }
+    if (rhythmId === 'lbbb') {
+        return [
+            { id: 'lbbb-qrs', type: 'bracket', from: 210, to: 355, label: 'Bredt QRS 145 ms (≥ 120 ms)', color: '#8b5cf6' },
+            { id: 'lbbb-t', type: 'marker', time: 480, label: 'Diskordant T', color: '#379984' },
+        ];
+    }
+    if (rhythmId === 'rbbb') {
+        return [
+            {
+                id: 'rbbb-qrs',
+                type: 'bracket',
+                from: 210,
+                to: 355,
+                label: (lead === 'V1' || lead === 'V2') ? 'rsR′ · Bredt QRS 145 ms' : 'Bredt QRS 145 ms (sløret S)',
+                color: '#0ea5e9',
+            },
+        ];
+    }
+    if (rhythmId === 'aflutter') {
+        return [
+            { id: 'flutter-ff', type: 'bracket', from: 0, to: 200, label: 'F–F 200 ms (300/min savtak)', color: '#2b78b8' },
+        ];
+    }
+    if (rhythmId === 'afib') {
+        return [
+            { id: 'afib-f', type: 'bracket', from: 20, to: 200, label: 'Ingen P · f-takker i basislinjen', color: '#7c5cbf' },
+        ];
+    }
+    if (rhythmId === 'vt') {
+        return [
+            { id: 'vt-qrs', type: 'bracket', from: 10, to: 190, label: 'Bredt VT-QRS (180 ms) · 150/min', color: '#dc2626' },
+        ];
+    }
+    if (rhythmId === 'vf') {
+        return [
+            { id: 'vf-chaos', type: 'bracket', from: 40, to: 760, label: 'Kaotisk flimren · ingen P, QRS eller T', color: '#b91c1c' },
+        ];
+    }
+    return [];
 }
 
 function normalVector(t, axisOffsetDeg = 0) {
@@ -368,15 +463,15 @@ export function cardiacVector(time, axisOffsetDeg = 0, rhythmId = 'normal') {
     if (rhythmId === 'aflutter') {
         const qrs = t >= 210 && t < 300 ? rotateFrontal(evalKnots(t, QRS_KNOTS), axisOffsetDeg) : [0, 0, 0];
         const tWave = t >= 390 && t < 530 ? tWaveEnvelope(t, 390, 140, [0.20, 0.28, 0.08], axisOffsetDeg) : [0, 0, 0];
-        // Continuous 300/min counter-clockwise sawtooth wave (4 flutter cycles in 800 ms; fades cleanly during QRS so QRS stays legible).
-        const qrsAtten = t >= 210 && t < 300 ? 0.12 : 1;
+        // Continuous 300/min counter-clockwise sawtooth wave (4 cycles in 800 ms; fades softly during QRS so QRS stays crisp).
+        const qrsEnv = t < 200 || t >= 310 ? 1 : t < 215 ? 1 - (t - 200) / 15 * 0.85 : t >= 295 ? 0.15 + (t - 295) / 15 * 0.85 : 0.15;
         const cyc = ((t + 25) % 200) / 200;
-        // Sharp upward-rightward negative downstroke in II/III/aVF (-y), slow return ramp; positive spike in V1 (+z).
-        const saw = cyc < 0.22 ? -(cyc / 0.22) : -(1 - (cyc - 0.22) / 0.78);
+        // Continuous asymmetric sawtooth (0.72 slow negative drift + 0.28 steep upward recovery, no jump discontinuity).
+        const saw = cyc < 0.72 ? 0.08 - (cyc / 0.72) * 0.34 : -0.26 + ((cyc - 0.72) / 0.28) * 0.34;
         const fFlutter = [
-            (-0.04 + 0.08 * saw) * qrsAtten,
-            (-0.14 - 0.14 * (1 - cyc)) * qrsAtten,
-            (0.08 + 0.06 * (-saw)) * qrsAtten,
+            (-0.02 + 0.06 * saw) * qrsEnv,
+            saw * qrsEnv,
+            (0.11 - 0.25 * saw) * qrsEnv,
         ];
         return addVec(addVec(qrs, tWave), fFlutter);
     }
@@ -400,22 +495,29 @@ export function cardiacVector(time, axisOffsetDeg = 0, rhythmId = 'normal') {
     if (rhythmId === 'lbbb') {
         if (t >= 80 && t < 180) return pWaveEnvelope(t, 80, 100);
         if (t >= 210 && t < 355) return rotateFrontal(evalKnots(t, LBBB_KNOTS), axisOffsetDeg);
-        if (t >= 395 && t < 565) return tWaveEnvelope(t, 395, 170, [-0.26, 0.14, 0.30], axisOffsetDeg);
+        if (t >= 355 && t < 575) return discordantStT(t, 355, 575, [-0.26, 0.14, 0.30], axisOffsetDeg);
         return [0, 0, 0];
     }
 
     if (rhythmId === 'rbbb') {
         if (t >= 80 && t < 180) return pWaveEnvelope(t, 80, 100);
         if (t >= 210 && t < 355) return rotateFrontal(evalKnots(t, RBBB_KNOTS), axisOffsetDeg);
-        if (t >= 390 && t < 555) return tWaveEnvelope(t, 390, 165, [0.22, 0.26, -0.24], axisOffsetDeg);
+        if (t >= 355 && t < 565) return discordantStT(t, 355, 565, [0.22, 0.26, -0.25], axisOffsetDeg);
         return [0, 0, 0];
     }
 
     if (rhythmId === 'vt') {
-        const local = t % 400;
-        if (local >= 20 && local < 180) return rotateFrontal(evalKnots(local, VT_KNOTS), axisOffsetDeg);
-        if (local >= 200 && local < 360) return tWaveEnvelope(local, 200, 160, [0.26, 0.24, -0.22], axisOffsetDeg);
-        return [0, 0, 0];
+        return rotateFrontal(evalKnots(t % 400, VT_CYCLE_KNOTS), axisOffsetDeg);
+    }
+
+    if (rhythmId === 'vf') {
+        const w = 2 * Math.PI * t / 800;
+        const vec = [
+            0.24 * Math.sin(w * 5 + 0.3) + 0.22 * Math.sin(w * 7 + 1.8) + 0.14 * Math.cos(w * 11 + 0.7) + 0.09 * Math.sin(w * 13 + 2.1),
+            0.28 * Math.sin(w * 6 + 1.2) + 0.20 * Math.sin(w * 9 + 2.5) + 0.16 * Math.cos(w * 4 + 0.4) + 0.10 * Math.sin(w * 14 + 1.1),
+            0.22 * Math.cos(w * 5 + 0.9) + 0.24 * Math.sin(w * 8 + 0.2) + 0.15 * Math.sin(w * 12 + 2.9) + 0.08 * Math.cos(w * 15 + 1.6),
+        ];
+        return rotateFrontal(vec, axisOffsetDeg);
     }
 
     return [0, 0, 0];

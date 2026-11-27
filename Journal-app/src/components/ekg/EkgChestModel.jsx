@@ -56,6 +56,7 @@ export default function EkgChestModel({ lead, time, onSelect, showVector, prefix
     const isLbbb = rhythmId === 'lbbb';
     const isRbbb = rhythmId === 'rbbb';
     const isVt = rhythmId === 'vt';
+    const isVf = rhythmId === 'vf';
     const isAv1 = rhythmId === 'av_block_1';
     const isAv3 = rhythmId === 'av_block_3';
 
@@ -65,27 +66,33 @@ export default function EkgChestModel({ lead, time, onSelect, showVector, prefix
     const repolStart = isAv1 ? 460 : isAv3 ? 355 : isLbbb ? 395 : isRbbb ? 390 : 380;
     const repolDur = isAv3 ? 120 : 160;
 
-    const septal = !isVt && time >= qrsStart && time < qrsStart + 24 && !isLbbb;
-    const depolarizing = isVt
-        ? (vtLocal >= 20 && vtLocal < 180)
-        : (time >= (isLbbb ? 210 : qrsStart + 20) && time < qrsEnd);
-    const repolarizing = isVt
-        ? (vtLocal >= 200 && vtLocal < 360)
-        : (time >= repolStart && time < repolStart + repolDur);
-    const activated = !isVt && time >= qrsEnd && time < repolStart;
+    const septal = !isVt && !isVf && time >= qrsStart && time < qrsStart + 24 && !isLbbb;
+    const depolarizing = isVf
+        ? true
+        : isVt
+            ? (vtLocal >= 15 && vtLocal < 190)
+            : (time >= (isLbbb ? 210 : qrsStart + 20) && time < qrsEnd);
+    const repolarizing = isVf
+        ? false
+        : isVt
+            ? (vtLocal >= 190 && vtLocal < 385)
+            : (time >= repolStart && time < repolStart + repolDur);
+    const activated = !isVt && !isVf && time >= qrsEnd && time < repolStart;
 
     const spread = isVt
-        ? Math.max(0, Math.min(1, (vtLocal - 20) / 160))
+        ? Math.max(0, Math.min(1, (vtLocal - 15) / 175))
         : Math.max(0, Math.min(1, (time - (qrsStart + 20)) / Math.max(1, qrsEnd - (qrsStart + 20))));
     const recovery = isVt
-        ? Math.max(0, Math.min(1, (vtLocal - 200) / 160))
+        ? Math.max(0, Math.min(1, (vtLocal - 190) / 195))
         : Math.max(0, Math.min(1, (time - repolStart) / repolDur));
     const boundary = repolarizing ? 1 - recovery * 0.45 : 0.54 + spread * 0.46;
-    const ventricularFill = activated
-        ? '#dc8872'
-        : depolarizing || repolarizing
-            ? `url(#${prefix}-chest-wall)`
-            : `url(#${prefix}-chest-rest)`;
+    const ventricularFill = isVf
+        ? '#f5c2c2'
+        : activated
+            ? '#dc8872'
+            : depolarizing || repolarizing
+                ? `url(#${prefix}-chest-wall)`
+                : `url(#${prefix}-chest-rest)`;
     const rvFill = isRbbb && time >= 272 && time < 360
         ? '#9bd4f2'
         : isLbbb && time >= 210 && time < 265
@@ -94,7 +101,7 @@ export default function EkgChestModel({ lead, time, onSelect, showVector, prefix
     const lvFill = isLbbb && time >= 255 && time < 360
         ? '#c7b5f6'
         : ventricularFill;
-    const outsideSlice = ['p', 'p2', 'pr'].includes(phase.id) || (phase.id === 'basal' && !isLbbb && !isRbbb);
+    const outsideSlice = !isVf && (['p', 'p2', 'pr'].includes(phase.id) || (phase.id === 'basal' && !isLbbb && !isRbbb));
     const projectionColor = voltage >= 0 ? '#2f7a62' : '#c0444f';
 
     const perpRadA = (details.angle - 90) * Math.PI / 180;
@@ -258,6 +265,25 @@ export default function EkgChestModel({ lead, time, onSelect, showVector, prefix
                             <polygon points="424,255 416,265 422,265 419,274 428,263 422,263" fill="#dc2626" />
                         </g>
                     )}
+                    {isVf && (
+                        <g style={{ pointerEvents: 'none' }}>
+                            {[
+                                { x: 245, y: 215, ph: 0 },
+                                { x: 252, y: 280, ph: 0.25 },
+                                { x: 356, y: 175, ph: 0.45 },
+                                { x: 416, y: 246, ph: 0.7 },
+                                { x: 352, y: 318, ph: 0.85 },
+                            ].map((pt, idx) => {
+                                const p = 0.5 + 0.5 * Math.sin((time / 800) * Math.PI * 10 + pt.ph * Math.PI * 2);
+                                return (
+                                    <g key={idx}>
+                                        <circle cx={pt.x} cy={pt.y} r={7 + p * 11} fill="#b91c1c" opacity={0.18 + p * 0.26} />
+                                        <circle cx={pt.x} cy={pt.y} r={4 + p * 2} fill="#fef2f2" stroke="#b91c1c" strokeWidth="1.8" />
+                                    </g>
+                                );
+                            })}
+                        </g>
+                    )}
                 </g>
 
                 <g className="ehm-chest-labels" fill="#4f6658" fontSize="11.5" fontWeight="600">
@@ -338,17 +364,19 @@ export default function EkgChestModel({ lead, time, onSelect, showVector, prefix
                             ? 'RBBB · Højre gren blokeret (VV → HV)'
                             : isVt
                                 ? 'VT · Ektopisk fokus i venstre ventrikel'
-                                : rhythmId === 'afib'
-                                    ? 'Atrieflimren · Ektopiske atriefoci (over snit)'
-                                    : rhythmId === 'aflutter'
-                                        ? 'Atrieflagren · Reentry i RA (over snit)'
-                                        : rhythmId === 'av_block_1'
-                                            ? 'AV-blok I · Forsinket i AV (over snit)'
-                                            : 'AV-blok III · Erstatningsfokus i ventrikel';
+                                : isVf
+                                    ? 'VF · Kaotisk ventrikelflimren (ingen QRS)'
+                                    : rhythmId === 'afib'
+                                        ? 'Atrieflimren · Ektopiske atriefoci (over snit)'
+                                        : rhythmId === 'aflutter'
+                                            ? 'Atrieflagren · Reentry i RA (over snit)'
+                                            : rhythmId === 'av_block_1'
+                                                ? 'AV-blok I · Forsinket i AV (over snit)'
+                                                : 'AV-blok III · Erstatningsfokus i ventrikel';
                     const pillW = Math.max(250, Math.ceil(chestLabel.length * 7.1 + 26));
                     return (
                         <g style={{ pointerEvents: 'none' }}>
-                            <rect x="14" y="14" width={pillW} height="34" rx="10" fill="rgba(255, 254, 250, 0.96)" stroke={isLbbb ? '#8b5cf6' : isRbbb ? '#0ea5e9' : isVt ? '#dc2626' : '#5e7a6d'} strokeWidth="1.6" />
+                            <rect x="14" y="14" width={pillW} height="34" rx="10" fill="rgba(255, 254, 250, 0.96)" stroke={isLbbb ? '#8b5cf6' : isRbbb ? '#0ea5e9' : isVt ? '#dc2626' : isVf ? '#b91c1c' : '#5e7a6d'} strokeWidth="1.6" />
                             <text x="26" y="35" fontSize="12" fontWeight="750" fill="#233c32">
                                 {chestLabel}
                             </text>
@@ -394,27 +422,29 @@ export default function EkgChestModel({ lead, time, onSelect, showVector, prefix
             </svg>
 
             <div className="ehm-chest-caption">
-                {isLbbb && depolarizing
-                    ? 'LBBB: Højre ventrikel aktiveres først, hvorefter bølgen krydser langsomt mod venstre -> dyb QS i V1 og bred R i V6.'
-                    : isRbbb && time >= 272 && time < 355
-                        ? 'RBBB: Venstre ventrikel er færdig, og bølgen krydser forsinket mod højre ventrikel -> høj R′-tak ("kaninøre") i V1 og S i V6.'
-                        : isVt && depolarizing
-                            ? 'VT: Ektopisk fokus i venstre ventrikel spreder sig langsomt over mod højre/anteriort -> bredt QRS og høj R i V1.'
-                            : outsideSlice
-                                ? phase.id === 'basal'
-                                    ? 'Den sidste basale aktivering ligger delvis uden for dette snit.'
-                                    : 'Atrier og AV-knude ligger uden for dette snit. Start QRS for at følge ventriklerne.'
-                                : repolarizing
-                                    ? (isVt || isLbbb)
-                                        ? 'Diskordant repolarisering: den ændrede aktivering vender fortegnene, så T-takken peger modsat QRS.'
-                                        : 'Epikardiet genoplades først (+ yderst, − inderst) → elektrisk vektor (− → +) peger stadig mod venstre (V5/V6).'
-                                    : septal
-                                        ? 'Septum aktiveres først fra venstre mod højre (lille blå pil), hvilket giver r-tak i V1 og q-tak i V6.'
-                                        : depolarizing
-                                            ? 'Blå pile: aktivering indefra og ud. Venstre ventrikels tykke væg trækker vektoren bagud-venstre mod V5/V6.'
-                                            : activated
-                                                ? 'Ventrikelvæggene er ensartet aktiverede i ST-plateaufasen — ingen spændingsforskel.'
-                                                : 'Ventrikelvæggene er i hvile. Vælg et QRS-trin for at se aktiveringsbølgen.'}
+                {isVf
+                    ? 'VF: Kaotiske mikro-bølger løber usynkront over hele begge ventrikler -> ingen QRS eller pumpefunktion (hjertestop).'
+                    : isLbbb && depolarizing
+                        ? 'LBBB: Højre ventrikel aktiveres først, hvorefter bølgen krydser langsomt mod venstre -> dyb QS i V1 og bred R i V6.'
+                        : isRbbb && time >= 272 && time < 355
+                            ? 'RBBB: Venstre ventrikel er færdig, og bølgen krydser forsinket mod højre ventrikel -> høj R′-tak ("kaninøre") i V1 og S i V6.'
+                            : isVt && depolarizing
+                                ? 'VT: Ektopisk fokus i venstre ventrikel spreder sig langsomt over mod højre/anteriort -> bredt QRS og høj R i V1.'
+                                : outsideSlice
+                                    ? phase.id === 'basal'
+                                        ? 'Den sidste basale aktivering ligger delvis uden for dette snit.'
+                                        : 'Atrier og AV-knude ligger uden for dette snit. Start QRS for at følge ventriklerne.'
+                                    : repolarizing
+                                        ? (isVt || isLbbb)
+                                            ? 'Diskordant repolarisering: den ændrede aktivering vender fortegnene, så T-takken peger modsat QRS.'
+                                            : 'Epikardiet genoplades først (+ yderst, − inderst) → elektrisk vektor (− → +) peger stadig mod venstre (V5/V6).'
+                                        : septal
+                                            ? 'Septum aktiveres først fra venstre mod højre (lille blå pil), hvilket giver r-tak i V1 og q-tak i V6.'
+                                            : depolarizing
+                                                ? 'Blå pile: aktivering indefra og ud. Venstre ventrikels tykke væg trækker vektoren bagud-venstre mod V5/V6.'
+                                                : activated
+                                                    ? 'Ventrikelvæggene er ensartet aktiverede i ST-plateaufasen — ingen spændingsforskel.'
+                                                    : 'Ventrikelvæggene er i hvile. Vælg et QRS-trin for at se aktiveringsbølgen.'}
             </div>
 
             <div className="ehm-chest-measure" aria-label={`Udsving i ${lead}`}>

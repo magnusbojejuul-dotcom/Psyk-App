@@ -126,11 +126,11 @@ function FocusMark({ x, y, color = '#dc2626', pulse = 0 }) {
     );
 }
 
-function CalloutBadge({ sx, sy, tx, ty, title, sub, color }) {
+function CalloutBadge({ sx, sy, tx, ty, title, sub, ecg, color }) {
     const targetX = IMG_X + tx * IMG_SCALE;
     const targetY = IMG_Y + ty * IMG_SCALE;
-    const w = Math.max(182, Math.ceil(Math.max(title.length * 7.6, sub.length * 6.3) + 28));
-    const h = 54;
+    const w = Math.max(210, Math.ceil(Math.max(title.length * 7.5, sub.length * 6.2, (ecg || '').length * 6.0) + 30));
+    const h = ecg ? 72 : 54;
     const left = Math.max(10, Math.min(670 - w, sx - w / 2));
     const top = sy - h / 2;
     const anchorX = Math.max(left + 12, Math.min(left + w - 12, targetX));
@@ -159,12 +159,20 @@ function CalloutBadge({ sx, sy, tx, ty, title, sub, color }) {
                 strokeWidth="1.8"
             />
             <rect x={left + 4.5} y={top + 7} width="4.5" height={h - 14} rx="2.2" fill={color} />
-            <text x={left + 16} y={top + 21} fontSize="12.5" fontWeight="750" fill="#1e352b">
+            <text x={left + 16} y={top + 20} fontSize="12.5" fontWeight="750" fill="#1e352b">
                 {title}
             </text>
-            <text x={left + 16} y={top + 40} fontSize="10.5" fontWeight="550" fill="#4f6659">
+            <text x={left + 16} y={top + 38} fontSize="10.5" fontWeight="550" fill="#4f6659">
                 {sub}
             </text>
+            {ecg && (
+                <>
+                    <line x1={left + 16} y1={top + 45} x2={left + w - 12} y2={top + 45} stroke="#e7ece4" strokeWidth="1" />
+                    <text x={left + 16} y={top + 59} fontSize="10.2" fontWeight="700" fill={color}>
+                        {ecg}
+                    </text>
+                </>
+            )}
         </g>
     );
 }
@@ -177,12 +185,13 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
     const isLbbb = rhythmId === 'lbbb';
     const isRbbb = rhythmId === 'rbbb';
     const isVt = rhythmId === 'vt';
+    const isVf = rhythmId === 'vf';
 
     // Atrial choreography per rhythm
     let saActive = time >= 72 && time < 195;
     let saStart = 80;
     let saEnd = 195;
-    if (isAfib || isFlutter || isVt) {
+    if (isAfib || isFlutter || isVt || isVf) {
         saActive = false;
     } else if (isAv1) {
         saStart = 40;
@@ -220,7 +229,7 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
     // AV node timing
     const avStart = isAv1 ? 125 : isAv3 ? 0 : 160;
     const avEnd = isAv1 ? 298 : isAv3 ? 0 : 215;
-    const avActive = isVt ? false : (isAv1 || !isAv3) ? (time >= avStart && time < avEnd) : false;
+    const avActive = (isVt || isVf) ? false : (isAv1 || !isAv3) ? (time >= avStart && time < avEnd) : false;
     const avPulse = avActive ? Math.sin(clamp01((time - avStart) / Math.max(1, avEnd - avStart)) * Math.PI) : 0;
     const av3BlockedFlash = isAv3
         ? Math.max(
@@ -236,7 +245,7 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
     const vtBeatActive = isVt && vtLocal >= 15 && vtLocal < 188;
     const vtBeatFade = vtBeatActive && vtLocal >= 164 ? clamp01(1 - (vtLocal - 164) / 24) : 1;
 
-    const ventLineActive = !isVt && time >= qrsStart && time < qrsEnd + 20;
+    const ventLineActive = !isVt && !isVf && time >= qrsStart && time < qrsEnd + 20;
     const ventLineFade = ventLineActive && time >= qrsEnd - 5 ? clamp01(1 - (time - (qrsEnd - 5)) / 25) : 1;
     const hisProgress = isAv3 ? 0 : clamp01((time - qrsStart) / 14);
     const bundleProgress = isAv3
@@ -247,36 +256,43 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
         ? clamp01((time - qrsStart - 45) / 55)
         : clamp01((time - qrsStart - 48) / 38);
 
-    const septalGlow = isVt
+    const septalGlow = (isVt || isVf)
         ? 0
         : (time >= qrsStart + 2 && time < qrsStart + 42)
             ? Math.sin(clamp01((time - qrsStart - 2) / 40) * Math.PI) * 0.20
             : 0;
 
-    // Differential chamber glows for LBBB / RBBB / VT vs symmetric
-    const ventBaseGlow = (!isVt && time >= qrsStart + 20 && time < qrsEnd + 10)
+    // Differential chamber glows for LBBB / RBBB / VT / VF vs symmetric
+    const ventBaseGlow = (!isVt && !isVf && time >= qrsStart + 20 && time < qrsEnd + 10)
         ? Math.sin(clamp01((time - (qrsStart + 20)) / (qrsEnd - qrsStart - 10)) * Math.PI * 0.65) * 0.18
         : 0;
-    const rvDepolGlow = isVt
-        ? (vtBeatActive ? Math.sin(clamp01((vtLocal - 40) / 140) * Math.PI) * 0.16 * vtBeatFade : 0)
-        : isLbbb
-            ? (time >= 220 && time < 305 ? Math.sin(clamp01((time - 220) / 85) * Math.PI) * 0.20 : 0)
-            : isRbbb
-                ? (time >= 270 && time < 365 ? Math.sin(clamp01((time - 270) / 95) * Math.PI) * 0.22 : 0)
-                : ventBaseGlow;
-    const lvDepolGlow = isVt
-        ? (vtBeatActive ? Math.sin(clamp01((vtLocal - 15) / 165) * Math.PI) * 0.22 * vtBeatFade : 0)
-        : isLbbb
-            ? (time >= 255 && time < 365 ? Math.sin(clamp01((time - 255) / 110) * Math.PI) * 0.22 : 0)
-            : isRbbb
-                ? (time >= 222 && time < 305 ? Math.sin(clamp01((time - 222) / 83) * Math.PI) * 0.19 : 0)
-                : ventBaseGlow;
+    const vfShimmer = isVf ? 0.16 + 0.08 * Math.sin((time / 800) * Math.PI * 10) : 0;
+    const rvDepolGlow = isVf
+        ? vfShimmer
+        : isVt
+            ? (vtBeatActive ? Math.sin(clamp01((vtLocal - 40) / 140) * Math.PI) * 0.16 * vtBeatFade : 0)
+            : isLbbb
+                ? (time >= 220 && time < 305 ? Math.sin(clamp01((time - 220) / 85) * Math.PI) * 0.20 : 0)
+                : isRbbb
+                    ? (time >= 270 && time < 365 ? Math.sin(clamp01((time - 270) / 95) * Math.PI) * 0.22 : 0)
+                    : ventBaseGlow;
+    const lvDepolGlow = isVf
+        ? vfShimmer
+        : isVt
+            ? (vtBeatActive ? Math.sin(clamp01((vtLocal - 15) / 165) * Math.PI) * 0.22 * vtBeatFade : 0)
+            : isLbbb
+                ? (time >= 255 && time < 365 ? Math.sin(clamp01((time - 255) / 110) * Math.PI) * 0.22 : 0)
+                : isRbbb
+                    ? (time >= 222 && time < 305 ? Math.sin(clamp01((time - 222) / 83) * Math.PI) * 0.19 : 0)
+                    : ventBaseGlow;
 
     const repolStart = isAv1 ? 460 : isAv3 ? 355 : isLbbb ? 395 : isRbbb ? 390 : 380;
     const repolDur = isAv3 ? 120 : 160;
-    const isRepol = isVt
-        ? (vtLocal >= 200 && vtLocal < 360)
-        : (time >= repolStart && time < repolStart + repolDur + 10);
+    const isRepol = isVf
+        ? false
+        : isVt
+            ? (vtLocal >= 200 && vtLocal < 360)
+            : (time >= repolStart && time < repolStart + repolDur + 10);
     const repolP = isVt
         ? clamp01((vtLocal - 200) / 160)
         : clamp01((time - repolStart) / repolDur);
@@ -287,7 +303,7 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
             : repolP > 0.80
                 ? clamp01((1 - repolP) / 0.20)
                 : 1;
-    const stGlow = (!isVt && time >= qrsEnd && time < repolStart + repolDur)
+    const stGlow = (!isVt && !isVf && time >= qrsEnd && time < repolStart + repolDur)
         ? (time < repolStart ? 0.11 : 0.11 * (1 - repolP))
         : 0;
     const repolGlow = isRepol ? Math.sin(repolP * Math.PI) * 0.16 : 0;
@@ -323,7 +339,7 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
                             rx={CHAMBER_GLOWS.rv.rx}
                             ry={CHAMBER_GLOWS.rv.ry}
                             transform={`rotate(${CHAMBER_GLOWS.rv.rotate} ${CHAMBER_GLOWS.rv.cx} ${CHAMBER_GLOWS.rv.cy})`}
-                            fill={stGlow > 0 && rvDepolGlow <= 0.005 ? PHASE_COLORS.st : isVt ? '#dc2626' : isRbbb && time >= 270 ? '#0ea5e9' : PHASE_COLORS.qrs}
+                            fill={stGlow > 0 && rvDepolGlow <= 0.005 ? PHASE_COLORS.st : (isVt || isVf) ? '#dc2626' : isRbbb && time >= 270 ? '#0ea5e9' : PHASE_COLORS.qrs}
                             opacity={Math.max(rvDepolGlow, stGlow) * 0.85}
                         />
                         <ellipse
@@ -332,7 +348,7 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
                             rx={CHAMBER_GLOWS.lv.rx}
                             ry={CHAMBER_GLOWS.lv.ry}
                             transform={`rotate(${CHAMBER_GLOWS.lv.rotate} ${CHAMBER_GLOWS.lv.cx} ${CHAMBER_GLOWS.lv.cy})`}
-                            fill={stGlow > 0 && lvDepolGlow <= 0.005 ? PHASE_COLORS.st : isVt ? '#dc2626' : isLbbb && time >= 255 ? '#8b5cf6' : PHASE_COLORS.qrs}
+                            fill={stGlow > 0 && lvDepolGlow <= 0.005 ? PHASE_COLORS.st : (isVt || isVf) ? '#dc2626' : isLbbb && time >= 255 ? '#8b5cf6' : PHASE_COLORS.qrs}
                             opacity={Math.max(lvDepolGlow, stGlow)}
                         />
                     </>
@@ -476,7 +492,7 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
             )}
 
             {/* PR delay: AV node golden physiological or prolonged hold */}
-            {(avActive || isAv1) && !isAv3 && !isVt && (
+            {(avActive || isAv1) && !isAv3 && !isVt && !isVf && (
                 <g>
                     <circle cx={CONDUCTION_PATHS.avNode.cx} cy={CONDUCTION_PATHS.avNode.cy} r={(isAv1 ? 68 : 52) + avPulse * 32} fill={PHASE_COLORS.pr} opacity={isAv1 ? (0.30 + avPulse * 0.36) : (0.32 + avPulse * 0.24)} filter={`url(#${prefix}-soft-blur)`} />
                     <path d={CONDUCTION_PATHS.avNode.outline} fill={PHASE_COLORS.pr} opacity={isAv1 ? (0.58 + avPulse * 0.38) : (0.68 + avPulse * 0.24)} />
@@ -522,10 +538,49 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
                     ))}
                 </g>
             )}
-            {isVt && (
+            {(isVt || isVf) && (
                 <g style={{ pointerEvents: 'none' }}>
                     <path d={CONDUCTION_PATHS.saNode.outline} fill="#cbd5d0" opacity="0.78" />
                     <path d={CONDUCTION_PATHS.avNode.outline} fill="#cbd5d0" opacity="0.78" />
+                </g>
+            )}
+            {isVf && (
+                <g style={{ pointerEvents: 'none' }}>
+                    <g fill="none" strokeLinecap="round">
+                        {PATHOLOGY_PATHS.vfWavelets.map(w => {
+                            const cyc = ((time / 800) * 4.2 + w.phase) % 1;
+                            const fade = Math.sin(cyc * Math.PI);
+                            return (
+                                <g key={w.id} opacity={0.28 + fade * 0.72}>
+                                    <path
+                                        d={w.d}
+                                        pathLength="1"
+                                        stroke="#b91c1c"
+                                        strokeWidth="12"
+                                        strokeDasharray={`${Math.min(1, cyc * 1.15)} 1`}
+                                        markerEnd={`url(#${prefix}-arr-vt)`}
+                                    />
+                                    <path
+                                        d={w.d}
+                                        pathLength="1"
+                                        stroke="#ffffff"
+                                        strokeWidth="3.5"
+                                        strokeDasharray={`${Math.min(1, cyc * 1.15)} 1`}
+                                        opacity="0.7"
+                                    />
+                                </g>
+                            );
+                        })}
+                    </g>
+                    {PATHOLOGY_PATHS.vfFoci.map(f => {
+                        const pulse = 0.5 + 0.5 * Math.sin((time / 800) * Math.PI * 10 + f.phase * Math.PI * 2);
+                        return (
+                            <g key={f.id}>
+                                <circle cx={f.x} cy={f.y} r={18 + pulse * 30} fill="#b91c1c" opacity={0.14 + pulse * 0.26} />
+                                <circle cx={f.x} cy={f.y} r={11 + pulse * 5} fill="#fef2f2" stroke="#b91c1c" strokeWidth="4.5" />
+                            </g>
+                        );
+                    })}
                 </g>
             )}
 

@@ -19,7 +19,20 @@ const CASE_TO_RHYTHM = {
     av_block_3: 'av_block_3',
     lbbb: 'lbbb',
     rbbb: 'rbbb',
-    vt: 'vt'
+    vt: 'vt',
+    vf: 'vf'
+};
+
+const RHYTHM_TO_CASE = {
+    normal: 'normal_sinus',
+    afib: 'afib',
+    aflutter: 'aflutter',
+    av_block_1: 'av_block_1',
+    av_block_3: 'av_block_3',
+    lbbb: 'lbbb',
+    rbbb: 'rbbb',
+    vt: 'vt',
+    vf: 'vf'
 };
 
 export default function EkgApp({ onNavigate }) {
@@ -38,6 +51,7 @@ export default function EkgApp({ onNavigate }) {
     });
     const [selectedLead, setSelectedLead] = useState('II');
     const [modelRhythmId, setModelRhythmId] = useState('normal');
+    const [focusRealToken, setFocusRealToken] = useState(0);
 
     const currentCase = EKG_CASES.find(c => c.id === currentCaseId) || EKG_CASES[0];
 
@@ -46,18 +60,29 @@ export default function EkgApp({ onNavigate }) {
         if (CASE_TO_RHYTHM[newCase.id]) {
             setModelRhythmId(CASE_TO_RHYTHM[newCase.id]);
         }
-        if (newCase.affectedLeads && newCase.affectedLeads.length > 0) {
+        if (newCase.affectedLeads && newCase.affectedLeads.length > 0 && newCase.affectedLeads[0] !== 'Alle') {
             setSelectedLead(newCase.affectedLeads[0]);
         }
     };
 
     const handleShowOnHeart = () => {
         setModelRhythmId(CASE_TO_RHYTHM[currentCase.id] || 'normal');
-        if (currentCase.affectedLeads && currentCase.affectedLeads.length > 0) {
+        if (currentCase.affectedLeads && currentCase.affectedLeads.length > 0 && currentCase.affectedLeads[0] !== 'Alle') {
             setSelectedLead(currentCase.affectedLeads[0]);
         }
         setActiveTab('model');
         window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    const handleOpenRealExamples = (rhythmId) => {
+        const targetCaseId = RHYTHM_TO_CASE[rhythmId] || 'normal_sinus';
+        setCurrentCaseId(targetCaseId);
+        const found = EKG_CASES.find(c => c.id === targetCaseId);
+        if (found?.affectedLeads?.[0] && found.affectedLeads[0] !== 'Alle') {
+            setSelectedLead(found.affectedLeads[0]);
+        }
+        setActiveTab('viewer');
+        setFocusRealToken(t => t + 1);
     };
 
     const tabs = [
@@ -126,6 +151,7 @@ export default function EkgApp({ onNavigate }) {
                         onSelectLead={setSelectedLead}
                         rhythmId={modelRhythmId}
                         onSelectRhythm={setModelRhythmId}
+                        onOpenRealExamples={handleOpenRealExamples}
                     />
                 )}
 
@@ -137,6 +163,7 @@ export default function EkgApp({ onNavigate }) {
                         selectedLead={selectedLead}
                         onSelectLead={setSelectedLead}
                         onShowOnHeart={handleShowOnHeart}
+                        focusRealToken={focusRealToken}
                     />
                 )}
 
