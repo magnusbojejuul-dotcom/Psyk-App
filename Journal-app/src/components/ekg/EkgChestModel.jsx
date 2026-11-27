@@ -9,6 +9,7 @@ import {
     CHEST_LABELS,
     CHEST_PATHOLOGY_MARKERS,
     CHEST_PATHOLOGY_PATHS,
+    CHEST_PATHOLOGY_ZONES,
     CHEST_REPOL_ARROWS,
     CHEST_REPOL_WALLS,
     THORAX_CENTER,
@@ -114,27 +115,46 @@ function ChestConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
     const isVt = rhythmId === 'vt';
     const isVf = rhythmId === 'vf';
     const isAv1 = rhythmId === 'av_block_1';
+    const isWenck = rhythmId === 'av_block_2_wenckebach';
+    const isMobitz2 = rhythmId === 'av_block_2_mobitz2';
     const isAv3 = rhythmId === 'av_block_3';
+    const isAntStemi = rhythmId === 'anterior_stemi';
+    const isInfStemi = rhythmId === 'inferior_stemi';
+    const isPostStemi = rhythmId === 'posterior_stemi';
+    const isPericarditis = rhythmId === 'pericarditis';
+    const isLongQtc = rhythmId === 'long_qtc';
+    const isHyperK = rhythmId === 'hyperkalemia';
+    const isHypoK = rhythmId === 'hypokalemia';
+    const isLvh = rhythmId === 'lvh';
+    const isPe = rhythmId === 'pulmonary_embolism';
 
     const vtLocal = time % 400;
     const vtBeatActive = isVt && vtLocal >= 12 && vtLocal < 192;
     const vtBeatFade = vtBeatActive && vtLocal >= 166 ? clamp01(1 - (vtLocal - 166) / 26) : 1;
 
-    const qrsStart = isAv1 ? 290 : isAv3 ? 220 : 210;
-    const qrsEnd = (isLbbb || isRbbb) ? 355 : isAv3 ? 340 : isAv1 ? 380 : 300;
-    const repolStart = isAv1 ? 460 : isAv3 ? 355 : isLbbb ? 395 : isRbbb ? 390 : 380;
-    const repolDur = isAv3 ? 120 : 160;
+    let qrsStart = isAv1 ? 290 : isAv3 ? 220 : isHyperK ? 205 : isHypoK ? 195 : 210;
+    let qrsEnd = (isLbbb || isRbbb) ? 355 : isAv3 ? 340 : isAv1 ? 380 : isHyperK ? 335 : isHypoK ? 280 : isLvh ? 308 : isPe ? 304 : isLongQtc ? 295 : 300;
+    let repolStart = isAv1 ? 460 : isAv3 ? 355 : isLbbb ? 395 : isRbbb ? 390 : isLongQtc ? 430 : isHyperK ? 350 : isHypoK ? 365 : isLvh ? 410 : isPe ? 365 : 380;
+    let repolDur = isAv3 ? 120 : isLongQtc ? 310 : isHyperK ? 140 : isHypoK ? 115 : isLvh ? 155 : isPe ? 170 : 160;
+    if (isWenck) {
+        if (time >= 480) { qrsStart = 535; qrsEnd = 615; repolStart = 615; repolDur = 75; }
+        else { qrsStart = 155; qrsEnd = 235; repolStart = 245; repolDur = 70; }
+    } else if (isMobitz2) {
+        if (time >= 400) { qrsStart = 450; qrsEnd = 525; repolStart = 528; repolDur = 67; }
+        else { qrsStart = 160; qrsEnd = 235; repolStart = 238; repolDur = 67; }
+    }
 
+    const qrsLen = Math.max(40, qrsEnd - qrsStart);
     const ventLineActive = !isVt && !isVf && time >= qrsStart && time < qrsEnd + 20;
     const ventLineFade = ventLineActive && time >= qrsEnd - 5 ? clamp01(1 - (time - (qrsEnd - 5)) / 25) : 1;
-    const septumProgress = clamp01((time - qrsStart) / 36);
-    const purkinjeProgress = clamp01((time - qrsStart - 14) / 48);
+    const septumProgress = clamp01((time - qrsStart) / (qrsLen * 0.42));
+    const purkinjeProgress = clamp01((time - qrsStart - qrsLen * 0.25) / (qrsLen * 0.56));
 
     const septalGlow = (!isVt && !isVf && time >= qrsStart && time < qrsStart + 44)
         ? Math.sin(clamp01((time - qrsStart) / 44) * Math.PI) * 0.24
         : 0;
-    const ventBaseGlow = (!isVt && !isVf && time >= qrsStart + 18 && time < qrsEnd + 10)
-        ? Math.sin(clamp01((time - (qrsStart + 18)) / (qrsEnd - qrsStart - 8)) * Math.PI * 0.7) * 0.22
+    const ventBaseGlow = (!isVt && !isVf && time >= qrsStart + 16 && time < qrsEnd + 10)
+        ? Math.sin(clamp01((time - (qrsStart + 16)) / (qrsEnd - qrsStart - 6)) * Math.PI * 0.7) * 0.22
         : 0;
     const vfShimmer = isVf ? 0.18 + 0.08 * Math.sin((time / 800) * Math.PI * 10) : 0;
 
@@ -146,7 +166,7 @@ function ChestConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
                 ? (time >= 215 && time < 305 ? Math.sin(clamp01((time - 215) / 90) * Math.PI) * 0.24 : 0)
                 : isRbbb
                     ? (time >= 268 && time < 362 ? Math.sin(clamp01((time - 268) / 94) * Math.PI) * 0.26 : 0)
-                    : ventBaseGlow;
+                    : ventBaseGlow * (isPe ? 1.45 : isLvh ? 0.65 : 1);
 
     const lvGlow = isVf
         ? vfShimmer
@@ -156,7 +176,7 @@ function ChestConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
                 ? (time >= 250 && time < 362 ? Math.sin(clamp01((time - 250) / 112) * Math.PI) * 0.26 : 0)
                 : isRbbb
                     ? (time >= 220 && time < 305 ? Math.sin(clamp01((time - 220) / 85) * Math.PI) * 0.22 : 0)
-                    : ventBaseGlow;
+                    : ventBaseGlow * (isLvh ? 1.55 : isPe ? 0.72 : 1);
 
     const isRepol = isVf
         ? false
@@ -174,7 +194,9 @@ function ChestConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
     const stGlow = (!isVt && !isVf && time >= qrsEnd && time < repolStart + repolDur)
         ? (time < repolStart ? 0.12 : 0.12 * (1 - repolP))
         : 0;
-    const repolGlow = isRepol ? Math.sin(repolP * Math.PI) * 0.18 : 0;
+    const repolGlow = isRepol ? Math.sin(repolP * Math.PI) * (isHypoK ? 0.08 : isHyperK ? 0.24 : 0.18) : 0;
+    const uWaveGlow = isHypoK && time >= 480 && time < 660 ? Math.sin(clamp01((time - 480) / 180) * Math.PI) : 0;
+    const injuryPulse = 0.22 + (time >= 290 && time < 565 ? Math.sin(clamp01((time - 290) / 275) * Math.PI) * 0.42 : 0);
 
     return (
         <g transform={`translate(${IMG_X} ${IMG_Y}) scale(${IMG_SCALE})`}>
@@ -354,16 +376,95 @@ function ChestConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
                 </g>
             )}
 
+            {/* Anatomical injury / inflammation / strain highlights in transverse slice */}
+            {(isAntStemi || isPostStemi) && (
+                <path
+                    d={CHEST_PATHOLOGY_ZONES[isAntStemi ? 'anterior_stemi' : 'posterior_stemi'].d}
+                    fill={isAntStemi ? '#dc2626' : '#e11d48'}
+                    fillOpacity={injuryPulse * 0.48}
+                    stroke={isAntStemi ? '#dc2626' : '#e11d48'}
+                    strokeWidth="6"
+                    opacity="0.90"
+                    style={{ pointerEvents: 'none' }}
+                />
+            )}
+            {isInfStemi && (
+                <ellipse
+                    cx={CHEST_PATHOLOGY_ZONES.inferior_stemi.cx}
+                    cy={CHEST_PATHOLOGY_ZONES.inferior_stemi.cy}
+                    rx={CHEST_PATHOLOGY_ZONES.inferior_stemi.rx}
+                    ry={CHEST_PATHOLOGY_ZONES.inferior_stemi.ry}
+                    transform={`rotate(${CHEST_PATHOLOGY_ZONES.inferior_stemi.rotate} ${CHEST_PATHOLOGY_ZONES.inferior_stemi.cx} ${CHEST_PATHOLOGY_ZONES.inferior_stemi.cy})`}
+                    fill="#b91c1c"
+                    fillOpacity={injuryPulse * 0.42}
+                    stroke="#b91c1c"
+                    strokeWidth="5.5"
+                    strokeDasharray="12 8"
+                    opacity="0.88"
+                    style={{ pointerEvents: 'none' }}
+                />
+            )}
+            {isPericarditis && (
+                <ellipse
+                    cx={CHEST_PATHOLOGY_ZONES.pericarditis.cx}
+                    cy={CHEST_PATHOLOGY_ZONES.pericarditis.cy}
+                    rx={CHEST_PATHOLOGY_ZONES.pericarditis.rx}
+                    ry={CHEST_PATHOLOGY_ZONES.pericarditis.ry}
+                    transform={`rotate(${CHEST_PATHOLOGY_ZONES.pericarditis.rotate} ${CHEST_PATHOLOGY_ZONES.pericarditis.cx} ${CHEST_PATHOLOGY_ZONES.pericarditis.cy})`}
+                    fill="none"
+                    stroke="#0d9488"
+                    strokeWidth="15"
+                    strokeDasharray="18 12"
+                    opacity={0.42 + injuryPulse * 0.50}
+                    filter={`url(#${prefix}-chest-soft)`}
+                    style={{ pointerEvents: 'none' }}
+                />
+            )}
+            {isLvh && (
+                <path
+                    d={CHEST_PATHOLOGY_ZONES.lvh.d}
+                    fill="#b45309"
+                    fillOpacity={0.22 + lvGlow * 1.1}
+                    stroke="#b45309"
+                    strokeWidth="5.5"
+                    opacity="0.88"
+                    style={{ pointerEvents: 'none' }}
+                />
+            )}
+            {isPe && (
+                <ellipse
+                    cx={CHEST_PATHOLOGY_ZONES.pulmonary_embolism.cx}
+                    cy={CHEST_PATHOLOGY_ZONES.pulmonary_embolism.cy}
+                    rx={CHEST_PATHOLOGY_ZONES.pulmonary_embolism.rx}
+                    ry={CHEST_PATHOLOGY_ZONES.pulmonary_embolism.ry}
+                    transform={`rotate(${CHEST_PATHOLOGY_ZONES.pulmonary_embolism.rotate} ${CHEST_PATHOLOGY_ZONES.pulmonary_embolism.cx} ${CHEST_PATHOLOGY_ZONES.pulmonary_embolism.cy})`}
+                    fill="#0369a1"
+                    fillOpacity={0.20 + rvGlow * 1.1}
+                    stroke="#0369a1"
+                    strokeWidth="5.5"
+                    strokeDasharray="12 8"
+                    opacity="0.88"
+                    style={{ pointerEvents: 'none' }}
+                />
+            )}
+            {isHypoK && uWaveGlow > 0.04 && (
+                <g fill="none" strokeLinecap="round" opacity={uWaveGlow * 0.92} filter={`url(#${prefix}-chest-glow)`} style={{ pointerEvents: 'none' }}>
+                    <path d={CHEST_CONDUCTION_PATHS.rvPurkinje} stroke="#0284c7" strokeWidth="11" />
+                    <path d={CHEST_CONDUCTION_PATHS.lvPurkinje} stroke="#0284c7" strokeWidth="12" />
+                </g>
+            )}
+
             {/* T-wave repolarization wave + epicardial/endocardial + / - polarity */}
             {repolEdgeFade > 0.01 && (
                 <g opacity={repolEdgeFade}>
                     <g fill="none" strokeLinecap="round" strokeLinejoin="round" filter={`url(#${prefix}-chest-glow)`}>
                         {[CHEST_REPOL_WALLS.lv, CHEST_REPOL_WALLS.rv].map((wallPairs, idx) => {
                             const waveD = smoothWavePath(wallPairs, repolP);
+                            const repolCol = isHyperK ? '#ea580c' : isLongQtc ? '#7c3aed' : PHASE_COLORS.t;
                             return (
                                 <g key={idx}>
-                                    <path d={waveD} stroke={PHASE_COLORS.t} strokeWidth="18" opacity="0.28" />
-                                    <path d={waveD} stroke={PHASE_COLORS.t} strokeWidth="7.5" opacity="0.90" />
+                                    <path d={waveD} stroke={repolCol} strokeWidth={isHyperK ? 21 : 18} opacity={isHyperK ? 0.36 : 0.28} />
+                                    <path d={waveD} stroke={repolCol} strokeWidth={isHyperK ? 9.5 : 7.5} opacity="0.90" />
                                     <path d={waveD} stroke="#ffffff" strokeWidth="2.6" opacity="0.58" />
                                 </g>
                             );
@@ -372,7 +473,7 @@ function ChestConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
                     {CHEST_REPOL_ARROWS.map(pair => {
                         const [ox, oy] = pair.from;
                         const [ix, iy] = pair.to;
-                        const flip = isVt || (isLbbb && pair.id !== 'rvAnt');
+                        const flip = isVt || ((isLbbb || isLvh) && pair.id !== 'rvAnt') || (isPe && pair.id === 'rvAnt');
                         const posCoord = flip ? [ix, iy] : [ox, oy];
                         const negCoord = flip ? [ox, oy] : [ix, iy];
                         return (
@@ -462,16 +563,34 @@ export default function EkgChestModel({ lead, time, onSelect, showVector, prefix
     const isVt = rhythmId === 'vt';
     const isVf = rhythmId === 'vf';
     const isAv1 = rhythmId === 'av_block_1';
+    const isWenck = rhythmId === 'av_block_2_wenckebach';
+    const isMobitz2 = rhythmId === 'av_block_2_mobitz2';
     const isAv3 = rhythmId === 'av_block_3';
+    const isAntStemi = rhythmId === 'anterior_stemi';
+    const isPostStemi = rhythmId === 'posterior_stemi';
+    const isPericarditis = rhythmId === 'pericarditis';
+    const isLongQtc = rhythmId === 'long_qtc';
+    const isHyperK = rhythmId === 'hyperkalemia';
+    const isHypoK = rhythmId === 'hypokalemia';
+    const isLvh = rhythmId === 'lvh';
+    const isPe = rhythmId === 'pulmonary_embolism';
 
     const vtLocal = time % 400;
-    const qrsStart = isAv1 ? 290 : isAv3 ? 220 : 210;
-    const qrsEnd = (isLbbb || isRbbb) ? 355 : isAv3 ? 340 : isAv1 ? 380 : 300;
-    const repolStart = isAv1 ? 460 : isAv3 ? 355 : isLbbb ? 395 : isRbbb ? 390 : 380;
-    const repolDur = isAv3 ? 120 : 160;
+    let qrsStart = isAv1 ? 290 : isAv3 ? 220 : isHyperK ? 205 : isHypoK ? 195 : 210;
+    let qrsEnd = (isLbbb || isRbbb) ? 355 : isAv3 ? 340 : isAv1 ? 380 : isHyperK ? 335 : isHypoK ? 280 : isLvh ? 308 : isPe ? 304 : isLongQtc ? 295 : 300;
+    let repolStart = isAv1 ? 460 : isAv3 ? 355 : isLbbb ? 395 : isRbbb ? 390 : isLongQtc ? 430 : isHyperK ? 350 : isHypoK ? 365 : isLvh ? 410 : isPe ? 365 : 380;
+    let repolDur = isAv3 ? 120 : isLongQtc ? 310 : isHyperK ? 140 : isHypoK ? 115 : isLvh ? 155 : isPe ? 170 : 160;
+    if (isWenck) {
+        if (time >= 480) { qrsStart = 535; qrsEnd = 615; repolStart = 615; repolDur = 75; }
+        else { qrsStart = 155; qrsEnd = 235; repolStart = 245; repolDur = 70; }
+    } else if (isMobitz2) {
+        if (time >= 400) { qrsStart = 450; qrsEnd = 525; repolStart = 528; repolDur = 67; }
+        else { qrsStart = 160; qrsEnd = 235; repolStart = 238; repolDur = 67; }
+    }
     const septal = !isVt && !isVf && time >= qrsStart && time < qrsStart + 24 && !isLbbb;
     const depolarizing = isVf || (isVt ? (vtLocal >= 12 && vtLocal < 192) : (time >= (isLbbb ? 210 : qrsStart + 20) && time < qrsEnd));
     const repolarizing = !isVf && (isVt ? (vtLocal >= 195 && vtLocal < 370) : (time >= repolStart && time < repolStart + repolDur));
+    const uWaving = isHypoK && time >= 480 && time < 660;
     const activated = !isVt && !isVf && time >= qrsEnd && time < repolStart;
     const outsideSlice = !isVf && (['p', 'p2', 'pr'].includes(phase.id) || (phase.id === 'basal' && !isLbbb && !isRbbb));
 
@@ -650,21 +769,37 @@ export default function EkgChestModel({ lead, time, onSelect, showVector, prefix
                             ? 'RBBB: Venstre ventrikel er færdig, og bølgen krydser forsinket mod højre ventrikel -> høj R′-tak ("kaninøre") i V1 og S i V6.'
                             : isVt && depolarizing
                                 ? 'VT: Ektopisk fokus i venstre ventrikel spreder sig langsomt over mod højre/anteriort -> bredt QRS og høj R i V1.'
-                                : outsideSlice
-                                    ? phase.id === 'basal'
-                                        ? 'Den sidste basale aktivering ligger delvis uden for dette snit.'
-                                        : 'Atrier og AV-knude ligger uden for dette snit. Start QRS for at følge ventriklerne.'
-                                    : repolarizing
-                                        ? (isVt || isLbbb)
-                                            ? 'Diskordant repolarisering: den ændrede aktivering vender fortegnene, så T-takken peger modsat QRS.'
-                                            : 'Epikardiet genoplades først (+ yderst, − inderst) → elektrisk vektor (− → +) peger stadig mod venstre (V5/V6).'
-                                        : septal
-                                            ? 'Septum aktiveres først fra venstre mod højre (blå pil), hvilket giver lille r-tak i V1 og q-tak i V6.'
-                                            : depolarizing
-                                                ? 'Purkinje-net og ventrikelvægge aktiveres indefra og ud. Venstre ventrikels tykke væg trækker vektoren bagud-venstre mod V5/V6.'
-                                                : activated
-                                                    ? 'Ventrikelvæggene er ensartet aktiverede i ST-plateaufasen — ingen spændingsforskel.'
-                                                    : 'Ventrikelvæggene er i hvile. Vælg et QRS-trin eller afspil for at se aktiveringsbølgen.'}
+                                : (isAntStemi && (activated || repolarizing))
+                                    ? 'Forvægs-STEMI: Den forreste LV-væg sender en kraftig skadesstrøm fremad (+z) lige mod V2–V4 → konveks ST-elevation.'
+                                    : (isPostStemi && (activated || repolarizing))
+                                        ? 'Posteriort STEMI: Skadesstrømmen peger bagud (−z) væk fra V1–V3 → spejlbillede med høj R-tak og ST-depression fortil.'
+                                        : (isPericarditis && (activated || repolarizing))
+                                            ? 'Perikarditis: Diffus epikardiel irritation hele vejen rundt om hjertet hæver ST-segmentet konkavt i V2–V6.'
+                                            : (isLvh && (depolarizing || repolarizing))
+                                                ? 'LVH: Den tykke venstre væg trækker QRS kraftigt bagud-venstre (dyb S i V1, kæmpe R i V5–V6) og vender repolariseringen (LV-strain).'
+                                                : (isPe && (depolarizing || repolarizing))
+                                                    ? 'Lungeemboli: Akut RV-trykbelastning forstørrer højre side og vender repolariseringen fortil (T-inversion i V1–V3).'
+                                                    : uWaving
+                                                        ? 'Hypokaliæmi: Efter den flade T-tak ses en prominerende U-tak (sen Purkinje-repolarisering) tydeligst i V2–V4.'
+                                                        : outsideSlice
+                                                            ? phase.id === 'basal'
+                                                                ? 'Den sidste basale aktivering ligger delvis uden for dette snit.'
+                                                                : 'Atrier og AV-knude ligger uden for dette snit. Start QRS for at følge ventriklerne.'
+                                                            : repolarizing
+                                                                ? isLongQtc
+                                                                    ? 'Langt QTc: Forsinket kalium-udstrømning holder aktionspotentialet åbent og trækker T-bølgen langt ud.'
+                                                                    : isHyperK
+                                                                        ? 'Hyperkaliæmi: Højt K⁺ accelererer fase-3 repolariseringen og skaber høje, spidse teltformede T-takker i V2–V4.'
+                                                                        : (isVt || isLbbb)
+                                                                            ? 'Diskordant repolarisering: den ændrede aktivering vender fortegnene, så T-takken peger modsat QRS.'
+                                                                            : 'Epikardiet genoplades først (+ yderst, − inderst) → elektrisk vektor (− → +) peger stadig mod venstre (V5/V6).'
+                                                                : septal
+                                                                    ? 'Septum aktiveres først fra venstre mod højre (blå pil), hvilket giver lille r-tak i V1 og q-tak i V6.'
+                                                                    : depolarizing
+                                                                        ? 'Purkinje-net og ventrikelvægge aktiveres indefra og ud. Venstre ventrikels tykke væg trækker vektoren bagud-venstre mod V5/V6.'
+                                                                        : activated
+                                                                            ? 'Ventrikelvæggene er ensartet aktiverede i ST-plateaufasen — ingen spændingsforskel.'
+                                                                            : 'Ventrikelvæggene er i hvile. Vælg et QRS-trin eller afspil for at se aktiveringsbølgen.'}
             </div>
 
             <div className="ehm-chest-measure" aria-label={`Udsving i ${lead}`}>

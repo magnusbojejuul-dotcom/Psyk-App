@@ -5,6 +5,7 @@ import {
     AXIS_PRESETS,
     CYCLE_MS,
     MODEL_LEADS,
+    RHYTHM_CATEGORIES,
     RHYTHM_PRESETS,
     advancePlayback,
     meanQrsAngle,
@@ -30,11 +31,22 @@ const RHYTHM_START_TIME = {
     afib: 40,
     aflutter: 20,
     av_block_1: 30,
+    av_block_2_wenckebach: 365,
+    av_block_2_mobitz2: 390,
     av_block_3: 70,
     lbbb: 205,
     rbbb: 205,
     vt: 10,
-    vf: 20
+    vf: 20,
+    anterior_stemi: 340,
+    inferior_stemi: 340,
+    posterior_stemi: 350,
+    pericarditis: 340,
+    long_qtc: 460,
+    hyperkalemia: 410,
+    hypokalemia: 550,
+    lvh: 262,
+    pulmonary_embolism: 260
 };
 
 const RHYTHM_TO_CASE = {
@@ -42,11 +54,22 @@ const RHYTHM_TO_CASE = {
     afib: 'afib',
     aflutter: 'aflutter',
     av_block_1: 'av_block_1',
+    av_block_2_wenckebach: 'av_block_2_wenckebach',
+    av_block_2_mobitz2: 'av_block_2_mobitz2',
     av_block_3: 'av_block_3',
     lbbb: 'lbbb',
     rbbb: 'rbbb',
     vt: 'vt',
-    vf: 'vf'
+    vf: 'vf',
+    anterior_stemi: 'anterior_stemi',
+    inferior_stemi: 'inferior_stemi',
+    posterior_stemi: 'posterior_stemi',
+    pericarditis: 'pericarditis',
+    long_qtc: 'long_qtc',
+    hyperkalemia: 'hyperkalemia',
+    hypokalemia: 'hypokalemia',
+    lvh: 'lvh',
+    pulmonary_embolism: 'pulmonary_embolism'
 };
 
 function Trace({ lead, time, compact = false, axisOffsetDeg = 0, rhythmId = 'normal', showNormalGhost = false, onJump }) {
@@ -231,6 +254,7 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
     const [showAll, setShowAll] = useState(false);
     const [showVectorInfo, setShowVectorInfo] = useState(false);
     const [showNormalGhost, setShowNormalGhost] = useState(true);
+    const [rhythmCategory, setRhythmCategory] = useState(() => activeRhythm.category || 'rytme');
     const [expandedCalloutId, setExpandedCalloutId] = useState(null);
     const [realPreview, setRealPreview] = useState(null);
     const lastTime = useRef(null);
@@ -275,6 +299,7 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
     useEffect(() => {
         if (externalRhythmId && externalRhythmId !== prevExternalRhythm.current) {
             prevExternalRhythm.current = externalRhythmId;
+            setRhythmCategory(RHYTHM_PRESETS[externalRhythmId]?.category || 'rytme');
             setRealPreview(null);
             setExpandedCalloutId(null);
             setQrsOnly(false);
@@ -342,6 +367,7 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
     const selectRhythm = id => {
         cancelCloseRealPreview();
         setRealPreview(null);
+        setRhythmCategory(RHYTHM_PRESETS[id]?.category || 'rytme');
         setLocalRhythmId(id);
         onSelectRhythm?.(id);
         setExpandedCalloutId(null);
@@ -391,31 +417,73 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
                 </span>
             </div>
 
-            <section className="ehm-rhythm-bar" aria-label="Vælg hjerterytme eller overledningsblok">
-                <div className="ehm-rhythm-pills" role="group" aria-label="Rytmer">
-                    {Object.values(RHYTHM_PRESETS).map(item => (
-                        <button
-                            key={item.id}
-                            type="button"
-                            aria-pressed={rhythmId === item.id}
-                            onClick={() => selectRhythm(item.id)}
-                            style={{ '--rhythm-color': item.color }}
+            <section className="ehm-rhythm-bar" aria-label="Vælg EKG-tilstand eller rytmeforstyrrelse">
+                <div className="ehm-rhythm-controls">
+                    <div className="ehm-cat-tabs" role="tablist" aria-label="Kategorier">
+                        {RHYTHM_CATEGORIES.map(cat => {
+                            const count = Object.values(RHYTHM_PRESETS).filter(item => item.category === cat.id).length;
+                            const isSelected = rhythmCategory === cat.id;
+                            return (
+                                <button
+                                    key={cat.id}
+                                    type="button"
+                                    role="tab"
+                                    aria-selected={isSelected}
+                                    onClick={() => setRhythmCategory(cat.id)}
+                                >
+                                    <span>{cat.label}</span>
+                                    <small>{count}</small>
+                                </button>
+                            );
+                        })}
+                    </div>
+                    <div className="ehm-rhythm-right">
+                        <select
+                            className="ehm-rhythm-select"
+                            aria-label="Hurtigvalg blandt alle 20 EKG'er"
+                            value={rhythmId}
+                            onChange={e => selectRhythm(e.target.value)}
                         >
-                            <i aria-hidden="true" />
-                            <span>{item.short}</span>
-                        </button>
-                    ))}
+                            {RHYTHM_CATEGORIES.map(cat => (
+                                <optgroup key={cat.id} label={cat.label}>
+                                    {Object.values(RHYTHM_PRESETS)
+                                        .filter(item => item.category === cat.id)
+                                        .map(item => (
+                                            <option key={item.id} value={item.id}>
+                                                {item.label}
+                                            </option>
+                                        ))}
+                                </optgroup>
+                            ))}
+                        </select>
+                        {onOpenRealExamples && realScanCount > 0 && (
+                            <button
+                                type="button"
+                                className="ehm-real-link-btn"
+                                onClick={() => onOpenRealExamples(rhythmId)}
+                            >
+                                <span>Ægte patientoptagelser ({realScanCount})</span>
+                                <ArrowRight size={13} />
+                            </button>
+                        )}
+                    </div>
                 </div>
-                {onOpenRealExamples && realScanCount > 0 && (
-                    <button
-                        type="button"
-                        className="ehm-real-link-btn"
-                        onClick={() => onOpenRealExamples(rhythmId)}
-                    >
-                        <span>Ægte patientoptagelser ({realScanCount})</span>
-                        <ArrowRight size={13} />
-                    </button>
-                )}
+                <div className="ehm-rhythm-pills" role="group" aria-label="Tilstande i valgt kategori">
+                    {Object.values(RHYTHM_PRESETS)
+                        .filter(item => item.category === rhythmCategory)
+                        .map(item => (
+                            <button
+                                key={item.id}
+                                type="button"
+                                aria-pressed={rhythmId === item.id}
+                                onClick={() => selectRhythm(item.id)}
+                                style={{ '--rhythm-color': item.color }}
+                            >
+                                <i aria-hidden="true" />
+                                <span>{item.short}</span>
+                            </button>
+                        ))}
+                </div>
             </section>
 
             <div className="ehm-workspace">
@@ -847,7 +915,7 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
 
             <details className="ehm-method">
                 <summary>Sådan skal modellen forstås · fagligt grundlag og billedkreditering</summary>
-                <p>Undervisningsmodel af sinusrytme samt 7 centrale arytmier og overledningsblok (atrieflimren, atrieflagren, 1./3. grads AV-blok, LBBB, RBBB og VT) med justerbar frontal akse (Cabrera-cirklen). Ledningsbaner, årsagsmarkører på hjertet, dipolvektorer og alle 12 afledningskurver følger samme fysiologiske tidslinje med 1-til-1 farvekodning.</p>
+                <p>Undervisningsmodel af normal sinusrytme samt 19 centrale kliniske EKG-mønstre (arytmier, AV-/grenblok, STEMI, perikarditis, elektrolyt-/QTc-forandringer, LVH og lungeemboli) med justerbar frontal akse (Cabrera-cirklen). Ledningsbaner, anatomiske iskæmi- og belastningszoner, dipolvektorer og alle 12 afledningskurver følger samme fysiologiske tidslinje med 1-til-1 farvekodning.</p>
                 <p>Anatomisk hjerte- og ledningsillustration baseret på <em>ConductionsystemoftheheartwithoutHeart</em> (Madhero88 / Wikimedia Commons, CC BY-SA 3.0), bearbejdet til lyst hvileformat med levende impulslag. Fagligt grundlag: <a href="https://cvphysiology.com/arrhythmias/a014" target="_blank" rel="noreferrer">Klabunde: elektriske vektorer og EKG-regler</a> · <a href="https://cvphysiology.com/arrhythmias/a016" target="_blank" rel="noreferrer">Ventrikelaktivering</a> · <a href="https://cvphysiology.com/arrhythmias/a013c" target="_blank" rel="noreferrer">Brystafledninger</a>.</p>
             </details>
 

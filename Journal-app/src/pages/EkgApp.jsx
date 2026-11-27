@@ -16,11 +16,22 @@ const CASE_TO_RHYTHM = {
     afib: 'afib',
     aflutter: 'aflutter',
     av_block_1: 'av_block_1',
+    av_block_2_wenckebach: 'av_block_2_wenckebach',
+    av_block_2_mobitz2: 'av_block_2_mobitz2',
     av_block_3: 'av_block_3',
     lbbb: 'lbbb',
     rbbb: 'rbbb',
     vt: 'vt',
-    vf: 'vf'
+    vf: 'vf',
+    anterior_stemi: 'anterior_stemi',
+    inferior_stemi: 'inferior_stemi',
+    posterior_stemi: 'posterior_stemi',
+    pericarditis: 'pericarditis',
+    long_qtc: 'long_qtc',
+    hyperkalemia: 'hyperkalemia',
+    hypokalemia: 'hypokalemia',
+    lvh: 'lvh',
+    pulmonary_embolism: 'pulmonary_embolism'
 };
 
 const RHYTHM_TO_CASE = {
@@ -28,11 +39,22 @@ const RHYTHM_TO_CASE = {
     afib: 'afib',
     aflutter: 'aflutter',
     av_block_1: 'av_block_1',
+    av_block_2_wenckebach: 'av_block_2_wenckebach',
+    av_block_2_mobitz2: 'av_block_2_mobitz2',
     av_block_3: 'av_block_3',
     lbbb: 'lbbb',
     rbbb: 'rbbb',
     vt: 'vt',
-    vf: 'vf'
+    vf: 'vf',
+    anterior_stemi: 'anterior_stemi',
+    inferior_stemi: 'inferior_stemi',
+    posterior_stemi: 'posterior_stemi',
+    pericarditis: 'pericarditis',
+    long_qtc: 'long_qtc',
+    hyperkalemia: 'hyperkalemia',
+    hypokalemia: 'hypokalemia',
+    lvh: 'lvh',
+    pulmonary_embolism: 'pulmonary_embolism'
 };
 
 export default function EkgApp({ onNavigate }) {

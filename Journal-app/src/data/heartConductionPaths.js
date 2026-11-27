@@ -89,11 +89,21 @@ export const REPOLARIZATION_ARROWS = [
 
 export const PATHOLOGY_MARKERS = {
     avDelay: { x: 318, y: 532, label: 'Langsom AV', color: '#d48817' },
+    mobitz2Block: { x: 392, y: 545, label: 'His-Purkinje stop', color: '#dc2626' },
     avTotalBlock: { x: 345, y: 510, label: 'Totalblok', color: '#c43b47' },
     avEscapeFocus: { x: 524, y: 554, label: 'Erstatning', color: '#c43b47' },
     lbbbBlock: { x: 554, y: 540, label: 'Venstre gren blokeret', color: '#8b5cf6' },
     rbbbBlock: { x: 548, y: 584, label: 'Højre gren blokeret', color: '#0ea5e9' },
     vtFocus: { x: 868, y: 725, label: 'Ektopisk fokus', color: '#dc2626' },
+};
+
+export const PATHOLOGY_ZONES = {
+    anterior_stemi: { cx: 690, cy: 615, rx: 148, ry: 176, rotate: -18, labelX: 702, labelY: 615, label: 'Forvæg (LAD)', color: '#dc2626' },
+    inferior_stemi: { d: 'M 435 780 Q 640 900 842 758 Q 796 894 622 926 Q 486 916 435 780 Z', labelX: 642, labelY: 856, label: 'Inferior væg (RCA)', color: '#b91c1c' },
+    posterior_stemi: { cx: 742, cy: 520, rx: 122, ry: 146, rotate: 16, dashed: true, labelX: 744, labelY: 520, label: 'Bagvæg (posterior)', color: '#e11d48' },
+    pericarditis: { d: 'M 192 292 C 118 460 148 730 402 868 C 585 954 844 908 906 726 C 948 548 866 336 688 226', color: '#0d9488' },
+    lvh: { d: 'M 636 436 C 794 452 898 592 858 748 C 818 868 678 918 564 888 C 674 850 774 764 784 630 C 792 522 714 462 636 436 Z', labelX: 782, labelY: 690, label: 'Fortykket LV', color: '#b45309' },
+    pulmonary_embolism: { cx: 365, cy: 645, rx: 138, ry: 168, rotate: 18, labelX: 356, labelY: 645, label: 'RV-overbelastning', color: '#0369a1' },
 };
 
 export const PATHOLOGY_PATHS = {
@@ -166,6 +176,12 @@ export const PATHOLOGY_CALLOUTS = {
     av_block_1: [
         { id: 'av1', corner: 'bottom-left', ax: 104, ay: 452, tx: 318, ty: 540, title: 'AV-forsinkelse (PR > 200 ms)', sub: 'Impulsen bremses i AV-knuden', ecg: 'EKG: Forlænget PR · smalt QRS', color: '#d48817' },
     ],
+    av_block_2_wenckebach: [
+        { id: 'mob1', corner: 'bottom-left', ax: 104, ay: 452, tx: 318, ty: 532, title: 'AV-udtrætning (Wenckebach)', sub: 'Øget forsinkelse indtil ét slag falder ud', ecg: 'EKG: Tiltagende PR → P uden QRS', color: '#d97706' },
+    ],
+    av_block_2_mobitz2: [
+        { id: 'mob2', corner: 'bottom-left', ax: 104, ay: 452, tx: 392, ty: 545, title: 'Pludseligt His-Purkinje-stop', sub: 'Uventet udfald uden forudgående træthed', ecg: 'EKG: Fast PR · pludselig blokeret P', color: '#dc2626' },
+    ],
     av_block_3: [
         { id: 'av3-blk', corner: 'bottom-left', ax: 104, ay: 452, tx: 345, ty: 515, title: 'Total AV-blokade', sub: 'Atrie-impuls stoppes helt', ecg: 'EKG: P & QRS er helt uafhængige', color: '#c43b47' },
         { id: 'av3-esc', corner: 'bottom-right', ax: 576, ay: 452, tx: 524, ty: 572, title: 'Erstatningsfokus', sub: 'Driver ventrikler i eget tempo', ecg: 'EKG: Langsom, uafhængig rytme', color: '#d9534f' },
@@ -181,5 +197,32 @@ export const PATHOLOGY_CALLOUTS = {
     ],
     vf: [
         { id: 'vf', corner: 'bottom-right', ax: 576, ay: 452, tx: 740, ty: 730, title: 'Ventrikelflimren (Hjertestop)', sub: 'Kaotiske mikro-bølger overalt', ecg: 'EKG: Kaos uden QRS · kræver DC-stød', color: '#b91c1c' },
+    ],
+    anterior_stemi: [
+        { id: 'ant-stemi', corner: 'bottom-right', ax: 576, ay: 452, tx: 702, ty: 615, title: 'Forvægsiskæmi (LAD)', sub: 'Skadesstrøm peger fremad (+z)', ecg: 'EKG: ST-elevation V1–V4 · depr. II/III', color: '#dc2626' },
+    ],
+    inferior_stemi: [
+        { id: 'inf-stemi', corner: 'bottom-right', ax: 576, ay: 452, tx: 642, ty: 840, title: 'Inferior iskæmi (RCA)', sub: 'Skadesstrøm peger nedad (+y)', ecg: 'EKG: ST ↑ II, III, aVF · reciprok aVL ↓', color: '#b91c1c' },
+    ],
+    posterior_stemi: [
+        { id: 'post-stemi', corner: 'bottom-right', ax: 576, ay: 452, tx: 742, ty: 520, title: 'Bagvægsiskæmi (LCx/RCA)', sub: 'Skadesstrøm peger bagud (−z)', ecg: 'EKG: Spejlbillede: høj R + ST ↓ i V1–V3', color: '#e11d48' },
+    ],
+    pericarditis: [
+        { id: 'peri', corner: 'bottom-left', ax: 104, ay: 452, tx: 230, ty: 695, title: 'Diffus perikardiebetændelse', sub: 'Ydre epikardiel irritation overalt', ecg: 'EKG: Konkav ST ↑ (fleste) · PR ↓ · aVR ↓', color: '#0d9488' },
+    ],
+    long_qtc: [
+        { id: 'lqtc', corner: 'bottom-right', ax: 576, ay: 452, tx: 710, ty: 660, title: 'Forsinket repolarisering (IKr)', sub: 'Forlænget plateau før T-tak', ecg: 'EKG: QTc > 500 ms · risiko for Torsades', color: '#7c3aed' },
+    ],
+    hyperkalemia: [
+        { id: 'hyperk', corner: 'bottom-right', ax: 576, ay: 452, tx: 715, ty: 650, title: 'Højt ekstracellulært K⁺', sub: 'Hurtig fase 3 · træge Na⁺-kanaler', ecg: 'EKG: Spids telt-T · flad P · bredt QRS', color: '#ea580c' },
+    ],
+    hypokalemia: [
+        { id: 'hypok', corner: 'bottom-right', ax: 576, ay: 452, tx: 690, ty: 710, title: 'Lavt K⁺ (Purkinje-efterglød)', sub: 'Forsinket sen repolarisering', ecg: 'EKG: ST ↓ · flad T + prominerende U-tak', color: '#0284c7' },
+    ],
+    lvh: [
+        { id: 'lvh', corner: 'bottom-right', ax: 576, ay: 452, tx: 782, ty: 690, title: 'Fortykket venstre ventrikel', sub: 'Stor LV-masse & subendokardielt strain', ecg: 'EKG: Kæmpe R V5–6 / S V1 · strain T ↓', color: '#b45309' },
+    ],
+    pulmonary_embolism: [
+        { id: 'pe', corner: 'bottom-left', ax: 104, ay: 452, tx: 356, ty: 645, title: 'Akut højresidig belastning', sub: 'Lungekredsløbet blokeret → RV-tryk ↑', ecg: 'EKG: SI QIII TIII · RAD · inv. T i V1–V3', color: '#0369a1' },
     ],
 };

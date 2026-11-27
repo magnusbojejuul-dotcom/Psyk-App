@@ -113,12 +113,75 @@ const VT_CYCLE_KNOTS = [
     [400, 0, 0, 0],
 ];
 
+// Ventricular hypertrophy / ischemia / electrolyte QRS knot variants
+const ANTERIOR_STEMI_QRS_KNOTS = [
+    [210, 0, 0, 0], [222, -0.06, 0.04, -0.24], [238, 0.16, 0.32, -0.22],
+    [254, 0.72, 0.88, -0.36], [268, 0.84, 0.44, -0.24], [284, 0.10, -0.08, 0.16], [300, 0, 0, 0],
+];
+
+const INFERIOR_STEMI_QRS_KNOTS = [
+    [210, 0, 0, 0], [224, -0.08, -0.26, 0.16], [238, 0.14, -0.12, 0.32],
+    [254, 0.62, 0.92, -0.40], [270, 0.72, 0.48, -0.36], [286, -0.04, -0.10, -0.04], [300, 0, 0, 0],
+];
+
+const POSTERIOR_STEMI_QRS_KNOTS = [
+    [210, 0, 0, 0], [222, -0.08, 0.02, 0.32], [238, 0.14, 0.36, 0.68],
+    [254, 0.56, 0.95, 0.52], [268, 0.72, 0.48, -0.18], [284, -0.06, -0.14, -0.14], [300, 0, 0, 0],
+];
+
+const HYPERK_QRS_KNOTS = [
+    [205, 0, 0, 0], [225, -0.12, -0.04, 0.16], [248, 0.16, 0.38, 0.30],
+    [270, 0.64, 0.96, -0.42], [295, 0.74, 0.44, -0.48], [316, -0.24, -0.18, -0.08], [335, 0, 0, 0],
+];
+
+const LVH_KNOTS = [
+    [210, 0, 0, 0], [222, -0.16, -0.04, 0.24], [234, 0.18, 0.14, 0.10],
+    [252, 1.38, 0.94, -1.04], [270, 1.56, 0.38, -1.16], [290, -0.12, -0.18, -0.18], [308, 0, 0, 0],
+];
+
+// Acute PE (SI QIII TIII + right axis deviation > +90° + terminal S in I/V6).
+const PE_KNOTS = [
+    [210, 0, 0, 0], [222, 0.22, -0.24, 0.12], [236, -0.08, 0.35, 0.26],
+    [252, 0.10, 1.08, 0.18], [272, -0.62, 0.26, 0.24], [290, -0.42, 0.08, 0.12], [304, 0, 0, 0],
+];
+
+// Resamples normal QRS_KNOTS cleanly into any [start, start + width] interval (e.g. Wenckebach/Mobitz II multi-beat views).
+function sampleNormalQrs(t, start, width = 90) {
+    if (t < start || t >= start + width) return [0, 0, 0];
+    const mapped = 210 + ((t - start) / width) * 90;
+    return evalKnots(mapped, QRS_KNOTS);
+}
+
 // Asymmetric discordant ST-T curve starting cleanly from the end of QRS (no artificial flat shelf).
 function discordantStT(t, start, end, peakVec, axisOffsetDeg = 0) {
     if (t < start || t >= end) return [0, 0, 0];
     const p = (t - start) / (end - start);
     const env = Math.sin(Math.PI * p) ** 1.45 * (0.75 + 0.5 * p);
     return rotateFrontal(peakVec.map(v => v * env), axisOffsetDeg * 0.45);
+}
+
+// STEMI convex ST-elevation blending smoothly from J-point into hyperacute T-wave (or reciprocal negative injury).
+function stemiInjuryStT(t, jStart, end, peakVec, axisOffsetDeg = 0) {
+    if (t < jStart || t >= end) return [0, 0, 0];
+    const p = (t - jStart) / (end - jStart);
+    const jRamp = Math.min(1, p * 10);
+    const arch = Math.sin(Math.PI * (0.20 + 0.80 * p)) ** 1.15;
+    const scale = arch * jRamp;
+    return rotateFrontal(peakVec.map(v => v * scale), axisOffsetDeg * 0.45);
+}
+
+// Diffuse concave ("hammock") ST-elevation seen in acute pericarditis.
+function concaveStT(t, jStart, end, stVec, tVec, axisOffsetDeg = 0) {
+    if (t < jStart || t >= end) return [0, 0, 0];
+    const p = (t - jStart) / (end - jStart);
+    const stEnv = p < 0.6 ? Math.sin(Math.PI * Math.min(1, p / 0.6) * 0.65) ** 0.72 : Math.max(0, 1 - (p - 0.6) / 0.4);
+    const tEnv = p > 0.3 ? Math.sin(Math.PI * ((p - 0.3) / 0.7)) ** 2 : 0;
+    const vec = [
+        stVec[0] * stEnv + tVec[0] * tEnv,
+        stVec[1] * stEnv + tVec[1] * tEnv,
+        stVec[2] * stEnv + tVec[2] * tEnv,
+    ];
+    return rotateFrontal(vec, axisOffsetDeg * 0.45);
 }
 
 function evalKnots(t, knots) {
@@ -150,9 +213,17 @@ function tWaveEnvelope(t, start, width = 160, base = [0.28, 0.38, 0.10], axisOff
     return rotateFrontal(base.map(v => v * env), axisOffsetDeg * 0.45);
 }
 
+export const RHYTHM_CATEGORIES = [
+    { id: 'rytme', label: 'Rytme & Overledning' },
+    { id: 'iskemi', label: 'Iskæmi & Perikarditis' },
+    { id: 'elektrolyt', label: 'Elektrolyt & Medicin' },
+    { id: 'struktur', label: 'Belastning & Hypertrofi' },
+];
+
 export const RHYTHM_PRESETS = {
     normal: {
         id: 'normal',
+        category: 'rytme',
         label: 'Normal sinusrytme',
         short: 'Normal',
         badge: '75 bpm · Normal',
@@ -165,6 +236,7 @@ export const RHYTHM_PRESETS = {
     },
     afib: {
         id: 'afib',
+        category: 'rytme',
         label: 'Atrieflimren',
         short: 'Atrieflimren',
         badge: 'Ingen P · f-takker',
@@ -177,6 +249,7 @@ export const RHYTHM_PRESETS = {
     },
     aflutter: {
         id: 'aflutter',
+        category: 'rytme',
         label: 'Atrieflagren',
         short: 'Atrieflagren',
         badge: '300/min savtak · Reentry',
@@ -189,6 +262,7 @@ export const RHYTHM_PRESETS = {
     },
     av_block_1: {
         id: 'av_block_1',
+        category: 'rytme',
         label: '1. grads AV-blok',
         short: 'AV-blok I',
         badge: 'PR > 200 ms',
@@ -199,8 +273,35 @@ export const RHYTHM_PRESETS = {
         ecgHallmarks: 'Forlænget, men konstant PR-interval (> 0,20 s / > 5 små tern). Hver P-tak efterfølges fortsat af et smalt QRS-kompleks.',
         recommendedLeads: ['II', 'V1'],
     },
+    av_block_2_wenckebach: {
+        id: 'av_block_2_wenckebach',
+        category: 'rytme',
+        label: '2. grads AV-blok Mobitz type I (Wenckebach)',
+        short: 'Mobitz I',
+        badge: 'Progressiv PR · P udfald',
+        color: '#d97706',
+        qrsWindow: [155, 235],
+        causeTitle: 'Tiltagende træthed i AV-knuden (Wenckebach)',
+        causeBody: 'AV-knuden udtrættes for hvert slag og leder impulsen langsommere og langsommere igennem, indtil én P-tak til sidst blokeres helt og et QRS-kompleks springes over.',
+        ecgHallmarks: 'Progressivt længere PR-interval (130 → 215 ms) efterfulgt af en ikke-overledt P-tak uden QRS, hvorefter cyklussen starter forfra.',
+        recommendedLeads: ['II', 'V1'],
+    },
+    av_block_2_mobitz2: {
+        id: 'av_block_2_mobitz2',
+        category: 'rytme',
+        label: '2. grads AV-blok Mobitz type II',
+        short: 'Mobitz II',
+        badge: 'Konstant PR · Pludseligt udfald',
+        color: '#dc2626',
+        qrsWindow: [160, 235],
+        causeTitle: 'Intermitterende totalstop i His-Purkinje-systemet',
+        causeBody: 'Overledningen under AV-knuden (His-bundtet / begge grenbundter) svigter pludseligt uden varsel — uden forudgående træthed eller gradvis forsinkelse.',
+        ecgHallmarks: 'Konstant PR-interval på alle overledte slag (140 ms), afbrudt af pludseligt udfald af et QRS efter en normal P-tak. Høj risiko for progression til 3. grads AV-blok.',
+        recommendedLeads: ['II', 'V1'],
+    },
     av_block_3: {
         id: 'av_block_3',
+        category: 'rytme',
         label: '3. grads AV-blok (totalblok)',
         short: 'AV-blok III',
         badge: 'Totalblok · Dissociation',
@@ -213,6 +314,7 @@ export const RHYTHM_PRESETS = {
     },
     lbbb: {
         id: 'lbbb',
+        category: 'rytme',
         label: 'Venstresidigt grenblok (LBBB)',
         short: 'LBBB',
         badge: 'Bredt QRS ≥ 120 ms · V6 +',
@@ -225,6 +327,7 @@ export const RHYTHM_PRESETS = {
     },
     rbbb: {
         id: 'rbbb',
+        category: 'rytme',
         label: 'Højresidigt grenblok (RBBB)',
         short: 'RBBB',
         badge: 'Bredt QRS ≥ 120 ms · rsR′ V1',
@@ -237,6 +340,7 @@ export const RHYTHM_PRESETS = {
     },
     vt: {
         id: 'vt',
+        category: 'rytme',
         label: 'Ventrikulær takykardi (VT)',
         short: 'VT',
         badge: '150 bpm · Bredt QRS',
@@ -249,6 +353,7 @@ export const RHYTHM_PRESETS = {
     },
     vf: {
         id: 'vf',
+        category: 'rytme',
         label: 'Ventrikelflimren (VF)',
         short: 'VF',
         badge: 'Hjertestop · Kaotisk',
@@ -258,6 +363,123 @@ export const RHYTHM_PRESETS = {
         causeBody: 'Utallige kaotiske mikro-reentry-bølger løber usynkront gennem begge ventrikler. Hjertet står mekanisk stille (hjertestop) uden pumpefunktion.',
         ecgHallmarks: 'Fuldstændig uregelmæssige, bølgede svingninger af varierende amplitude uden identificerbare P-takker, QRS-komplekser eller T-takker. Kræver øjeblikkelig defibrillering og HLR.',
         recommendedLeads: ['II', 'V1', 'V2'],
+    },
+    anterior_stemi: {
+        id: 'anterior_stemi',
+        category: 'iskemi',
+        label: 'Akut forvægsinfarkt (Anterior STEMI)',
+        short: 'Ant. STEMI',
+        badge: 'ST-elevation V1–V4 · LAD',
+        color: '#dc2626',
+        qrsWindow: [210, 300],
+        causeTitle: 'Okklusion af LAD (venstre forvægsarterie)',
+        causeBody: 'Transmural iskæmi i venstre ventrikels forvæg og forreste septum danner en skadesstrøm rettet direkte fremad mod brystkassen (V2–V4).',
+        ecgHallmarks: 'Kraftig konveks ST-elevation i V1–V4, begyndende patologiske Q-takker og reciprok ST-depression i de inferiore afledninger (II, III, aVF).',
+        recommendedLeads: ['V2', 'V3', 'V4', 'II'],
+    },
+    inferior_stemi: {
+        id: 'inferior_stemi',
+        category: 'iskemi',
+        label: 'Akut inferiort infarkt (Inferior STEMI)',
+        short: 'Inf. STEMI',
+        badge: 'ST-elevation II, III, aVF · RCA',
+        color: '#b91c1c',
+        qrsWindow: [210, 300],
+        causeTitle: 'Okklusion i RCA / inferiore bagvæg',
+        causeBody: 'Transmural iskæmi i hjertets nedre diafragmatiske flade giver en skadesstrøm, der peger nedad mod II, III og aVF og væk fra venstre skulder (aVL).',
+        ecgHallmarks: 'Markant ST-elevation i II, III og aVF (oftest III > II ved RCA) samt tidlig reciprok ST-depression i aVL og I.',
+        recommendedLeads: ['II', 'III', 'aVF', 'aVL'],
+    },
+    posterior_stemi: {
+        id: 'posterior_stemi',
+        category: 'iskemi',
+        label: 'Akut posteriort infarkt (Posterior STEMI)',
+        short: 'Post. STEMI',
+        badge: 'ST-depr. & høj R i V1–V3',
+        color: '#e11d48',
+        qrsWindow: [210, 300],
+        causeTitle: 'Transmural iskæmi i venstre ventrikels bagvæg',
+        causeBody: 'Skadesstrømmen peger bagud (mod V7–V9). Set fra de forreste brystkasseafledninger (V1–V3) ses infarktet spejlvendt.',
+        ecgHallmarks: 'Horisontal ST-depression og unormalt høje brede R-takker i V1–V3 (spejlbillede af posterior Q-tak og ST-elevation) — bekræftes med V7–V9.',
+        recommendedLeads: ['V1', 'V2', 'V3'],
+    },
+    pericarditis: {
+        id: 'pericarditis',
+        category: 'iskemi',
+        label: 'Akut perikarditis',
+        short: 'Perikarditis',
+        badge: 'Diffus konkav ST-el. · PR-depr.',
+        color: '#0d9488',
+        qrsWindow: [210, 300],
+        causeTitle: 'Diffus inflammation i hjertesækken (perikardiet)',
+        causeBody: 'Overfladisk irritation af hele epikardiet omkring både højre og venstre ventrikel giver en diffus udadrettet skadesstrøm uden respekt for kranspulsåre-grænser.',
+        ecgHallmarks: 'Udbredt konkav ("hængekøje-formet") ST-elevation i mange afledninger (I, II, aVF, V2–V6), samtidig PR-depression og reciprok ST-depression i aVR.',
+        recommendedLeads: ['II', 'V5', 'V6', 'aVR'],
+    },
+    long_qtc: {
+        id: 'long_qtc',
+        category: 'elektrolyt',
+        label: 'Forlænget QTc (Medicin / Kanalopati)',
+        short: 'Langt QTc',
+        badge: 'QTc > 500 ms · TdP-risiko',
+        color: '#7c3aed',
+        qrsWindow: [210, 295],
+        causeTitle: 'Forsinket ventrikulær repolarisering (IKr-blokade)',
+        causeBody: 'Psykofarmaka (fx visse antipsykotika/antidepressiva) eller genetik bremser kalium-udstrømningen i fase 3, så aktionspotentialet og T-takken forlænges markant.',
+        ecgHallmarks: 'Forlænget QT-interval (QTc > 480–500 ms; bred forsinket T-tak). Risiko for tidlige efterdepolariseringer og Torsades de Pointes.',
+        recommendedLeads: ['II', 'V2', 'V5'],
+    },
+    hyperkalemia: {
+        id: 'hyperkalemia',
+        category: 'elektrolyt',
+        label: 'Hyperkaliæmi',
+        short: 'Hyper-K⁺',
+        badge: 'Spids telt-T · Bredt QRS',
+        color: '#ea580c',
+        qrsWindow: [205, 335],
+        causeTitle: 'Forhøjet ekstracellulært kalium påvirker hele myokardiet',
+        causeBody: 'Øget K⁺ uden for cellerne sænker hvilemembranpotentialet, hæmmer hurtige Na⁺-kanaler (bredere QRS, svag P-tak) og accelererer fase-3 repolariseringen.',
+        ecgHallmarks: 'Høje, smalle og spidse symmetriske ("teltformede") T-takker, affladet/manglende P-tak og gradvist breddeøget QRS.',
+        recommendedLeads: ['V2', 'V3', 'V4', 'II'],
+    },
+    hypokalemia: {
+        id: 'hypokalemia',
+        category: 'elektrolyt',
+        label: 'Hypokaliæmi',
+        short: 'Hypo-K⁺',
+        badge: 'Flad T + stor U-tak',
+        color: '#0284c7',
+        qrsWindow: [195, 280],
+        causeTitle: 'Lavt K⁺ forsinker sen repolarisering i Purkinje-fibre',
+        causeBody: 'Mangel på kalium nedsætter repolariseringsstrømmen (IKr) og øger efter-repolariseringen i his-purkinje-systemet, så T- og U-tak smelter sammen.',
+        ecgHallmarks: 'Diskret ST-depression, affladiget/inverteret T-tak og prominerende U-takker (tydeligst i prækordialafledningerne V2–V4) — giver falsk langt "QU"-interval.',
+        recommendedLeads: ['V2', 'V3', 'V4', 'II'],
+    },
+    lvh: {
+        id: 'lvh',
+        category: 'struktur',
+        label: 'Venstre ventrikelhypertrofi (LVH)',
+        short: 'LVH + strain',
+        badge: 'Sokolow > 35 mm · LV-strain',
+        color: '#b45309',
+        qrsWindow: [210, 308],
+        causeTitle: 'Fortykket muskelvæg i venstre ventrikel',
+        causeBody: 'Langvarig trykbelastning (fx hypertension eller aortastenose) giver øget muskelmasse i venstre ventrikel og subendokardiel relativ iskæmi under repolariseringen.',
+        ecgHallmarks: 'Meget høje R-takker i V5–V6/I/aVL og dybe S-takker i V1–V2 (Sokolow-Lyon ≥ 35 mm) samt asymmetrisk ST-depression og T-inversion ("LV-strain") i I, aVL, V5–V6.',
+        recommendedLeads: ['V1', 'V5', 'V6', 'aVL'],
+    },
+    pulmonary_embolism: {
+        id: 'pulmonary_embolism',
+        category: 'struktur',
+        label: 'Akut lungeemboli (Cor Pulmonale)',
+        short: 'Lungeemboli',
+        badge: 'SI QIII TIII · RV-strain',
+        color: '#0369a1',
+        qrsWindow: [210, 304],
+        causeTitle: 'Akut trykbelastning og dilatation af højre ventrikel',
+        causeBody: 'En blodprop i lungekredsløbet øger trykket akut i højre ventrikel. Den elektriske akse drejer mod højre (RAD), og højre væg får belastningsiskæmi.',
+        ecgHallmarks: 'Sinustakykardi, højredrejet akse og evt. SI QIII TIII-mønster (dyb S i I, Q-tak i III, negativ T i III) samt T-inversion i V1–V3.',
+        recommendedLeads: ['I', 'III', 'V1', 'V2'],
     },
 };
 
@@ -321,6 +543,99 @@ const RHYTHM_PHASES = {
         { id: 'ventricular', start: 400, end: 600, time: 500, short: 'Ureg. sving', name: 'Varierende bølgeamplitude', color: '#dc2626', description: 'Udsvingene skifter konstant form, frekvens og højde i alle afledninger.' },
         { id: 'ventricular', start: 600, end: 800, time: 700, short: 'Stødbar', name: 'Hjertestop · Stødbar rytme', color: '#b91c1c', description: 'Akut livstruende tilstand, der kræver øjeblikkelig defibrillering (DC-stød) og HLR.' },
     ],
+    av_block_2_wenckebach: [
+        { id: 'p', start: 25, end: 80, time: 52, short: 'P₁', name: 'Første sinus-P-tak', color: '#527dd0', description: 'Første sinusimpuls når AV-knuden.' },
+        { id: 'pr', start: 80, end: 155, time: 118, short: 'PR₁ 130 ms', name: 'Kort AV-forsinkelse', color: '#d97706', description: 'Første PR-interval (130 ms) slipper hurtigt igennem AV-knuden.' },
+        { id: 'ventricular', start: 155, end: 235, time: 195, short: 'QRS₁', name: 'Første QRS-kompleks', color: '#d66650', description: 'Smalt normalt QRS.' },
+        { id: 't', start: 245, end: 315, time: 280, short: 'T₁', name: 'Repolarisering 1', color: '#379984', description: 'Normal T-tak efter slag 1.' },
+        { id: 'p2', start: 320, end: 375, time: 348, short: 'P₂', name: 'Anden sinus-P-tak', color: '#527dd0', description: 'Næste impuls rammer en mere udtrættet AV-knude.' },
+        { id: 'pr', start: 375, end: 535, time: 455, short: 'PR₂ 215 ms', name: 'Progressivt forlænget PR', color: '#d97706', description: 'AV-knuden udtrættes yderligere — PR stiger til 215 ms!' },
+        { id: 'ventricular', start: 535, end: 615, time: 575, short: 'QRS₂', name: 'Andet QRS-kompleks', color: '#d66650', description: 'Smalt QRS efter tydeligt længere pause.' },
+        { id: 't', start: 615, end: 690, time: 652, short: 'T₂', name: 'Repolarisering 2', color: '#379984', description: 'Repolarisering før det tredje udfald.' },
+        { id: 'pr', start: 705, end: 765, time: 735, short: 'P₃ blokeret', name: 'Tredje P-tak blokeres', color: '#c43b47', description: 'AV-knuden er nu helt refraktær: P₃ blokeres uden efterfølgende QRS (Wenckebach-udfaldet).' },
+    ],
+    av_block_2_mobitz2: [
+        { id: 'p', start: 20, end: 70, time: 45, short: 'P₁', name: 'Første P-tak', color: '#527dd0', description: 'Sinusknuden fyrer regelmæssigt.' },
+        { id: 'pr', start: 70, end: 160, time: 115, short: 'PR 140 ms', name: 'Konstant PR-interval', color: '#d48817', description: 'Fast PR-interval på 140 ms uden progressiv forlængelse.' },
+        { id: 'ventricular', start: 160, end: 235, time: 198, short: 'QRS₁', name: 'Første QRS', color: '#d66650', description: 'Slag 1 ledes ned i ventriklerne.' },
+        { id: 't', start: 238, end: 305, time: 270, short: 'T₁', name: 'T-tak 1', color: '#379984', description: 'Normal repolarisering.' },
+        { id: 'p2', start: 310, end: 360, time: 335, short: 'P₂', name: 'Anden P-tak', color: '#527dd0', description: 'Ny regelmæssig P-tak.' },
+        { id: 'pr', start: 360, end: 450, time: 405, short: 'PR 140 ms', name: 'Samme konstante PR (140 ms)', color: '#d48817', description: 'PR ændrer sig IKKE før det pludselige udfald.' },
+        { id: 'ventricular', start: 450, end: 525, time: 488, short: 'QRS₂', name: 'Andet QRS', color: '#d66650', description: 'Normalt overledt QRS.' },
+        { id: 't', start: 528, end: 595, time: 560, short: 'T₂', name: 'T-tak 2', color: '#379984', description: 'Normal T-tak.' },
+        { id: 'pr', start: 610, end: 800, time: 640, short: 'Pludselig blok', name: 'Pludseligt udfald efter P₃', color: '#dc2626', description: 'His-Purkinje-systemet svigter brat uden varsel: P₃ giver intet QRS.' },
+    ],
+    anterior_stemi: [
+        PHASES[0],
+        PHASES[1],
+        { id: 'ventricular', start: 210, end: 300, time: 255, short: 'QRS (Q V2–V4)', name: 'Forvægs-depolarisering & Q-tak', color: '#dc2626', description: 'Tab af elektrisk aktiv forvægsmuskel giver begyndende patologisk Q-tak/lav R i V2–V4.' },
+        { id: 'st', start: 295, end: 410, time: 345, short: 'ST-elevation', name: 'Skadesstrøm fremad (V1–V4)', color: '#dc2626', description: 'Transmural forvægsiskæmi danner en kraftig anterior skadesstrøm (+z) mod V2–V4 og reciprok depression i II/III/aVF.' },
+        { id: 't', start: 410, end: 575, time: 475, short: 'Hyperakut T', name: 'Konveks ST-T (Pardee-bølge)', color: '#dc2626', description: 'Den forhøjede ST-bølge smelter direkte sammen med en bred hyperakut T-tak.' },
+        { id: 'rest', start: 575, end: 800, time: 685, short: 'Hvile', name: 'Elektrisk hvile', color: '#73828a', description: 'Baseline før næste slag.' },
+    ],
+    inferior_stemi: [
+        PHASES[0],
+        PHASES[1],
+        { id: 'ventricular', start: 210, end: 300, time: 255, short: 'QRS (Q inf.)', name: 'Inferior depolarisering', color: '#b91c1c', description: 'Tidlig inferior Q-tak peger væk fra den infarktramte nedre væg.' },
+        { id: 'st', start: 295, end: 415, time: 348, short: 'ST ↑ II/III/aVF', name: 'Skadesstrøm nedad (RCA)', color: '#b91c1c', description: 'Den inferiore skadesstrøm peger direkte ned mod II, III og aVF og giver reciprok ST-depression i aVL og I.' },
+        { id: 't', start: 415, end: 565, time: 475, short: 'ST-T', name: 'Inferior repolarisering', color: '#b91c1c', description: 'Forlænget iskæmisk ST-T-elevation inferiort.' },
+        { id: 'rest', start: 565, end: 800, time: 680, short: 'Hvile', name: 'Elektrisk hvile', color: '#73828a', description: 'Baseline før næste slag.' },
+    ],
+    posterior_stemi: [
+        PHASES[0],
+        PHASES[1],
+        { id: 'ventricular', start: 210, end: 300, time: 252, short: 'Høj R (V1–V3)', name: 'Spejlvendt Q -> høj R i V1–V3', color: '#e11d48', description: 'Tab af posterior aktivering giver manglende modvektor, så den forreste R-tak i V1–V2 bliver påfaldende høj og bred.' },
+        { id: 'st', start: 295, end: 465, time: 365, short: 'ST ↓ V1–V3', name: 'Skadesstrøm bagud (−z)', color: '#e11d48', description: 'Bagvægsinfarktet sender skadesstrømmen bagud mod ryggen — V1–V3 registrerer derfor en horisontal ST-depression.' },
+        { id: 't', start: 465, end: 575, time: 515, short: 'T-tak', name: 'Terminal opadgående T i V2', color: '#379984', description: 'Efterfølges ofte af en oprejst T-tak i V1–V3.' },
+        { id: 'rest', start: 575, end: 800, time: 685, short: 'Hvile', name: 'Elektrisk hvile', color: '#73828a', description: 'Baseline før næste slag.' },
+    ],
+    pericarditis: [
+        PHASES[0],
+        { id: 'pr', start: 145, end: 210, time: 185, short: 'PR-depr.', name: 'Atriel irritation (PR ↓)', color: '#0d9488', description: 'Subepikardial atrieirritation giver en diskret nedadgående PR-depression (og PR-elevation i aVR).' },
+        ...PHASES.slice(2, 5),
+        { id: 'st', start: 295, end: 425, time: 355, short: 'Konkav ST ↑', name: 'Diffus hængekøje-ST-elevation', color: '#0d9488', description: 'Betændelse i hele perikardiet løfter J-punktet konkavt ("hængekøje") i både ekstremitets- og prækordialafledninger (modsat aVR).' },
+        { id: 't', start: 425, end: 560, time: 490, short: 'T', name: 'Konkordant T-tak', color: '#379984', description: 'T-takken forbliver opadrettet efter den konkave ST-elevation.' },
+        { id: 'rest', start: 560, end: 800, time: 680, short: 'Hvile', name: 'Elektrisk hvile', color: '#73828a', description: 'Baseline før næste slag.' },
+    ],
+    long_qtc: [
+        PHASES[0],
+        PHASES[1],
+        ...PHASES.slice(2, 5),
+        { id: 'st', start: 295, end: 430, time: 365, short: 'Langt plateau', name: 'Forlænget aktionspotentiale (fase 2–3)', color: '#7c3aed', description: 'Kaliumkanaler åbner for langsomt -> ST-segmentet trækker ud, før repolariseringen kan gå i gang.' },
+        { id: 't', start: 430, end: 740, time: 585, short: 'Sen T (QTc ↑)', name: 'Forsinket bred T-tak', color: '#7c3aed', description: 'QT-intervallet når helt ud til ~530 ms (QTc ≈ 590 ms), hvilket øger sårbarheden for R-på-T-ekstrasystoler (Torsades).' },
+        { id: 'rest', start: 740, end: 800, time: 770, short: 'Hvile', name: 'Kort hvilepause', color: '#73828a', description: 'Meget kort diastolisk pause før næste P-tak.' },
+    ],
+    hyperkalemia: [
+        { id: 'p', start: 90, end: 170, time: 130, short: 'Flad P', name: 'Affladiget atrieaktivering', color: '#ea580c', description: 'Atriemyokardiet er særligt følsomt for højt kalium — P-takken bliver lav eller helt usynlig.' },
+        PHASES[1],
+        { id: 'ventricular', start: 205, end: 335, time: 270, short: 'Bredt QRS', name: 'Langsommere natriumkanaler', color: '#ea580c', description: 'Højt ekstracellulært K⁺ inaktiverer en del Na⁺-kanaler og gør QRS bredere (130 ms).' },
+        { id: 't', start: 350, end: 490, time: 420, short: 'Teltformet T', name: 'Accelereret spids repolarisering', color: '#ea580c', description: 'Høj K⁺-permeabilitet i fase 3 giver en smal, høj og spids symmetrisk "teltformet" T-tak.' },
+        { id: 'rest', start: 490, end: 800, time: 645, short: 'Hvile', name: 'Elektrisk hvile', color: '#73828a', description: 'Hviletilstand før næste slag.' },
+    ],
+    hypokalemia: [
+        PHASES[0],
+        PHASES[1],
+        ...PHASES.slice(2, 5),
+        { id: 'st', start: 285, end: 365, time: 325, short: 'ST ↓', name: 'Diskret ST-depression', color: '#0284c7', description: 'Tidlig repolarisering starter svagt nedadrettet.' },
+        { id: 't', start: 365, end: 480, time: 420, short: 'Flad T', name: 'Affladiget T-tak', color: '#0284c7', description: 'Lavt kalium dæmper fase-3 repolariseringen, så T-takken bliver flad.' },
+        { id: 't', start: 480, end: 660, time: 570, short: 'Stor U-tak', name: 'Prominerende U-tak (Purkinje)', color: '#0284c7', description: 'Sen efter-repolarisering i Purkinje-fibrene skaber en stor U-tak lige efter den flade T-tak.' },
+        { id: 'rest', start: 660, end: 800, time: 730, short: 'Hvile', name: 'Elektrisk hvile', color: '#73828a', description: 'Diastolisk hvile.' },
+    ],
+    lvh: [
+        PHASES[0],
+        PHASES[1],
+        { id: 'ventricular', start: 210, end: 308, time: 262, short: 'Kæmpe LV-QRS', name: 'Massiv venstresidig depolarisering', color: '#b45309', description: 'Den fortykkede venstre ventrikelvæg skaber en ekstra kraftig elektrisk vektor bagud mod venstre (dyb S i V1, høj R i V5–V6).' },
+        { id: 'st', start: 310, end: 410, time: 360, short: 'ST-strain', name: 'Sekundær LV-strain', color: '#b45309', description: 'Den tykke væg får subendokardiel belastning og ændret repolarisering med asymmetrisk ST-depression.' },
+        { id: 't', start: 410, end: 565, time: 475, short: 'Inv. T', name: 'Diskordant T-inversion (V5–V6/I)', color: '#379984', description: 'Repolariseringen vender om i de venstresidige afledninger og giver negativ asymmetrisk T-tak i V5–V6, I og aVL.' },
+        { id: 'rest', start: 565, end: 800, time: 680, short: 'Hvile', name: 'Elektrisk hvile', color: '#73828a', description: 'Baseline før næste slag.' },
+    ],
+    pulmonary_embolism: [
+        PHASES[0],
+        PHASES[1],
+        { id: 'ventricular', start: 210, end: 304, time: 256, short: 'RAD · SI QIII', name: 'Højredrejet akse & RV-belastning', color: '#0369a1', description: 'Akut trykstigning i højre ventrikel drejer vektoren mod højre/nedad -> terminal S-tak i I og Q-tak i III.' },
+        { id: 't', start: 365, end: 535, time: 450, short: 'T III / V1–V3 ↓', name: 'RV-strain repolarisering', color: '#0369a1', description: 'Trykbelastning på højre ventrikel vender repolariseringen -> T-inversion i III samt V1–V3 (fuldender SI QIII TIII).' },
+        { id: 'rest', start: 535, end: 800, time: 670, short: 'Hvile', name: 'Elektrisk hvile', color: '#73828a', description: 'Sinustakykardi ses hyppigt klinisk ved akut LE.' },
+    ],
 };
 
 export function phasesForRhythm(rhythmId = 'normal') {
@@ -362,6 +677,79 @@ export function traceSegmentsForRhythm(rhythmId = 'normal') {
     if (rhythmId === 'vf') {
         return [
             { from: 0, to: 800, color: '#b91c1c' },
+        ];
+    }
+    if (rhythmId === 'av_block_2_wenckebach') {
+        return [
+            { from: 25, to: 80, color: '#527dd0' },
+            { from: 155, to: 235, color: '#d97706' },
+            { from: 245, to: 315, color: '#379984' },
+            { from: 320, to: 375, color: '#527dd0' },
+            { from: 535, to: 615, color: '#d97706' },
+            { from: 615, to: 690, color: '#379984' },
+            { from: 705, to: 765, color: '#c43b47' },
+        ];
+    }
+    if (rhythmId === 'av_block_2_mobitz2') {
+        return [
+            { from: 20, to: 70, color: '#527dd0' },
+            { from: 160, to: 235, color: '#d48817' },
+            { from: 238, to: 305, color: '#379984' },
+            { from: 310, to: 360, color: '#527dd0' },
+            { from: 450, to: 525, color: '#d48817' },
+            { from: 528, to: 595, color: '#379984' },
+            { from: 610, to: 665, color: '#dc2626' },
+        ];
+    }
+    if (rhythmId === 'anterior_stemi' || rhythmId === 'inferior_stemi' || rhythmId === 'posterior_stemi') {
+        const col = RHYTHM_PRESETS[rhythmId].color;
+        return [
+            { from: 80, to: 180, color: '#527dd0' },
+            { from: 210, to: 300, color: col },
+            { from: 300, to: 565, color: col },
+        ];
+    }
+    if (rhythmId === 'pericarditis') {
+        return [
+            { from: 80, to: 205, color: '#0d9488' },
+            { from: 210, to: 295, color: '#d66650' },
+            { from: 295, to: 555, color: '#0d9488' },
+        ];
+    }
+    if (rhythmId === 'long_qtc') {
+        return [
+            { from: 80, to: 180, color: '#527dd0' },
+            { from: 210, to: 295, color: '#d66650' },
+            { from: 295, to: 740, color: '#7c3aed' },
+        ];
+    }
+    if (rhythmId === 'hyperkalemia') {
+        return [
+            { from: 90, to: 170, color: '#94a3b8' },
+            { from: 205, to: 335, color: '#ea580c' },
+            { from: 350, to: 490, color: '#ea580c' },
+        ];
+    }
+    if (rhythmId === 'hypokalemia') {
+        return [
+            { from: 75, to: 165, color: '#527dd0' },
+            { from: 195, to: 280, color: '#d66650' },
+            { from: 285, to: 480, color: '#379984' },
+            { from: 480, to: 660, color: '#0284c7' },
+        ];
+    }
+    if (rhythmId === 'lvh') {
+        return [
+            { from: 80, to: 180, color: '#527dd0' },
+            { from: 210, to: 308, color: '#b45309' },
+            { from: 310, to: 565, color: '#379984' },
+        ];
+    }
+    if (rhythmId === 'pulmonary_embolism') {
+        return [
+            { from: 75, to: 165, color: '#527dd0' },
+            { from: 210, to: 304, color: '#0369a1' },
+            { from: 365, to: 535, color: '#0369a1' },
         ];
     }
     const atrialColor = rhythmId === 'afib' ? '#7c5cbf' : rhythmId === 'aflutter' ? '#2b78b8' : '#527dd0';
@@ -423,6 +811,91 @@ export function traceAnnotationsForRhythm(rhythmId = 'normal', lead = 'II') {
     if (rhythmId === 'vf') {
         return [
             { id: 'vf-chaos', type: 'bracket', from: 40, to: 760, label: 'Kaotisk flimren · ingen P, QRS eller T', color: '#b91c1c' },
+        ];
+    }
+    if (rhythmId === 'av_block_2_wenckebach') {
+        return [
+            { id: 'wenck-pr1', type: 'bracket', from: 25, to: 155, label: 'PR₁ 130 ms', color: '#d97706' },
+            { id: 'wenck-pr2', type: 'bracket', from: 320, to: 535, label: 'PR₂ 215 ms (længere!)', color: '#d97706' },
+            { id: 'wenck-drop', type: 'marker', time: 735, label: 'P₃ blokeret', color: '#c43b47' },
+        ];
+    }
+    if (rhythmId === 'av_block_2_mobitz2') {
+        return [
+            { id: 'mob2-pr1', type: 'bracket', from: 20, to: 160, label: 'PR₁ 140 ms', color: '#d48817' },
+            { id: 'mob2-pr2', type: 'bracket', from: 310, to: 450, label: 'PR₂ 140 ms (fast)', color: '#d48817' },
+            { id: 'mob2-drop', type: 'marker', time: 640, label: 'P₃ → pludseligt udfald', color: '#dc2626' },
+        ];
+    }
+    if (rhythmId === 'anterior_stemi') {
+        return [
+            {
+                id: 'ant-st',
+                type: 'bracket',
+                from: 295,
+                to: 470,
+                label: (lead === 'II' || lead === 'III' || lead === 'aVF') ? 'Reciprok ST-depression' : 'Konveks ST-elevation (V1–V4)',
+                color: '#dc2626',
+            },
+        ];
+    }
+    if (rhythmId === 'inferior_stemi') {
+        return [
+            {
+                id: 'inf-st',
+                type: 'bracket',
+                from: 295,
+                to: 470,
+                label: (lead === 'aVL' || lead === 'I') ? 'Reciprok ST-depression (aVL)' : 'ST-elevation (II, III, aVF)',
+                color: '#b91c1c',
+            },
+        ];
+    }
+    if (rhythmId === 'posterior_stemi') {
+        return [
+            {
+                id: 'post-st',
+                type: 'bracket',
+                from: 295,
+                to: 465,
+                label: (lead === 'V1' || lead === 'V2' || lead === 'V3') ? 'Spejl: høj R + ST-depr.' : 'Posterior skadesstrøm (−z)',
+                color: '#e11d48',
+            },
+        ];
+    }
+    if (rhythmId === 'pericarditis') {
+        return [
+            { id: 'peri-pr', type: 'marker', time: 185, label: lead === 'aVR' ? 'PR ↑ (aVR)' : 'PR-depr.', color: '#0d9488' },
+            { id: 'peri-st', type: 'bracket', from: 295, to: 455, label: lead === 'aVR' ? 'Reciprok ST ↓ (aVR)' : 'Diffus konkav ST-elev.', color: '#0d9488' },
+        ];
+    }
+    if (rhythmId === 'long_qtc') {
+        return [
+            { id: 'lqt-qt', type: 'bracket', from: 210, to: 740, label: 'QT 530 ms · QTc ~590 ms (> 500)', color: '#7c3aed' },
+        ];
+    }
+    if (rhythmId === 'hyperkalemia') {
+        return [
+            { id: 'hk-qrs', type: 'bracket', from: 205, to: 335, label: 'Bredt QRS (130 ms)', color: '#ea580c' },
+            { id: 'hk-t', type: 'marker', time: 420, label: 'Spids teltformet T', color: '#ea580c' },
+        ];
+    }
+    if (rhythmId === 'hypokalemia') {
+        return [
+            { id: 'hypk-t', type: 'marker', time: 420, label: 'Flad T', color: '#379984' },
+            { id: 'hypk-u', type: 'bracket', from: 485, to: 655, label: 'Prominerende U-tak', color: '#0284c7' },
+        ];
+    }
+    if (rhythmId === 'lvh') {
+        return [
+            { id: 'lvh-qrs', type: 'bracket', from: 210, to: 308, label: (lead === 'V1' || lead === 'V2') ? 'Dyb S (LVH)' : 'Høj R · Sokolow > 35 mm', color: '#b45309' },
+            { id: 'lvh-str', type: 'marker', time: 455, label: 'LV-strain (ST-T)', color: '#379984' },
+        ];
+    }
+    if (rhythmId === 'pulmonary_embolism') {
+        return [
+            { id: 'pe-qrs', type: 'bracket', from: 210, to: 304, label: lead === 'I' ? 'Dyb S i I (RAD)' : lead === 'III' ? 'Q i III + inv. T' : 'RV-belastning (SI QIII TIII)', color: '#0369a1' },
+            { id: 'pe-t', type: 'marker', time: 450, label: 'RV-strain T ↓', color: '#0369a1' },
         ];
     }
     return [];
@@ -518,6 +991,104 @@ export function cardiacVector(time, axisOffsetDeg = 0, rhythmId = 'normal') {
             0.22 * Math.cos(w * 5 + 0.9) + 0.24 * Math.sin(w * 8 + 0.2) + 0.15 * Math.sin(w * 12 + 2.9) + 0.08 * Math.cos(w * 15 + 1.6),
         ];
         return rotateFrontal(vec, axisOffsetDeg);
+    }
+
+    if (rhythmId === 'av_block_2_wenckebach') {
+        if (t >= 25 && t < 80) return pWaveEnvelope(t, 25, 55);
+        if (t >= 155 && t < 235) return rotateFrontal(sampleNormalQrs(t, 155, 80), axisOffsetDeg);
+        if (t >= 245 && t < 315) return tWaveEnvelope(t, 245, 70, [0.22, 0.32, 0.08], axisOffsetDeg);
+        if (t >= 320 && t < 375) return pWaveEnvelope(t, 320, 55);
+        if (t >= 535 && t < 615) return rotateFrontal(sampleNormalQrs(t, 535, 80), axisOffsetDeg);
+        if (t >= 615 && t < 690) return tWaveEnvelope(t, 615, 75, [0.22, 0.32, 0.08], axisOffsetDeg);
+        if (t >= 705 && t < 765) return pWaveEnvelope(t, 705, 60);
+        return [0, 0, 0];
+    }
+
+    if (rhythmId === 'av_block_2_mobitz2') {
+        if (t >= 20 && t < 70) return pWaveEnvelope(t, 20, 50);
+        if (t >= 160 && t < 235) return rotateFrontal(sampleNormalQrs(t, 160, 75), axisOffsetDeg);
+        if (t >= 238 && t < 305) return tWaveEnvelope(t, 238, 67, [0.22, 0.32, 0.08], axisOffsetDeg);
+        if (t >= 310 && t < 360) return pWaveEnvelope(t, 310, 50);
+        if (t >= 450 && t < 525) return rotateFrontal(sampleNormalQrs(t, 450, 75), axisOffsetDeg);
+        if (t >= 528 && t < 595) return tWaveEnvelope(t, 528, 67, [0.22, 0.32, 0.08], axisOffsetDeg);
+        if (t >= 610 && t < 665) return pWaveEnvelope(t, 610, 55);
+        return [0, 0, 0];
+    }
+
+    if (rhythmId === 'anterior_stemi') {
+        const p = t >= 80 && t < 180 ? pWaveEnvelope(t, 80, 100) : [0, 0, 0];
+        const qrs = t >= 210 && t < 300 ? rotateFrontal(evalKnots(t, ANTERIOR_STEMI_QRS_KNOTS), axisOffsetDeg) : [0, 0, 0];
+        const stT = t >= 285 && t < 575 ? stemiInjuryStT(t, 285, 575, [0.08, -0.26, 0.56], axisOffsetDeg) : [0, 0, 0];
+        return addVec(p, addVec(qrs, stT));
+    }
+
+    if (rhythmId === 'inferior_stemi') {
+        const p = t >= 80 && t < 180 ? pWaveEnvelope(t, 80, 100) : [0, 0, 0];
+        const qrs = t >= 210 && t < 300 ? rotateFrontal(evalKnots(t, INFERIOR_STEMI_QRS_KNOTS), axisOffsetDeg) : [0, 0, 0];
+        const stT = t >= 285 && t < 565 ? stemiInjuryStT(t, 285, 565, [-0.10, 0.46, 0.05], axisOffsetDeg) : [0, 0, 0];
+        return addVec(p, addVec(qrs, stT));
+    }
+
+    if (rhythmId === 'posterior_stemi') {
+        const p = t >= 80 && t < 180 ? pWaveEnvelope(t, 80, 100) : [0, 0, 0];
+        const qrs = t >= 210 && t < 300 ? rotateFrontal(evalKnots(t, POSTERIOR_STEMI_QRS_KNOTS), axisOffsetDeg) : [0, 0, 0];
+        const stDepr = t >= 285 && t < 485 ? discordantStT(t, 285, 485, [0.06, 0.08, -0.42], axisOffsetDeg) : [0, 0, 0];
+        const uprightT = t >= 445 && t < 575 ? tWaveEnvelope(t, 445, 130, [0.16, 0.22, 0.26], axisOffsetDeg) : [0, 0, 0];
+        return addVec(addVec(p, qrs), addVec(stDepr, uprightT));
+    }
+
+    if (rhythmId === 'pericarditis') {
+        const p = t >= 80 && t < 180 ? pWaveEnvelope(t, 80, 100) : [0, 0, 0];
+        const prDepr = t >= 145 && t < 210
+            ? rotateFrontal([-0.05, -0.09, -0.04].map(v => v * Math.sin(Math.PI * (t - 145) / 65)), axisOffsetDeg)
+            : [0, 0, 0];
+        const qrs = t >= 210 && t < 300 ? rotateFrontal(evalKnots(t, QRS_KNOTS), axisOffsetDeg) : [0, 0, 0];
+        const stT = t >= 290 && t < 560 ? concaveStT(t, 290, 560, [0.24, 0.28, 0.22], [0.22, 0.28, 0.12], axisOffsetDeg) : [0, 0, 0];
+        return addVec(addVec(p, prDepr), addVec(qrs, stT));
+    }
+
+    if (rhythmId === 'long_qtc') {
+        if (t >= 80 && t < 180) return pWaveEnvelope(t, 80, 100);
+        if (t >= 210 && t < 295) return rotateFrontal(sampleNormalQrs(t, 210, 85), axisOffsetDeg);
+        if (t >= 295 && t < 430) return rotateFrontal([0.015, 0.02, 0.01], axisOffsetDeg);
+        if (t >= 430 && t < 740) return tWaveEnvelope(t, 430, 310, [0.26, 0.36, 0.12], axisOffsetDeg);
+        return [0, 0, 0];
+    }
+
+    if (rhythmId === 'hyperkalemia') {
+        if (t >= 90 && t < 170) return pWaveEnvelope(t, 90, 80).map(v => v * 0.25);
+        if (t >= 205 && t < 335) return rotateFrontal(evalKnots(t, HYPERK_QRS_KNOTS), axisOffsetDeg);
+        if (t >= 350 && t < 490) {
+            const env = Math.sin(Math.PI * (t - 350) / 140) ** 4;
+            return rotateFrontal([0.52 * env, 0.74 * env, 0.68 * env], axisOffsetDeg * 0.45);
+        }
+        return [0, 0, 0];
+    }
+
+    if (rhythmId === 'hypokalemia') {
+        if (t >= 75 && t < 165) return pWaveEnvelope(t, 75, 90);
+        if (t >= 195 && t < 280) return rotateFrontal(sampleNormalQrs(t, 195, 85), axisOffsetDeg);
+        if (t >= 285 && t < 375) {
+            const st = Math.sin(Math.PI * (t - 285) / 90);
+            return rotateFrontal([-0.07 * st, -0.10 * st, -0.06 * st], axisOffsetDeg * 0.45);
+        }
+        const flatT = t >= 365 && t < 480 ? tWaveEnvelope(t, 365, 115, [0.06, 0.08, 0.04], axisOffsetDeg) : [0, 0, 0];
+        const uWave = t >= 480 && t < 660 ? tWaveEnvelope(t, 480, 180, [0.22, 0.30, 0.18], axisOffsetDeg) : [0, 0, 0];
+        return addVec(flatT, uWave);
+    }
+
+    if (rhythmId === 'lvh') {
+        if (t >= 80 && t < 180) return pWaveEnvelope(t, 80, 100);
+        if (t >= 210 && t < 308) return rotateFrontal(evalKnots(t, LVH_KNOTS), axisOffsetDeg);
+        if (t >= 305 && t < 565) return discordantStT(t, 305, 565, [-0.28, -0.10, 0.22], axisOffsetDeg);
+        return [0, 0, 0];
+    }
+
+    if (rhythmId === 'pulmonary_embolism') {
+        if (t >= 75 && t < 165) return pWaveEnvelope(t, 75, 90).map((v, i) => (i === 1 ? v * 1.35 : v));
+        if (t >= 210 && t < 304) return rotateFrontal(evalKnots(t, PE_KNOTS), axisOffsetDeg);
+        if (t >= 365 && t < 535) return tWaveEnvelope(t, 365, 170, [0.14, -0.18, -0.28], axisOffsetDeg);
+        return [0, 0, 0];
     }
 
     return [0, 0, 0];

@@ -49,6 +49,15 @@ export const CHEST_PATHOLOGY_MARKERS = {
     vtFocus: { x: 696, y: 396, color: '#dc2626' },
 };
 
+export const CHEST_PATHOLOGY_ZONES = {
+    anterior_stemi: { d: 'M 476 476 C 536 538 642 532 692 464 C 646 504 548 510 476 476 Z', labelX: 592, labelY: 506, color: '#dc2626' },
+    inferior_stemi: { cx: 560, cy: 482, rx: 120, ry: 48, rotate: -6, dashed: true, color: '#b91c1c' },
+    posterior_stemi: { d: 'M 500 256 C 556 226 650 236 692 292 C 648 262 562 256 500 256 Z', labelX: 604, labelY: 250, color: '#e11d48' },
+    pericarditis: { cx: 525, cy: 382, rx: 204, ry: 158, rotate: -6, color: '#0d9488' },
+    lvh: { d: 'M 548 240 C 668 232 746 314 736 418 C 722 505 628 548 528 525 C 618 504 686 456 688 380 C 690 302 628 258 548 240 Z', color: '#b45309' },
+    pulmonary_embolism: { cx: 388, cy: 404, rx: 95, ry: 134, rotate: 10, color: '#0369a1' },
+};
+
 export const CHEST_PATHOLOGY_PATHS = {
     lbbbTransseptal: [
         'M 432 346 Q 488 332 552 316',

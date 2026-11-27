@@ -10,6 +10,7 @@ import {
     PATHOLOGY_CALLOUTS,
     PATHOLOGY_MARKERS,
     PATHOLOGY_PATHS,
+    PATHOLOGY_ZONES,
     PHASE_COLORS,
     REPOLARIZATION_ARROWS,
     REPOLARIZATION_WALLS
@@ -150,13 +151,24 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
     const isAfib = rhythmId === 'afib';
     const isFlutter = rhythmId === 'aflutter';
     const isAv1 = rhythmId === 'av_block_1';
+    const isWenck = rhythmId === 'av_block_2_wenckebach';
+    const isMobitz2 = rhythmId === 'av_block_2_mobitz2';
     const isAv3 = rhythmId === 'av_block_3';
     const isLbbb = rhythmId === 'lbbb';
     const isRbbb = rhythmId === 'rbbb';
     const isVt = rhythmId === 'vt';
     const isVf = rhythmId === 'vf';
+    const isAntStemi = rhythmId === 'anterior_stemi';
+    const isInfStemi = rhythmId === 'inferior_stemi';
+    const isPostStemi = rhythmId === 'posterior_stemi';
+    const isPericarditis = rhythmId === 'pericarditis';
+    const isLongQtc = rhythmId === 'long_qtc';
+    const isHyperK = rhythmId === 'hyperkalemia';
+    const isHypoK = rhythmId === 'hypokalemia';
+    const isLvh = rhythmId === 'lvh';
+    const isPe = rhythmId === 'pulmonary_embolism';
 
-    // Atrial choreography per rhythm
+    // Atrial choreography per rhythm (multi-beat support for Wenckebach, Mobitz II, AV block III)
     let saActive = time >= 72 && time < 195;
     let saStart = 80;
     let saEnd = 195;
@@ -178,26 +190,53 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
         } else {
             saActive = false;
         }
+    } else if (isWenck) {
+        if (time >= 20 && time < 84) { saStart = 25; saEnd = 80; saActive = true; }
+        else if (time >= 315 && time < 380) { saStart = 320; saEnd = 375; saActive = true; }
+        else if (time >= 700 && time < 770) { saStart = 705; saEnd = 765; saActive = true; }
+        else saActive = false;
+    } else if (isMobitz2) {
+        if (time >= 16 && time < 74) { saStart = 20; saEnd = 70; saActive = true; }
+        else if (time >= 306 && time < 364) { saStart = 310; saEnd = 360; saActive = true; }
+        else if (time >= 606 && time < 668) { saStart = 610; saEnd = 665; saActive = true; }
+        else saActive = false;
+    } else if (isHypoK || isPe) {
+        saStart = 75;
+        saEnd = 168;
+        saActive = time >= 70 && time < 168;
+    } else if (isHyperK) {
+        saStart = 90;
+        saEnd = 172;
+        saActive = time >= 85 && time < 172;
     }
 
-    const saPulse = saActive ? Math.sin(clamp01((time - saStart) / 55) * Math.PI) : 0;
+    const saPulse = saActive ? Math.sin(clamp01((time - saStart) / 55) * Math.PI) * (isHyperK ? 0.35 : 1) : 0;
     const atrialLineActive = saActive;
-    const atrialLineFade = saActive && time >= saEnd - 22 ? clamp01(1 - (time - (saEnd - 22)) / 22) : 1;
+    const atrialLineFade = (saActive && time >= saEnd - 22 ? clamp01(1 - (time - (saEnd - 22)) / 22) : 1) * (isHyperK ? 0.35 : 1);
     const saBridgeProgress = clamp01((time - saStart) / 22);
     const internodalProgress = clamp01((time - saStart) / 62);
     const bachmannProgress = clamp01((time - saStart - 2) / 46);
     const bachmannBranchProgress = clamp01((time - saStart - 34) / 38);
 
     const normalAtrialGlow = saActive
-        ? Math.sin(clamp01((time - saStart) / (saEnd - saStart)) * Math.PI) * 0.24
+        ? Math.sin(clamp01((time - saStart) / (saEnd - saStart)) * Math.PI) * (isHyperK ? 0.08 : 0.24)
         : 0;
     const afibGlow = isAfib ? (0.14 + 0.08 * Math.sin((time / 800) * Math.PI * 12)) : 0;
     const flutterGlow = isFlutter ? (0.14 + 0.08 * Math.sin(((time % 200) / 200) * Math.PI * 2)) : 0;
     const atrialGlow = Math.max(normalAtrialGlow, afibGlow, flutterGlow);
 
     // AV node timing
-    const avStart = isAv1 ? 125 : isAv3 ? 0 : 160;
-    const avEnd = isAv1 ? 298 : isAv3 ? 0 : 215;
+    let avStart = isAv1 ? 125 : isAv3 ? 0 : 160;
+    let avEnd = isAv1 ? 298 : isAv3 ? 0 : 215;
+    if (isWenck) {
+        if (time >= 75 && time < 160) { avStart = 78; avEnd = 158; }
+        else if (time >= 370 && time < 540) { avStart = 374; avEnd = 538; }
+        else { avStart = 755; avEnd = 795; }
+    } else if (isMobitz2) {
+        if (time >= 66 && time < 164) { avStart = 68; avEnd = 162; }
+        else if (time >= 356 && time < 454) { avStart = 358; avEnd = 452; }
+        else { avStart = 656; avEnd = 715; }
+    }
     const avActive = (isVt || isVf) ? false : (isAv1 || !isAv3) ? (time >= avStart && time < avEnd) : false;
     const avPulse = avActive ? Math.sin(clamp01((time - avStart) / Math.max(1, avEnd - avStart)) * Math.PI) : 0;
     const av3BlockedFlash = isAv3
@@ -206,24 +245,34 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
             time >= 545 && time < 605 ? Math.sin(clamp01((time - 545) / 60) * Math.PI) : 0
         )
         : 0;
+    const wenckBlockedFlash = isWenck && time >= 752 && time < 800
+        ? Math.sin(clamp01((time - 752) / 48) * Math.PI)
+        : 0;
+    const mobitz2BlockedFlash = isMobitz2 && time >= 665 && time < 795
+        ? Math.sin(clamp01((time - 665) / 130) * Math.PI)
+        : 0;
 
     // Ventricular timing per rhythm
-    const qrsStart = isAv1 ? 290 : isAv3 ? 220 : 210;
-    const qrsEnd = (isLbbb || isRbbb) ? 355 : isAv3 ? 340 : isAv1 ? 380 : 300;
+    let qrsStart = isAv1 ? 290 : isAv3 ? 220 : isHyperK ? 205 : isHypoK ? 195 : 210;
+    let qrsEnd = (isLbbb || isRbbb) ? 355 : isAv3 ? 340 : isAv1 ? 380 : isHyperK ? 335 : isHypoK ? 280 : isLvh ? 308 : isPe ? 304 : isLongQtc ? 295 : 300;
+    if (isWenck) {
+        if (time >= 480) { qrsStart = 535; qrsEnd = 615; }
+        else { qrsStart = 155; qrsEnd = 235; }
+    } else if (isMobitz2) {
+        if (time >= 400) { qrsStart = 450; qrsEnd = 525; }
+        else { qrsStart = 160; qrsEnd = 235; }
+    }
     const vtLocal = time % 400;
     const vtBeatActive = isVt && vtLocal >= 15 && vtLocal < 188;
     const vtBeatFade = vtBeatActive && vtLocal >= 164 ? clamp01(1 - (vtLocal - 164) / 24) : 1;
 
     const ventLineActive = !isVt && !isVf && time >= qrsStart && time < qrsEnd + 20;
     const ventLineFade = ventLineActive && time >= qrsEnd - 5 ? clamp01(1 - (time - (qrsEnd - 5)) / 25) : 1;
+    const qrsLen = Math.max(40, qrsEnd - qrsStart);
     const hisProgress = isAv3 ? 0 : clamp01((time - qrsStart) / 14);
-    const bundleProgress = isAv3
-        ? clamp01((time - qrsStart - 10) / 55)
-        : clamp01((time - qrsStart - 10) / 42);
-    const fascicleProgress = isAv3 ? clamp01((time - qrsStart - 20) / 30) : clamp01((time - qrsStart - 22) / 22);
-    const purkinjeProgress = isAv3
-        ? clamp01((time - qrsStart - 45) / 55)
-        : clamp01((time - qrsStart - 48) / 38);
+    const bundleProgress = clamp01((time - qrsStart - 10) / (qrsLen * 0.45));
+    const fascicleProgress = clamp01((time - qrsStart - 18) / (qrsLen * 0.25));
+    const purkinjeProgress = clamp01((time - qrsStart - qrsLen * 0.48) / (qrsLen * 0.42));
 
     const septalGlow = (isVt || isVf)
         ? 0
@@ -231,9 +280,9 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
             ? Math.sin(clamp01((time - qrsStart - 2) / 40) * Math.PI) * 0.20
             : 0;
 
-    // Differential chamber glows for LBBB / RBBB / VT / VF vs symmetric
-    const ventBaseGlow = (!isVt && !isVf && time >= qrsStart + 20 && time < qrsEnd + 10)
-        ? Math.sin(clamp01((time - (qrsStart + 20)) / (qrsEnd - qrsStart - 10)) * Math.PI * 0.65) * 0.18
+    // Differential chamber glows for LBBB / RBBB / VT / VF / LVH / PE vs symmetric
+    const ventBaseGlow = (!isVt && !isVf && time >= qrsStart + 16 && time < qrsEnd + 10)
+        ? Math.sin(clamp01((time - (qrsStart + 16)) / (qrsEnd - qrsStart - 6)) * Math.PI * 0.65) * 0.18
         : 0;
     const vfShimmer = isVf ? 0.16 + 0.08 * Math.sin((time / 800) * Math.PI * 10) : 0;
     const rvDepolGlow = isVf
@@ -244,7 +293,7 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
                 ? (time >= 220 && time < 305 ? Math.sin(clamp01((time - 220) / 85) * Math.PI) * 0.20 : 0)
                 : isRbbb
                     ? (time >= 270 && time < 365 ? Math.sin(clamp01((time - 270) / 95) * Math.PI) * 0.22 : 0)
-                    : ventBaseGlow;
+                    : ventBaseGlow * (isPe ? 1.45 : isLvh ? 0.65 : 1);
     const lvDepolGlow = isVf
         ? vfShimmer
         : isVt
@@ -253,10 +302,17 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
                 ? (time >= 255 && time < 365 ? Math.sin(clamp01((time - 255) / 110) * Math.PI) * 0.22 : 0)
                 : isRbbb
                     ? (time >= 222 && time < 305 ? Math.sin(clamp01((time - 222) / 83) * Math.PI) * 0.19 : 0)
-                    : ventBaseGlow;
+                    : ventBaseGlow * (isLvh ? 1.55 : isPe ? 0.72 : 1);
 
-    const repolStart = isAv1 ? 460 : isAv3 ? 355 : isLbbb ? 395 : isRbbb ? 390 : 380;
-    const repolDur = isAv3 ? 120 : 160;
+    let repolStart = isAv1 ? 460 : isAv3 ? 355 : isLbbb ? 395 : isRbbb ? 390 : isLongQtc ? 430 : isHyperK ? 350 : isHypoK ? 365 : isLvh ? 410 : isPe ? 365 : 380;
+    let repolDur = isAv3 ? 120 : isLongQtc ? 310 : isHyperK ? 140 : isHypoK ? 115 : isLvh ? 155 : isPe ? 170 : 160;
+    if (isWenck) {
+        if (time >= 480) { repolStart = 615; repolDur = 75; }
+        else { repolStart = 245; repolDur = 70; }
+    } else if (isMobitz2) {
+        if (time >= 400) { repolStart = 528; repolDur = 67; }
+        else { repolStart = 238; repolDur = 67; }
+    }
     const isRepol = isVf
         ? false
         : isVt
@@ -275,7 +331,9 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
     const stGlow = (!isVt && !isVf && time >= qrsEnd && time < repolStart + repolDur)
         ? (time < repolStart ? 0.11 : 0.11 * (1 - repolP))
         : 0;
-    const repolGlow = isRepol ? Math.sin(repolP * Math.PI) * 0.16 : 0;
+    const repolGlow = isRepol ? Math.sin(repolP * Math.PI) * (isHypoK ? 0.08 : isHyperK ? 0.24 : 0.16) : 0;
+    const uWaveGlow = isHypoK && time >= 480 && time < 660 ? Math.sin(clamp01((time - 480) / 180) * Math.PI) : 0;
+    const injuryPulse = 0.22 + (time >= 290 && time < 565 ? Math.sin(clamp01((time - 290) / 275) * Math.PI) * 0.42 : 0);
 
     return (
         <g transform={`translate(${IMG_X} ${IMG_Y}) scale(${IMG_SCALE})`}>
@@ -460,12 +518,12 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
                 </g>
             )}
 
-            {/* PR delay: AV node golden physiological or prolonged hold */}
-            {(avActive || isAv1) && !isAv3 && !isVt && !isVf && (
+            {/* PR delay: AV node golden physiological or prolonged hold (AV1 / Wenckebach beat 2) */}
+            {(avActive || isAv1 || (isWenck && time >= 370 && time < 540)) && !isAv3 && !isVt && !isVf && (
                 <g>
-                    <circle cx={CONDUCTION_PATHS.avNode.cx} cy={CONDUCTION_PATHS.avNode.cy} r={(isAv1 ? 68 : 52) + avPulse * 32} fill={PHASE_COLORS.pr} opacity={isAv1 ? (0.30 + avPulse * 0.36) : (0.32 + avPulse * 0.24)} filter={`url(#${prefix}-soft-blur)`} />
-                    <path d={CONDUCTION_PATHS.avNode.outline} fill={PHASE_COLORS.pr} opacity={isAv1 ? (0.58 + avPulse * 0.38) : (0.68 + avPulse * 0.24)} />
-                    {isAv1 && (
+                    <circle cx={CONDUCTION_PATHS.avNode.cx} cy={CONDUCTION_PATHS.avNode.cy} r={((isAv1 || (isWenck && time >= 370)) ? 68 : 52) + avPulse * 32} fill={PHASE_COLORS.pr} opacity={(isAv1 || (isWenck && time >= 370)) ? (0.30 + avPulse * 0.36) : (0.32 + avPulse * 0.24)} filter={`url(#${prefix}-soft-blur)`} />
+                    <path d={CONDUCTION_PATHS.avNode.outline} fill={PHASE_COLORS.pr} opacity={(isAv1 || (isWenck && time >= 370)) ? (0.58 + avPulse * 0.38) : (0.68 + avPulse * 0.24)} />
+                    {(isAv1 || (isWenck && time >= 370 && time < 545)) && (
                         <g style={{ pointerEvents: 'none' }}>
                             <circle cx={PATHOLOGY_MARKERS.avDelay.x} cy={PATHOLOGY_MARKERS.avDelay.y} r="50" fill="none" stroke="#f3dfb4" strokeWidth="10" opacity="0.82" />
                             <circle
@@ -474,15 +532,89 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
                                 r="50"
                                 fill="none"
                                 pathLength="1"
-                                stroke="#d48817"
+                                stroke={isWenck ? '#d97706' : '#d48817'}
                                 strokeWidth="10"
                                 strokeLinecap="round"
-                                strokeDasharray={`${time >= 130 && time <= 298 ? clamp01((time - 130) / 160) : 0.25} 1`}
+                                strokeDasharray={`${isWenck ? clamp01((time - 374) / 160) : (time >= 130 && time <= 298 ? clamp01((time - 130) / 160) : 0.25)} 1`}
                                 transform={`rotate(-90 ${PATHOLOGY_MARKERS.avDelay.x} ${PATHOLOGY_MARKERS.avDelay.y})`}
-                                opacity={time >= 120 && time <= 310 ? 0.96 : 0.45}
+                                opacity={isWenck ? 0.96 : (time >= 120 && time <= 310 ? 0.96 : 0.45)}
                             />
                         </g>
                     )}
+                </g>
+            )}
+            {/* Anatomical ischemia / inflammation / hypertrophy / overload highlights */}
+            {(isAntStemi || isPostStemi) && (
+                <ellipse
+                    cx={(isAntStemi ? PATHOLOGY_ZONES.anterior_stemi : PATHOLOGY_ZONES.posterior_stemi).cx}
+                    cy={(isAntStemi ? PATHOLOGY_ZONES.anterior_stemi : PATHOLOGY_ZONES.posterior_stemi).cy}
+                    rx={(isAntStemi ? PATHOLOGY_ZONES.anterior_stemi : PATHOLOGY_ZONES.posterior_stemi).rx}
+                    ry={(isAntStemi ? PATHOLOGY_ZONES.anterior_stemi : PATHOLOGY_ZONES.posterior_stemi).ry}
+                    transform={`rotate(${(isAntStemi ? PATHOLOGY_ZONES.anterior_stemi : PATHOLOGY_ZONES.posterior_stemi).rotate} ${(isAntStemi ? PATHOLOGY_ZONES.anterior_stemi : PATHOLOGY_ZONES.posterior_stemi).cx} ${(isAntStemi ? PATHOLOGY_ZONES.anterior_stemi : PATHOLOGY_ZONES.posterior_stemi).cy})`}
+                    fill={isAntStemi ? '#dc2626' : '#e11d48'}
+                    fillOpacity={injuryPulse * 0.45}
+                    stroke={isAntStemi ? '#dc2626' : '#e11d48'}
+                    strokeWidth="8"
+                    strokeDasharray={isPostStemi ? '16 12' : undefined}
+                    opacity="0.88"
+                    style={{ pointerEvents: 'none' }}
+                />
+            )}
+            {isInfStemi && (
+                <path
+                    d={PATHOLOGY_ZONES.inferior_stemi.d}
+                    fill="#b91c1c"
+                    fillOpacity={injuryPulse * 0.48}
+                    stroke="#b91c1c"
+                    strokeWidth="8"
+                    opacity="0.90"
+                    style={{ pointerEvents: 'none' }}
+                />
+            )}
+            {isPericarditis && (
+                <path
+                    d={PATHOLOGY_ZONES.pericarditis.d}
+                    fill="none"
+                    stroke="#0d9488"
+                    strokeWidth="22"
+                    strokeLinecap="round"
+                    strokeDasharray="24 16"
+                    opacity={0.42 + injuryPulse * 0.52}
+                    filter={`url(#${prefix}-soft-blur)`}
+                    style={{ pointerEvents: 'none' }}
+                />
+            )}
+            {isLvh && (
+                <path
+                    d={PATHOLOGY_ZONES.lvh.d}
+                    fill="#b45309"
+                    fillOpacity={0.20 + lvDepolGlow * 1.1}
+                    stroke="#b45309"
+                    strokeWidth="7"
+                    opacity="0.85"
+                    style={{ pointerEvents: 'none' }}
+                />
+            )}
+            {isPe && (
+                <ellipse
+                    cx={PATHOLOGY_ZONES.pulmonary_embolism.cx}
+                    cy={PATHOLOGY_ZONES.pulmonary_embolism.cy}
+                    rx={PATHOLOGY_ZONES.pulmonary_embolism.rx}
+                    ry={PATHOLOGY_ZONES.pulmonary_embolism.ry}
+                    transform={`rotate(${PATHOLOGY_ZONES.pulmonary_embolism.rotate} ${PATHOLOGY_ZONES.pulmonary_embolism.cx} ${PATHOLOGY_ZONES.pulmonary_embolism.cy})`}
+                    fill="#0369a1"
+                    fillOpacity={0.18 + rvDepolGlow * 1.1}
+                    stroke="#0369a1"
+                    strokeWidth="7"
+                    strokeDasharray="16 10"
+                    opacity="0.86"
+                    style={{ pointerEvents: 'none' }}
+                />
+            )}
+            {isHypoK && uWaveGlow > 0.04 && (
+                <g fill="none" strokeLinecap="round" opacity={uWaveGlow * 0.92} filter={`url(#${prefix}-impulse-glow)`} style={{ pointerEvents: 'none' }}>
+                    <path d={CONDUCTION_PATHS.rvPurkinje} stroke="#0284c7" strokeWidth="16" />
+                    <path d={CONDUCTION_PATHS.lvPurkinje} stroke="#0284c7" strokeWidth="18" />
                 </g>
             )}
 
@@ -630,16 +762,27 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
                 </g>
             )}
 
-            {/* Blocked AV arrival stop-ring halo */}
-            {isAv3 && av3BlockedFlash > 0.05 && (
+            {/* Blocked AV / His-Purkinje arrival stop-ring halos */}
+            {((isAv3 && av3BlockedFlash > 0.05) || (isWenck && wenckBlockedFlash > 0.05)) && (
                 <circle
                     cx={PATHOLOGY_MARKERS.avTotalBlock.x}
                     cy={PATHOLOGY_MARKERS.avTotalBlock.y}
-                    r={44 + av3BlockedFlash * 52}
+                    r={44 + (isAv3 ? av3BlockedFlash : wenckBlockedFlash) * 52}
                     fill="none"
-                    stroke="#c43b47"
+                    stroke={isWenck ? '#d97706' : '#c43b47'}
                     strokeWidth="8"
-                    opacity={av3BlockedFlash * 0.72}
+                    opacity={(isAv3 ? av3BlockedFlash : wenckBlockedFlash) * 0.72}
+                />
+            )}
+            {isMobitz2 && mobitz2BlockedFlash > 0.05 && (
+                <circle
+                    cx={PATHOLOGY_MARKERS.mobitz2Block.x}
+                    cy={PATHOLOGY_MARKERS.mobitz2Block.y}
+                    r={38 + mobitz2BlockedFlash * 48}
+                    fill="none"
+                    stroke="#dc2626"
+                    strokeWidth="8"
+                    opacity={mobitz2BlockedFlash * 0.78}
                 />
             )}
 
@@ -649,10 +792,11 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
                     <g fill="none" strokeLinecap="round" strokeLinejoin="round" filter={`url(#${prefix}-impulse-glow)`}>
                         {[REPOLARIZATION_WALLS.lv, REPOLARIZATION_WALLS.rv].map((wallPairs, idx) => {
                             const waveD = smoothWavePath(wallPairs, repolP);
+                            const repolCol = isHyperK ? '#ea580c' : isLongQtc ? '#7c3aed' : PHASE_COLORS.t;
                             return (
                                 <g key={idx}>
-                                    <path d={waveD} stroke={PHASE_COLORS.t} strokeWidth="24" opacity="0.26" />
-                                    <path d={waveD} stroke={PHASE_COLORS.t} strokeWidth="10" opacity="0.88" />
+                                    <path d={waveD} stroke={repolCol} strokeWidth={isHyperK ? 28 : 24} opacity={isHyperK ? 0.36 : 0.26} />
+                                    <path d={waveD} stroke={repolCol} strokeWidth={isHyperK ? 12 : 10} opacity="0.88" />
                                     <path d={waveD} stroke="#ffffff" strokeWidth="3.5" opacity="0.58" />
                                 </g>
                             );
@@ -661,7 +805,7 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
                     {REPOLARIZATION_ARROWS.map(pair => {
                         const [ox, oy] = pair.from;
                         const [ix, iy] = pair.to;
-                        const flip = isVt || (isLbbb && pair.id !== 'rv1');
+                        const flip = isVt || ((isLbbb || isLvh) && pair.id !== 'rv1') || (isPe && pair.id === 'rv1');
                         const posCoord = flip ? [ix, iy] : [ox, oy];
                         const negCoord = flip ? [ox, oy] : [ix, iy];
                         return (
@@ -704,6 +848,8 @@ function ConductionOverlay({ time, prefix, rhythmId = 'normal' }) {
 
 function PathologyForeground({ time, rhythmId = 'normal' }) {
     if (rhythmId === 'normal') return null;
+    const isWenck = rhythmId === 'av_block_2_wenckebach';
+    const isMobitz2 = rhythmId === 'av_block_2_mobitz2';
     const isAv3 = rhythmId === 'av_block_3';
     const isLbbb = rhythmId === 'lbbb';
     const isRbbb = rhythmId === 'rbbb';
@@ -717,11 +863,23 @@ function PathologyForeground({ time, rhythmId = 'normal' }) {
             time >= 545 && time < 605 ? Math.sin(clamp01((time - 545) / 60) * Math.PI) : 0
         )
         : 0;
+    const wenckBlockedFlash = isWenck && time >= 748 && time < 800
+        ? Math.sin(clamp01((time - 748) / 52) * Math.PI)
+        : 0.22;
+    const mobitz2BlockedFlash = isMobitz2 && time >= 660 && time < 795
+        ? Math.sin(clamp01((time - 660) / 135) * Math.PI)
+        : 0.25;
     const callouts = PATHOLOGY_CALLOUTS[rhythmId] || [];
 
     return (
         <g style={{ pointerEvents: 'none' }}>
             <g transform={`translate(${IMG_X} ${IMG_Y}) scale(${IMG_SCALE})`}>
+                {isWenck && (
+                    <BlockMark x={PATHOLOGY_MARKERS.avDelay.x} y={PATHOLOGY_MARKERS.avDelay.y} color="#d97706" pulse={wenckBlockedFlash} />
+                )}
+                {isMobitz2 && (
+                    <BlockMark x={PATHOLOGY_MARKERS.mobitz2Block.x} y={PATHOLOGY_MARKERS.mobitz2Block.y} color="#dc2626" pulse={mobitz2BlockedFlash} />
+                )}
                 {isAv3 && (
                     <>
                         <line x1="336" y1="472" x2="354" y2="546" stroke="#c43b47" strokeWidth="10" strokeLinecap="round" opacity="0.88" />

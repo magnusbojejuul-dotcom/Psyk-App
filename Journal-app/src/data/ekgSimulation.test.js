@@ -239,3 +239,67 @@ test('arrhythmias and conduction blocks match expected clinical ECG morphologies
         assert.ok(peak > 0.25 && peak < 1.2, `VF quarter ${start}ms peak ${peak} should oscillate visibly`);
     }
 });
+
+test('all 20 clinical conditions have valid categories and characteristic waveforms', () => {
+    assert.equal(Object.keys(RHYTHM_PRESETS).length, 20);
+    for (const preset of Object.values(RHYTHM_PRESETS)) {
+        assert.ok(['rytme', 'iskemi', 'elektrolyt', 'struktur'].includes(preset.category), `${preset.id} missing valid category`);
+    }
+
+    // Mobitz I (Wenckebach): progressive PR lengthening (QRS1 around 195ms, QRS2 around 575ms) + blocked P3 at 735ms
+    assert.ok(voltageAt('II', 52, 0, 'av_block_2_wenckebach') > 0.12);
+    assert.ok(voltageAt('II', 195, 0, 'av_block_2_wenckebach') > 0.8);
+    assert.ok(voltageAt('II', 575, 0, 'av_block_2_wenckebach') > 0.8);
+    assert.ok(voltageAt('II', 735, 0, 'av_block_2_wenckebach') > 0.12);
+    assert.deepEqual(cardiacVector(780, 0, 'av_block_2_wenckebach'), [0, 0, 0]);
+
+    // Mobitz II: constant PR on two conducted beats (QRS1 ~198ms, QRS2 ~488ms) + dropped P3 around 638ms
+    assert.ok(voltageAt('II', 198, 0, 'av_block_2_mobitz2') > 0.8);
+    assert.ok(voltageAt('II', 488, 0, 'av_block_2_mobitz2') > 0.8);
+    assert.ok(voltageAt('II', 638, 0, 'av_block_2_mobitz2') > 0.12);
+    assert.deepEqual(cardiacVector(720, 0, 'av_block_2_mobitz2'), [0, 0, 0]);
+
+    // Anterior STEMI: ST elevation in V2/V3 (> +0.35mV at 350ms) and reciprocal ST depression in II/III
+    assert.ok(voltageAt('V2', 350, 0, 'anterior_stemi') > 0.35);
+    assert.ok(voltageAt('V3', 350, 0, 'anterior_stemi') > 0.35);
+    assert.ok(voltageAt('III', 350, 0, 'anterior_stemi') < -0.15);
+
+    // Inferior STEMI: ST elevation in II/III/aVF (III > II) and reciprocal ST depression in aVL
+    assert.ok(voltageAt('II', 350, 0, 'inferior_stemi') > 0.25);
+    assert.ok(voltageAt('III', 350, 0, 'inferior_stemi') > voltageAt('II', 350, 0, 'inferior_stemi'));
+    assert.ok(voltageAt('aVL', 350, 0, 'inferior_stemi') < -0.15);
+
+    // Posterior STEMI: tall anterior R wave + horizontal ST depression in V1-V3
+    assert.ok(voltageAt('V2', 240, 0, 'posterior_stemi') > 0.50);
+    assert.ok(voltageAt('V2', 360, 0, 'posterior_stemi') < -0.25);
+
+    // Pericarditis: PR depression in II, diffuse ST elevation in II and V5, reciprocal ST depression in aVR
+    assert.ok(voltageAt('II', 178, 0, 'pericarditis') < -0.04);
+    assert.ok(voltageAt('II', 340, 0, 'pericarditis') > 0.20);
+    assert.ok(voltageAt('V5', 340, 0, 'pericarditis') > 0.18);
+    assert.ok(voltageAt('aVR', 340, 0, 'pericarditis') < -0.15);
+
+    // Long QTc: prolonged ST segment & late T-wave peak near 585ms
+    assert.ok(voltageAt('II', 370, 0, 'long_qtc') < 0.08);
+    assert.ok(voltageAt('II', 585, 0, 'long_qtc') > 0.30);
+
+    // Hyperkalemia: flattened P wave, broad QRS, tall peaked T wave at 420ms
+    assert.ok(voltageAt('II', 130, 0, 'hyperkalemia') < 0.06);
+    assert.ok(voltageAt('V3', 420, 0, 'hyperkalemia') > 0.70);
+
+    // Hypokalemia: flat T wave at 420ms followed by prominent U wave around 570ms
+    assert.ok(voltageAt('V3', 420, 0, 'hypokalemia') < 0.12);
+    assert.ok(voltageAt('V3', 570, 0, 'hypokalemia') > voltageAt('V3', 420, 0, 'hypokalemia') * 2);
+
+    // LVH: deep S in V1, tall R in V5/V6 (Sokolow-Lyon > 2.8mV), discordant strain ST-T
+    assert.ok(voltageAt('V1', 270, 0, 'lvh') < -1.2);
+    assert.ok(voltageAt('V6', 270, 0, 'lvh') > 1.2);
+    assert.ok(voltageAt('V6', 475, 0, 'lvh') < -0.15);
+
+    // Pulmonary embolism: RAD (> 90 deg), deep terminal S in I, initial Q & inverted T in III + T inversion in V1
+    assert.equal(axisZoneForAngle(meanQrsAngle(0, 'pulmonary_embolism')).id, 'rad');
+    assert.ok(voltageAt('I', 274, 0, 'pulmonary_embolism') < -0.45);
+    assert.ok(voltageAt('III', 222, 0, 'pulmonary_embolism') < -0.20);
+    assert.ok(voltageAt('III', 450, 0, 'pulmonary_embolism') < -0.15);
+    assert.ok(voltageAt('V1', 450, 0, 'pulmonary_embolism') < -0.20);
+});
