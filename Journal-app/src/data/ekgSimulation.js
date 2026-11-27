@@ -538,10 +538,7 @@ const RHYTHM_PHASES = {
         { id: 'rest', start: 0, end: 800, time: 398, short: 'Overgang', name: 'Kontinuerlig ventrikelrytme', color: '#73828a', description: 'Ved monomorf VT er der næsten ingen flad pause mellem slagene.' },
     ],
     vf: [
-        { id: 'ventricular', start: 0, end: 200, time: 100, short: 'VF · Kaos', name: 'Kaotisk ventrikelflimren', color: '#b91c1c', description: 'Utallige små reentry-bølger løber kaotisk gennem ventriklerne — intet samlet QRS eller minutvolumen.' },
-        { id: 'ventricular', start: 200, end: 400, time: 300, short: 'Ingen QRS', name: 'Ingen koordineret aktivering', color: '#b91c1c', description: 'Ingen P-, QRS- eller T-takker kan skelnes i den bølgede basislinje.' },
-        { id: 'ventricular', start: 400, end: 600, time: 500, short: 'Ureg. sving', name: 'Varierende bølgeamplitude', color: '#dc2626', description: 'Udsvingene skifter konstant form, frekvens og højde i alle afledninger.' },
-        { id: 'ventricular', start: 600, end: 800, time: 700, short: 'Stødbar', name: 'Hjertestop · Stødbar rytme', color: '#b91c1c', description: 'Akut livstruende tilstand, der kræver øjeblikkelig defibrillering (DC-stød) og HLR.' },
+        { id: 'ventricular', start: 0, end: 800, time: 100, short: 'VF · Kaos', name: 'Kaotisk ventrikelflimren (ingen faser)', color: '#b91c1c', description: 'Utallige kaotiske mikro-reentry-bølger løber usynkront gennem begge ventrikler. Der findes hverken P-takker, QRS-komplekser, T-takker eller organiseret hjertecyklus — hjertet står mekanisk stille (hjertestop) og kræver øjeblikkelig defibrillering og HLR.' },
     ],
     av_block_2_wenckebach: [
         { id: 'p', start: 25, end: 80, time: 52, short: 'P₁', name: 'Første sinus-P-tak', color: '#527dd0', description: 'Første sinusimpuls når AV-knuden.' },

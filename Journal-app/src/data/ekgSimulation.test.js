@@ -173,7 +173,7 @@ test('Einthoven, Goldberg, and 90-degree orthogonality hold across all rhythm pr
                 close((vector[0] - point[0]) * unit[0] + (vector[1] - point[1]) * unit[1], 0, 1e-9);
             }
         }
-        assert.ok(phasesForRhythm(rhythm.id).length >= 4);
+        assert.ok(phasesForRhythm(rhythm.id).length >= (rhythm.id === 'vf' ? 1 : 4));
         assert.ok(traceSegmentsForRhythm(rhythm.id).length >= 1);
         assert.ok(Array.isArray(traceAnnotationsForRhythm(rhythm.id, 'II')));
         assert.ok(vectorLoopPath('frontal', 480, 474, 100, 0, rhythm.id).startsWith('M'));
@@ -232,7 +232,8 @@ test('arrhythmias and conduction blocks match expected clinical ECG morphologies
     assert.ok(voltageAt('II', 120, 0, 'vt') < -0.85);
     assert.ok(voltageAt('V1', 280, 0, 'vt') < -0.15);
 
-    // VF: continuous chaotic undulating oscillations across all 4 quarters with no organized QRS/flat pause.
+    // VF: continuous chaotic undulating oscillations with no organized phases/QRS/flat pause.
+    assert.equal(phasesForRhythm('vf').length, 1);
     assert.equal(phaseAt(100, 'vf').short, 'VF · Kaos');
     for (const start of [0, 200, 400, 600]) {
         const peak = Math.max(...Array.from({ length: 200 }, (_, i) => Math.abs(voltageAt('II', start + i, 0, 'vf'))));

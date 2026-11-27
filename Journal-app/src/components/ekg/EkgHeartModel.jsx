@@ -237,6 +237,7 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
     const lead = MODEL_LEADS[candidate] ? candidate : 'II';
     const rhythmId = RHYTHM_PRESETS[externalRhythmId] ? externalRhythmId : localRhythmId;
     const activeRhythm = RHYTHM_PRESETS[rhythmId] || RHYTHM_PRESETS.normal;
+    const isVf = rhythmId === 'vf';
     const rhythmPhases = phasesForRhythm(rhythmId);
     const [qrsMin, qrsMax] = activeRhythm.qrsWindow || [210, 300];
     const realCaseId = RHYTHM_TO_CASE[rhythmId] || 'normal_sinus';
@@ -826,26 +827,30 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
                 </aside>
             </div>
 
-            <section className="ehm-timeline" aria-label="Afspilning og faser">
+            <section className="ehm-timeline" aria-label={isVf ? 'Afspilning af kaotisk rytme' : 'Afspilning og faser'}>
                 <div className="ehm-transport">
                     <div className="ehm-play-controls">
                         <button type="button" className="ehm-play" onClick={togglePlay}>
                             {playing ? <Pause size={17} /> : <Play size={17} />}{playing ? 'Pause' : 'Afspil'}
                         </button>
-                        <button type="button" className="ehm-icon-button" aria-label="Forrige fase" onClick={() => step(-1)}><ChevronLeft size={19} /></button>
-                        <button type="button" className="ehm-icon-button" aria-label="Næste fase" onClick={() => step(1)}><ChevronRight size={19} /></button>
-                        <button type="button" className="ehm-icon-button" aria-label="Nulstil hjerteslaget" onClick={() => jump(0)}><RotateCcw size={16} /></button>
+                        {!isVf && (
+                            <>
+                                <button type="button" className="ehm-icon-button" aria-label="Forrige fase" onClick={() => step(-1)}><ChevronLeft size={19} /></button>
+                                <button type="button" className="ehm-icon-button" aria-label="Næste fase" onClick={() => step(1)}><ChevronRight size={19} /></button>
+                            </>
+                        )}
+                        <button type="button" className="ehm-icon-button" aria-label={isVf ? 'Nulstil tidsvinduet' : 'Nulstil hjerteslaget'} onClick={() => jump(0)}><RotateCcw size={16} /></button>
                     </div>
                     <div className="ehm-scrub">
                         <label htmlFor={`${prefix}-time`}>
-                            Træk gennem hjerteslaget <span data-testid="cycle-time">{Math.round(time)} / 800 ms</span>
+                            {isVf ? 'Træk gennem tidsvinduet (kaotisk rytme)' : 'Træk gennem hjerteslaget'} <span data-testid="cycle-time">{Math.round(time)} / 800 ms</span>
                         </label>
-                        <input id={`${prefix}-time`} aria-label="Tid i hjerteslaget" type="range" min="0" max="799" step="1" value={Math.round(time)} onChange={event => jump(Number(event.target.value))} />
+                        <input id={`${prefix}-time`} aria-label={isVf ? 'Tid i optagelsen' : 'Tid i hjerteslaget'} type="range" min="0" max="799" step="1" value={Math.round(time)} onChange={event => jump(Number(event.target.value))} />
                     </div>
                     <label className="ehm-speed">
                         Tempo
                         <select aria-label="Afspilningstempo" value={speed} onChange={event => setSpeed(event.target.value)}>
-                            <option value="study">Læring · QRS på 11 sek.</option>
+                            {!isVf && <option value="study">Læring · QRS på 11 sek.</option>}
                             <option value="0.1">0,1× · langsomt</option>
                             <option value="0.25">0,25× · jævn langsom (rytmer)</option>
                             <option value="0.5">0,5× · langsomt</option>
@@ -854,20 +859,29 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
                     </label>
                 </div>
 
-                <div className="ehm-phase-buttons" style={{ gridTemplateColumns: `repeat(${rhythmPhases.length}, minmax(0, 1fr))` }}>
-                    {rhythmPhases.map((item, index) => (
-                        <button type="button" key={`${item.id}-${index}`} aria-pressed={phase.id === item.id && time >= item.start && time < item.end} onClick={() => jump(item.time)} style={{ '--phase-color': item.color }}>
-                            <span>{String(index + 1).padStart(2, '0')}</span><strong>{item.short}</strong><i />
-                        </button>
-                    ))}
-                </div>
+                {isVf ? (
+                    <div className="ehm-vf-banner" role="note">
+                        <span className="ehm-vf-pill">Hjertestop · Stødbar rytme</span>
+                        <p><strong>Ingen elektriske faser eller hjertecyklus:</strong> Ved ventrikelflimren findes hverken P-tak, QRS eller T-tak — kun kontinuerlig kaotisk flimren uden mekanisk pumpefunktion.</p>
+                    </div>
+                ) : (
+                    <div className="ehm-phase-buttons" style={{ gridTemplateColumns: `repeat(${rhythmPhases.length}, minmax(0, 1fr))` }}>
+                        {rhythmPhases.map((item, index) => (
+                            <button type="button" key={`${item.id}-${index}`} aria-pressed={phase.id === item.id && time >= item.start && time < item.end} onClick={() => jump(item.time)} style={{ '--phase-color': item.color }}>
+                                <span>{String(index + 1).padStart(2, '0')}</span><strong>{item.short}</strong><i />
+                            </button>
+                        ))}
+                    </div>
+                )}
                 <div className="ehm-playback-note">
-                    <label>
-                        <input type="checkbox" checked={qrsOnly} onChange={event => { setQrsOnly(event.target.checked); if (event.target.checked && (time < 210 || time >= 300)) jump(220); }} /> Gentag kun QRS
-                    </label>
-                    <span>{speed === 'study' ? 'Læring: QRS er strakt fra 90 ms til 11 sek. Kurvens tidsakse viser stadig hjertets tid.' : 'Ensartet tempo gennem hele hjerteslaget.'}</span>
+                    {!isVf ? (
+                        <label>
+                            <input type="checkbox" checked={qrsOnly} onChange={event => { setQrsOnly(event.target.checked); if (event.target.checked && (time < 210 || time >= 300)) jump(220); }} /> Gentag kun QRS
+                        </label>
+                    ) : <span />}
+                    <span>{isVf ? 'Kontinuerlig afspilning af det kaotiske flimresignal.' : speed === 'study' ? 'Læring: QRS er strakt fra 90 ms til 11 sek. Kurvens tidsakse viser stadig hjertets tid.' : 'Ensartet tempo gennem hele hjerteslaget.'}</span>
                 </div>
-                <p className="ehm-timeline-hint"><Zap size={13} /> Vælg en fase eller klik direkte på EKG-kurven for at fryse tiden og sammenligne afledninger.</p>
+                <p className="ehm-timeline-hint"><Zap size={13} /> {isVf ? 'Klik på EKG-kurven eller brug skyderen for at fryse et øjebliksbillede og sammenligne afledninger.' : 'Vælg en fase eller klik direkte på EKG-kurven for at fryse tiden og sammenligne afledninger.'}</p>
             </section>
 
             <section className="ehm-comparison">
