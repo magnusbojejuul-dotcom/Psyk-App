@@ -1,4 +1,5 @@
 import React, { useEffect, useId, useMemo, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Play, Pause, RotateCcw, ChevronLeft, ChevronRight, Activity, ArrowRight, Zap, Info, X } from 'lucide-react';
 import {
     AXIS_PRESETS,
@@ -217,7 +218,8 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
     const [qrsMin, qrsMax] = activeRhythm.qrsWindow || [210, 300];
     const realCaseId = RHYTHM_TO_CASE[rhythmId] || 'normal_sinus';
     const realCaseInfo = CASE_CLINICAL_COMPARISONS[realCaseId];
-    const realScanCount = realCaseInfo?.realEkgImages?.length || 0;
+    const realImages = realCaseInfo?.realEkgImages || [];
+    const realScanCount = realImages.length;
 
     const [playing, setPlaying] = useState(false);
     const [speed, setSpeed] = useState('study');
@@ -230,14 +232,51 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
     const [showVectorInfo, setShowVectorInfo] = useState(false);
     const [showNormalGhost, setShowNormalGhost] = useState(true);
     const [expandedCalloutId, setExpandedCalloutId] = useState(null);
+    const [realPreview, setRealPreview] = useState(null);
     const lastTime = useRef(null);
     const untouchedInitial = useRef(true);
     const prevExternalRhythm = useRef(externalRhythmId);
+    const previewCloseTimer = useRef(null);
     const prefix = useId().replace(/:/g, '');
+
+    const cancelCloseRealPreview = () => {
+        if (previewCloseTimer.current) {
+            clearTimeout(previewCloseTimer.current);
+            previewCloseTimer.current = null;
+        }
+    };
+
+    const scheduleCloseRealPreview = () => {
+        cancelCloseRealPreview();
+        previewCloseTimer.current = setTimeout(() => setRealPreview(null), 190);
+    };
+
+    const openRealPreview = (calloutId, anchorEl) => {
+        if (!realImages.length || typeof window === 'undefined' || window.innerWidth <= 760) return;
+        cancelCloseRealPreview();
+        const cardEl = anchorEl.closest('.ehm-callout-card') || anchorEl;
+        const rect = cardEl.getBoundingClientRect();
+        const gap = 14;
+        const margin = 16;
+        const availRight = window.innerWidth - rect.right - gap - margin;
+        const panelWidth = availRight >= 420
+            ? Math.min(860, availRight)
+            : Math.min(780, window.innerWidth - margin * 2);
+        const left = availRight >= 420
+            ? rect.right + gap
+            : Math.max(margin, window.innerWidth - panelWidth - margin);
+        const maxHeight = Math.min(window.innerHeight - margin * 2, 820);
+        const top = Math.max(margin, Math.min(rect.top, window.innerHeight - maxHeight - margin));
+        setRealPreview({ calloutId, left, top, width: panelWidth, maxHeight });
+    };
+
+    useEffect(() => () => cancelCloseRealPreview(), []);
 
     useEffect(() => {
         if (externalRhythmId && externalRhythmId !== prevExternalRhythm.current) {
             prevExternalRhythm.current = externalRhythmId;
+            setRealPreview(null);
+            setExpandedCalloutId(null);
             setQrsOnly(false);
             setTime(RHYTHM_START_TIME[externalRhythmId] ?? 142);
             if (externalRhythmId !== 'normal') {
@@ -301,6 +340,8 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
         onSelectLead?.(name);
     };
     const selectRhythm = id => {
+        cancelCloseRealPreview();
+        setRealPreview(null);
         setLocalRhythmId(id);
         onSelectRhythm?.(id);
         setExpandedCalloutId(null);
@@ -521,7 +562,7 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
                                 ? (rawCallouts.length ? [{ ...rawCallouts[0], corner: 'top-left' }] : [])
                                 : rawCallouts;
                             const renderCalloutCards = () => figureCallouts.map(item => {
-                                const isPinned = expandedCalloutId === item.id;
+                                const isPinned = expandedCalloutId === item.id || realPreview?.calloutId === item.id;
                                 return (
                                     <div
                                         key={item.id}
@@ -577,9 +618,15 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
                                                         <button
                                                             type="button"
                                                             className="ehm-real-link-btn"
+                                                            onMouseEnter={event => openRealPreview(item.id, event.currentTarget)}
+                                                            onMouseLeave={scheduleCloseRealPreview}
+                                                            onFocus={event => openRealPreview(item.id, event.currentTarget)}
+                                                            onBlur={scheduleCloseRealPreview}
                                                             onClick={event => {
                                                                 event.stopPropagation();
-                                                                onOpenRealExamples(rhythmId);
+                                                                cancelCloseRealPreview();
+                                                                setRealPreview(null);
+                                                                onOpenRealExamples(rhythmId, 0);
                                                             }}
                                                         >
                                                             <span>Ægte optagelser ({realScanCount})</span>
@@ -803,6 +850,70 @@ export default function EkgHeartModel({ selectedLead, onSelectLead, rhythmId: ex
                 <p>Undervisningsmodel af sinusrytme samt 7 centrale arytmier og overledningsblok (atrieflimren, atrieflagren, 1./3. grads AV-blok, LBBB, RBBB og VT) med justerbar frontal akse (Cabrera-cirklen). Ledningsbaner, årsagsmarkører på hjertet, dipolvektorer og alle 12 afledningskurver følger samme fysiologiske tidslinje med 1-til-1 farvekodning.</p>
                 <p>Anatomisk hjerte- og ledningsillustration baseret på <em>ConductionsystemoftheheartwithoutHeart</em> (Madhero88 / Wikimedia Commons, CC BY-SA 3.0), bearbejdet til lyst hvileformat med levende impulslag. Fagligt grundlag: <a href="https://cvphysiology.com/arrhythmias/a014" target="_blank" rel="noreferrer">Klabunde: elektriske vektorer og EKG-regler</a> · <a href="https://cvphysiology.com/arrhythmias/a016" target="_blank" rel="noreferrer">Ventrikelaktivering</a> · <a href="https://cvphysiology.com/arrhythmias/a013c" target="_blank" rel="noreferrer">Brystafledninger</a>.</p>
             </details>
+
+            {realPreview && realImages.length > 0 && typeof document !== 'undefined' && createPortal(
+                <div
+                    className="ehm-real-preview-panel"
+                    style={{
+                        left: `${realPreview.left}px`,
+                        top: `${realPreview.top}px`,
+                        width: `${realPreview.width}px`,
+                        maxHeight: `${realPreview.maxHeight}px`
+                    }}
+                    role="dialog"
+                    aria-label={`Eksempler fra virkeligheden: ${activeRhythm.label}`}
+                    onMouseEnter={cancelCloseRealPreview}
+                    onMouseLeave={scheduleCloseRealPreview}
+                >
+                    <div className="ehm-real-preview-head">
+                        <div>
+                            <div className="ehm-real-preview-title">
+                                <strong>Autentiske patientoptagelser: {activeRhythm.label}</strong>
+                                <span>{realImages.length} {realImages.length === 1 ? 'ægte optagelse' : 'ægte optagelser'}</span>
+                            </div>
+                            <p>Hold musen over eller klik på et EKG herunder for at åbne det direkte i fuld 12-afledningsvisning</p>
+                        </div>
+                        <button
+                            type="button"
+                            className="ehm-real-link-btn"
+                            onClick={() => {
+                                cancelCloseRealPreview();
+                                setRealPreview(null);
+                                onOpenRealExamples?.(rhythmId, 0);
+                            }}
+                        >
+                            <span>Åbn galleri</span>
+                            <ArrowRight size={12} />
+                        </button>
+                    </div>
+                    <div className={`ehm-real-preview-grid count-${Math.min(realImages.length, 4)}`}>
+                        {realImages.map((imgItem, idx) => (
+                            <button
+                                key={imgItem.id || idx}
+                                type="button"
+                                className="ehm-real-preview-item"
+                                onClick={() => {
+                                    cancelCloseRealPreview();
+                                    setRealPreview(null);
+                                    onOpenRealExamples?.(rhythmId, idx);
+                                }}
+                            >
+                                <div className="ehm-real-preview-img-wrap">
+                                    <img src={imgItem.src} alt={imgItem.title} loading="eager" />
+                                </div>
+                                <div className="ehm-real-preview-meta">
+                                    <div>
+                                        <strong>Foto {idx + 1}: {imgItem.title}</strong>
+                                        {imgItem.badge && <span>{imgItem.badge}</span>}
+                                    </div>
+                                    {imgItem.caption && <p>{imgItem.caption}</p>}
+                                </div>
+                            </button>
+                        ))}
+                    </div>
+                </div>,
+                document.body
+            )}
         </div>
     );
 }

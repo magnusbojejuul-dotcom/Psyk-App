@@ -52,6 +52,7 @@ export default function EkgApp({ onNavigate }) {
     const [selectedLead, setSelectedLead] = useState('II');
     const [modelRhythmId, setModelRhythmId] = useState('normal');
     const [focusRealToken, setFocusRealToken] = useState(0);
+    const [focusRealImageIdx, setFocusRealImageIdx] = useState(0);
 
     const currentCase = EKG_CASES.find(c => c.id === currentCaseId) || EKG_CASES[0];
 
@@ -74,13 +75,14 @@ export default function EkgApp({ onNavigate }) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
-    const handleOpenRealExamples = (rhythmId) => {
+    const handleOpenRealExamples = (rhythmId, imageIdx = 0) => {
         const targetCaseId = RHYTHM_TO_CASE[rhythmId] || 'normal_sinus';
         setCurrentCaseId(targetCaseId);
         const found = EKG_CASES.find(c => c.id === targetCaseId);
         if (found?.affectedLeads?.[0] && found.affectedLeads[0] !== 'Alle') {
             setSelectedLead(found.affectedLeads[0]);
         }
+        setFocusRealImageIdx(imageIdx);
         setActiveTab('viewer');
         setFocusRealToken(t => t + 1);
     };
@@ -164,6 +166,7 @@ export default function EkgApp({ onNavigate }) {
                         onSelectLead={setSelectedLead}
                         onShowOnHeart={handleShowOnHeart}
                         focusRealToken={focusRealToken}
+                        focusRealImageIdx={focusRealImageIdx}
                     />
                 )}
 

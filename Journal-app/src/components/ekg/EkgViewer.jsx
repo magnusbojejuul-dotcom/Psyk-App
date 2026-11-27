@@ -32,7 +32,8 @@ export default function EkgViewer({
     selectedLead = 'II',
     onSelectLead,
     onShowOnHeart,
-    focusRealToken = 0
+    focusRealToken = 0,
+    focusRealImageIdx = 0
 }) {
     // Zoom niveau for arket (1.0x, 1.25x, 1.5x, 2.0x)
     const [zoomLevel, setZoomLevel] = useState(1.0);
@@ -50,10 +51,11 @@ export default function EkgViewer({
         if (!focusRealToken) return undefined;
         setDisplayMode('real');
         const timer = setTimeout(() => {
+            setSelectedImageIdx(focusRealImageIdx || 0);
             realSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 80);
         return () => clearTimeout(timer);
-    }, [focusRealToken]);
+    }, [focusRealToken, focusRealImageIdx]);
 
     // Hent kliniske detaljer og sammenligninger for netop denne case
     const clinicalInsight = CASE_CLINICAL_COMPARISONS[caseData.id] || {
